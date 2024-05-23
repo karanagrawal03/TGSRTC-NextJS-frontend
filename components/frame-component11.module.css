@@ -1,0 +1,91 @@
+.aboutLogistics {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  font-weight: 600;
+  font-family: inherit;
+  display: inline-block;
+  mix-blend-mode: normal;
+  max-width: 100%;
+}
+.blankLine,
+.telanganaStateRoad,
+.theConsignorsCan {
+  margin: 0;
+}
+.telanganaStateRoadContainer {
+  width: 997px;
+  position: relative;
+  font-size: var(--font-size-sm);
+  line-height: 26px;
+  font-family: var(--font-montserrat);
+  color: var(--text-black);
+  text-align: center;
+  display: inline-block;
+  max-height: 234px;
+  word-break: break-word;
+}
+.aboutLogisticsCards,
+.aboutLogisticsTexts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-13xl);
+  max-width: 100%;
+}
+.aboutLogisticsCards {
+  width: 1166px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--gap-21xl);
+  font-size: var(--font-size-5xl);
+  color: var(--text-grey-body-text);
+  font-family: var(--font-red-hat-display);
+}
+.logisticAbout,
+.logisticAboutWrapper {
+  display: flex;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.logisticAbout {
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 var(--padding-xl);
+  gap: var(--gap-21xl);
+}
+.logisticAboutWrapper {
+  align-self: stretch;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0 0 var(--padding-81xl);
+  text-align: left;
+  font-size: var(--font-size-27xl);
+  color: var(--color-black);
+  font-family: var(--font-playfair-display);
+}
+@media screen and (max-width: 750px) {
+  .aboutLogistics {
+    font-size: var(--font-size-18xl);
+  }
+  .aboutLogisticsTexts {
+    gap: var(--gap-base);
+  }
+  .aboutLogisticsCards,
+  .logisticAbout {
+    gap: var(--gap-xl);
+  }
+  .logisticAboutWrapper {
+    padding-bottom: var(--padding-46xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 450px) {
+  .aboutLogistics {
+    font-size: var(--font-size-9xl);
+  }
+}

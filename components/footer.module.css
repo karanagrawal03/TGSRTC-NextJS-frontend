@@ -1,0 +1,136 @@
+.lineSeparatorIcon {
+  align-self: stretch;
+  position: relative;
+  max-width: 100%;
+  overflow: clip;
+  max-height: unset;
+}
+.lineSeparater {
+  align-self: stretch;
+  height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.image462Icon,
+.image474Icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.image474Icon {
+  left: 30.9px;
+  width: 130.1px;
+  height: 46.9px;
+  mix-blend-mode: hue;
+  z-index: 1;
+}
+.recognition1 {
+  height: 46.9px;
+  flex: 1;
+  position: relative;
+  min-width: 105px;
+}
+.recognition2Icon {
+  align-self: stretch;
+  height: 33px;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.recognition2Wrapper {
+  width: 127px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 0 0 var(--padding-6xs-9);
+  box-sizing: border-box;
+}
+.recognitionContainer {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: var(--gap-31xl);
+}
+.recognitionContainerWrapper {
+  width: 338px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-5xs-5) 0 0;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.recognitionAndSocialMediaC {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: 100%;
+  gap: var(--gap-xl);
+  text-align: left;
+  font-size: var(--font-size-sm);
+  color: var(--support-white);
+  font-family: var(--font-montserrat);
+}
+.copyright2021Tsrtc {
+  position: relative;
+  line-height: 21px;
+}
+.copyright2021TsrtcAllRiWrapper,
+.footer {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 var(--padding-12xs) 0 0;
+}
+.footer {
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: var(--padding-21xl) var(--padding-21xl) var(--padding-5xs);
+  box-sizing: border-box;
+  gap: var(--gap-13xl);
+  background-image: url(/footer@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  max-width: 100%;
+  text-align: left;
+  font-size: var(--font-size-xs);
+  color: var(--support-white);
+  font-family: var(--font-montserrat);
+}
+@media screen and (max-width: 1100px) {
+  .recognitionAndSocialMediaC {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 750px) {
+  .footer {
+    gap: var(--gap-base);
+  }
+}
+@media screen and (max-width: 450px) {
+  .recognitionContainer {
+    flex-wrap: wrap;
+    gap: var(--gap-6xl);
+  }
+  .footer {
+    padding-top: var(--padding-7xl);
+    padding-bottom: var(--padding-xl);
+    box-sizing: border-box;
+  }
+}

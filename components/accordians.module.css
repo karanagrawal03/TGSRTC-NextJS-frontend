@@ -1,0 +1,408 @@
+.bg {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-whitesmoke-100);
+  display: none;
+  z-index: 0;
+}
+.cells,
+.name {
+  position: relative;
+}
+.name {
+  display: inline-block;
+  min-width: 8px;
+}
+.cells {
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 15.5px var(--padding-13xl) 15.5px var(--padding-xl);
+  gap: var(--spacing-lg);
+}
+.bg1 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-whitesmoke-100);
+  display: none;
+  z-index: 0;
+}
+.name1 {
+  position: relative;
+  display: inline-block;
+  min-width: 20px;
+}
+.cells1,
+.contentCell {
+  display: flex;
+  justify-content: flex-start;
+}
+.cells1 {
+  overflow: hidden;
+  flex-direction: row;
+  align-items: center;
+  padding: 15.5px var(--padding-17xl) 15.5px var(--padding-xl);
+  position: relative;
+  gap: var(--spacing-lg);
+}
+.contentCell {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.bg2 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-whitesmoke-100);
+  display: none;
+  z-index: 0;
+}
+.name2 {
+  position: relative;
+  display: inline-block;
+  min-width: 27px;
+}
+.cells2,
+.contentCell1 {
+  display: flex;
+  justify-content: flex-start;
+}
+.cells2 {
+  align-self: stretch;
+  overflow: hidden;
+  flex-direction: row;
+  align-items: center;
+  padding: 15.5px var(--padding-xl);
+  position: relative;
+  gap: var(--spacing-lg);
+}
+.contentCell1 {
+  width: 167px;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+.bg3 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-whitesmoke-100);
+  display: none;
+  z-index: 0;
+}
+.name3 {
+  position: relative;
+  display: inline-block;
+  min-width: 36px;
+}
+.cells3,
+.contentCell2 {
+  display: flex;
+  justify-content: flex-start;
+}
+.cells3 {
+  overflow: hidden;
+  flex-direction: row;
+  align-items: center;
+  padding: 15.5px var(--padding-base) 15.5px var(--padding-xl);
+  position: relative;
+  gap: var(--spacing-lg);
+}
+.contentCell2 {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.bg4 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-whitesmoke-100);
+  display: none;
+  z-index: 0;
+}
+.name4 {
+  position: relative;
+}
+.accordianTitle,
+.cells4,
+.contentCell3 {
+  display: flex;
+  justify-content: flex-start;
+}
+.cells4 {
+  align-self: stretch;
+  overflow: hidden;
+  flex-direction: row;
+  align-items: center;
+  padding: 15.5px var(--padding-xl);
+  position: relative;
+  gap: var(--spacing-lg);
+}
+.accordianTitle,
+.contentCell3 {
+  align-items: flex-start;
+}
+.contentCell3 {
+  width: 910px;
+  flex-direction: column;
+  max-width: calc(100% - 375px);
+  flex-shrink: 0;
+}
+.accordianTitle {
+  align-self: stretch;
+  flex-direction: row;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.bg5 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-whitesmoke-100);
+}
+.accordianChild {
+  width: 219px;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  height: 20.5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-9xs-5) 0 0;
+  box-sizing: border-box;
+  font-family: var(--font-montserrat);
+  font-size: var(--font-size-sm);
+  color: var(--text-black);
+}
+.accordianDropdowntrueIcon {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.accordian {
+  align-self: stretch;
+  box-shadow: var(--table-shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: var(--spacing-lg) var(--padding-5xl) var(--spacing-lg)
+    var(--padding-57xl);
+  position: relative;
+  gap: var(--gap-xl);
+}
+.bg6 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-whitesmoke-100);
+}
+.accordianItem {
+  width: 192px;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  height: 20.5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-9xs-5) 0 0;
+  box-sizing: border-box;
+  font-family: var(--font-montserrat);
+  font-size: var(--font-size-sm);
+  color: var(--text-black);
+}
+.accordianDropdowntrueIcon1 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.accordian1 {
+  align-self: stretch;
+  box-shadow: var(--table-shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: var(--spacing-lg) var(--padding-5xl) var(--spacing-lg)
+    var(--padding-57xl);
+  position: relative;
+  gap: var(--gap-xl);
+}
+.bg7 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-whitesmoke-100);
+}
+.accordianInner {
+  width: 204px;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  height: 20.5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-9xs-5) 0 0;
+  box-sizing: border-box;
+  font-family: var(--font-montserrat);
+  font-size: var(--font-size-sm);
+  color: var(--text-black);
+}
+.accordianDropdowntrueIcon2 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.accordian2 {
+  align-self: stretch;
+  box-shadow: var(--table-shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: var(--spacing-lg) var(--padding-5xl) var(--spacing-lg)
+    var(--padding-57xl);
+  position: relative;
+  gap: var(--gap-xl);
+}
+.bg8 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-whitesmoke-100);
+}
+.frameInput {
+  width: 164px;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  height: 20.5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-9xs-5) 0 0;
+  box-sizing: border-box;
+  font-family: var(--font-montserrat);
+  font-size: var(--font-size-sm);
+  color: var(--text-black);
+}
+.accordianDropdowntrueIcon3 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.accordian3,
+.accordians2,
+.pageWiseAccordian {
+  align-self: stretch;
+  display: flex;
+  align-items: flex-start;
+}
+.accordian3 {
+  box-shadow: var(--table-shadow);
+  overflow: hidden;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: var(--spacing-lg) var(--padding-5xl) var(--spacing-lg)
+    var(--padding-57xl);
+  position: relative;
+  gap: var(--gap-xl);
+}
+.accordians2,
+.pageWiseAccordian {
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.pageWiseAccordian {
+  gap: var(--gap-5xs);
+}
+.accordians2 {
+  border-top: 1px solid var(--support-grey-bg);
+  box-sizing: border-box;
+  max-width: 100%;
+  text-align: left;
+  font-size: var(--font-size-sm);
+  color: var(--text-black);
+  font-family: var(--font-montserrat);
+}
+@media screen and (max-width: 1275px) {
+  .accordian,
+  .accordian1,
+  .accordian2,
+  .accordian3 {
+    padding-left: var(--spacing-lg);
+    box-sizing: border-box;
+  }
+}

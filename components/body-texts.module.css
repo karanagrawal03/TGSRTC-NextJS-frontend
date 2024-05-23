@@ -1,0 +1,42 @@
+.lineSeparatorIcon {
+  align-self: stretch;
+  position: relative;
+  max-width: 100%;
+  overflow: clip;
+  max-height: unset;
+}
+.bodyTexts,
+.lineSeparater {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+.lineSeparater {
+  align-self: stretch;
+  height: 0;
+  padding: 0;
+}
+.bodyTexts {
+  width: 1166px;
+  padding: 0 0 0 var(--padding-41xl);
+  gap: var(--gap-41xl);
+  max-width: 100%;
+  text-align: left;
+  font-size: var(--font-size-3xl);
+  color: var(--text-black);
+  font-family: var(--font-montserrat);
+}
+@media screen and (max-width: 1275px) {
+  .bodyTexts {
+    gap: var(--gap-11xl);
+    padding-left: var(--padding-11xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 750px) {
+  .bodyTexts {
+    gap: var(--gap-mini);
+  }
+}
