@@ -1,0 +1,393 @@
+.typesOfBus {
+  position: relative;
+  font-weight: 600;
+  mix-blend-mode: normal;
+}
+.bg {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-whitesmoke-200);
+}
+.before6AmContainer,
+.studentPasses {
+  margin: 0;
+  font-size: inherit;
+  font-family: inherit;
+}
+.studentPasses {
+  padding-left: var(--padding-8xl);
+}
+.before6AmContainer {
+  flex: 1;
+  position: relative;
+  line-height: 26px;
+  font-weight: 500;
+  display: inline-block;
+  max-width: calc(100% - 48px);
+  z-index: 1;
+}
+.accordianDropdowntrueIcon {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.accordion {
+  align-self: stretch;
+  box-shadow: var(--table-shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-base) var(--padding-5xl);
+  box-sizing: border-box;
+  position: relative;
+  gap: var(--gap-5xl);
+  max-width: 100%;
+}
+.bg1 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-whitesmoke-200);
+}
+.before6AmContainer1,
+.generalCommuters {
+  margin: 0;
+  font-size: inherit;
+  font-family: inherit;
+}
+.generalCommuters {
+  padding-left: var(--padding-8xl);
+}
+.before6AmContainer1 {
+  flex: 1;
+  position: relative;
+  line-height: 26px;
+  font-weight: 500;
+  display: inline-block;
+  max-width: calc(100% - 48px);
+  z-index: 1;
+}
+.accordianDropdowntrueIcon1 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.accordion1 {
+  align-self: stretch;
+  box-shadow: var(--table-shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-base) var(--padding-5xl);
+  box-sizing: border-box;
+  position: relative;
+  gap: var(--gap-5xl);
+  max-width: 100%;
+}
+.bg2 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-whitesmoke-200);
+}
+.before6AmContainer2,
+.journalists {
+  margin: 0;
+  font-size: inherit;
+  font-family: inherit;
+}
+.journalists {
+  padding-left: var(--padding-8xl);
+}
+.before6AmContainer2 {
+  flex: 1;
+  position: relative;
+  line-height: 26px;
+  font-weight: 500;
+  display: inline-block;
+  max-width: calc(100% - 48px);
+  z-index: 1;
+}
+.accordianDropdowntrueIcon2 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.accordion2 {
+  align-self: stretch;
+  box-shadow: var(--table-shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-base) var(--padding-5xl);
+  box-sizing: border-box;
+  position: relative;
+  gap: var(--gap-5xl);
+  max-width: 100%;
+}
+.bg3 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-whitesmoke-200);
+}
+.before6AmContainer3,
+.dialysisPatients {
+  margin: 0;
+  font-size: inherit;
+  font-family: inherit;
+}
+.dialysisPatients {
+  padding-left: var(--padding-8xl);
+}
+.before6AmContainer3 {
+  flex: 1;
+  position: relative;
+  line-height: 26px;
+  font-weight: 500;
+  display: inline-block;
+  max-width: calc(100% - 48px);
+  z-index: 1;
+}
+.accordianDropdowntrueIcon3 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.accordion3 {
+  align-self: stretch;
+  box-shadow: var(--table-shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-base) var(--padding-5xl);
+  box-sizing: border-box;
+  position: relative;
+  gap: var(--gap-5xl);
+  max-width: 100%;
+}
+.bg4 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-whitesmoke-200);
+}
+.physicallyChallengedAndMont {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  padding-left: var(--padding-8xl);
+}
+.before6AmContainer4 {
+  flex: 1;
+  position: relative;
+  line-height: 26px;
+  font-weight: 500;
+  display: inline-block;
+  max-width: calc(100% - 48px);
+  z-index: 1;
+}
+.accordianDropdowntrueIcon4 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.accordion4 {
+  align-self: stretch;
+  box-shadow: var(--table-shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-base) var(--padding-5xl);
+  box-sizing: border-box;
+  position: relative;
+  gap: var(--gap-5xl);
+  max-width: 100%;
+}
+.bg5 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-whitesmoke-200);
+}
+.before6AmContainer5,
+.spousesOfMartyrsPasses {
+  margin: 0;
+  font-size: inherit;
+  font-family: inherit;
+}
+.spousesOfMartyrsPasses {
+  padding-left: var(--padding-8xl);
+}
+.before6AmContainer5 {
+  flex: 1;
+  position: relative;
+  line-height: 26px;
+  font-weight: 500;
+  display: inline-block;
+  max-width: calc(100% - 48px);
+  z-index: 1;
+}
+.accordianDropdowntrueIcon5 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.accordion5 {
+  align-self: stretch;
+  box-shadow: var(--table-shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-base) var(--padding-5xl);
+  box-sizing: border-box;
+  position: relative;
+  gap: var(--gap-5xl);
+  max-width: 100%;
+}
+.bg6 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-whitesmoke-200);
+}
+.before6AmContainer6,
+.freedomFighters {
+  margin: 0;
+  font-size: inherit;
+  font-family: inherit;
+}
+.freedomFighters {
+  padding-left: var(--padding-8xl);
+}
+.before6AmContainer6 {
+  flex: 1;
+  position: relative;
+  line-height: 26px;
+  font-weight: 500;
+  display: inline-block;
+  max-width: calc(100% - 48px);
+  z-index: 1;
+}
+.accordianDropdowntrueIcon6 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.accordion6,
+.faqsAccordion,
+.passTypesContainer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.accordion6 {
+  align-self: stretch;
+  box-shadow: var(--table-shadow);
+  overflow: hidden;
+  flex-direction: row;
+  padding: var(--padding-base) var(--padding-5xl);
+  box-sizing: border-box;
+  position: relative;
+  gap: var(--gap-5xl);
+  max-width: 100%;
+}
+.faqsAccordion,
+.passTypesContainer {
+  flex-direction: column;
+}
+.faqsAccordion {
+  align-self: stretch;
+  gap: var(--gap-5xs);
+  max-width: 100%;
+  font-size: var(--font-size-xl);
+}
+.passTypesContainer {
+  width: 1166px;
+  gap: var(--gap-base);
+  text-align: left;
+  font-size: var(--font-size-base);
+  color: var(--text-black);
+  font-family: var(--font-montserrat);
+}
+@media screen and (max-width: 450px) {
+  .before6AmContainer,
+  .before6AmContainer1,
+  .before6AmContainer2,
+  .before6AmContainer3,
+  .before6AmContainer4,
+  .before6AmContainer5,
+  .before6AmContainer6 {
+    font-size: var(--font-size-base);
+    line-height: 21px;
+  }
+}

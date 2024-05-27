@@ -1,0 +1,180 @@
+.bg {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-whitesmoke-200);
+}
+.before6Am {
+  margin: 0;
+  flex: 1;
+  position: relative;
+  line-height: 26px;
+  font-weight: 500;
+  display: inline-block;
+  max-width: calc(100% - 48px);
+  z-index: 1;
+}
+.accordianDropdowntrueIcon {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.accordion {
+  align-self: stretch;
+  box-shadow: var(--table-shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-base) var(--padding-xl);
+  box-sizing: border-box;
+  position: relative;
+  gap: var(--gap-5xl);
+  max-width: 100%;
+}
+.bg1 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-whitesmoke-200);
+}
+.before6Am1 {
+  flex: 1;
+  position: relative;
+  line-height: 26px;
+  font-weight: 500;
+  display: inline-block;
+  max-width: calc(100% - 48px);
+  z-index: 1;
+}
+.accordianDropdowntrueIcon1 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.accordion1 {
+  align-self: stretch;
+  box-shadow: var(--table-shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-base) var(--padding-xl);
+  box-sizing: border-box;
+  position: relative;
+  gap: var(--gap-5xl);
+  max-width: 100%;
+}
+.bg2 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-whitesmoke-200);
+}
+.before6Am2 {
+  flex: 1;
+  position: relative;
+  line-height: 26px;
+  font-weight: 500;
+  display: inline-block;
+  max-width: calc(100% - 48px);
+  z-index: 1;
+}
+.accordianDropdowntrueIcon2 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.accordion2 {
+  align-self: stretch;
+  box-shadow: var(--table-shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-base) var(--padding-xl);
+  box-sizing: border-box;
+  position: relative;
+  gap: var(--gap-5xl);
+  max-width: 100%;
+}
+.bg3 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-whitesmoke-200);
+}
+.before6Am3 {
+  flex: 1;
+  position: relative;
+  line-height: 26px;
+  font-weight: 500;
+  display: inline-block;
+  max-width: calc(100% - 48px);
+  z-index: 1;
+}
+.accordianDropdowntrueIcon3 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.accordion3,
+.otherAccordions {
+  align-self: stretch;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.accordion3 {
+  box-shadow: var(--table-shadow);
+  overflow: hidden;
+  flex-direction: row;
+  padding: var(--padding-base) var(--padding-xl);
+  box-sizing: border-box;
+  position: relative;
+  gap: var(--gap-5xl);
+}
+.otherAccordions {
+  flex-direction: column;
+  gap: var(--gap-5xs);
+  text-align: left;
+  font-size: var(--font-size-sm);
+  color: var(--text-black);
+  font-family: var(--font-montserrat);
+}

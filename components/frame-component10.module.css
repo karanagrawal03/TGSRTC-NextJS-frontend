@@ -1,0 +1,134 @@
+.bg {
+  height: 48px;
+  flex: 1;
+  position: relative;
+  background-color: var(--color-whitesmoke-200);
+}
+.viewDetails {
+  position: absolute;
+  top: 0;
+  left: 1.1%;
+  font-weight: 600;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.button,
+.separatorIcon {
+  height: 17px;
+  width: 91px;
+  position: relative;
+}
+.separatorIcon {
+  height: 12px;
+  width: 0;
+}
+.viewDetails1 {
+  position: absolute;
+  top: 0;
+  left: 1.1%;
+  font-weight: 600;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.button1,
+.separatorIcon1 {
+  height: 17px;
+  width: 91px;
+  position: relative;
+}
+.separatorIcon1 {
+  height: 12px;
+  width: 0;
+  display: none;
+}
+.actions {
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-5xl);
+}
+.buttonCells {
+  align-self: stretch;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--spacing-lg);
+}
+.bg1 {
+  height: 48px;
+  flex: 1;
+  position: relative;
+  background-color: var(--color-whitesmoke-200);
+}
+.viewDetails2 {
+  position: absolute;
+  top: 0;
+  left: 1.1%;
+  font-weight: 600;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.button2,
+.separatorIcon2 {
+  height: 17px;
+  width: 91px;
+  position: relative;
+}
+.separatorIcon2 {
+  height: 12px;
+  width: 0;
+}
+.viewDetails3 {
+  position: absolute;
+  top: 0;
+  left: 1.1%;
+  font-weight: 600;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.button3,
+.separatorIcon3 {
+  height: 17px;
+  width: 91px;
+  position: relative;
+}
+.separatorIcon3 {
+  height: 12px;
+  width: 0;
+  display: none;
+}
+.actions1 {
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-5xl);
+}
+.buttonCells1,
+.buttonCellsParent {
+  align-self: stretch;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.buttonCells1 {
+  overflow: hidden;
+  flex-direction: row;
+  gap: var(--spacing-lg);
+}
+.buttonCellsParent {
+  flex: 1;
+  flex-direction: column;
+  gap: var(--gap-29xl);
+  text-align: left;
+  font-size: var(--font-size-sm);
+  color: var(--primary-green);
+  font-family: var(--font-montserrat);
+}

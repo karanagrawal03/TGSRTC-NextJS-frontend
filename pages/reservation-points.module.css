@@ -1,0 +1,43 @@
+.busDust,
+.busDust1 {
+  width: 128px;
+  object-fit: contain;
+}
+.busDust {
+  height: 499px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: none;
+  z-index: 3;
+}
+.busDust1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 780px;
+  z-index: 2;
+}
+.reservationDetailsOfReservaParent {
+  align-self: stretch;
+  height: 879px;
+  position: relative;
+  max-width: 100%;
+}
+.reservationPoints {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  line-height: normal;
+  letter-spacing: normal;
+}
+@media screen and (max-width: 1100px) {
+  .reservationDetailsOfReservaParent {
+    height: auto;
+    min-height: 879;
+  }
+}

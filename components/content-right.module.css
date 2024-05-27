@@ -1,0 +1,103 @@
+.aboutLogistics,
+.telanganaStateRoad {
+  margin: 0;
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+}
+.aboutLogistics {
+  font-size: var(--font-size-27xl);
+  font-weight: 600;
+  font-family: var(--font-playfair-display);
+  color: var(--color-black);
+  text-align: left;
+  mix-blend-mode: normal;
+}
+.telanganaStateRoad {
+  width: 997px;
+  line-height: 26px;
+}
+.wwwtgsrtctelanganagovin1 {
+  text-decoration: underline;
+}
+.wwwtgsrtctelanganagovin {
+  color: inherit;
+}
+.theConsignorsCanContainer {
+  margin: 0;
+  width: 1011px;
+  position: relative;
+  line-height: 26px;
+  display: inline-block;
+  max-height: 104px;
+  word-break: break-word;
+}
+.logisticAboutTexts,
+.logisticsInfographicCardCon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-13xl);
+  max-width: 100%;
+}
+.logisticsInfographicCardCon {
+  width: 1166px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--gap-21xl);
+  text-align: left;
+  font-size: var(--font-size-5xl);
+  color: var(--text-grey-body-text);
+  font-family: var(--font-red-hat-display);
+}
+.contentRight,
+.logisticAboutSection {
+  display: flex;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.logisticAboutSection {
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 var(--padding-xl);
+  gap: var(--gap-21xl);
+}
+.contentRight {
+  align-self: stretch;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0 0 var(--padding-81xl);
+  text-align: center;
+  font-size: var(--font-size-sm);
+  color: var(--text-black);
+  font-family: var(--font-montserrat);
+}
+@media screen and (max-width: 750px) {
+  .aboutLogistics {
+    font-size: var(--font-size-18xl);
+  }
+  .logisticAboutTexts {
+    gap: var(--gap-base);
+  }
+  .logisticAboutSection,
+  .logisticsInfographicCardCon {
+    gap: var(--gap-xl);
+  }
+  .contentRight {
+    padding-bottom: var(--padding-46xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 450px) {
+  .aboutLogistics {
+    font-size: var(--font-size-9xl);
+  }
+  .contentRight {
+    padding-bottom: var(--padding-23xl);
+    box-sizing: border-box;
+  }
+}

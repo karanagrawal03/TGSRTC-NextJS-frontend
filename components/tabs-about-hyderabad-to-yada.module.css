@@ -1,0 +1,125 @@
+.whichBusTimings {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  font-weight: 600;
+  font-family: inherit;
+  display: inline-block;
+  max-width: 100%;
+}
+.tabs1,
+.text {
+  min-width: 92px;
+}
+.text {
+  position: relative;
+  line-height: 26px;
+  font-weight: 500;
+  display: inline-block;
+}
+.tabs1 {
+  flex: 1;
+  border-bottom: 1px solid var(--color-gainsboro-200);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--padding-xl) var(--padding-3xl);
+}
+.text1 {
+  position: relative;
+  line-height: 26px;
+  font-weight: 500;
+}
+.tabs2 {
+  border-bottom: 1px solid var(--color-gainsboro-200);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--padding-60xl) var(--padding-3xl);
+}
+.text2 {
+  position: relative;
+  line-height: 26px;
+}
+.tabs3 {
+  border-bottom: 4px solid var(--primary-green);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--padding-10xl) var(--padding-lgi);
+  color: var(--primary-red);
+}
+.text3 {
+  position: relative;
+  line-height: 26px;
+  font-weight: 500;
+}
+.tabs4 {
+  border-bottom: 1px solid var(--color-gainsboro-200);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--padding-13xl) var(--padding-3xl);
+}
+.tabs,
+.topTabs {
+  align-self: stretch;
+  display: flex;
+  justify-content: flex-start;
+}
+.topTabs {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  row-gap: 20px;
+  font-size: var(--font-size-base);
+  color: var(--text-grey-body-text);
+}
+.tabs {
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap-5xl);
+  max-width: 100%;
+}
+.afterMoreThan,
+.blankLine,
+.blankLine1,
+.chooseTgsrtcmakeHyderabad,
+.locatedAbout60 {
+  display: block;
+}
+.afterMoreThanContainer {
+  margin: 0;
+  align-self: stretch;
+  position: relative;
+  font-size: var(--font-size-sm);
+  line-height: 26px;
+}
+.tabsAboutHyderabadToYada {
+  width: 1166px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xl);
+  max-width: 100%;
+  text-align: left;
+  font-size: var(--font-size-5xl);
+  color: var(--text-black);
+  font-family: var(--font-montserrat);
+}
+@media screen and (max-width: 450px) {
+  .whichBusTimings {
+    font-size: var(--font-size-lgi);
+  }
+  .tabs2 {
+    padding-left: var(--padding-xl);
+    padding-right: var(--padding-xl);
+    box-sizing: border-box;
+  }
+}

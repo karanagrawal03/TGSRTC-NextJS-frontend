@@ -1,0 +1,799 @@
+.busDust,
+.tsrtcLogoIcon {
+  position: relative;
+  object-fit: contain;
+}
+.busDust {
+  width: 128px;
+  height: 918px;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: none;
+  z-index: 4;
+}
+.tsrtcLogoIcon {
+  height: 70.4px;
+  width: 70.4px;
+}
+.icon {
+  width: 289.1px;
+  height: 24.4px;
+  position: relative;
+}
+.telanganaStateRoadTransport {
+  align-self: stretch;
+  height: 11.3px;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.tsrtcLogo,
+.tsrtcLogo1 {
+  display: flex;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  gap: var(--gap-3xs-4);
+  max-width: 100%;
+}
+.tsrtcLogo1 {
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 0 var(--padding-12xs-9);
+}
+.tsrtcLogo {
+  width: 504px;
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+}
+.reservations {
+  text-decoration: none;
+  position: relative;
+  letter-spacing: 0.02em;
+  line-height: 26px;
+  font-weight: 500;
+  color: inherit;
+  display: inline-block;
+  min-width: 45px;
+}
+.navTabs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-6xs) 0;
+}
+.reservations1 {
+  text-decoration: none;
+  position: relative;
+  letter-spacing: 0.02em;
+  line-height: 26px;
+  font-weight: 700;
+  color: inherit;
+  display: inline-block;
+  min-width: 99px;
+}
+.navTabs1 {
+  border-bottom: 4px solid var(--primary-green);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-6xs) 0 var(--padding-11xs);
+  color: var(--primary-red);
+}
+.reservations2 {
+  text-decoration: none;
+  position: relative;
+  letter-spacing: 0.02em;
+  line-height: 26px;
+  font-weight: 500;
+  color: inherit;
+  display: inline-block;
+  min-width: 65px;
+}
+.navTabs2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-6xs) 0;
+}
+.reservations3 {
+  text-decoration: none;
+  position: relative;
+  letter-spacing: 0.02em;
+  line-height: 26px;
+  font-weight: 500;
+  color: inherit;
+  display: inline-block;
+  min-width: 82px;
+  white-space: nowrap;
+}
+.navTabs3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-6xs) 0;
+}
+.reservations4 {
+  text-decoration: none;
+  position: relative;
+  letter-spacing: 0.02em;
+  line-height: 26px;
+  font-weight: 500;
+  color: inherit;
+  display: inline-block;
+  min-width: 46px;
+}
+.navTabs4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-6xs) 0;
+}
+.reservations5 {
+  text-decoration: none;
+  position: relative;
+  letter-spacing: 0.02em;
+  line-height: 26px;
+  font-weight: 500;
+  color: inherit;
+  display: inline-block;
+  min-width: 59px;
+}
+.navTabs5 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-6xs) 0;
+}
+.reservations6 {
+  text-decoration: none;
+  position: relative;
+  letter-spacing: 0.02em;
+  line-height: 26px;
+  font-weight: 500;
+  color: inherit;
+  display: inline-block;
+  min-width: 123px;
+  white-space: nowrap;
+}
+.navTabs6 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-6xs) 0;
+}
+.reservations7 {
+  text-decoration: none;
+  position: relative;
+  letter-spacing: 0.02em;
+  line-height: 26px;
+  font-weight: 500;
+  color: inherit;
+  display: inline-block;
+  min-width: 80px;
+  white-space: nowrap;
+}
+.navTabs7,
+.tabContainer {
+  display: flex;
+  align-items: center;
+}
+.navTabs7 {
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--padding-6xs) 0;
+}
+.tabContainer {
+  width: 767px;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: var(--gap-5xl);
+  max-width: 100%;
+}
+.header,
+.reservationHeroFaq {
+  align-self: stretch;
+  max-width: 100%;
+}
+.header {
+  box-shadow: var(--table-shadow);
+  background-color: var(--support-white);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--padding-xs) var(--padding-11xl);
+  box-sizing: border-box;
+  top: 0;
+  z-index: 99;
+  position: sticky;
+  gap: var(--gap-xl);
+  text-align: left;
+  font-size: var(--font-size-sm);
+  color: var(--text-black);
+  font-family: var(--font-montserrat);
+}
+.reservationHeroFaq {
+  position: relative;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.frequentlyAskedQuestions {
+  position: relative;
+  font-weight: 600;
+  mix-blend-mode: normal;
+}
+.bg {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-whitesmoke-200);
+}
+.before6Am {
+  flex: 1;
+  position: relative;
+  line-height: 26px;
+  font-weight: 500;
+  display: inline-block;
+  max-width: calc(100% - 48px);
+  z-index: 1;
+}
+.accordianDropdowntrueIcon {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.accordion,
+.question {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+.accordion {
+  align-self: stretch;
+  box-shadow: var(--table-shadow);
+  overflow: hidden;
+  flex-direction: row;
+  padding: var(--padding-base) var(--padding-5xl);
+  position: relative;
+  gap: var(--gap-5xl);
+  max-width: 100%;
+  font-size: var(--font-size-xl);
+  color: var(--text-black);
+  font-family: var(--font-montserrat);
+}
+.question {
+  width: 1166px;
+  flex-direction: column;
+  padding: 0 0 var(--padding-5xs);
+  gap: var(--gap-13xl);
+  font-size: var(--font-size-5xl);
+  color: var(--primary-red);
+  font-family: var(--font-playfair-display);
+}
+.bg1 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--support-white);
+}
+.studentConcessionalRoutePas {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  padding-left: var(--padding-8xl);
+}
+.before6AmContainer {
+  flex: 1;
+  position: relative;
+  line-height: 26px;
+  font-weight: 500;
+  display: inline-block;
+  max-width: calc(100% - 48px);
+  z-index: 1;
+}
+.accordianDropdownIcon {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.accordion1 {
+  width: 1166px;
+  box-shadow: 0 4px 10px rgba(232, 232, 232, 0.5);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-base) var(--padding-5xl);
+  box-sizing: border-box;
+  position: relative;
+  gap: var(--gap-5xl);
+}
+.bg2 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-whitesmoke-200);
+}
+.before6Am1 {
+  flex: 1;
+  position: relative;
+  line-height: 26px;
+  font-weight: 500;
+  display: inline-block;
+  max-width: calc(100% - 48px);
+  z-index: 1;
+}
+.accordianDropdowntrueIcon1 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.accordion2,
+.reservationFaqAccordians {
+  display: flex;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+.accordion2 {
+  width: 1166px;
+  box-shadow: var(--table-shadow);
+  overflow: hidden;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: var(--padding-base) var(--padding-5xl);
+  position: relative;
+  gap: var(--gap-5xl);
+}
+.reservationFaqAccordians {
+  width: 1366px;
+  background-color: var(--support-grey-bg);
+  overflow-x: auto;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--padding-61xl) var(--padding-xl) var(--padding-81xl);
+  max-width: 100%;
+  z-index: 1;
+}
+.logo51Icon {
+  height: 73px;
+  width: 73px;
+  position: relative;
+  object-fit: cover;
+}
+.icon1 {
+  width: 327.3px;
+  position: relative;
+  max-height: 100%;
+  max-width: 100%;
+}
+.telanganaStateRoadTransport1 {
+  align-self: stretch;
+  height: 12.9px;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.logo,
+.logoTextGroup {
+  display: flex;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.logoTextGroup {
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--gap-2xs);
+  min-width: 313px;
+}
+.logo {
+  width: 568.6px;
+  flex-direction: row;
+  align-items: center;
+  padding: var(--padding-xl) 0;
+  box-sizing: border-box;
+  gap: var(--gap-sm);
+  min-width: 568.6px;
+}
+.careers,
+.quicklinks {
+  position: relative;
+  display: inline-block;
+}
+.quicklinks {
+  letter-spacing: 0.02em;
+  font-weight: 700;
+  min-width: 81px;
+}
+.careers {
+  min-width: 53px;
+}
+.siteMap {
+  min-width: 62px;
+}
+.aboutUs,
+.contactUs,
+.siteMap {
+  position: relative;
+  display: inline-block;
+}
+.aboutUs {
+  text-decoration: none;
+  color: inherit;
+  min-width: 66px;
+}
+.contactUs {
+  min-width: 76px;
+}
+.footerLinks1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-mid);
+}
+.information {
+  letter-spacing: 0.02em;
+  font-weight: 700;
+}
+.information,
+.rtiAct2005 {
+  position: relative;
+  display: inline-block;
+  min-width: 91px;
+}
+.feedback,
+.privacyPolicies,
+.roadSafety {
+  position: relative;
+  display: inline-block;
+  min-width: 84px;
+}
+.feedback,
+.privacyPolicies {
+  min-width: 107px;
+}
+.feedback {
+  min-width: 69px;
+}
+.footerLinks2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-mid);
+}
+.busPasses,
+.faqs,
+.reservations8 {
+  position: relative;
+  display: inline-block;
+}
+.faqs {
+  letter-spacing: 0.02em;
+  font-weight: 700;
+  min-width: 40px;
+}
+.busPasses,
+.reservations8 {
+  min-width: 90px;
+}
+.busPasses {
+  min-width: 78px;
+}
+.footerLinks3 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-mid);
+}
+.footerSection,
+.linksContainer {
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+}
+.linksContainer {
+  width: 378px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-31xl);
+  min-width: 378px;
+}
+.footerSection {
+  align-self: stretch;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+}
+.lineSeparatorIcon {
+  align-self: stretch;
+  position: relative;
+  max-width: 100%;
+  overflow: clip;
+  max-height: unset;
+}
+.lineSeparater {
+  align-self: stretch;
+  height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.image462Icon,
+.image474Icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.image474Icon {
+  left: 30.9px;
+  width: 130.1px;
+  height: 46.9px;
+  mix-blend-mode: hue;
+  z-index: 1;
+}
+.recognition1 {
+  height: 46.9px;
+  flex: 1;
+  position: relative;
+  min-width: 105px;
+}
+.recognition2Icon {
+  align-self: stretch;
+  height: 33px;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.recognitionBackground {
+  width: 127px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 0 0 var(--padding-6xs-9);
+  box-sizing: border-box;
+}
+.recognitionContainer1 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: var(--gap-31xl);
+}
+.recognitionContainer {
+  width: 338px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-5xs-5) 0 0;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.followUsOn {
+  position: relative;
+  letter-spacing: 0.02em;
+}
+.socialMediaIcon1,
+.socialMediaIcon2,
+.socialMediaIcon3,
+.socialMediaIcon4 {
+  height: 28.3px;
+  width: 28.3px;
+  position: relative;
+  object-fit: cover;
+  min-height: 28px;
+}
+.socialMedia,
+.socialMediaHandles {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-base);
+}
+.socialMedia {
+  flex: 1;
+  flex-direction: column;
+  gap: var(--gap-4xs);
+  min-width: 161px;
+}
+.downloadOurApp {
+  position: relative;
+  letter-spacing: 0.02em;
+}
+.appStoreIcon,
+.googlePlayIcon {
+  align-self: stretch;
+  width: 90px;
+  position: relative;
+  max-height: 100%;
+  object-fit: cover;
+  min-height: 30px;
+}
+.downloadPlartformContainer,
+.downloadPlatform {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-sm);
+}
+.downloadPlartformContainer {
+  flex-direction: column;
+  gap: var(--gap-mini);
+}
+.recognitionAndSocialMediaC,
+.socialMediaContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  max-width: 100%;
+}
+.socialMediaContainer {
+  width: 491px;
+  justify-content: flex-start;
+  gap: var(--gap-31xl);
+}
+.recognitionAndSocialMediaC {
+  align-self: stretch;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+  text-align: left;
+  font-size: var(--font-size-sm);
+  color: var(--support-white);
+  font-family: var(--font-montserrat);
+}
+.copyright2021Tgsrtc {
+  position: relative;
+  line-height: 21px;
+}
+.copyrightContainer {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: var(--font-size-xs);
+}
+.footer,
+.reservationFaq {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  font-family: var(--font-montserrat);
+}
+.footer {
+  align-self: stretch;
+  padding: var(--padding-21xl) var(--padding-21xl) var(--padding-5xs);
+  box-sizing: border-box;
+  gap: var(--gap-13xl);
+  background-image: url(/footer@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  max-width: 100%;
+  font-size: var(--font-size-sm);
+  color: var(--support-white);
+}
+.reservationFaq {
+  width: 100%;
+  position: relative;
+  background-color: var(--support-grey-bg);
+  line-height: normal;
+  letter-spacing: normal;
+  font-size: var(--font-size-xl);
+  color: var(--text-black);
+}
+@media screen and (max-width: 1275px) {
+  .tabContainer {
+    display: none;
+  }
+  .reservationFaqAccordians {
+    padding-top: var(--padding-15xl);
+    padding-bottom: var(--padding-23xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .linksContainer,
+  .logo {
+    flex: 1;
+  }
+  .footerSection,
+  .recognitionAndSocialMediaC {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 750px) {
+  .reservationFaqAccordians {
+    padding-top: var(--padding-3xl);
+    padding-bottom: var(--padding-8xl);
+    box-sizing: border-box;
+  }
+  .logo {
+    flex-wrap: wrap;
+  }
+  .linksContainer,
+  .logo {
+    min-width: 100%;
+  }
+  .socialMediaContainer {
+    flex-wrap: wrap;
+    gap: var(--gap-6xl);
+  }
+  .footer {
+    gap: var(--gap-base);
+  }
+}
+@media screen and (max-width: 450px) {
+  .frequentlyAskedQuestions {
+    font-size: var(--font-size-lgi);
+  }
+  .before6Am,
+  .before6Am1,
+  .before6AmContainer {
+    font-size: var(--font-size-base);
+    line-height: 21px;
+  }
+  .linksContainer,
+  .recognitionContainer1 {
+    flex-wrap: wrap;
+    gap: var(--gap-6xl);
+  }
+  .footer {
+    padding-top: var(--padding-7xl);
+    padding-bottom: var(--padding-xl);
+    box-sizing: border-box;
+  }
+}

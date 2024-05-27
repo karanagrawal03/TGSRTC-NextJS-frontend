@@ -1,0 +1,504 @@
+.al,
+.route {
+  position: relative;
+  line-height: 26px;
+  display: inline-block;
+  min-width: 49px;
+}
+.al {
+  font-size: var(--font-size-xl);
+  line-height: 32px;
+  font-weight: 600;
+  min-width: 27px;
+}
+.routeParent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-7xs);
+}
+.from,
+.jbs {
+  position: relative;
+  line-height: 26px;
+  display: inline-block;
+  min-width: 44px;
+}
+.jbs {
+  font-size: var(--font-size-xl);
+  line-height: 32px;
+  font-weight: 600;
+  min-width: 39px;
+}
+.frameGroup,
+.fromParent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-7xs);
+}
+.frameGroup {
+  width: 133px;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+}
+.rgia,
+.to {
+  position: relative;
+  line-height: 26px;
+  display: inline-block;
+  min-width: 19px;
+}
+.rgia {
+  font-size: var(--font-size-xl);
+  line-height: 32px;
+  font-weight: 600;
+  min-width: 52px;
+}
+.toParent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-7xs);
+}
+.via {
+  position: relative;
+  line-height: 26px;
+  display: inline-block;
+  min-width: 25px;
+}
+.tarnakaUppalL {
+  margin: 0;
+  position: relative;
+  font-size: var(--font-size-xl);
+  line-height: 32px;
+  font-weight: 600;
+  font-family: inherit;
+}
+.frameParent,
+.viaParent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-7xs);
+  max-width: 100%;
+}
+.frameParent {
+  flex-direction: row;
+  gap: var(--gap-21xl);
+}
+.bg {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--support-white);
+}
+.before6Am {
+  flex: 1;
+  position: relative;
+  line-height: 26px;
+  font-weight: 500;
+  display: inline-block;
+  max-width: calc(100% - 48px);
+  z-index: 1;
+}
+.accordianDropdownIcon {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.accordion {
+  align-self: stretch;
+  box-shadow: 0 4px 10px rgba(232, 232, 232, 0.5);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-base) var(--padding-xl);
+  box-sizing: border-box;
+  position: relative;
+  gap: var(--gap-5xl);
+  max-width: 100%;
+}
+.bg1 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.golkonda {
+  position: relative;
+  line-height: 26px;
+  display: inline-block;
+  mix-blend-mode: normal;
+  min-width: 41px;
+  white-space: nowrap;
+}
+.chips {
+  border-radius: var(--br-80xl);
+  background-color: var(--color-whitesmoke-100);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-11xs) var(--padding-xs);
+}
+.golkonda1 {
+  position: relative;
+  line-height: 26px;
+  display: inline-block;
+  mix-blend-mode: normal;
+  min-width: 41px;
+  white-space: nowrap;
+}
+.chips1 {
+  border-radius: var(--br-80xl);
+  background-color: var(--color-whitesmoke-100);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-11xs) var(--padding-xs);
+}
+.golkonda2 {
+  position: relative;
+  line-height: 26px;
+  display: inline-block;
+  mix-blend-mode: normal;
+  min-width: 35px;
+  white-space: nowrap;
+}
+.chips2 {
+  border-radius: var(--br-80xl);
+  background-color: var(--color-whitesmoke-100);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-11xs) var(--padding-xs);
+}
+.golkonda3 {
+  position: relative;
+  line-height: 26px;
+  display: inline-block;
+  mix-blend-mode: normal;
+  min-width: 39px;
+  white-space: nowrap;
+}
+.chips3 {
+  border-radius: var(--br-80xl);
+  background-color: var(--color-whitesmoke-100);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-11xs) var(--padding-xs);
+}
+.golkonda4 {
+  position: relative;
+  line-height: 26px;
+  display: inline-block;
+  mix-blend-mode: normal;
+  min-width: 38px;
+  white-space: nowrap;
+}
+.chips4 {
+  border-radius: var(--br-80xl);
+  background-color: var(--color-whitesmoke-100);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-11xs) var(--padding-xs);
+}
+.golkonda5 {
+  position: relative;
+  line-height: 26px;
+  display: inline-block;
+  mix-blend-mode: normal;
+  min-width: 36px;
+  white-space: nowrap;
+}
+.chips5 {
+  border-radius: var(--br-80xl);
+  background-color: var(--color-whitesmoke-100);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-11xs) var(--padding-xs);
+}
+.golkonda6 {
+  position: relative;
+  line-height: 26px;
+  display: inline-block;
+  mix-blend-mode: normal;
+  min-width: 39px;
+  white-space: nowrap;
+}
+.chips6 {
+  border-radius: var(--br-80xl);
+  background-color: var(--color-whitesmoke-100);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-11xs) var(--padding-xs);
+}
+.golkonda7 {
+  position: relative;
+  line-height: 26px;
+  display: inline-block;
+  mix-blend-mode: normal;
+  min-width: 35px;
+  white-space: nowrap;
+}
+.chips7 {
+  border-radius: var(--br-80xl);
+  background-color: var(--color-whitesmoke-100);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-11xs) var(--padding-xs);
+}
+.golkonda8 {
+  position: relative;
+  line-height: 26px;
+  display: inline-block;
+  mix-blend-mode: normal;
+  min-width: 38px;
+  white-space: nowrap;
+}
+.chips8,
+.earlyMorningAccordion,
+.earlyMorningValues,
+.items {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.chips8 {
+  border-radius: var(--br-80xl);
+  background-color: var(--color-whitesmoke-100);
+  flex-direction: row;
+  padding: var(--padding-11xs) var(--padding-xs);
+}
+.earlyMorningAccordion,
+.earlyMorningValues,
+.items {
+  max-width: 100%;
+}
+.items {
+  overflow-x: auto;
+  flex-direction: row;
+  gap: var(--gap-5xs);
+  z-index: 1;
+}
+.earlyMorningAccordion,
+.earlyMorningValues {
+  align-self: stretch;
+}
+.earlyMorningValues {
+  background-color: var(--support-white);
+  flex-direction: row;
+  padding: var(--padding-xl);
+  box-sizing: border-box;
+  position: relative;
+  gap: var(--gap-61xl);
+}
+.earlyMorningAccordion {
+  box-shadow: var(--table-shadow);
+  flex-direction: column;
+}
+.bg2 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-whitesmoke-200);
+}
+.before6Am1 {
+  flex: 1;
+  position: relative;
+  line-height: 26px;
+  font-weight: 500;
+  display: inline-block;
+  max-width: calc(100% - 48px);
+  z-index: 1;
+}
+.accordianDropdowntrueIcon {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.accordion1 {
+  align-self: stretch;
+  box-shadow: var(--table-shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-base) var(--padding-xl);
+  box-sizing: border-box;
+  position: relative;
+  gap: var(--gap-5xl);
+  max-width: 100%;
+}
+.bg3 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-whitesmoke-200);
+}
+.before6Am2 {
+  flex: 1;
+  position: relative;
+  line-height: 26px;
+  font-weight: 500;
+  display: inline-block;
+  max-width: calc(100% - 48px);
+  z-index: 1;
+}
+.accordianDropdowntrueIcon1 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.accordion2 {
+  align-self: stretch;
+  box-shadow: var(--table-shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-base) var(--padding-xl);
+  box-sizing: border-box;
+  position: relative;
+  gap: var(--gap-5xl);
+  max-width: 100%;
+}
+.bg4 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-whitesmoke-200);
+}
+.before6Am3 {
+  flex: 1;
+  position: relative;
+  line-height: 26px;
+  font-weight: 500;
+  display: inline-block;
+  max-width: calc(100% - 48px);
+  z-index: 1;
+}
+.accordianDropdowntrueIcon2 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.accordion3,
+.otherAccordions {
+  align-self: stretch;
+  max-width: 100%;
+}
+.accordion3 {
+  box-shadow: var(--table-shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-base) var(--padding-xl);
+  box-sizing: border-box;
+  position: relative;
+  gap: var(--gap-5xl);
+}
+.otherAccordions {
+  gap: var(--gap-5xs);
+}
+.earlyMorningAccordionParent,
+.miyapurDepotCard1,
+.otherAccordions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.earlyMorningAccordionParent {
+  align-self: stretch;
+  gap: var(--gap-5xs);
+  max-width: 100%;
+  font-size: var(--font-size-sm);
+}
+.miyapurDepotCard1 {
+  width: 1166px;
+  border-radius: var(--br-base);
+  background-color: var(--support-grey-bg);
+  border: 1px solid var(--color-gainsboro-200);
+  box-sizing: border-box;
+  padding: var(--padding-3xl) var(--padding-4xl);
+  gap: var(--gap-3xl);
+  text-align: left;
+  font-size: var(--font-size-base);
+  color: var(--text-black);
+  font-family: var(--font-montserrat);
+}
+@media screen and (max-width: 450px) {
+  .al,
+  .jbs,
+  .rgia,
+  .tarnakaUppalL {
+    font-size: var(--font-size-base);
+    line-height: 26px;
+  }
+  .miyapurDepotCard1 {
+    padding-top: var(--padding-xl);
+    padding-bottom: var(--padding-xl);
+    box-sizing: border-box;
+  }
+}

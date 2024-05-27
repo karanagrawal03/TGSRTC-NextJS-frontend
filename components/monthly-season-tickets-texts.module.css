@@ -1,0 +1,1126 @@
+.guidingPrinciplesOf,
+.monthlySeasonTickets {
+  position: relative;
+  font-weight: 600;
+  display: inline-block;
+  mix-blend-mode: normal;
+  max-width: 100%;
+}
+.monthlySeasonTickets {
+  margin: 0;
+  font-size: inherit;
+  font-family: inherit;
+}
+.guidingPrinciplesOf {
+  height: 29px;
+  flex: 1;
+}
+.title {
+  width: 362px;
+  display: none;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.bulltetPointPlaceholder {
+  height: 26px;
+  width: 6px;
+  position: relative;
+  min-height: 26px;
+  flex-shrink: 0;
+}
+.monthlySeasonTickets1 {
+  margin: 0;
+  width: 1104px;
+  position: relative;
+  line-height: 26px;
+  display: inline-block;
+  flex-shrink: 0;
+  max-width: 102%;
+}
+.bulletPoint {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0;
+  box-sizing: border-box;
+  gap: var(--gap-5xs);
+  max-width: 100%;
+}
+.bulltetPointPlaceholder1 {
+  height: 26px;
+  width: 6px;
+  position: relative;
+  min-height: 26px;
+  flex-shrink: 0;
+}
+.monthlySeasonTickets2 {
+  margin: 0;
+  width: 1104px;
+  position: relative;
+  line-height: 26px;
+  display: inline-block;
+  flex-shrink: 0;
+  max-width: 102%;
+}
+.bulletPoint1 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0;
+  box-sizing: border-box;
+  gap: var(--gap-5xs);
+  max-width: 100%;
+}
+.bulltetPointPlaceholder2 {
+  height: 26px;
+  width: 6px;
+  position: relative;
+  min-height: 26px;
+  flex-shrink: 0;
+}
+.monthlySeasonTickets3 {
+  margin: 0;
+  width: 1104px;
+  position: relative;
+  line-height: 26px;
+  display: inline-block;
+  flex-shrink: 0;
+  max-width: 102%;
+}
+.bulletPoint2 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0;
+  box-sizing: border-box;
+  gap: var(--gap-5xs);
+  max-width: 100%;
+}
+.bulltetPointPlaceholder3 {
+  height: 26px;
+  width: 6px;
+  position: relative;
+  min-height: 26px;
+  flex-shrink: 0;
+}
+.monthlySeasonTickets4 {
+  margin: 0;
+  width: 1104px;
+  position: relative;
+  line-height: 26px;
+  display: inline-block;
+  flex-shrink: 0;
+  max-width: 102%;
+}
+.bulletPoint3 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0;
+  box-sizing: border-box;
+  gap: var(--gap-5xs);
+  max-width: 100%;
+}
+.bulltetPointPlaceholder4 {
+  height: 26px;
+  width: 6px;
+  position: relative;
+  min-height: 26px;
+  flex-shrink: 0;
+}
+.monthlySeasonTickets5 {
+  margin: 0;
+  width: 1104px;
+  position: relative;
+  line-height: 26px;
+  display: inline-block;
+  flex-shrink: 0;
+  max-width: 102%;
+}
+.bulletPoint4 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0;
+  box-sizing: border-box;
+  gap: var(--gap-5xs);
+  max-width: 100%;
+}
+.bulltetPointPlaceholder5,
+.monthlySeasonTickets6 {
+  height: 26px;
+  width: 6px;
+  position: relative;
+  flex-shrink: 0;
+}
+.monthlySeasonTickets6 {
+  width: 1104px;
+  line-height: 26px;
+  display: inline-block;
+  max-width: 103%;
+}
+.bulletPoint5 {
+  align-self: stretch;
+  display: none;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+  max-width: 100%;
+}
+.bulltetPointPlaceholder6,
+.monthlySeasonTickets7 {
+  height: 26px;
+  width: 6px;
+  position: relative;
+  flex-shrink: 0;
+}
+.monthlySeasonTickets7 {
+  height: 52px;
+  width: 1104px;
+  line-height: 26px;
+  display: inline-block;
+  max-width: 103%;
+}
+.bulletPoint6 {
+  align-self: stretch;
+  height: 26px;
+  display: none;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+  max-width: 100%;
+}
+.bulltetPointPlaceholder7,
+.monthlySeasonTickets8 {
+  height: 26px;
+  width: 6px;
+  position: relative;
+  flex-shrink: 0;
+}
+.monthlySeasonTickets8 {
+  width: 1104px;
+  line-height: 26px;
+  display: inline-block;
+  max-width: 103%;
+}
+.bulletPoint7 {
+  align-self: stretch;
+  display: none;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+  max-width: 100%;
+}
+.bulltetPointPlaceholder8,
+.monthlySeasonTickets9 {
+  height: 26px;
+  width: 6px;
+  position: relative;
+  flex-shrink: 0;
+}
+.monthlySeasonTickets9 {
+  height: 52px;
+  width: 1104px;
+  line-height: 26px;
+  display: inline-block;
+  max-width: 103%;
+}
+.bulletPoint8 {
+  align-self: stretch;
+  height: 26px;
+  display: none;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+  max-width: 100%;
+}
+.bulltetPointPlaceholder9,
+.monthlySeasonTickets10 {
+  height: 26px;
+  width: 6px;
+  position: relative;
+  flex-shrink: 0;
+}
+.monthlySeasonTickets10 {
+  width: 1104px;
+  line-height: 26px;
+  display: inline-block;
+  max-width: 103%;
+}
+.bulletPoint9 {
+  align-self: stretch;
+  display: none;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+  max-width: 100%;
+}
+.bulltetPointPlaceholder10 {
+  height: 26px;
+  width: 6px;
+  position: relative;
+  min-height: 26px;
+  flex-shrink: 0;
+}
+.monthlySeasonTickets11 {
+  height: 28px;
+  width: 1104px;
+  position: relative;
+  line-height: 28px;
+  display: inline-block;
+  flex-shrink: 0;
+  max-width: 103%;
+}
+.bulletPoint10 {
+  align-self: stretch;
+  height: 26px;
+  display: none;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+  max-width: 100%;
+}
+.bulltetPointPlaceholder11 {
+  height: 26px;
+  width: 6px;
+  position: relative;
+  min-height: 26px;
+  flex-shrink: 0;
+}
+.monthlySeasonTickets12 {
+  height: 28px;
+  width: 1104px;
+  position: relative;
+  line-height: 28px;
+  display: inline-block;
+  flex-shrink: 0;
+  max-width: 103%;
+}
+.bulletPoint11 {
+  align-self: stretch;
+  height: 26px;
+  display: none;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+  max-width: 100%;
+}
+.bulltetPointPlaceholder12 {
+  height: 26px;
+  width: 6px;
+  position: relative;
+  min-height: 26px;
+  flex-shrink: 0;
+}
+.monthlySeasonTickets13 {
+  height: 28px;
+  width: 1104px;
+  position: relative;
+  line-height: 28px;
+  display: inline-block;
+  flex-shrink: 0;
+  max-width: 103%;
+}
+.bulletPoint12 {
+  align-self: stretch;
+  height: 26px;
+  display: none;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+  max-width: 100%;
+}
+.bulltetPointPlaceholder13 {
+  height: 26px;
+  width: 6px;
+  position: relative;
+  min-height: 26px;
+  flex-shrink: 0;
+}
+.monthlySeasonTickets14 {
+  height: 28px;
+  width: 1104px;
+  position: relative;
+  line-height: 28px;
+  display: inline-block;
+  flex-shrink: 0;
+  max-width: 103%;
+}
+.bulletPoint13 {
+  align-self: stretch;
+  height: 26px;
+  display: none;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+  max-width: 100%;
+}
+.bulltetPointPlaceholder14 {
+  height: 26px;
+  width: 6px;
+  position: relative;
+  min-height: 26px;
+  flex-shrink: 0;
+}
+.monthlySeasonTickets15 {
+  height: 28px;
+  width: 1104px;
+  position: relative;
+  line-height: 28px;
+  display: inline-block;
+  flex-shrink: 0;
+  max-width: 103%;
+}
+.bulletPoint14 {
+  align-self: stretch;
+  height: 26px;
+  display: none;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+  max-width: 100%;
+}
+.bulltetPointPlaceholder15 {
+  height: 26px;
+  width: 6px;
+  position: relative;
+  min-height: 26px;
+  flex-shrink: 0;
+}
+.monthlySeasonTickets16 {
+  height: 28px;
+  width: 1104px;
+  position: relative;
+  line-height: 28px;
+  display: inline-block;
+  flex-shrink: 0;
+  max-width: 103%;
+}
+.bulletPoint15 {
+  align-self: stretch;
+  height: 26px;
+  display: none;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+  max-width: 100%;
+}
+.bulltetPointPlaceholder16 {
+  height: 26px;
+  width: 6px;
+  position: relative;
+  min-height: 26px;
+  flex-shrink: 0;
+}
+.monthlySeasonTickets17 {
+  height: 28px;
+  width: 1104px;
+  position: relative;
+  line-height: 28px;
+  display: inline-block;
+  flex-shrink: 0;
+  max-width: 103%;
+}
+.bulletPoint16 {
+  align-self: stretch;
+  height: 26px;
+  display: none;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+  max-width: 100%;
+}
+.bulltetPointPlaceholder17 {
+  height: 26px;
+  width: 6px;
+  position: relative;
+  min-height: 26px;
+  flex-shrink: 0;
+}
+.monthlySeasonTickets18 {
+  height: 28px;
+  width: 1104px;
+  position: relative;
+  line-height: 28px;
+  display: inline-block;
+  flex-shrink: 0;
+  max-width: 103%;
+}
+.bulletPoint17 {
+  align-self: stretch;
+  height: 26px;
+  display: none;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+  max-width: 100%;
+}
+.bulltetPointPlaceholder18 {
+  height: 26px;
+  width: 6px;
+  position: relative;
+  min-height: 26px;
+  flex-shrink: 0;
+}
+.monthlySeasonTickets19 {
+  height: 28px;
+  width: 1104px;
+  position: relative;
+  line-height: 28px;
+  display: inline-block;
+  flex-shrink: 0;
+  max-width: 103%;
+}
+.bulletPoint18 {
+  align-self: stretch;
+  height: 26px;
+  display: none;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+  max-width: 100%;
+}
+.bulltetPointPlaceholder19 {
+  height: 26px;
+  width: 6px;
+  position: relative;
+  min-height: 26px;
+  flex-shrink: 0;
+}
+.monthlySeasonTickets20 {
+  height: 28px;
+  width: 1104px;
+  position: relative;
+  line-height: 28px;
+  display: inline-block;
+  flex-shrink: 0;
+  max-width: 103%;
+}
+.bulletPoint19 {
+  align-self: stretch;
+  height: 26px;
+  display: none;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+  max-width: 100%;
+}
+.bulletPoints {
+  font-size: var(--font-size-base);
+  color: var(--text-grey-body-text);
+}
+.bulletPointContainer,
+.bulletPoints {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-base);
+  max-width: 100%;
+}
+.guidingPrinciplesOf1,
+.valueAdditionGiven {
+  position: relative;
+  font-weight: 600;
+  mix-blend-mode: normal;
+}
+.guidingPrinciplesOf1 {
+  height: 29px;
+  flex: 1;
+  display: inline-block;
+  max-width: 100%;
+}
+.title1 {
+  width: 362px;
+  display: none;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.bulltetPointPlaceholder20 {
+  height: 26px;
+  width: 6px;
+  position: relative;
+  flex-shrink: 0;
+}
+.monthlySeasonTickets21 {
+  margin: 0;
+  width: 1104px;
+  position: relative;
+  line-height: 26px;
+  display: inline-block;
+  flex-shrink: 0;
+  max-width: 102%;
+}
+.bulletPoint20 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0;
+  box-sizing: border-box;
+  gap: var(--gap-5xs);
+  max-width: 100%;
+}
+.bulltetPointPlaceholder21 {
+  height: 26px;
+  width: 6px;
+  position: relative;
+  flex-shrink: 0;
+}
+.monthlySeasonTickets22 {
+  margin: 0;
+  width: 1104px;
+  position: relative;
+  line-height: 26px;
+  display: inline-block;
+  flex-shrink: 0;
+  max-width: 102%;
+}
+.bulletPoint21 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0;
+  box-sizing: border-box;
+  gap: var(--gap-5xs);
+  max-width: 100%;
+}
+.bulltetPointPlaceholder22,
+.monthlySeasonTickets23 {
+  height: 26px;
+  width: 6px;
+  position: relative;
+  flex-shrink: 0;
+}
+.monthlySeasonTickets23 {
+  width: 1104px;
+  line-height: 26px;
+  display: inline-block;
+  max-width: 103%;
+}
+.bulletPoint22 {
+  align-self: stretch;
+  display: none;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+  max-width: 100%;
+}
+.bulltetPointPlaceholder23,
+.monthlySeasonTickets24 {
+  height: 26px;
+  width: 6px;
+  position: relative;
+  flex-shrink: 0;
+}
+.monthlySeasonTickets24 {
+  width: 1104px;
+  line-height: 26px;
+  display: inline-block;
+  max-width: 103%;
+}
+.bulletPoint23 {
+  align-self: stretch;
+  display: none;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+  max-width: 100%;
+}
+.bulltetPointPlaceholder24,
+.monthlySeasonTickets25 {
+  height: 26px;
+  width: 6px;
+  position: relative;
+  flex-shrink: 0;
+}
+.monthlySeasonTickets25 {
+  width: 1104px;
+  line-height: 26px;
+  display: inline-block;
+  max-width: 103%;
+}
+.bulletPoint24 {
+  align-self: stretch;
+  display: none;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+  max-width: 100%;
+}
+.bulltetPointPlaceholder25,
+.monthlySeasonTickets26 {
+  height: 26px;
+  width: 6px;
+  position: relative;
+  flex-shrink: 0;
+}
+.monthlySeasonTickets26 {
+  width: 1104px;
+  line-height: 26px;
+  display: inline-block;
+  max-width: 103%;
+}
+.bulletPoint25 {
+  align-self: stretch;
+  display: none;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+  max-width: 100%;
+}
+.bulltetPointPlaceholder26,
+.monthlySeasonTickets27 {
+  height: 26px;
+  width: 6px;
+  position: relative;
+  flex-shrink: 0;
+}
+.monthlySeasonTickets27 {
+  height: 52px;
+  width: 1104px;
+  line-height: 26px;
+  display: inline-block;
+  max-width: 103%;
+}
+.bulletPoint26 {
+  align-self: stretch;
+  height: 26px;
+  display: none;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+  max-width: 100%;
+}
+.bulltetPointPlaceholder27,
+.monthlySeasonTickets28 {
+  height: 26px;
+  width: 6px;
+  position: relative;
+  flex-shrink: 0;
+}
+.monthlySeasonTickets28 {
+  width: 1104px;
+  line-height: 26px;
+  display: inline-block;
+  max-width: 103%;
+}
+.bulletPoint27 {
+  align-self: stretch;
+  display: none;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+  max-width: 100%;
+}
+.bulltetPointPlaceholder28,
+.monthlySeasonTickets29 {
+  height: 26px;
+  width: 6px;
+  position: relative;
+  flex-shrink: 0;
+}
+.monthlySeasonTickets29 {
+  height: 52px;
+  width: 1104px;
+  line-height: 26px;
+  display: inline-block;
+  max-width: 103%;
+}
+.bulletPoint28 {
+  align-self: stretch;
+  height: 26px;
+  display: none;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+  max-width: 100%;
+}
+.bulltetPointPlaceholder29,
+.monthlySeasonTickets30 {
+  height: 26px;
+  width: 6px;
+  position: relative;
+  flex-shrink: 0;
+}
+.monthlySeasonTickets30 {
+  width: 1104px;
+  line-height: 26px;
+  display: inline-block;
+  max-width: 103%;
+}
+.bulletPoint29 {
+  align-self: stretch;
+  display: none;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+  max-width: 100%;
+}
+.bulltetPointPlaceholder30 {
+  height: 26px;
+  width: 6px;
+  position: relative;
+  min-height: 26px;
+  flex-shrink: 0;
+}
+.monthlySeasonTickets31 {
+  height: 28px;
+  width: 1104px;
+  position: relative;
+  line-height: 28px;
+  display: inline-block;
+  flex-shrink: 0;
+  max-width: 103%;
+}
+.bulletPoint30 {
+  align-self: stretch;
+  height: 26px;
+  display: none;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+  max-width: 100%;
+}
+.bulltetPointPlaceholder31 {
+  height: 26px;
+  width: 6px;
+  position: relative;
+  min-height: 26px;
+  flex-shrink: 0;
+}
+.monthlySeasonTickets32 {
+  height: 28px;
+  width: 1104px;
+  position: relative;
+  line-height: 28px;
+  display: inline-block;
+  flex-shrink: 0;
+  max-width: 103%;
+}
+.bulletPoint31 {
+  align-self: stretch;
+  height: 26px;
+  display: none;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+  max-width: 100%;
+}
+.bulltetPointPlaceholder32 {
+  height: 26px;
+  width: 6px;
+  position: relative;
+  min-height: 26px;
+  flex-shrink: 0;
+}
+.monthlySeasonTickets33 {
+  height: 28px;
+  width: 1104px;
+  position: relative;
+  line-height: 28px;
+  display: inline-block;
+  flex-shrink: 0;
+  max-width: 103%;
+}
+.bulletPoint32 {
+  align-self: stretch;
+  height: 26px;
+  display: none;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+  max-width: 100%;
+}
+.bulltetPointPlaceholder33 {
+  height: 26px;
+  width: 6px;
+  position: relative;
+  min-height: 26px;
+  flex-shrink: 0;
+}
+.monthlySeasonTickets34 {
+  height: 28px;
+  width: 1104px;
+  position: relative;
+  line-height: 28px;
+  display: inline-block;
+  flex-shrink: 0;
+  max-width: 103%;
+}
+.bulletPoint33 {
+  align-self: stretch;
+  height: 26px;
+  display: none;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+  max-width: 100%;
+}
+.bulltetPointPlaceholder34 {
+  height: 26px;
+  width: 6px;
+  position: relative;
+  min-height: 26px;
+  flex-shrink: 0;
+}
+.monthlySeasonTickets35 {
+  height: 28px;
+  width: 1104px;
+  position: relative;
+  line-height: 28px;
+  display: inline-block;
+  flex-shrink: 0;
+  max-width: 103%;
+}
+.bulletPoint34 {
+  align-self: stretch;
+  height: 26px;
+  display: none;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+  max-width: 100%;
+}
+.bulltetPointPlaceholder35 {
+  height: 26px;
+  width: 6px;
+  position: relative;
+  min-height: 26px;
+  flex-shrink: 0;
+}
+.monthlySeasonTickets36 {
+  height: 28px;
+  width: 1104px;
+  position: relative;
+  line-height: 28px;
+  display: inline-block;
+  flex-shrink: 0;
+  max-width: 103%;
+}
+.bulletPoint35 {
+  align-self: stretch;
+  height: 26px;
+  display: none;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+  max-width: 100%;
+}
+.bulltetPointPlaceholder36 {
+  height: 26px;
+  width: 6px;
+  position: relative;
+  min-height: 26px;
+  flex-shrink: 0;
+}
+.monthlySeasonTickets37 {
+  height: 28px;
+  width: 1104px;
+  position: relative;
+  line-height: 28px;
+  display: inline-block;
+  flex-shrink: 0;
+  max-width: 103%;
+}
+.bulletPoint36 {
+  align-self: stretch;
+  height: 26px;
+  display: none;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+  max-width: 100%;
+}
+.bulltetPointPlaceholder37 {
+  height: 26px;
+  width: 6px;
+  position: relative;
+  min-height: 26px;
+  flex-shrink: 0;
+}
+.monthlySeasonTickets38 {
+  height: 28px;
+  width: 1104px;
+  position: relative;
+  line-height: 28px;
+  display: inline-block;
+  flex-shrink: 0;
+  max-width: 103%;
+}
+.bulletPoint37 {
+  align-self: stretch;
+  height: 26px;
+  display: none;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+  max-width: 100%;
+}
+.bulltetPointPlaceholder38 {
+  height: 26px;
+  width: 6px;
+  position: relative;
+  min-height: 26px;
+  flex-shrink: 0;
+}
+.monthlySeasonTickets39 {
+  height: 28px;
+  width: 1104px;
+  position: relative;
+  line-height: 28px;
+  display: inline-block;
+  flex-shrink: 0;
+  max-width: 103%;
+}
+.bulletPoint38 {
+  align-self: stretch;
+  height: 26px;
+  display: none;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+  max-width: 100%;
+}
+.bulltetPointPlaceholder39 {
+  height: 26px;
+  width: 6px;
+  position: relative;
+  min-height: 26px;
+  flex-shrink: 0;
+}
+.monthlySeasonTickets40 {
+  height: 28px;
+  width: 1104px;
+  position: relative;
+  line-height: 28px;
+  display: inline-block;
+  flex-shrink: 0;
+  max-width: 103%;
+}
+.bulletPoint39,
+.bulletPointContainer1,
+.bulletPoints1 {
+  align-self: stretch;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.bulletPoint39 {
+  height: 26px;
+  display: none;
+  flex-direction: row;
+  gap: var(--gap-5xs);
+}
+.bulletPointContainer1,
+.bulletPoints1 {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-base);
+}
+.bulletPoints1 {
+  font-size: var(--font-size-base);
+  color: var(--text-grey-body-text);
+}
+.bulletPointContainer1 {
+  font-size: var(--font-size-5xl);
+}
+.valueAdditionGivenToMstHo {
+  align-self: stretch;
+  gap: var(--gap-xs);
+  font-size: var(--font-size-sm);
+}
+.monthlySeasonTicketsSubCon,
+.monthlySeasonTicketsTexts,
+.valueAdditionGivenToMstHo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.monthlySeasonTicketsSubCon {
+  align-self: stretch;
+  border-radius: var(--br-7xs);
+  border: 1px solid var(--color-silver);
+  box-sizing: border-box;
+  padding: var(--padding-19xl) var(--padding-20xl);
+  gap: var(--gap-13xl);
+  color: var(--text-black);
+  font-family: var(--font-montserrat);
+}
+.monthlySeasonTicketsTexts {
+  width: 1166px;
+  gap: var(--gap-5xl);
+  text-align: left;
+  font-size: var(--font-size-5xl);
+  color: var(--primary-red);
+  font-family: var(--font-playfair-display);
+}
+@media screen and (max-width: 750px) {
+  .monthlySeasonTicketsSubCon {
+    gap: var(--gap-base);
+  }
+}
+@media screen and (max-width: 450px) {
+  .guidingPrinciplesOf,
+  .guidingPrinciplesOf1,
+  .monthlySeasonTickets {
+    font-size: var(--font-size-lgi);
+  }
+  .monthlySeasonTicketsSubCon {
+    padding-top: var(--padding-6xl);
+    padding-bottom: var(--padding-6xl);
+    box-sizing: border-box;
+  }
+}

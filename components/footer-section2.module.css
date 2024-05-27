@@ -1,0 +1,182 @@
+.logo51Icon {
+  height: 73px;
+  width: 73px;
+  position: relative;
+  object-fit: cover;
+}
+.icon {
+  width: 327.3px;
+  position: relative;
+  max-height: 100%;
+  max-width: 100%;
+}
+.telanganaStateRoadTransport {
+  align-self: stretch;
+  height: 12.9px;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.logo,
+.logoTextGroup {
+  display: flex;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.logoTextGroup {
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--gap-2xs);
+  min-width: 313px;
+}
+.logo {
+  width: 568.6px;
+  flex-direction: row;
+  align-items: center;
+  padding: var(--padding-xl) 0;
+  box-sizing: border-box;
+  gap: var(--gap-sm);
+  min-width: 568.6px;
+}
+.careers,
+.quicklinks {
+  position: relative;
+  display: inline-block;
+}
+.quicklinks {
+  letter-spacing: 0.02em;
+  font-weight: 700;
+  min-width: 81px;
+}
+.careers {
+  min-width: 53px;
+}
+.siteMap {
+  min-width: 62px;
+}
+.aboutUs,
+.contactUs,
+.siteMap {
+  position: relative;
+  display: inline-block;
+}
+.aboutUs {
+  text-decoration: none;
+  color: inherit;
+  min-width: 66px;
+}
+.contactUs {
+  min-width: 76px;
+}
+.footerLinks1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-mid);
+}
+.information {
+  letter-spacing: 0.02em;
+  font-weight: 700;
+}
+.information,
+.rtiAct2005 {
+  position: relative;
+  display: inline-block;
+  min-width: 91px;
+}
+.feedback,
+.privacyPolicies,
+.roadSafety {
+  position: relative;
+  display: inline-block;
+  min-width: 84px;
+}
+.feedback,
+.privacyPolicies {
+  min-width: 107px;
+}
+.feedback {
+  min-width: 69px;
+}
+.footerLinks2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-mid);
+}
+.busPasses,
+.faqs,
+.reservations {
+  position: relative;
+  display: inline-block;
+}
+.faqs {
+  letter-spacing: 0.02em;
+  font-weight: 700;
+  min-width: 40px;
+}
+.busPasses,
+.reservations {
+  min-width: 90px;
+}
+.busPasses {
+  min-width: 78px;
+}
+.footerLinks3 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-mid);
+}
+.footerSection,
+.linksContainer {
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+}
+.linksContainer {
+  width: 378px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-31xl);
+  min-width: 378px;
+}
+.footerSection {
+  align-self: stretch;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+  text-align: left;
+  font-size: var(--font-size-sm);
+  color: var(--support-white);
+  font-family: var(--font-montserrat);
+}
+@media screen and (max-width: 1100px) {
+  .linksContainer,
+  .logo {
+    flex: 1;
+  }
+  .footerSection {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 750px) {
+  .logo {
+    flex-wrap: wrap;
+  }
+  .linksContainer,
+  .logo {
+    min-width: 100%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .linksContainer {
+    flex-wrap: wrap;
+    gap: var(--gap-6xl);
+  }
+}

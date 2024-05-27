@@ -1,0 +1,132 @@
+.ac,
+.route {
+  position: relative;
+  line-height: 26px;
+  display: inline-block;
+  min-width: 49px;
+}
+.ac {
+  font-size: var(--font-size-xl);
+  line-height: 32px;
+  font-weight: 600;
+  min-width: 30px;
+}
+.routeParent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-7xs);
+}
+.from,
+.jbs {
+  position: relative;
+  line-height: 26px;
+  display: inline-block;
+  min-width: 44px;
+}
+.jbs {
+  font-size: var(--font-size-xl);
+  line-height: 32px;
+  font-weight: 600;
+  min-width: 39px;
+}
+.frameGroup,
+.fromParent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-7xs);
+}
+.frameGroup {
+  width: 133px;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+}
+.rgia,
+.to {
+  position: relative;
+  line-height: 26px;
+  display: inline-block;
+  min-width: 19px;
+}
+.rgia {
+  font-size: var(--font-size-xl);
+  line-height: 32px;
+  font-weight: 600;
+  min-width: 52px;
+}
+.toParent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-7xs);
+}
+.via {
+  position: relative;
+  line-height: 26px;
+  display: inline-block;
+  min-width: 25px;
+}
+.yathriNivasParyatak {
+  margin: 0;
+  position: relative;
+  font-size: var(--font-size-xl);
+  line-height: 32px;
+  font-weight: 600;
+}
+.viaParent {
+  flex-direction: column;
+  gap: var(--gap-7xs);
+  max-width: 100%;
+}
+.frameContainer,
+.frameParent,
+.miyapurDepotCard2,
+.viaParent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.frameContainer,
+.frameParent {
+  flex-direction: row;
+  gap: var(--gap-21xl);
+  max-width: 100%;
+}
+.miyapurDepotCard2 {
+  width: 1166px;
+  border-radius: var(--br-base);
+  background-color: var(--support-grey-bg);
+  border: 1px solid var(--color-gainsboro-200);
+  box-sizing: border-box;
+  flex-direction: column;
+  padding: var(--padding-3xl) var(--padding-4xl);
+  gap: var(--gap-3xl);
+  text-align: left;
+  font-size: var(--font-size-base);
+  color: var(--text-black);
+  font-family: var(--font-montserrat);
+}
+@media screen and (max-width: 750px) {
+  .frameContainer {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 450px) {
+  .ac,
+  .jbs,
+  .rgia,
+  .yathriNivasParyatak {
+    font-size: var(--font-size-base);
+    line-height: 26px;
+  }
+  .miyapurDepotCard2 {
+    padding-top: var(--padding-xl);
+    padding-bottom: var(--padding-xl);
+    box-sizing: border-box;
+  }
+}
