@@ -11,7 +11,7 @@ const BulletPoints: React.FC<BulletPointsProps> = ({ items }) => {
   
   return (
     <div>
-      <ul style={{paddingLeft:"100px"}}>
+      <ul className={styles.list}>
         {items.map((item, index) => (
           <li className={styles.listItems} key={index}>
             {item}

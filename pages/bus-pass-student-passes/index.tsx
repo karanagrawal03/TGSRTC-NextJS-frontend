@@ -1,17 +1,13 @@
-import type { NextPage } from "next";
-import Header1 from "../../components/header1";
-import FrameComponent from "../../components/frame-component";
-import styles from "./index.module.css";
-import Footer from "../../components/footer";
 import { useEffect, useState } from "react";
-import accordian from "../public/accordian-dropdown.svg";
 import AccordionItem from "../../components/accordians";
+import Header from "../../components/header";
 import {
   APPLY_AND_RENEW,
   KNOW_MORE_ABOUT_STUDENT_PASSES,
   STUDENT_PASSES,
 } from "../../constants";
-import Header from "../../components/header";
+import styles from "./index.module.css";
+import { busPassStudentPasses } from "../../constants/bus-pass-student-passes";
 const BusPassStudentPasses: NextPageBusPassStudentPassesType = () => {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
   const [width, setWidth] = useState<boolean>(false);
@@ -32,232 +28,6 @@ const BusPassStudentPasses: NextPageBusPassStudentPassesType = () => {
   const handleChange = (index: number) => {
     setExpandedIndex((prevIndex) => (prevIndex === index ? null : index));
   };
-  const array = [
-    {
-      name: "student",
-      info: [
-        {
-          data: [
-            {
-              type: "link",
-              text: "https://online.tsrtcpass.in/counterstupass.do?prm=hyd",
-            },
-            {
-              type: "heading",
-              text: "a. Student Quarterly Route Bus Pass",
-            },
-            {
-              type: "bullet points",
-              data: [
-                "Eligible for the Students above 12 years age.",
-                "This Bus Pass can be issued for the distance upto 4 KMs, 8 KMs, 12 KMs, 18 KMs & 22 KMs with concessional tariff as furnished in below table.",
-              ],
-            },
-            {
-              type: "table",
-              data: [
-                {
-                  DistanceInKms: "Distance In Kms",
-                  Name: "Name",
-                },
-                {
-                  DistanceInKms: 45,
-                  Name: 450,
-                },
-                {
-                  DistanceInKms: 50,
-                  Name: 450,
-                },
-                {
-                  DistanceInKms: 0,
-                  Name: 450,
-                },
-                {
-                  DistanceInKms: 9,
-                  Name: 450,
-                },
-              ],
-            },
-            {
-              type: "bullet points",
-              data: [
-                "Validity period – for 3 months (Quarterly).",
-                "Applicant can apply online at www.online.tsrtcpass.in",
-              ],
-            },
-          ],
-        },
-      ],
-    },
-    {
-      name: "student2",
-      info: [
-        {
-          data: [
-            {
-              type: "link",
-              text: "https://online.tsrtcpass.in/counterstupass.do?prm=hyd",
-            },
-            {
-              type: "heading",
-              text: "a. Student Quarterly Route Bus Pass",
-            },
-            {
-              type: "bullet points",
-              data: [
-                "Eligible for the Students above 12 years age.",
-                "This Bus Pass can be issued for the distance upto 4 KMs, 8 KMs, 12 KMs, 18 KMs & 22 KMs with concessional tariff as furnished in below table.",
-              ],
-            },
-            {
-              type: "table",
-              data: [
-                {
-                  DistanceInKms: "Distance In Kms",
-                  Name: "Name",
-                },
-                {
-                  DistanceInKms: 45,
-                  Name: 450,
-                },
-                {
-                  DistanceInKms: 50,
-                  Name: 450,
-                },
-                {
-                  DistanceInKms: 0,
-                  Name: 450,
-                },
-                {
-                  DistanceInKms: 9,
-                  Name: 450,
-                },
-              ],
-            },
-            {
-              type: "bullet points",
-              data: [
-                "Validity period – for 3 months (Quarterly).",
-                "Applicant can apply online at www.online.tsrtcpass.in",
-              ],
-            },
-          ],
-        },
-      ],
-    },
-    {
-      name: "student3",
-      info: [
-        {
-          data: [
-            {
-              type: "link",
-              text: "https://online.tsrtcpass.in/counterstupass.do?prm=hyd",
-            },
-            {
-              type: "heading",
-              text: "a. Student Quarterly Route Bus Pass",
-            },
-            {
-              type: "bullet points",
-              data: [
-                "Eligible for the Students above 12 years age.",
-                "This Bus Pass can be issued for the distance upto 4 KMs, 8 KMs, 12 KMs, 18 KMs & 22 KMs with concessional tariff as furnished in below table.",
-              ],
-            },
-            {
-              type: "table",
-              data: [
-                {
-                  DistanceInKms: "Distance In Kms",
-                  Name: "Name",
-                },
-                {
-                  DistanceInKms: 45,
-                  Name: 450,
-                },
-                {
-                  DistanceInKms: 50,
-                  Name: 450,
-                },
-                {
-                  DistanceInKms: 0,
-                  Name: 450,
-                },
-                {
-                  DistanceInKms: 9,
-                  Name: 450,
-                },
-              ],
-            },
-            {
-              type: "bullet points",
-              data: [
-                "Validity period – for 3 months (Quarterly).",
-                "Applicant can apply online at www.online.tsrtcpass.in",
-              ],
-            },
-          ],
-        },
-      ],
-    },
-    {
-      name: "student4",
-      info: [
-        {
-          data: [
-            {
-              type: "link",
-              text: "https://online.tsrtcpass.in/counterstupass.do?prm=hyd",
-            },
-            {
-              type: "heading",
-              text: "a. Student Quarterly Route Bus Pass",
-            },
-            {
-              type: "bullet points",
-              data: [
-                "Eligible for the Students above 12 years age.",
-                "This Bus Pass can be issued for the distance upto 4 KMs, 8 KMs, 12 KMs, 18 KMs & 22 KMs with concessional tariff as furnished in below table.",
-              ],
-            },
-            {
-              type: "table",
-              data: [
-                {
-                  DistanceInKms: "Distance In Kms",
-                  Name: "Name",
-                },
-                {
-                  DistanceInKms: 45,
-                  Name: 450,
-                },
-                {
-                  DistanceInKms: 50,
-                  Name: 450,
-                },
-                {
-                  DistanceInKms: 0,
-                  Name: 450,
-                },
-                {
-                  DistanceInKms: 9,
-                  Name: 450,
-                },
-              ],
-            },
-            {
-              type: "bullet points",
-              data: [
-                "Validity period – for 3 months (Quarterly).",
-                "Applicant can apply online at www.online.tsrtcpass.in",
-              ],
-            },
-          ],
-        },
-      ],
-    },
-  ];
 
   return (
     <div className={styles.busPassStudentPasses}>
@@ -289,7 +59,7 @@ const BusPassStudentPasses: NextPageBusPassStudentPassesType = () => {
         </div>
         <div className={styles.eachAccordian}>
           <ol className={styles.studentConcessionalRoutePas}>
-            {array.map((e, index) => (
+            {busPassStudentPasses.map((e, index) => (
               <AccordionItem
                 key={index}
                 name={e.name}
@@ -301,7 +71,6 @@ const BusPassStudentPasses: NextPageBusPassStudentPassesType = () => {
           </ol>
         </div>
       </section>
-      {/* <Footer /> */}
     </div>
   );
 };

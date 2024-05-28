@@ -1,17 +1,13 @@
-import type { NextPage } from "next";
-import Header1 from "../../components/header1";
-import BusPassGeneralCommuterPass1 from "../../components/bus-pass-general-commuter-pass1";
-import styles from "./index.module.css";
 import { useState } from "react";
 import AccordionItem from "../../components/accordians";
 import Header from "../../components/header";
-import Tables from "../../components/tables";
 import {
   APPLY_AND_RENEW,
   GENERAL_COMMUTER_PASS,
   KNOW_MORE,
 } from "../../constants";
-
+import { generalCommuterPassData } from "../../constants/bus-pass-general-commuter-pass";
+import styles from "./index.module.css";
 const BusPassGeneralCommuterPass: NextPageBusPassGeneralCommuterPassType =
   () => {
     const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
@@ -26,6 +22,8 @@ const BusPassGeneralCommuterPass: NextPageBusPassGeneralCommuterPassType =
           <img className={styles.bgIcon} alt="" src="/bg@2x.png" />
           <div className={styles.generalCommuterPassContainer}>
             <p className={styles.general}>{GENERAL_COMMUTER_PASS}</p>
+            {/* </div>
+          <div className={styles.applyRenewTravelEffortleWrapper}> */}
             <p className={styles.applyRenew}>{APPLY_AND_RENEW}</p>
           </div>
         </section>
@@ -36,7 +34,7 @@ const BusPassGeneralCommuterPass: NextPageBusPassGeneralCommuterPassType =
           </h2>
           <div className={styles.eachAccordian}>
             <ol className={styles.orderedList}>
-              {array.map((e, index) => (
+              {generalCommuterPassData.map((e, index) => (
                 <AccordionItem
                   key={index}
                   name={e.name}

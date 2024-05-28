@@ -8,3 +8,6 @@
 .listItems::marker {
   color: #cd342b;
 }
+.list {
+  padding: 16px 0px 24px 100px;
+}

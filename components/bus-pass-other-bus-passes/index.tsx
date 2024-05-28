@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import Cards2 from "../cards2";
 import styles from "./index.module.css";
 import { OTHER_BUS_PASSES, VIEW_MORE } from "../../constants";
-
+import { cards3Data } from "../../constants/bus-pass-other-options";
 export type BusPassOtherBusPassesType = {
   className?: string;
 };
@@ -22,50 +22,7 @@ const BusPassOtherBusPasses: NextPage<BusPassOtherBusPassesType> = ({
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const cards3 = [
-    {
-      heading: "Monthly Season Tickets",
-      description:
-        "Lorem ipsum dolor sit amet, adipiscing elit. sed do eiusmod tempor incididunt ut. adipiscing elit. sed do eiusmod tempor incididunt ut.",
-    },
-    {
-      heading: "Physically Challenged",
-      description:
-        "Lorem ipsum dolor sit amet, adipiscing elit. sed do eiusmod tempor incididunt ut. adipiscing elit. sed do eiusmod tempor incididunt ut.",
-    },
-    {
-      heading: "NGO's Bus Pass.",
-      description:
-        "Lorem ipsum dolor sit amet, adipiscing elit. sed do eiusmod tempor incididunt ut. adipiscing elit. sed do eiusmod tempor incididunt ut.",
-    },
-    {
-      heading: "Unemployed Youth",
-      description:
-        "Lorem ipsum dolor sit amet, adipiscing elit. sed do eiusmod tempor incididunt ut. adipiscing elit. sed do eiusmod tempor incididunt ut.",
-    },
-    {
-      heading: "Journalists",
-      description:
-        "Lorem ipsum dolor sit amet, adipiscing elit. sed do eiusmod tempor incididunt ut. adipiscing elit. sed do eiusmod tempor incididunt ut.",
-    },
-    {
-      heading: "Freedom Fighters",
-      description:
-        "Lorem ipsum dolor sit amet, adipiscing elit. sed do eiusmod tempor incididunt ut. adipiscing elit. sed do eiusmod tempor incididunt ut.",
-    },
-    {
-      heading: "Dialysis Patients",
-      description:
-        "Lorem ipsum dolor sit amet, adipiscing elit. sed do eiusmod tempor incididunt ut. adipiscing elit. sed do eiusmod tempor incididunt ut.",
-    },
-    {
-      heading: "MLAs, MPs, MLCs and Spouses",
-      description:
-        "Lorem ipsum dolor sit amet, adipiscing elit. sed do eiusmod tempor incididunt ut. adipiscing elit. sed do eiusmod tempor incididunt ut.",
-    },
-  ];
-
-  const displayedCards = showAll ? cards3 : cards3.slice(0, 4);
+  const displayedCards = showAll ? cards3Data : cards3Data.slice(0, 4);
 
   return (
     <section className={[styles.busPassOtherBusPasses, className].join(" ")}>

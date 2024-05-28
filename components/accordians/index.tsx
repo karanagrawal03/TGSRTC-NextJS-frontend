@@ -19,7 +19,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
         className={styles.dropdown}
         expanded={expanded}
         onChange={onChange}
-        style={{ width: "100%" }}
+        // style={{ width: "100%" }}
       >
         <AccordionSummary
           expandIcon={expanded ? <HorizontalRuleIcon /> : <AddIcon />}
@@ -31,17 +31,8 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
         </AccordionSummary>
       </Accordion>
       {expanded && (
-        <AccordionDetails
-          style={{ padding: "0px", width: "calc( 100% + 24px )" }}
-        >
-          <div
-            style={{
-              marginTop: "-20px",
-              width: "auto",
-              backgroundColor: "#FFFFFF",
-              padding:"0px 56px 0px 60px"
-            }}
-          >
+        <AccordionDetails className={styles.accordianDetails}>
+          <div className={styles.accordianTab}>
             <AccordianTab array={info} />
           </div>
         </AccordionDetails>

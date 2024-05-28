@@ -1,11 +1,10 @@
 "use client";
+import { useEffect, useState } from "react";
 import BusPassOptions from "../../components/bus-pass-options";
 import BusPassOtherBusPasses from "../../components/bus-pass-other-bus-passes";
-import styles from "./index.module.css";
-import { useEffect, useState } from "react";
 import Header from "../../components/header";
 import { APPLY_AND_RENEW, BUS_PASS_SERVICES } from "../../constants";
-import AccordianTab from "../../components/accordian-tab";
+import styles from "./index.module.css";
 const BusPassServices: NextPageBusPassServicesType = () => {
   const [width, setWidth] = useState<boolean>(false);
 

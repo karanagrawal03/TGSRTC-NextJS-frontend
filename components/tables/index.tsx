@@ -12,14 +12,18 @@ import styles from "./index.module.css";
 
 interface TableProps {
   rows: Array<{ [key: string]: any }>;
+  containerClassName?: string;
 }
 
-const Tables: React.FC<TableProps> = ({ rows }) => {
+const Tables: React.FC<TableProps> = ({ rows, containerClassName }) => {
   const headers = rows[0];
   const bodyRows = rows.slice(1);
 
   return (
-    <TableContainer component={Paper}>
+    <TableContainer
+      className={`${styles.tableContainer} ${containerClassName}`}
+      component={Paper}
+    >
       <Table sx={{ minWidth: 700 }} aria-label="customized table">
         <TableHead>
           <TableRow className={styles.tableHead}>

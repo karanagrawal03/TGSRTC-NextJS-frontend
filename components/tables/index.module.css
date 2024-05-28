@@ -1,5 +1,10 @@
+.tableContainer{
+  margin:0px 60px;
+  width:auto
+}
 .tableHead {
     background-color: var(--primary-green);
+    border-radius: 6px;
   }
   .tableHeadCell {
     color: #ffffff;
