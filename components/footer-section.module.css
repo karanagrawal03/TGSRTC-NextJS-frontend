@@ -1,4 +1,4 @@
-.logo51Icon {
+.tsrtcFooterLogo {
   height: 73px;
   width: 73px;
   position: relative;
@@ -86,7 +86,7 @@
   min-width: 76px;
 }
 
-.footerLinks1 {
+.quicklinksSection {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -125,7 +125,7 @@
   min-width: 69px;
 }
 
-.footerLinks2 {
+.informationSection {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -156,7 +156,7 @@
   min-width: 78px;
 }
 
-.footerLinks3 {
+.faqsSection {
   display: flex;
   flex-direction: column;
   align-items: flex-start;

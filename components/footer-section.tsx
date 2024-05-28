@@ -1,6 +1,21 @@
 import type { NextPage } from "next";
 import { useMemo, type CSSProperties } from "react";
 import styles from "./footer-section.module.css";
+import {
+  ABOUT_US,
+  BUS_PASSES,
+  CAREERS,
+  CONTACT_US,
+  FAQS,
+  FEEDBACK,
+  INFORMATION,
+  PRIVACY_POLICIES,
+  QUICKLINKS,
+  RESERVATIONS,
+  ROAD_SAFETY,
+  RTI_ACT,
+  SITE_MAP
+} from "../constants";
 
 export type FooterSectionType = {
   className?: string;
@@ -24,17 +39,23 @@ const FooterSection: NextPage<FooterSectionType> = ({
       <a href="/">
         <div className={styles.logo}>
           <img
-            className={styles.logo51Icon}
+            className={styles.tsrtcFooterLogo}
             loading="lazy"
             alt="TSRTC-logo"
-            src="/logo5-1@2x.png"
+            src="/tsrtc-footer-logo@2x.png"
           />
           <div className={styles.logoTextGroup}>
-            <img className={styles.icon} alt="" src="/----11.svg" />
+            <img
+              className={styles.icon}
+              loading="lazy"
+              alt="tsrtc-telugu-title-logo"
+              src="/tsrtc-telugu-title-logo.svg"
+            />
             <img
               className={styles.telanganaStateRoadTransport}
               alt="telangana-state-road-transport-corporation-icon"
               src="/telangana-state-road-transport-corporation-11.svg"
+              loading="lazy"
             />
           </div>
         </div>
@@ -48,26 +69,26 @@ const FooterSection: NextPage<FooterSectionType> = ({
         />
       </div>
       <div className={styles.linksContainer}>
-        <div className={styles.footerLinks1}>
-          <b className={styles.quicklinks}>Quicklinks</b>
-          <a className={styles.careers} href="/careers">Careers</a>
-          <a className={styles.siteMap} style={siteMapStyle} href="">
-            Site Map
+        <div className={styles.quicklinksSection}>
+          <b className={styles.quicklinks}>{QUICKLINKS}</b>
+          <a className={styles.careers} href="/careers">{CAREERS}</a>
+          <a className={styles.siteMap} style={siteMapStyle} href="/">
+            {SITE_MAP}
           </a>
-          <a className={styles.aboutUs} href="/about-vision-legacy">About Us</a>
-          <a className={styles.contactUs} href="/contact-us">Contact us</a>
+          <a className={styles.aboutUs} href="/about-vision-legacy">{ABOUT_US}</a>
+          <a className={styles.contactUs} href="/contact-us">{CONTACT_US}</a>
         </div>
-        <div className={styles.footerLinks2}>
-          <b className={styles.information}>Information</b>
-          <a className={styles.rtiAct2005} href="">RTI Act, 2005</a>
-          <a className={styles.roadSafety} href="">Road Safety</a>
-          <a className={styles.privacyPolicies} href="">{`Privacy Policies `}</a>
-          <a className={styles.feedback} href="">Feedback</a>
+        <div className={styles.informationSection}>
+          <b className={styles.information}>{INFORMATION}</b>
+          <a className={styles.rtiAct2005} href="/">{RTI_ACT}</a>
+          <a className={styles.roadSafety} href="/">{ROAD_SAFETY}</a>
+          <a className={styles.privacyPolicies} href="/">{PRIVACY_POLICIES}</a>
+          <a className={styles.feedback} href="/">{FEEDBACK}</a>
         </div>
-        <div className={styles.footerLinks3}>
-          <b className={styles.faqs}>FAQs</b>
-          <a className={styles.reservations} href="/reservation-booking-service-ho">Reservations</a>
-          <a className={styles.busPasses} href="/bus-pass-services">Bus Passes</a>
+        <div className={styles.faqsSection}>
+          <b className={styles.faqs}>{FAQS}</b>
+          <a className={styles.reservations} href="/reservation-booking-service-ho">{RESERVATIONS}</a>
+          <a className={styles.busPasses} href="/bus-pass-services">{BUS_PASSES}</a>
         </div>
       </div>
     </div>

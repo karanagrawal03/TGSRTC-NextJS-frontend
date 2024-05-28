@@ -23,7 +23,7 @@
   color: var(--support-grey-bg);
 }
 
-.HeaderTabLink:hover .dropdownMenu {
+.headerTabLink:hover .dropdownMenu {
   display: block;
 }
 
@@ -67,7 +67,7 @@
 }
 
 .tsrtcLogo,
-.tsrtcLogo1 {
+.tsrtcHeaderTextLogo {
   display: flex;
   justify-content: flex-start;
   box-sizing: border-box;
@@ -75,7 +75,7 @@
   max-width: 100%;
 }
 
-.tsrtcLogo1 {
+.tsrtcHeaderTextLogo {
   flex-direction: column;
   align-items: flex-start;
   padding: 0 0 var(--padding-12xs-9);
@@ -187,7 +187,7 @@
   text-decoration: none;
 }
 
-.HeaderTabLink {
+.headerTabLink {
   text-decoration: none;
   position: relative;
   display: inline-block;
@@ -311,7 +311,7 @@
     width: 100%;
   }
 
-  .HeaderTabLink {
+  .headerTabLink {
     text-decoration: none;
     position: relative;
     display: inline-block;

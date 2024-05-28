@@ -1,6 +1,11 @@
 import type { NextPage } from "next";
 import FooterSection from "./footer-section";
 import styles from "./footer.module.css";
+import {
+  DOWNLOAD_OUR_APP,
+  FOLLOW_US,
+  TGSRTC_COPYRIGHT
+} from "../constants";
 
 export type FooterType = {
   className?: string;
@@ -15,6 +20,7 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
           className={styles.lineSeparatorIcon}
           alt="line-seperator"
           src="/lineSeparater.svg"
+          loading="lazy"
         />
       </div>
       <footer className={styles.recognitionAndSocialMediaC}>
@@ -23,15 +29,17 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
             <div className={styles.recognition1}>
               <a href="https://www.asrtu.org/" target="_blank">
                 <img
-                  className={styles.image462Icon}
+                  className={styles.recognitionLogoIcon}
                   alt="recognition"
-                  src="/image-462@2x.png"
+                  src="/recognition-logo2x.png"
+                  loading="lazy"
                 />
-                <div className={styles.image474IconSection}>
+                <div className={styles.recognitionTextIconSection}>
                   <img
-                    className={styles.image474Icon}
+                    className={styles.recognitionTextIcon}
                     alt="recognition-text"
-                    src="/image-474@2x.png"
+                    src="/recognition-logo-text@2x.png"
+                    loading="lazy"
                   />
                 </div>
               </a>
@@ -49,7 +57,7 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
         <div className={styles.socialMediaContainer}>
           <div className={styles.socialMedia}>
             <div className={styles.followUsOn}>
-              Follow us on @TGSRTCMDOFFICE
+              {FOLLOW_US}
             </div>
             <div className={styles.socialMediaHandles}>
               <a href="https://www.facebook.com/search/top?q=tsrtcmdoffice" target="_blank">
@@ -57,7 +65,7 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
                   className={styles.socialMediaIcon1}
                   loading="lazy"
                   alt="facebook-icon"
-                  src="/social-media-icon-1@2x.png"
+                  src="/facebook-icon@2x.png"
                 />
               </a>
               <a href="https://www.instagram.com/tsrtcmdoffice/?utm_medium=copy_link" target="_blank">
@@ -65,7 +73,7 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
                   className={styles.socialMediaIcon2}
                   loading="lazy"
                   alt="instagram-icon"
-                  src="/social-media-icon-21@2x.png"
+                  src="/instagram-icon@2x.png"
                 />
               </a>
               <a href="https://x.com/i/flow/login?redirect_after_login=%2Fsearch%3Fq%3Dtsrtcmdoffice" target="_blank">
@@ -73,7 +81,7 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
                   className={styles.socialMediaIcon3}
                   loading="lazy"
                   alt="X-icon"
-                  src="/social-media-icon-31@2x.png"
+                  src="/X-icon@2x.png"
                 />
               </a>
               <a href="https://t.me/tsrtcmdoffice" target="_blank">
@@ -81,13 +89,13 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
                   className={styles.socialMediaIcon4}
                   loading="lazy"
                   alt="telegram-icon"
-                  src="/social-media-icon-4@2x.png"
+                  src="/telegram-icon@2x.png"
                 />
               </a>
             </div>
           </div>
           <div className={styles.downloadPlartformContainer}>
-            <div className={styles.downloadOurApp}>Download our app</div>
+            <div className={styles.downloadOurApp}>{DOWNLOAD_OUR_APP}</div>
             <div className={styles.downloadPlatform}>
               <a href="https://play.google.com/store/apps/details?id=com.app.tsrtc" target="_blank">
                 <img
@@ -111,7 +119,7 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
       </footer>
       <div className={styles.copyright2021TgsrtcAllRWrapper}>
         <div className={styles.copyright2021Tgsrtc}>
-          Copyright © 2021 TGSRTC, All Rights Reserved.
+          {TGSRTC_COPYRIGHT}
         </div>
       </div>
     </div>
