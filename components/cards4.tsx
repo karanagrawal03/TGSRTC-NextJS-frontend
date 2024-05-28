@@ -4,7 +4,7 @@ import styles from "./cards4.module.css";
 
 export type Cards4Type = {
   className?: string;
-  group1000013498?: string;
+  image?: string;
   busPasses?: string;
 
   /** Style props */
@@ -13,7 +13,7 @@ export type Cards4Type = {
 
 const Cards4: NextPage<Cards4Type> = ({
   className = "",
-  group1000013498,
+  image,
   busPasses,
   applyNowPadding,
 }) => {
@@ -32,7 +32,7 @@ const Cards4: NextPage<Cards4Type> = ({
               className={styles.wrapperGroup1000013498Child}
               loading="lazy"
               alt=""
-              src={group1000013498}
+              src={image}
             />
           </div>
         </div>
