@@ -1,0 +1,17 @@
+.container {
+  background-color: #fff;
+  width: 100%;
+  padding: 16px 0px 12px;
+  margin: 0 ;
+}
+.linkText {
+  font-family: var(--font-montserrat);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 26px;
+  text-align: left;
+  color: #020202;
+  padding: 8px 16px 8px 16px;
+  margin: 0;
+  background: #f1f8f4;
+}

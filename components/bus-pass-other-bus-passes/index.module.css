@@ -5,7 +5,7 @@
 }
 .otherBusPasses {
   margin: 0;
-  font-size: inherit;
+  font-size: var(--font-size-27xl);
   font-weight: 600;
   font-family: inherit;
   display: inline-block;
@@ -52,37 +52,26 @@
   margin: 0;
 }
 .internationalWomensDayContainer {
-  margin: 0;
   align-self: stretch;
   position: relative;
-  font-size: inherit;
   font-weight: 600;
-  font-family: inherit;
   mix-blend-mode: normal;
 }
 .loremIpsumDolor {
-  margin: 0;
   align-self: stretch;
-  flex: 1;
   position: relative;
   font-size: var(--font-size-sm);
   line-height: 26px;
   color: var(--text-black);
   white-space: pre-wrap;
-  display: -webkit-inline-box;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
 }
 .texts {
   align-self: stretch;
-  height: 144px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: var(--gap-5xs);
+  gap: var(--gap-7xs);
 }
 .lineSeparatorIcon {
   align-self: stretch;
@@ -109,25 +98,20 @@
   min-width: 90px;
 }
 .applyNow {
-  font-size: var(--font-size-sm);
-  font-family: var(--font-montserrat);
-  color: var(--support-white);
-  text-align: center;
   min-width: 79px;
 }
 .button2 {
-  cursor: pointer;
-  border: 0;
-  padding: var(--padding-4xs) var(--padding-5xl) var(--padding-3xs);
-  background-color: transparent;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: var(--br-381xl);
   background: linear-gradient(90deg, #19ac58, #077f3b);
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
+  padding: var(--padding-4xs) var(--padding-5xl) var(--padding-3xs);
   white-space: nowrap;
+  text-align: center;
+  color: var(--support-white);
 }
 .buttonHolder,
 .cardTextHolder {
@@ -151,6 +135,7 @@
 .cards,
 .cardsContainer {
   display: flex;
+
   box-sizing: border-box;
   max-width: 100%;
 }
@@ -175,10 +160,10 @@
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: center;
-  padding: 0 var(--padding-6xl);
-  min-height: 834px;
+  padding: 0 25px;
+  min-height: 880px;
   font-size: var(--font-size-5xl);
-  color: var(--color-darkslategray-200);
+  color: var(--color-darkslategray);
   font-family: var(--font-montserrat);
 }
 .busPassOtherBusPasses {
@@ -186,41 +171,47 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding: 0 var(--padding-61xl) var(--padding-81xl);
+  padding: 0 80px 100px;
   text-align: left;
   font-size: var(--font-size-27xl);
   color: var(--text-black);
   font-family: var(--font-playfair-display);
 }
-@media screen and (max-width: 1100px) {
-  .busPassOtherBusPasses {
-    padding-bottom: var(--padding-46xl);
-    box-sizing: border-box;
-  }
+.viewMoreButton {
+  font-family: var(--font-montserrat);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  line-height: 17.07px;
+  text-align: left;
+  color: var(--primary-green);
+  cursor: pointer;
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 1023px) {
   .otherBusPasses {
-    font-size: var(--font-size-18xl);
+    font-size: var(--font-size-13xl);
   }
   .cardsContainer {
     gap: var(--gap-base);
+    padding: 0px 20px;
   }
   .busPassOtherBusPasses {
     gap: var(--gap-base);
-    padding-left: var(--padding-21xl);
-    padding-right: var(--padding-21xl);
+    padding: 0px 0px;
     padding-bottom: var(--padding-23xl);
     box-sizing: border-box;
   }
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 599px) {
   .otherBusPasses {
-    font-size: var(--font-size-9xl);
+    font-size: var(--font-size-13xl);
   }
   .internationalWomensDayContainer {
     font-size: var(--font-size-lgi);
   }
   .buttonHolder {
     flex-wrap: wrap;
+  }
+  .busPassOtherBusPasses {
+    padding: 0px 0px 102px;
   }
 }

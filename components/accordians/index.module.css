@@ -1,0 +1,34 @@
+.eachAccordian {
+  width: 100%;
+}
+.accordian{
+  padding-bottom: 8px;
+}
+.studentConcessionalRoutePas {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  padding-left: var(--padding-8xl);
+}
+.dropdown {
+  width: 100%;
+  box-shadow: 0px 4px 10px 0px #e8e8e8;
+  padding: 0px 0px 0px 24px;
+  /* height: 48px; */
+  margin-bottom: 0px;
+}
+.before6AmContainer1 {
+  /* position: relative; */
+  font-weight: 600;
+  z-index: 1;
+  font-size: var(--font-size-xl);
+  margin: 0px;
+}
+.accordianDropdownIcon {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 1;
+}
