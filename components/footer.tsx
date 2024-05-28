@@ -13,7 +13,7 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
       <div className={styles.lineSeparater}>
         <img
           className={styles.lineSeparatorIcon}
-          alt=""
+          alt="line-seperator"
           src="/lineSeparater.svg"
         />
       </div>
@@ -24,13 +24,13 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
               <a href="https://www.asrtu.org/" target="_blank">
                 <img
                   className={styles.image462Icon}
-                  alt=""
+                  alt="recognition"
                   src="/image-462@2x.png"
                 />
                 <div className={styles.image474IconSection}>
                   <img
                     className={styles.image474Icon}
-                    alt=""
+                    alt="recognition-text"
                     src="/image-474@2x.png"
                   />
                 </div>
@@ -40,7 +40,7 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
               <img
                 className={styles.recognition2Icon}
                 loading="lazy"
-                alt=""
+                alt="india-gov-logo"
                 src="/recognition-2@2x.png"
               />
             </a>
@@ -56,7 +56,7 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
                 <img
                   className={styles.socialMediaIcon1}
                   loading="lazy"
-                  alt=""
+                  alt="facebook-icon"
                   src="/social-media-icon-1@2x.png"
                 />
               </a>
@@ -64,7 +64,7 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
                 <img
                   className={styles.socialMediaIcon2}
                   loading="lazy"
-                  alt=""
+                  alt="instagram-icon"
                   src="/social-media-icon-21@2x.png"
                 />
               </a>
@@ -72,7 +72,7 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
                 <img
                   className={styles.socialMediaIcon3}
                   loading="lazy"
-                  alt=""
+                  alt="X-icon"
                   src="/social-media-icon-31@2x.png"
                 />
               </a>
@@ -80,7 +80,7 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
                 <img
                   className={styles.socialMediaIcon4}
                   loading="lazy"
-                  alt=""
+                  alt="telegram-icon"
                   src="/social-media-icon-4@2x.png"
                 />
               </a>
@@ -93,7 +93,7 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
                 <img
                   className={styles.googlePlayIcon}
                   loading="lazy"
-                  alt=""
+                  alt="google-play-store"
                   src="/google-play@2x.png"
                 />
               </a>
@@ -101,7 +101,7 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
                 <img
                   className={styles.appStoreIcon}
                   loading="lazy"
-                  alt=""
+                  alt="apple-play-store"
                   src="/app-store@2x.png"
                 />
               </a>

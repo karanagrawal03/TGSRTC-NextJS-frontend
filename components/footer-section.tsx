@@ -26,14 +26,14 @@ const FooterSection: NextPage<FooterSectionType> = ({
           <img
             className={styles.logo51Icon}
             loading="lazy"
-            alt=""
+            alt="TSRTC-logo"
             src="/logo5-1@2x.png"
           />
           <div className={styles.logoTextGroup}>
             <img className={styles.icon} alt="" src="/----11.svg" />
             <img
               className={styles.telanganaStateRoadTransport}
-              alt=""
+              alt="telangana-state-road-transport-corporation-icon"
               src="/telangana-state-road-transport-corporation-11.svg"
             />
           </div>
@@ -43,8 +43,8 @@ const FooterSection: NextPage<FooterSectionType> = ({
         <img
           className={styles.footerLogoImage}
           loading="lazy"
-          alt=""
-          src="/mobileFooterLogo.png"
+          alt="mobile-footer-logo"
+          src="/mobile-footer-logo.png"
         />
       </div>
       <div className={styles.linksContainer}>

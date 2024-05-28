@@ -85,7 +85,7 @@ const Header: NextPage<HeaderType> = ({ className = '' }) => {
             className={styles.tsrtcMobileLogoIcon}
             loading="lazy"
             alt="tsrtc-mobile-logo"
-            src="/tsrtcMobileLogo@2x.png"
+            src="/tsrtc-mobile-logo@2x.png"
           />
         </div>
 
@@ -225,7 +225,7 @@ const Header: NextPage<HeaderType> = ({ className = '' }) => {
           className={styles.headerMobileIcon}
           loading="lazy"
           alt="tsrtc-mobile-header-icon"
-          src="/headerMobileIcon.svg"
+          src="/header-mobile-icon.svg"
           width={24}
           height={24}
         />
@@ -237,7 +237,7 @@ const Header: NextPage<HeaderType> = ({ className = '' }) => {
                 className={styles.closeIcon}
                 loading="lazy"
                 alt="close-menu-icon"
-                src="/closeButton.svg"
+                src="/close-button.svg"
                 width={24}
                 height={24}
               />
