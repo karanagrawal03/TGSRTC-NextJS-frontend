@@ -1,5 +1,5 @@
 import styles from './index.module.css';
-import { SERVICES as services } from '../../constants';
+import { SERVICES as services } from '../../constants/tsrtc-tarnaka-hospital';
 import { ABOUT_HOSPITAL, HOSPITAL_STANDS, WHAT_SERVICE_HEADING } from '../../constants';
 import HospitalServiceCard from '../hospital-service-cards';
 
