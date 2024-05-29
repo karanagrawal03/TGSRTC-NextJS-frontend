@@ -17,7 +17,7 @@ export const CORPORATION = "The Corporation";
 export const DOWNLOAD_OUR_APP = "Download our app";
 export const EVENTS_AWARDS = "Events & Awards";
 export const FACEBOOK_URL ="https://www.facebook.com/search/top?q=tsrtcmdoffice";
-export const FAQS = "FAQs";
+export const FAQS = "FAQ's";
 export const FEEDBACK = "Feedback";
 export const FOLLOW_US = "Follow us on @TGSRTCMDOFFICE";
 export const GENERAL_COMMUTER_PASS = "General Commuter Pass";

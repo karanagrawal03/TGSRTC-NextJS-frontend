@@ -59,7 +59,7 @@
 }
 .busPassGeneralCommuterPass2 {
   background-color: var(--support-grey-bg);
-  padding: 100px 80px 100px 100px;
+  padding: 100px 100px 100px 100px;
   box-sizing: border-box;
   gap: var(--gap-13xl);
   width: 100%;
@@ -100,7 +100,7 @@
     padding: 0 24px 0 24px;
   }
 }
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 750px) {
   .generalCommuterPassContainer{
     max-width: 185px;
    

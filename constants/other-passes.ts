@@ -1,4 +1,4 @@
-export const generalCommuterPasses = [
+export const otherPasses = [
   {
     name: "Student Free Bus Passes",
     info: [
@@ -203,7 +203,6 @@ export const generalCommuterPasses = [
           "Applicant can apply online at www.online.tsrtcpass.in",
         ],
       },
-      ,
     ],
   },
   {

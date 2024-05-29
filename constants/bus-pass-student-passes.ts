@@ -1,6 +1,6 @@
 export const busPassStudentPasses = [
   {
-    name: "student",
+    name: "Student Free Bus Passes",
     info: [
       {
         type: "link",
@@ -61,7 +61,7 @@ export const busPassStudentPasses = [
         ],
       },
       {
-        type: "heading",
+        type: "table-heading",
         text: "This Bus Pass can be issued with concessional tariff as furnished in below table.",
       },
       {
@@ -102,7 +102,7 @@ export const busPassStudentPasses = [
     ],
   },
   {
-    name: "student2",
+    name: "Student Concessional Route Passes in Cities / Towns:",
     info: [
       {
         type: "link",
@@ -154,7 +154,7 @@ export const busPassStudentPasses = [
     ],
   },
   {
-    name: "student3",
+    name: "Districts - High School / College Student Bus Pass",
     info: [
       {
         type: "link",
@@ -207,7 +207,7 @@ export const busPassStudentPasses = [
     ],
   },
   {
-    name: "student4",
+    name: "Exclusive trips to special schools / colleges",
     info: [
       {
         type: "link",
