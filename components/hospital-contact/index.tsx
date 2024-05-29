@@ -14,14 +14,14 @@ const HospitalContact=()=>{
                 <div className={styles.support}>
                   <div className={styles.phoneContainer}>
                     <div className={styles.phone}>
-                      <img className={styles.icons} alt="call-icon1" src="/icons1.svg" />
+                      <img className={styles.icons} loading="lazy" alt="call-icon1" src="/icons1.svg" />
                       <div className={styles.forTgsrtcEmployee}>
                         {TGSRTC_EMPLOYEE}
                       </div>
                     </div>
-                    <img className={styles.lineIcon} alt="line-icon" src="/line1.svg" />
+                    <img className={styles.lineIcon} loading="lazy" alt="line-icon" src="/line1.svg" />
                     <div className={styles.phone1}>
-                      <img className={styles.icons1} alt="call-icon2" src="/icons1.svg" />
+                      <img className={styles.icons1} loading="lazy" alt="call-icon2" src="/icons1.svg" />
                       <div className={styles.nonTgsrtcEmployee}>
                         {NON_TGSRTC_EMPLOYEE}
                       </div>
@@ -41,11 +41,13 @@ const HospitalContact=()=>{
           <div className={styles.contactImage}>
             <img
               className={styles.contactImageWeb}
+              loading="lazy"
               alt="hospital-contact-image-web"
               src="/hospital-contact-image-web@2x.png"
             />
             <img
               className={styles.contactImageMobile}
+              loading="lazy"
               alt="hospital-contact-image-mobile"
               src="/hospital-contact-image-mobile@2x.png"
             />

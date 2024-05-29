@@ -14,11 +14,13 @@ const HospitalTSRTCTarnakaHospita: NextPageHospitalTSRTCTarnakaHospitaType =
         <section className={styles.hospitalHero}>
           <img
             className={styles.maskGroupIcon}
+            loading="lazy"
             alt="hospital-banner-image"
             src="/hospital-banner-image@2x.png"
           />
           <img
             className={styles.maskGroupIconMobile}
+            loading="lazy"
             alt="hospital-banner-image-mobile"
             src="/hospital-banner-image-mobile@2x.png"
           />

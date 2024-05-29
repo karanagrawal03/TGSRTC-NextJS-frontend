@@ -15,8 +15,8 @@ const HospitalServices=()=>{
               <img
                 className={styles.aboutHospitalImage}
                 loading="lazy"
-                alt="About-Hospital-Image"
-                src="/image-679@2x.png"
+                alt="about-hospital-image"
+                src="/about-hospital-image.png"
               />
             </div>
           </div>
