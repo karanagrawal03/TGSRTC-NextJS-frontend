@@ -1,0 +1,25 @@
+.paragraph {
+  font-family: var(--font-montserrat);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: left;
+}
+.tableHeading {
+  font-family: var(--font-playfair-display);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 26px;
+  text-align: left;
+  margin:0px;
+  color: var(--primary-red);
+}
+.table{
+    margin: 0px;
+    margin-top: 16px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    gap:40px
+}

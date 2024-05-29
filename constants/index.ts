@@ -1,7 +1,6 @@
 export const ABOUT = "About";
 export const ABOUT_US = "About Us";
-export const APPLE_PLAY_STORE_URL =
-  "https://apps.apple.com/us/app/tsrtc/id1201934852?ls=1";
+export const APPLE_PLAY_STORE_URL ="https://apps.apple.com/us/app/tsrtc/id1201934852?ls=1";
 export const APPLY_AND_RENEW = "Apply, Renew & Travel effortlessly with TSRTC";
 export const APPLY_NOW = "Apply Now";
 export const BUS_CONTRACT_RATES = "Bus on Contract Rates";
@@ -13,22 +12,24 @@ export const CAREERS = "Careers";
 export const CONCESSION_SCHEMES = "Concession Schemes";
 export const CONTACT_US = "Contact us";
 export const CORPORATION = "The Corporation";
+export const DETAILS_OF_HYDERABAD_BUSES="Details of Hyderabad bus timings"
+export const DETAILS_OF_MUNCHINTALA_BUSES="Details of Muchintala bus timings"
 export const DOWNLOAD_OUR_APP = "Download our app";
 export const EVENTS_AWARDS = "Events & Awards";
-export const FACEBOOK_URL =
-  "https://www.facebook.com/search/top?q=tsrtcmdoffice";
+export const FACEBOOK_URL ="https://www.facebook.com/search/top?q=tsrtcmdoffice";
 export const FAQS = "FAQs";
 export const FEEDBACK = "Feedback";
 export const FOLLOW_US = "Follow us on @TGSRTCMDOFFICE";
 export const GENERAL_COMMUTER_PASS = "General Commuter Pass";
 export const GENERAL_PASS = "General Commuter Pass";
-export const GOOGLE_PLAY_STORE_URL =
-  "https://play.google.com/store/apps/details?id=com.app.tsrtc";
+export const GOOGLE_PLAY_STORE_URL ="https://play.google.com/store/apps/details?id=com.app.tsrtc";
 export const HOME = "Home";
+export const HYDERABAD_FIRST_PARAGRAPH="After more than five years of renovation and reconstruction, Telangana’s Yadadri (Yadagirigutta) temple has transformed from a small hill shrine into a magnificent and sprawling pilgrimage centre. To help pilgrims reach the shrine, TGSRTC has started special buses that go to Yadadri. Now you have 104 buses from Hyderabad to Yadadri (Yadagirigutta). JBS to Yadagirigutta bus timings and MGBS to Yadagirigutta bus timings are set up in such a way that there are ample options for pilgrims to choose from."
+export const HYDERABAD_SECOND_PARAGRAPH="Located about 60 km from Hyderabad, it has undergone a complete transformation in line with Chief Minister K. Chandrasekhar Rao’s ambitious vision. To realize his vision, Yadagirigutta bus timings and also Yadagirigutta ticket price are carefully planned so as to provide citizens with cheap, safe and secure travelling service. Be it JBS to Yadagirigutta bus ticket price or MGBS to Yadagirigutta ticket price, TGSRTC is determined to provide cost-effective, pocket-friendly and the best service."
+export const HYDERABAD_THIRD_PARAGRAPH="Choose TGSRTC Make Hyderabad to Yadadri journey safe, secure and simple"
 export const INDIA_GOVT_URL = "https://www.india.gov.in/";
 export const INFORMATION = "Information";
-export const INSTAGRAM_URL =
-  "https://www.instagram.com/tsrtcmdoffice/?utm_medium=copy_link";
+export const INSTAGRAM_URL = "https://www.instagram.com/tsrtcmdoffice/?utm_medium=copy_link";
 export const IT_INITIATIVES = "IT Initiatives";
 export const KNOW_MORE = "Know more about";
 export const KNOW_MORE_ABOUT_STUDENT_PASSES = "Know more about student passes";
@@ -36,6 +37,8 @@ export const LEADERSHIP = "TGSRTC Leadership";
 export const LOGISTICS = "Logistics";
 export const LOGISTICS_CONTACTS = "Contacts";
 export const LOGISTICS_FAQ = "FAQ";
+export const MUNCHINTALA_FIRST_PARAGRAPH="Muchintala village in Ranga Reddy district is now an international destination. Taking forward Sri Ramanuja’s ideals and philosophy, Sri Chinna Jeeyar Swamy has dreamt of a larger-than-life statue, the statue of equality, and a vast campus of worship for pilgrims. To help people reach the destination, TGSRTC has arranged special buses to the statue of equality and has prepared a schedule for statue of equality bus timings."
+export const MUNCHINTALA_SECOND_PARAGRAPH="Muchintala bus timings are convenient and available. Now, the journey to Muchintala is easy and simple with TGSRTCFor TGSRTC buses to Muchintala refer to the below schedule. Have a safe and secure journey with TGSRTC"
 export const OTHER_BUS_PASSES = "Other Bus Passes";
 export const OTHER_PASSES = "Other Passes";
 export const PRIVACY_POLICIES = "Privacy Policies";
@@ -54,11 +57,10 @@ export const SPECIAL_BUS_TIMINGS = "Special Bus Timings";
 export const STUDENT_PASSES = "Student Passes";
 export const TELEGRAM_URL = "https://t.me/tsrtcmdoffice";
 export const TENDERS = "Tenders";
-export const TGSRTC_COPYRIGHT =
-  " Copyright © 2021 TGSRTC, All Rights Reserved.";
+export const TGSRTC_COPYRIGHT =" Copyright © 2021 TGSRTC, All Rights Reserved.";
 export const TGSRTC_HOSPITAL = "TGSRTC Hospital";
 export const TOURISM = "Tourism";
-export const TWITTER_URL =
-  "https://x.com/i/flow/login?redirect_after_login=%2Fsearch%3Fq%3Dtsrtcmdoffice";
+export const TWITTER_URL ="https://x.com/i/flow/login?redirect_after_login=%2Fsearch%3Fq%3Dtsrtcmdoffice";
 export const VIEW_DETAILS = "View Details";
 export const VIEW_MORE = "View More";
+export const WHICH_BUS_TIMINGS="Which bus timings do you want to view?"

@@ -1,0 +1,15 @@
+
+.tableHeading {
+  font-family: var(--font-playfair-display);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 26px;
+  text-align: left;
+  margin: 0px;
+  color: var(--primary-red);
+}
+.table {
+  margin: 0px;
+  margin-top: 16px;
+}
+

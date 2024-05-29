@@ -70,6 +70,16 @@
   line-height: normal;
   letter-spacing: normal;
 }
+.container {
+  margin: 80px 100px 100px 100px;
+}
+.headingText {
+  font-family: var(--font-montserrat);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29.26px;
+  text-align: left;
+}
 @media screen and (max-width: 750px) {
   .footer {
     gap: var(--gap-base);
