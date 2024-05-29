@@ -34,19 +34,16 @@ const AboutVisionLegacy: any = () => {
               <div
                 className={styles.tgsrtcIsCommitted}
               >{TSRTC_VISION1}</div>
-              <div className={styles.preEminenceInThe}>
-                {TSRTC_VISION2}
-              </div>
             </div>
           </div>
         </section>
         <section className={styles.philosophyAndGuidelines}>
           <div className={styles.philosophy}>
             <div className={styles.philosophyHeading}>
-          {CORPORATE_HEADING}
+              {CORPORATE_HEADING}
             </div>
             <div className={styles.phylosophyList}>
-              {PHILOSOPHY_ITEMS.map((item:any, index:any) => (
+              {PHILOSOPHY_ITEMS.map((item: any, index: any) => (
                 <div className={styles.listItem}>
                   <div className={styles.dots}></div>
                   <div key={index} className={styles.listItemContent}>{item}</div>
@@ -60,7 +57,7 @@ const AboutVisionLegacy: any = () => {
               {GUIDELINES_HEADING}
             </div>
             <div className={styles.guidelinesList}>
-              {GUIDELINES_ITEMS.map((item:any, index:any) => (
+              {GUIDELINES_ITEMS.map((item: any, index: any) => (
                 <div className={styles.listItem}>
                   <div className={styles.dots}></div>
                   <div key={index} className={styles.listItem}>{item}</div>

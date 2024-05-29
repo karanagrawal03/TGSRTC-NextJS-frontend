@@ -1,8 +1,7 @@
 export const VISION_AND=`Vision & `
 export const LEGACY="Legacy"
 export const VISION="Vision"
-export const TSRTC_VISION1="TGSRTC is committed to provide consistently high quality of services and to continuously improve the services through a process of teamwork for the utmost satisfaction of the passengers and to attain a position of"
-export const TSRTC_VISION2="pre-eminence in the Bus Transport sector."
+export const TSRTC_VISION1="TGSRTC is committed to provide consistently high quality of services and to continuously improve the services through a process of teamwork for the utmost satisfaction of the passengers and to attain a position of pre-eminence in the Bus Transport sector."
 export const APPLY_RENEW= "Apply, Renew & Travel "
 export const CORPORATE_HEADING="Corporate Philosophy"
 export const GUIDELINES_HEADING="Guiding Principles of TGSRTC"
