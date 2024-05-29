@@ -6,7 +6,7 @@
 body {
   margin: 0;
   line-height: normal;
-  margin-top: 100px;
+  margin-top: 94.7px;
 }
 
 :root {
@@ -131,6 +131,7 @@ body {
   --padding-xs: 12px;
   --padding-13xl: 32px;
   --padding-3xs: 10px;
+  --padding-3ls: 10.59px;
   --padding-lgi: 19px;
   --padding-base-5: 15.5px;
   --padding-11xs: 2px;
