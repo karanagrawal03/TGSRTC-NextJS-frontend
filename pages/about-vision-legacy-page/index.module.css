@@ -257,7 +257,10 @@
   object-fit: cover;
   display: none;
 }
-
+.legacyLetterContainer{
+  max-height: 1344px;
+  height: 100%
+}
 @media screen and (max-width:1365px) {
   .aboutHeroWebsite {
     object-fit: cover;
