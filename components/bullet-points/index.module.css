@@ -8,6 +8,11 @@
 .listItems::marker {
   color: #cd342b;
 }
+.listItems{
+  list-style-type: disc;
+}
 .list {
-  padding: 16px 0px 24px 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
