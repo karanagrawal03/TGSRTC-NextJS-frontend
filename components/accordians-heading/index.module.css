@@ -1,6 +1,6 @@
 .headingText {
   font-family: var(--font-montserrat);
-  font-size: 14px;
+  font-size: var(--font-size-sm);
   font-weight: 600;
   line-height: 17.07px;
   text-align: left;
@@ -8,5 +8,5 @@
   margin: 0px;
 }
 .container {
-  /* margin: 12px 0px 0px 73px; */
+  margin: 12px 0px 0px 17px;
 }

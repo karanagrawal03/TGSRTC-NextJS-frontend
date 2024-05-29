@@ -1,16 +1,16 @@
 .listItems {
   font-family: var(--font-montserrat);
-  font-size: 16px;
+  font-size: var(--font-size-16);
   font-weight: 400;
   line-height: 26px;
   text-align: left;
+  list-style-type: disc;
+  padding-top: var(--padding-base);
 }
 .listItems::marker {
   color: #cd342b;
 }
-.listItems{
-  list-style-type: disc;
-}
+
 .list {
   display: flex;
   flex-direction: column;
