@@ -216,7 +216,6 @@
 
 .header:hover {
   background: var(--support-white);
-
 }
 
 @media screen and (max-width: 1275px) {
@@ -284,7 +283,6 @@
   .tsrtcLogo {
     width: 476px;
   }
-
 }
 
 @media screen and (max-width: 1285px) {
@@ -321,7 +319,6 @@
   .slideMenu.open {
     right: -42px;
   }
-
 }
 
 @media screen and (max-width: 599px) {
