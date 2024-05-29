@@ -68,9 +68,7 @@
   .tgsrtcLogistics {
     font-size: var(--font-size-24xl);
     line-height: 66px;
-  }
-  .logoIcon{
-    display: none;
+    margin-bottom: unset;
   }
   .deliversExcellenceEvery {
     font-size: var(--font-size-base);
@@ -81,8 +79,10 @@
     box-sizing: border-box;
   }
   .heroSubtitleContainer{
-    top: 20.35vw;
+    top: 7.35vw;
     margin-bottom: unset;
+    align-items: start;
+
   }
 }
 @media screen and (max-width: 599px) {
@@ -94,10 +94,12 @@
   .tgsrtcLogistics {
     font-size: var(--font-size-24xl);
     line-height: 49px;
+    margin-bottom: 12px;
   }
   .heroSubtitleContainer{
     max-width: 237px;
-   top: 72.8vw;
+   top: unset;
+   bottom: 24px;
     left: 6.4vw;
     align-items: start;
   }
