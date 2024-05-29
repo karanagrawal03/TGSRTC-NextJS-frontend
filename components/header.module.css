@@ -199,7 +199,7 @@
   box-shadow: var(--table-shadow);
   background-color: var(--support-white);
   justify-content: space-between;
-  padding: var(--padding-xs) var(--padding-11xl);
+  padding: var(--padding-3ls) var(--padding-11xl);
   box-sizing: border-box;
   flex-shrink: 0;
   position: fixed;
@@ -216,7 +216,6 @@
 
 .header:hover {
   background: var(--support-white);
-
 }
 
 @media screen and (max-width: 1275px) {
@@ -284,7 +283,6 @@
   .tsrtcLogo {
     width: 476px;
   }
-
 }
 
 @media screen and (max-width: 1285px) {
@@ -321,7 +319,6 @@
   .slideMenu.open {
     right: -42px;
   }
-
 }
 
 @media screen and (max-width: 599px) {

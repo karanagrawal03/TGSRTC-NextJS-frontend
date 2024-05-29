@@ -1,75 +1,30 @@
-.picturesIcon {
-  align-self: stretch;
-  flex: 1;
-  position: relative;
-  max-width: 100%;
-  overflow: hidden;
-  max-height: 100%;
-  object-fit: cover;
-}
-.imageWeb {
-  height: 169px;
-  border-radius: var(--br-7xs);
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-.imageMobile,
-.imageWeb,
-.picturesIcon1 {
-  align-self: stretch;
-  overflow: hidden;
-}
-.picturesIcon1 {
-  flex: 1;
-  position: relative;
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: cover;
-}
-.imageMobile {
-  height: 140px;
-  border-radius: var(--br-7xs);
-  flex-shrink: 0;
-  display: none;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-.internationalWomensDay,
-.loremIpsumDolor {
-  margin: 0;
-  align-self: stretch;
-  position: relative;
-}
 .internationalWomensDay {
-  font-size: inherit;
+  align-self: stretch;
+  position: relative;
   font-weight: 600;
-  font-family: inherit;
   mix-blend-mode: normal;
 }
 .loremIpsumDolor {
-  flex: 1;
+  align-self: stretch;
+  position: relative;
   font-size: var(--font-size-sm);
   line-height: 26px;
   color: var(--text-black);
   white-space: pre-wrap;
-  display: -webkit-inline-box;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .texts {
   align-self: stretch;
-  height: 144px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: var(--gap-5xs);
+  gap: 8px;
+  height: 139px;
 }
 .lineSeparatorIcon {
   align-self: stretch;
@@ -81,40 +36,43 @@
 .lineSeparater {
   align-self: stretch;
   height: 0;
-  display: none;
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  padding: 0;
+  box-sizing: border-box;
 }
 .applyNow,
 .viewDetails {
   position: relative;
   font-weight: 600;
+  display: inline-block;
+  min-width: 90px;
+  cursor: pointer;
 }
 .applyNow {
-  align-self: stretch;
+  min-width: 79px;
 }
 .button2,
 .buttonHolder {
+  display: flex;
   flex-direction: row;
   align-items: center;
 }
 .button2 {
-  height: 36px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: var(--br-381xl);
   background: linear-gradient(90deg, #19ac58, #077f3b);
-  display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   padding: var(--padding-4xs) var(--padding-5xl) var(--padding-3xs);
-  box-sizing: border-box;
   white-space: nowrap;
   text-align: center;
   color: var(--support-white);
+  cursor: pointer;
 }
 .buttonHolder {
   align-self: stretch;
-  display: none;
   justify-content: space-between;
   gap: var(--gap-xl);
   font-size: var(--font-size-sm);
@@ -132,29 +90,28 @@
   justify-content: center;
 }
 .cards {
+  width: 364px;
   box-shadow: var(--card);
   border-radius: var(--br-base);
   background: linear-gradient(200.37deg, #e3f7ff, #fff);
   align-items: flex-start;
   justify-content: flex-start;
-  padding: var(--padding-5xl) var(--padding-5xl) var(--padding-20xl);
+  padding: var(--padding-5xl);
   box-sizing: border-box;
   max-width: 100%;
   text-align: left;
   font-size: var(--font-size-5xl);
-  color: var(--color-darkslategray-200);
+  color: var(--color-darkslategray);
   font-family: var(--font-montserrat);
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 599px) {
   .internationalWomensDay {
     font-size: var(--font-size-lgi);
   }
+  .cards {
+    width: 320px;
+  }
   .buttonHolder {
     flex-wrap: wrap;
-  }
-  .cards {
-    padding-top: var(--padding-xl);
-    padding-bottom: var(--padding-6xl);
-    box-sizing: border-box;
   }
 }

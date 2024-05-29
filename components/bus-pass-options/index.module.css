@@ -1,7 +1,7 @@
 .busPassOptions1 {
   margin: 0;
   position: relative;
-  font-size: inherit;
+  font-size: var(--font-size-27xl);
   font-weight: 600;
   font-family: inherit;
   mix-blend-mode: normal;
@@ -37,7 +37,6 @@
   max-width: 100%;
 }
 .cardsContainer {
-  width: 1156px;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: flex-start;
@@ -59,9 +58,9 @@
   color: var(--text-black);
   font-family: var(--font-playfair-display);
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 1023px) {
   .busPassOptions1 {
-    font-size: var(--font-size-18xl);
+    font-size: var(--font-size-13xl);
   }
   .busPassOptions,
   .cardsContainer {
@@ -73,8 +72,8 @@
     box-sizing: border-box;
   }
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 599px) {
   .busPassOptions1 {
-    font-size: var(--font-size-9xl);
+    font-size: var(--font-size-13xl);
   }
 }

@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import Cards2 from "./cards2";
+import Cards2 from "./bus-pass-options-card.tsx";
 import styles from "./home-news-updates.module.css";
 
 export type HomeNewsUpdatesType = {
