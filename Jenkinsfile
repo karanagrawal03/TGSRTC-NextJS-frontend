@@ -20,7 +20,7 @@ pipeline {
             steps{ 
                 nodejs('TSRTC') {
                     echo 'building'
-                    sh 'npm install' 
+                    sh 'npm install --ignore-scripts' 
                     sh 'npm run build'  
                 }
             }
