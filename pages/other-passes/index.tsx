@@ -1,15 +1,11 @@
 import { useState } from "react";
 import AccordionItem from "../../components/accordians";
 import Header from "../../components/header";
-import {
-  APPLY_AND_RENEW,
-  KNOW_MORE,
-  OTHER_PASSES
-} from "../../constants";
+import { APPLY_AND_RENEW, KNOW_MORE, OTHER_PASSES } from "../../constants";
 
 import { otherPasses } from "../../constants/other-passes";
 import styles from "./index.module.css";
-const OtherPasses: NextPageBusPassGeneralCommuterPassType = () => {
+const OtherPasses = () => {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
   const handleChange = (index: number) => {
