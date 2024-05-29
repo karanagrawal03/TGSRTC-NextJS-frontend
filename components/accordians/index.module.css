@@ -14,11 +14,9 @@
   width: 100%;
   box-shadow: 0px 4px 10px 0px #e8e8e8;
   padding: 0px 0px 0px 24px;
-  /* height: 48px; */
   margin-bottom: 0px;
 }
 .before6AmContainer1 {
-  /* position: relative; */
   font-weight: 600;
   z-index: 1;
   font-size: var(--font-size-xl);

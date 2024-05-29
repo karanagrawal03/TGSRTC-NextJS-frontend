@@ -6,7 +6,6 @@
   position: absolute;
   left: 0;
   top: 7px;
-  /* border: 2px solid; */
   width: 100%;
   height: 100%;
   transform: scale(1.246);
@@ -148,11 +147,9 @@
   gap: var(--gap-5xl);
 }
 .cards {
-  /* flex: 1; */
   box-shadow: var(--table-shadow);
   border-radius: var(--br-base);
   background-color: var(--support-white);
-  /* align-items: flex-start; */
   padding: var(--padding-21xl);
   box-sizing: border-box;
   gap: var(--gap-7xs);

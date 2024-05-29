@@ -11,14 +11,10 @@
 .applyRenew,
 .busPassServices1 {
   margin: 0;
-  /* position: absolute; */
   display: inline-block;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
   mix-blend-mode: normal;
-  /* top: 271px; */
-  /* left: 100px; */
   max-width: 100%;
-  /* z-index: 1; */
 }
 .busPassContent {
   position: absolute;
@@ -50,9 +46,6 @@
   justify-content: flex-start;
 }
 .busPassHeroBusPassService {
-  /* align-self: stretch; */
-  /* padding: var(--padding-252xl) var(--padding-xl) var(--padding-251xl) */
-  /* var(--padding-81xl); */
   box-sizing: border-box;
   gap: var(--gap-3xs);
   max-width: 100%;

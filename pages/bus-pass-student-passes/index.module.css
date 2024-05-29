@@ -45,8 +45,6 @@
 }
 .contentWrapper {
   flex-direction: column;
-  /* padding: 102px 0 0; */
-  /* margin-left: -490px; */
   font-size: var(--font-size-5xl);
   position: absolute;
   top: 19.83vw;
