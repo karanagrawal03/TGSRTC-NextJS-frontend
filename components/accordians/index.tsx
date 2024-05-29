@@ -19,7 +19,6 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
         className={styles.dropdown}
         expanded={expanded}
         onChange={onChange}
-        // style={{ width: "100%" }}
       >
         <AccordionSummary
           expandIcon={expanded ? <HorizontalRuleIcon /> : <AddIcon />}

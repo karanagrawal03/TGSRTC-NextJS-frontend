@@ -8,7 +8,7 @@ export type Cards3Type = {
   description: string;
 };
 
-const Cards3: NextPage<Cards3Type> = ({
+const OtherBusPassesCard: NextPage<Cards3Type> = ({
   className = "",
   heading,
   description,
@@ -21,7 +21,7 @@ const Cards3: NextPage<Cards3Type> = ({
             <img
               className={styles.wrapperGroup1000013321Child}
               loading="lazy"
-              alt=""
+              alt="cards-image"
               src="/group-10000133211@2x.png"
             />
           </div>
@@ -36,8 +36,9 @@ const Cards3: NextPage<Cards3Type> = ({
         <div className={styles.lineSeparater}>
           <img
             className={styles.lineSeparatorIcon}
-            alt=""
+            alt="line-saperator"
             src="/line-separator.svg"
+            loading="lazy"
           />
         </div>
         <div className={styles.buttonsContainer}>
@@ -53,4 +54,4 @@ const Cards3: NextPage<Cards3Type> = ({
   );
 };
 
-export default Cards3;
+export default OtherBusPassesCard;

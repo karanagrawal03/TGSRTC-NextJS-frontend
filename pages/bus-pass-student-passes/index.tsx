@@ -38,12 +38,14 @@ const BusPassStudentPasses: NextPageBusPassStudentPassesType = () => {
             className={styles.bgIcon}
             alt="bus-pass-main-section"
             src="/bus-pass-main-section@2x.png"
+            loading="lazy"
           />
         ) : (
           <img
             className={styles.bgIconmobile}
             alt="mobile-image"
             src="/mobile-bus-pass-bg.png"
+            loading="lazy"
           />
         )}
         <div className={styles.contentWrapper}>

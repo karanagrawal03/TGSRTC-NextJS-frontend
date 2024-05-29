@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import { useState, useEffect } from "react";
-import Cards2 from "../cards2";
+import BusPassOptionsCard from "../bus-pass-options-card.tsx";
 import styles from "./index.module.css";
 import { OTHER_BUS_PASSES, VIEW_MORE } from "../../constants";
 import { cards3Data } from "../../constants/bus-pass-other-options";
@@ -29,7 +29,7 @@ const BusPassOtherBusPasses: NextPage<BusPassOtherBusPassesType> = ({
       <h1 className={styles.otherBusPasses}>{OTHER_BUS_PASSES}</h1>
       <div className={styles.cardsContainer}>
         {displayedCards.map((card, index) => (
-          <Cards2
+          <BusPassOptionsCard
             key={index}
             heading={card.heading}
             description={card.description}

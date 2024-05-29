@@ -8,7 +8,7 @@ export type Cards2Type = {
   description: string;
 };
 
-const Cards2: NextPage<Cards2Type> = ({
+const BusPassOptionsCard: NextPage<Cards2Type> = ({
   className = "",
   heading,
   description,
@@ -23,8 +23,9 @@ const Cards2: NextPage<Cards2Type> = ({
         <div className={styles.lineSeparater}>
           <img
             className={styles.lineSeparatorIcon}
-            alt=""
+            alt="line-saperator"
             src="/line-separator.svg"
+            loading="lazy"
           />
         </div>
         <div className={styles.buttonHolder}>
@@ -38,4 +39,4 @@ const Cards2: NextPage<Cards2Type> = ({
   );
 };
 
-export default Cards2;
+export default BusPassOptionsCard;

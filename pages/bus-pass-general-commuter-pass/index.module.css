@@ -2,10 +2,6 @@
   height: auto;
   width: 100%;
   position: relative;
-  /* margin: 0 !important;
-  right: 0;
-  bottom: -28px;
-  left: 0; */
   max-width: 100%;
   overflow: hidden;
   object-fit: cover;
@@ -58,19 +54,6 @@
 .orderedList {
   padding: 0px;
 }
-/* .applyRenewTravelEffortleWrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 194px 0 0;
-  box-sizing: border-box;
-  max-width: 100%;
-  border: 2px solid;
-  margin-left: -520px;
-  font-size: var(--font-size-5xl);
-  font-family: var(--font-montserrat);
-} */
 .busPassGeneralCommuterPass2 {
   background-color: var(--support-grey-bg);
   padding: 100px 80px 100px 100px;
@@ -89,7 +72,6 @@
 .busPassesHeroGeneralCommut {
   align-self: stretch;
   flex-direction: row;
-  /* padding: 225px var(--padding-94xl) 224px; */
   box-sizing: border-box;
   max-width: 100%;
   text-align: left;

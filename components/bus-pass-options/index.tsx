@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Cards1 from "../cards1";
 import styles from "./index.module.css";
 import { BUS_PASS_OPTIONS } from "../../constants";
-import Cards3 from "../cards3";
+import OtherBusPassesCard from "../other-bus-passes-card";
 import { card2Data } from "../../constants/bus-pass-options";
 export type BusPassOptionsType = {
   className?: string;
@@ -16,7 +16,7 @@ const BusPassOptions: NextPage<BusPassOptionsType> = ({ className = "" }) => {
       </div>
       <div className={styles.cardsContainer}>
         {card2Data.map((card, index) => (
-          <Cards3
+          <OtherBusPassesCard
             key={index}
             heading={card.heading}
             description={card.description}

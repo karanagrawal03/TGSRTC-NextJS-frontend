@@ -22,8 +22,6 @@ const BusPassGeneralCommuterPass: NextPageBusPassGeneralCommuterPassType =
           <img className={styles.bgIcon} alt="" src="/bg@2x.png" />
           <div className={styles.generalCommuterPassContainer}>
             <p className={styles.general}>{GENERAL_COMMUTER_PASS}</p>
-            {/* </div>
-          <div className={styles.applyRenewTravelEffortleWrapper}> */}
             <p className={styles.applyRenew}>{APPLY_AND_RENEW}</p>
           </div>
         </section>

@@ -4,11 +4,7 @@ import Tables from "../tables";
 interface BulletPointsProps {
   items: string[];
 }
-
 const BulletPoints: React.FC<BulletPointsProps> = ({ items }) => {
-
-
-  
   return (
     <div>
       <ul className={styles.list}>

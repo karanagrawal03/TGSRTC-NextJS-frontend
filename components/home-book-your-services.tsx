@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import Cards3 from "./cards3";
+import Cards3 from "./other-bus-passes-card";
 import styles from "./home-book-your-services.module.css";
 
 export type HomeBookYourServicesType = {
