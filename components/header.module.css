@@ -1,14 +1,62 @@
+.dropdownMenu {
+  display: none;
+  position: absolute;
+  background-color: var(--color-whitesmoke-100);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  padding: 0;
+  top: 50%;
+  left: 0;
+  list-style-type: none;
+}
+
+.dropdownItem {
+  padding: var(--padding-xs) var(--padding-base);
+  text-decoration: none;
+  display: block;
+  color: var(--color-black);
+  white-space: nowrap;
+}
+
+.dropdownItem:hover {
+  background-color: var(--color-mediumseagreen-100);
+  color: var(--support-grey-bg);
+}
+
+.headerTabLink:hover .dropdownMenu {
+  display: block;
+}
+
+.navTabs:hover {
+  color: var(--primary-red);
+}
+
+.navTabs:hover .dropdownMenu {
+  display: block;
+}
+
+.headerHidden {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
 .tsrtcLogoIcon {
   height: 70.4px;
   width: 70.4px;
   position: relative;
   object-fit: contain;
 }
+
+.tsrtcMobileLogoIcon {
+  display: none;
+}
+
 .icon {
   width: 289.1px;
   height: 24.4px;
   position: relative;
 }
+
 .telanganaStateRoadTransport {
   align-self: stretch;
   height: 11.3px;
@@ -17,167 +65,113 @@
   overflow: hidden;
   flex-shrink: 0;
 }
+
 .tsrtcLogo,
-.tsrtcLogo1 {
+.tsrtcHeaderTextLogo {
   display: flex;
   justify-content: flex-start;
   box-sizing: border-box;
   gap: var(--gap-3xs-4);
   max-width: 100%;
 }
-.tsrtcLogo1 {
-  flex: 1;
+
+.tsrtcHeaderTextLogo {
   flex-direction: column;
   align-items: flex-start;
   padding: 0 0 var(--padding-12xs-9);
 }
+
 .tsrtcLogo {
   width: 504px;
   flex-direction: row;
   align-items: center;
   padding: 0;
 }
+
 .reservations {
-  text-decoration: none;
   position: relative;
   letter-spacing: 0.02em;
   line-height: 26px;
-  font-weight: 500;
-  color: inherit;
   display: inline-block;
-  min-width: 45px;
+  min-width: 46px;
 }
+
 .navTabs {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: var(--padding-6xs) 0;
+  padding: var(--padding-xl) 0;
+  color: var(--text-black);
+  font-weight: var(--fw-medium);
+  font-style: normal;
 }
-.reservations1 {
-  text-decoration: none;
-  position: relative;
-  letter-spacing: 0.02em;
-  line-height: 26px;
-  font-weight: 700;
-  color: inherit;
-  display: inline-block;
-  min-width: 99px;
-}
-.navTabs1 {
-  border-bottom: 4px solid var(--primary-green);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: var(--padding-6xs) 0 var(--padding-11xs);
+
+.activeTab {
   color: var(--primary-red);
+  font-weight: var(--fw-bold);
+  border-bottom: 4px solid var(--primary-green);
 }
-.reservations2 {
-  text-decoration: none;
+
+.reservations1 {
   position: relative;
   letter-spacing: 0.02em;
   line-height: 26px;
-  font-weight: 500;
-  color: inherit;
+  display: inline-block;
+  min-width: 95px;
+}
+
+.reservations2 {
+  position: relative;
+  letter-spacing: 0.02em;
+  line-height: 26px;
   display: inline-block;
   min-width: 65px;
 }
-.navTabs2 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: var(--padding-6xs) 0;
-}
+
 .reservations3 {
-  text-decoration: none;
   position: relative;
   letter-spacing: 0.02em;
   line-height: 26px;
-  font-weight: 500;
-  color: inherit;
   display: inline-block;
   min-width: 82px;
   white-space: nowrap;
 }
-.navTabs3 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: var(--padding-6xs) 0;
-}
+
 .reservations4 {
-  text-decoration: none;
   position: relative;
   letter-spacing: 0.02em;
   line-height: 26px;
-  font-weight: 500;
-  color: inherit;
   display: inline-block;
   min-width: 46px;
 }
-.navTabs4 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: var(--padding-6xs) 0;
-}
+
 .reservations5 {
-  text-decoration: none;
   position: relative;
   letter-spacing: 0.02em;
   line-height: 26px;
-  font-weight: 500;
-  color: inherit;
   display: inline-block;
   min-width: 59px;
 }
-.navTabs5 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: var(--padding-6xs) 0;
-}
+
 .reservations6 {
-  text-decoration: none;
   position: relative;
   letter-spacing: 0.02em;
   line-height: 26px;
-  font-weight: 500;
-  color: inherit;
   display: inline-block;
-  min-width: 123px;
+  min-width: 112px;
   white-space: nowrap;
 }
-.navTabs6 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: var(--padding-6xs) 0;
-}
+
 .reservations7 {
-  text-decoration: none;
   position: relative;
   letter-spacing: 0.02em;
   line-height: 26px;
-  font-weight: 500;
-  color: inherit;
   display: inline-block;
   min-width: 80px;
   white-space: nowrap;
 }
-.navTabs7 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: var(--padding-6xs) 0;
-}
+
 .header,
 .tabContainer {
   display: flex;
@@ -185,11 +179,21 @@
   align-items: center;
   max-width: 100%;
 }
+
 .tabContainer {
-  width: 767px;
+  width: 752px;
   justify-content: flex-start;
-  gap: var(--gap-5xl);
+  gap: var(--gap-4xl-9);
+  text-decoration: none;
 }
+
+.headerTabLink {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
 .header {
   align-self: stretch;
   box-shadow: var(--table-shadow);
@@ -197,17 +201,136 @@
   justify-content: space-between;
   padding: var(--padding-xs) var(--padding-11xl);
   box-sizing: border-box;
-  top: 0;
-  z-index: 99;
-  position: sticky;
+  flex-shrink: 0;
+  position: fixed;
   gap: var(--gap-xl);
   text-align: left;
   font-size: var(--font-size-sm);
   color: var(--text-black);
   font-family: var(--font-montserrat);
+  top: 0;
+  z-index: 1000;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
 }
+
+.header:hover {
+  background: var(--support-white);
+
+}
+
 @media screen and (max-width: 1275px) {
   .tabContainer {
     display: none;
+  }
+
+  .headerMobileIconSection {
+    display: block;
+    position: relative;
+  }
+
+  .navTabs {
+    align-items: start;
+    padding: var(--padding-8xs) 0px var(--padding-3xs);
+  }
+}
+
+.slideMenu {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: var(--support-white);
+  box-shadow: -2px 0 5px var(--color-gray-200);
+  transition: right 0.3s ease;
+  z-index: 1000;
+  padding: var(--padding-xl);
+}
+
+.slideMenu.open {
+  right: 0;
+}
+
+.closeIconSection {
+  display: flex;
+  justify-content: flex-end;
+  padding: var(--gap-3xs);
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  z-index: 9999;
+}
+
+.closeIcon {
+  cursor: pointer;
+  background-color: var(--primary-red);
+}
+
+@media screen and (min-width: 1276px) {
+  .headerMobileIconSection {
+    display: none;
+  }
+
+  .headerMobileIcon {
+    width: 100%;
+    height: 100%;
+  }
+
+  .slideMenu {
+    display: none;
+  }
+
+  .tsrtcLogo {
+    width: 476px;
+  }
+
+}
+
+@media screen and (max-width: 1285px) {
+  .header {
+    padding: var(--padding-xs) var(--padding-mini);
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .tsrtcLogo {
+    display: none;
+  }
+
+  .tsrtcMobileLogoIcon {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .slideMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+  }
+
+  .headerTabLink {
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    width: unset;
+  }
+
+  .slideMenu.open {
+    right: -42px;
+  }
+
+}
+
+@media screen and (max-width: 599px) {
+  .header {
+    padding: var(--padding-xs) var(--padding-xl);
+  }
+
+  .tsrtcMobileLogoIconSection {
+    width: 226px;
+    height: 31.6px;
   }
 }
