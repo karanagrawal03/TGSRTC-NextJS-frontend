@@ -1,12 +1,15 @@
-import React from 'react';
-import styles from './index.module.css'
+import React from "react";
+import styles from "./index.module.css";
 interface AccordiansHeadingProps {
   heading: string;
+  containerClassName?: string;
 }
-
-const AccordiansHeading: React.FC<AccordiansHeadingProps> = ({ heading }) => {
+const AccordiansHeading: React.FC<AccordiansHeadingProps> = ({
+  heading,
+  containerClassName,
+}) => {
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${containerClassName}`}>
       <p className={styles.headingText}>{heading}</p>
     </div>
   );
