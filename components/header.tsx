@@ -47,16 +47,21 @@ const Header: NextPage<HeaderType> = ({ className = '' }) => {
 
   const flotingHeader = () => {
     if (typeof window !== 'undefined') {
-      if (window.scrollY > lastScrollY) {
-        // Scroll Down
-        setShowHeader(false);
+      if (window.scrollY > 100) {
+        if (window.scrollY > lastScrollY) {
+          // Scroll Down
+          setShowHeader(false);
+        } else {
+          // Scroll Up
+          setShowHeader(true);
+        }
       } else {
-        // Scroll Up
         setShowHeader(true);
       }
       setLastScrollY(window.scrollY);
     }
   };
+
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
