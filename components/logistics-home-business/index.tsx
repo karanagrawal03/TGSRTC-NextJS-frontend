@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import ImageCards from "../image-cards";
+import ImageCards from "../logistics-business-image-card";
 import styles from "./index.module.css";
 import { TGSRTC_LOGISTICS_BUSINESS, TGSRTC_LOGISTICS_BUSINESS_PARA_1, TGSRTC_LOGISTICS_BUSINESS_PARA_2 } from "../../constants";
 

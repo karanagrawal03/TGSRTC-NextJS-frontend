@@ -59,8 +59,6 @@
 .logisticsHeroWrapper {
   position: relative;
   align-self: stretch;
-  /* flex-direction: row; */
-  /* padding: 0 0 var(--padding-81xl); */
   text-align: left;
   font-size: var(--font-size-53xl);
   color: var(--support-white);

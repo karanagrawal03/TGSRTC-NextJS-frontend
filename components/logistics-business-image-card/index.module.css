@@ -336,9 +336,7 @@
 }
 @media screen and (max-width: 599px) {
   .imageCards {
-    padding: 12px;
-    /* padding-top: var(--padding-xl);
-    padding-bottom: var(--padding-xl); */
+    padding: var(--padding-xs);
     box-sizing: border-box;
   }
 }

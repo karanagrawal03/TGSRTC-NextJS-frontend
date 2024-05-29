@@ -17,7 +17,6 @@
 .tgsrtcAsTransportation {
   margin: 0;
   align-self: stretch;
-  /* position: relative; */
   font-size: var(--font-size-sm);
   line-height: 26px;
   font-family: var(--font-montserrat);

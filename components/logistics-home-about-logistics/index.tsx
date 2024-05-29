@@ -1,24 +1,8 @@
 import type { NextPage } from "next";
-import Cards4 from "../cards4";
+import Cards4 from "../about-logistics-card";
 import styles from "./index.module.css";
-import { ABOUT_LOGISTICS, ABOUT_LOGISTICS_PARA_1, ABOUT_LOGISTICS_PARA_2, ABOUT_LOGISTICS_PARA_2_CONTENT } from "../../constants";
-
-const cardData = [
-  {
-    image: "/logistics-safe-reliable.svg",
-    busPasses: "Safe and Reliable",
-  },
-  {
-    image: "/group-1000013527.svg",
-    busPasses: "Safe and Reliable",
-    applyNowPadding: "var(--padding-7xs-5) 0px",
-  },
-  {
-   image: "/logistics-on-time-delivery.svg",
-    busPasses: "On Time Delivery",
-    applyNowPadding: "var(--padding-5xs-5) 0px",
-  },
-];
+import { ABOUT_LOGISTICS, ABOUT_LOGISTICS_PARA_1, ABOUT_LOGISTICS_PARA_2, ABOUT_LOGISTICS_PARA_2_CONTENT, TGSRTC_LINK, TGSRTC_LINK_NAME } from "../../constants";
+import { cardData } from "../../constants/logistics-home-about-logistics";
 
 export type ContentRightType = {
   className?: string;
@@ -37,11 +21,11 @@ const ContentRight: NextPage<ContentRightType> = ({ className = "" }) => {
            {ABOUT_LOGISTICS_PARA_2} 
             <a
               className={styles.wwwtgsrtctelanganagovin}
-              href="https://www.tsrtc.telangana.gov.in/"
+              href={TGSRTC_LINK}
               target="_blank"
             >
               <span className={styles.wwwtgsrtctelanganagovin1}>
-                www.TGSRTC.telangana.gov.in
+               {TGSRTC_LINK_NAME}
               </span>
             </a>
              {ABOUT_LOGISTICS_PARA_2_CONTENT}

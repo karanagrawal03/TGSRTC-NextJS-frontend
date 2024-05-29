@@ -29,7 +29,6 @@
   position: relative;
   line-height: 26px;
   display: inline-block;
-  /* max-height: 104px; */
   word-break: break-word;
 }
 .logisticAboutTexts,
@@ -64,7 +63,6 @@
   flex: 1;
   flex-direction: column;
   align-items: center;
-  /* padding: 0 var(--padding-xl); */
   gap: var(--gap-21xl);
 }
 .contentRight {

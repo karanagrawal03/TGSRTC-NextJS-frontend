@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import { useMemo, type CSSProperties } from "react";
-import styles from "./cards4.module.css";
+import styles from "./index.module.css";
 
 export type Cards4Type = {
   className?: string;
