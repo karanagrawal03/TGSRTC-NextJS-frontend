@@ -2,9 +2,17 @@ import type { NextPage } from "next";
 import FooterSection from "./footer-section";
 import styles from "./footer.module.css";
 import {
+  APPLE_PLAY_STORE_URL,
   DOWNLOAD_OUR_APP,
+  FACEBOOK_URL,
   FOLLOW_US,
-  TGSRTC_COPYRIGHT
+  GOOGLE_PLAY_STORE_URL,
+  INDIA_GOVT_URL,
+  INSTAGRAM_URL,
+  RECOGNITION_URL,
+  TELEGRAM_URL,
+  TGSRTC_COPYRIGHT,
+  TWITTER_URL
 } from "../constants";
 
 export type FooterType = {
@@ -27,7 +35,7 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
         <div className={styles.recognitionContainerWrapper}>
           <div className={styles.recognitionContainer}>
             <div className={styles.recognition1}>
-              <a href="https://www.asrtu.org/" target="_blank">
+              <a href={RECOGNITION_URL} target="_blank">
                 <img
                   className={styles.recognitionLogoIcon}
                   alt="recognition"
@@ -44,7 +52,7 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
                 </div>
               </a>
             </div>
-            <a href="https://www.india.gov.in/" target="_blank">
+            <a href={INDIA_GOVT_URL} target="_blank">
               <img
                 className={styles.recognition2Icon}
                 loading="lazy"
@@ -60,7 +68,7 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
               {FOLLOW_US}
             </div>
             <div className={styles.socialMediaHandles}>
-              <a href="https://www.facebook.com/search/top?q=tsrtcmdoffice" target="_blank">
+              <a href={FACEBOOK_URL} target="_blank">
                 <img
                   className={styles.socialMediaIcon1}
                   loading="lazy"
@@ -68,7 +76,7 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
                   src="/facebook-icon@2x.png"
                 />
               </a>
-              <a href="https://www.instagram.com/tsrtcmdoffice/?utm_medium=copy_link" target="_blank">
+              <a href={INSTAGRAM_URL} target="_blank">
                 <img
                   className={styles.socialMediaIcon2}
                   loading="lazy"
@@ -76,7 +84,7 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
                   src="/instagram-icon@2x.png"
                 />
               </a>
-              <a href="https://x.com/i/flow/login?redirect_after_login=%2Fsearch%3Fq%3Dtsrtcmdoffice" target="_blank">
+              <a href={TWITTER_URL} target="_blank">
                 <img
                   className={styles.socialMediaIcon3}
                   loading="lazy"
@@ -84,7 +92,7 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
                   src="/X-icon@2x.png"
                 />
               </a>
-              <a href="https://t.me/tsrtcmdoffice" target="_blank">
+              <a href={TELEGRAM_URL} target="_blank">
                 <img
                   className={styles.socialMediaIcon4}
                   loading="lazy"
@@ -97,7 +105,7 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
           <div className={styles.downloadPlartformContainer}>
             <div className={styles.downloadOurApp}>{DOWNLOAD_OUR_APP}</div>
             <div className={styles.downloadPlatform}>
-              <a href="https://play.google.com/store/apps/details?id=com.app.tsrtc" target="_blank">
+              <a href={GOOGLE_PLAY_STORE_URL} target="_blank">
                 <img
                   className={styles.googlePlayIcon}
                   loading="lazy"
@@ -105,7 +113,7 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
                   src="/google-play@2x.png"
                 />
               </a>
-              <a href="https://apps.apple.com/us/app/tsrtc/id1201934852?ls=1" target="_blank">
+              <a href={APPLE_PLAY_STORE_URL} target="_blank">
                 <img
                   className={styles.appStoreIcon}
                   loading="lazy"
