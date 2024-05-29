@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import ReservationHeroTourism from "../components/reservation-hero-tourism";
+import ReservationHeroTourism from "../components/reservation-tourism";
 import TableTitle2 from "../components/table-title2";
 import FrameComponent1 from "../components/frame-component1";
 import TableTitle1 from "../components/table-title1";

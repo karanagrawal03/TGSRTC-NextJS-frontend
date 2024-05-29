@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import Header1 from "../components/header1";
+import Header from "../components/header";
 import ReservationHeroLanding from "../components/reservation-hero-landing";
 import BookYourTicket from "../components/book-your-ticket";
 import ReservationKPIs from "../components/reservation-k-p-is";
@@ -10,7 +10,7 @@ const ReservationBookingServiceHo: NextPageReservationBookingServiceHoType =
   () => {
     return (
       <div className={styles.reservationBookingServiceHo}>
-        <Header1 />
+        <Header />
         <ReservationHeroLanding
           maskGroup="/mask-group@2x.png"
           tGSRTCOnlineBusTicket="TGSRTC Online Bus ticket"
