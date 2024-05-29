@@ -199,7 +199,7 @@
   box-shadow: var(--table-shadow);
   background-color: var(--support-white);
   justify-content: space-between;
-  padding: var(--padding-3xs) var(--padding-11xl);
+  padding: var(--padding-3ls) var(--padding-11xl);
   box-sizing: border-box;
   flex-shrink: 0;
   position: fixed;
