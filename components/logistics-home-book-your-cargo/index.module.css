@@ -188,7 +188,6 @@
   padding:  var(--padding-81xl) var(--padding-xl);
   box-sizing: border-box;
   position: relative;
-  /* max-width: 1366px; */
   text-align: left;
   font-size: var(--font-size-27xl);
   color: var(--color-black);

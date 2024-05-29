@@ -44,9 +44,6 @@
   max-width: 100%;
 }
 .cargoTransportvehicleTgsrtc {
-  /* margin: 0;
-  flex: 1;
-  position: relative; */
   line-height: 26px;
   display: inline-block;
   max-width: 100%;
@@ -86,12 +83,6 @@
   color: var(--color-black);
   font-family: var(--font-playfair-display);
 }
-/* @media screen and (max-width: 1100px) {
-  .businessContentWrapper {
-    padding-bottom: var(--padding-46xl);
-    box-sizing: border-box;
-  }
-} */
 @media screen and (max-width: 1023px) {
   .tgsrtcLogisticsBusiness {
     font-size: var(--font-size-18xl);

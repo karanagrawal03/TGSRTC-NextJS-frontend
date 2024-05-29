@@ -9,8 +9,6 @@ export type FrameComponent7Type = {
 const FrameComponent7: NextPage<FrameComponent7Type> = ({ className = "" }) => {
   return (
     <section className={[styles.logisticsHeroWrapper, className].join(" ")}>
-      {/* <div className={styles.logisticsHero}> */}
-        {/* <div className={styles.heroContent}> */}
           <img 
             className={styles.bgIcon} 
             loading="lazy"
@@ -21,7 +19,6 @@ const FrameComponent7: NextPage<FrameComponent7Type> = ({ className = "" }) => {
             loading="lazy"
             alt="logo" 
             src="/logistics-home-banner-background-mobile.png" />
-        {/* </div> */}
         <div className={styles.heroSubtitleContainer}>
           <img
               className={styles.logoIcon}
@@ -34,7 +31,6 @@ const FrameComponent7: NextPage<FrameComponent7Type> = ({ className = "" }) => {
             {DELIVERS_EXCELLENCE}
           </h2>
         </div>
-      {/* </div> */}
     </section>
   );
 };
