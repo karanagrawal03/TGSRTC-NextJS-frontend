@@ -46,14 +46,13 @@ pipeline {
                         sh 'ssh jenkins@demo.divami.com "sudo mkdir -p /var/www/html/tsrtcdev; sudo chown -R jenkins:jenkins /var/www/html/tsrtcdev/ "'
                         sh 'scp build.tar.gz jenkins@demo.divami.com:/var/www/html/tsrtcdev'
                         sh 'ssh jenkins@demo.divami.com "cd /var/www/html/tsrtcdev; tar -xvzf build.tar.gz" '
-                        sh 'rm -rf build.tar.gz'
+                        
                     }
                     else {
                         sh 'tar -czvf build.tar.gz build'
                         sh 'ssh jenkins@demo.divami.com "sudo mkdir -p /var/www/html/tsrtcqa; sudo chown -R jenkins:jenkins /var/www/html/tsrtcqa/ "'
                         sh 'scp build.tar.gz jenkins@demo.divami.com:/var/www/html/tsrtcqa'
                         sh 'ssh jenkins@demo.divami.com "cd /var/www/html/tsrtcqa; tar -xvzf build.tar.gz" '
-                        sh 'rm -rf build.tar.gz'
                     }
                 }  
 
