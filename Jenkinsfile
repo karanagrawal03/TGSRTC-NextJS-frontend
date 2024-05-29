@@ -4,7 +4,20 @@ pipeline {
         SONARQUBE_PATH='/var/lib/jenkins/tools/sonar-scanner-4.2.0.1873-linux/bin/sonar-scanner -Dsonar.projectKey=TSRTC-frontend -Dsonar.sources=./'
         GOOGLE_CHAT_WEBHOOK_LINK='https://chat.googleapis.com/v1/spaces/AAAAJND1WSM/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=qjrllfUBiLxpDtvYIyxjv5hfefYMTALUPj8j_BwRSno'
     }
+    
     stages {
+        stage('get_commit_msg') {
+            steps {
+                script {
+                    env.GIT_COMMIT_MSG = sh (script: 'git log -1 --pretty=%B ${GIT_COMMIT}', returnStdout: true).trim()
+                    GIT_COMMIT_EMAIL = sh (
+                    script: 'git --no-pager show -s --format=\'%ae\'',
+                    returnStdout: true).trim()
+                    echo "Git committer email: ${GIT_COMMIT_EMAIL}"
+                    echo "${GIT_COMMIT_MSG}"
+                }
+            }
+        }
         stage('Sonarqube') {
             steps {
                 script {
