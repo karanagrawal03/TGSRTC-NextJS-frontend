@@ -1,5 +1,6 @@
 .tableContainer{
-  width:auto
+  width:auto;
+  margin-top:24px;
 }
 .tableHead {
     background-color: var(--primary-green);
