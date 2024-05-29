@@ -22,7 +22,7 @@
   "scripts": {
     "prestart": ". ~/.nvm/nvm.sh && nvm use",
     "preinstall": ". ~/.nvm/nvm.sh && nvm use",
-    "dev": ". ~/.nvm/nvm.sh && nvm use && next dev",
+    "dev": "next dev",
     "build": "next build && next export -o build/",
     "start": "next start",
     "lint": "next lint"

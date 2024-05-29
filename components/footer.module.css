@@ -5,6 +5,7 @@
   overflow: clip;
   max-height: unset;
 }
+
 .lineSeparater {
   align-self: stretch;
   height: 0;
@@ -13,34 +14,37 @@
   align-items: flex-start;
   justify-content: flex-start;
 }
-.image462Icon,
-.image474Icon {
+
+.recognitionLogoIcon,
+.recognitionTextIcon {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: none;
 }
-.image474Icon {
+
+.irecognitionTextIcon {
   left: 30.9px;
   width: 130.1px;
   height: 46.9px;
   mix-blend-mode: hue;
 }
+
 .recognition1 {
   height: 46.9px;
   width: 161px;
   position: relative;
-  display: none;
 }
+
 .recognition2Icon {
   height: 33px;
   width: 127px;
   position: relative;
   object-fit: cover;
 }
+
 .recognitionContainer {
   align-self: stretch;
   height: 46.9px;
@@ -50,6 +54,7 @@
   justify-content: flex-start;
   gap: var(--gap-31xl);
 }
+
 .recognitionContainerWrapper {
   width: 338px;
   display: flex;
@@ -60,10 +65,12 @@
   box-sizing: border-box;
   max-width: 100%;
 }
+
 .followUsOn {
   position: relative;
   letter-spacing: 0.02em;
 }
+
 .socialMediaIcon1,
 .socialMediaIcon2,
 .socialMediaIcon3,
@@ -74,6 +81,7 @@
   object-fit: cover;
   min-height: 28px;
 }
+
 .socialMedia,
 .socialMediaHandles {
   display: flex;
@@ -82,16 +90,18 @@
   justify-content: flex-start;
   gap: var(--gap-base);
 }
+
 .socialMedia {
-  flex: 1;
   flex-direction: column;
   gap: var(--gap-4xs);
   min-width: 161px;
 }
+
 .downloadOurApp {
   position: relative;
   letter-spacing: 0.02em;
 }
+
 .appStoreIcon,
 .googlePlayIcon {
   align-self: stretch;
@@ -101,6 +111,7 @@
   object-fit: cover;
   min-height: 30px;
 }
+
 .downloadPlartformContainer,
 .downloadPlatform {
   display: flex;
@@ -109,10 +120,12 @@
   justify-content: flex-start;
   gap: var(--gap-sm);
 }
+
 .downloadPlartformContainer {
   flex-direction: column;
   gap: var(--gap-mini);
 }
+
 .recognitionAndSocialMediaC,
 .socialMediaContainer {
   display: flex;
@@ -120,11 +133,13 @@
   align-items: flex-start;
   max-width: 100%;
 }
+
 .socialMediaContainer {
   width: 491px;
   justify-content: flex-start;
   gap: var(--gap-31xl);
 }
+
 .recognitionAndSocialMediaC {
   align-self: stretch;
   justify-content: space-between;
@@ -134,10 +149,12 @@
   color: var(--support-white);
   font-family: var(--font-montserrat);
 }
+
 .copyright2021Tgsrtc {
   position: relative;
   line-height: 21px;
 }
+
 .copyright2021TgsrtcAllRWrapper {
   align-self: stretch;
   display: flex;
@@ -145,8 +162,8 @@
   align-items: flex-start;
   justify-content: center;
 }
+
 .footer {
-  position: absolute;
   top: 499px;
   left: 0;
   width: 100%;
@@ -154,7 +171,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: var(--padding-21xl) var(--padding-21xl) var(--padding-5xs);
+  padding: var(--padding-21xl) var(--padding-21xl) var(--padding-xl);
   box-sizing: border-box;
   gap: var(--gap-13xl);
   background-image: url(/footer@3x.png);
@@ -167,17 +184,64 @@
   color: var(--support-white);
   font-family: var(--font-montserrat);
 }
+
 @media screen and (max-width: 1100px) {
   .recognitionAndSocialMediaC {
     flex-wrap: wrap;
   }
 }
-@media screen and (max-width: 750px) {
+
+@media screen and (max-width: 1046px) {
+  .recognitionContainerWrapper {
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .socialMediaContainer {
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 599px) {
   .socialMediaContainer {
     flex-wrap: wrap;
-    gap: var(--gap-6xl);
+    gap: var(--gap-21xl);
   }
+
   .footer {
-    gap: var(--gap-base);
+    gap: var(--gap-21xl);
+    padding: var(--padding-21xl) var(--padding-5xl) var(--padding-xl);
+  }
+
+  .recognitionContainerWrapper {
+    padding: 0;
+  }
+
+  .socialMedia {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .downloadOurApp {
+    margin: 0 auto;
+  }
+
+  .downloadPlartformContainer {
+    margin: 0 auto;
+  }
+
+  .recognitionLogoIcon {
+    object-fit: unset;
+  }
+
+  .recognitionTextIconSection {
+    width: 130.1px;
+    height: 46.9px;
+  }
+
+  .recognitionTextIcon {
+    width: 100%;
+    height: 100%;
   }
 }
