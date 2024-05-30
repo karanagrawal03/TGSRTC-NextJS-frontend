@@ -813,7 +813,7 @@
   .metroDeluxeCoach,
   .metroExpress,
   .metroLuxuryAc {
-    font-size: var(--font-size-lgi);
+    font-size: var(--font-size-base);
   }
   .imageCards{
     padding: var(--padding-5xs);
@@ -826,6 +826,7 @@
     width: 105%;
   }
   .guidingPrinciplesOf{
+    font-size: var(--font-size-base);
     padding-bottom: var(--padding-5xs);
   }
 }

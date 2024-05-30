@@ -988,10 +988,11 @@
     font-size: var(--font-size-9xl);
   }
   .garudaPlusMulti {
-    font-size: var(--font-size-lgi);
+    font-size: var(--font-size-5xl);
   }
   .imageCards{
     padding: var( --padding-xs);
+    margin-bottom: 0px;
   }
   .garudaPlusSection{
     padding: var(--padding-base);

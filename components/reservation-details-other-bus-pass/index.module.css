@@ -750,7 +750,7 @@
 
 @media screen and (max-width: 599px) {
   .otherCityBuses {
-    font-size: var(--font-size-lgi);
+    font-size: var(--font-size-5xl);
   }
   .otherCityServicesSection {
    padding: var(--padding-base);
