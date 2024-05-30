@@ -147,7 +147,7 @@ const Header: NextPage<HeaderType> = ({ className = '' }) => {
               </Link>
             </li>
             <li className={styles.headerListItemLink}>
-              <Link href="/" className={isActive('/') ? styles.listItem : styles.listItem}>
+              <Link href="/reservation-contract-rates" className={isActive('/reservation-contract-rates') ? styles.listItem : styles.listItem}>
                 <span className={styles.dropdownItem}>{BUS_CONTRACT_RATES}</span>
               </Link>
             </li>
@@ -211,7 +211,7 @@ const Header: NextPage<HeaderType> = ({ className = '' }) => {
               </Link>
             </li>
             <li className={styles.headerListItemLink}>
-              <Link href="/" className={isActive('/') ? styles.listItem : styles.listItem}>
+              <Link href="/other-passes" className={isActive('/other-passes') ? styles.listItem : styles.listItem}>
                 <span className={styles.dropdownItem}>{OTHER_PASSES}</span>
               </Link>
             </li>
@@ -304,6 +304,21 @@ const Header: NextPage<HeaderType> = ({ className = '' }) => {
                 </Link>
               </div>
               <div className={styles.headerTabLink}>
+                <Link href="/reservation-tourism" className={isActive('/reservation-tourism') ? styles.activeTab : styles.navTabs}>
+                  <span className={styles.reservations1}>{TOURISM}</span>
+                </Link>
+              </div>
+              <div className={styles.headerTabLink}>
+                <Link href="/reservation-contract-rates" className={isActive('/reservation-contract-rates') ? styles.activeTab : styles.navTabs}>
+                  <span className={styles.reservations1}>{BUS_CONTRACT_RATES}</span>
+                </Link>
+              </div>
+              <div className={styles.headerTabLink}>
+                <Link href="/reservation-bus-details" className={isActive('/reservation-bus-details') ? styles.activeTab : styles.navTabs}>
+                  <span className={styles.reservations1}>{BUS_DETAILS}</span>
+                </Link>
+              </div>
+              <div className={styles.headerTabLink}>
                 <Link href="/logistics-tgsrtc-home" className={isActive('/logistics-tgsrtc-home') ? styles.activeTab : styles.navTabs}>
                   <span className={styles.reservations1}>{LOGISTICS}</span>
                 </Link>
@@ -311,6 +326,11 @@ const Header: NextPage<HeaderType> = ({ className = '' }) => {
               <div className={styles.headerTabLink}>
                 <Link href="/bus-pass-services" className={isActive('/bus-pass-services') ? styles.activeTab : styles.navTabs}>
                   <span className={styles.reservations1}>{BUS_PASSES}</span>
+                </Link>
+              </div>
+              <div className={styles.headerTabLink}>
+                <Link href="/other-passes" className={isActive('/other-passes') ? styles.activeTab : styles.navTabs}>
+                  <span className={styles.reservations1}>{OTHER_PASSES}</span>
                 </Link>
               </div>
               <div className={styles.headerTabLink}>
@@ -324,7 +344,7 @@ const Header: NextPage<HeaderType> = ({ className = '' }) => {
                 </Link>
               </div>
               <div className={styles.headerTabLink}>
-                <Link href="/tgsrtc-tarnaka-hospital" className={isActive('/tgsrtc-tarnaka-hospital') ? styles.activeTab : styles.navTabs}>
+                <Link href="/tarnaka-hospital" className={isActive('/tarnaka-hospital') ? styles.activeTab : styles.navTabs}>
                   <span className={styles.reservations1}>{TGSRTC_HOSPITAL}</span>
                 </Link>
               </div>
@@ -333,6 +353,8 @@ const Header: NextPage<HeaderType> = ({ className = '' }) => {
                   <span className={styles.reservations1}>{CONTACT_US}</span>
                 </Link>
               </div>
+           
+            
             </div>
           </>
         }
