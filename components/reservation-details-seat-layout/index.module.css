@@ -562,7 +562,6 @@
   overflow: hidden;
   flex-shrink: 0;
   object-fit: contain;
-  /* z-index: 1; */
 }
 .busDustMobile {
  display: none;
@@ -575,7 +574,6 @@
   align-items: center;
   justify-content: flex-start;
   position: relative;
-  /* gap: var(--gap-13xl); */
   max-width: 100%;
   text-align: left;
   font-size: var(--font-size-5xl);

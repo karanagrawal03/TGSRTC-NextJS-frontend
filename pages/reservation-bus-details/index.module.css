@@ -1845,7 +1845,6 @@
 .seatLayoutOfTgsrtcContaineParent {
   width: 100%;
   width: 1166px;
-  /* gap: var(--gap-21xl); */
   text-align: left;
   font-size: var(--font-size-sm);
   color: var(--primary-red);

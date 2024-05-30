@@ -46,6 +46,7 @@ const FrameComponent4: NextPage<FrameComponent4Type> = ({ className = "" }) => {
                     <div className={styles.imagePlaceholder}>
                       <img
                         className={styles.picturesIcon}
+                        loading="lazy"
                         alt="metro-delux"
                         src="/metro-delux.png"
                       />
@@ -61,6 +62,7 @@ const FrameComponent4: NextPage<FrameComponent4Type> = ({ className = "" }) => {
                     <div className={styles.imagePlaceholder}>
                       <img
                         className={styles.picturesIcon}
+                        loading="lazy"
                         alt="metro-express"
                         src="/metro-express.png"
                       />

@@ -31,6 +31,7 @@ const OtherCityServicesSection: NextPage<OtherCityServicesSectionType> = ({
                     className={styles.picturesIcon}
                     alt={bus.type}
                     src={bus.imageSrc}
+                    loading="lazy"
                   />
                   <div className={styles.imagePlaceholderChild} />
                 </div>
