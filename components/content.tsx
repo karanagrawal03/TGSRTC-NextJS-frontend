@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import FrameComponent from "./frame-component";
+import FrameComponent from "./contract-rates-table4";
 import styles from "./content.module.css";
 
 export type ContentType = {
