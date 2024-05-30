@@ -3,8 +3,14 @@ import Links from "../Links";
 import AccordiansHeading from "../accordians-heading";
 import BulletPoints from "../bullet-points";
 import Tables from "../tables";
+import TimingsTab from "../timings-tab";
 
-type typeOfTheObject = "link" | "heading" | "bullet points" | "table";
+type typeOfTheObject =
+  | "link"
+  | "heading"
+  | "bullet points"
+  | "table"
+  | "timings";
 
 interface DataItem {
   type: typeOfTheObject;
@@ -33,6 +39,8 @@ const AccordianTab: React.FC<AccordianTabProps> = ({ array }) => {
                 rows={item.data as { [key: string]: string | number }[]}
               />
             );
+          case "timings":
+            return <TimingsTab />;
           default:
             return null;
         }

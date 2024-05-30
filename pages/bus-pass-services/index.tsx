@@ -5,7 +5,7 @@ import BusPassOtherBusPasses from "../../components/bus-pass-other-bus-passes";
 import Header from "../../components/header";
 import { APPLY_AND_RENEW, BUS_PASS_SERVICES } from "../../constants";
 import styles from "./index.module.css";
-const BusPassServices: NextPageBusPassServicesType = () => {
+const BusPassServices = () => {
   const [width, setWidth] = useState<boolean>(false);
 
   useEffect(() => {

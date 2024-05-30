@@ -8,7 +8,7 @@ import {
 } from "../../constants";
 import styles from "./index.module.css";
 import { busPassStudentPasses } from "../../constants/bus-pass-student-passes";
-const BusPassStudentPasses: NextPageBusPassStudentPassesType = () => {
+const BusPassStudentPasses = () => {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
   const [width, setWidth] = useState<boolean>(false);
 

@@ -6,6 +6,7 @@ import Box from "@mui/material/Box";
 import MunchintalaTab from "../munchitala-tab";
 import HyderabadTab from "../hyderabad-tab";
 import YadagiriguttaTab from "../yadagirigutta-tab";
+import AirPortPushpak from "../airport-pushpak-tab";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -74,7 +75,7 @@ export default function ReservationBusesTabs() {
         <MunchintalaTab />
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1}>
-        Item Two
+        <AirPortPushpak />
       </CustomTabPanel>
       <CustomTabPanel value={value} index={2}>
         <HyderabadTab />

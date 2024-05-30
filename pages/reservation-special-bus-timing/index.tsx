@@ -7,7 +7,7 @@ import styles from "./index.module.css";
 import ReservationBusesTabs from "../../components/reservation-spl-buses-tabs";
 import { WHICH_BUS_TIMINGS } from "../../constants";
 
-const ReservationSpecialBusTiming: NextPageReservationSpecialBusTimingType =
+const ReservationSpecialBusTiming =
   () => {
     return (
       <div className={styles.reservationSpecialBusTiming}>

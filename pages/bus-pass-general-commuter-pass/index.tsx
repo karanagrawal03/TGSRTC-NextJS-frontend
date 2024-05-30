@@ -8,7 +8,7 @@ import {
 } from "../../constants";
 import { generalCommuterPassData } from "../../constants/bus-pass-general-commuter-pass";
 import styles from "./index.module.css";
-const BusPassGeneralCommuterPass: NextPageBusPassGeneralCommuterPassType =
+const BusPassGeneralCommuterPass =
   () => {
     const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 

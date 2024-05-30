@@ -1,5 +1,7 @@
 export const ABOUT = "About";
 export const ABOUT_US = "About Us";
+export const AIRPORT_PUSHPAK_FIRST_PARAGRAPH="Pushpak is a special AC service provided by TGSRTCUntil now it is known as a special service only to the airport, but Pushpak airport liner buses are not exclusive buses to the airport - they pick up and drop commuters at many locations in the city. If you search for ‘Pushpak airport liner near me’ in a search engine, you may find a few stops near you where you can board Pushpak buses and get down at any Pushpak bus stop or even go to the airport. Because it goes till the airport it is called the airport bus shuttle. So, if you search ‘airport bus stop near me’, you will get the details of Pushpak bus stops near your location."
+export const AIRPORT_PUSHPAK_SECOND_PARAGRAPH="Pushpak bus timings are very convenient as it is a round-the-clock-service. If you cannot find the schedule or the details online, you can dial the Pushpak airport bus contact number and seek information regarding Pushpak bus booking and timings. You can avail the tickets directly in the bus. Pushpak is the only AC service in Hyderabad and it is safe, secure and fast. Pushpak not only goes to the airport, but to many other destinations in Hyderabad."
 export const APPLE_PLAY_STORE_URL ="https://apps.apple.com/us/app/tsrtc/id1201934852?ls=1";
 export const APPLY_AND_RENEW = "Apply, Renew & Travel effortlessly with TSRTC";
 export const APPLY_NOW = "Apply Now";
@@ -12,6 +14,7 @@ export const CAREERS = "Careers";
 export const CONCESSION_SCHEMES = "Concession Schemes";
 export const CONTACT_US = "Contact us";
 export const CORPORATION = "The Corporation";
+export const DETAILS_OF_AIRPORT_PUSHPAK_BUSES="Details of Airport Pushpak bus timings"
 export const DETAILS_OF_HYDERABAD_BUSES="Details of Hyderabad bus timings"
 export const DETAILS_OF_MUNCHINTALA_BUSES="Details of Muchintala bus timings"
 export const DOWNLOAD_OUR_APP = "Download our app";
@@ -42,6 +45,7 @@ export const MUNCHINTALA_SECOND_PARAGRAPH="Muchintala bus timings are convenient
 export const OTHER_BUS_PASSES = "Other Bus Passes";
 export const OTHER_PASSES = "Other Passes";
 export const PRIVACY_POLICIES = "Privacy Policies";
+export const PUSHPAK_AIRPORT_LINERS="Pushpak Airport Liner bus point controllers and contact numbers"
 export const QUICKLINKS = "Quicklinks";
 export const RECOGNITION_URL = "https://www.asrtu.org/";
 export const RESERVATION_FAQ = "Reservations FAQ";
