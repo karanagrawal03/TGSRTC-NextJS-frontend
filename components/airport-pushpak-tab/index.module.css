@@ -21,7 +21,6 @@
 .container {
   display: flex;
   flex-direction: column;
-  gap: 40px;
 }
 .table2Heading {
   font-family: var(--font-montserrat);
@@ -29,4 +28,28 @@
   font-weight: 600;
   line-height: 26px;
   text-align: left;
+}
+.TSRTCtext {
+  font-family: var(--font-playfair-display);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 31.99px;
+  text-align: left;
+  color: #cd342b;
+  margin: 0px;
+}
+.pushpakTimings {
+  font-family: var(--font-montserrat);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 17.07px;
+  text-align: left;
+  color: #020202;
+  margin: 0px;
+}
+.lowerContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 100px;
 }

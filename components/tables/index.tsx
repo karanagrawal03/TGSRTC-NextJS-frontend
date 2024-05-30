@@ -24,7 +24,7 @@ const Tables: React.FC<TableProps> = ({ rows, containerClassName }) => {
       className={`${styles.tableContainer} ${containerClassName}`}
       component={Paper}
     >
-      <Table sx={{ minWidth: 700 }} aria-label="customized table">
+      <Table  aria-label="customized table">
         <TableHead>
           <TableRow className={styles.tableHead}>
             {Object.keys(headers).map((key) => (

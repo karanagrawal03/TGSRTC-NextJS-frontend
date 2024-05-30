@@ -41,6 +41,25 @@ function a11yProps(index: number) {
   };
 }
 
+const tabsData = [
+  {
+    label: "Muchintala",
+    component: <MunchintalaTab />,
+  },
+  {
+    label: "Airport Pushpak",
+    component: <AirPortPushpak />,
+  },
+  {
+    label: "Hyderabad to Yadagirigutta",
+    component: <HyderabadTab />,
+  },
+  {
+    label: "Yadagirigutta to Hyderabad",
+    component: <YadagiriguttaTab />,
+  },
+];
+
 export default function ReservationBusesTabs() {
   const [value, setValue] = React.useState(0);
 
@@ -65,24 +84,16 @@ export default function ReservationBusesTabs() {
           onChange={handleChange}
           aria-label="basic tabs example"
         >
-          <Tab label="Muchintala" {...a11yProps(0)} />
-          <Tab label="Airport Pushpak" {...a11yProps(1)} />
-          <Tab label="Hyderabad to Yadagirigutta" {...a11yProps(2)} />
-          <Tab label="Yadagirigutta to Hyderabad" {...a11yProps(3)} />
+          {tabsData.map((tab, index) => (
+            <Tab key={index} label={tab.label} {...a11yProps(index)} />
+          ))}
         </Tabs>
       </Box>
-      <CustomTabPanel value={value} index={0}>
-        <MunchintalaTab />
-      </CustomTabPanel>
-      <CustomTabPanel value={value} index={1}>
-        <AirPortPushpak />
-      </CustomTabPanel>
-      <CustomTabPanel value={value} index={2}>
-        <HyderabadTab />
-      </CustomTabPanel>
-      <CustomTabPanel value={value} index={3}>
-        <YadagiriguttaTab />
-      </CustomTabPanel>
+      {tabsData.map((tab, index) => (
+        <CustomTabPanel key={index} value={value} index={index}>
+          {tab.component}
+        </CustomTabPanel>
+      ))}
     </Box>
   );
 }

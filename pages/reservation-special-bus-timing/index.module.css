@@ -84,6 +84,9 @@
   .footer {
     gap: var(--gap-base);
   }
+  .container{
+    margin: 0px 24px 60px 24px;
+  }
 }
 @media screen and (max-width: 450px) {
   .footer {

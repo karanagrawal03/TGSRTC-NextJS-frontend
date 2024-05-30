@@ -9,6 +9,7 @@ import {
 } from "../../constants";
 import BulletPoints from "../bullet-points";
 import Tables from "../tables";
+import TimingsTab from "../timings-tab";
 import styles from "./index.module.css";
 const AirPortPushpak = () => {
   const data = [
@@ -38,6 +39,35 @@ const AirPortPushpak = () => {
       munchintalaTime: "12:30",
     },
   ];
+  const data2 = [
+    {
+      name: "hello guru",
+      info: [
+        {
+          type: "timings",
+          data: ["00:40", "01:00", "02:00", "03:00"],
+        },
+      ],
+    },
+    {
+      name: "hello guru",
+      info: [
+        {
+          type: "timings",
+          data: ["00:40", "01:00", "02:00", "03:00"],
+        },
+      ],
+    },
+    {
+      name: "hello guru",
+      info: [
+        {
+          type: "timings",
+          data: ["00:40", "01:00", "02:00", "03:00"],
+        },
+      ],
+    },
+  ];
   return (
     <div className={styles.container}>
       <div className={styles.paragraphTexts}>
@@ -53,6 +83,16 @@ const AirPortPushpak = () => {
       <div>
         <p className={styles.table2Heading}>{PUSHPAK_AIRPORT_LINERS}</p>
         <Tables rows={data} containerClassName={styles.table} />
+      </div>
+      <div className={styles.lowerContainer}>
+        <p className={styles.TSRTCtext}>
+          TGSRTC Miyapur -2 Depot Pushpak Service Operations
+        </p>
+        <p className={styles.pushpakTimings}>
+          TGSRTC Airport Pushpak bus timings - Towards RGIA
+        </p>
+
+        <TimingsTab data={data2} />
       </div>
     </div>
   );

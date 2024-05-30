@@ -4,6 +4,7 @@ import AccordiansHeading from "../accordians-heading";
 import BulletPoints from "../bullet-points";
 import Tables from "../tables";
 import TimingsTab from "../timings-tab";
+import TimingsOfBuses from "../timings-of-buses";
 
 type typeOfTheObject =
   | "link"
@@ -40,7 +41,7 @@ const AccordianTab: React.FC<AccordianTabProps> = ({ array }) => {
               />
             );
           case "timings":
-            return <TimingsTab />;
+            return <TimingsOfBuses data={item.data as string[]} />;
           default:
             return null;
         }
