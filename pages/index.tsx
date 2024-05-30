@@ -11,7 +11,6 @@ import Footer from "../components/footer";
 const Homepage: NextPageHomepageType = () => {
   return (
     <div className={styles.homepage}>
-      <Header />
       <HomeHero />
       <img className={styles.busDust} alt="" src="/bus--dust-1@2x.png" />
       <BookYourTicket1 />
@@ -46,7 +45,6 @@ const Homepage: NextPageHomepageType = () => {
         </div>
       </section>
       <HomeNewsUpdates />
-      <Footer />
     </div>
   );
 };

@@ -1,0 +1,294 @@
+.tsrtcLogoIcon {
+  height: 70.4px;
+  width: 70.4px;
+  position: relative;
+  object-fit: contain;
+}
+.icon {
+  width: 289.1px;
+  height: 24.4px;
+  position: relative;
+}
+.telanganaStateRoadTransport {
+  align-self: stretch;
+  height: 11.3px;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.tsrtcLogo,
+.tsrtcLogo1 {
+  display: flex;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  gap: var(--gap-3xs-4);
+  max-width: 100%;
+}
+.tsrtcLogo1 {
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 0 var(--padding-12xs-9);
+}
+.tsrtcLogo {
+  width: 504px;
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+}
+.reservations {
+  text-decoration: none;
+  position: relative;
+  letter-spacing: 0.02em;
+  line-height: 26px;
+  font-weight: 500;
+  color: inherit;
+  display: inline-block;
+  min-width: 45px;
+}
+.navTabs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-6xs) 0;
+}
+.reservations1 {
+  text-decoration: none;
+  position: relative;
+  letter-spacing: 0.02em;
+  line-height: 26px;
+  font-weight: 700;
+  color: inherit;
+  display: inline-block;
+  min-width: 99px;
+}
+.navTabs1 {
+  border-bottom: 4px solid var(--primary-green);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-6xs) 0 var(--padding-11xs);
+  color: var(--primary-red);
+}
+.reservations2 {
+  text-decoration: none;
+  position: relative;
+  letter-spacing: 0.02em;
+  line-height: 26px;
+  font-weight: 500;
+  color: inherit;
+  display: inline-block;
+  min-width: 65px;
+}
+.navTabs2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-6xs) 0;
+}
+.reservations3 {
+  text-decoration: none;
+  position: relative;
+  letter-spacing: 0.02em;
+  line-height: 26px;
+  font-weight: 500;
+  color: inherit;
+  display: inline-block;
+  min-width: 82px;
+  white-space: nowrap;
+}
+.navTabs3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-6xs) 0;
+}
+.reservations4 {
+  text-decoration: none;
+  position: relative;
+  letter-spacing: 0.02em;
+  line-height: 26px;
+  font-weight: 500;
+  color: inherit;
+  display: inline-block;
+  min-width: 46px;
+}
+.navTabs4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-6xs) 0;
+}
+.reservations5 {
+  text-decoration: none;
+  position: relative;
+  letter-spacing: 0.02em;
+  line-height: 26px;
+  font-weight: 500;
+  color: inherit;
+  display: inline-block;
+  min-width: 59px;
+}
+.navTabs5 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-6xs) 0;
+}
+.reservations6 {
+  text-decoration: none;
+  position: relative;
+  letter-spacing: 0.02em;
+  line-height: 26px;
+  font-weight: 500;
+  color: inherit;
+  display: inline-block;
+  min-width: 123px;
+  white-space: nowrap;
+}
+.navTabs6 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-6xs) 0;
+}
+.reservations7 {
+  text-decoration: none;
+  position: relative;
+  letter-spacing: 0.02em;
+  line-height: 26px;
+  font-weight: 500;
+  color: inherit;
+  display: inline-block;
+  min-width: 80px;
+  white-space: nowrap;
+}
+.navTabs7 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-6xs) 0;
+}
+.header,
+.tabContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 100%;
+}
+.tabContainer {
+  width: 767px;
+  justify-content: flex-start;
+  gap: var(--gap-5xl);
+}
+.header {
+  align-self: stretch;
+  box-shadow: var(--table-shadow);
+  background-color: var(--support-white);
+  justify-content: space-between;
+  padding: var(--padding-xs) var(--padding-11xl);
+  box-sizing: border-box;
+  top: 0;
+  z-index: 99;
+  position: sticky;
+  gap: var(--gap-xl);
+  text-align: left;
+  font-size: var(--font-size-sm);
+  color: var(--text-black);
+  font-family: var(--font-montserrat);
+}
+.reservationBusDetailsHero {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.reservationBusDetailsHeroMobile{
+  display: none;
+}
+.reservationBusDetailsHeroContent{
+  position: absolute;
+  top: 102px;
+  left: 96px;
+  display: flex;
+    gap: var(--gap-xs);
+    flex-flow: column;
+}
+.reservationBusDetailsHeroHeading{
+  color: var(--support-white);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.50);
+  font-family: var(--font-playfair-display);
+  font-size: var(--font-size-53xl);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 82px; 
+  margin: 0;
+}
+.reservationBusDetailsHeroPara{
+  color: var(--support-white);
+  text-align: center;
+  font-family: var(--font-montserrat);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px; 
+  margin: 0;
+}
+.mainContainer {
+  position: relative;
+}
+@media screen and (max-width: 1023px) {
+  .reservationBusDetailsHero{
+    display: none;
+  }
+  .reservationBusDetailsHeroMobile{
+    display: block;
+    width: 100%;
+  }
+  .reservationBusDetailsHeroContent{
+    left: 60px;
+    top: 190px;
+  }
+  .reservationBusDetailsHeroHeading{
+    font-size: var(--font-size-39xl);
+  }
+  .reservationBusDetailsHeroPara{
+    font-size: var(--font-size-lg);
+    max-width: 326px;
+    text-align: left;
+
+  }
+}
+@media screen and (max-width: 599px) {
+  .reservationBusDetailsHero{
+    display: none;
+  }
+  .reservationBusDetailsHeroMobile{
+    width: 100%;
+    display: block;
+  }
+  .reservationBusDetailsHeroContent{
+    top: unset;
+    bottom: 28.6%;
+    left: 23px;
+    gap: var(--gap-5xs);
+  }
+   .reservationBusDetailsHeroHeading{
+    font-size: var(--font-size-42xl);
+    line-height: normal;
+  }
+  .reservationBusDetailsHeroPara{
+    font-size: var(--font-size-base);
+    line-height: 26px;
+    max-width: 237px;
+    text-align: left;
+  }
+}

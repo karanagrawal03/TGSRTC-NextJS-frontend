@@ -31,7 +31,6 @@ const BusPassStudentPasses = () => {
 
   return (
     <div className={styles.busPassStudentPasses}>
-      <Header />
       <section className={styles.busPassesHeroStudentPasses}>
         {width ? (
           <img

@@ -21,7 +21,6 @@ const BusPassesFaq = () => {
   };
   return (
     <div className={styles.busPassGeneralCommuterPass}>
-      <Header />
       <section className={styles.busPassesHeroGeneralCommut}>
         <img className={styles.bgIcon} alt="" src="/faq-bg.png" />
         <img className={styles.bgIconMobile} alt="" src="/faq-mobile-bg.png" />
