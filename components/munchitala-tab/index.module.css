@@ -1,6 +1,6 @@
 .paragraph {
   font-family: var(--font-montserrat);
-  font-size: 14px;
+  font-size: var(--font-size-sm);
   font-weight: 400;
   line-height: 26px;
   text-align: left;
@@ -8,7 +8,7 @@
 }
 .tableHeading {
   font-family: var(--font-playfair-display);
-  font-size: 24px;
+  font-size: var(--font-size-5xl);
   font-weight: 600;
   line-height: 26px;
   text-align: left;
@@ -18,7 +18,7 @@
 .paragraphTexts {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: var(--gap-13xl);
   margin-top: 24px;
 }
 
@@ -29,5 +29,5 @@
 .container {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: var(--gap-21xl);
 }

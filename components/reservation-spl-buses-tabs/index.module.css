@@ -1,28 +1,4 @@
-/* .MuiTabs-root {
-    width: 100%;
-}
-.MuiButtonBase-root{
-    flex: 1;
-    border: 10px red;
-} */
-/* .MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary Mui-selected css-1h9z7r5-MuiButtonBase-root-MuiTab-root{
-    flex: 1;
-    border: 10px red;
-} */
-.MuiTabs-indicator {
-  background-color: red;
-  border: 10px solid green;
-}
-.css-15uhjcw-MuiButtonBase-root-MuiTab-root.Mui-selected {
-  color: red !important;
-}
-.mui-selected {
-  color: "red";
-}
-.muiTabs {
-  display: block;
-  width: 100%;
-}
+
 .muiForm {
   display: none;
 }

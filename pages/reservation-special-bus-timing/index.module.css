@@ -122,13 +122,14 @@
   letter-spacing: normal;
 }
 .container {
-  padding: 80px 100px 100px 100px;
+  padding: var(--padding-61xl) var(--padding-81xl) var(--padding-81xl)
+    var(--padding-81xl);
   width: calc(100% - 200px);
   background: #f2f2f2;
 }
 .headingText {
   font-family: var(--font-montserrat);
-  font-size: 24px;
+  font-size: var(--font-size-5xl);
   font-weight: 600;
   line-height: 29.26px;
   text-align: center;
@@ -142,7 +143,8 @@
     gap: var(--gap-base);
   }
   .container {
-    padding: 100px 24px 60px 24px;
+    padding: var(--padding-81xl) var(--padding-5xl) var(--padding-60)
+      var(--padding-5xl);
     width: calc(100% - 48px);
   }
   .headingText {
@@ -173,7 +175,8 @@
     display: none;
   }
   .container {
-    padding: 100px 24px 60px 24px;
+    padding: var(--padding-81xl) var(--padding-5xl) var(--padding-60)
+      var(--padding-5xl);
     width: calc(100% - 48px);
   }
   .bgIconMobile {
@@ -182,12 +185,13 @@
 }
 @media screen and (max-width: 599px) {
   .container {
-    padding: 100px 24px 60px 24px;
+    padding: var(--padding-81xl) var(--padding-5xl) var(--padding-60)
+      var(--padding-5xl);
     width: calc(100% - 48px);
   }
   .headingText {
     text-align: left;
-    font-size: 20px;
+    font-size: var(--font-size-xl);
     margin-bottom: 24px;
   }
   .footer {

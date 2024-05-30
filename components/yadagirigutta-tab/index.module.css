@@ -1,6 +1,6 @@
 .tableHeading {
   font-family: var(--font-playfair-display);
-  font-size: 24px;
+  font-size: var( --font-size-5xl);
   font-weight: 600;
   line-height: 26px;
   text-align: left;
@@ -14,11 +14,11 @@
 }
 .container{
   width: 100%;
-  padding-top: 40px;
+  padding-top: var( --padding-21xl);
 }
 @media screen and (max-width: 1023px) {
 .container{
   width: 100%;
-  padding-top: 24px;
+  padding-top: var(--padding-5xl);
 }
 }
