@@ -8,6 +8,10 @@ const nextConfig = {
     // !! WARN !!
     ignoreBuildErrors: true,
   },
+  output: "export",
+
+  // Optional: Change the output directory `out` -> `dist`
+  distDir: "dist",
 };
 
 module.exports = nextConfig;
