@@ -1,27 +1,23 @@
-.tableContainer{
-  width:100%;
-  margin-top:24px;
+.tableContainer {
+  margin: 0px 60px;
+  width: auto;
 }
 .tableHead {
   background-color: var(--primary-green);
   border-radius: 6px;
 }
 .tableHeadCell {
-  color: var(--support-white) !important;
-  font-family: var(--font-montserrat) !important;
-  font-size: var(--font-size-sm) !important;
-  font-weight: 600 !important;
-  padding: 10px 20px !important;
+  color: #ffffff;
+  font-family: var(--font-montserrat);
+  font-size: var(--font-size-sm);
 }
 .oddRow {
-  background-color: var(--color-whitesmoke-100);
+  background-color: #f7f7f7;
 }
 .tableCell {
-  font-family: var(--font-montserrat) !important;
-  font-size: var(--font-size-sm) !important;
+  font-family: var(--font-montserrat);
+  font-size: var(--font-size-sm);
   font-weight: 400;
-  line-height: 17.07px !important;
+  line-height: 17.07px;
   text-align: left;
-  padding: 12px 20px !important;
 }
-  

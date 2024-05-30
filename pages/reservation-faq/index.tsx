@@ -34,7 +34,7 @@ const ReservationFAQ = () => {
               info={e.info}
               expanded={expandedIndex === index}
               onChange={() => handleChange(index)}
-              accordionTabStyles={styles.accordionTabStyles}
+              containerClassName={styles.containerClassName}
               headingStyles={styles.headingStyles}
             />
           ))}

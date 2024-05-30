@@ -4,12 +4,10 @@ import Header from "../../components/header";
 import {
   APPLY_AND_RENEW,
   GENERAL_COMMUTER_PASS,
-  KNOW_MORE,
   KNOW_MORE_ABOUT_GENERAL_PASSES,
-  KNOW_MORE_ABOUT_STUDENT_PASSES,
 } from "../../constants";
-import styles from "./index.module.css";
 import { generalBuspasses } from "../../constants/general-commuter-passes";
+import styles from "./index.module.css";
 const BusPassGeneralCommuterPass = () => {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
@@ -35,7 +33,7 @@ const BusPassGeneralCommuterPass = () => {
         </div>
       </section>
       <section className={styles.busPassGeneralCommuterPass2}>
-      <div className={styles.knowMoreAboutStudentPassesWrapper}>
+        <div className={styles.knowMoreAboutStudentPassesWrapper}>
           <h2 className={styles.knowMoreAbout}>
             {KNOW_MORE_ABOUT_GENERAL_PASSES}
           </h2>

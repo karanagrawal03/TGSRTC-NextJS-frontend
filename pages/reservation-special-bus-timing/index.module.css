@@ -1,0 +1,216 @@
+.reservationHeroTourism {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  font-size: var(--font-size-53xl);
+  color: var(--support-white);
+  font-family: var(--font-playfair-display);
+}
+.bgIcon,
+.bgIconMobile {
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.bgIconMobile {
+  display: none;
+}
+.contentWrapper {
+  position: absolute;
+  top: 7.3vw;
+  left: 7.3vw;
+  display: flex;
+  flex-direction: column;
+  width: 599px;
+}
+.tgsrtcIsHappy,
+.tourism {
+  margin: 0;
+  mix-blend-mode: normal;
+}
+.tourism {
+  font-size: var(--font-size-53xl);
+  line-height: 82px;
+  font-weight: 600;
+  font-family: inherit;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+}
+.tgsrtcIsHappy {
+  margin-top: 10px;
+  font-size: var(--font-size-5xl);
+  line-height: 32px;
+  font-weight: 500;
+  font-family: var(--font-montserrat);
+  display: inline-block;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.8);
+  max-width: 100%;
+  width: 599px;
+}
+
+.busDust {
+  width: 128px;
+  height: 918px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: contain;
+  display: none;
+  z-index: 4;
+}
+.lineSeparatorIcon,
+.reservationHeroSpeacialBus {
+  align-self: stretch;
+  position: relative;
+  max-width: 100%;
+}
+.reservationHeroSpeacialBus {
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.lineSeparatorIcon {
+  overflow: clip;
+  max-height: unset;
+}
+.lineSeparater {
+  align-self: stretch;
+  height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.copyright2021Tgsrtc {
+  position: relative;
+  line-height: 21px;
+}
+.copyright2021TgsrtcAllRWrapper {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.footer {
+  align-self: stretch;
+  padding: var(--padding-21xl) var(--padding-21xl) var(--padding-5xs);
+  box-sizing: border-box;
+  gap: var(--gap-13xl);
+  background-image: url(/footer@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  max-width: 100%;
+  text-align: left;
+  font-size: var(--font-size-xs);
+  color: var(--support-white);
+  font-family: var(--font-montserrat);
+}
+.reservationSpecialBusTiming {
+  width: 100%;
+  position: relative;
+  line-height: normal;
+  letter-spacing: normal;
+}
+.container {
+  padding: var(--padding-61xl) var(--padding-81xl) var(--padding-81xl)
+    var(--padding-81xl);
+  width: calc(100% - 200px);
+  background: #f2f2f2;
+}
+.headingText {
+  font-family: var(--font-montserrat);
+  font-size: var(--font-size-5xl);
+  font-weight: 600;
+  line-height: 29.26px;
+  text-align: center;
+  margin: 0px;
+}
+.reservationMobile {
+  display: none;
+}
+@media screen and (max-width: 1023px) {
+  .footer {
+    gap: var(--gap-base);
+  }
+  .container {
+    padding: var(--padding-81xl) var(--padding-5xl) var(--padding-60)
+      var(--padding-5xl);
+    width: calc(100% - 48px);
+  }
+  .headingText {
+    margin-bottom: 24px;
+  }
+  .reservationMobile {
+    display: block;
+  }
+  .reservationHeroSpeacialBus {
+    display: none;
+  }
+  .contentWrapper {
+    top: 12vw;
+    left: 7vw;
+  }
+  .tourism {
+    font-size: var(--font-size-42x);
+    line-height: 68px;
+  }
+  .tgsrtcIsHappy {
+    width: 400px;
+    font-size: var(--font-size-16);
+    line-height: 28px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .bgIcon {
+    display: none;
+  }
+  .container {
+    padding: var(--padding-81xl) var(--padding-5xl) var(--padding-60)
+      var(--padding-5xl);
+    width: calc(100% - 48px);
+  }
+  .bgIconMobile {
+    display: block;
+  }
+}
+@media screen and (max-width: 599px) {
+  .container {
+    padding: var(--padding-81xl) var(--padding-5xl) var(--padding-60)
+      var(--padding-5xl);
+    width: calc(100% - 48px);
+  }
+  .headingText {
+    text-align: left;
+    font-size: var(--font-size-xl);
+    margin-bottom: 24px;
+  }
+  .footer {
+    padding-top: var(--padding-7xl);
+    padding-bottom: var(--padding-xl);
+    box-sizing: border-box;
+  }
+  .contentWrapper {
+    width: 237px;
+    left: 6.4vw;
+  }
+  .tourism {
+    font-size: var(--font-size-42xl);
+    line-height: 56px;
+  }
+  .tgsrtcIsHappy {
+    width: 237px;
+    margin-top: 8px;
+    font-size: var(--font-size-16);
+    line-height: 26px;
+  }
+}
