@@ -82,7 +82,6 @@
 }
 
 .tsrtcHeaderTextLogo {
-  /* width: fit-content; */
   width: 425px;
   flex-direction: column;
   align-items: flex-start;
@@ -109,7 +108,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* padding: var(--padding-xl) 0; */
   color: var(--text-black);
   font-weight: 500;
   font-style: normal;
@@ -294,9 +292,6 @@
     display: none;
   }
 
-  .tsrtcLogo {
-    /* width: 476px; */
-  }
 }
 
 @media screen and (max-width: 1285px) {
