@@ -1057,12 +1057,12 @@ const Content: NextPage<ContentType> = ({ className = "" }) => {
                       <img className={styles.separatorIcon7} alt="" />
                     </div>
                   </div>
-                  <FrameComponent
+                  {/* <FrameComponent
                     separator="pending_I321:51991;369:24135;369:19682"
                     separator1="pending_I321:51991;369:24135;369:19686"
                     separator2="pending_I321:51991;369:24117;369:19682"
                     separator3="pending_I321:51991;369:24117;369:19686"
-                  />
+                  /> */}
                   <div className={styles.buttonCells4}>
                     <div className={styles.bg196} />
                     <div className={styles.actions4}>
@@ -1089,13 +1089,13 @@ const Content: NextPage<ContentType> = ({ className = "" }) => {
                       <img className={styles.separatorIcon11} alt="" />
                     </div>
                   </div>
-                  <FrameComponent
+                  {/* <FrameComponent
                     separator="pending_I321:51991;369:24108;369:19682"
                     separator1="pending_I321:51991;369:24108;369:19686"
                     separator2="pending_I321:51991;369:24099;369:19682"
                     separator3="pending_I321:51991;369:24099;369:19686"
                     propFlex="unset"
-                  />
+                  /> */}
                   <div className={styles.buttonCells6}>
                     <div className={styles.bg198} />
                     <div className={styles.actions6}>

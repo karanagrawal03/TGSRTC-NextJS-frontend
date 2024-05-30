@@ -1,17 +1,19 @@
 .container {
   width: auto;
-  padding: 16px 60px 0px 56px;
+  padding-top: var(--padding-base);
   margin: 0;
-
 }
 .linkText {
   font-family: var(--font-montserrat);
-  font-size: 14px;
+  font-size: var(--font-size-sm);
   font-weight: 600;
   line-height: 26px;
   text-align: left;
   color: #020202;
-  padding: 8px 16px 8px 16px;
+  padding: var(--padding-5xs) var(--padding-base) var(--padding-5xs)
+    var(--padding-base);
   margin: 0;
   background: #f1f8f4;
+  word-break: break-all;
+  cursor: pointer;
 }

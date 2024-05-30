@@ -21,7 +21,6 @@ const BusPassServices = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-  const points = ["First point", "Second point", "Third point"];
   return (
     <div className={styles.busPassServices}>
       <Header />

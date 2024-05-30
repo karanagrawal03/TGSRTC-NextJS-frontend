@@ -9,3 +9,28 @@
     flex: 1;
     border: 10px red;
 } */
+.MuiTabs-indicator {
+  background-color: red;
+  border: 10px solid green;
+}
+.css-15uhjcw-MuiButtonBase-root-MuiTab-root.Mui-selected {
+  color: red !important;
+}
+.mui-selected {
+  color: "red";
+}
+.muiTabs {
+  display: block;
+  width: 100%;
+}
+.muiForm {
+  display: none;
+}
+@media screen and (max-width: 1366px) {
+  .muiForm {
+    display: block;
+  }
+  .muiTabs {
+    display: none;
+  }
+}

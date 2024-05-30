@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import BulletPointContainer from "./bullet-point-container";
-import ImageCards from "./image-cards";
+import ImageCards from "./logistics-business-image-card";
 import styles from "./frame-component4.module.css";
 
 export type FrameComponent4Type = {

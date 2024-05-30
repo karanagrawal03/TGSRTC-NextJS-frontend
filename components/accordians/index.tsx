@@ -6,6 +6,7 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import AddIcon from "@mui/icons-material/Add";
 import HorizontalRuleIcon from "@mui/icons-material/HorizontalRule";
 import AccordianTab from "../accordian-tab";
+
 export interface DataItem {
   type: string;
   text?: string;
@@ -16,12 +17,14 @@ interface AccordionItemProps {
   info: DataItem[];
   expanded: boolean;
   onChange: () => void;
+  containerClassName?: string;
 }
 const AccordionItem: React.FC<AccordionItemProps> = ({
   name,
   info,
   expanded,
   onChange,
+  containerClassName,
 }) => {
   return (
     <div className={styles.accordian}>
@@ -36,12 +39,12 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
           id="panel1-header"
           className={styles.before6AmContainer1}
         >
-          <li>{name}</li>
+          <li className={styles.accordianHeading}>{name}</li>
         </AccordionSummary>
       </Accordion>
       {expanded && (
         <AccordionDetails className={styles.accordianDetails}>
-          <div className={styles.accordianTab}>
+          <div className={`${styles.accordianTab} ${containerClassName}`}>
             <AccordianTab array={info} />
           </div>
         </AccordionDetails>
