@@ -10,6 +10,22 @@ body {
   margin-top: 94.7px;
 }
 
+@media screen and (max-width: 1023px) {
+  body {
+    margin-top: 87.7px;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  body {
+    margin-top: 56.2px;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
 :root {
   /* fonts */
   --font-montserrat: Montserrat;
@@ -44,11 +60,10 @@ body {
   --font-size-21xl: 40px;
   --font-size-109xl: 128px;
   --font-size-32xl: 51px;
-  --font-size-36xs:36px;
-  --font-size-42xs:42px
-
-  /* Colors */
-  --color-whitesmoke-100: #f7f7f7;
+  --font-size-36xs: 36px;
+  --font-size-42xs: 42px
+    /* Colors */
+    --color-whitesmoke-100: #f7f7f7;
   --support-grey-bg: #f2f2f2;
   --support-white: #fff;
   --text-grey-body-text: #4d4d4d;
