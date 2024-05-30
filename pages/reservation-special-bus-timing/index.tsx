@@ -15,7 +15,6 @@ import {
 const ReservationSpecialBusTiming = () => {
   return (
     <div className={styles.reservationSpecialBusTiming}>
-      <Header />
       <section className={styles.reservationHeroTourism}>
         <img
           className={styles.bgIcon}

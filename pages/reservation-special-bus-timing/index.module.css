@@ -99,13 +99,8 @@
   align-items: flex-start;
   justify-content: center;
 }
-.footer,
-.reservationSpecialBusTiming {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
+
+
 .footer {
   align-self: stretch;
   padding: var(--padding-21xl) var(--padding-21xl) var(--padding-5xs);
