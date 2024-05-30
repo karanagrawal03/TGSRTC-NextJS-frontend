@@ -45,8 +45,6 @@ body {
   --font-size-109xl: 128px;
   --font-size-32xl: 51px;
   --font-size-36xs:36px;
-  --font-size-42xs:42px
-
   /* Colors */
   --color-whitesmoke-100: #f7f7f7;
   --support-grey-bg: #f2f2f2;
@@ -68,6 +66,7 @@ body {
   --color-black: #000;
   --color-darkgray: rgba(169, 169, 169, 0.5);
   --color-gainsboro: #d9d9d9;
+  --color-silver: #c6c6c6;
 
   /* Spacing */
   --spacing-lg: 12px;
