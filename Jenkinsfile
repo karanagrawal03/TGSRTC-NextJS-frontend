@@ -3,6 +3,8 @@ pipeline {
     environment {
         SONARQUBE_PATH='/var/lib/jenkins/tools/sonar-scanner-4.2.0.1873-linux/bin/sonar-scanner -Dsonar.projectKey=TSRTC-frontend -Dsonar.sources=./'
         GOOGLE_CHAT_WEBHOOK_LINK='https://chat.googleapis.com/v1/spaces/AAAAJND1WSM/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=qjrllfUBiLxpDtvYIyxjv5hfefYMTALUPj8j_BwRSno'
+        DEV_LINK='https://tsdev.divami.com'
+        QA_LINK='https://tsqa.divami.com'
     }
     
     stages {
@@ -45,8 +47,7 @@ pipeline {
                         sh 'tar -czvf build.tar.gz build'
                         sh 'ssh jenkins@demo.divami.com "sudo mkdir -p /var/www/html/tsrtcdev; sudo chown -R jenkins:jenkins /var/www/html/tsrtcdev/ "'
                         sh 'scp build.tar.gz jenkins@demo.divami.com:/var/www/html/tsrtcdev'
-                        sh 'ssh jenkins@demo.divami.com "cd /var/www/html/tsrtcdev; tar -xvzf build.tar.gz" '
-                        
+                        sh 'ssh jenkins@demo.divami.com "cd /var/www/html/tsrtcdev; tar -xvzf build.tar.gz" 
                     }
                     else {
                         sh 'tar -czvf build.tar.gz build'
@@ -63,10 +64,10 @@ pipeline {
         success {
             script {
                 if (env.Env == 'dev') {
-                    googlechatnotification   message: "Project Name: ${JOB_NAME} Build ${BUILD_NUMBER} with commit : ${GIT_COMMIT_MSG} , Git committer email: ${GIT_COMMIT_EMAIL} from Branch ${GIT_BRANCH} on Environment ${env.Env} was successfull. Check output in ${LINK} "  , url: "${env.GOOGLE_CHAT_WEBHOOK_LINK}"                                    
+                    googlechatnotification   message: "Project Name: ${JOB_NAME} Build ${BUILD_NUMBER} with commit : ${GIT_COMMIT_MSG} , Git committer email: ${GIT_COMMIT_EMAIL} from Branch ${GIT_BRANCH} on Environment ${env.Env} was successfull. Check output in ${DEV_LINK} "  , url: "${env.GOOGLE_CHAT_WEBHOOK_LINK}"                                    
                 }
                 else {
-                    googlechatnotification   message: "Project Name: ${JOB_NAME} Build ${BUILD_NUMBER} with commit : ${GIT_COMMIT_MSG} , Git committer email: ${GIT_COMMIT_EMAIL} from Branch ${GIT_BRANCH} on Environment ${env.Env} was successfull. Check output in ${LINK}"  , url: "${env.GOOGLE_CHAT_WEBHOOK_LINK}"
+                    googlechatnotification   message: "Project Name: ${JOB_NAME} Build ${BUILD_NUMBER} with commit : ${GIT_COMMIT_MSG} , Git committer email: ${GIT_COMMIT_EMAIL} from Branch ${GIT_BRANCH} on Environment ${env.Env} was successfull. Check output in ${QA_LINK}"  , url: "${env.GOOGLE_CHAT_WEBHOOK_LINK}"
                 }    
             }    
         }
