@@ -1,0 +1,354 @@
+
+
+/* ------------------------------------------------------------------ */
+.reservationConcessionSchemes {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.reservationConcessionSchemesHeroContainer{
+  width: 100%;
+  align-self: stretch;
+  height: 675px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.reservationConcessionHeroImage{
+  position: absolute;
+  top: -39px;
+  left: 0px;
+  width: 100%;
+  height: 754px;
+  object-fit: contain;
+  display: block;
+}
+.reservationConcessionHeroImageMobile{
+  position: absolute;
+display: none;
+height: 458px;
+max-width: 599px;
+width: 100%;
+}
+.concessionSchemesTitle{
+  position: absolute;
+  top: 226px;
+  left:100px;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+.title{
+  font-size: var(--font-size-53xl);
+  font-weight: 600;
+  line-height: 82px;
+  font-family: var(--font-playfair-display);
+  color: var(--support-white);
+}
+.applyRenew{
+  font-size: var(--font-size-5xl);
+  line-height: 32px;
+  font-weight: 500;
+  font-family: var(--font-montserrat);
+  color: var(--support-white);
+}
+.facilityForLongDistancePasParent,
+.frameParent,
+.reservationConcessionSchemes1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 1366px;
+  width: 100%;
+}
+.reservationConcessionSchemes1 {
+  position: relative;
+  align-self: stretch;
+  background-color: var(--support-grey-bg);
+  align-items: center;
+  padding: var(--padding-61xl) var(--padding-xl) var(--padding-81xl);
+  box-sizing: border-box;
+  gap: var(--gap-5xl);
+  z-index: 1;
+  text-align: left;
+  font-size: var(--font-size-5xl);
+  color: var(--primary-red);
+  font-family: var(--font-playfair-display);
+}
+.teriffsOfMonthlySeasonTickets{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.monthlySeasonTicketstableTitle{
+font-size: var(--font-size-sm);
+line-height: 26px;
+font-family: var(--font-montserrat);
+font-weight:600 ;
+color:var(--text-black) ;
+margin: 0px 80px;
+
+}
+.tableContainer {
+  margin: 0px 80px !important;
+}
+.frameParent {
+  width: 1166px;
+  align-items: flex-start;
+  gap: var(--gap-81xl);
+  margin-top: 75px;
+}
+.travel24t24TicketsParent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-xs);
+}
+.travel24t24Tickets {
+  position: relative;
+  font-weight: 600;
+  mix-blend-mode: normal;
+}
+.travel24t24TicketsWereContainer {
+  margin: 0;
+  align-self: stretch;
+  position: relative;
+  font-size: var(--font-size-sm);
+  line-height: 26px;
+  font-family: var(--font-montserrat);
+  color: var(--text-black);
+}
+.blankLine,
+.t24TicketCan,
+.travel24t24TicketsWere {
+  display: block;
+}
+.facilityForLongDistancePasParent {
+  align-self: stretch;
+  align-items: flex-start;
+  gap: var(--gap-xs);
+}
+.facilityForLong {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  font-weight: 600;
+  font-family: inherit;
+  display: inline-block;
+  mix-blend-mode: normal;
+  max-width: 100%;
+}
+
+.toAttractMore {
+  margin: 0;
+  align-self: stretch;
+  position: relative;
+  font-size: var(--font-size-sm);
+  line-height: 26px;
+  font-family: var(--font-montserrat);
+  color: var(--text-black);
+}
+.busDustWebsite {
+  width: 128px;
+  height: 780px;
+  position: absolute;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: contain;
+  display: blobk;
+  z-index: 4;
+  align-self: flex-start;
+  top: 0;
+  left: 0;
+}
+
+.busDustMobile {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  display: none;
+  height: 128px;
+  width: 100%;
+}
+.tableHeadCell{
+  line-height: 17.07px !important;
+  border-bottom-width: 0px !important;
+  box-sizing: border-box !important;
+  letter-spacing: normal !important;
+}
+.tableCell{
+  font-family: var(--font-montserrat);
+  font-size: var(--font-size-sm);
+  font-weight: 400;
+  line-height: 17.07px;
+  text-align: left;
+  border-bottom-width: 0px !important;
+  box-sizing: border-box !important;
+  letter-spacing: unset !important;
+  padding-right: 15.5px !important;
+  width: 76px !important;
+}
+/* ------------------------------------------------------------------ */
+@media screen and (max-width:599px) {
+  /* .heroImage{
+    background-image: url("../../public/reservation-concession-schemes-mobile.png");
+    background-size: cover; 
+    background-position: center; 
+  } */
+  .concessionSchemesTitle{
+    top: 57.43px;
+    left: 23px;
+
+  }
+  .title{
+    font-family: Playfair Display;
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 55.99px;
+    text-align: left;
+    
+  }
+  .applyRenew{
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+    text-align: left;
+    
+  }
+  .busDustWebsite {
+    display: none;
+  }
+
+  .busDustMobile {
+    display: block;
+    height: 128px;
+    width: 100%;
+  }
+  .reservationConcessionSchemes1{
+    padding: 0px;
+    padding-top: 0px;
+    gap: 0px;
+  }
+}
+
+  /* Media query for screen widths 599px and below */
+@media (max-width: 599px) {
+  .heroImage {
+    height: 658px; 
+    width: 599px;
+  }
+  .reservationConcessionSchemesHeroContainer{
+
+    height: 658px; 
+  }
+}
+
+/* Media query for screen widths 480px and below */
+@media (max-width: 480px) {
+  .heroImage {
+    height: 558px; 
+    width: 480px;
+
+  }
+  .reservationConcessionSchemesHeroContainer{
+    height: 558px; 
+  }
+}
+
+/* Media query for screen widths 360px and below */
+@media (max-width: 360px) {
+  .heroImage {
+    height: 458px; 
+    width: 360px;
+
+  }
+  .reservationConcessionSchemesHeroContainer{
+    height: 458px; 
+  }
+}
+/* ---------------------------------------------------------------------------------------- */
+
+
+
+@media screen and (max-width: 1275px) {
+  .tabContainer {
+    display: none;
+  }
+  .frameParent {
+    gap: var(--gap-31xl);
+  }
+  .reservationConcessionSchemes1 {
+    padding-top: var(--padding-33xl);
+    padding-bottom: var(--padding-46xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .reservationConcessionSchemes1 {
+    padding-top: var(--padding-15xl);
+    padding-bottom: var(--padding-23xl);
+    box-sizing: border-box;
+  }
+  .linksContainer,
+  .logo {
+    flex: 1;
+  }
+  .footerSection,
+  .recognitionAndSocialMediaC {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 750px) {
+  .frameParent {
+    gap: var(--gap-6xl);
+  }
+  .reservationConcessionSchemes1 {
+    padding-top: var(--padding-3xl);
+    padding-bottom: var(--padding-8xl);
+    box-sizing: border-box;
+  }
+  .logo {
+    flex-wrap: wrap;
+  }
+  .linksContainer,
+  .logo {
+    min-width: 100%;
+  }
+  .socialMediaContainer {
+    flex-wrap: wrap;
+    gap: var(--gap-6xl);
+  }
+  .footer {
+    gap: var(--gap-base);
+  }
+}
+@media screen and (max-width: 450px) {
+  .facilityForLong,
+  .travel24t24Tickets {
+    font-size: var(--font-size-lgi);
+  }
+  .linksContainer,
+  .recognitionContainer {
+    flex-wrap: wrap;
+    gap: var(--gap-6xl);
+  }
+  .footer {
+    padding-top: var(--padding-7xl);
+    padding-bottom: var(--padding-xl);
+    box-sizing: border-box;
+  }
+}

@@ -1,6 +1,4 @@
 
-
-
 //Need to follow alphabetical order with below mentioned notation
 export const ABOUT = "About";
 export const ABOUT_HOSPITAL="About Hospital";
@@ -11,7 +9,7 @@ export const ABOUT_LOGISTICS_PARA_2=" The consignors can approach the nearest bu
 export const ABOUT_US = "About Us";
 export const ANNEXURE="ANNEXURE: A";
 export const APPLE_PLAY_STORE_URL ="https://apps.apple.com/us/app/tsrtc/id1201934852?ls=1";
-export const APPLY_AND_RENEW = "Apply, Renew & Travel effortlessly with TSRTC";
+export const APPLY_AND_RENEW = "Apply, Renew & Travel effortlessly with TGSRTC";
 export const APPLY_NOW = "Apply Now";
 export const BOOK_APPOINTMENT="Book Appointment";
 export const BOOK_NOW="Book Now";
@@ -28,12 +26,14 @@ export const CONCESSION_SCHEMES = "Concession Schemes";
 export const CONTACT_US = "Contact us";
 export const CORPORATION = "The Corporation";
 export const DELIVERS_EXCELLENCE="Delivers excellence every mile !";
+export const DETAILS_RESERVATION_POINTS="Details of Reservation Points"
 export const DESTINATION="Destinations";
 export const DOWNLOAD_OUR_APP = "Download our app";
 export const Electric_BUSES_PARA=" The following facilities are available in Electric Buses and specially operated to RGI Airport."
 export const Electric_BUSES= "Electric Buses";
 export const EVENTS_AWARDS = "Events & Awards";
 export const FACEBOOK_URL ="https://www.facebook.com/search/top?q=tsrtcmdoffice";
+export const FACILITY="Facility for Long Distance Passengers";
 export const FAQS = "FAQ's";
 export const FEEDBACK = "Feedback";
 export const FOLLOW_US = "Follow us on @TGSRTCMDOFFICE";
@@ -87,6 +87,7 @@ export const RECOGNITION_URL = "https://www.asrtu.org/";
 export const RESERVATION_FAQ = "Reservations FAQ";
 export const RESERVATION_LABEL = "Reservations";
 export const RESERVATION_POINTS = "Reservations Points";
+export const RESERVATION_POINTS1 = "Reservation Points";
 export const RESERVATIONS = "Reservations";
 export const ROAD_SAFETY = "Road Safety";
 export const RT_CONTACTS = "Rates and Tariffs Contacts";
@@ -100,6 +101,8 @@ export const SENIOR_CITIZENS="Senior citizens";
 export const SITE_MAP = "Site Map";
 export const SPECIAL_BUS_TIMINGS = "Special Bus Timings";
 export const STUDENT_PASSES = "Student Passes";
+export const T20_TICKET=" T-24 ticket can be purchased at any time from any city bus conductor and is valid for next 24 hrs from the date and time of purchase of the ticket"
+export const TARIFFS="Tariffs of monthly season tickets:";
 export const SUPER_LUXURY_HEADING="Super Luxury";
 export const SUPER_LUXURY_PARA="The following facilities are available in Super Luxury Coaches:";
 export const TARNAKA_HOSPITAL_TAGLINE="Your Gateway to Quality Health Care";
@@ -117,7 +120,10 @@ export const TGSRTC_LOGISTICS_BUSINESS = "TGSRTC Logistics Business";
 export const TGSRTC_LOGISTICS_BUSINESS_PARA_1="TGSRTC As transportation of bulk goods demand has grown significantly in the state, we have moved towards Logistics sector bulk luggage through our separate Cargo Transport closed Vehicles which can carry up to 10 tones. We also transport Parcels and deliver at the quickest With Effect From 19.06.2020 services with 150 cargo bus were operated through private the task of freight management pricing.";
 export const TGSRTC_LOGISTICS_BUSINESS_PARA_2=" CARGO TRANSPORTVEHICLE TGSRTC LOGISTICS BUSINESS As transportation of bulk goods demand has grown significantly in the towards Logistics sector also with a view to transport bulk luggage through our separate Cargo Transport closed Vehicles which can and Courier the goods within and outside possible time. 19.06.2020 TGSRTC has introduced Parcel bus services. Earlier, the cargo and parcel were operated through private agencies. However, TGSRTC has now management under its brand with a highly As transportation of bulk goods demand has grown significantly in the view to transport bulk luggage through our separate Cargo Transport closed Vehicles which can outside the state and Cargo parcel services However, TGSRTC has now taken up competitive";
 export const TGSRTC_LOGISTICS="TGSRTC Logistics";
+export const TO_ATTRACT_MORE="To attract more long distance (250 Kms and more) passengers, free journey facility is extended on the strength of advance reservation ticket by city and district buses to the bus station (Journey origin point) and from bus station to in the peripheral areas. This facility is valid 2 Hrs before commencement of journey (to reach Bus Station) and 2 Hrs after arriving at the destination (to reach their dwelling place) where City Buses are under operation. i.e., Hyderabad & Warangal."
 export const TOURISM = "Tourism";
+export const TRAVEL_24HOURS = `"Travel-24(T-24)" tickets were introduced from 15.09.2016 with unlimited travel within the twin cities of Hyderabad/Secunderabad for 24 hrs. Tariff of Non AC ticket is priced at Rs.100/- by which passenger can travel in all types of city buses (except AC) within city limits and AC Travel-24 is priced at Rs.160/- to travel in all types of city buses including AC buses within city limits.`;
+export const TRAVEL="Travel-24(T-24) Tickets";
 export const TOURISM_OFFER_LINE="TGSRTC is happy to announce the following package tours to our valuable commuters at affordable rates.";
 export const TOURISM_PICKUP="Pickup - Alpha Hotel Secundarabad";
 export const TOURISM_QUOTE1='"Life is short and the world is wide"';
@@ -131,3 +137,6 @@ export const VIEW_DETAILS = "View Details";
 export const VIEW_MORE = "View More";
 export const WE_ARE_AVAILABLE = "We Are Available For You !";
 export const WHAT_SERVICE_HEADING="What Service We Provide";
+export const MONTHLY_SEASON_TCIKETS_HEADING="Monthly Season Tickets: (MST)";
+export const GUIDING_PRINCIPLE="Guiding Principles of TGSRTC";
+export const VALUE_ADDITION="Value addition given to MST holders";
