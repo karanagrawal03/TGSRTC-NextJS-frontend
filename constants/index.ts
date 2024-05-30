@@ -129,3 +129,6 @@ export const VIEW_DETAILS = "View Details";
 export const VIEW_MORE = "View More";
 export const WE_ARE_AVAILABLE = "We Are Available For You !";
 export const WHAT_SERVICE_HEADING="What Service We Provide";
+export const FAQ = "FAQ";
+export const FAQ_SUBTITLE = "Apply, Renew & Travel effortlessly with TGSRTC";
+export const FAQ_HEADING = "Frequently Asked Questions";
