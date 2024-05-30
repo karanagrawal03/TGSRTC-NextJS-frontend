@@ -8,7 +8,7 @@ const ReservationSpecialBusTiming1 = () => {
   return (
     <div className={styles.reservationSpecialBusTiming}>
       <img className={styles.busDust} alt="" src="/bus--dust@2x.png" />
-      <Header />
+      
       <img
         className={styles.reservationHeroSpeacialBus}
         loading="lazy"

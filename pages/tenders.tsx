@@ -8,7 +8,6 @@ import styles from "./tenders.module.css";
 const Tenders: NextPageTendersType = () => {
   return (
     <div className={styles.tenders}>
-      <Header />
       <section className={styles.tendersHero}>
         <img
           className={styles.tendersHeroChild}
