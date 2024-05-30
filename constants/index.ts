@@ -1,5 +1,4 @@
 //Need to follow alphabetical order with below mentioned notation
-
 export const ABOUT = "About";
 export const ABOUT_HOSPITAL="About Hospital";
 export const ABOUT_LOGISTICS = "About Logistics";
@@ -8,7 +7,7 @@ export const ABOUT_LOGISTICS_PARA_2_CONTENT="for contact details of Counters/Age
 export const ABOUT_LOGISTICS_PARA_2=" The consignors can approach the nearest bus station or counter and book their consignment for delivery at their desired location. The consignment will be transported through TGSRTC buses and delivered to the Bus Station/Counter at the destination as desired by the customer. The consignee has to collect the consignment from the Bus Station/Counter. Please visit"
 export const ABOUT_US = "About Us";
 export const APPLE_PLAY_STORE_URL ="https://apps.apple.com/us/app/tsrtc/id1201934852?ls=1";
-export const APPLY_AND_RENEW = "Apply, Renew & Travel effortlessly with TSRTC";
+export const APPLY_AND_RENEW = "Apply, Renew & Travel effortlessly with TGSRTC";
 export const APPLY_NOW = "Apply Now";
 export const BOOK_APPOINTMENT="Book Appointment";
 export const BOOK_NOW="Book Now";
@@ -24,6 +23,7 @@ export const CONTACT_US = "Contact us";
 export const CORPORATION = "The Corporation";
 export const DELIVERS_EXCELLENCE="Delivers excellence every mile !";
 export const DESTINATION="Destinations";
+export const DETAILS_OF_RESERVATION_POINTS="Details of Reservation Points"
 export const DOWNLOAD_OUR_APP = "Download our app";
 export const EVENTS_AWARDS = "Events & Awards";
 export const FACEBOOK_URL ="https://www.facebook.com/search/top?q=tsrtcmdoffice";
@@ -59,7 +59,7 @@ export const QUICKLINKS = "Quicklinks";
 export const RECOGNITION_URL = "https://www.asrtu.org/";
 export const RESERVATION_FAQ = "Reservations FAQ";
 export const RESERVATION_LABEL = "Reservations";
-export const RESERVATION_POINTS = "Reservations Points";
+export const RESERVATION_POINTS = "Reservation Points";
 export const RESERVATIONS = "Reservations";
 export const ROAD_SAFETY = "Road Safety";
 export const RT_CONTACTS = "Rates and Tariffs Contacts";
