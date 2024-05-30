@@ -85,6 +85,7 @@ a {
   --color-black: #000;
   --color-darkgray: rgba(169, 169, 169, 0.5);
   --color-gainsboro: #d9d9d9;
+  --color-liteGray:#C6C6C6;
   --color-silver: #c6c6c6;
 
   /* Spacing */
@@ -255,6 +256,7 @@ a {
   --padding-25xl: 44px;
   --padding-2xs-5: 10.5px;
   --padding-51xl: 51px;
+  --padding-66xl:66px;
   --padding-45xl: 45px;
 
   /* Border radiuses */
