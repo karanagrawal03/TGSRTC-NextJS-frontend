@@ -1,16 +1,16 @@
 import type { NextPage } from "next";
-import styles from "./hospital-t-s-r-t-c-tarnaka-hospita.module.css";
-import Header from "../components/header";
-import HospitalContact from "../components/hospital-contact";
-import HospitalServices from "../components/hospital-services";
-import Footer from "../components/footer";
-import { TARNAKA_HOSPITAL,TARNAKA_HOSPITAL_TAGLINE } from "../constants";
+import styles from "./index.module.css";
+import Header from "../../components/header";
+import { TARNAKA_HOSPITAL, TARNAKA_HOSPITAL_TAGLINE } from "../../constants";
+import HospitalServices from "../../components/hospital-services";
+import HospitalContact from "../../components/hospital-contact";
+import Footer from "../../components/footer";
+
 
 const HospitalTSRTCTarnakaHospita: NextPageHospitalTSRTCTarnakaHospitaType =
   () => {
     return (
       <div className={styles.hospitalTsrtcTarnakaHospita}>
-        <Header />
         <section className={styles.hospitalHero}>
           <img
             className={styles.maskGroupIcon}
@@ -35,7 +35,6 @@ const HospitalTSRTCTarnakaHospita: NextPageHospitalTSRTCTarnakaHospitaType =
         </section>
         <HospitalServices />
         <HospitalContact />
-        <Footer />
       </div>
     );
   };

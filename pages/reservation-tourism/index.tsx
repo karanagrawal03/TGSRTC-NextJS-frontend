@@ -1,15 +1,14 @@
 import type { NextPage } from "next";
-import styles from "./reservation-tourism.module.css";
-import ReservationHeroTourism from "../components/reservation-tourism";
-import ReservationDestinations from "../components/reservation-destinations";
-import Header from "../components/header";
-import Footer from "../components/footer";
-import { TRAVEL_ACROSS_TG,TOURISM_QUOTE1, TOURISM_QUOTE2 } from "../constants";
+import styles from "./index.module.css";
+import ReservationHeroTourism from "../../components/reservation-tourism";
+import ReservationDestinations from "../../components/reservation-destinations";
+import Header from "../../components/header";
+import Footer from "../../components/footer";
+import { TRAVEL_ACROSS_TG,TOURISM_QUOTE1, TOURISM_QUOTE2 } from "../../constants";
 
 const ReservationTourism: NextPageReservationTourismType = () => {
   return (
     <div className={styles.reservationTourism}>
-      <Header />
       <ReservationHeroTourism  />
       <section className={styles.content}>
         <img
@@ -31,7 +30,6 @@ const ReservationTourism: NextPageReservationTourismType = () => {
         </div>
       </section>
       <ReservationDestinations />
-      <Footer />
     </div>
   );
 };
