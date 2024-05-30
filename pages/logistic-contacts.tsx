@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import ReservationHeroTourism from "../components/reservation-hero-tourism";
+import ReservationHeroTourism from "../components/reservation-tourism";
 import LogisticTable from "../components/logistic-table";
 import styles from "./logistic-contacts.module.css";
 

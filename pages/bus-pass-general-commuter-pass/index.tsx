@@ -5,47 +5,58 @@ import {
   APPLY_AND_RENEW,
   GENERAL_COMMUTER_PASS,
   KNOW_MORE,
+  KNOW_MORE_ABOUT_GENERAL_PASSES,
+  KNOW_MORE_ABOUT_STUDENT_PASSES,
 } from "../../constants";
-import { generalCommuterPassData } from "../../constants/bus-pass-general-commuter-pass";
 import styles from "./index.module.css";
-const BusPassGeneralCommuterPass: NextPageBusPassGeneralCommuterPassType =
-  () => {
-    const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+import { generalBuspasses } from "../../constants/general-commuter-passes";
+const BusPassGeneralCommuterPass = () => {
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
-    const handleChange = (index: number) => {
-      setExpandedIndex((prevIndex) => (prevIndex === index ? null : index));
-    };
-    return (
-      <div className={styles.busPassGeneralCommuterPass}>
-        <Header />
-        <section className={styles.busPassesHeroGeneralCommut}>
-          <img className={styles.bgIcon} alt="" src="/bg@2x.png" />
-          <div className={styles.generalCommuterPassContainer}>
-            <p className={styles.general}>{GENERAL_COMMUTER_PASS}</p>
-            <p className={styles.applyRenew}>{APPLY_AND_RENEW}</p>
-          </div>
-        </section>
-        <section className={styles.busPassGeneralCommuterPass2}>
-          <h2 className={styles.knowMoreAboutContainer}>
-            <span className={styles.knowMoreAbout}>{KNOW_MORE}</span>
-            <b>{GENERAL_COMMUTER_PASS}</b>
-          </h2>
-          <div className={styles.eachAccordian}>
-            <ol className={styles.orderedList}>
-              {generalCommuterPassData.map((e, index) => (
-                <AccordionItem
-                  key={index}
-                  name={e.name}
-                  info={e.info}
-                  expanded={expandedIndex === index}
-                  onChange={() => handleChange(index)}
-                />
-              ))}
-            </ol>
-          </div>
-        </section>
-      </div>
-    );
+  const handleChange = (index: number) => {
+    setExpandedIndex((prevIndex) => (prevIndex === index ? null : index));
   };
+  return (
+    <div className={styles.busPassGeneralCommuterPass}>
+      <Header />
+      <section className={styles.busPassesHeroGeneralCommut}>
+        <img
+          className={styles.bgIcon}
+          alt=""
+          src="/bus-pass-general-webp.png"
+        />
+        <img
+          className={styles.bgIconMobile}
+          alt=""
+          src="/mobile-banner-general-passes.png"
+        />
+        <div className={styles.generalCommuterPassContainer}>
+          <p className={styles.general}>{GENERAL_COMMUTER_PASS}</p>
+          <p className={styles.applyRenew}>{APPLY_AND_RENEW}</p>
+        </div>
+      </section>
+      <section className={styles.busPassGeneralCommuterPass2}>
+      <div className={styles.knowMoreAboutStudentPassesWrapper}>
+          <h2 className={styles.knowMoreAbout}>
+            {KNOW_MORE_ABOUT_GENERAL_PASSES}
+          </h2>
+        </div>
+        <div className={styles.eachAccordian}>
+          <ol className={styles.orderedList}>
+            {generalBuspasses.map((e: any, index: number) => (
+              <AccordionItem
+                key={index}
+                name={e.name}
+                info={e.info}
+                expanded={expandedIndex === index}
+                onChange={() => handleChange(index)}
+              />
+            ))}
+          </ol>
+        </div>
+      </section>
+    </div>
+  );
+};
 
 export default BusPassGeneralCommuterPass;
