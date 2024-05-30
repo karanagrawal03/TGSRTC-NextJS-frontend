@@ -3,7 +3,9 @@ import Links from "../Links";
 import AccordiansHeading from "../accordians-heading";
 import BulletPoints from "../bullet-points";
 import Tables from "../tables";
+import Note from "../note";
 import TableHeading from "../table-headings";
+type typeOfTheObject = "link" | "heading" | "bullet points" | "table" | "note";
 
 interface DataItem {
   type: string;
@@ -20,6 +22,8 @@ const AccordianTab: React.FC<AccordianTabProps> = ({ array }) => {
       {array !== undefined &&
         array.map((item, index) => {
           switch (item.type) {
+          case "note":
+            return <Note text={item?.text || ""} />;
             case "link":
               return <Links key={index} text={item.text || ""} />;
             case "heading":

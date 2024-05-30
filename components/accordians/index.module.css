@@ -43,11 +43,29 @@
   padding: 0px 0px 0px var(--padding-5xl);
   margin-bottom: 0px;
 }
+@media screen and (max-width: 900px) {
+  .accordianTab {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+}
 @media screen and (max-width: 750px) {
   .accordianTab {
     margin-top: -15px;
     width: auto;
     background-color: #ffffff;
     padding: 0px 16px var(--padding-5xl) 38px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .accordianTab {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .accordianTab {
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }

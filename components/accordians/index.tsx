@@ -23,6 +23,8 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
   info,
   expanded,
   onChange,
+  accordionTabStyles="",
+  headingStyles="",
 }) => {
   return (
     <div className={styles.accordian}>
@@ -37,12 +39,12 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
           id="panel1-header"
           className={styles.before6AmContainer1}
         >
-          <li>{name}</li>
+          <li className={headingStyles}>{name}</li>
         </AccordionSummary>
       </Accordion>
       {expanded && (
         <AccordionDetails className={styles.accordianDetails}>
-          <div className={styles.accordianTab}>
+          <div className={`${styles.accordianTab} ${accordionTabStyles}`}>
             <AccordianTab array={info} />
           </div>
         </AccordionDetails>
