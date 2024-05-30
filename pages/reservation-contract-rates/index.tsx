@@ -1,13 +1,13 @@
 import type { NextPage } from "next";
-import ReservationHeroTourism from "../components/contract-rates-banner";
-import styles from "./reservation-bus-on-contract-ra.module.css";
-import Header from "../components/header";
-import Footer from "../components/footer";
-import ContractRatesTable1 from "../components/contract-rates-table1";
-import ContractRatesTable3 from "../components/contract-rates-table3";
-import ContractRatesTable2 from "../components/contract-rates-table2";
-import ContractRatesTable5 from "../components/contract-rates-table5";
-import ContractRatesTable4 from "../components/contract-rates-table4";
+import ReservationHeroTourism from "../../components/contract-rates-banner";
+import styles from "./index.module.css";
+import Header from "../../components/header";
+import Footer from "../../components/footer";
+import ContractRatesTable1 from "../../components/contract-rates-table1";
+import ContractRatesTable3 from "../../components/contract-rates-table3";
+import ContractRatesTable2 from "../../components/contract-rates-table2";
+import ContractRatesTable5 from "../../components/contract-rates-table5";
+import ContractRatesTable4 from "../../components/contract-rates-table4";
 
 const ReservationBusOnContractRa: NextPageReservationBusOnContractRaType =() => {
     return (

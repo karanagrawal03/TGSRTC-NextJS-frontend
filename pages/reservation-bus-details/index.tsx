@@ -12,7 +12,6 @@ import Footer from "../../components/footer";
 
 const ReservationBusDetails: NextPageReservationBusDetailsType = () => {
   return (<>
-      <Header/>
       <MainHeader />
     <div className={styles.reservationBusDetails}>
       <main className={styles.contentContainer}>
@@ -43,7 +42,6 @@ const ReservationBusDetails: NextPageReservationBusDetailsType = () => {
           <OtherCityServicesSection />
         </section>
       </main>
-     <Footer/>
     </div>
     </>
   );

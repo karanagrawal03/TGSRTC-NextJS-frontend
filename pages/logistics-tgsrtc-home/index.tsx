@@ -10,12 +10,10 @@ import Footer from "../../components/footer";
 const LogisticsTSRTCHome: NextPageLogisticsTSRTCHomeType = () => {
   return (
     <div className={styles.logisticsTsrtcHome}>
-     <Header />
       <FrameComponent7 />
       <MainContent />
       <ContentRight />
       <FrameComponent6 />
-      <Footer/>
     </div>
   );
 };
