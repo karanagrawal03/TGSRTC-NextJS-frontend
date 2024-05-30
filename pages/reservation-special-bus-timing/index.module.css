@@ -100,7 +100,6 @@
   justify-content: center;
 }
 
-
 .footer {
   align-self: stretch;
   padding: var(--padding-21xl) var(--padding-21xl) var(--padding-5xs);
@@ -123,8 +122,9 @@
   letter-spacing: normal;
 }
 .container {
-  margin: 80px 100px 100px 100px;
+  padding: 80px 100px 100px 100px;
   width: calc(100% - 200px);
+  background: #f2f2f2;
 }
 .headingText {
   font-family: var(--font-montserrat);
@@ -142,10 +142,10 @@
     gap: var(--gap-base);
   }
   .container {
-    margin: 100px 24px 60px 24px;
+    padding: 100px 24px 60px 24px;
     width: calc(100% - 48px);
   }
-  .headingText{
+  .headingText {
     margin-bottom: 24px;
   }
   .reservationMobile {
@@ -173,7 +173,7 @@
     display: none;
   }
   .container {
-    margin: 100px 24px 60px 24px;
+    padding: 100px 24px 60px 24px;
     width: calc(100% - 48px);
   }
   .bgIconMobile {
@@ -182,7 +182,7 @@
 }
 @media screen and (max-width: 599px) {
   .container {
-    margin: 100px 24px 60px 24px;
+    padding: 100px 24px 60px 24px;
     width: calc(100% - 48px);
   }
   .headingText {

@@ -112,7 +112,7 @@ const ReservationBusesTabs: React.FC = () => {
               "&.MuiTabs-root": {
                 width: "100%",
               },
-              marginTop:"24px"
+              marginTop: "24px",
             }}
           >
             {tabsData.map((tab, index) => (
@@ -132,11 +132,10 @@ const ReservationBusesTabs: React.FC = () => {
                   textColor: "#4D4D4D",
                   indicatorColor: "#4D4D4D",
                   ariaLabel: "secondary tabs example",
-                  marginTop:"-11px",
+                  marginTop: "-11px",
                   "&.Mui-selected": {
                     color: "#CD342B !important",
-                    fontWeight:700,
-                    
+                    fontWeight: 700,
                   },
                 }}
                 key={index}
@@ -160,6 +159,14 @@ const ReservationBusesTabs: React.FC = () => {
             id=""
             value={value}
             label=""
+            sx={{
+              borderRadius: "6px",
+              fontFamily: "var(--font-playfair-display)",
+              fontSize: 16,
+              fontWeight: 500,
+              backgroundColor:"#FFFFFF",
+              textAlign: "left",
+            }}
             onChange={handleSelectChange}
           >
             {tabsData.map((tab, index) => (
