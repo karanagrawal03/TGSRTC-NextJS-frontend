@@ -27,7 +27,6 @@
     display: flex;
     flex-direction: column;
     gap: 32px;
-    /* height: 455px; */
     box-sizing: border-box;
   
   }
