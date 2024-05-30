@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Header from "../components/header";
 import BodyTexts from "../components/body-texts";
-import FrameComponent from "../components/frame-component";
+import FrameComponent from "../components/contract-rates-table4";
 import FooterSection from "../components/footer-section";
 import RecognitionAndSocialMediaC from "../components/recognition-and-social-media-c";
 import styles from "./about-vision-legacy.module.css";

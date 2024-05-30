@@ -6,7 +6,7 @@
   box-sizing: border-box;
   overflow: hidden;
   position: relative;
-  max-width: 100%;
+  width: 100%;
   font-size: var(--font-size-53xl);
   color: var(--support-white);
   font-family: var(--font-playfair-display);
@@ -16,7 +16,6 @@
   width: 100%;
   height: auto;
   position: relative;
-  max-width: 100%;
   overflow: hidden;
   flex-shrink: 0;
   object-fit: cover;
@@ -24,7 +23,7 @@
 .bgIconMobile{
   display: none;
 }
-.tourismContentWrapper{
+.contentWrapper{
   position: absolute;
   top: 7.3vw;
   left: 7.3vw;
@@ -53,11 +52,10 @@
   display: inline-block;
   text-shadow: 0 2px 3px rgba(0, 0, 0, 0.8);
   max-width: 100%;
+  width: 599px;
 }
-
 @media screen and (max-width: 1023px) {
-  .tourismContentWrapper{
-    width: 400px;
+  .contentWrapper{
     top: 12vw;
     left: 7vw;
   }
@@ -66,20 +64,22 @@
     line-height: 68px;
   }
   .tgsrtcIsHappy {
+    width: 400px;
     font-size: var(--font-size-lgi);
     line-height: 28px;
   }
 }
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 720px) {
   .bgIcon{
     display: none;
   }
   .bgIconMobile{
     display: block;
   }
-  .tourismContentWrapper{
+}
+@media screen and (max-width: 599px) {
+  .contentWrapper{
     width: 237px;
-    top: 26.6vw;
     left: 6.4vw;
   }
   .tourism {
@@ -87,6 +87,7 @@
     line-height: 56px;
   }
   .tgsrtcIsHappy {
+    width: 237px;
     margin-top: 8px;
     font-size: var(--font-size-xl);
     line-height: 26px;
