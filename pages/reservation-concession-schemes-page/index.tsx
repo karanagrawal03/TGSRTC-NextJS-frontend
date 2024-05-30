@@ -11,7 +11,6 @@ const ReservationConcessionSchemes: any =
   
     return (
       <div className={styles.reservationConcessionSchemes}>
-        <Header />
           <section className={styles.reservationConcessionSchemesHeroContainer}>
             <img className={styles.reservationConcessionHeroImage} alt="reservation concession schemes hero image" src="/reservation-concession-schemes-hero-website.png" />
             <img className={styles.reservationConcessionHeroImageMobile} alt="reservation concession schemes hero image" src="/reservation-concession-schemes-hero-mobile.png" />
@@ -54,7 +53,6 @@ const ReservationConcessionSchemes: any =
             </div>
           </div>
         </section>
-        <Footer />
       </div>
     );
   };
