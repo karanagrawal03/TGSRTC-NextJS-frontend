@@ -37,7 +37,7 @@
   mix-blend-mode: normal;
 }
 .tourism {
-  font-size: var(  --font-size-53xl)  ;
+  font-size: var(--font-size-53xl);
   line-height: 82px;
   font-weight: 600;
   font-family: inherit;
@@ -147,8 +147,11 @@
     gap: var(--gap-base);
   }
   .container {
-    margin: 0px 24px 60px 24px;
+    margin: 100px 24px 60px 24px;
     width: calc(100% - 48px);
+  }
+  .headingText{
+    margin-bottom: 24px;
   }
   .reservationMobile {
     display: block;
@@ -161,12 +164,12 @@
     left: 7vw;
   }
   .tourism {
-    font-size: var( --font-size-42x);
+    font-size: var(--font-size-42x);
     line-height: 68px;
   }
   .tgsrtcIsHappy {
     width: 400px;
-    font-size: var( --font-size-16);
+    font-size: var(--font-size-16);
     line-height: 28px;
   }
 }
@@ -174,13 +177,17 @@
   .bgIcon {
     display: none;
   }
+  .container {
+    margin: 100px 24px 60px 24px;
+    width: calc(100% - 48px);
+  }
   .bgIconMobile {
     display: block;
   }
 }
 @media screen and (max-width: 599px) {
   .container {
-    margin: 0px 24px 60px 24px;
+    margin: 100px 24px 60px 24px;
     width: calc(100% - 48px);
   }
   .headingText {
@@ -198,7 +205,7 @@
     left: 6.4vw;
   }
   .tourism {
-    font-size: var( --font-size-42xl);
+    font-size: var(--font-size-42xl);
     line-height: 56px;
   }
   .tgsrtcIsHappy {
