@@ -1,10 +1,10 @@
-import MonthlySeasonTicketsTexts from "../../components/monthly-season-tickets-texts";
 import styles from "./index.module.css";
 import Header from "../../components/header";
 import Footer from "../../components/footer";
 import Tables from "../../components/tables/index";
 import { APPLY_AND_RENEW, CONCESSION_SCHEMES, FACILITY, T20_TICKET, TARIFFS, TO_ATTRACT_MORE, TRAVEL, TRAVEL_24HOURS } from "../../constants";
 import { columnWidths, monthlySeasonTicketsTable } from "../../constants/reservation-concession-schemes";
+import MonthlySeasonTicketsTexts from "../../components/monthlySeasonTicketsTexts";
 
 const ReservationConcessionSchemes: any =
   () => {
@@ -13,8 +13,7 @@ const ReservationConcessionSchemes: any =
       <div className={styles.reservationConcessionSchemes}>
         <Header />
           <section className={styles.reservationConcessionSchemesHeroContainer}>
-            <img className={styles.reservationConcessionHeroImage} alt="" src="/reservation-concession-schemes-hero-website.png"/>
-            <img className={styles.reservationConcessionHeroImageMobile} alt="" src="/reservation-concession-schemes-hero-mobile.png" />
+            <img className={styles.reservationConcessionHeroImageMobile} alt="reservation concession schemes hero image" src="/reservation-concession-schemes-hero-mobile.png" />
             <div className={styles.concessionSchemesTitle}>
                 <div className={styles.title}>{CONCESSION_SCHEMES}</div>
                 <div className={styles.applyRenew}

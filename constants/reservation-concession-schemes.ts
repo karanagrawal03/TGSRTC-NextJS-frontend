@@ -5,8 +5,8 @@ export const columnWidths={
     rateEXP: "659px",
   }
 export const monthlySeasonTicketsList = [
-    "Monthly Season Tickets are issued separately for Pallevelugu and Express types of buses by collecting 20 days fare for one month .",
-    "MSTs are issued up to 75 Kms with 5 Kms slabs.",
+    "Monthly Season Tickets are issued separately for Pallevelugu and Express types of buses by collecting 20 days fare for one month travel.",
+    "MSTs are issued upto 75 Kms with 5 Kms slabs.",
     "Passengers intending to travel from 76th km to 100th Km are facilitated to travel with a single slab tariff of 80 Kms fare."
     ,
     "There are no child tickets in MST category."

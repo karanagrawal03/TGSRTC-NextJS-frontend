@@ -1,6 +1,3 @@
-
-
-/* ------------------------------------------------------------------ */
 .reservationConcessionSchemes {
   width: 100%;
   position: relative;
@@ -13,34 +10,31 @@
   letter-spacing: normal;
 }
 
-.reservationConcessionSchemesHeroContainer{
+.reservationConcessionSchemesHeroContainer {
   width: 100%;
   align-self: stretch;
-  height: 675px;
+  height: 100%;
   position: relative;
   overflow: hidden;
   flex-shrink: 0;
 }
-.reservationConcessionHeroImage{
-  position: absolute;
-  top: -39px;
-  left: 0px;
+
+.reservationConcessionHeroImage {
   width: 100%;
-  height: 754px;
-  object-fit: contain;
+  height: 100%;
   display: block;
 }
-.reservationConcessionHeroImageMobile{
-  position: absolute;
-display: none;
-height: 458px;
-max-width: 599px;
-width: 100%;
+
+.reservationConcessionHeroImageMobile {
+  display: none;
+  height: 100%;
+  width: 100%;
 }
-.concessionSchemesTitle{
+
+.concessionSchemesTitle {
   position: absolute;
   top: 226px;
-  left:100px;
+  left: 100px;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
   z-index: 1;
   display: flex;
@@ -49,29 +43,30 @@ width: 100%;
 }
 
 
-.title{
+.title {
   font-size: var(--font-size-53xl);
   font-weight: 600;
   line-height: 82px;
   font-family: var(--font-playfair-display);
   color: var(--support-white);
 }
-.applyRenew{
+
+.applyRenew {
   font-size: var(--font-size-5xl);
   line-height: 32px;
   font-weight: 500;
   font-family: var(--font-montserrat);
   color: var(--support-white);
 }
+
 .facilityForLongDistancePasParent,
 .frameParent,
 .reservationConcessionSchemes1 {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  max-width: 1366px;
-  width: 100%;
 }
+
 .reservationConcessionSchemes1 {
   position: relative;
   align-self: stretch;
@@ -86,30 +81,34 @@ width: 100%;
   color: var(--primary-red);
   font-family: var(--font-playfair-display);
 }
-.teriffsOfMonthlySeasonTickets{
+
+.teriffsOfMonthlySeasonTickets {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: var(--gap-base);
 }
-.monthlySeasonTicketstableTitle{
-font-size: var(--font-size-sm);
-line-height: 26px;
-font-family: var(--font-montserrat);
-font-weight:600 ;
-color:var(--text-black) ;
-margin: 0px 80px;
+
+.monthlySeasonTicketstableTitle {
+  font-size: var(--font-size-sm);
+  line-height: 26px;
+  font-family: var(--font-montserrat);
+  font-weight: 600;
+  color: var(--text-black);
+  margin: 0px 80px;
 
 }
+
 .tableContainer {
   margin: 0px 80px !important;
 }
+
 .frameParent {
-  width: 1166px;
   align-items: flex-start;
   gap: var(--gap-81xl);
-  margin-top: 75px;
+  padding: var(--padding-57xl) var(--padding-61xl) 0px var(--padding-61xl);
 }
+
 .travel24t24TicketsParent {
   align-self: stretch;
   display: flex;
@@ -118,11 +117,18 @@ margin: 0px 80px;
   justify-content: flex-start;
   gap: var(--gap-xs);
 }
+
 .travel24t24Tickets {
   position: relative;
   font-weight: 600;
   mix-blend-mode: normal;
 }
+
+.imgWrapper {
+  width: 100%;
+  height: auto;
+}
+
 .travel24t24TicketsWereContainer {
   margin: 0;
   align-self: stretch;
@@ -132,16 +138,19 @@ margin: 0px 80px;
   font-family: var(--font-montserrat);
   color: var(--text-black);
 }
+
 .blankLine,
 .t24TicketCan,
 .travel24t24TicketsWere {
   display: block;
 }
+
 .facilityForLongDistancePasParent {
   align-self: stretch;
   align-items: flex-start;
   gap: var(--gap-xs);
 }
+
 .facilityForLong {
   margin: 0;
   position: relative;
@@ -162,6 +171,7 @@ margin: 0px 80px;
   font-family: var(--font-montserrat);
   color: var(--text-black);
 }
+
 .busDustWebsite {
   width: 128px;
   height: 780px;
@@ -183,13 +193,15 @@ margin: 0px 80px;
   height: 128px;
   width: 100%;
 }
-.tableHeadCell{
+
+.tableHeadCell {
   line-height: 17.07px !important;
   border-bottom-width: 0px !important;
   box-sizing: border-box !important;
   letter-spacing: normal !important;
 }
-.tableCell{
+
+.tableCell {
   font-family: var(--font-montserrat);
   font-size: var(--font-size-sm);
   font-weight: 400;
@@ -198,37 +210,110 @@ margin: 0px 80px;
   border-bottom-width: 0px !important;
   box-sizing: border-box !important;
   letter-spacing: unset !important;
-  padding-right: 15.5px !important;
+  padding-right: var(--padding-base-5) !important;
   width: 76px !important;
 }
-/* ------------------------------------------------------------------ */
-@media screen and (max-width:599px) {
-  /* .heroImage{
-    background-image: url("../../public/reservation-concession-schemes-mobile.png");
-    background-size: cover; 
-    background-position: center; 
-  } */
-  .concessionSchemesTitle{
-    top: 57.43px;
-    left: 23px;
+
+
+@media screen and (max-width:1023px) {
+  .concessionSchemesTitle {
+    top: 200px;
+  }
+
+  .title {
+    font-size: var(--font-size-39x);
+    line-height: 62px;
+  }
+
+  .applyRenew {
+    font-size: var(--font-size-lg);
+    line-height: 22px;
+  }
+
+  .reservationConcessionSchemes1 {
+    padding: var(--padding-61xl) var(--padding-xl) var(--padding-61xl);
+  }
+
+  .frameParent {
+    padding: var(--padding-66xl) var(--padding-61xl) 0px var(--padding-61xl);
+    gap: var(--gap-41xl)
+  }
+}
+
+@media screen and (max-width:840px) {
+  .busDustWebsite {
+    left: -24px
+  }
+
+  .tableContainer {
+    margin: 0px 40px !important;
+  }
+
+  .frameParent {
+    padding: var(--padding-21xl) var(--padding-21xl) 0px var(--padding-21xl);
+    gap: var(--gap-21xl);
+  }
+
+  .monthlySeasonTicketstableTitle {
+    margin: 0px 40px;
+  }
+
+  .concessionSchemesTitle {
+    top: 126px;
+    left: 20px;
 
   }
-  .title{
+
+
+  .title {
+    font-size: var(--font-size-13xl);
+    line-height: 42px;
+  }
+
+  .applyRenew {
+    font-size: var(--font-size-lg);
+    line-height: 26px;
+  }
+
+  .reservationConcessionSchemes1 {
+    padding: var(--padding-41xl) var(--padding-xl) var(--padding-41xl);
+  }
+}
+
+@media screen and (max-width:599px) {
+  .reservationConcessionHeroImage {
+    display: none;
+  }
+
+  .reservationConcessionHeroImageMobile {
+    display: block;
+  }
+
+  .concessionSchemesTitle {
+    top: 130px;
+    left: 23px;
+    width: 223px;
+  }
+
+  .title {
     font-family: Playfair Display;
-    font-size: 42px;
+    font-size: var(--font-size-42xl);
     font-weight: 600;
     line-height: 55.99px;
     text-align: left;
-    
+
+
   }
-  .applyRenew{
-    font-family: Montserrat;
-    font-size: 16px;
+
+  .applyRenew {
+    font-family: var(--font-montserrat);
+    font-size: var(--font-size-base);
     font-weight: 500;
     line-height: 26px;
     text-align: left;
-    
+
   }
+
   .busDustWebsite {
     display: none;
   }
@@ -238,117 +323,97 @@ margin: 0px 80px;
     height: 128px;
     width: 100%;
   }
-  .reservationConcessionSchemes1{
+
+  .reservationConcessionSchemes1 {
     padding: 0px;
     padding-top: 0px;
     gap: 0px;
   }
-}
 
-  /* Media query for screen widths 599px and below */
-@media (max-width: 599px) {
-  .heroImage {
-    height: 658px; 
-    width: 599px;
+  .teriffsOfMonthlySeasonTickets {
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
-  .reservationConcessionSchemesHeroContainer{
 
-    height: 658px; 
+  .monthlySeasonTicketstableTitle {
+    margin: 0px 24px;
   }
-}
 
-/* Media query for screen widths 480px and below */
-@media (max-width: 480px) {
-  .heroImage {
-    height: 558px; 
-    width: 480px;
-
+  .tableContainer {
+    margin: 0px 24px !important;
   }
-  .reservationConcessionSchemesHeroContainer{
-    height: 558px; 
+
+  .frameParent {
+    padding: 0px var(--padding-5xl) var(--padding-41xl) var(--padding-5xl);
+    gap: var(--gap-21xl)
   }
 }
 
-/* Media query for screen widths 360px and below */
-@media (max-width: 360px) {
-  .heroImage {
-    height: 458px; 
-    width: 360px;
-
-  }
-  .reservationConcessionSchemesHeroContainer{
-    height: 458px; 
-  }
-}
-/* ---------------------------------------------------------------------------------------- */
-
-
-
-@media screen and (max-width: 1275px) {
-  .tabContainer {
+@media screen and (max-width:430px) {
+  .reservationConcessionHeroImage {
     display: none;
   }
+
+  .reservationConcessionHeroImageMobile {
+    display: block;
+  }
+
+  .concessionSchemesTitle {
+    top: 57.43px;
+    left: 23px;
+    width: 237px;
+  }
+
+  .title {
+    font-family: var(--font-playfair-display);
+    font-size: var(--font-size-42xl);
+    font-weight: 600;
+    line-height: 55.99px;
+    text-align: left;
+
+
+  }
+
+  .applyRenew {
+    font-family: var(--font-montserrat);
+    font-size: var(--font-size-base);
+    font-weight: 500;
+    line-height: 26px;
+    text-align: left;
+
+  }
+
+  .busDustWebsite {
+    display: none;
+  }
+
+  .busDustMobile {
+    display: block;
+    height: 128px;
+    width: 100%;
+  }
+
+  .reservationConcessionSchemes1 {
+    padding: 0px;
+    padding-top: 0px;
+    gap: 0px;
+  }
+
+  .teriffsOfMonthlySeasonTickets {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .monthlySeasonTicketstableTitle {
+    margin: 0px 24px;
+  }
+
+  .tableContainer {
+    margin: 0px 24px !important;
+  }
+
   .frameParent {
-    gap: var(--gap-31xl);
-  }
-  .reservationConcessionSchemes1 {
-    padding-top: var(--padding-33xl);
-    padding-bottom: var(--padding-46xl);
-    box-sizing: border-box;
-  }
-}
-@media screen and (max-width: 1100px) {
-  .reservationConcessionSchemes1 {
-    padding-top: var(--padding-15xl);
-    padding-bottom: var(--padding-23xl);
-    box-sizing: border-box;
-  }
-  .linksContainer,
-  .logo {
-    flex: 1;
-  }
-  .footerSection,
-  .recognitionAndSocialMediaC {
-    flex-wrap: wrap;
-  }
-}
-@media screen and (max-width: 750px) {
-  .frameParent {
-    gap: var(--gap-6xl);
-  }
-  .reservationConcessionSchemes1 {
-    padding-top: var(--padding-3xl);
-    padding-bottom: var(--padding-8xl);
-    box-sizing: border-box;
-  }
-  .logo {
-    flex-wrap: wrap;
-  }
-  .linksContainer,
-  .logo {
-    min-width: 100%;
-  }
-  .socialMediaContainer {
-    flex-wrap: wrap;
-    gap: var(--gap-6xl);
-  }
-  .footer {
-    gap: var(--gap-base);
-  }
-}
-@media screen and (max-width: 450px) {
-  .facilityForLong,
-  .travel24t24Tickets {
-    font-size: var(--font-size-lgi);
-  }
-  .linksContainer,
-  .recognitionContainer {
-    flex-wrap: wrap;
-    gap: var(--gap-6xl);
-  }
-  .footer {
-    padding-top: var(--padding-7xl);
-    padding-bottom: var(--padding-xl);
-    box-sizing: border-box;
+    padding: 0px var(--padding-5xl) var(--padding-41xl) var(--padding-5xl);
+    gap: var(--gap-21xl)
   }
 }
