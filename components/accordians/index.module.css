@@ -2,6 +2,7 @@
 .accordian {
   padding-bottom: var(--padding-5xs);
   width: calc(100% - 25px);
+  
 }
 .studentConcessionalRoutePas {
   margin: 0;

@@ -203,7 +203,6 @@ export const busPassStudentPasses = [
           "Applicant can apply online at www.online.tsrtcpass.in",
         ],
       },
-      ,
     ],
   },
   {

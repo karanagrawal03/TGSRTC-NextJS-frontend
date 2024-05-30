@@ -1,7 +1,13 @@
 import { useState } from "react";
 import AccordionItem from "../../components/accordians";
 import Header from "../../components/header";
-import { APPLY_AND_RENEW, KNOW_MORE, OTHER_PASSES } from "../../constants";
+import {
+  APPLY_AND_RENEW,
+  KNOW_MORE,
+  KNOW_MORE_ABOUT_OTHER_PASSES,
+  KNOW_MORE_ABOUT_STUDENT_PASSES,
+  OTHER_PASSES,
+} from "../../constants";
 
 import { otherPasses } from "../../constants/other-passes";
 import styles from "./index.module.css";
@@ -28,8 +34,7 @@ const OtherPasses = () => {
       </section>
       <section className={styles.busPassGeneralCommuterPass2}>
         <h2 className={styles.knowMoreAboutContainer}>
-          <span className={styles.knowMoreAbout}>{KNOW_MORE}</span>
-          <b>{OTHER_PASSES}</b>
+          {KNOW_MORE_ABOUT_OTHER_PASSES}
         </h2>
         <div className={styles.eachAccordian}>
           <ol className={styles.orderedList}>

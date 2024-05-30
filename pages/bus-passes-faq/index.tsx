@@ -6,12 +6,14 @@ import {
   FAQS,
   GENERAL_COMMUTER_PASS,
   KNOW_MORE,
+  KNOW_MORE_ABOUT_FAQ,
+  KNOW_MORE_ABOUT_STUDENT_PASSES,
 } from "../../constants";
 
 // import { generalCommuterPassData } from "../../constants/bus-pass-general-commuter-pass";
 import styles from "./index.module.css";
 import { busPassStudentPasses } from "../../constants/bus-pass-student-passes";
-const BusPassesFaq: NextPageBusPassGeneralCommuterPassType = () => {
+const BusPassesFaq = () => {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
   const handleChange = (index: number) => {
@@ -30,8 +32,7 @@ const BusPassesFaq: NextPageBusPassGeneralCommuterPassType = () => {
       </section>
       <section className={styles.busPassGeneralCommuterPass2}>
         <h2 className={styles.knowMoreAboutContainer}>
-          <span className={styles.knowMoreAbout}>{KNOW_MORE}</span>
-          <b>{FAQS}</b>
+          {KNOW_MORE_ABOUT_FAQ}
         </h2>
         <div className={styles.eachAccordian}>
           <ol className={styles.orderedList}>
