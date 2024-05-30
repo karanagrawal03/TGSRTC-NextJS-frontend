@@ -62,6 +62,9 @@ const ReservationHeroLanding: NextPage<ReservationHeroLandingType> = ({
       <h2 className={styles.bookYourTickets} style={bookYourTicketsStyle}>
         {bookYourTicketsHassleFree}
       </h2>
+      <div className={styles.applyRenew} style={bookYourTicketsStyle}>
+      Apply, Renew & Travel effortlessly with TGSRTC
+      </div>
     </section>
   );
 };

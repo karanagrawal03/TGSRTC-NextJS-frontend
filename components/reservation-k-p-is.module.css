@@ -11,8 +11,8 @@
   debug_commit: bf4bc93;
 }
 .k {
-  align-self: stretch;
-  height: 100px;
+  /* align-self: stretch;
+  height: 100px; */
 }
 .busesRunning {
   min-width: 109px;
@@ -20,8 +20,8 @@
 .busesRunningWrapper,
 .kParent {
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
 }
 .busesRunningWrapper {
   flex-direction: row;
@@ -31,7 +31,7 @@
   color: var(--text-grey-body-text);
 }
 .kParent {
-  width: 120px;
+  /* width: 120px; */
   flex-direction: column;
 }
 .lineSeparatorIcon {
@@ -42,13 +42,17 @@
   object-fit: contain;
 }
 .lineSeparatorWrapper {
-  height: 107.5px;
+  /* height: 107.5px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
   padding: var(--padding-5xs-5) 0 0;
-  box-sizing: border-box;
+  box-sizing: border-box; */
+  width: 100px;
+  height: 1px;
+  transform: rotate(90deg);
+  background: linear-gradient(45deg, transparent, black, transparent);
 }
 .m {
   width: 23px;
@@ -88,7 +92,7 @@
   color: var(--text-grey-body-text);
   mix-blend-mode: normal;
   flex-shrink: 0;
-  debug_commit: bf4bc93;
+  text-align: center;
 }
 .frameParent {
   width: 197px;
@@ -158,31 +162,70 @@
 .reservationKpis {
   align-self: stretch;
   background-color: var(--support-white);
-  flex-direction: row;
-  justify-content: space-between;
-  padding: var(--padding-61xl) var(--padding-257xl);
-  gap: var(--gap-xl);
+  flex-direction: column;
+  padding: 79px var(--padding-257xl);
+  /* gap: 30px; */
   z-index: 1;
   text-align: left;
   font-size: var(--font-size-63xl);
   color: var(--primary-green);
   font-family: var(--font-montserrat);
+  display: flex;
+  align-items: center;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.busDustMobile {
+  display: none;
+}
+.container {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  gap: 30px;
 }
 @media screen and (max-width: 1275px) {
-  .reservationKpis {
-    flex-wrap: wrap;
+  .container {
+    /* padding-left: 90px;
+    padding-right: 90px; */
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 900px) {
+  .container {
+    /* padding-left: 90px;
+    padding-right: 50px; */
+    justify-content: space-between;
+  }
+  .k {
+    font-size: 46px;
+  }
+  .k1 {
+    font-size: 24px;
   }
 }
 @media screen and (max-width: 750px) {
   .k,
   .l,
   .m1 {
-    font-size: var(--font-size-19xl);
+    font-size: 46px;
   }
-  .reservationKpis {
-    padding-left: var(--padding-119xl);
-    padding-right: var(--padding-119xl);
+  .k1 {
+    font-size: 24px;
+  }
+  .container {
+    /* padding-left: var(--padding-119xl);
+    padding-right: var(--padding-119xl); */
     box-sizing: border-box;
+    flex-direction: column;
+  }
+  .lineSeparatorWrapper {
+    transform: rotate(0deg);
+  }
+}
+@media screen and (max-width: 599px) {
+  .busDustMobile {
+    display: block;
   }
 }
 @media screen and (max-width: 450px) {
@@ -197,8 +240,11 @@
     font-size: var(--font-size-10xl);
   }
   .reservationKpis {
-    padding-left: var(--padding-xl);
-    padding-right: var(--padding-xl);
+    /* padding-left: var(--padding-xl);
+    padding-right: var(--padding-xl); */
     box-sizing: border-box;
+  }
+  .customerSuppoprt{
+    font-size: 32px;
   }
 }

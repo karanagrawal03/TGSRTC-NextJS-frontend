@@ -10,6 +10,8 @@
     color: #ffffff;
     font-family: var(--font-montserrat);
     font-size: var(--font-size-sm);
+    line-height: 17.07px;
+    border-bottom-width: 0px;
   }
   .oddRow {
     background-color: #f7f7f7;
@@ -20,5 +22,5 @@
     font-weight: 400;
     line-height: 17.07px;
     text-align: left;
+    border-bottom-width: 0px;
   }
-  
