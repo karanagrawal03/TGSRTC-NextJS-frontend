@@ -8,12 +8,10 @@ import styles from "./index.module.css";
 const ReservationPoints = () => {
   return (
     <div className={styles.reservationPoints}>
-      <Header />
       <ReservationHeroConcessionSc />
       <section className={styles.reservationDetailsOfReservaParent}>
         <ReservationDetailsOfReserva />
       </section>
-      <Footer />
     </div>
   );
 };
