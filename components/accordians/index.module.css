@@ -46,6 +46,7 @@
   font-size: var(--font-size-sm);
   line-height: 26px;
   font-family: var(--font-montserrat);
+
 }
 @media screen and (max-width: 750px) {
   .accordianTab {
@@ -53,5 +54,24 @@
     width: auto;
     background-color: #ffffff;
     padding: 0px var(--padding-base) var(--padding-5xl) var(--padding-19xl);
+  }
+}
+@media screen and (max-width: 500px) {
+  .accordianTab {
+    padding-left: var(--padding-11xl);
+    padding-right: var(--padding-11xl);
+  }
+}
+@media screen and (max-width: 360px) {
+  .accordianTab {
+    padding-left: var(--padding-base);
+    padding-right: var(--padding-base);
+  }
+
+}
+@media screen and (max-width: 900px) {
+  .accordianTab {
+    padding-left: var(--padding-45xl);
+    padding-right: var(--padding-45xl);
   }
 }

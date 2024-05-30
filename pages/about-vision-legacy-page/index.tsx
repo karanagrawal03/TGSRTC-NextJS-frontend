@@ -8,7 +8,6 @@ import Footer from "../../components/footer";
 const AboutVisionLegacy: any = () => {
   return (
     <div className={styles.aboutVisionLegacy}>
-      <Header />
       <div className={styles.aboutHero}>
         <img className={styles.aboutHeroWebsite} alt="about-hero-image" src="/about-hero-website.png" loading="lazy"/>
         <img className={styles.aboutHeroMobile} alt="about-hero-image" src="/about-hero-mobile.png" loading="lazy"/>
@@ -72,7 +71,6 @@ const AboutVisionLegacy: any = () => {
           <img className={styles.legacyLetterMobile} alt="legacy-letter-mobile" src="/legacy-letter-mobile.png" loading="lazy"/>
         </div>
       </div>
-      <Footer/>
     </div>
   );
 };

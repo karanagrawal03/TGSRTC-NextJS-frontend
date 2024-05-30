@@ -18,6 +18,7 @@ interface AccordionItemProps {
   expanded: boolean;
   onChange: () => void;
   containerClassName?: string;
+  headingStyles?: string;
 }
 const AccordionItem: React.FC<AccordionItemProps> = ({
   name,
@@ -25,6 +26,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
   expanded,
   onChange,
   containerClassName,
+  headingStyles,
 }) => {
   return (
     <div className={styles.accordian}>
@@ -39,7 +41,9 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
           id="panel1-header"
           className={styles.before6AmContainer1}
         >
-          <li className={styles.accordianHeading}>{name}</li>
+          <li className={`${styles.accordianHeading} ${headingStyles}`}>
+            {name}
+          </li>
         </AccordionSummary>
       </Accordion>
       {expanded && (
