@@ -7,6 +7,17 @@ import AddIcon from "@mui/icons-material/Add";
 import HorizontalRuleIcon from "@mui/icons-material/HorizontalRule";
 import AccordianTab from "../accordian-tab";
 
+export interface DataItem {
+  type: string;
+  text?: string;
+  data?: string[] | { [key: string]: string | number }[];
+}
+interface AccordionItemProps {
+  name: string;
+  info: DataItem[];
+  expanded: boolean;
+  onChange: () => void;
+}
 const AccordionItem: React.FC<AccordionItemProps> = ({
   name,
   info,

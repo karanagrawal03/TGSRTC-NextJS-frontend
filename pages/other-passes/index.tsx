@@ -3,14 +3,15 @@ import AccordionItem from "../../components/accordians";
 import Header from "../../components/header";
 import {
   APPLY_AND_RENEW,
-  GENERAL_COMMUTER_PASS,
   KNOW_MORE,
-  KNOW_MORE_ABOUT_GENERAL_PASSES,
+  KNOW_MORE_ABOUT_OTHER_PASSES,
   KNOW_MORE_ABOUT_STUDENT_PASSES,
+  OTHER_PASSES,
 } from "../../constants";
+
+import { otherPasses } from "../../constants/other-passes";
 import styles from "./index.module.css";
-import { generalBuspasses } from "../../constants/general-commuter-passes";
-const BusPassGeneralCommuterPass = () => {
+const OtherPasses = () => {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
   const handleChange = (index: number) => {
@@ -20,30 +21,24 @@ const BusPassGeneralCommuterPass = () => {
     <div className={styles.busPassGeneralCommuterPass}>
       <Header />
       <section className={styles.busPassesHeroGeneralCommut}>
-        <img
-          className={styles.bgIcon}
-          alt=""
-          src="/bus-pass-general-webp.png"
-        />
+        <img className={styles.bgIcon} alt="" src="/other-pass-web.png" />
         <img
           className={styles.bgIconMobile}
           alt=""
-          src="/mobile-banner-general-passes.png"
+          src="/other-passes-mobil.png"
         />
         <div className={styles.generalCommuterPassContainer}>
-          <p className={styles.general}>{GENERAL_COMMUTER_PASS}</p>
+          <p className={styles.general}>{OTHER_PASSES}</p>
           <p className={styles.applyRenew}>{APPLY_AND_RENEW}</p>
         </div>
       </section>
       <section className={styles.busPassGeneralCommuterPass2}>
-      <div className={styles.knowMoreAboutStudentPassesWrapper}>
-          <h2 className={styles.knowMoreAbout}>
-            {KNOW_MORE_ABOUT_GENERAL_PASSES}
-          </h2>
-        </div>
+        <h2 className={styles.knowMoreAboutContainer}>
+          {KNOW_MORE_ABOUT_OTHER_PASSES}
+        </h2>
         <div className={styles.eachAccordian}>
           <ol className={styles.orderedList}>
-            {generalBuspasses.map((e: any, index: number) => (
+            {otherPasses.map((e, index) => (
               <AccordionItem
                 key={index}
                 name={e.name}
@@ -59,4 +54,4 @@ const BusPassGeneralCommuterPass = () => {
   );
 };
 
-export default BusPassGeneralCommuterPass;
+export default OtherPasses;

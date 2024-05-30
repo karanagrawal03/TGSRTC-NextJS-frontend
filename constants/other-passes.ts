@@ -1,4 +1,4 @@
-export const busPassStudentPasses = [
+export const otherPasses = [
   {
     name: "Student Free Bus Passes",
     info: [

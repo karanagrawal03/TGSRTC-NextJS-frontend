@@ -1,18 +1,15 @@
 import type { NextPage } from "next";
-import Header2 from "../components/header2";
+import Header from "../components/header";
 import ReservationHeroConcessionSc from "../components/reservation-hero-concession-sc";
 import ReservationDetailsOfReserva from "../components/reservation-details-of-reserva";
 import Footer from "../components/footer";
 import styles from "./reservation-points.module.css";
 
-const ReservationPoints: NextPageReservationPointsType = () => {
+const ReservationPoints = () => {
   return (
     <div className={styles.reservationPoints}>
       <img className={styles.busDust} alt="" src="/bus--dust@2x.png" />
-      <Header2
-        prop="/---1.svg"
-        tELANGANASTATEROADTRANSPO="/telangana-state-road-transport-corporation1.svg"
-      />
+      <Header />
       <ReservationHeroConcessionSc
         maskGroup="/mask-group@2x.png"
         concessionSchemes="Reservation Points"
