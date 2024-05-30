@@ -6,10 +6,9 @@ import {
   KNOW_MORE_ABOUT_STUDENT_PASSES,
   STUDENT_PASSES,
 } from "../../constants";
-import styles from "./index.module.css";
 import { busPassStudentPasses } from "../../constants/bus-pass-student-passes";
-import BulletPoints from "../../components/bullet-points";
-const BusPassStudentPasses: NextPageBusPassStudentPassesType = () => {
+import styles from "./index.module.css";
+const BusPassStudentPasses = () => {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
   const [width, setWidth] = useState<boolean>(false);
 

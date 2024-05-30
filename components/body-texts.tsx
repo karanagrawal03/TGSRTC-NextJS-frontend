@@ -9,7 +9,7 @@ export type BodyTextsType = {
 const BodyTexts: NextPage<BodyTextsType> = ({ className = "" }) => {
   return (
     <section className={[styles.bodyTexts, className].join(" ")}>
-      <BulletPointContainer
+      {/* <BulletPointContainer
         guidingPrinciplesOfTGSRTC="Corporate Philosophy"
         monthlySeasonTicketsAreIs="To provide safe, clean, comfortable, punctual and courteous commuter service at an economic fare."
         monthlySeasonTicketsAreIs1="To provide employee satisfaction in financial and humanistic terms."
@@ -37,7 +37,7 @@ const BodyTexts: NextPage<BodyTextsType> = ({ className = "" }) => {
         bulletPoint3={false}
         bulletPoint4={false}
         bulletPoint5={false}
-      />
+      /> */}
       <div className={styles.lineSeparater}>
         <img
           className={styles.lineSeparatorIcon}
@@ -45,7 +45,7 @@ const BodyTexts: NextPage<BodyTextsType> = ({ className = "" }) => {
           src="/line-separator4.svg"
         />
       </div>
-      <BulletPointContainer
+      {/* <BulletPointContainer
         guidingPrinciplesOfTGSRTC="Guiding Principles of TGSRTC"
         monthlySeasonTicketsAreIs="To provide efficient, effective, ethical management of the business."
         monthlySeasonTicketsAreIs1="To assist the State administration in attaining good governance."
@@ -110,7 +110,7 @@ const BodyTexts: NextPage<BodyTextsType> = ({ className = "" }) => {
         propMinHeight3="26px"
         propHeight3="unset"
         propMargin3="0"
-      />
+      /> */}
     </section>
   );
 };

@@ -3,14 +3,17 @@ import AccordionItem from "../../components/accordians";
 import Header from "../../components/header";
 import {
   APPLY_AND_RENEW,
+  FAQS,
   GENERAL_COMMUTER_PASS,
   KNOW_MORE,
-  KNOW_MORE_ABOUT_GENERAL_PASSES,
+  KNOW_MORE_ABOUT_FAQ,
   KNOW_MORE_ABOUT_STUDENT_PASSES,
 } from "../../constants";
+
+// import { generalCommuterPassData } from "../../constants/bus-pass-general-commuter-pass";
 import styles from "./index.module.css";
-import { generalBuspasses } from "../../constants/general-commuter-passes";
-const BusPassGeneralCommuterPass = () => {
+import { busPassStudentPasses } from "../../constants/bus-pass-student-passes";
+const BusPassesFaq = () => {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
   const handleChange = (index: number) => {
@@ -20,30 +23,20 @@ const BusPassGeneralCommuterPass = () => {
     <div className={styles.busPassGeneralCommuterPass}>
       <Header />
       <section className={styles.busPassesHeroGeneralCommut}>
-        <img
-          className={styles.bgIcon}
-          alt=""
-          src="/bus-pass-general-webp.png"
-        />
-        <img
-          className={styles.bgIconMobile}
-          alt=""
-          src="/mobile-banner-general-passes.png"
-        />
+        <img className={styles.bgIcon} alt="" src="/faq-bg.png" />
+        <img className={styles.bgIconMobile} alt="" src="/faq-mobile-bg.png" />
         <div className={styles.generalCommuterPassContainer}>
-          <p className={styles.general}>{GENERAL_COMMUTER_PASS}</p>
+          <p className={styles.general}>{FAQS}</p>
           <p className={styles.applyRenew}>{APPLY_AND_RENEW}</p>
         </div>
       </section>
       <section className={styles.busPassGeneralCommuterPass2}>
-      <div className={styles.knowMoreAboutStudentPassesWrapper}>
-          <h2 className={styles.knowMoreAbout}>
-            {KNOW_MORE_ABOUT_GENERAL_PASSES}
-          </h2>
-        </div>
+        <h2 className={styles.knowMoreAboutContainer}>
+          {KNOW_MORE_ABOUT_FAQ}
+        </h2>
         <div className={styles.eachAccordian}>
           <ol className={styles.orderedList}>
-            {generalBuspasses.map((e: any, index: number) => (
+            {busPassStudentPasses.map((e, index) => (
               <AccordionItem
                 key={index}
                 name={e.name}
@@ -59,4 +52,4 @@ const BusPassGeneralCommuterPass = () => {
   );
 };
 
-export default BusPassGeneralCommuterPass;
+export default BusPassesFaq;

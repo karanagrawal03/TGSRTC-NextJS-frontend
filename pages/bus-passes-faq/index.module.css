@@ -56,20 +56,12 @@
   color: var(--primary-red);
   font-family: var(--font-playfair-display);
 }
-.knowMoreAbout {
-  text-align: left;
-  font-size: var(--font-size-5xl);
-  display: flex;
-  gap: var(--gap-5xs);
-  color: var(--primary-red);
-  font-family: var(--font-playfair-display);
-}
 .orderedList {
   padding: 0px;
 }
 .busPassGeneralCommuterPass2 {
   background-color: var(--support-grey-bg);
-  padding: 100px 80px 100px 100px;
+  padding: 100px 100px 100px 100px;
   box-sizing: border-box;
   gap: var(--gap-13xl);
   width: 100%;
@@ -114,15 +106,15 @@
   .generalCommuterPassContainer {
     max-width: 185px;
   }
-  .knowMoreAbout {
-    font-size: var(--font-size-xl);
-  }
   .bgIcon {
     display: none;
   }
   .general {
     font-size: 42px;
     line-height: 55px;
+  }
+  .knowMoreAboutContainer {
+    font-size: var(--font-size-xl);
   }
   .bgIconMobile {
     display: block;

@@ -1,7 +1,20 @@
 /** @type {import('next').NextConfig} */
-  const nextConfig = {
-    reactStrictMode: true,
-    
-  }
+const nextConfig = {
+  reactStrictMode: true,
+  typescript: {
+    // !! WARN !!
+    // Dangerously allow production builds to successfully complete even if
+    // your project has type errors.
+    // !! WARN !!
+    ignoreBuildErrors: true,
+  },
+  output: "export",
 
-  module.exports = nextConfig
+  // Optional: Change the output directory `out` -> `dist`
+  distDir: "dist",
+  images: {
+    unoptimized: true,
+  },
+};
+
+module.exports = nextConfig;

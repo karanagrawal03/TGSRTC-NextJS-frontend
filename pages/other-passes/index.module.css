@@ -51,17 +51,9 @@
 .knowMoreAboutContainer {
   text-align: left;
   font-size: var(--font-size-5xl);
+  color: var(--primary-red);
   display: flex;
   gap: var(--gap-5xs);
-  color: var(--primary-red);
-  font-family: var(--font-playfair-display);
-}
-.knowMoreAbout {
-  text-align: left;
-  font-size: var(--font-size-5xl);
-  display: flex;
-  gap: var(--gap-5xs);
-  color: var(--primary-red);
   font-family: var(--font-playfair-display);
 }
 .orderedList {
@@ -69,7 +61,7 @@
 }
 .busPassGeneralCommuterPass2 {
   background-color: var(--support-grey-bg);
-  padding: 100px 80px 100px 100px;
+  padding: 100px 100px 100px 100px;
   box-sizing: border-box;
   gap: var(--gap-13xl);
   width: 100%;
@@ -114,9 +106,6 @@
   .generalCommuterPassContainer {
     max-width: 185px;
   }
-  .knowMoreAbout {
-    font-size: var(--font-size-xl);
-  }
   .bgIcon {
     display: none;
   }
@@ -134,6 +123,9 @@
   .applyRenew {
     font-size: var(--font-size-16);
     line-height: 26px;
+  }
+  .knowMoreAboutContainer {
+    font-size: var(--font-size-xl);
   }
   .busPassesHeroGeneralCommut {
     box-sizing: border-box;
