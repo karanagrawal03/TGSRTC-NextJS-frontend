@@ -1,4 +1,3 @@
-
 //Need to follow alphabetical order with below mentioned notation
 export const ABOUT = "About";
 export const ABOUT_HOSPITAL="About Hospital";
@@ -28,6 +27,7 @@ export const CORPORATION = "The Corporation";
 export const DELIVERS_EXCELLENCE="Delivers excellence every mile !";
 export const DETAILS_RESERVATION_POINTS="Details of Reservation Points"
 export const DESTINATION="Destinations";
+export const DETAILS_OF_RESERVATION_POINTS="Details of Reservation Points"
 export const DOWNLOAD_OUR_APP = "Download our app";
 export const Electric_BUSES_PARA=" The following facilities are available in Electric Buses and specially operated to RGI Airport."
 export const Electric_BUSES= "Electric Buses";
@@ -140,3 +140,6 @@ export const VIEW_DETAILS = "View Details";
 export const VIEW_MORE = "View More";
 export const WE_ARE_AVAILABLE = "We Are Available For You !";
 export const WHAT_SERVICE_HEADING="What Service We Provide";
+export const FAQ = "FAQ";
+export const FAQ_SUBTITLE = "Apply, Renew & Travel effortlessly with TGSRTC";
+export const FAQ_HEADING = "Frequently Asked Questions";

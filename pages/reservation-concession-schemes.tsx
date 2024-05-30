@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import ReservationHeroConcessionSc from "../components/reservation-hero-concession-sc";
+import ReservationHeroConcessionSc from "../components/reservation-points-banner";
 import MonthlySeasonTicketsTexts from "../components/monthly-season-tickets-texts";
 import FrameComponent2 from "../components/frame-component2";
 import styles from "./reservation-concession-schemes.module.css";
