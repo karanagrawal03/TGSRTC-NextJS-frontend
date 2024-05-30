@@ -13,6 +13,7 @@ const ReservationConcessionSchemes: any =
       <div className={styles.reservationConcessionSchemes}>
         <Header />
           <section className={styles.reservationConcessionSchemesHeroContainer}>
+            <img className={styles.reservationConcessionHeroImage} alt="reservation concession schemes hero image" src="/reservation-concession-schemes-hero-website.png" />
             <img className={styles.reservationConcessionHeroImageMobile} alt="reservation concession schemes hero image" src="/reservation-concession-schemes-hero-mobile.png" />
             <div className={styles.concessionSchemesTitle}>
                 <div className={styles.title}>{CONCESSION_SCHEMES}</div>
