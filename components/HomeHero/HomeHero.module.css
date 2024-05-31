@@ -1,0 +1,34 @@
+.tgsrtcServing {
+  width: 700px;
+  font-size: var(--font-size-63xl);
+  line-height: 100px;
+  font-weight: 600;
+  font-family: var(--font-playfair-display);
+  color: var(--primary-green);
+  text-align: center;
+}
+
+@media screen and (max-width: 750px) {
+  .tgsrtcServing {
+    font-size: 48px;
+    width: 319px;
+  }
+}
+
+.homeHero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 675px;
+  overflow: hidden;
+  flex-direction: row;
+  max-width: 100%;
+  text-align: center;
+  font-size: var(--font-size-63xl);
+  color: var(--primary-green);
+  font-family: var(--font-playfair-display);
+  background-image: url("/hero-image.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
