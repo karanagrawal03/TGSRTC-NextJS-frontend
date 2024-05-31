@@ -36,7 +36,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   gap: var(--gap-13xl);
   max-width: 100%;
 }
@@ -106,7 +106,7 @@
   }
   .contentRight {
     padding: unset;
-    padding-bottom: var(--padding-23xl);
+    padding-bottom: var(--padding-21xl);
     box-sizing: border-box;
   }
   .logisticAboutTexts{
