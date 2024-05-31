@@ -6,7 +6,7 @@ import styles from "./reservation-special-bus-timing2.module.css";
 const ReservationSpecialBusTiming2 = () => {
   return (
     <div className={styles.reservationSpecialBusTiming}>
-      <Header />
+      
       <img
         className={styles.reservationHeroSpeacialBus}
         alt=""

@@ -107,7 +107,7 @@
     box-sizing: border-box;
   }
   .busPassGeneralCommuterPass2 {
-    padding: 0 24px 0 24px;
+    padding: 0 var(--padding-5xl) var( --padding-60 ) var(--padding-5xl);
   }
 }
 @media screen and (max-width: 750px) {
@@ -139,6 +139,6 @@
     box-sizing: border-box;
   }
   .busPassGeneralCommuterPass2 {
-    padding: 0 24px 0 24px;
+    padding: 0 var(--padding-5xl) var( --padding-60 ) var(--padding-5xl);
   }
 }

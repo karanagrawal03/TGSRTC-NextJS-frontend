@@ -29,7 +29,31 @@ import {
   LEADERSHIP,
   TENDERS,
   TGSRTC_HOSPITAL,
-  BUS_PASSES
+  BUS_PASSES,
+  RESERVATIONS_LINK,
+  RESERVATIONS_TOURISM_LINK,
+  RESERVATIONS_CONTRACT_LINK,
+  LOGISTICS_LINK,
+  RESERVATIONS_BUS_LINK,
+  RESERVATIONS_FAQ_LINK,
+  RESERVATIONS_SPL_BUS_LINK,
+  RESERVATIONS_POINTS_LINK,
+  RESERVATIONS_CONCESSION_LINK,
+  LOGISTICS_CONTACTS_LINK,
+  LOGISTICS_RATES_LINK,
+  BUS_PASS_LINK,
+  BUS_PASS_GENERAL_LINK,
+  BUS_PASS_STUDENT_LINK,
+  BUS_PASS_OTHER_LINK,
+  BUS_PASS_FAQ_LINK,
+  ABOUT_LINK,
+  ABOUT_IT_LINK,
+  ABOUT_LEADERSHIP_LINK,
+  ABOUT_CORPORATION_LINK,
+  ABOUT_EVENTS_LINK,
+  TENDERS_LINK,
+  HOSPITAL_LINK,
+  CONTACT_US_LINK
 } from '../constants';
 
 export type HeaderType = {
@@ -62,7 +86,6 @@ const Header: NextPage<HeaderType> = ({ className = '' }) => {
     }
   };
 
-
   useEffect(() => {
     if (typeof window !== 'undefined') {
       window.addEventListener('scroll', flotingHeader);
@@ -89,8 +112,6 @@ const Header: NextPage<HeaderType> = ({ className = '' }) => {
   const closeMenu = () => {
     setMenuOpen(false);
   };
-
-
 
   return (
     <header className={`${styles.header} ${className} ${showHeader ? '' : styles.headerHidden}`}>
@@ -137,136 +158,134 @@ const Header: NextPage<HeaderType> = ({ className = '' }) => {
           </Link>
         </div>
         <div className={styles.headerTabLink}>
-          <Link href="/reservation-booking-service-ho" className={isActive('/reservation-booking-service-ho') ? styles.activeTab : styles.navTabs}>
+          <Link href={RESERVATIONS_LINK} className={isActive(RESERVATIONS_LINK) ? styles.activeTab : styles.navTabs}>
             <span className={styles.reservations}>{RESERVATION_LABEL}</span>
           </Link>
           <ul className={styles.dropdownMenu}>
             <li className={styles.headerListItemLink}>
-              <Link href="/reservation-tourism" className={isActive('/reservation-tourism') ? '' : ''}>
+              <Link href={RESERVATIONS_TOURISM_LINK} className={isActive(RESERVATIONS_TOURISM_LINK) ? '' : ''}>
                 <span className={styles.dropdownItem}>{TOURISM}</span>
               </Link>
             </li>
             <li className={styles.headerListItemLink}>
-              <Link href="/reservation-contract-rates" className={isActive('/reservation-contract-rates') ? styles.listItem : styles.listItem}>
+              <Link href={RESERVATIONS_CONTRACT_LINK} className={isActive(RESERVATIONS_CONTRACT_LINK) ? styles.listItem : styles.listItem}>
                 <span className={styles.dropdownItem}>{BUS_CONTRACT_RATES}</span>
               </Link>
             </li>
             <li className={styles.headerListItemLink}>
-              <Link href="/" className={isActive('/') ? styles.listItem : styles.listItem}>
+              <Link href={RESERVATIONS_CONCESSION_LINK} className={isActive(RESERVATIONS_CONCESSION_LINK) ? styles.listItem : styles.listItem}>
                 <span className={styles.dropdownItem}>{CONCESSION_SCHEMES}</span>
               </Link>
             </li>
             <li className={styles.headerListItemLink}>
-              <Link href="/" className={isActive('/') ? styles.listItem : styles.listItem}>
+              <Link href={RESERVATIONS_POINTS_LINK} className={isActive(RESERVATIONS_POINTS_LINK) ? styles.listItem : styles.listItem}>
                 <span className={styles.dropdownItem}>{RESERVATION_POINTS}</span>
               </Link>
             </li>
             <li className={styles.headerListItemLink}>
-              <Link href="/" className={isActive('/') ? styles.listItem : styles.listItem}>
+              <Link href={RESERVATIONS_SPL_BUS_LINK} className={isActive(RESERVATIONS_SPL_BUS_LINK) ? styles.listItem : styles.listItem}>
                 <span className={styles.dropdownItem}>{SPECIAL_BUS_TIMINGS}</span>
               </Link>
             </li>
             <li className={styles.headerListItemLink}>
-              <Link href="/" className={isActive('/') ? styles.listItem : styles.listItem}>
+              <Link href={RESERVATIONS_FAQ_LINK} className={isActive(RESERVATIONS_FAQ_LINK) ? styles.listItem : styles.listItem}>
                 <span className={styles.dropdownItem}>{RESERVATION_FAQ}</span>
               </Link>
             </li>
             <li className={styles.headerListItemLink}>
-              <Link href="/reservation-bus-details" className={isActive('/reservation-bus-details') ? styles.listItem : styles.listItem}>
+              <Link href={RESERVATIONS_BUS_LINK} className={isActive(RESERVATIONS_BUS_LINK) ? styles.listItem : styles.listItem}>
                 <span className={styles.dropdownItem}>{BUS_DETAILS}</span>
               </Link>
             </li>
           </ul>
         </div>
         <div className={styles.headerTabLink}>
-          <Link href="/logistics-tgsrtc-home" className={isActive('/logistics-tgsrtc-home') ? styles.activeTab : styles.navTabs}>
+          <Link href={LOGISTICS_LINK} className={isActive(LOGISTICS_LINK) ? styles.activeTab : styles.navTabs}>
             <span className={styles.reservations}>{LOGISTICS}</span>
           </Link>
           <ul className={styles.dropdownMenu}>
             <li className={styles.headerListItemLink}>
-              <Link href="/" className={isActive('/') ? styles.listItem : styles.listItem}>
+              <Link href={LOGISTICS_CONTACTS_LINK} className={isActive(LOGISTICS_CONTACTS_LINK) ? styles.listItem : styles.listItem}>
                 <span className={styles.dropdownItem}>{LOGISTICS_CONTACTS}</span>
               </Link>
             </li>
             <li className={styles.headerListItemLink}>
-              <Link href="/" className={isActive('/') ? styles.listItem : styles.listItem}>
+              <Link href={LOGISTICS_RATES_LINK} className={isActive(LOGISTICS_RATES_LINK) ? styles.listItem : styles.listItem}>
                 <span className={styles.dropdownItem}>{RT_CONTACTS}</span>
               </Link>
             </li>
           </ul>
         </div>
         <div className={styles.headerTabLink}>
-          <Link href="/bus-pass-services" className={isActive('/bus-pass-services') ? styles.activeTab : styles.navTabs}>
+          <Link href={BUS_PASS_LINK} className={isActive(BUS_PASS_LINK) ? styles.activeTab : styles.navTabs}>
             <span className={styles.reservations}>{BUS_PASSES}</span>
           </Link>
           <ul className={styles.dropdownMenu}>
             <li className={styles.headerListItemLink}>
-              <Link href="/" className={isActive('/') ? styles.listItem : styles.listItem}>
+              <Link href={BUS_PASS_STUDENT_LINK} className={isActive(BUS_PASS_STUDENT_LINK) ? styles.listItem : styles.listItem}>
                 <span className={styles.dropdownItem}>{STUDENT_PASSES}</span>
               </Link>
             </li>
             <li className={styles.headerListItemLink}>
-              <Link href="/" className={isActive('/') ? styles.listItem : styles.listItem}>
+              <Link href={BUS_PASS_GENERAL_LINK} className={isActive(BUS_PASS_GENERAL_LINK) ? styles.listItem : styles.listItem}>
                 <span className={styles.dropdownItem}>{GENERAL_PASS}</span>
               </Link>
             </li>
             <li className={styles.headerListItemLink}>
-              <Link href="/other-passes" className={isActive('/other-passes') ? styles.listItem : styles.listItem}>
+              <Link href={BUS_PASS_OTHER_LINK} className={isActive(BUS_PASS_OTHER_LINK) ? styles.listItem : styles.listItem}>
                 <span className={styles.dropdownItem}>{OTHER_PASSES}</span>
               </Link>
             </li>
             <li className={styles.headerListItemLink}>
-              <Link href="/" className={isActive('/') ? styles.listItem : styles.listItem}>
+              <Link href={BUS_PASS_FAQ_LINK} className={isActive(BUS_PASS_FAQ_LINK) ? styles.listItem : styles.listItem}>
                 <span className={styles.dropdownItem}>{LOGISTICS_FAQ}</span>
               </Link>
             </li>
           </ul>
         </div>
         <div className={styles.headerTabLink}>
-          <Link href="/about-vision-legacy-page" className={isActive('/about-vision-legacy-page') ? styles.activeTab : styles.navTabs}>
+          <Link href={ABOUT_LINK} className={isActive(ABOUT_LINK) ? styles.activeTab : styles.navTabs}>
             <span className={styles.reservations}>{ABOUT}</span>
           </Link>
           <ul className={styles.dropdownMenu}>
             <li className={styles.headerListItemLink}>
-              <Link href="/" className={isActive('/') ? styles.listItem : styles.listItem}>
+              <Link href={ABOUT_IT_LINK} className={isActive(ABOUT_IT_LINK) ? styles.listItem : styles.listItem}>
                 <span className={styles.dropdownItem}>{IT_INITIATIVES}</span>
               </Link>
             </li>
             <li className={styles.headerListItemLink}>
-              <Link href="/" className={isActive('/') ? styles.listItem : styles.listItem}>
+              <Link href={ABOUT_LEADERSHIP_LINK} className={isActive(ABOUT_LEADERSHIP_LINK) ? styles.listItem : styles.listItem}>
                 <span className={styles.dropdownItem}>{LEADERSHIP}</span>
               </Link>
             </li>
             <li className={styles.headerListItemLink}>
-              <Link href="/" className={isActive('/') ? styles.listItem : styles.listItem}>
+              <Link href={ABOUT_CORPORATION_LINK} className={isActive(ABOUT_CORPORATION_LINK) ? styles.listItem : styles.listItem}>
                 <span className={styles.dropdownItem}>{CORPORATION}</span>
               </Link>
             </li>
             <li className={styles.headerListItemLink}>
-              <Link href="/" className={isActive('/') ? styles.listItem : styles.listItem}>
+              <Link href={ABOUT_EVENTS_LINK} className={isActive(ABOUT_EVENTS_LINK) ? styles.listItem : styles.listItem}>
                 <span className={styles.dropdownItem}>{EVENTS_AWARDS}</span>
               </Link>
             </li>
           </ul>
         </div>
         <div className={styles.headerTabLink}>
-          <Link href="/tenders" className={isActive('/tenders') ? styles.activeTab : styles.navTabs}>
+          <Link href={TENDERS_LINK} className={isActive(TENDERS_LINK) ? styles.activeTab : styles.navTabs}>
             <span className={styles.reservations}>{TENDERS}</span>
           </Link>
         </div>
         <div className={styles.headerTabLink}>
-          <Link href="/tarnaka-hospital" className={isActive('/tarnaka-hospital') ? styles.activeTab : styles.navTabs}>
+          <Link href={HOSPITAL_LINK} className={isActive(HOSPITAL_LINK) ? styles.activeTab : styles.navTabs}>
             <span className={styles.reservations}>{TGSRTC_HOSPITAL}</span>
           </Link>
         </div>
         <div className={styles.headerTabLink}>
-          <Link href="/contact-us" className={isActive('/contact-us') ? styles.activeTab : styles.navTabs}>
+          <Link href={CONTACT_US_LINK} className={isActive(CONTACT_US_LINK) ? styles.activeTab : styles.navTabs}>
             <span className={styles.reservations}>{CONTACT_US}</span>
           </Link>
         </div>
       </div>
-
-
 
 
       <div className={styles.headerMobileIconSection} onClick={toggleMenu}>
@@ -299,62 +318,60 @@ const Header: NextPage<HeaderType> = ({ className = '' }) => {
                 </Link>
               </div>
               <div className={styles.headerTabLink}>
-                <Link href="/reservation-booking-service-ho" className={isActive('/reservation-booking-service-ho') ? styles.activeTab : styles.navTabs}>
+                <Link href={RESERVATIONS_LINK} className={isActive(RESERVATIONS_LINK) ? styles.activeTab : styles.navTabs}>
                   <span className={styles.reservations1}>{RESERVATION_LABEL}</span>
                 </Link>
               </div>
               <div className={styles.headerTabLink}>
-                <Link href="/reservation-tourism" className={isActive('/reservation-tourism') ? styles.activeTab : styles.navTabs}>
+                <Link href={RESERVATIONS_TOURISM_LINK} className={isActive(RESERVATIONS_TOURISM_LINK) ? styles.activeTab : styles.navTabs}>
                   <span className={styles.reservations1}>{TOURISM}</span>
                 </Link>
               </div>
               <div className={styles.headerTabLink}>
-                <Link href="/reservation-contract-rates" className={isActive('/reservation-contract-rates') ? styles.activeTab : styles.navTabs}>
+                <Link href={RESERVATIONS_CONTRACT_LINK} className={isActive(RESERVATIONS_CONTRACT_LINK) ? styles.activeTab : styles.navTabs}>
                   <span className={styles.reservations1}>{BUS_CONTRACT_RATES}</span>
                 </Link>
               </div>
               <div className={styles.headerTabLink}>
-                <Link href="/reservation-bus-details" className={isActive('/reservation-bus-details') ? styles.activeTab : styles.navTabs}>
+                <Link href={RESERVATIONS_BUS_LINK} className={isActive(RESERVATIONS_BUS_LINK) ? styles.activeTab : styles.navTabs}>
                   <span className={styles.reservations1}>{BUS_DETAILS}</span>
                 </Link>
               </div>
               <div className={styles.headerTabLink}>
-                <Link href="/logistics-tgsrtc-home" className={isActive('/logistics-tgsrtc-home') ? styles.activeTab : styles.navTabs}>
+                <Link href={LOGISTICS_LINK} className={isActive(LOGISTICS_LINK) ? styles.activeTab : styles.navTabs}>
                   <span className={styles.reservations1}>{LOGISTICS}</span>
                 </Link>
               </div>
               <div className={styles.headerTabLink}>
-                <Link href="/bus-pass-services" className={isActive('/bus-pass-services') ? styles.activeTab : styles.navTabs}>
+                <Link href={BUS_PASS_LINK} className={isActive(BUS_PASS_LINK) ? styles.activeTab : styles.navTabs}>
                   <span className={styles.reservations1}>{BUS_PASSES}</span>
                 </Link>
               </div>
               <div className={styles.headerTabLink}>
-                <Link href="/other-passes" className={isActive('/other-passes') ? styles.activeTab : styles.navTabs}>
+                <Link href={BUS_PASS_OTHER_LINK} className={isActive(BUS_PASS_OTHER_LINK) ? styles.activeTab : styles.navTabs}>
                   <span className={styles.reservations1}>{OTHER_PASSES}</span>
                 </Link>
               </div>
               <div className={styles.headerTabLink}>
-                <Link href="/about-vision-legacy-page" className={isActive('/about-vision-legacy-page') ? styles.activeTab : styles.navTabs}>
+                <Link href={ABOUT_LINK} className={isActive(ABOUT_LINK) ? styles.activeTab : styles.navTabs}>
                   <span className={styles.reservations1}>{ABOUT}</span>
                 </Link>
               </div>
               <div className={styles.headerTabLink}>
-                <Link href="/tenders" className={isActive('/tenders') ? styles.activeTab : styles.navTabs}>
+                <Link href={TENDERS_LINK} className={isActive(TENDERS_LINK) ? styles.activeTab : styles.navTabs}>
                   <span className={styles.reservations1}>{TENDERS}</span>
                 </Link>
               </div>
               <div className={styles.headerTabLink}>
-                <Link href="/tarnaka-hospital" className={isActive('/tarnaka-hospital') ? styles.activeTab : styles.navTabs}>
+                <Link href={HOSPITAL_LINK} className={isActive(HOSPITAL_LINK) ? styles.activeTab : styles.navTabs}>
                   <span className={styles.reservations1}>{TGSRTC_HOSPITAL}</span>
                 </Link>
               </div>
               <div className={styles.headerTabLink}>
-                <Link href="/contact-us" className={isActive('/contact-us') ? styles.activeTab : styles.navTabs}>
+                <Link href={CONTACT_US_LINK} className={isActive(CONTACT_US_LINK) ? styles.activeTab : styles.navTabs}>
                   <span className={styles.reservations1}>{CONTACT_US}</span>
                 </Link>
               </div>
-           
-            
             </div>
           </>
         }

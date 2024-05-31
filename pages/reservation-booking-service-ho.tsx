@@ -9,7 +9,6 @@ import styles from "./reservation-booking-service-ho.module.css";
 const ReservationBookingServiceHo = () => {
   return (
     <div className={styles.reservationBookingServiceHo}>
-      <Header />
       <ReservationHeroLanding
         maskGroup="/mask-group@2x.png"
         tGSRTCOnlineBusTicket="TGSRTC Online Bus ticket"

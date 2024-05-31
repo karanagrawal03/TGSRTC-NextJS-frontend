@@ -142,7 +142,6 @@
   display: flex;
   flex-direction: column;
   gap: var(--gap-5xs);
-
 }
 
 .before6AmContainer1 {
@@ -647,7 +646,7 @@
     box-sizing: border-box;
   }
 }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1023px) {
   .busPassStudentPasses1 {
     padding-top: var(--padding-15xl);
     padding-bottom: var(--padding-23xl);
@@ -660,6 +659,9 @@
   .footerSection,
   .recognitionAndSocialMediaC {
     flex-wrap: wrap;
+  }
+  .knowMoreAbout {
+    font-size: var(--font-size-xl);
   }
 }
 @media screen and (max-width: 750px) {
@@ -695,6 +697,12 @@
     top: 58.6vw;
     left: 6.3vw;
   }
+  .knowMoreAbout {
+    font-size: var(--font-size-xl);
+  }
+  .busPassGeneralCommuterPass2 {
+    padding: 0 var(--padding-5xl) var( --padding-60 ) var(--padding-5xl);
+  }
 }
 @media screen and (max-width: 599px) {
   .contentWrapper {
@@ -718,5 +726,8 @@
   .applyRenew {
     font-size: var(--font-size-16);
     line-height: 26px;
+  }
+  .busPassGeneralCommuterPass2 {
+    padding: 0 var(--padding-5xl) var( --padding-60 ) var(--padding-5xl);
   }
 }

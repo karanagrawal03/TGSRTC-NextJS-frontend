@@ -17,14 +17,16 @@ interface AccordionItemProps {
   info: DataItem[];
   expanded: boolean;
   onChange: () => void;
+  containerClassName?: string;
+  headingStyles?: string;
 }
 const AccordionItem: React.FC<AccordionItemProps> = ({
   name,
   info,
   expanded,
   onChange,
-  accordionTabStyles="",
-  headingStyles="",
+  containerClassName,
+  headingStyles,
 }) => {
   return (
     <div className={styles.accordian}>
@@ -39,12 +41,14 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
           id="panel1-header"
           className={styles.before6AmContainer1}
         >
-          <li className={headingStyles}>{name}</li>
+          <li className={`${styles.accordianHeading} ${headingStyles}`}>
+            {name}
+          </li>
         </AccordionSummary>
       </Accordion>
       {expanded && (
         <AccordionDetails className={styles.accordianDetails}>
-          <div className={`${styles.accordianTab} ${accordionTabStyles}`}>
+          <div className={`${styles.accordianTab} ${containerClassName}`}>
             <AccordianTab array={info} />
           </div>
         </AccordionDetails>

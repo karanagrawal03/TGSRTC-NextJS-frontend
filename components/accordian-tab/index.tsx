@@ -3,9 +3,12 @@ import Links from "../Links";
 import AccordiansHeading from "../accordians-heading";
 import BulletPoints from "../bullet-points";
 import Tables from "../tables";
+import TimingsTab from "../timings-tab";
+import TimingsOfBuses from "../timings-of-buses";
 import Note from "../note";
 import TableHeading from "../table-headings";
 type typeOfTheObject = "link" | "heading" | "bullet points" | "table" | "note";
+
 
 interface DataItem {
   type: string;
@@ -41,6 +44,8 @@ const AccordianTab: React.FC<AccordianTabProps> = ({ array }) => {
               );
             case "table-heading":
               return <TableHeading heading={item.text || ""} />;
+            case "timings":
+              return <TimingsOfBuses data={item.data as string[]} />;
             default:
               return null;
           }

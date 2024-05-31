@@ -10,7 +10,6 @@ const AboutVisionLegacy: NextPageAboutVisionLegacyType = () => {
   return (
     <div className={styles.aboutVisionLegacy}>
       <img className={styles.busDust} alt="" src="/bus--dust@2x.png" />
-      <Header />
       <div className={styles.aboutHero}>
         <img className={styles.maskGroupIcon} alt="" src="/mask-group@2x.png" />
         <h1 className={styles.visionLegacyContainer}>
