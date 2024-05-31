@@ -12,7 +12,6 @@ import ContractRatesTable4 from "../../components/contract-rates-table4";
 const ReservationBusOnContractRa: NextPageReservationBusOnContractRaType =() => {
     return (
       <div className={styles.reservationBusOnContractRa}>
-        <Header />
         <ReservationHeroTourism />
         <div className={styles.reservationContractRatesTab}>
           <ContractRatesTable1 />
@@ -23,7 +22,6 @@ const ReservationBusOnContractRa: NextPageReservationBusOnContractRaType =() => 
             <ContractRatesTable5 />
           </div>
         </div>
-        <Footer />
       </div>
     );
   };
