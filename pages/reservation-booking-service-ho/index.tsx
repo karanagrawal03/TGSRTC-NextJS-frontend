@@ -1,109 +1,14 @@
 import type { NextPage } from "next";
-import Header1 from "../components/header";
-import ReservationHeroLanding from "../components/reservation-hero-landing";
-import BookYourTicket from "../components/book-your-ticket";
-import ReservationKPIs from "../components/reservation-k-p-is";
-import Coulmn from "../components/coulmn";
-import styles from "./reservation-booking-service-ho.module.css";
-import Carousel from "../components/carousel/carousel";
-import SpecialBusesOffersCard from "../components/specialBusesOffersCard/SpecialBusesOffersCard";
-import Tables from "../components/tables";
-import BulletPoints from "../components/bullet-points";
-export interface ISpecialBusesOffers {
-  image: string;
-  from: string;
-  to: string;
-  title: string;
-  list: Array<{ title: string }>;
-}
+import Header1 from "../../components/header";
+import BookYourTicket from "../../components/book-your-ticket";
+import ReservationKPIs from "../../components/reservation-k-p-is";
+import styles from "./index.module.css";
+import Carousel from "../../components/carousel";
+import SpecialBusesOffersCard from "../../components/specialBusesOffersCard";
+import Tables from "../../components/tables";
+import { ADVANCE_FACILITY, COMMITTED_TO, CONNECTIVITY, ISpecialBusesOffers, MAIL_SUPPORT, NEED_HELP, SETTING, SUPPORT, SUPPORT_PHN0, TGSRTC, TITLE1, TITLE2, TITLE3, TITLE4, TYPES_OF_SERVICE, connectivityList, specialBuses, typesOfServices } from "../../constants/reservation-booking-service-ho";
 const ReservationBookingServiceHo: NextPageReservationBookingServiceHoType =
   () => {
-    const specialBuses: ISpecialBusesOffers[] = [
-      {
-        image: "/pictures@2x.png",
-        from: "Hyderabad",
-        to: "Badrachalam",
-        title: "Special Buses for Rama Navami Festival",
-        list: [
-          { title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit," },
-          { title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit," },
-          { title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit," },
-          { title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit," },
-          { title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit," },
-        ],
-      },
-      {
-        image: "/pictures@2x.png",
-        from: "Badrachalam",
-        to: "Hyderabad",
-        title: "Special Buses for Rama Navami Festival",
-        list: [
-          { title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit," },
-          { title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit," },
-          { title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit," },
-          { title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit," },
-          { title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit," },
-        ],
-      },
-      {
-        image: "/pictures@2x.png",
-        from: "Hyderabad",
-        to: "Yadadri",
-        title: "Special Buses for Rama Navami Festival",
-        list: [
-          { title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit," },
-          { title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit," },
-          { title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit," },
-          { title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit," },
-          { title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit," },
-        ],
-      },
-      {
-        image: "/pictures@2x.png",
-        from: "Yadadri",
-        to: "Hyderabad",
-        title: "Special Buses for Rama Navami Festival",
-        list: [
-          { title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit," },
-          { title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit," },
-          { title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit," },
-          { title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit," },
-          { title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit," },
-        ],
-      },
-    ];
-    const typesOfServices = [
-      {
-        column1: "#",
-        column2: "Type of bus",
-        column3: "Number of services",
-      },
-      {
-        column1: "1",
-        column2: "Garuda Plus (AC Semi-Sleeper Multi Axle)",
-        column3: "101",
-      },
-      {
-        column1: "2",
-        column2: "Rajdhani (2 + 2 AC Semi-Sleeper)",
-        column3: "290",
-      },
-      {
-        column1: "3",
-        column2: "Type of bus",
-        column3: "Number of services",
-      },
-      {
-        column1: "4",
-        column2: "Type of bus",
-        column3: "Number of services",
-      },
-      {
-        column1: "5",
-        column2: "Type of bus",
-        column3: "Number of services",
-      },
-    ];
     const customWidths = {
       column1: "50px",
       column2: "329px",
@@ -119,11 +24,6 @@ const ReservationBookingServiceHo: NextPageReservationBookingServiceHoType =
       paddingBottom: "15.5px",
       paddingLeft: "20px",
     };
-    const connectivityList = [
-      "Andhra Pradesh (Visakhapatnam, Vijayawada, Kakinada, Rajahmundry, Guntur, Eluru, Ongole, Nellore, Chittoor, Tirupathi, Anantapur, Kadapa, Kurnool etc.)",
-      "Telangana (Hyderabad, Sangareddy, Mahabubnagar, Nalgonda, Miryalaguda, Warangal, Karimnagar, Nizamabad, Bodhan, Adilabad, Nirmal, Khammam, Bhadrachalam etc.) and",
-      "Surrounding States (Mumbai, Pune, Shirdi, Nagpur, Bengaluru, Chennai etc.)",
-    ];
     return (
       <div className={styles.reservationBookingServiceHo}>
         <Header1 />
@@ -138,16 +38,18 @@ const ReservationBookingServiceHo: NextPageReservationBookingServiceHoType =
             alt=""
             src="/bus-mobile.png"
           />
-          <h1 className={styles.tgsrtcOnlineBusContainer}>
-            <p className={styles.tgsrtcOnlineBus}>TGSRTC Online Bus ticket</p>
-            <p className={styles.bookingService}>Booking Service</p>
+          <div className={styles.bgImgTexts}>
+          <div className={styles.tgsrtcOnlineBusContainer}>
+            <p className={styles.tgsrtcOnlineBus}>{TITLE1}</p>
+            <p className={styles.bookingService}>{TITLE2}</p>
             <div className={styles.applyRenew}>
-              Apply, Renew & Travel effortlessly with TGSRTC
+              {TITLE3}
             </div>
-          </h1>
-          <h2 className={styles.bookYourTickets}>
-            Book your tickets hassle free !
-          </h2>
+          </div>
+          <div className={styles.bookYourTickets}>
+            {TITLE4}
+          </div>
+          </div>
         </section>
         <BookYourTicket />
         <ReservationKPIs />
@@ -164,84 +66,28 @@ const ReservationBookingServiceHo: NextPageReservationBookingServiceHoType =
             </Carousel>
           </div>
         </section>
-        {/* <section className={styles.customerSupportImageWrapper}> */}
-          {/* <div className={styles.customerSupportImage}>
-            <img
-              className={styles.charanjeetDhimanMhusybu4bxmIcon}
-              alt=""
-              src="/charanjeetdhimanmhusybu4bxmunsplash-1-1@2x.png"
-            />
-            <div className={styles.customerSupportTexts}>
-              <div className={styles.texts}>
-                <h1 className={styles.customerSupport}>
-                  24/7 Customer Support
-                </h1>
-                <h2 className={styles.needHelpWith}>
-                  Need help with e-Ticketing Refund related queries?
-                </h2>
-              </div>
-              <div className={styles.emailPhone}>
-                <div className={styles.email}>
-                  <img className={styles.icons2} alt="" src="/icons-12.svg" />
-                  <h2 className={styles.onlinesupporttgsrtcbusin}>
-                    online.support@TGSRTCbus.in
-                  </h2>
-                </div>
-                <div className={styles.phone}>
-                  <img className={styles.icons3} alt="" src="/icons-13.svg" />
-                  <div className={styles.div}>040 69440000 / 040 23450033</div>
-                </div>
-              </div>
-            </div>
-          </div> */}
-          {/* <div className={styles.csImgWrapper}>
-            <img src={"/customerSupportImage.svg"} className={styles.csImg} />
-            <div className={styles.customerSupportTexts}>
-              <div className={styles.texts}>
-                <h1 className={styles.customerSupport}>
-                  24/7 Customer Support
-                </h1>
-                <h2 className={styles.needHelpWith}>
-                  Need help with e-Ticketing Refund related queries?
-                </h2>
-              </div>
-              <div className={styles.emailPhone}>
-                <div className={styles.email}>
-                  <img className={styles.icons2} alt="" src="/icons-12.svg" />
-                  <h2 className={styles.onlinesupporttgsrtcbusin}>
-                    online.support@TGSRTCbus.in
-                  </h2>
-                </div>
-                <div className={styles.phone}>
-                  <img className={styles.icons3} alt="" src="/icons-13.svg" />
-                  <div className={styles.div}>040 69440000 / 040 23450033</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section> */}
         <div className={`${styles.csImgContainer}`}>
-            <img src={"/customerSupportImage.svg"} className={styles.cSImg} />
+            <img src={"/customerSupport1.png"} className={styles.cSImg} />
             <img src={"/customerSupportImageMobile.png"} className={styles.cSImgMobile} />
             <div className={styles.customerSupportTexts}>
               <div className={styles.texts}>
                 <h1 className={styles.customerSupport}>
-                  24/7 Customer Support
+                  {SUPPORT}
                 </h1>
                 <div className={styles.needHelpWith}>
-                  Need help with e-Ticketing Refund related queries?
+                  {NEED_HELP}
                 </div>
               </div>
               <div className={styles.emailPhone}>
                 <div className={styles.email}>
                   <img className={styles.icons2} alt="" src="/icons-12.svg" />
                   <h2 className={styles.onlinesupporttgsrtcbusin}>
-                    online.support@TGSRTCbus.in
+                    {MAIL_SUPPORT}
                   </h2>
                 </div>
                 <div className={styles.phone}>
                   <img className={styles.icons3} alt="" src="/icons-13.svg" />
-                  <div className={styles.div}>040 69440000 / 040 23450033</div>
+                  <div className={styles.div}>{SUPPORT_PHN0}</div>
                 </div>
               </div>
             </div>
@@ -253,29 +99,23 @@ const ReservationBookingServiceHo: NextPageReservationBookingServiceHoType =
                 <div className={styles.frameWrapper1}>
                   <div className={styles.frameParent1}>
                     <div className={styles.tgsrtcWrapper}>
-                      <h1 className={styles.tgsrtc}>TGSRTC</h1>
+                      <h1 className={styles.tgsrtc}>{TGSRTC}</h1>
                     </div>
                     <h1 className={styles.settingStandardsDelivering}>
-                      Setting Standards, Delivering Excellence
+                      {SETTING}
                     </h1>
                   </div>
                 </div>
                 <p className={styles.tgsrtcIsCommittedTo}>
-                  TGSRTC is committed to provide consistently high quality of
-                  services and to continuously improve the services through a
-                  process of teamwork for the utmost satisfaction of the
-                  passengers and to attain a position of pre-eminence in the Bus
-                  Transport sector.
+                 {COMMITTED_TO}
                 </p>
               </div>
             </div>
             <div className={styles.frameParent2}>
               <div className={styles.typesOfServicesParent}>
-                <h3 className={styles.typesOfServices}>Types of Services</h3>
+                <h3 className={styles.typesOfServices}>{TYPES_OF_SERVICE}</h3>
                 <p className={styles.advanceReservationFacility}>
-                  Advance reservation facility is provided through Online
-                  Passenger Reservation System (OPRS) for the different types of
-                  services mentioned hereunder:
+                  {ADVANCE_FACILITY}
                 </p>
 
                 <Tables
@@ -283,13 +123,13 @@ const ReservationBookingServiceHo: NextPageReservationBookingServiceHoType =
                   containerClassName={styles.tableStyles}
                   customHeaderCellStyles={customHeaderStyles}
                   customRowCellStyles={customRowCellStyles}
-                  customWidths={customWidths}
+                  columnWidths={customWidths}
                 />
               </div>
             </div>
             <div className={styles.bulletPointContainer1}>
               <div className={styles.title2}>
-                <h2 className={styles.guidingPrinciplesOf1}>Connectivity</h2>
+                <h2 className={styles.guidingPrinciplesOf1}>{CONNECTIVITY}</h2>
               </div>
               <div className={styles.list}>
                 {connectivityList?.map((each: any, index: number) => (
@@ -435,7 +275,6 @@ const ReservationBookingServiceHo: NextPageReservationBookingServiceHoType =
             </div>
           </div>
         </section>
-        {/* <img className={styles.busDust1} alt="" src="/bus--dust-1@2x.png" /> */}
       </div>
     );
   };

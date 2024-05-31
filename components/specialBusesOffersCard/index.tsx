@@ -1,5 +1,5 @@
-import { ISpecialBusesOffers } from "../../pages/reservation-booking-service-ho";
-import styles from "./SpecialBusesOffersCard.module.css";
+import { ISpecialBusesOffers } from "../../constants/reservation-booking-service-ho";
+import styles from "./index.module.css";
 interface SpecialBusesOffersCardProps {
   item: ISpecialBusesOffers;
 }

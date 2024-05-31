@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import styles from "./carousel.module.css";
+import styles from "./index.module.css";
 import Slider from "react-slick";
 
 import "slick-carousel/slick/slick.css";
@@ -10,9 +10,17 @@ interface CarouselInterface {
   autoplay?: boolean;
   secondary?: boolean;
   customStyles?: any;
+  sliderClassName?: string;
 }
 const Carousel = (props: CarouselInterface) => {
-  const { children, perView = 1, autoplay = true, secondary = false, customStyles } = props;
+  const {
+    children,
+    perView = 1,
+    autoplay = true,
+    secondary = false,
+    customStyles,
+    sliderClassName,
+  } = props;
   function PrevArrow(props: any) {
     const { className, style, onClick } = props;
     return (
@@ -40,7 +48,9 @@ const Carousel = (props: CarouselInterface) => {
     slidesToShow: perView,
     slidesToScroll: perView,
     arrows: secondary ? false : true,
-    dotsClass: `${styles.button__bar} ${secondary ? styles.secondary : ""}`,
+    dotsClass: `${styles.button__bar} ${
+      secondary ? styles.secondary : perView > 1 ? styles.multiple : ""
+    }`,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     responsive: [
@@ -50,13 +60,26 @@ const Carousel = (props: CarouselInterface) => {
           arrows: false,
         },
       },
+      {
+        breakpoint: 360,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+        },
+      },
     ],
   };
+
   return (
     <div
-      className={`${styles.slider} ${customStyles} ${secondary ? styles.secondarySlider : ""}`}
+      className={`${styles.slider} ${customStyles} ${
+        secondary ? styles.secondarySlider : ""
+      }`}
     >
-      <Slider {...settings}>{...data}</Slider>
+      <Slider {...settings} className={sliderClassName}>
+        {...data}
+      </Slider>
     </div>
   );
 };

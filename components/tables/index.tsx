@@ -15,7 +15,7 @@ interface TableProps {
   containerClassName?: string;
   customHeaderCellStyles?: Object;
   customRowCellStyles?: Object;
-  customWidths?: any;
+  columnWidths?: any;
 }
 
 const Tables: React.FC<TableProps> = ({
@@ -23,7 +23,7 @@ const Tables: React.FC<TableProps> = ({
   containerClassName,
   customHeaderCellStyles,
   customRowCellStyles,
-  customWidths,
+  columnWidths,
 }) => {
   const headers = rows[0];
   const bodyRows = rows.slice(1);
