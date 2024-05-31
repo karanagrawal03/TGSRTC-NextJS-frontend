@@ -497,8 +497,8 @@ line-height: 32px;
 
   .philosophyAndGuidelines {
     margin-top: 40px;
-    padding-left: 4%;
-    padding-right: 4%;
+    padding-left: 0;
+    padding-right: 0%;
     gap: var( --gap-21xl);
   }
 
@@ -550,7 +550,9 @@ line-height: 32px;
 @media screen and (max-width: 540px) {
 
   .aboutVisionLegacy {
-    max-width: 540px;
+    padding-left: 24px;
+    padding-right: 24px;
+    /* max-width: 540px; */
     font-size: var(--font-size-5xl);
     line-height: 32px;
   }
@@ -589,17 +591,14 @@ line-height: 32px;
   }
 
   .aboutVision {
-    padding: 0px;
+    /* padding: 0px; */
 
   }
 
   .visionConatiner {
     padding: var(--padding-xl);
-    max-width: 480px;
-    width: 90%;
+    width: 100%;
     height: auto;
-    margin-left: 20px;
-    margin-right: 20px;
 
   }
 
@@ -644,8 +643,6 @@ line-height: 32px;
 
   .philosophyAndGuidelines {
     margin-top: 40px;
-    padding-left: 4%;
-    padding-right: 4%;
     gap: var(--gap-21xl);
   }
 
@@ -681,13 +678,11 @@ line-height: 32px;
   }
 
   .legacyLetterMobile {
-    max-width: 540px;
+    /* max-width: 540px; */
     display: block;
   }
 
   .legacyLetterContainer {
-    margin-left: 24px;
-    margin-right: 16px;
     margin-top: 40px;
     margin-bottom: 60px;
   }
