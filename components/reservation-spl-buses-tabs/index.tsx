@@ -166,6 +166,8 @@ const ReservationBusesTabs: React.FC = () => {
               fontWeight: 500,
               backgroundColor:"#FFFFFF",
               textAlign: "left",
+              boxShadow: "0px 4px 10px 0px #E8E8E8"
+
             }}
             onChange={handleSelectChange}
           >

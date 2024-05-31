@@ -20,7 +20,7 @@
 }
 .card {
   background-color: #f2f2f2;
-  border: 1px solid #f2f2f2;
+  border: 1px solid #d9d9d9;
   border-radius: 16px;
   padding: var(--padding-5xl);
 }
@@ -45,4 +45,12 @@
 }
 .accordianTabStyles {
   padding: 0px;
+}
+@media screen and (max-width: 1023px) {
+  .name {
+    font-size: var(--font-size-sm);
+  }
+  .value {
+    font-size: var(--font-size-16);
+  }
 }

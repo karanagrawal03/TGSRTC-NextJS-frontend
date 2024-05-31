@@ -2,10 +2,8 @@
 import { useEffect, useState } from "react";
 import BusPassOptions from "../../components/bus-pass-options";
 import BusPassOtherBusPasses from "../../components/bus-pass-other-bus-passes";
-import Header from "../../components/header";
 import { APPLY_AND_RENEW, BUS_PASS_SERVICES } from "../../constants";
 import styles from "./index.module.css";
-import Footer from "../../components/footer";
 const BusPassServices = () => {
   const [width, setWidth] = useState<boolean>(false);
 
@@ -29,14 +27,14 @@ const BusPassServices = () => {
           <img
             className={styles.bgIcon}
             alt="bus-pass-main-section"
-            src="/bus-pass-main-section@2x.png"
+            src="/bus-passes-services-web.png"
             loading="lazy"
           />
         ) : (
           <img
             className={styles.bgIconmobile}
             alt="mobile-image"
-            src="/mobile-bus-pass-bg.png"
+            src="/bus-pass-services-mobile.png"
             loading="lazy"
           />
         )}

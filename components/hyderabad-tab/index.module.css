@@ -30,3 +30,8 @@
   gap: var(--gap-13xl);
   margin-top: 24px;
 }
+@media screen and (max-width: 1023px) {
+  .tableHeading {
+    font-size: var(--font-size-xl);
+  }
+}

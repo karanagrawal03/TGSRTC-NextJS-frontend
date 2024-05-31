@@ -43,10 +43,9 @@
 }
 .accordianHeading {
   font-weight: 500;
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-xl);
   line-height: 26px;
   font-family: var(--font-montserrat);
-
 }
 @media screen and (max-width: 750px) {
   .accordianTab {
@@ -55,11 +54,23 @@
     background-color: #ffffff;
     padding: 0px var(--padding-base) var(--padding-5xl) var(--padding-19xl);
   }
+  .accordianHeading {
+    font-weight: 500;
+    font-size: var(--font-size-16);
+    line-height: 26px;
+    font-family: var(--font-montserrat);
+  }
 }
 @media screen and (max-width: 500px) {
   .accordianTab {
     padding-left: var(--padding-11xl);
     padding-right: var(--padding-11xl);
+  }
+  .accordianHeading {
+    font-weight: 500;
+    font-size: var(--font-size-16);
+    line-height: 26px;
+    font-family: var(--font-montserrat);
   }
 }
 @media screen and (max-width: 360px) {
@@ -67,11 +78,22 @@
     padding-left: var(--padding-base);
     padding-right: var(--padding-base);
   }
-
+  .accordianHeading {
+    font-weight: 500;
+    font-size: var(--font-size-16);
+    line-height: 26px;
+    font-family: var(--font-montserrat);
+  }
 }
 @media screen and (max-width: 900px) {
   .accordianTab {
     padding-left: var(--padding-45xl);
     padding-right: var(--padding-45xl);
+  }
+  .accordianHeading {
+    font-weight: 500;
+    font-size: var(--font-size-16);
+    line-height: 26px;
+    font-family: var(--font-montserrat);
   }
 }

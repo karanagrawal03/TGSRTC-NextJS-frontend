@@ -21,4 +21,7 @@
   width: 100%;
   padding-top: var(--padding-5xl);
 }
+.tableHeading{
+  font-size: var(--font-size-xl);
+}
 }
