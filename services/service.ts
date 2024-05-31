@@ -2,6 +2,7 @@ import { useState } from "react";
 import Axios, { AxiosResponse, AxiosError } from "axios";
 
 export const UPLOADS_BASE_URL = process.env.BASE_URL+'/uploads';
+export const BASE_URL = process.env.BASE_URL+'/api';
 
 const useFetch = () => {
   const [data, setData] = useState<AxiosResponse | null>(null);
@@ -16,7 +17,7 @@ const useFetch = () => {
 
   const fetchData = async (url: string) => {
     try {
-      const response = await Axios(`${process.env.BASE_URL}/api` + url, {
+      const response = await Axios(BASE_URL + url, {
         headers: {
           "Content-Type": "*",
           "Access-Control-Allow-Origin": "*",
@@ -24,7 +25,7 @@ const useFetch = () => {
         },
         responseType: "json",
       });
-      setData(response?.data);
+      setData(response.data.data[0].attributes as any);
     } catch (error: unknown) {
       setError(error);
     } finally {
