@@ -10,29 +10,21 @@
 
 .aboutHero {
   width: 100%;
-  align-self: stretch;
-  height: 675px;
+  height: 100%;
   position: relative;
   overflow: hidden;
   flex-shrink: 0;
 }
 
 .aboutHeroWebsite {
-  position: absolute;
-  top: -39px;
-  left: 0px;
   width: 100%;
-  height: 754px;
-  object-fit: contain;
+  height: 100%;
   display: block;
 }
 
 .aboutHeroMobile {
-  position: absolute;
   width: 100%;
-  height: 458px;
-  max-width: 360px;
-  object-fit: contain;
+  height: 100%;
   display: none;
 }
 
@@ -47,6 +39,9 @@
   font-family: var(--font-playfair-display);
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap:var(--gap-sm);
 }
 
 .legacy,
@@ -55,17 +50,10 @@
 }
 
 .mobileDescription {
-  left: 23px;
-  margin-top: 16px;
-  font-size: var(--font-size-bas);
-  line-height: 26px;
-  font-weight: 500;
   font-family: var(--font-montserrat);
-  color: var(--support-white);
-  display: none;
-  flex-direction: column;
-  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
-  z-index: 1;
+font-size: var(--font-size-5xl);
+font-weight: 500;
+line-height: 32px;
 }
 
 .aboutVision,
@@ -97,7 +85,6 @@
 }
 
 .texts {
-  /* max-width: 907px; */
   width: 100%;
   gap: var(--gap-13xl);
 }
@@ -148,7 +135,7 @@
   font-size: var(--font-size-27xl);
   font-weight: 600;
   font-family: var(--font-playfair-display);
-  padding-right: 48.47px;
+  padding-right: var(--padiing-48xl);
   line-height: 61.32px;
   color: var(--primary-red);
 }
@@ -188,8 +175,9 @@
 .philosophyAndGuidelines {
   display: flex;
   flex-wrap: wrap;
-  gap: 60px;
-  padding-left: 60px;
+  gap: var(--gap-41xl);
+  padding-left: var(--padding-60);
+  padding-right: var(--padding-60);
 
 }
 
@@ -197,7 +185,7 @@
 .guidelines {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px
+  gap: var(--gap-base);
 }
 
 .horzontalDivider {
@@ -223,7 +211,7 @@
   color: var(--text-grey-body-text);
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: var(--gap-base);
   line-height: 26px;
 }
 
@@ -231,7 +219,7 @@
   display: flex;
   flex-direction: row;
   width: 100%;
-  gap: 8px;
+  gap: var(--gap-5xs);
 }
 
 .dots {
@@ -249,17 +237,16 @@
 
 .legacyLetter {
   width: 100%;
-  object-fit: cover;
 }
 
 .legacyLetterMobile {
+
   width: 100%;
-  object-fit: cover;
   display: none;
 }
 .legacyLetterContainer{
   max-height: 1344px;
-  height: 100%
+  height: 100%;
 }
 @media screen and (max-width:1365px) {
   .aboutHeroWebsite {
@@ -272,10 +259,14 @@
 
   .philosophyAndGuidelines {
     padding-left: 4%;
+    padding-right: 4%;
+  }
+  .visionLegacyContainer {
+    top: 200px;
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
 
   .aboutHeroWebsite {
     object-fit: cover;
@@ -283,16 +274,18 @@
 
   .visionConatiner {
     max-height: 363px;
-
     height: 100%;
     padding: 4%;
   }
 
   .philosophyAndGuidelines {
     padding-left: 4%;
+    padding-right: 4%;
+
   }
 
   .visionLegacyContainer {
+    top: 140px;
     font-size: var(--font-size-39xl);
   }
 
@@ -312,19 +305,21 @@
   }
 
   .visionLegacyContainer {
-    top: 260px;
+    top: 130px;
     font-size: var(--font-size-36xs);
     line-height: 40px;
   }
-
+  .mobileDescription{
+    font-size:var(--font-size-base) ;
+  }
   .aboutVision {
-    padding: 84px;
+    padding: var(--padding-84xs);
   }
 
   .vision1 {
     font-size: var(--font-size-9xl);
     line-height: 40.5px;
-    padding-right: 30px;
+    padding-right: var(--padding-11xl);
 
   }
 
@@ -333,9 +328,9 @@
   }
 
   .philosophyAndGuidelines {
-    gap: 40px;
-    padding-left: 4%;
-    width: 96%;
+    gap: var(--gap-21xl);
+    padding-left: 6%;
+    padding-right: 6%;
   }
 
   .visionConatiner {
@@ -364,12 +359,14 @@
   .visionLegacyContainer {
     font-size: var(--font-size-13xl);
     line-height: 40px;
-    top: 300px;
+    top: 130px;
   }
-
+.mobileDescription{
+  font-size:var(--font-size-sm) ;
+}
 
   .aboutVision {
-    padding: 84px;
+    padding: var(--padding-84xs);
   }
 
   .visionConatiner {
@@ -382,7 +379,7 @@
   .vision1 {
     font-size: var(--font-size-9xl);
     line-height: 40.5px;
-    padding-right: 20px;
+    padding-right: var(--padding-xl);
 
   }
 
@@ -391,9 +388,9 @@
   }
 
   .philosophyAndGuidelines {
-    gap: 30px;
-    padding-left: 4%;
-    width: 96%;
+    gap: var(--gap-11xl);
+    padding-left: 6%;
+    padding-right: 6%;
   }
 
   .philosophyHeading,
@@ -407,70 +404,9 @@
   }
 }
 
-@media screen and (max-width: 600px) {
-  .aboutHeroWebsite {
-    object-fit: cover;
-  }
-
-  .visionLegacyContainer {
-    top: 330px;
-    font-size: var(--font-size-13xl);
-    line-height: 40px;
-  }
-
-  .philosophyAndGuidelines {
-    gap: 30px;
-    padding-left: 4%;
-    width: 96%;
-  }
-
-  .texts {
-    gap: 24px;
-  }
-
-  .aboutVision {
-    padding: 84px;
-  }
-
-  .visionConatiner {
-    max-height: 363px;
-    width: 98%;
-    height: 100%;
-    padding: 4%;
-  }
-
-  .vision1 {
-    font-size: var(--font-size-9xl);
-    line-height: 40.5px;
-    padding-right: 15px;
-  }
-
-  .tgsrtcIsCommittedContainer {
-    font-size: var(--font-size-sm);
-  }
-
-  .philosophyHeading,
-  .guidelinesHeading {
-    font-size: var(--font-size-lg);
-  }
-
-  .phylosophyList,
-  .guidelinesList {
-    font-size: var(--font-size-sm);
-  }
-}
-
-@media screen and (max-width: 540px) {
-
-  .aboutHero {
-    height: 458px;
-    max-width: 540px;
-    width: 100%;
-
-  }
-
+@media screen and (max-width: 599px) {
+  
   .aboutVisionLegacy {
-    max-width: 540px;
     font-size: var(--font-size-5xl);
     line-height: 32px;
   }
@@ -480,10 +416,7 @@
   }
 
   .aboutHeroMobile {
-    max-width: 540px;
-    width: 100%;
     display: block;
-    object-fit: cover;
   }
 
   .visionLegacyContainer {
@@ -505,21 +438,21 @@
 
   .mobileDescription {
     display: block;
-    font-size: 14px;
+    font-size: var(--font-size-sm);
+    width: 232px;
   }
 
   .aboutVision {
-    padding: 0px;
+    padding-left: var(--padding-5xl);
+    padding-right: var(--padding-5xl);
+    box-sizing: border-box;
 
   }
 
   .visionConatiner {
-    padding: 20px;
-    max-width: 480px;
-    width: 90%;
+    padding: var(--padding-xl);
+    width: 100%;
     height: auto;
-    margin-left: 20px;
-    margin-right: 20px;
 
   }
 
@@ -528,7 +461,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 24px;
+    gap: var(--gap-5xl);
     max-width: 480px;
     width: 100%;
   }
@@ -564,17 +497,16 @@
 
   .philosophyAndGuidelines {
     margin-top: 40px;
-    padding-left: 4%;
-    padding-right: 4%;
-    gap: 40px;
-    width: 84%;
+    padding-left: 0;
+    padding-right: 0%;
+    gap: var( --gap-21xl);
   }
 
   .philosophy,
   .guidelines {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: var(--gap-5xs);
   }
 
   .philosophyHeading {
@@ -593,7 +525,150 @@
   .guidelinesList {
     font-size: var(--font-size-sm);
     line-height: 26px;
-    gap: 12px;
+    gap: var(--gap-xs);
+
+  }
+
+  .legacyLetter {
+    display: none;
+  }
+
+  .legacyLetterMobile {
+    max-width: 599px;
+    display: block;
+  }
+
+  .legacyLetterContainer {
+    margin-top: 40px;
+    margin-bottom: 60px;
+    box-sizing: border-box;
+    max-height: fit-content;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 540px) {
+
+  .aboutVisionLegacy {
+    padding-left: var(--padding-5xl);
+    padding-right: var(--padding-5xl);
+    font-size: var(--font-size-5xl);
+    line-height: 32px;
+  }
+
+  .aboutHeroWebsite {
+    display: none;
+  }
+
+  .aboutHeroMobile {
+    max-width: 540px;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+  }
+
+  .visionLegacyContainer {
+    top: 210px;
+    left: 23px;
+    font-size: var(--font-size-42xs);
+    line-height: 55.99px;
+  }
+
+  .busDustWebsite {
+    display: none;
+  }
+
+  .busDustMobile {
+    display: block;
+    height: 128px;
+    width: 100%;
+  }
+
+  .mobileDescription {
+    display: block;
+    font-size: var(--font-size-sm);
+  }
+
+  .aboutVision {
+    /* padding: 0px; */
+
+  }
+
+  .visionConatiner {
+    padding: var(--padding-xl);
+    width: 100%;
+    height: auto;
+
+  }
+
+  .texts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap-5xl);
+    max-width: 480px;
+    width: 100%;
+  }
+
+  .headingUnderline {
+    display: none;
+  }
+
+  .vision1 {
+    display: flex;
+    align-items: center;
+    font-size: var(--font-size-13xl);
+    line-height: 26px;
+    font-weight: 600;
+    font-family: var(--font-playfair-display);
+    padding-right: 0px;
+  }
+
+  .aboutVision {
+    gap: 0px
+  }
+
+  .tgsrtcIsCommittedContainer {
+    font-size: var(--font-size-base);
+    line-height: 26px;
+    text-align: center;
+
+  }
+
+  .tgsrtcIsCommitted {
+    display: flex;
+  }
+
+  .philosophyAndGuidelines {
+    margin-top: 40px;
+    gap: var(--gap-21xl);
+  }
+
+  .philosophy,
+  .guidelines {
+    display: flex;
+    flex-wrap: wrap;
+    gap:  var(--gap-5xs);
+  }
+
+  .philosophyHeading {
+    font-size: var(--font-size-sm);
+    line-height: 26px;
+
+
+  }
+
+  .guidelinesHeading {
+    font-size: var(--font-size-base);
+    line-height: 26px;
+  }
+
+  .phylosophyList,
+  .guidelinesList {
+    font-size: var(--font-size-sm);
+    line-height: 26px;
+    gap: var(--gap-xs);
 
   }
 
@@ -606,21 +681,12 @@
   }
 
   .legacyLetterContainer {
-    margin-left: 24px;
-    margin-right: 16px;
     margin-top: 40px;
     margin-bottom: 60px;
   }
 }
 
 @media screen and (max-width: 360px) {
-  .aboutHero {
-    height: 458px;
-  }
-
-  .aboutVisionLegacy {
-    width: 320px;
-  }
 
   .aboutHeroWebsite {
     display: none;
@@ -631,10 +697,11 @@
   }
 
   .visionLegacyContainer {
-    top: 211px;
+    top: 210.7px;
     left: 23px;
     font-size: var(--font-size-42xs);
     line-height: 55.99px;
+    gap:var(--gap-base);
   }
 
   .busDustWebsite {
@@ -657,7 +724,7 @@
   }
 
   .visionConatiner {
-    padding: 20px;
+    padding: var(--padding-xl);
     max-width: 350px;
     height: auto;
   }
@@ -667,7 +734,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 24px;
+    gap: var(--gap-5xl);
     max-width: 312px;
     width: 100%;
   }
@@ -706,14 +773,14 @@
     padding-left: 0px;
     margin-left: 24px;
     margin-right: 24px;
-    gap: 40px
+    gap: var(--gap-21xl);
   }
 
   .philosophy,
   .guidelines {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: var(--gap-5xs);
   }
 
   .philosophyHeading {
@@ -732,7 +799,7 @@
   .guidelinesList {
     font-size: var(--font-size-sm);
     line-height: 26px;
-    gap: 12px;
+    gap: var(--gap-xs);
 
   }
 
@@ -741,6 +808,7 @@
   }
 
   .legacyLetterMobile {
+    max-width: 320px;
     display: block;
   }
 
@@ -749,6 +817,11 @@
     margin-right: 16px;
     margin-top: 40px;
     margin-bottom: 60px;
+  }
+  .mobileDescription {
+    display: block;
+    font-size: var(--font-size-base);
+    line-height: 26px;
   }
 }
 

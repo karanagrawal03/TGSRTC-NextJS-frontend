@@ -1,23 +1,21 @@
-import Header from "../../components/header";
-import FooterSection from "../../components/footer-section";
-import RecognitionAndSocialMediaC from "../../components/recognition-and-social-media-c";
 import styles from "./index.module.css"
-import { APPLY_RENEW, CORPORATE_HEADING, EFFORTLESS, GUIDELINES_HEADING, GUIDELINES_ITEMS, LEGACY, PHILOSOPHY_ITEMS, TSRTC_VISION1, TSRTC_VISION2, VISION, VISION_AND } from "../../constants/AboutVisionLegacy";
-import Footer from "../../components/footer";
+import { CORPORATE_HEADING, GUIDELINES_HEADING, GUIDELINES_ITEMS, LEGACY, PHILOSOPHY_ITEMS, TSRTC_VISION1, TSRTC_VISION2, VISION, VISION_AND } from "../../constants/AboutVisionLegacy";
+import { TRAVEL_EFFORTLESSLY } from "../../constants";
 
 const AboutVisionLegacy: any = () => {
   return (
     <div className={styles.aboutVisionLegacy}>
       <div className={styles.aboutHero}>
-        <img className={styles.aboutHeroWebsite} alt="about-hero-image" src="/about-hero-website.png" loading="lazy"/>
+        <img className={styles.aboutHeroWebsite} alt="about-hero-image" src="/about-hero-image-website.png" loading="lazy"/>
         <img className={styles.aboutHeroMobile} alt="about-hero-image" src="/about-hero-mobile.png" loading="lazy"/>
 
         <div className={styles.visionLegacyContainer}>
+          <div>
           <div className={styles.vision}>{VISION_AND}</div>
           <div className={styles.legacy}>{LEGACY}</div>
+          </div>
           <div className={styles.mobileDescription}>
-            <div>{APPLY_RENEW}</div>
-            <div>{EFFORTLESS}</div>
+            <div>{TRAVEL_EFFORTLESSLY}</div>
           </div>
         </div>
       </div>
