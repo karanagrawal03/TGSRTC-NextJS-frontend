@@ -2301,7 +2301,4 @@
     margin-top: 40px;
     margin-bottom: unset;
   }
-  .contentContainer{
-    padding-bottom: var( --padding-21xl);
-  }
 }

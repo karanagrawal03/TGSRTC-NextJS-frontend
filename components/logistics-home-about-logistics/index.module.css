@@ -106,7 +106,7 @@
   }
   .contentRight {
     padding: unset;
-    padding-bottom: var(--padding-23xl);
+    padding-bottom: var(--padding-21xl);
     box-sizing: border-box;
   }
   .logisticAboutTexts{
