@@ -4,6 +4,7 @@ import BusPassOptionsCard from "../bus-pass-options-card.tsx";
 import styles from "./index.module.css";
 import { OTHER_BUS_PASSES, VIEW_MORE } from "../../constants";
 import { cards3Data } from "../../constants/bus-pass-other-options";
+
 export type BusPassOtherBusPassesType = {
   className?: string;
 };
@@ -23,18 +24,23 @@ const BusPassOtherBusPasses: NextPage<BusPassOtherBusPassesType> = ({
   }, []);
 
   const displayedCards = showAll ? cards3Data : cards3Data.slice(0, 4);
+ 
 
   return (
     <section className={[styles.busPassOtherBusPasses, className].join(" ")}>
       <h1 className={styles.otherBusPasses}>{OTHER_BUS_PASSES}</h1>
       <div className={styles.cardsContainer}>
-        {displayedCards.map((card, index) => (
-          <BusPassOptionsCard
+      {
+        cards3Data.map((card: any, index: number) => {
+          return (
+            <BusPassOptionsCard
             key={index}
             heading={card.heading}
             description={card.description}
           />
-        ))}
+          );
+        })
+      }
       </div>
       {!showAll && (
         <p className={styles.viewMoreButton} onClick={() => setShowAll(true)}>
@@ -46,3 +52,4 @@ const BusPassOtherBusPasses: NextPage<BusPassOtherBusPassesType> = ({
 };
 
 export default BusPassOtherBusPasses;
+

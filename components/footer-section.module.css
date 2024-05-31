@@ -233,5 +233,7 @@
   .linksContainer {
     flex-wrap: wrap;
     gap: var(--gap-6xl);
+    min-width: 334px;
+    max-width: 334px;
   }
 }
