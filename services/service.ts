@@ -15,7 +15,6 @@ const useFetch = () => {
   };
 
   const fetchData = async (url: string) => {
-    console.log(`${process.env.BASE_URL}/api` + url,"in fetch")
     try {
       const response = await Axios(`${process.env.BASE_URL}/api` + url, {
         headers: {
@@ -25,7 +24,6 @@ const useFetch = () => {
         },
         responseType: "json",
       });
-      console.log(response,"in fetch")
       setData(response?.data);
     } catch (error: unknown) {
       setError(error);

@@ -4,7 +4,7 @@ import BusPassOptionsCard from "../bus-pass-options-card.tsx";
 import styles from "./index.module.css";
 import { OTHER_BUS_PASSES, VIEW_MORE } from "../../constants";
 import { cards3Data } from "../../constants/bus-pass-other-options";
-import useFetch from "../../services/service.js";
+
 export type BusPassOtherBusPassesType = {
   className?: string;
 };

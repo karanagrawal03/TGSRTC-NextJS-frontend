@@ -3,7 +3,6 @@ import { BUS_PASS_OPTIONS } from "../../constants";
 import { card2Data } from "../../constants/bus-pass-options";
 import OtherBusPassesCard from "../other-bus-passes-card";
 import styles from "./index.module.css";
-import { useEffect, useState } from "react";
 
 export type BusPassOptionsType = {
   className?: string;
