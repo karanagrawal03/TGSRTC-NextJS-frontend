@@ -4,7 +4,6 @@ import { card2Data } from "../../constants/bus-pass-options";
 import OtherBusPassesCard from "../other-bus-passes-card";
 import styles from "./index.module.css";
 import { useEffect, useState } from "react";
-import useFetch from "../../services/service";
 
 export type BusPassOptionsType = {
   className?: string;

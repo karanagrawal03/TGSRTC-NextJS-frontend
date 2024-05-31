@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Axios, { AxiosResponse, AxiosError } from "axios";
 
+export const UPLOADS_BASE_URL = process.env.BASE_URL+'/uploads';
+
 const useFetch = () => {
   const [data, setData] = useState<AxiosResponse | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
@@ -13,9 +15,9 @@ const useFetch = () => {
   };
 
   const fetchData = async (url: string) => {
-    console.log(process.env.NEXT_PUBLIC_API_URL + url,"in fetch")
+    console.log(`${process.env.BASE_URL}/api` + url,"in fetch")
     try {
-      const response = await Axios(process.env.NEXT_PUBLIC_API_URL + url, {
+      const response = await Axios(`${process.env.BASE_URL}/api` + url, {
         headers: {
           "Content-Type": "*",
           "Access-Control-Allow-Origin": "*",

@@ -24,23 +24,14 @@ const BusPassOtherBusPasses: NextPage<BusPassOtherBusPassesType> = ({
   }, []);
 
   const displayedCards = showAll ? cards3Data : cards3Data.slice(0, 4);
-
-  const { data, doFetch, error, loading } = useFetch();
-
-  useEffect(() => {
-    console.log("Fetching API data...");
-    doFetch(`/buss-pass-landing-pages?populate[busPassOptions]populate=*`);
-  }, []);
-
-  console.log({ data }, "Bus pass data");
+ 
 
   return (
     <section className={[styles.busPassOtherBusPasses, className].join(" ")}>
       <h1 className={styles.otherBusPasses}>{OTHER_BUS_PASSES}</h1>
       <div className={styles.cardsContainer}>
-      {data !== null ? (
-        data.data[0]?.attributes?.otherBusPasses.map((card: any, index: number) => {
-          console.log("Rendering card:", card);
+      {
+        cards3Data.map((card: any, index: number) => {
           return (
             <BusPassOptionsCard
             key={index}
@@ -49,9 +40,7 @@ const BusPassOtherBusPasses: NextPage<BusPassOtherBusPassesType> = ({
           />
           );
         })
-      ) : (
-        <p>No bus pass options available.</p>
-      )}
+      }
       </div>
       {!showAll && (
         <p className={styles.viewMoreButton} onClick={() => setShowAll(true)}>
