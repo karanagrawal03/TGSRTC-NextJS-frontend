@@ -4,17 +4,16 @@ import BusPassOptions from "../../components/bus-pass-options";
 import BusPassOtherBusPasses from "../../components/bus-pass-other-bus-passes";
 import { APPLY_AND_RENEW, BUS_PASS_SERVICES } from "../../constants";
 import styles from "./index.module.css";
-import useFetch from "../../services/service";
+import useFetch, { UPLOADS_BASE_URL } from "../../services/service";
 const BusPassServices = () => {
 
-  const { data, doFetch, error, loading } = useFetch();
+  const { data, doFetch } = useFetch();
 
   useEffect(() => {
-    console.log("Fetching API data...");
-    doFetch(`/buss-pass-landing-pages?populate[busPassOptions]populate=*`);
+    doFetch(`/logistics-landings?populate=*`);
   }, []);
 
-  console.log({ data }, "Bus pass data");
+  console.log({ data }, "Bus pass data", UPLOADS_BASE_URL);
   const [width, setWidth] = useState<boolean>(false);
 
   useEffect(() => {
