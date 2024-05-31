@@ -39,7 +39,7 @@
   z-index: 1;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: var(--gap-3xs);
 }
 
 
@@ -87,7 +87,7 @@
   display: flex;
   flex-direction: column;
   gap: var(--gap-base);
-  padding: 0px 80px 0px 80px;
+  padding: 0px var(--padding-61xl) 0px var(--padding-61xl);
   box-sizing: border-box;
 }
 
@@ -97,8 +97,6 @@
   font-family: var(--font-montserrat);
   font-weight: 600;
   color: var(--text-black);
-  /* margin: 0px 80px; */
-
 }
 
 .tableContainer {
@@ -201,9 +199,9 @@
 .tableHeadCell {
   color: var(--support-white);
   font-family: var(--font-montserrat) !important;
-font-size: var(--font-size-sm) !important;
-font-weight: 600 !important;
-text-align: left;
+  font-size: var(--font-size-sm) !important;
+  font-weight: 600 !important;
+  text-align: left;
   line-height: 17.07px !important;
   border-bottom-width: 0px !important;
   box-sizing: border-box !important;
@@ -230,7 +228,7 @@ text-align: left;
   }
 
   .title {
-    font-size: var(--font-size-39x);
+    font-size: var(--font-size-39xl);
     line-height: 62px;
   }
 
@@ -259,12 +257,8 @@ text-align: left;
   }
 
   .frameParent {
-    padding: var(--padding-61xl) var(--padding-61xl) 0px var(--padding-61xl);
+    padding: var(--padding-21xl) var(--padding-21xl) 0px var(--padding-21xl);
     gap: var(--gap-21xl);
-  }
-
-  .monthlySeasonTicketstableTitle {
-    /* margin: 0px 40px; */
   }
 
   .concessionSchemesTitle {
@@ -273,6 +267,9 @@ text-align: left;
 
   }
 
+  .teriffsOfMonthlySeasonTickets {
+    padding: 0px var(--padding-21xl) 0px var(--padding-21xl);
+  }
 
   .title {
     font-size: var(--font-size-13xl);
@@ -342,15 +339,7 @@ text-align: left;
   .teriffsOfMonthlySeasonTickets {
     margin-top: 40px;
     margin-bottom: 40px;
-    padding: 0px 24px 0px 24px;
-  }
-
-  .monthlySeasonTicketstableTitle {
-    /* margin: 0px 24px; */
-  }
-
-  .tableContainer {
-    /* margin: 0px 24px !important; */
+    padding: 0px var(--padding-5xl) 0px var(--padding-5xl);
   }
 
   .frameParent {
@@ -380,7 +369,6 @@ text-align: left;
     font-weight: 600;
     line-height: 55.99px;
     text-align: left;
-
 
   }
 
@@ -414,19 +402,12 @@ text-align: left;
     margin-bottom: 40px;
   }
 
-  .monthlySeasonTicketstableTitle {
-    /* margin: 0px 24px; */
-  }
-
-  .tableContainer {
-    /* margin: 0px 24px !important; */
-  }
 
   .frameParent {
     padding: 0px var(--padding-5xl) var(--padding-41xl) var(--padding-5xl);
     gap: var(--gap-21xl)
   }
-  
+
 }
 
 @media screen and (max-width:360px) {
@@ -482,14 +463,6 @@ text-align: left;
   .teriffsOfMonthlySeasonTickets {
     margin-top: 40px;
     margin-bottom: 40px;
-  }
-
-  .monthlySeasonTicketstableTitle {
-    /* margin: 0px 24px; */
-  }
-
-  .tableContainer {
-    /* margin: 0px 24px !important; */
   }
 
   .frameParent {
