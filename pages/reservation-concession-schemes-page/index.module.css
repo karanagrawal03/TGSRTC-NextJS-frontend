@@ -39,7 +39,7 @@
   z-index: 1;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: var(--gap-3xs);
 }
 
 
@@ -87,6 +87,8 @@
   display: flex;
   flex-direction: column;
   gap: var(--gap-base);
+  padding: 0px var(--padding-61xl) 0px var(--padding-61xl);
+  box-sizing: border-box;
 }
 
 .monthlySeasonTicketstableTitle {
@@ -95,15 +97,15 @@
   font-family: var(--font-montserrat);
   font-weight: 600;
   color: var(--text-black);
-  margin: 0px 80px;
-
 }
 
 .tableContainer {
-  margin: 0px 80px !important;
+  margin: 0px !important;
 }
 
 .frameParent {
+  width: 100%;
+  box-sizing: border-box;
   align-items: flex-start;
   gap: var(--gap-81xl);
   padding: var(--padding-57xl) var(--padding-61xl) 0px var(--padding-61xl);
@@ -195,6 +197,11 @@
 }
 
 .tableHeadCell {
+  color: var(--support-white);
+  font-family: var(--font-montserrat) !important;
+  font-size: var(--font-size-sm) !important;
+  font-weight: 600 !important;
+  text-align: left;
   line-height: 17.07px !important;
   border-bottom-width: 0px !important;
   box-sizing: border-box !important;
@@ -221,7 +228,7 @@
   }
 
   .title {
-    font-size: var(--font-size-39x);
+    font-size: var(--font-size-39xl);
     line-height: 62px;
   }
 
@@ -246,16 +253,12 @@
   }
 
   .tableContainer {
-    margin: 0px 40px !important;
+    margin: 0px !important;
   }
 
   .frameParent {
     padding: var(--padding-21xl) var(--padding-21xl) 0px var(--padding-21xl);
     gap: var(--gap-21xl);
-  }
-
-  .monthlySeasonTicketstableTitle {
-    margin: 0px 40px;
   }
 
   .concessionSchemesTitle {
@@ -264,6 +267,9 @@
 
   }
 
+  .teriffsOfMonthlySeasonTickets {
+    padding: 0px var(--padding-21xl) 0px var(--padding-21xl);
+  }
 
   .title {
     font-size: var(--font-size-13xl);
@@ -333,14 +339,7 @@
   .teriffsOfMonthlySeasonTickets {
     margin-top: 40px;
     margin-bottom: 40px;
-  }
-
-  .monthlySeasonTicketstableTitle {
-    margin: 0px 24px;
-  }
-
-  .tableContainer {
-    margin: 0px 24px !important;
+    padding: 0px var(--padding-5xl) 0px var(--padding-5xl);
   }
 
   .frameParent {
@@ -350,6 +349,68 @@
 }
 
 @media screen and (max-width:430px) {
+  .reservationConcessionHeroImage {
+    display: none;
+  }
+
+  .reservationConcessionHeroImageMobile {
+    display: block;
+  }
+
+  .concessionSchemesTitle {
+    top: 57.43px;
+    left: 23px;
+    width: 237px;
+  }
+
+  .title {
+    font-family: var(--font-playfair-display);
+    font-size: var(--font-size-42xl);
+    font-weight: 600;
+    line-height: 55.99px;
+    text-align: left;
+
+  }
+
+  .applyRenew {
+    font-family: var(--font-montserrat);
+    font-size: var(--font-size-base);
+    font-weight: 500;
+    line-height: 26px;
+    text-align: left;
+
+  }
+
+  .busDustWebsite {
+    display: none;
+  }
+
+  .busDustMobile {
+    display: block;
+    height: 128px;
+    width: 100%;
+  }
+
+  .reservationConcessionSchemes1 {
+    padding: 0px;
+    padding-top: 0px;
+    gap: 0px;
+  }
+
+  .teriffsOfMonthlySeasonTickets {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+
+  .frameParent {
+    padding: 0px var(--padding-5xl) var(--padding-41xl) var(--padding-5xl);
+    gap: var(--gap-21xl)
+  }
+
+}
+
+@media screen and (max-width:360px) {
   .reservationConcessionHeroImage {
     display: none;
   }
@@ -402,14 +463,6 @@
   .teriffsOfMonthlySeasonTickets {
     margin-top: 40px;
     margin-bottom: 40px;
-  }
-
-  .monthlySeasonTicketstableTitle {
-    margin: 0px 24px;
-  }
-
-  .tableContainer {
-    margin: 0px 24px !important;
   }
 
   .frameParent {
