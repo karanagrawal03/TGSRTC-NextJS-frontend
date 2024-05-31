@@ -11,35 +11,21 @@ export type BusPassOptionsType = {
 };
 
 const BusPassOptions: NextPage<BusPassOptionsType> = ({ className = "" }) => {
-  const { data, doFetch, error, loading } = useFetch();
-
-  useEffect(() => {
-    console.log("Fetching API data...");
-    doFetch(`/buss-pass-landing-pages?populate[busPassOptions]populate=*`);
-  }, []);
-
-  console.log({ data }, "Bus pass data");
-
   return (
     <section className={[styles.busPassOptions, className].join(" ")}>
       <div className={styles.busPassOptionsWrapper}>
         <h1 className={styles.busPassOptions1}>{BUS_PASS_OPTIONS}</h1>
       </div>
       <div className={styles.cardsContainer}>
-        {data !== null ? (
-          data.data[0]?.attributes?.busPassOptions.map((card: any, index: number) => {
-            console.log("Rendering card:", card);
-            return (
-              <OtherBusPassesCard
-                key={index}
-                heading={card.heading}
-                description={card.description}
-              />
-            );
-          })
-        ) : (
-          <p>No bus pass options available.</p>
-        )}
+        {card2Data.map((card, index) => {
+          return (
+            <OtherBusPassesCard
+              key={index}
+              heading={card.heading}
+              description={card.description}
+            />
+          );
+        })}
       </div>
     </section>
   );
