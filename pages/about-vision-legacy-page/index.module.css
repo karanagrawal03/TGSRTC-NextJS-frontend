@@ -550,9 +550,8 @@ line-height: 32px;
 @media screen and (max-width: 540px) {
 
   .aboutVisionLegacy {
-    padding-left: 24px;
-    padding-right: 24px;
-    /* max-width: 540px; */
+    padding-left: var(--padding-5xl);
+    padding-right: var(--padding-5xl);
     font-size: var(--font-size-5xl);
     line-height: 32px;
   }
@@ -678,7 +677,6 @@ line-height: 32px;
   }
 
   .legacyLetterMobile {
-    /* max-width: 540px; */
     display: block;
   }
 
