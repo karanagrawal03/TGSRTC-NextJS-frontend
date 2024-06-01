@@ -1,47 +1,52 @@
 import styles from "./index.module.css"
-import { CORPORATE_HEADING, GUIDELINES_HEADING, GUIDELINES_ITEMS, LEGACY, PHILOSOPHY_ITEMS, TSRTC_VISION1, TSRTC_VISION2, VISION, VISION_AND } from "../../constants/AboutVisionLegacy";
-import { TRAVEL_EFFORTLESSLY } from "../../constants";
-
+import { useEffect, useState } from "react";
+import useFetch, { UPLOADS_BASE_URL }  from "../../services/service";
 const AboutVisionLegacy: any = () => {
+  const { data, doFetch, loading, error } = useFetch();
+
+  useEffect(() => {
+    doFetch("/about-vision-and-legacys?populate=*");
+  }, [doFetch]);
+
   return (
     <div className={styles.aboutVisionLegacy}>
       <div className={styles.aboutHero}>
-        <img className={styles.aboutHeroWebsite} alt="about-hero-image" src="/about-hero-image-website.png" loading="lazy"/>
-        <img className={styles.aboutHeroMobile} alt="about-hero-image" src="/about-hero-mobile.png" loading="lazy"/>
+        <img className={styles.aboutHeroWebsite} alt="about-hero-image" src={UPLOADS_BASE_URL+data?.heroBackgroundImageWeb?.data?.attributes?.url} loading="lazy"/>
+        <img className={styles.aboutHeroMobile} alt="about-hero-image" src={UPLOADS_BASE_URL+data?.heroBackgroundImageMobile?.data?.attributes?.url} loading="lazy"/>
 
         <div className={styles.visionLegacyContainer}>
           <div>
-          <div className={styles.vision}>{VISION_AND}</div>
-          <div className={styles.legacy}>{LEGACY}</div>
+          <div className={styles.vision}>{data?.heroTitle}</div>
+          {/* <div className={styles.legacy}>{LEGACY}</div> */}
           </div>
           <div className={styles.mobileDescription}>
-            <div>{TRAVEL_EFFORTLESSLY}</div>
+            <div>{data?.heroSubTitle}</div>
           </div>
         </div>
       </div>
       <div className={styles.aboutVision}>
-        <img className={styles.busDustMobile} alt="bus" src="/bus-image-mobile.png" loading="lazy"/>
-        <img className={styles.busDustWebsite} alt="bus" src="/bus-image-website.png" loading="lazy"/>
+        <img className={styles.busDustMobile} alt="bus" src={UPLOADS_BASE_URL+data?.busDustImageMobile?.data?.attributes?.url} loading="lazy"/>
+        <img className={styles.busDustWebsite} alt="bus" src={UPLOADS_BASE_URL+data?.busDustImageWeb?.data?.attributes?.url} loading="lazy"/>
         <section className={styles.visionConatiner}>
           <div className={styles.texts}>
             <div className={styles.titleAndLine}>
-              <div className={styles.vision1}>{VISION}</div>
+              <div className={styles.vision1}>{data?.visionTitle}</div>
               <div className={styles.headingUnderline}></div>
             </div>
             <div className={styles.tgsrtcIsCommittedContainer}>
               <div
                 className={styles.tgsrtcIsCommitted}
-              >{TSRTC_VISION1}</div>
+              >{data?.visionContnet}</div>
             </div>
           </div>
         </section>
         <section className={styles.philosophyAndGuidelines}>
           <div className={styles.philosophy}>
             <div className={styles.philosophyHeading}>
-              {CORPORATE_HEADING}
+              {data?.corporatePhilosophyTitle}
             </div>
             <div className={styles.phylosophyList}>
-              {PHILOSOPHY_ITEMS.map((item: any, index: any) => (
+              {data?.corporatePhilosophyList?.map((item: any, index: any) => (
                 <div className={styles.listItem}>
                   <div className={styles.dots}></div>
                   <div key={index} className={styles.listItemContent}>{item}</div>
@@ -52,10 +57,10 @@ const AboutVisionLegacy: any = () => {
           <div className={styles.horzontalDivider}></div>
           <div className={styles.guidelines}>
             <div className={styles.guidelinesHeading}>
-              {GUIDELINES_HEADING}
+              {data?.guidingPrincipleTitle}
             </div>
             <div className={styles.guidelinesList}>
-              {GUIDELINES_ITEMS.map((item: any, index: any) => (
+              {data?.guidingPrincipleList?.map((item: any, index: any) => (
                 <div className={styles.listItem}>
                   <div className={styles.dots}></div>
                   <div key={index} className={styles.listItem}>{item}</div>
@@ -65,8 +70,8 @@ const AboutVisionLegacy: any = () => {
           </div>
         </section>
         <div className={styles.legacyLetterContainer}>
-          <img className={styles.legacyLetter} alt="legacy-letter" src="/legacy-letter-website.png" loading="lazy"/>
-          <img className={styles.legacyLetterMobile} alt="legacy-letter-mobile" src="/legacy-letter-mobile.png" loading="lazy"/>
+          <img className={styles.legacyLetter} alt="legacy-letter" src={UPLOADS_BASE_URL+data?.legacyImageWeb?.data?.attributes?.url} loading="lazy"/>
+          <img className={styles.legacyLetterMobile} alt="legacy-letter-mobile" src={UPLOADS_BASE_URL+data?.legacyImageMobile?.data?.attributes?.url} loading="lazy"/>
         </div>
       </div>
     </div>
