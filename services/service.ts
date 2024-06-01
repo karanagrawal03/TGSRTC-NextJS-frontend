@@ -1,8 +1,8 @@
 import { useState } from "react";
 import Axios, { AxiosResponse, AxiosError } from "axios";
 
-export const UPLOADS_BASE_URL = process.env.BASE_URL+'/uploads';
-export const BASE_URL = process.env.BASE_URL+'/api';
+export const UPLOADS_BASE_URL = process.env.BASE_URL;
+export const BASE_URL = process.env.BASE_URL + "/api";
 
 const useFetch = () => {
   const [data, setData] = useState<AxiosResponse<any, any> | null>(null);
@@ -21,7 +21,7 @@ const useFetch = () => {
         headers: {
           "Content-Type": "*",
           "Access-Control-Allow-Origin": "*",
-          Authorization: `Bearer ${process.env.NEXT_PUBLIC_ACCESS_KEY}`
+          Authorization: `Bearer ${process.env.NEXT_PUBLIC_ACCESS_KEY}`,
         },
         responseType: "json",
       });
@@ -32,7 +32,6 @@ const useFetch = () => {
       setLoading(false);
     }
   };
-  
 
   return { data, loading, error, doFetch };
 };

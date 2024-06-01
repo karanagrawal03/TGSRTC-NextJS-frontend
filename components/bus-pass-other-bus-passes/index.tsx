@@ -44,7 +44,7 @@ const BusPassOtherBusPasses: NextPage<BusPassOptionsProps> = ({
     <section className={[styles.busPassOtherBusPasses, className].join(" ")}>
       <h1 className={styles.otherBusPasses}>{title}</h1>
       <div className={styles.cardsContainer}>
-        {options?.map((card: any, index: number) => {
+        {displayedCards?.map((card: any, index: number) => {
           return (
             <BusPassOptionsCard
               key={index}
