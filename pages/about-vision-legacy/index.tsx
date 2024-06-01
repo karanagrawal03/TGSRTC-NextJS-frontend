@@ -1,5 +1,5 @@
 import styles from "./index.module.css"
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import useFetch, { UPLOADS_BASE_URL }  from "../../services/service";
 const AboutVisionLegacy: any = () => {
   const { data, doFetch, loading, error } = useFetch();
@@ -7,7 +7,11 @@ const AboutVisionLegacy: any = () => {
   useEffect(() => {
     doFetch("/about-vision-and-legacys?populate=*");
   }, [doFetch]);
-
+  console.log(data,"data")
+  const heroTitle = data !=null && data != undefined ? data?.heroTitle: "";
+  const part1 = heroTitle !=null && heroTitle != undefined ? heroTitle?.toString().substring(0, 9).trim():""; // "Vision &"
+  const part2 = heroTitle !=null && heroTitle != undefined ? heroTitle?.toString().substring(10,16).trim() : ""; // "Legacy"
+  
   return (
     <div className={styles.aboutVisionLegacy}>
       <div className={styles.aboutHero}>
@@ -16,11 +20,11 @@ const AboutVisionLegacy: any = () => {
 
         <div className={styles.visionLegacyContainer}>
           <div>
-          <div className={styles.vision}>{data?.heroTitle}</div>
-          {/* <div className={styles.legacy}>{LEGACY}</div> */}
+          <div className={styles.vision}>{part1}</div>
+          <div className={styles.legacy}>{part2}</div>
           </div>
           <div className={styles.mobileDescription}>
-            <div>{data?.heroSubTitle}</div>
+            <div>{data?.heroSubtitle}</div>
           </div>
         </div>
       </div>
