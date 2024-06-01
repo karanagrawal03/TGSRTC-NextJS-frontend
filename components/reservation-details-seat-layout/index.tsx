@@ -2,14 +2,16 @@ import type { NextPage } from "next";
 import styles from "./index.module.css";
 import { LADIES, MLA, PHYSICALLY_CHALLENGED, PRESIDENTS_MANDAL, SEAT_LAYOUT_OF_TGSRTC, SEAT_LAYOUT_OF_TGSRTC_PARA, SENIOR_CITIZENS } from "../../constants";
 import BulletPoints from "../bullet-points";
-import { LADIES_BULLET_POINTS, MLA_MP_BULLET_POINTS, PHYSICALLY_CHALLENGED_BULLET_POINTS, PRESIDENTS_BULLET_POINTS, SENIOR_CITIZENS_BULLET_POINTS } from "../../constants/reservation-bus-details";
+// import {  SEAT_LAYOUT_DATA } from "../../constants/reservation-bus-details";
 
 export type SeatLayoutOfTGSRTCContaineType = {
+  data?:any;
   className?: string;
 };
 
 const SeatLayoutOfTGSRTCContaine: NextPage<SeatLayoutOfTGSRTCContaineType> = ({
   className = "",
+  data
 }) => {
   return (
     
@@ -21,42 +23,21 @@ const SeatLayoutOfTGSRTCContaine: NextPage<SeatLayoutOfTGSRTCContaineType> = ({
         src="/reservation-details-bus-dust-mobile.png"
       />
       <div className={styles.seatLayoutOfTgsrtcTexts}>
-        <h3 className={styles.seatLayoutOfTgsrtc}>{SEAT_LAYOUT_OF_TGSRTC}</h3>
+        <h3 className={styles.seatLayoutOfTgsrtc}>{data?.seatLayout}</h3>
         <p
           className={styles.theCorporationHas}
-        >{SEAT_LAYOUT_OF_TGSRTC_PARA}</p>
+        >{data?.seatLayoutContent}</p>
       </div>
-       <div className={styles.seatLayoutBulletPoints}>
-        <div className={styles.bulletPointContainer}>
+      <div className={styles.seatLayoutBulletPoints}>
+      {data?.seatLayoutData.map((section:any, index:number) => (
+        <div key={index} className={styles.bulletPointContainer}>
           <div className={styles.title}>
-            <b className={styles.guidingPrinciplesOf}>{MLA}</b>
+            <b className={styles.guidingPrinciplesOf}>{section.title}</b>
           </div>
-            <BulletPoints items={MLA_MP_BULLET_POINTS} containerClassName={styles.bulletPointChange}/>
+          <BulletPoints items={section.bulletPoints} containerClassName={styles.bulletPointChange} />
         </div>
-        <div className={styles.bulletPointContainer}>
-          <div className={styles.title}>
-            <b className={styles.guidingPrinciplesOf}>{LADIES} </b>
-          </div>
-            <BulletPoints items={LADIES_BULLET_POINTS} containerClassName={styles.bulletPointChange}/>
-        </div>
-        <div className={styles.bulletPointContainer}>
-          <div className={styles.title}>
-            <b className={styles.guidingPrinciplesOf}>{PHYSICALLY_CHALLENGED}</b>
-          </div>
-            <BulletPoints items={PHYSICALLY_CHALLENGED_BULLET_POINTS} containerClassName={styles.bulletPointChange}/>
-        </div>
-        <div className={styles.bulletPointContainer}>
-          <div className={styles.title}>
-            <b className={styles.guidingPrinciplesOf}>{SENIOR_CITIZENS}</b>
-          </div>
-            <BulletPoints items={SENIOR_CITIZENS_BULLET_POINTS} containerClassName={styles.bulletPointChange}/>
-        </div>
-        <div className={styles.bulletPointContainer}>
-          <div className={styles.title}>
-            <b className={styles.guidingPrinciplesOf}>{PRESIDENTS_MANDAL}</b>
-          </div>
-            <BulletPoints items={PRESIDENTS_BULLET_POINTS} containerClassName={styles.bulletPointChange}/>
-        </div>
+      ))}
+    </div>
       <img
         className={styles.busDust}
         loading="lazy"
@@ -64,7 +45,6 @@ const SeatLayoutOfTGSRTCContaine: NextPage<SeatLayoutOfTGSRTCContaineType> = ({
         src="/reservation-details-bus-dust-web.png"
       />
       </div>
-    </div>
    
   );
 };

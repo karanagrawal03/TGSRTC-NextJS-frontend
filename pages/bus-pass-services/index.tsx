@@ -12,8 +12,7 @@ const BusPassServices = () => {
   useEffect(() => {
     doFetch(`/logistics-landings?populate=*`);
   }, []);
-
-  console.log({ data }, "Bus pass data", UPLOADS_BASE_URL);
+ 
   const [width, setWidth] = useState<boolean>(false);
 
   useEffect(() => {
