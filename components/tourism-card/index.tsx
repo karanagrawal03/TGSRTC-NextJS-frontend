@@ -9,12 +9,13 @@ export type TourismCardType = {
   image: string;
   pickupTime: string;
   pickupPoint: string;
+  placesCovered: string;
   places: string[];
   packageDescription: string;
   button: string;
 };
 
-const TourismCard: NextPage<TourismCardType> = ({placeName,image,pickupPoint,pickupTime, places,packageDescription,button}) => {
+const TourismCard: NextPage<TourismCardType> = ({placeName,image,pickupPoint,pickupTime,placesCovered, places,packageDescription,button}) => {
   return (
     <div className={styles.tourismCard}>
       <div className={styles.imageText}>
@@ -51,7 +52,7 @@ const TourismCard: NextPage<TourismCardType> = ({placeName,image,pickupPoint,pic
             </div>
           </div>
           <div className={styles.description}>
-            <div className={styles.placesCovered}>{}</div>
+            <div className={styles.placesCovered}>{placesCovered}</div>
             <div className={styles.chipsAndText}>
               <div className={styles.chips}>
                 {places.map((place) => (

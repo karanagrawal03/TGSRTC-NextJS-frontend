@@ -7,6 +7,7 @@ export interface TourismPlace {
   image: string;
   pickupTime: string;
   pickupPoint: string;
+  placesCovered: string;
   places: string[];
   packageDescription: string;
   button: string;
@@ -30,6 +31,7 @@ const ReservationDestinations:NextPage<ReservationDestinationsType> = ({ data, c
               image={tour.image} 
               pickupTime={tour.pickupTime} 
               pickupPoint={tour.pickupPoint} 
+              placesCovered={tour.placesCovered}
               places={tour.places} 
               packageDescription={tour.packageDescription} 
               button={tour.button} 
