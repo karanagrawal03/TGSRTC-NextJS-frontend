@@ -8,9 +8,24 @@ import { cards3Data } from "../../constants/bus-pass-other-options";
 export type BusPassOtherBusPassesType = {
   className?: string;
 };
+interface BusPassOption {
+  title: string;
+  content: string;
+  image: string;
+  details: string;
+  button: string;
+}
 
-const BusPassOtherBusPasses: NextPage<BusPassOtherBusPassesType> = ({
+interface BusPassOptionsProps {
+  options: BusPassOption[];
+  title: string;
+  className?: string;
+}
+
+const BusPassOtherBusPasses: NextPage<BusPassOptionsProps> = ({
   className = "",
+  options,
+  title,
 }) => {
   const [showAll, setShowAll] = useState(false);
   useEffect(() => {
@@ -23,24 +38,23 @@ const BusPassOtherBusPasses: NextPage<BusPassOtherBusPassesType> = ({
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const displayedCards = showAll ? cards3Data : cards3Data.slice(0, 4);
- 
+  const displayedCards = showAll ? options : options?.slice(0, 4);
 
   return (
     <section className={[styles.busPassOtherBusPasses, className].join(" ")}>
-      <h1 className={styles.otherBusPasses}>{OTHER_BUS_PASSES}</h1>
+      <h1 className={styles.otherBusPasses}>{title}</h1>
       <div className={styles.cardsContainer}>
-      {
-        cards3Data.map((card: any, index: number) => {
+        {options?.map((card: any, index: number) => {
           return (
             <BusPassOptionsCard
-            key={index}
-            heading={card.heading}
-            description={card.description}
-          />
+              key={index}
+              heading={card.title}
+              description={card.content}
+              viewAll={card.details}
+              applyNow={card.button}
+            />
           );
-        })
-      }
+        })}
       </div>
       {!showAll && (
         <p className={styles.viewMoreButton} onClick={() => setShowAll(true)}>
@@ -52,4 +66,3 @@ const BusPassOtherBusPasses: NextPage<BusPassOtherBusPassesType> = ({
 };
 
 export default BusPassOtherBusPasses;
-

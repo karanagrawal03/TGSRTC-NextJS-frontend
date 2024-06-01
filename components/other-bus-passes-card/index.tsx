@@ -1,17 +1,24 @@
 import type { NextPage } from "next";
 import styles from "./index.module.css";
 import { APPLY_NOW, VIEW_DETAILS } from "../../constants";
+import { UPLOADS_BASE_URL } from "../../services/service";
 
 export type Cards3Type = {
   className?: string;
   heading: string;
   description: string;
+  image: string;
+  viewAll: string;
+  applyNow: string;
 };
 
 const OtherBusPassesCard: NextPage<Cards3Type> = ({
   className = "",
   heading,
   description,
+  image,
+  viewAll,
+  applyNow,
 }) => {
   return (
     <div className={[styles.cards, className].join(" ")}>
@@ -22,7 +29,7 @@ const OtherBusPassesCard: NextPage<Cards3Type> = ({
               className={styles.wrapperGroup1000013321Child}
               loading="lazy"
               alt="cards-image"
-              src="/group-10000133211@2x.png"
+              src={UPLOADS_BASE_URL+image}
             />
           </div>
           <div className={styles.infographicsChild} />
@@ -43,10 +50,10 @@ const OtherBusPassesCard: NextPage<Cards3Type> = ({
         </div>
         <div className={styles.buttonsContainer}>
           <div className={styles.button1}>
-            <div className={styles.viewDetails}>{VIEW_DETAILS}</div>
+            <div className={styles.viewDetails}>{viewAll}</div>
           </div>
           <button className={styles.button2}>
-            <div className={styles.applyNow}>{APPLY_NOW}</div>
+            <div className={styles.applyNow}>{applyNow}</div>
           </button>
         </div>
       </div>

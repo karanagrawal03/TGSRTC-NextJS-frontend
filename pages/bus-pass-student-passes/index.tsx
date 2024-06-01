@@ -15,7 +15,6 @@ const BusPassStudentPasses = () => {
   useEffect(() => {
     const handleResize = () => {
       setWidth(window.innerWidth > 750);
-      console.log(width);
     };
 
     handleResize();

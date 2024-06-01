@@ -48,27 +48,64 @@ function a11yProps(index: number) {
     "aria-controls": `simple-tabpanel-${index}`,
   };
 }
-
-const tabsData = [
-  {
-    label: "Muchintala",
-    component: <MunchintalaTab />,
-  },
-  {
-    label: "Airport Pushpak",
-    component: <AirPortPushpak />,
-  },
-  {
-    label: "Hyderabad to Yadagirigutta",
-    component: <HyderabadTab />,
-  },
-  {
-    label: "Yadagirigutta to Hyderabad",
-    component: <YadagiriguttaTab />,
-  },
-];
-
-const ReservationBusesTabs: React.FC = () => {
+interface TabsData {
+  data: any;
+}
+const ReservationBusesTabs: React.FC<TabsData> = ({ data }) => {
+  const tabsData = [
+    {
+      label: "Muchintala",
+      component: (
+        <MunchintalaTab
+          munchintalaParagraph1={data?.munchintalaFirstParagraph}
+          munchintalaParagraph2={data?.munchintalaSecondParagraph}
+          munchintalaTableHeading={data?.munchintalaTableHeading}
+          munchintalaTablData={data?.munchintalaData}
+        />
+      ),
+    },
+    {
+      label: "Airport Pushpak",
+      component: (
+        <AirPortPushpak
+          airportPushpakParagraph1={data?.airPushpakFirstParagraph}
+          airportPushpakParagraph2={data?.airPushpakSecondParagraph}
+          airportPushpakTableHeading={data?.airPushpakTimingsTableDataHeading}
+          airportPushpakTableData={data?.airportPushpakData}
+          tgstrcMiyapurText={data?.tgstrcMiyapurText}
+          tgsrtcAirPortPushpakBusTimingsHeading={
+            data?.tgsrtcAirPortPushpakBusTimingsHeading
+          }
+          airPortPushpakBustimingsTowardsRGIAData={
+            data?.airPortPushpakBustimingsTowardsRGIAData
+          }
+          airPushpakBusPointControllersTableHeading={
+            data?.airPushpakBusPointControllersTableHeading
+          }
+          airPushpakBusPointControllers={data?.airPushpakBusPointControllers}
+        />
+      ),
+    },
+    {
+      label: "Hyderabad to Yadagirigutta",
+      component: (
+        <HyderabadTab
+          yadagiriguttaFirstParagraph={data?.yadagiriguttaFirstParagraph}
+          yadagiriguttaSecondParagraph={data?.yadagiriguttaSecondParagraph}
+          yadagiriguttaThirdParagraph={data?.yadagiriguttaThirdParagraph}
+          yadagiriguttaTableHeading={data?.yadagiriguttaTableHeading}
+          yadagiriguttaData={data?.yadagiriguttaData}
+        />
+      ),
+    },
+    {
+      label: "Yadagirigutta to Hyderabad",
+      component: <YadagiriguttaTab 
+      hyderabadTableHeading={data?.hyderabadTableHeading}
+      hyderabadData={data?.hyderabadData}
+      />,
+    },
+  ];
   const [value, setValue] = useState<number>(0);
 
   const handleChange = (event: SyntheticEvent, newValue: number) => {
@@ -164,10 +201,9 @@ const ReservationBusesTabs: React.FC = () => {
               fontFamily: "var(--font-playfair-display)",
               fontSize: 16,
               fontWeight: 500,
-              backgroundColor:"#FFFFFF",
+              backgroundColor: "#FFFFFF",
               textAlign: "left",
-              boxShadow: "0px 4px 10px 0px #E8E8E8"
-
+              boxShadow: "0px 4px 10px 0px #E8E8E8",
             }}
             onChange={handleSelectChange}
           >
