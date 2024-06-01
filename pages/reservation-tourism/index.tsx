@@ -2,14 +2,20 @@ import type { NextPage } from "next";
 import styles from "./index.module.css";
 import ReservationHeroTourism from "../../components/reservation-tourism";
 import ReservationDestinations from "../../components/reservation-destinations";
-import Header from "../../components/header";
-import Footer from "../../components/footer";
-import { TRAVEL_ACROSS_TG,TOURISM_QUOTE1, TOURISM_QUOTE2 } from "../../constants";
+import useFetch, { UPLOADS_BASE_URL } from "../../services/service";
+import { useEffect } from "react";
 
 const ReservationTourism: NextPageReservationTourismType = () => {
+  const { data, doFetch } = useFetch();
+
+  useEffect(() => {
+    doFetch(`/reservation-tourisms?populate=*`);
+  }, []);
+  console.log({ data }, "tourism data", UPLOADS_BASE_URL);
+
   return (
     <div className={styles.reservationTourism}>
-      <ReservationHeroTourism  />
+      <ReservationHeroTourism data={data} />
       <section className={styles.content}>
         <img
           className={styles.busDust}
@@ -18,18 +24,12 @@ const ReservationTourism: NextPageReservationTourismType = () => {
           src="/bus--dust1@2x.png"
         />
         <div className={styles.reservationQuote}>
-          <h1 className={styles.lifeIsShort}>
-            {TOURISM_QUOTE1}
-          </h1>
-          <h1 className={styles.travelIsThe}>
-            {TOURISM_QUOTE2}
-          </h1>
-          <h2 className={styles.travelAcrossTelangana}>
-            {TRAVEL_ACROSS_TG}
-          </h2>
+          <h1 className={styles.lifeIsShort}>{data?.travelQuote1}</h1>
+          <h1 className={styles.travelIsThe}>{data?.travelQuote2}</h1>
+          <h2 className={styles.travelAcrossTelangana}>{data?.travelInfo}</h2>
         </div>
       </section>
-      <ReservationDestinations />
+      <ReservationDestinations data={data} />
     </div>
   );
 };

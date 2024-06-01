@@ -1,27 +1,28 @@
 import type { NextPage } from "next";
 import styles from "./index.module.css";
-import { TOURISM, TOURISM_OFFER_LINE } from "../../constants";
+import { UPLOADS_BASE_URL } from "../../services/service";
 
-const ReservationHeroTourism = () => {
+export type ReservationHeroTourismType = {
+  data: any;
+  className?: string;
+};
+
+const ReservationHeroTourism :NextPage<ReservationHeroTourismType> = ({ data, className = "" }) => {
   return (
-    <section className={styles.reservationHeroTourism}>
+    <section className={[styles.reservationHeroTourism, className].join(" ")}>
       <img 
         className={styles.bgIcon} 
         loading="lazy"
         alt="Reservation-Hero-Tourism" 
-        src="/tourism-banner-image-web.png" />
+        src={UPLOADS_BASE_URL + data?.bannerWebImage?.data?.attributes?.url} />
       <img 
         className={styles.bgIconMobile} 
         loading="lazy"
         alt="Reservation-Hero-Tourism" 
-        src="/tourism-banner-image-mobile.png" />
+        src={UPLOADS_BASE_URL + data?.bannerMobileImage?.data?.attributes?.url} />
       <div className={styles.tourismContentWrapper}>
-        <h1 className={styles.tourism} >
-          {TOURISM}
-        </h1>
-        <p className={styles.tgsrtcIsHappy}>
-          {TOURISM_OFFER_LINE}
-        </p>
+        <h1 className={styles.tourism} >{data?.heroTitle}</h1>
+        <p className={styles.tgsrtcIsHappy}>{data?.heroSubTitle}</p>
       </div>
     </section>
   );

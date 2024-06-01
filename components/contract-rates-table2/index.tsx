@@ -2,23 +2,20 @@ import type { NextPage } from "next";
 import styles from "./index.module.css";
 import Tables from "../tables";
 import CommonLabel from "../label";
-import { LABEL1, RATES_TABLE2_TITLE } from "../../constants";
-import { TABLE2 as Jsondata} from "../../constants/contract-rates";
 
 export type ContractRatesTable2Type = {
+  data :any;
   className?: string;
 };
 
-const ContractRatesTable2: NextPage<ContractRatesTable2Type> = ({ className = "" }) => {
+const ContractRatesTable2: NextPage<ContractRatesTable2Type> = ({data, className = "" }) => {
   return (
     <section className={[styles.tableTitleParent, className].join(" ")}>
       <div className={styles.tableTitle}>
-        <h2 className={styles.title}>
-          {RATES_TABLE2_TITLE}
-        </h2>
-        <Tables rows={Jsondata} containerClassName={styles.ratesTable2}/>
+        <h2 className={styles.title}>{data?.districtServicesTitle}</h2>
+        <Tables rows={data?.districtServices} containerClassName={styles.ratesTable2}/>
       </div>
-      <CommonLabel text={LABEL1} />
+      <CommonLabel text={data?.districtServicesLabel} />
     </section>
   );
 };

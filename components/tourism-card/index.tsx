@@ -1,16 +1,20 @@
 import type { NextPage } from "next";
 import styles from "./index.module.css";
-import { PACKAGE_TOUR_WILL ,PLACES_COVERED,TOURISM_TIME,TOURISM_PICKUP, BOOK_NOW} from "../../constants";
 import TourismCardChip from "../tourism-card-chip";
 import Button from '../button';
+import { UPLOADS_BASE_URL } from "../../services/service";
 
 export type TourismCardType = {
-  placeName?: string;
-  image?: string;
+  placeName: string;
+  image: string;
+  pickupTime: string;
+  pickupPoint: string;
   places: string[];
+  packageDescription: string;
+  button: string;
 };
 
-const TourismCard: NextPage<TourismCardType> = ({placeName,image,places}) => {
+const TourismCard: NextPage<TourismCardType> = ({placeName,image,pickupPoint,pickupTime, places,packageDescription,button}) => {
   return (
     <div className={styles.tourismCard}>
       <div className={styles.imageText}>
@@ -20,7 +24,7 @@ const TourismCard: NextPage<TourismCardType> = ({placeName,image,places}) => {
             className={styles.picturesIcon}
             loading="lazy"
             alt="tourism-card-image"
-            src={image}
+            src={UPLOADS_BASE_URL+image}
           />
         </div>
       </div>
@@ -34,7 +38,7 @@ const TourismCard: NextPage<TourismCardType> = ({placeName,image,places}) => {
                 alt="calender-icon"
                 src="/calender-icon.svg"
               />
-              <div className={styles.tourismTime}>{TOURISM_TIME}</div>
+              <div className={styles.tourismTime}>{pickupTime}</div>
             </div>
             <div className={styles.pickup}>
               <img
@@ -43,22 +47,22 @@ const TourismCard: NextPage<TourismCardType> = ({placeName,image,places}) => {
                 alt="pickup-bus-icon"
                 src="/pickup-bus-icon.svg"
               />
-              <div className={styles.tourismPickup}>{TOURISM_PICKUP}</div>
+              <div className={styles.tourismPickup}>{pickupPoint}</div>
             </div>
           </div>
           <div className={styles.description}>
-            <div className={styles.placesCovered}>{PLACES_COVERED}</div>
+            <div className={styles.placesCovered}>{}</div>
             <div className={styles.chipsAndText}>
               <div className={styles.chips}>
                 {places.map((place) => (
                   <TourismCardChip  place={place} />
                 ))}
               </div>
-              <p className={styles.packageTourWill}>{PACKAGE_TOUR_WILL}</p>
+              <p className={styles.packageTourWill}>{packageDescription}</p>
             </div>
           </div>
         </div>
-        <Button text={BOOK_NOW} className={styles.button} textClassName={styles.bookNow} />
+        <Button text={button} className={styles.button} textClassName={styles.bookNow} />
       </div>
     </div>
   );

@@ -3,22 +3,21 @@ import styles from "./index.module.css";
 import Tables from "../tables";
 import BulletPoints from "../bullet-points";
 import CommonLabel from "../label";
-import { LABEL2 } from "../../constants";
-import { TABLE4 as Jsondata, RATES_BULLET_POINTS1 as arr} from "../../constants/contract-rates";
 
 export type ContractRatesTable4Type = {
+  data :any;
   className?: string;
 };
 
-const ContractRatesTable4: NextPage<ContractRatesTable4Type> = ({ className = "" }) => {
+const ContractRatesTable4: NextPage<ContractRatesTable4Type> = ({ data, className = "" }) => {
   return (
     <div className={[styles.itemCellParent, className].join(" ")}>
-      <CommonLabel text={LABEL2} />
+      <CommonLabel text={data?.cityServicesLabel} />
       <div className={styles.tableTitle}>
-        <Tables rows={Jsondata} containerClassName={styles.ratesTable4}/>
+        <Tables rows={data?.cityServices2} containerClassName={styles.ratesTable4}/>
       </div>
       <div className={styles.bulletPointContainer}>
-        <BulletPoints items={arr} containerClassName={styles.bulletPoints}/>
+        <BulletPoints items={data?.cityServicesInstructions} containerClassName={styles.bulletPoints}/>
       </div>
     </div>
   );

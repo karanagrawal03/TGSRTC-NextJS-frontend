@@ -1,27 +1,28 @@
 import type { NextPage } from "next";
 import styles from "./index.module.css";
-import { BUS_CONTRACT_RATES, BUS_CONTRACT_RATES_TAGLINE } from "../../constants";
+import { UPLOADS_BASE_URL } from "../../services/service";
 
-const ReservationHeroTourism = () => {
+export type ReservationHeroTourismType = {
+  data: any;
+  className?: string;
+};
+
+const ReservationHeroTourism: NextPage<ReservationHeroTourismType> = ({ data, className = "" }) => {
   return (
-    <section className={styles.reservationHeroTourism}>
+    <section className={[styles.reservationHeroTourism,className].join(" ")}>
       <img 
         className={styles.bgIcon} 
         loading="lazy"
         alt="contract-rates-banner" 
-        src="/contract-rates-banner-web.png" />
+        src={UPLOADS_BASE_URL + data?.bannerWebImage?.data?.attributes?.url} />
       <img 
         className={styles.bgIconMobile} 
         loading="lazy"
         alt="contract-rates-banner" 
-        src="/contract-rates-banner-mobile.png"  />
+        src={UPLOADS_BASE_URL + data?.bannerMobileImage?.data?.attributes?.url}  />
       <div className={styles.contentWrapper}>
-        <h1 className={styles.tourism}>
-          {BUS_CONTRACT_RATES}
-        </h1>
-        <p className={styles.tgsrtcIsHappy}>
-          {BUS_CONTRACT_RATES_TAGLINE}
-        </p>
+        <h1 className={styles.tourism}>{data?.heroTitle}</h1>
+        <p className={styles.tgsrtcIsHappy}>{data?.heroSubTitle}</p>
       </div>
     </section>
   );
