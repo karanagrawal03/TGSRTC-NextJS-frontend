@@ -34,8 +34,8 @@ const ReservationConcessionSchemes: any =
           </div>
         </section>
         <section className={styles.reservationConcessionSchemes1}>
-          <img className={styles.busDustMobile} alt="reservation concession bus-image" src={UPLOADS_BASE_URL + data?.busDustImageMobile?.data?.attributes?.url} loading="lazy" />
-          <img className={styles.busDustWebsite} alt="reservation concession bus-image" src={UPLOADS_BASE_URL + data?.busDustImageWeb?.data?.attributes?.url} loading="lazy" />
+          <img className={styles.busDustMobile} alt="reservation concession bus image" src={UPLOADS_BASE_URL + data?.busDustImageMobile?.data?.attributes?.url} loading="lazy" />
+          <img className={styles.busDustWebsite} alt="reservation concession bus image" src={UPLOADS_BASE_URL + data?.busDustImageWeb?.data?.attributes?.url} loading="lazy" />
           <MonthlySeasonTicketsTexts monthlySeasonTicketsTitle={data?.monthlySeasonTicketTitle} monthlySeasonTicketsList={data?.monthlySeasonTicketList} valueAdditionTitle={data?.valueAdditionTitle} valueAdditionList={data?.valueAdditionList} />
           <div className={styles.teriffsOfMonthlySeasonTickets}>
             <div className={styles.monthlySeasonTicketstableTitle}>{data?.tariffsMonthlySeasonTitle}</div>
