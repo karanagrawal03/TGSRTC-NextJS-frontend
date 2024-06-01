@@ -3,10 +3,12 @@ import AccordionItem from "../accordians";
 import styles from "./index.module.css";
 import { AirportPushpakData } from "../../constants/AirPortPushpakRouteData";
 
-
-const TimingsTab = () => {
+interface timingsData{
+  timingsRGIAData:any
+}
+const TimingsTab: React.FC<timingsData> = ({timingsRGIAData}) => {
   const [expandedIndices, setExpandedIndices] = useState<(number | null)[]>(
-    Array(AirportPushpakData.length).fill(null)
+    Array(timingsRGIAData.length).fill(null)
   );
 
   const handleChange = (cardIndex: number, timingIndex: number) => {
@@ -23,10 +25,10 @@ const TimingsTab = () => {
 
   return (
     <div className={styles.container}>
-      {AirportPushpakData.map((card, cardIndex) => (
+      {timingsRGIAData.map((card:any, cardIndex:number) => (
         <div key={cardIndex} className={styles.card}>
           <div className={styles.routesContainer}>
-            {card.routes.map((route, index) => (
+            {card.routes.map((route:any, index:number) => (
               <div className={styles.valuesContainer} key={index}>
                 <p className={styles.name}>{route.name}</p>
                 <p className={styles.value}>{route.value}</p>
@@ -35,7 +37,7 @@ const TimingsTab = () => {
           </div>
           <div className={styles.eachAccordian}>
             <ol className={styles.studentConcessionalRoutePas}>
-              {card.timings.map((timing, timingIndex) => (
+              {card.timings.map((timing:any, timingIndex:number) => (
                 <AccordionItem
                   key={timingIndex}
                   name={timing.name}
