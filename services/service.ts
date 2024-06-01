@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Axios, { AxiosResponse, AxiosError } from "axios";
 
-export const UPLOADS_BASE_URL = process.env.BASE_URL+'/uploads';
+export const UPLOADS_BASE_URL = process.env.BASE_URL;
 export const BASE_URL = process.env.BASE_URL+'/api';
 
 const useFetch = () => {
