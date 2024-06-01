@@ -4,7 +4,16 @@ import BusPassOptions from "../../components/bus-pass-options";
 import BusPassOtherBusPasses from "../../components/bus-pass-other-bus-passes";
 import { APPLY_AND_RENEW, BUS_PASS_SERVICES } from "../../constants";
 import styles from "./index.module.css";
+import useFetch, { UPLOADS_BASE_URL } from "../../services/service";
 const BusPassServices = () => {
+
+  const { data, doFetch } = useFetch();
+
+  useEffect(() => {
+    doFetch(`/logistics-landings?populate=*`);
+  }, []);
+
+  console.log({ data }, "Bus pass data", UPLOADS_BASE_URL);
   const [width, setWidth] = useState<boolean>(false);
 
   useEffect(() => {
