@@ -10,7 +10,7 @@ const ReservationFAQ = () => {
     setExpandedIndex((prevIndex) => (prevIndex === index ? null : index));
   };
   useEffect(()=>{
-    doFetch("reservation-faqs?populate=*")
+    doFetch("/reservation-faqs?populate=*")
   },[data])
   return (
     <div className={styles.reservationFaq}>
