@@ -1,14 +1,16 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import AccordionItem from "../../components/accordians";
-import Header from "../../components/header";
-import {
-  APPLY_AND_RENEW,
-  GENERAL_COMMUTER_PASS,
-  KNOW_MORE_ABOUT_GENERAL_PASSES,
-} from "../../constants";
-import { generalBuspasses } from "../../constants/general-commuter-passes";
 import styles from "./index.module.css";
+import useFetch, { UPLOADS_BASE_URL } from "../../services/service";
+
 const BusPassGeneralCommuterPass = () => {
+
+  const { data, doFetch } = useFetch();
+
+  useEffect(() => {
+    doFetch(`/bus-pass-general-commuter-passes?populate=*`);
+  }, []);
+
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
   const handleChange = (index: number) => {
@@ -19,28 +21,30 @@ const BusPassGeneralCommuterPass = () => {
       <section className={styles.busPassesHeroGeneralCommut}>
         <img
           className={styles.bgIcon}
-          alt=""
-          src="/bus-pass-general-webp.png"
+          alt="hero-web-image"
+          src={UPLOADS_BASE_URL + data?.heroWebImage?.data?.attributes?.url}
+          loading="lazy"
         />
         <img
           className={styles.bgIconMobile}
-          alt=""
-          src="/mobile-banner-general-passes.png"
+          alt="hero-mobile-image"
+          src={UPLOADS_BASE_URL + data?.heroMobileImage?.data?.attributes?.url}
+          loading="lazy"
         />
         <div className={styles.generalCommuterPassContainer}>
-          <p className={styles.general}>{GENERAL_COMMUTER_PASS}</p>
-          <p className={styles.applyRenew}>{APPLY_AND_RENEW}</p>
+          <p className={styles.general}>{data?.heroTitle}</p>
+          <p className={styles.applyRenew}>{data?.heroSubTitle}</p>
         </div>
       </section>
       <section className={styles.busPassGeneralCommuterPass2}>
         <div className={styles.knowMoreAboutStudentPassesWrapper}>
           <h2 className={styles.knowMoreAbout}>
-            {KNOW_MORE_ABOUT_GENERAL_PASSES}
+            {data?.knowMoreTitle}
           </h2>
         </div>
         <div className={styles.eachAccordian}>
           <ol className={styles.orderedList}>
-            {generalBuspasses.map((e: any, index: number) => (
+            {data?.generalComputerPassAccordiansData?.map((e: any, index: number) => (
               <AccordionItem
                 key={index}
                 name={e.name}
