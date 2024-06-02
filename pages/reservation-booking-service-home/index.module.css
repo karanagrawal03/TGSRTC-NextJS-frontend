@@ -898,6 +898,12 @@
     line-height: 42px;
   }
 }
+@media screen and (max-width: 1023px) {
+  .tgsrtcOnlineBusContainer {
+    line-height: 60px;
+  }
+
+}
 @media screen and (max-width: 990px) {
   .bgImgTexts {
     padding: 0px;
@@ -909,8 +915,23 @@
   }
 }
 @media screen and (max-width: 599px) {
+  .csImgContainer { 
+    margin-bottom: 60px;
+  }
+  .frameWrapper { 
+    padding: 0;
+  }
+  .tgsrtcWrapper {
+    justify-content: unset;
+    padding: 0;
+  }
+  .bgImgTexts {
+    padding: 0px;
+    padding-left: 0px;
+    padding-top: var( --padding-xl);
+  }
   .reservationSpecialBusesOf {
-    padding: 60px 24px;
+    padding: var(--gap-41xl) var(--padding-5xl);
   }
   .applyRenew {
     display: block;
@@ -955,20 +976,19 @@
   .busDust {
     display: none;
   }
-  .reservationBookingServiceHoInner {
-    padding-bottom: var(--padding-23xl);
-    box-sizing: border-box;
-  }
   .tgsrtc {
     font-size: var(--font-size-22xl);
     line-height: 55px;
   }
   .settingStandardsDelivering {
     font-size: var(--font-size-18xl);
+    text-align: left;
   }
   .reservationBookingServiceHoInner {
     padding-left: 24px;
     padding-right: 24px;
+    box-sizing: border-box;
+    padding-bottom: var(--padding-41xl);
   }
   .customerSupportTexts {
     font-size: 32px;
@@ -987,6 +1007,12 @@
     font-size: 32px;
     line-height: 42.66px;
     text-align: center;
+  }
+  .tgsrtcIsCommittedTo {
+    text-align: left;
+  }
+  .frameWrapper1 {
+    padding: 0;
   }
 }
 @media screen and (max-width: 360px) {

@@ -8,13 +8,13 @@ const SpecialBusesOffersCard : React.FC<SpecialBusesOffersCardProps> = ({ item }
     <>
       <div className={styles.specialBusContainer}>
         <div className={styles.image}>
-          <img className={styles.img} loading="lazy" alt="" src={item?.image} />
+          <img className={styles.img} loading="lazy" alt="special bus offer image" src={item?.image} />
         </div>
         <div className={styles.specialBusDesc}>
           <div className={styles.route}>
             <div className={styles.place}>{item?.from}</div>
             <div>
-              <img src="/directionIcon.svg" alt="direction"  className={styles.arrow}/>
+              <img src="/directionIcon.svg" alt="direction"  className={styles.arrow} loading="lazy"/>
             </div>
             <div className={styles.place}>{item?.to}</div>
           </div>

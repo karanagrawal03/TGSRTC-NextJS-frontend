@@ -227,6 +227,11 @@
   .busDustMobile {
     display: block;
   }
+  .reservationKpis {
+    box-sizing: border-box;
+    padding-top: var(--padding-xl) ;
+    padding-bottom: var( --padding-41xl);
+  }
 }
 @media screen and (max-width: 450px) {
   .k {
@@ -238,11 +243,6 @@
   .l,
   .m1 {
     font-size: var(--font-size-10xl);
-  }
-  .reservationKpis {
-    /* padding-left: var(--padding-xl);
-    padding-right: var(--padding-xl); */
-    box-sizing: border-box;
   }
   .customerSuppoprt{
     font-size: 32px;
