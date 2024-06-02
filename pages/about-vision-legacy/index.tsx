@@ -6,7 +6,7 @@ const AboutVisionLegacy: any = () => {
 
   useEffect(() => {
     doFetch("/about-vision-and-legacys?populate=*");
-  }, [doFetch]);
+  }, []);
   const heroTitle = data != null && data != undefined ? data?.heroTitle : "";
   const part1 = heroTitle != null && heroTitle != undefined ? heroTitle?.toString().substring(0, 9).trim() : ""; // "Vision &"
   const part2 = heroTitle != null && heroTitle != undefined ? heroTitle?.toString().substring(10, 16).trim() : ""; // "Legacy"

@@ -1,27 +1,31 @@
 import type { NextPage } from "next";
 import styles from "./index.module.css";
-import { BUS_CONTRACT_RATES, BUS_CONTRACT_RATES_TAGLINE } from "../../constants";
+import { UPLOADS_BASE_URL } from "../../services/service";
 
-const ReservationHeroTourism = () => {
+export type ReservationHeroTourismType = {
+  heroTitle?:string;
+  heroSubTitle?:string;
+  heroWebImage?:any;
+  heroMobileImage?:any;
+  className?: string;
+};
+
+const ReservationHeroTourism: NextPage<ReservationHeroTourismType> = ({ heroTitle,heroSubTitle,heroWebImage,heroMobileImage, className = "" }) => {
   return (
-    <section className={styles.reservationHeroTourism}>
+    <section className={[styles.reservationHeroTourism,className].join(" ")}>
       <img 
         className={styles.bgIcon} 
         loading="lazy"
         alt="contract-rates-banner" 
-        src="/contract-rates-banner-web.png" />
+        src={UPLOADS_BASE_URL + heroWebImage?.data?.attributes?.url} />
       <img 
         className={styles.bgIconMobile} 
         loading="lazy"
         alt="contract-rates-banner" 
-        src="/contract-rates-banner-mobile.png"  />
+        src={UPLOADS_BASE_URL + heroMobileImage?.data?.attributes?.url}  />
       <div className={styles.contentWrapper}>
-        <h1 className={styles.tourism}>
-          {BUS_CONTRACT_RATES}
-        </h1>
-        <p className={styles.tgsrtcIsHappy}>
-          {BUS_CONTRACT_RATES_TAGLINE}
-        </p>
+        <h1 className={styles.tourism}>{heroTitle}</h1>
+        <p className={styles.tgsrtcIsHappy}>{heroSubTitle}</p>
       </div>
     </section>
   );

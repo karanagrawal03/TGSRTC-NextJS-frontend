@@ -50,7 +50,7 @@ const Tables: React.FC<TableProps> = ({
                   paddingBottom: "10px",
                   paddingLeft: "20px",
                   width: columnWidths ? columnWidths[key] : "auto",
-                  color: "#FFFFFF",
+                  color:"#FFFFFF"
                 }}
               >
                 {headers[key]}
