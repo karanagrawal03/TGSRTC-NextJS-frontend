@@ -3,10 +3,10 @@ import AccordionItem from "../accordians";
 import styles from "./index.module.css";
 import { AirportPushpakData } from "../../constants/AirPortPushpakRouteData";
 
-interface timingsData{
-  timingsRGIAData:any
+interface timingsData {
+  timingsRGIAData: any;
 }
-const TimingsTab: React.FC<timingsData> = ({timingsRGIAData}) => {
+const TimingsTab: React.FC<timingsData> = ({ timingsRGIAData }) => {
   const [expandedIndices, setExpandedIndices] = useState<(number | null)[]>(
     Array(timingsRGIAData.length).fill(null)
   );
@@ -25,19 +25,19 @@ const TimingsTab: React.FC<timingsData> = ({timingsRGIAData}) => {
 
   return (
     <div className={styles.container}>
-      {timingsRGIAData.map((card:any, cardIndex:number) => (
+      {timingsRGIAData.map((card: any, cardIndex: number) => (
         <div key={cardIndex} className={styles.card}>
           <div className={styles.routesContainer}>
-            {card.routes.map((route:any, index:number) => (
+            {card.routes.map((route: any, index: number) => (
               <div className={styles.valuesContainer} key={index}>
-                <p className={styles.name}>{route.name}</p>
-                <p className={styles.value}>{route.value}</p>
+                {route.value && <p className={styles.name}>{route.name}</p>}
+                {route.value && <p className={styles.value}>{route.value}</p>}
               </div>
             ))}
           </div>
           <div className={styles.eachAccordian}>
             <ol className={styles.studentConcessionalRoutePas}>
-              {card.timings.map((timing:any, timingIndex:number) => (
+              {card.timings.map((timing: any, timingIndex: number) => (
                 <AccordionItem
                   key={timingIndex}
                   name={timing.name}

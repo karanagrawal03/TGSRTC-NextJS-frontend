@@ -83,6 +83,10 @@ const ReservationBusesTabs: React.FC<TabsData> = ({ data }) => {
             data?.airPushpakBusPointControllersTableHeading
           }
           airPushpakBusPointControllers={data?.airPushpakBusPointControllers}
+          pushpakBusTimingsFromRGIAHeading={
+            data?.pushpakBusTimingsFromRGIAHeading
+          }
+          pushpakBusTimingsFromRGIAData={data?.pushpakBusTimingsFromRGIAData}
         />
       ),
     },
@@ -94,16 +98,22 @@ const ReservationBusesTabs: React.FC<TabsData> = ({ data }) => {
           yadagiriguttaSecondParagraph={data?.yadagiriguttaSecondParagraph}
           yadagiriguttaThirdParagraph={data?.yadagiriguttaThirdParagraph}
           yadagiriguttaTableHeading={data?.yadagiriguttaTableHeading}
-          yadagiriguttaData={data?.yadagiriguttaData}
+          yadagiriguttaData={data?.hyderabadData}
+          jbsToYadadriTableData={data?.jbsToYadadriTableData}
+          jbsToYadagiriguttaTableHeading={data?.jbsToYadagiriguttaTableHeading}
         />
       ),
     },
     {
       label: "Yadagirigutta to Hyderabad",
-      component: <YadagiriguttaTab 
-      hyderabadTableHeading={data?.hyderabadTableHeading}
-      hyderabadData={data?.hyderabadData}
-      />,
+      component: (
+        <YadagiriguttaTab
+          hyderabadTableHeading={data?.yadagiriguttaTableHeading}
+          hyderabadData={data?.yadagiriguttaData}
+          yadagiriguttaToJBSTableHeading={data?.yadagiriguttaToJBSTableHeading}
+          yadagiriguttaToJBSdata={data?.yadagiriguttaToJBSdata}
+        />
+      ),
     },
   ];
   const [value, setValue] = useState<number>(0);
@@ -132,7 +142,6 @@ const ReservationBusesTabs: React.FC<TabsData> = ({ data }) => {
             borderColor: "divider",
             display: "flex",
             justifyContent: "space-between",
-            width: "100%",
           }}
         >
           <Tabs

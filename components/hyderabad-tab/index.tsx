@@ -14,15 +14,19 @@ interface yadagiriguttaData {
   yadagiriguttaFirstParagraph: string;
   yadagiriguttaSecondParagraph: string;
   yadagiriguttaThirdParagraph: string;
-  yadagiriguttaTableHeading:string;
-  yadagiriguttaData:any
+  yadagiriguttaTableHeading: string;
+  yadagiriguttaData: any;
+  jbsToYadagiriguttaTableHeading: string;
+  jbsToYadadriTableData: any;
 }
 const HyderabadTab: React.FC<yadagiriguttaData> = ({
   yadagiriguttaFirstParagraph,
   yadagiriguttaSecondParagraph,
   yadagiriguttaThirdParagraph,
   yadagiriguttaTableHeading,
-  yadagiriguttaData
+  yadagiriguttaData,
+  jbsToYadagiriguttaTableHeading,
+  jbsToYadadriTableData,
 }) => {
   return (
     <div className={styles.container}>
@@ -34,6 +38,13 @@ const HyderabadTab: React.FC<yadagiriguttaData> = ({
       <div>
         <p className={styles.tableHeading}>{yadagiriguttaTableHeading}</p>
         <Tables rows={yadagiriguttaData} containerClassName={styles.table} />
+      </div>
+      <div>
+        <p className={styles.tableHeading}>{jbsToYadagiriguttaTableHeading}</p>
+        <Tables
+          rows={jbsToYadadriTableData}
+          containerClassName={styles.table}
+        />
       </div>
     </div>
   );
