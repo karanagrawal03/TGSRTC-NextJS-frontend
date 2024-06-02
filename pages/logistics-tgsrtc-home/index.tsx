@@ -7,19 +7,48 @@ import styles from "./index.module.css";
 import { useEffect } from "react";
 import useFetch from "../../services/service";
 
-const LogisticsTSRTCHome: NextPageLogisticsTSRTCHomeType = () => {
+const LogisticsTSRTCHome: NextPage = () => {
   const { data, doFetch } = useFetch();
-  console.log(data)
+
   useEffect(() => {
     doFetch(`/logistics-landings?populate=*`);
   }, []);
-  console.log(data)
+
   return (
     <div className={styles.logisticsTsrtcHome}>
-       <FrameComponent7 data={data} />
-      <MainContent data={data} />
-      <ContentRight data={data} />
-      <FrameComponent6 data={data} />
+      <FrameComponent7 
+        heroTitle={data?.heroTitle} 
+        heroSubTitle={data?.heroSubTitle} 
+        heroSectionLogo={data?.heroSectionLogo} 
+        heroImageMobile={data?.heroImageMobile} 
+        heroImageWeb={data?.heroImageWeb}
+      />
+      <MainContent  
+        bookYourCargoTitle={data?.bookYourCargoTitle} 
+        bookYourCargoImage={data?.bookYourCargoImage} 
+        bookYourCargoSubtitle={data?.bookYourCargoSubtitle} 
+        bookYourCargoContent={data?.bookYourCargoContent} 
+        bookYourCargoButtonText={data?.bookYourCargoButtonText}
+      />
+      <ContentRight 
+        data={{
+          aboutLogisticsTitle: data?.aboutLogisticsTitle,
+          aboutLogisticsPara1: data?.aboutLogisticsPara1,
+          aboutLogisticsPara2Start: data?.aboutLogisticsPara2Start,
+          aboutLogisticsPara2Link: data?.aboutLogisticsPara2Link,
+          aboutLogisticsPara2End: data?.aboutLogisticsPara2End,
+          aboutLogisticsCards: data?.aboutLogisticsCards || [],
+        }} 
+      />
+      <FrameComponent6 
+        data={{
+          logisticsBusiness: data?.logisticsBusiness,
+          logisticsBusinesspara1: data?.logisticsBusinesspara1,
+          logisticsBusinessImage: data?.logisticsBusinessImage,
+          logisticsBusinessImageMobile: data?.logisticsBusinessImageMobile,
+          logisticsBusinesspara2: data?.logisticsBusinesspara2,
+        }} 
+      />
     </div>
   );
 };

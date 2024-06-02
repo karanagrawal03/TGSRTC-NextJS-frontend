@@ -6,10 +6,28 @@ import { UPLOADS_BASE_URL } from "../../services/service";
 
 export type FrameComponent6Type = {
   className?: string;
-  data: any;
+  data?: {
+    logisticsBusiness?: string;
+    logisticsBusinesspara1?: string;
+    logisticsBusinessImage?: {
+      data?: {
+        attributes?: {
+          url?: string;
+        };
+      };
+    };
+    logisticsBusinessImageMobile?: {
+      data?: {
+        attributes?: {
+          url?: string;
+        };
+      };
+    };
+    logisticsBusinesspara2?: string;
+  };
 };
 
-const FrameComponent6: NextPage<FrameComponent6Type> = ({ data,className = "" }) => {
+const FrameComponent6: NextPage<FrameComponent6Type> = ({ data, className = "" }) => {
   return (
     <section className={[styles.businessContentWrapper, className].join(" ")}>
       <div className={styles.businessContent}>
@@ -19,13 +37,13 @@ const FrameComponent6: NextPage<FrameComponent6Type> = ({ data,className = "" })
               {data?.logisticsBusiness}
             </h1>
           </div>
-          <p
-            className={styles.tgsrtcAsTransportation}
-          >{data?.logisticsBusinesspara1}</p>
+          <p className={styles.tgsrtcAsTransportation}>
+            {data?.logisticsBusinesspara1}
+          </p>
         </div>
         <div className={styles.businessImage}>
           <ImageCards
-            pictures={`${UPLOADS_BASE_URL}${data?.logisticsBusinessImage?.data.attributes.url}`}
+            pictures={`${UPLOADS_BASE_URL}${data?.logisticsBusinessImage?.data?.attributes?.url}`}
             propAlignSelf="unset"
             propWidth="838px"
             propHeight="424px"
@@ -33,7 +51,7 @@ const FrameComponent6: NextPage<FrameComponent6Type> = ({ data,className = "" })
         </div>
         <div className={styles.businessImageMobile}>
           <ImageCards
-            pictures={`${UPLOADS_BASE_URL}${data?.logisticsBusinessImageMobile?.data.attributes.url}`}
+            pictures={`${UPLOADS_BASE_URL}${data?.logisticsBusinessImageMobile?.data?.attributes?.url}`}
             propAlignSelf="unset"
             propWidth="312px"
             propHeight="176px"

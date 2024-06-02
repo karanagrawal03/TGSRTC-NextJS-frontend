@@ -5,25 +5,25 @@ import { busDetails } from "../../constants/reservation-bus-details";
 import { UPLOADS_BASE_URL } from "../../services/service";
 
 export type OtherCityServicesSectionType = {
-  data?:any
+  data?: {
+    otherBusPassesTitle: string;
+    otherBusPassesContent: string;
+    otherBusPassesData: { title: string; imageSrc: string }[];
+  };
   className?: string;
 };
 
 
-const OtherCityServicesSection: NextPage<OtherCityServicesSectionType> = ({
- data,className = "",
-}) => {
+const OtherCityServicesSection: NextPage<OtherCityServicesSectionType> = ({ data, className = "" }) => {
   return (
     <div className={[styles.otherCityServicesSection, className].join(" ")}>
       <div className={styles.otherCityBusesParent}>
         <h3 className={styles.otherCityBuses}>{data?.otherBusPassesTitle}</h3>
-        <p className={styles.theFollowingFacilities}>
-          {data?.otherBusPassesContent}
-        </p>
+        <p className={styles.theFollowingFacilities}>{data?.otherBusPassesContent}</p>
       </div>
      
-        <div className={styles.otherBusesImages}>
-        {data?.otherBusPassesData.map((bus:any) => (
+      <div className={styles.otherBusesImages}>
+        {data?.otherBusPassesData?.map((bus: any) => (
           <div key={bus.title} className={styles.deluxe}>
             <b className={styles.deluxe1}>{bus.title}</b>
             <div className={styles.imageCards}>

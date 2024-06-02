@@ -4,15 +4,19 @@ import { UPLOADS_BASE_URL } from "../../services/service";
 
 export type MainContentType = {
   className?: string;
-  data: any;
+  bookYourCargoTitle?:string;
+  bookYourCargoImage?:any;
+  bookYourCargoSubtitle?:string;
+  bookYourCargoContent?:string;
+  bookYourCargoButtonText?:string;
 };
 
-const MainContent: NextPage<MainContentType> = ({ data,className = "" }) => {
+const MainContent: NextPage<MainContentType> = ({ bookYourCargoTitle,bookYourCargoImage,bookYourCargoSubtitle,bookYourCargoContent,bookYourCargoButtonText,className = "" }) => {
   return (
     <section className={[styles.mainContent, className].join(" ")}>
       <div className={styles.contentLeft}>
         <div className={styles.bookYourCargoWrapper}>
-          <h1 className={styles.bookYourCargo}>{data?.bookYourCargoTitle}</h1>
+          <h1 className={styles.bookYourCargo}>{bookYourCargoTitle}</h1>
         </div>
         <div className={styles.cargoCard}>
           <div className={styles.cargoInfo}>
@@ -23,7 +27,7 @@ const MainContent: NextPage<MainContentType> = ({ data,className = "" }) => {
                     className={styles.frameChild}
                     loading="lazy"
                     alt="goods"
-                    src={`${UPLOADS_BASE_URL}${data?.bookYourCargoImage?.data.attributes.url}`}
+                    src={`${UPLOADS_BASE_URL}${bookYourCargoImage?.data.attributes.url}`}
                   />
                 </div>
               </div>
@@ -31,17 +35,17 @@ const MainContent: NextPage<MainContentType> = ({ data,className = "" }) => {
             <div className={styles.cargoDescription}>
               <div className={styles.lookingForSendYourPackageParent}>
                 <h2 className={styles.lookingForSend}>
-                  {data?.bookYourCargoSubtitle}
+                  {bookYourCargoSubtitle}
                 </h2>
                 <p className={styles.loremIpsumDolor}>
-                 {data?.bookYourCargoContent}
+                 {bookYourCargoContent}
                 </p>
               </div>
             </div>
           </div>
           <div className={styles.cargoButton}>
             <button className={styles.button}>
-              <div className={styles.applyNow}>{data?.bookYourCargoButtonText}</div>
+              <div className={styles.applyNow}>{bookYourCargoButtonText}</div>
             </button>
           </div>
         </div>
