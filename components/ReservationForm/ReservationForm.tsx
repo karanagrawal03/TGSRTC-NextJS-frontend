@@ -12,6 +12,7 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider, DatePicker } from "@mui/x-date-pickers";
 import dayjs from "dayjs";
 import ReservationFormStyle from "./ReservationFormStyles";
+import { FROM_LABEL, TO_LABEL, HYDERABAD_LABEL, INTERCITY, INTRACITY, ROUND_TRIP, SEARCH_BUSSES, TODAY_LABEL, TOMMAROW_LABEL, VISAKHAPATNAM_LABEL, WARANGAL_LABEL } from "../../constants";
 
 const ReservationForm = () => {
   return (
@@ -23,16 +24,18 @@ const ReservationForm = () => {
               className={styles.icons}
               alt="Intercity Icon"
               src="/icons.svg"
+              loading="lazy"
             />
-            <b className={styles.intercity}>{"Intercity"}</b>
+            <b className={styles.intercity}>{INTERCITY}</b>
           </button>
           <button className={styles.cityToCityBus1} type="button">
             <img
               className={styles.icons1}
               alt="Intracity Icon"
               src="/icons-1.svg"
+              loading="lazy"
             />
-            <div className={styles.intracity}>{"Intracity"}</div>
+            <div className={styles.intracity}>{INTRACITY}</div>
           </button>
         </div>
       </div>
@@ -45,12 +48,12 @@ const ReservationForm = () => {
                   sx={ReservationFormStyle.inputLabel}
                   id="demo-simple-select-label"
                 >
-                  {"From"}
+                  {FROM_LABEL}
                 </InputLabel>
                 <Select
                   labelId="demo-simple-select-label"
                   id="demo-simple-select"
-                  value={"Hyderabad (HYD)"}
+                  value={HYDERABAD_LABEL}
                   label="from"
                   // onChange={handleChange}
                   IconComponent={(props) => (
@@ -58,16 +61,17 @@ const ReservationForm = () => {
                       src="/icons-2.svg"
                       alt="Image Description"
                       {...props}
+                      loading="lazy"
                     />
                   )}
                   sx={ReservationFormStyle.select1}
                 >
-                  <MenuItem value={"Hyderabad (HYD)"}>
-                    {"Hyderabad (HYD)"}
+                  <MenuItem value={HYDERABAD_LABEL}>
+                    {HYDERABAD_LABEL}
                   </MenuItem>
-                  <MenuItem value={"Warangal (WL)"}>{"Warangal (WL)"}</MenuItem>
-                  <MenuItem value={"Visakhapatnam (VSPK)"}>
-                    {" Visakhapatnam (VSPK)"}
+                  <MenuItem value={WARANGAL_LABEL}>{WARANGAL_LABEL}</MenuItem>
+                  <MenuItem value={VISAKHAPATNAM_LABEL}>
+                    {VISAKHAPATNAM_LABEL}
                   </MenuItem>
                 </Select>
               </FormControl>
@@ -81,7 +85,7 @@ const ReservationForm = () => {
                   id="demo-simple-select-label"
                   sx={ReservationFormStyle.inputLabel}
                 >
-                  {"To"}
+                  {TO_LABEL}
                 </InputLabel>
                 <Select
                   labelId="demo-simple-select-label"
@@ -94,16 +98,17 @@ const ReservationForm = () => {
                       src="/icons-2.svg"
                       alt="Image Description"
                       {...props}
+                      loading="lazy"
                     />
                   )}
                   sx={ReservationFormStyle.select2}
                 >
-                  <MenuItem value={"Hyderabad (HYD)"}>
-                    {"Hyderabad (HYD)"}
+                  <MenuItem value={HYDERABAD_LABEL}>
+                    {HYDERABAD_LABEL}
                   </MenuItem>
-                  <MenuItem value={"Warangal (WL)"}>{"Warangal (WL)"}</MenuItem>
-                  <MenuItem value={"Visakhapatnam (VSPK)"}>
-                    {" Visakhapatnam (VSPK)"}
+                  <MenuItem value={WARANGAL_LABEL}>{WARANGAL_LABEL}</MenuItem>
+                  <MenuItem value={VISAKHAPATNAM_LABEL}>
+                    {WARANGAL_LABEL}
                   </MenuItem>
                 </Select>
               </FormControl>
@@ -143,6 +148,7 @@ const ReservationForm = () => {
                             width="24px"
                             height="24px"
                             src="/date-icon.svg"
+                            loading="lazy"
                           />
                         ),
                       },
@@ -153,27 +159,27 @@ const ReservationForm = () => {
               </Box>
               <Box sx={ReservationFormStyle.box}>
                 <Button variant="contained" sx={ReservationFormStyle.button1}>
-                  {"Today"}
+                  {TODAY_LABEL}
                 </Button>
                 <Button variant="contained" sx={ReservationFormStyle.button2}>
-                  {"Tomorrow"}
+                  {TOMMAROW_LABEL}
                 </Button>
               </Box>
             </Box>
             <Box sx={ReservationFormStyle.box2}>
               <button className={styles.button}>
-                <b className={styles.applyNow}>{"Search Buses"}</b>
+                <b className={styles.applyNow}>{SEARCH_BUSSES}</b>
               </button>
             </Box>
           </Box>
         </Box>
         <div className={styles.checkboxField}>
           <input className={styles.frameInput} type="checkbox" />
-          <div className={styles.iWantTo}>{"I want to book a round trip"}</div>
+          <div className={styles.iWantTo}>{ROUND_TRIP}</div>
         </div>
         <Box sx={ReservationFormStyle.box3}>
           <button className={styles.button}>
-            <b className={styles.applyNow}>{"Search Buses"}</b>
+            <b className={styles.applyNow}>{SEARCH_BUSSES}</b>
           </button>
         </Box>
       </div>

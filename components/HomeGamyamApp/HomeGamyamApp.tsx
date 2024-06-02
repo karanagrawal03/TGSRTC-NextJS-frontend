@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import styles from "./HomeGamyamApp.module.css";
+import { GAMAYAM_APP, GAMAYAM_APP_PARAGRAPH } from "../../constants";
 
 export type HomeGamyamAppType = {
   className?: string;
@@ -13,30 +14,26 @@ const HomeGamyamApp: NextPage<HomeGamyamAppType> = ({ className = "" }) => {
           <img
             className={styles.gamayamLogoIcon}
             loading="lazy"
-            alt=""
+            alt="gamayam logo"
             src="/gamayam-logo@2x.png"
           />
           <div className={styles.texts}>
-            <h1 className={styles.gamyamApp}>{"Gamyam App"}</h1>
+            <h1 className={styles.gamyamApp}>{GAMAYAM_APP}</h1>
             <p className={styles.experienceSeamlessTravel}>
-              Experience seamless travel with TGSRTC's innovative "TGSRTC
-              Gamyam" mobile app, offering real-time tracking for all buses.
-              With this convenient feature, passengers can effortlessly monitor
-              the status of all bus services, ensuring a smooth and stress-free
-              journey
+            {GAMAYAM_APP_PARAGRAPH}
             </p>
           </div>
         </div>
         <img
           className={styles.icon}
           loading="lazy"
-          alt=""
+          alt="mobile images"
           src="/mobiles-icon.svg"
         />
         <img
           className={styles.shadowlayer}
           loading="lazy"
-          alt=""
+          alt="shadow image"
           src="/shadow-avatar.svg"
         />
       </div>

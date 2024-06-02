@@ -1,31 +1,25 @@
 import type { NextPage } from "next";
 import styles from "./BookYourTicket.module.css";
 import ReservationForm from "../ReservationForm/ReservationForm";
+import { BOOK_YOUR_TICKET, BOOK_YOUR_TICKET_PARAGRAPH, ROUTES_TEXT, VIEW_ALL_ROUTES } from "../../constants";
 
-export type BookYourTicket1Type = {
+export type BookYourTicketType = {
   className?: string;
+  routes: { from: string; to: string }[];
 };
 
-const routes = [
-  { from: "Hyderabad", to: "Bangalore" },
-  { from: "Hyderabad", to: "Chennai" },
-  { from: "Hyderabad", to: "Vijayawada" },
-  { from: "Hyderabad", to: "Srisailam" },
-  { from: "Hyderabad", to: "Tirupati" },
-];
 
-const BookYourTicket1: NextPage<BookYourTicket1Type> = ({ className = "" }) => {
+
+const BookYourTicket: NextPage<BookYourTicketType> = ({ className = "", routes }) => {
   return (
     <section className={[styles.bookYourTicket, className].join(" ")}>
       <div className={styles.textsWrapper}>
         <div className={styles.texts}>
           <div className={styles.bookYourTicketWrapper}>
-            <h1 className={styles.bookYourTicket1}>{"Book Your Ticket"}</h1>
+            <h1 className={styles.bookYourTicket1}>{BOOK_YOUR_TICKET}</h1>
           </div>
           <p className={styles.loremIpsumDolor}>
-            lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
-            dolor sit amet, adipiscing elit. sed do eiusmod tempor incididunt
-            ut.
+           {BOOK_YOUR_TICKET_PARAGRAPH}
           </p>
         </div>
       </div>
@@ -35,9 +29,9 @@ const BookYourTicket1: NextPage<BookYourTicket1Type> = ({ className = "" }) => {
           <div className={styles.interestedRouteContainer}>
             <div className={styles.interestedRouteTitle}>
               <div className={styles.routesYouMay}>
-                {"Routes you may be interested in"}
+                {ROUTES_TEXT}
               </div>
-              <img className={styles.lineIcon} alt="" src="/line.svg" />
+              <img className={styles.lineIcon} alt="line icon" src="/line.svg" loading="lazy"/>
             </div>
             <div className={styles.routeChipsContainer}>
               {routes.map((route, index) => (
@@ -45,14 +39,15 @@ const BookYourTicket1: NextPage<BookYourTicket1Type> = ({ className = "" }) => {
                   <div className={styles.city}>{route.from}</div>
                   <img
                     className={styles.icons3}
-                    alt=""
+                    alt="right arrow icon"
                     src="/arrow-right-icons.svg"
+                    loading="lazy"
                   />
                   <div className={styles.city}>{route.to}</div>
                 </div>
               ))}
               <button className={styles.button1}>
-                <div className={styles.applyNow1}>{"View all Routes"}</div>
+                <div className={styles.applyNow1}>{VIEW_ALL_ROUTES}</div>
               </button>
             </div>
           </div>
@@ -62,4 +57,4 @@ const BookYourTicket1: NextPage<BookYourTicket1Type> = ({ className = "" }) => {
   );
 };
 
-export default BookYourTicket1;
+export default BookYourTicket;

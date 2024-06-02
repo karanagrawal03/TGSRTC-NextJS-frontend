@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./About.module.css";
+import { ABOUT_TGSRTC_PARAGRAPH, ABOUT_TGSRTC_TITLE } from "../../constants";
 
 const About = () => {
   return (
@@ -10,16 +11,13 @@ const About = () => {
             className={styles.tsrtcLogoIcon1}
             alt="TSRCT Logo"
             src="/tsrtc-logo@2x.png"
+            loading="lazy"
           />
         </div>
         <div className={styles.texts}>
-          <div className={styles.aboutTgsrtc}>{"About TGSRTC"}</div>
+          <div className={styles.aboutTgsrtc}>{ABOUT_TGSRTC_TITLE}</div>
           <div className={styles.sinceItsInception}>
-            Since its inception in 2014, Telangana State Road Transport
-            Corporation (TGSRTC) TGSRTC has remained committed to excellence in
-            bus transport. Our focus on safety, environmental sustainability,
-            and top-notch service ensures passenger satisfaction and industry
-            leadership.
+          {ABOUT_TGSRTC_PARAGRAPH}
           </div>
         </div>
       </div>
@@ -28,8 +26,9 @@ const About = () => {
           <source media="(max-width: 450px)" srcSet="/tgrtc-mobile.png" />
           <img
             className={styles.aboutTsrtcImage}
-            alt=""
+            alt="about tgsrtc"
             src="/about-tgsrtc-image.png"
+            loading="lazy"
           />
         </picture>
       </div>

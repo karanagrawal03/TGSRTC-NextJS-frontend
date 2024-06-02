@@ -1,8 +1,9 @@
 import type { NextPage } from "next";
 import styles from "./HomeNewsUpdates.module.css";
-import Cards2 from "../HomeCard/HomeCard";
 import Carousal from "../Carosal/Carousal";
 import { useEffect, useState } from "react";
+import { NEWS_UPDATES } from "../../constants";
+import NewsAndUpdatesCard from "../HomeCard/HomeCard";
 
 export type HomeNewsUpdatesType = {
   className?: string;
@@ -37,22 +38,28 @@ const HomeNewsUpdates: NextPage<HomeNewsUpdatesType> = ({ className = "" }) => {
 
   return (
     <section className={[styles.homeNewsUpdates, className].join(" ")}>
-      <h1 className={styles.newsUpdates}>{`News & Updates`}</h1>
+      <h1 className={styles.newsUpdates}>{NEWS_UPDATES}</h1>
       <div className={styles.carousel}>
         <Carousal
           perView={perView}
           autoplay={false}
           sliderClassName={styles.customSlider}
           children={[
-            <Cards2 />,
-            <Cards2 />,
-            <Cards2 />,
-            <Cards2 />,
-            <Cards2 />,
-            <Cards2 />,
-            <Cards2 />,
-            <Cards2 />,
-            <Cards2 />,
+            
+              <NewsAndUpdatesCard />,
+              <NewsAndUpdatesCard />,
+              <NewsAndUpdatesCard />,
+              <NewsAndUpdatesCard />,
+              <NewsAndUpdatesCard />,
+              <NewsAndUpdatesCard />,
+              <NewsAndUpdatesCard />,
+              <NewsAndUpdatesCard />,
+              <NewsAndUpdatesCard />,
+              <NewsAndUpdatesCard />,
+              <NewsAndUpdatesCard />
+            
+
+            
           ]}
         />
       </div>

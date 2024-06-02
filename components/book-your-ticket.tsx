@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import styles from "./book-your-ticket.module.css";
+import { BOOK_YOUR_TICKET, BOOK_YOUR_TICKET_PARAGRAPH, DATE_LABEL, FROM_LABEL, HYDERABAD_LABEL, ROUND_TRIP, ROUTES_TEXT, SEARCH_BUSSES, TODAY_LABEL, TOMMAROW_LABEL, TO_LABEL, VIEW_ALL_ROUTES, WARANGAL_LABEL } from "../constants";
 
 export type BookYourTicketType = {
   className?: string;
@@ -13,12 +14,10 @@ const BookYourTicket: NextPage<BookYourTicketType> = ({ className = "" }) => {
           <div className={styles.textsWrapper}>
             <div className={styles.texts}>
               <div className={styles.bookYourTicketWrapper}>
-                <h1 className={styles.bookYourTicket1}>Book Your Ticket</h1>
+                <h1 className={styles.bookYourTicket1}>{BOOK_YOUR_TICKET}</h1>
               </div>
               <p className={styles.loremIpsumDolor}>
-                lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
-                ipsum dolor sit amet, adipiscing elit. sed do eiusmod tempor
-                incididunt ut.
+                {BOOK_YOUR_TICKET_PARAGRAPH}
               </p>
             </div>
           </div>
@@ -27,11 +26,11 @@ const BookYourTicket: NextPage<BookYourTicketType> = ({ className = "" }) => {
               <div className={styles.searchTabsContainer}>
                 <div className={styles.searchTabs}>
                   <button className={styles.cityToCityBus}>
-                    <img className={styles.icons} alt="" src="/icons.svg" />
+                    <img className={styles.icons} alt="intercity icon" src="/icons.svg" loading="lazy" />
                     <b className={styles.intercity}>Intercity</b>
                   </button>
                   <div className={styles.cityToCityBus1}>
-                    <img className={styles.icons1} alt="" src="/icons-1.svg" />
+                    <img className={styles.icons1} alt="intracity icon" src="/icons-1.svg" loading="lazy"/>
                     <div className={styles.intracity}>Intracity</div>
                   </div>
                 </div>
@@ -40,59 +39,62 @@ const BookYourTicket: NextPage<BookYourTicketType> = ({ className = "" }) => {
                 <div className={styles.formActionFiled}>
                   <div className={styles.formContainer}>
                     <div className={styles.field}>
-                      <div className={styles.date}>From</div>
+                      <div className={styles.date}>{FROM_LABEL}</div>
                       <div className={styles.inputField}>
-                        <div className={styles.div}>Hyderabad (HYD)</div>
+                        <div className={styles.div}>{HYDERABAD_LABEL}</div>
                         <img
                           className={styles.icons2}
-                          alt=""
+                          alt="dropdown icon"
                           src="/icons-2.svg"
+                          loading="lazy"
                         />
                       </div>
                     </div>
                   </div>
                   <div className={styles.formContainer1}>
                     <div className={styles.field1}>
-                      <div className={styles.date1}>To</div>
+                      <div className={styles.date1}>{TO_LABEL}</div>
                       <div className={styles.inputField1}>
-                        <div className={styles.div1}>Warangal (WL)</div>
+                        <div className={styles.div1}>{WARANGAL_LABEL}</div>
                         <img
                           className={styles.icons3}
-                          alt=""
+                          alt="dropdown icon"
                           src="/icons-2.svg"
+                          loading="lazy"
                         />
                       </div>
                     </div>
                   </div>
                   <div className={styles.formContainer2}>
                     <div className={styles.field2}>
-                      <div className={styles.date2}>Date</div>
+                      <div className={styles.date2}>{DATE_LABEL}</div>
                       <div className={styles.inputField2}>
-                        <div className={styles.div2}>14-05-2024</div>
+                        <div className={styles.div2}>{DATE_LABEL}</div>
                         <img
                           className={styles.icons4}
-                          alt=""
+                          alt="calender icon"
                           src="/icons-4.svg"
+                          loading="lazy"
                         />
                       </div>
                     </div>
                     <div className={styles.quickDateSelections}>
                       <div className={styles.quickDates}>
-                        <div className={styles.today}>Today</div>
+                        <div className={styles.today}>{TODAY_LABEL}</div>
                       </div>
                       <div className={styles.quickDates1}>
-                        <div className={styles.tomorrow}>Tomorrow</div>
+                        <div className={styles.tomorrow}>{TOMMAROW_LABEL}</div>
                       </div>
                     </div>
                     <button className={styles.button}>
-                      <b className={styles.applyNow}>Search Buses</b>
+                      <b className={styles.applyNow}>{SEARCH_BUSSES}</b>
                     </button>
                   </div>
                   <div className={styles.wrapperExchange}>
                     <img
                       className={styles.exchangeIcon}
                       loading="lazy"
-                      alt=""
+                      alt="exchange icon"
                       src="/exchange.svg"
                     />
                   </div>
@@ -100,7 +102,7 @@ const BookYourTicket: NextPage<BookYourTicketType> = ({ className = "" }) => {
                 <div className={styles.checkboxField}>
                   <input className={styles.frameInput} type="checkbox" />
                   <div className={styles.iWantTo}>
-                    I want to book a round trip
+                   {ROUND_TRIP}
                   </div>
                 </div>
               </div>
@@ -108,40 +110,41 @@ const BookYourTicket: NextPage<BookYourTicketType> = ({ className = "" }) => {
             <div className={styles.interestedRouteContainer}>
               <div className={styles.interestedRouteTitle}>
                 <div className={styles.routesYouMay}>
-                  Routes you may be interested in
+                 {ROUTES_TEXT}
                 </div>
-                <img className={styles.lineIcon} alt="" src="/line.svg" />
+                <img className={styles.lineIcon} alt="line icon" src="/line.svg" loading="lazy"
+                />
               </div>
               <div className={styles.routeChipsContainer}>
                 <div className={styles.routeChips}>
                   <div className={styles.routeChips1}>
                     <div className={styles.hyderabad}>Hyderabad</div>
-                    <img className={styles.icons5} alt="" src="/icons-5.svg" />
+                    <img className={styles.icons5} alt="right arrow" src="/icons-5.svg" loading="lazy"/>
                     <div className={styles.bangalore}>Bangalore</div>
                   </div>
                   <div className={styles.routeChips2}>
                     <div className={styles.hyderabad1}>Hyderabad</div>
-                    <img className={styles.icons6} alt="" src="/icons-5.svg" />
+                    <img className={styles.icons6} alt="right arrow" src="/icons-5.svg" loading="lazy"/>
                     <div className={styles.bangalore1}>Chennai</div>
                   </div>
                   <div className={styles.routeChips3}>
                     <div className={styles.hyderabad2}>Hyderabad</div>
-                    <img className={styles.icons7} alt="" src="/icons-5.svg" />
+                    <img className={styles.icons7} alt="right arrow" src="/icons-5.svg" loading="lazy"/>
                     <div className={styles.bangalore2}>Vijayawada</div>
                   </div>
                   <div className={styles.routeChips4}>
                     <div className={styles.hyderabad3}>Hyderabad</div>
-                    <img className={styles.icons8} alt="" src="/icons-5.svg" />
+                    <img className={styles.icons8} alt="right arrow" src="/icons-5.svg" loading="lazy"/>
                     <div className={styles.bangalore3}>Srisailam</div>
                   </div>
                   <div className={styles.routeChips5}>
                     <div className={styles.hyderabad4}>Hyderabad</div>
-                    <img className={styles.icons9} alt="" src="/icons-5.svg" />
+                    <img className={styles.icons9} alt="right arrow" src="/icons-5.svg" loading="lazy"/>
                     <div className={styles.bangalore4}>Tirupati</div>
                   </div>
                 </div>
                 <button className={styles.button1}>
-                  <div className={styles.applyNow1}>View all Routes</div>
+                  <div className={styles.applyNow1}>{VIEW_ALL_ROUTES}</div>
                 </button>
               </div>
             </div>

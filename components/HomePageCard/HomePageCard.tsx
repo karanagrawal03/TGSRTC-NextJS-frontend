@@ -1,8 +1,9 @@
 import type { NextPage } from "next";
 import { useMemo, type CSSProperties } from "react";
 import styles from "./HomePageCard.module.css";
+import { APPLY_NOW, KNOW_MORE_LABEL } from "../../constants";
 
-export type Cards3Type = {
+export type BookYourServiceCardType = {
   className?: string;
   srcIcon?: string;
   busPasses?: string;
@@ -21,7 +22,7 @@ export type Cards3Type = {
   buttonsContainerMargin?: CSSProperties["margin"];
 };
 
-const Cards3: NextPage<Cards3Type> = ({
+const BookYourServiceCards: NextPage<BookYourServiceCardType> = ({
   className = "",
   srcIcon,
   busPasses,
@@ -85,7 +86,7 @@ const Cards3: NextPage<Cards3Type> = ({
               <img
                 className={styles.wrapperGroup1000013321Child}
                 loading="lazy"
-                alt=""
+                alt="service cards image"
                 src={srcIcon}
                 style={groupIconStyle}
               />
@@ -106,14 +107,14 @@ const Cards3: NextPage<Cards3Type> = ({
           </p>
         </div>
         <div className={styles.lineSeparater}>
-          <img className={styles.lineSeparatorIcon} alt="" />
+          <img className={styles.lineSeparatorIcon} alt="line seperator" loading="lazy"/>
         </div>
         <button className={styles.buttonsContainer}>
           <div className={styles.button1}>
-            <div className={styles.applyNow}>{"Apply Now"}</div>
+            <div className={styles.applyNow}>{APPLY_NOW}</div>
           </div>
           <div className={styles.button2}>
-            <b className={styles.applyNow1}>{"Know More"}</b>
+            <b className={styles.applyNow1}>{KNOW_MORE_LABEL}</b>
           </div>
         </button>
       </div>
@@ -121,4 +122,4 @@ const Cards3: NextPage<Cards3Type> = ({
   );
 };
 
-export default Cards3;
+export default BookYourServiceCards;

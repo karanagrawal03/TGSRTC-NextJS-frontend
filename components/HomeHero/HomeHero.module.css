@@ -1,7 +1,7 @@
 .tgsrtcServing {
   width: 700px;
   font-size: var(--font-size-63xl);
-  line-height: 100px;
+  line-height: normal;
   font-weight: 600;
   font-family: var(--font-playfair-display);
   color: var(--primary-green);
