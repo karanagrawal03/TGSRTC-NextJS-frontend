@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import styles from "./carousal.module.css";
+import styles from "./index.module.css";
 import Slider from "react-slick";
 
 import "slick-carousel/slick/slick.css";

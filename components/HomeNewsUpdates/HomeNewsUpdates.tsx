@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import styles from "./HomeNewsUpdates.module.css";
-import Carousal from "../Carosal/Carousal";
+import Carousal from "../Carosal";
 import { useEffect, useState } from "react";
 import { NEWS_UPDATES } from "../../constants";
 import NewsAndUpdatesCard from "../HomeCard/HomeCard";
@@ -45,21 +45,17 @@ const HomeNewsUpdates: NextPage<HomeNewsUpdatesType> = ({ className = "" }) => {
           autoplay={false}
           sliderClassName={styles.customSlider}
           children={[
-            
-              <NewsAndUpdatesCard />,
-              <NewsAndUpdatesCard />,
-              <NewsAndUpdatesCard />,
-              <NewsAndUpdatesCard />,
-              <NewsAndUpdatesCard />,
-              <NewsAndUpdatesCard />,
-              <NewsAndUpdatesCard />,
-              <NewsAndUpdatesCard />,
-              <NewsAndUpdatesCard />,
-              <NewsAndUpdatesCard />,
-              <NewsAndUpdatesCard />
-            
-
-            
+            <NewsAndUpdatesCard />,
+            <NewsAndUpdatesCard />,
+            <NewsAndUpdatesCard />,
+            <NewsAndUpdatesCard />,
+            <NewsAndUpdatesCard />,
+            <NewsAndUpdatesCard />,
+            <NewsAndUpdatesCard />,
+            <NewsAndUpdatesCard />,
+            <NewsAndUpdatesCard />,
+            <NewsAndUpdatesCard />,
+            <NewsAndUpdatesCard />,
           ]}
         />
       </div>
