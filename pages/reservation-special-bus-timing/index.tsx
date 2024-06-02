@@ -1,18 +1,18 @@
-import type { NextPage } from "next";
-import Header from "../../components/header";
-import ReservationMuchintala from "../../components/reservation-muchintala";
-import FooterSection from "../../components/footer-section";
-import RecognitionAndSocialMediaC from "../../components/recognition-and-social-media-c";
-import styles from "./index.module.css";
+import { useEffect } from "react";
 import ReservationBusesTabs from "../../components/reservation-spl-buses-tabs";
 import {
   APPLY_AND_RENEW,
-  BUS_CONTRACT_RATES,
   SPECIAL_BUSES,
   WHICH_BUS_TIMINGS,
 } from "../../constants";
+import useFetch, { BASE_URL, UPLOADS_BASE_URL } from "../../services/service";
+import styles from "./index.module.css";
 
 const ReservationSpecialBusTiming = () => {
+  const { data, doFetch } = useFetch();
+  useEffect(() => {
+    doFetch(`/reservation-special-bus-timings?populate=*`);
+  }, []);
   return (
     <div className={styles.reservationSpecialBusTiming}>
       <section className={styles.reservationHeroTourism}>
@@ -20,22 +20,22 @@ const ReservationSpecialBusTiming = () => {
           className={styles.bgIcon}
           loading="lazy"
           alt="contract-rates-banner"
-          src="/reservation-web.png"
+          src={UPLOADS_BASE_URL + data?.heroSectionBanner[0].heroSectionWebImage}
         />
         <img
           className={styles.bgIconMobile}
           loading="lazy"
           alt="contract-rates-banner"
-          src="/reservation-mobile.png"
+          src={UPLOADS_BASE_URL + data?.heroSectionBanner[0].heroSectionMobileImage}
         />
         <div className={styles.contentWrapper}>
-          <h1 className={styles.tourism}>{SPECIAL_BUSES}</h1>
-          <p className={styles.tgsrtcIsHappy}>{APPLY_AND_RENEW}</p>
+          <h1 className={styles.tourism}>{data?.heroSectionBanner[0].heroSectionHeading}</h1>
+          <p className={styles.tgsrtcIsHappy}>{data?.heroSectionBanner[0].heroSectionSubHeading}</p>
         </div>
       </section>
       <div className={styles.container}>
-        <p className={styles.headingText}>{WHICH_BUS_TIMINGS}</p>
-        <ReservationBusesTabs />
+        <p className={styles.headingText}>{data?.tabsHeading}</p>
+        <ReservationBusesTabs data={data} />
       </div>
     </div>
   );

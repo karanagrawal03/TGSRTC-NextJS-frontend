@@ -14,32 +14,51 @@ import BulletPoints from "../bullet-points";
 import Tables from "../tables";
 import TimingsTab from "../timings-tab";
 import styles from "./index.module.css";
-const AirPortPushpak = () => {
+interface PuspakData {
+  airportPushpakParagraph1: string;
+  airportPushpakParagraph2: string;
+  airportPushpakTableHeading: string;
+  airportPushpakTableData: any;
+  tgstrcMiyapurText: string;
+  tgsrtcAirPortPushpakBusTimingsHeading: string;
+  airPortPushpakBustimingsTowardsRGIAData:any;
+  airPushpakBusPointControllersTableHeading:string;
+  airPushpakBusPointControllers:any;
+}
+const AirPortPushpak: React.FC<PuspakData> = ({
+  airportPushpakParagraph1,
+  airportPushpakParagraph2,
+  airportPushpakTableHeading,
+  airportPushpakTableData,
+  tgstrcMiyapurText,
+  tgsrtcAirPortPushpakBusTimingsHeading,
+  airPortPushpakBustimingsTowardsRGIAData,
+  airPushpakBusPointControllersTableHeading,
+  airPushpakBusPointControllers
+}) => {
   return (
     <div className={styles.container}>
       <div className={styles.paragraphTexts}>
-        <p className={styles.paragraph}>{AIRPORT_PUSHPAK_FIRST_PARAGRAPH}</p>
-        <p className={styles.paragraph}>{AIRPORT_PUSHPAK_SECOND_PARAGRAPH}</p>
+        <p className={styles.paragraph}>{airportPushpakParagraph1}</p>
+        <p className={styles.paragraph}>{airportPushpakParagraph2}</p>
       </div>
       <div className={styles.lowerInnerContainer}>
-        <p className={styles.tableHeading}>
-          {DETAILS_OF_AIRPORT_PUSHPAK_BUSES}
-        </p>
-        <Tables rows={airportPushpakData} containerClassName={styles.table} />
+        <p className={styles.tableHeading}>{airportPushpakTableHeading}</p>
+        <Tables
+          rows={airportPushpakTableData}
+          containerClassName={styles.table}
+        />
       </div>
       <div>
-        <p className={styles.table2Heading}>{PUSHPAK_AIRPORT_LINERS}</p>
-        <Tables rows={airportPushpakData} containerClassName={styles.table} />
+        <p className={styles.table2Heading}>{airPushpakBusPointControllersTableHeading}</p>
+        <Tables rows={airPushpakBusPointControllers} containerClassName={styles.table} />
       </div>
       <div className={styles.lowerContainer}>
-        <p className={styles.TSRTCtext}>
-        {TGSRTC_MIYAPUR}
-        </p>
+        <p className={styles.TSRTCtext}>{tgstrcMiyapurText}</p>
         <p className={styles.pushpakTimings}>
-       {TGSRTC_AIRPORT}
+          {tgsrtcAirPortPushpakBusTimingsHeading}
         </p>
-
-        <TimingsTab />
+        <TimingsTab timingsRGIAData={airPortPushpakBustimingsTowardsRGIAData} />
       </div>
     </div>
   );

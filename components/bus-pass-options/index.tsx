@@ -7,20 +7,35 @@ import styles from "./index.module.css";
 export type BusPassOptionsType = {
   className?: string;
 };
+interface BusPassOption {
+  title: string;
+  content: string;
+  image: string;
+  details: string;
+  button: string;
+}
 
-const BusPassOptions: NextPage<BusPassOptionsType> = ({ className = "" }) => {
+interface BusPassOptionsProps {
+  options: BusPassOption[];
+  title: string;
+  className?: string;
+}
+const BusPassOptions: NextPage<BusPassOptionsProps> = ({ className = "", options, title  }) => {
   return (
     <section className={[styles.busPassOptions, className].join(" ")}>
       <div className={styles.busPassOptionsWrapper}>
-        <h1 className={styles.busPassOptions1}>{BUS_PASS_OPTIONS}</h1>
+        <h1 className={styles.busPassOptions1}>{title}</h1>
       </div>
       <div className={styles.cardsContainer}>
-        {card2Data.map((card, index) => {
+        {options?.map((card, index) => {
           return (
             <OtherBusPassesCard
               key={index}
-              heading={card.heading}
-              description={card.description}
+              heading={card.title}
+              description={card.content}
+              viewAll={card.details}
+              image={card.image}
+              applyNow={card.button}
             />
           );
         })}
