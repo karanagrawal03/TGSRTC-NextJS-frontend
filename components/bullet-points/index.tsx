@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./index.module.css";
-import Tables from "../tables";
+
 interface BulletPointsProps {
   items: string[];
   containerClassName?: string;
@@ -12,7 +12,7 @@ const BulletPoints: React.FC<BulletPointsProps> = ({
   return (
     <div>
       <ul className={`${styles.list} ${containerClassName}`}>
-        {items.map((item, index) => (
+        {items?.map((item, index) => (
           <li className={styles.listItems} key={index}>
             {item}
           </li>
