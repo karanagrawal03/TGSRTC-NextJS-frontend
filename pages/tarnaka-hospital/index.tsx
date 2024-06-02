@@ -12,7 +12,6 @@ const HospitalTSRTCTarnakaHospita: NextPageHospitalTSRTCTarnakaHospitaType = () 
   useEffect(() => {
     doFetch(`/hospital-landings?populate=*`);
   }, []);
-  // console.log({ data }, "hospital data", UPLOADS_BASE_URL);
 
   return (
     <div className={styles.hospitalTsrtcTarnakaHospita}>

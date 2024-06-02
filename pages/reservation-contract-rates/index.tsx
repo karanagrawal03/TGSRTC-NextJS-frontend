@@ -15,7 +15,6 @@ const ReservationBusOnContractRa: NextPageReservationBusOnContractRaType =() => 
   useEffect(() => {
     doFetch(`/reservation-bus-on-contract-rates?populate=*`);
   }, []);
-  // console.log({ data }, "tourism data", UPLOADS_BASE_URL);
 
   return (
     <div className={styles.reservationBusOnContractRa}>
