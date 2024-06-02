@@ -1,7 +1,13 @@
 import styles from "./index.module.css";
 
+interface MonthlySeasonTicketsProps {
+  monthlySeasonTicketsTitle: string;
+  monthlySeasonTicketsList: string[];
+  valueAdditionTitle: string;
+  valueAdditionList: string[];
+}
 
-const MonthlySeasonTicketsTexts = ({monthlySeasonTicketsTitle,monthlySeasonTicketsList,valueAdditionTitle,valueAdditionList}:any) => {
+const MonthlySeasonTicketsTexts = ({monthlySeasonTicketsTitle,monthlySeasonTicketsList,valueAdditionTitle,valueAdditionList}:MonthlySeasonTicketsProps) => {
   return (
     <div className={styles.monthlySeasonTicketsTexts}>
       <div className={styles.monthlySeasonTickets}>
