@@ -19,12 +19,15 @@ interface TableProps {
 }
 
 const Tables: React.FC<TableProps> = ({
-  rows,
+  rows = [],
   containerClassName,
   columnWidths,
   tableHeadCellStyles,
   tableCellStyles,
 }) => {
+  if (rows?.length === 0) {
+    return <div>No data available</div>;
+  }
   const headers = rows[0];
   const bodyRows = rows.slice(1);
 
@@ -47,6 +50,7 @@ const Tables: React.FC<TableProps> = ({
                   paddingBottom: "10px",
                   paddingLeft: "20px",
                   width: columnWidths ? columnWidths[key] : "auto",
+                  color:"#FFFFFF"
                 }}
               >
                 {headers[key]}

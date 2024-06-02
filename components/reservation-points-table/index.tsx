@@ -1,21 +1,16 @@
-import type { NextPage } from "next";
 import styles from "./index.module.css";
 import Tables from "../tables";
-import { tableData as data} from "../../constants/reservation-points";
-import { DETAILS_OF_RESERVATION_POINTS } from "../../constants";
 
 export type ReservationDetailsOfReservaType = {
   className?: string;
 };
 
-const ReservationDetailsOfReserva: NextPage<
-  ReservationDetailsOfReservaType
-> = ({ className = "" }) => {
+const ReservationDetailsOfReserva = ({ data }:any) => {
   return (
-    <div className={[styles.reservationDetailsOfReserva, className].join(" ")}>
+    <div className={styles.reservationDetailsOfReserva}>
       <div className={styles.tableTitle}>
-        <h2 className={styles.title}>{DETAILS_OF_RESERVATION_POINTS}</h2>
-        <Tables rows={data} containerClassName={styles.tableRow}/>
+        <h2 className={styles.title}>{data?.reservationPointsTitle}</h2>
+        {data?.reservationPointsTableData != null && data?.reservationPointsTableData != undefined ? <Tables rows={data?.reservationPointsTableData} containerClassName={styles.tableRow}/>:<></>}
       </div>
     </div>
   );
