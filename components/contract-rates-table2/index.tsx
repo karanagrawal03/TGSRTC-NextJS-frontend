@@ -4,18 +4,20 @@ import Tables from "../tables";
 import CommonLabel from "../label";
 
 export type ContractRatesTable2Type = {
-  data :any;
+  districtServicesTitle :string;
+  districtServices:any;
+  districtServicesLabel:string;
   className?: string;
 };
 
-const ContractRatesTable2: NextPage<ContractRatesTable2Type> = ({data, className = "" }) => {
+const ContractRatesTable2: NextPage<ContractRatesTable2Type> = ({districtServicesTitle,districtServices,districtServicesLabel, className = "" }) => {
   return (
     <section className={[styles.tableTitleParent, className].join(" ")}>
       <div className={styles.tableTitle}>
-        <h2 className={styles.title}>{data?.districtServicesTitle}</h2>
-        <Tables rows={data?.districtServices} containerClassName={styles.ratesTable2}/>
+        <h2 className={styles.title}>{districtServicesTitle}</h2>
+        <Tables rows={districtServices} containerClassName={styles.ratesTable2}/>
       </div>
-      <CommonLabel text={data?.districtServicesLabel} />
+      <CommonLabel text={districtServicesLabel} />
     </section>
   );
 };

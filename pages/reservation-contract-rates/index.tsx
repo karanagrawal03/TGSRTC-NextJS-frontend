@@ -19,14 +19,38 @@ const ReservationBusOnContractRa: NextPageReservationBusOnContractRaType =() => 
 
   return (
     <div className={styles.reservationBusOnContractRa}>
-      <ReservationHeroTourism data={data} />
+      <ReservationHeroTourism 
+        heroTitle={data?.heroTitle} 
+        heroSubTitle={data?.heroSubTitle} 
+        heroWebImage={data?.bannerWebImage} 
+        heroMobileImage={data?.bannerMobileImage}
+      />
       <div className={styles.reservationContractRatesTab}>
-        <ContractRatesTable1 data={data}  />
-        <ContractRatesTable2 data={data} />
+        <ContractRatesTable1 
+          oneWayServicesTitle={data?.oneWayServicesTitle}
+          oneWayServices={data?.oneWayServices}
+        />
+        <ContractRatesTable2  
+          districtServicesTitle={data?.districtServicesTitle}
+          districtServices={data?.districtServices}
+          districtServicesLabel={data?.districtServicesLabel}
+        />
         <div className={styles.tableTitleParent}>
-          <ContractRatesTable3 data={data} />
-          <ContractRatesTable4 data={data} />
-          <ContractRatesTable5 data={data} />
+          <ContractRatesTable3 
+            cityServicesTitle={data?.cityServicesTitle}
+            cityServices1={data?.cityServices1}
+          />
+          <ContractRatesTable4 
+            cityServicesLabel={data?.cityServicesLabel}
+            cityServices2={data?.cityServices2}
+            cityServicesInstructions={data?.cityServicesInstructions}
+          />
+          <ContractRatesTable5 
+            cityServices3={data?.cityServices3}
+            annexureTitle={data?.annexureTitle}
+            termsAndConditionsTitle={data?.termsAndConditionsTitle}
+            termsAndConditions={data?.termsAndConditions}
+          />
         </div>
       </div>
     </div>

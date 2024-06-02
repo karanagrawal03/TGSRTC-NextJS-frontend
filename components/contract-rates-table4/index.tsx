@@ -5,19 +5,21 @@ import BulletPoints from "../bullet-points";
 import CommonLabel from "../label";
 
 export type ContractRatesTable4Type = {
-  data :any;
+  cityServicesLabel :string;
+  cityServices2:any;
+  cityServicesInstructions:string[];
   className?: string;
 };
 
-const ContractRatesTable4: NextPage<ContractRatesTable4Type> = ({ data, className = "" }) => {
+const ContractRatesTable4: NextPage<ContractRatesTable4Type> = ({ cityServicesLabel,cityServices2,cityServicesInstructions, className = "" }) => {
   return (
     <div className={[styles.itemCellParent, className].join(" ")}>
-      <CommonLabel text={data?.cityServicesLabel} />
+      <CommonLabel text={cityServicesLabel} />
       <div className={styles.tableTitle}>
-        <Tables rows={data?.cityServices2} containerClassName={styles.ratesTable4}/>
+        <Tables rows={cityServices2} containerClassName={styles.ratesTable4}/>
       </div>
       <div className={styles.bulletPointContainer}>
-        <BulletPoints items={data?.cityServicesInstructions} containerClassName={styles.bulletPoints}/>
+        <BulletPoints items={cityServicesInstructions} containerClassName={styles.bulletPoints}/>
       </div>
     </div>
   );

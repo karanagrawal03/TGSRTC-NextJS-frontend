@@ -14,18 +14,19 @@ export interface TourismPlace {
 }
 
 export type ReservationDestinationsType = {
-  data: any;
+  destinationsTitle: string;
+  tourismCards:any;
   className?: string;
 };
 
-const ReservationDestinations:NextPage<ReservationDestinationsType> = ({ data, className = "" }) => {
+const ReservationDestinations:NextPage<ReservationDestinationsType> = ({ destinationsTitle,tourismCards, className = "" }) => {
   return (
     <section className={[styles.reservationDestinations, className].join(" ")}>
       <div className={styles.destinationsWrapper}>
-        <h1 className={styles.destinations}>{data?.destinationsTitle}</h1>
+        <h1 className={styles.destinations}>{destinationsTitle}</h1>
       </div>
       <div className={styles.tourismCards}>
-         {data?.tourismCards.map((tour : TourismPlace) => (
+         {tourismCards?.map((tour : TourismPlace) => (
             <TourismCard  
               placeName={tour.placeName} 
               image={tour.image} 

@@ -15,7 +15,12 @@ const ReservationTourism: NextPageReservationTourismType = () => {
 
   return (
     <div className={styles.reservationTourism}>
-      <ReservationHeroTourism data={data} />
+      <ReservationHeroTourism 
+        heroTitle={data?.heroTitle} 
+        heroSubTitle={data?.heroSubTitle} 
+        heroWebImage={data?.bannerWebImage} 
+        heroMobileImage={data?.bannerMobileImage}
+      />
       <section className={styles.content}>
         <img
           className={styles.busDust}
@@ -29,7 +34,10 @@ const ReservationTourism: NextPageReservationTourismType = () => {
           <h2 className={styles.travelAcrossTelangana}>{data?.travelInfo}</h2>
         </div>
       </section>
-      <ReservationDestinations data={data} />
+      <ReservationDestinations 
+        destinationsTitle={data?.destinationsTitle}
+        tourismCards={data?.tourismCards}
+      />
     </div>
   );
 };

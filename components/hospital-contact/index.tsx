@@ -4,18 +4,24 @@ import Button from "../button";
 import { UPLOADS_BASE_URL } from "../../services/service";
 
 export type HospitalContactType = {
-  data: any;
+  weAreAvailableTitle: string;
+  phoneNumber1:string;
+  phoneNumber2:string;
+  hospitalEmail:string;
+  bookButton:string;
+  doctorsWebImage:any;
+  doctorsMobileImage:any;
   className?: string;
 };
 
-const HospitalContact: NextPage<HospitalContactType> = ({data,className = "",}) => {
+const HospitalContact: NextPage<HospitalContactType> = ({weAreAvailableTitle,phoneNumber1,phoneNumber2,hospitalEmail,bookButton,doctorsWebImage,doctorsMobileImage,className = "",}) => {
   return (
     <section className={[styles.hospitalContact, className].join(" ")}>
       <div className={styles.availability}>
         <div className={styles.weAreAvailableForYouConta}>
           <div className={styles.contactTexts}>
             <h1 className={styles.weAreAvailable}>
-              {data?.weAreAvailableTitle}
+              {weAreAvailableTitle}
             </h1>
             <div className={styles.support}>
               <div className={styles.phoneContainer}>
@@ -27,7 +33,7 @@ const HospitalContact: NextPage<HospitalContactType> = ({data,className = "",}) 
                     src="/icons1.svg"
                   />
                   <div className={styles.forTgsrtcEmployee}>
-                    {data?.phoneNumber1}
+                    {phoneNumber1}
                   </div>
                 </div>
                 <img
@@ -44,7 +50,7 @@ const HospitalContact: NextPage<HospitalContactType> = ({data,className = "",}) 
                     src="/icons1.svg"
                   />
                   <div className={styles.nonTgsrtcEmployee}>
-                    {data?.phoneNumber2}
+                    {phoneNumber2}
                   </div>
                 </div>
               </div>
@@ -55,13 +61,13 @@ const HospitalContact: NextPage<HospitalContactType> = ({data,className = "",}) 
                   src="/icons-21.svg"
                 />
                 <h2 className={styles.supporttgsrtchospitalcom}>
-                  {data?.hospitalEmail}
+                  {hospitalEmail}
                 </h2>
               </div>
             </div>
           </div>
           <Button
-            text={data?.bookButton}
+            text={bookButton}
             className={styles.button}
             textClassName={styles.applyNow}
           />
@@ -72,13 +78,13 @@ const HospitalContact: NextPage<HospitalContactType> = ({data,className = "",}) 
           className={styles.contactImageWeb}
           loading="lazy"
           alt="hospital-contact-image-web"
-          src={UPLOADS_BASE_URL + data?.doctorsWebImage?.data?.attributes?.url}
+          src={UPLOADS_BASE_URL + doctorsWebImage?.data?.attributes?.url}
         />
         <img
           className={styles.contactImageMobile}
           loading="lazy"
           alt="hospital-contact-image-mobile"
-          src={UPLOADS_BASE_URL + data?.doctorsMobileImage?.data?.attributes?.url}
+          src={UPLOADS_BASE_URL + doctorsMobileImage?.data?.attributes?.url}
         />
       </div>
     </section>

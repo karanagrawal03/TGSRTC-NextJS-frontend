@@ -4,11 +4,15 @@ import HospitalServiceCard from "../hospital-service-cards";
 import { UPLOADS_BASE_URL } from "../../services/service";
 
 export type HospitalServicesType = {
-  data: any;
+  aboutHospitalTitle:string;
+  aboutHospitalImage:any;
+  aboutHospitalContent:string;
+  whatServicesTitle:string;
+  whatServicesCards:any;
   className?: string;
 };
 
-const HospitalServices: NextPage<HospitalServicesType> = ({data,className = "",}) => {
+const HospitalServices: NextPage<HospitalServicesType> = ({aboutHospitalTitle,aboutHospitalImage,aboutHospitalContent,whatServicesTitle,whatServicesCards,className = "",}) => {
   return (
     <section className={[styles.hospitalAboutWhatServiceWe, className].join(" ")}>
       {/* About hospital */}
@@ -16,27 +20,27 @@ const HospitalServices: NextPage<HospitalServicesType> = ({data,className = "",}
         <div className={styles.texts}>
           <div className={styles.titleAndLine}>
             <h1 className={styles.aboutHospitalHeading}>
-              {data?.aboutHospitalTitle}
+              {aboutHospitalTitle}
             </h1>
             <div className={styles.imagePlaceholder}>
               <img
                 className={styles.aboutHospitalImage}
                 loading="lazy"
                 alt="about-hospital-image"
-                src={UPLOADS_BASE_URL +data?.aboutHospitalImage?.data?.attributes?.url}
+                src={UPLOADS_BASE_URL +aboutHospitalImage?.data?.attributes?.url}
               />
             </div>
           </div>
           <p className={styles.tarnakaHospitalStands}>
-            {data?.aboutHospitalContent}
+            {aboutHospitalContent}
           </p>
         </div>
       </div>
       {/* what services we provide */}
       <div className={styles.serviceProviderContainer}>
-        <h1 className={styles.whatServiceWe}>{data?.whatServicesTitle}</h1>
+        <h1 className={styles.whatServiceWe}>{whatServicesTitle}</h1>
         <div className={styles.textCardContianer}>
-          {data?.whatServicesCards.map((e: any) => (
+          {whatServicesCards?.map((e: any) => (
             <HospitalServiceCard
               heading={e.heading}
               subheading={e.subheading}

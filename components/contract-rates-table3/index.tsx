@@ -3,15 +3,16 @@ import styles from "./index.module.css";
 import Tables from "../tables";
 
 export type ContractRatesTable3Type = {
-  data: any;
+  cityServicesTitle: string;
+  cityServices1:any;
   className?: string;
 };
 
-const ContractRatesTable3: NextPage<ContractRatesTable3Type> = ({data, className = "" }) => {
+const ContractRatesTable3: NextPage<ContractRatesTable3Type> = ({cityServicesTitle,cityServices1, className = "" }) => {
   return (
     <div className={[styles.tableTitle, className].join(" ")}>
-      <h2 className={styles.title}>{data?.cityServicesTitle}</h2>
-      <Tables rows={data?.cityServices1} containerClassName={styles.ratesTable3} />
+      <h2 className={styles.title}>{cityServicesTitle}</h2>
+      <Tables rows={cityServices1} containerClassName={styles.ratesTable3} />
     </div>
   );
 };
