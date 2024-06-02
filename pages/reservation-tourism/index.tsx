@@ -11,7 +11,7 @@ const ReservationTourism: NextPageReservationTourismType = () => {
   useEffect(() => {
     doFetch(`/reservation-tourisms?populate=*`);
   }, []);
-  console.log({ data }, "tourism data", UPLOADS_BASE_URL);
+  // console.log({ data }, "tourism data", UPLOADS_BASE_URL);
 
   return (
     <div className={styles.reservationTourism}>
