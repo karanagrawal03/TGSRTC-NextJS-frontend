@@ -7,23 +7,23 @@ export type Cards4Type = {
   className?: string;
   image?: string;
   busPasses?: string;
-
+  content?:string;
   /** Style props */
   applyNowPadding?: CSSProperties["padding"];
 };
-
 const Cards4: NextPage<Cards4Type> = ({
   className = "",
   image,
   busPasses,
   applyNowPadding,
+  content
 }) => {
   const infographics1Style: CSSProperties = useMemo(() => {
     return {
       padding: applyNowPadding,
     };
   }, [applyNowPadding]);
-
+  console.log(content)
   return (
     <div className={[styles.cards, className].join(" ")}>
       <div className={styles.infographicContainer}>
@@ -42,7 +42,7 @@ const Cards4: NextPage<Cards4Type> = ({
         <div className={styles.texts}>
           <h2 className={styles.busPasses}>{busPasses}</h2>
           <p className={styles.loremIpsumDolor}>
-            We deliver your goods with extra care .
+           {content}
           </p>
         </div>
         <div className={styles.lineSeparater}>

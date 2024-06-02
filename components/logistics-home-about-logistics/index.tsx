@@ -15,6 +15,7 @@ export type ContentRightType = {
     aboutLogisticsCards?: Array<{
       image?: string;
       busPasses?: string;
+      content?:string;
     }>;
   };
 };
@@ -50,6 +51,7 @@ const ContentRight: NextPage<ContentRightType> = ({ data, className = "" }) => {
               image={card.image}
               busPasses={card.busPasses}
               applyNowPadding=""
+              content={card.content}
             />
           ))}
         </div>

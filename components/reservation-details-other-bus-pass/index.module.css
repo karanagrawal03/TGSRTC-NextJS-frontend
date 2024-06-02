@@ -66,11 +66,6 @@
 .imageText {
   flex: 1;
   overflow: hidden;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: var(--gap-5xl);
   max-width: 100%;
 }
 .frameIcon {
