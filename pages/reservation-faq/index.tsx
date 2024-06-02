@@ -11,7 +11,7 @@ const ReservationFAQ = () => {
   };
   useEffect(()=>{
     doFetch("/reservation-faqs?populate=*")
-  },[data])
+  },[])
   return (
     <div className={styles.reservationFaq}>
       <div className={styles.bgImg}>
