@@ -6,12 +6,16 @@ export type Cards2Type = {
   className?: string;
   heading: string;
   description: string;
+  viewAll:string;
+  applyNow:string;
 };
 
 const BusPassOptionsCard: NextPage<Cards2Type> = ({
   className = "",
   heading,
   description,
+  viewAll,
+  applyNow
 }) => {
   return (
     <div className={[styles.cards, className].join(" ")}>
@@ -29,9 +33,9 @@ const BusPassOptionsCard: NextPage<Cards2Type> = ({
           />
         </div>
         <div className={styles.buttonHolder}>
-          <div className={styles.viewDetails}>{VIEW_DETAILS}</div>
+          <div className={styles.viewDetails}>{viewAll}</div>
           <div className={styles.button2}>
-            <div className={styles.applyNow}>{APPLY_NOW}</div>
+            <div className={styles.applyNow}>{applyNow}</div>
           </div>
         </div>
       </div>

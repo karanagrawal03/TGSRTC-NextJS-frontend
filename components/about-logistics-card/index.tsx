@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import { useMemo, type CSSProperties } from "react";
 import styles from "./index.module.css";
+import { UPLOADS_BASE_URL } from "../../services/service";
 
 export type Cards4Type = {
   className?: string;
@@ -31,8 +32,8 @@ const Cards4: NextPage<Cards4Type> = ({
             <img
               className={styles.wrapperGroup1000013498Child}
               loading="lazy"
-              alt=""
-              src={image}
+              alt="image"
+              src={UPLOADS_BASE_URL+image}
             />
           </div>
         </div>
@@ -45,7 +46,7 @@ const Cards4: NextPage<Cards4Type> = ({
           </p>
         </div>
         <div className={styles.lineSeparater}>
-          <img className={styles.lineSeparatorIcon} alt="" />
+          <img className={styles.lineSeparatorIcon} alt="image" />
         </div>
         <div className={styles.buttonsContainer}>
           <div className={styles.button1}>

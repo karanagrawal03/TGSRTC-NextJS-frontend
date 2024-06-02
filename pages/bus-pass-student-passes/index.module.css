@@ -139,6 +139,9 @@
   font-family: inherit;
   font-size: inherit;
   padding-left: 0px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-5xs);
 }
 
 .before6AmContainer1 {
@@ -287,7 +290,6 @@
 }
 .busPassStudentPasses1 {
   background-color: var(--support-grey-bg);
-  border: 2px solid;
   padding: var(--padding-61xl) var(--padding-81xl) var(--padding-81xl);
   box-sizing: border-box;
   gap: var(--gap-xs);
@@ -644,7 +646,7 @@
     box-sizing: border-box;
   }
 }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1023px) {
   .busPassStudentPasses1 {
     padding-top: var(--padding-15xl);
     padding-bottom: var(--padding-23xl);
@@ -658,6 +660,9 @@
   .recognitionAndSocialMediaC {
     flex-wrap: wrap;
   }
+  .knowMoreAbout {
+    font-size: var(--font-size-xl);
+  }
 }
 @media screen and (max-width: 750px) {
   .studentPasses {
@@ -667,10 +672,7 @@
   .busPassesHeroStudentPasses {
     box-sizing: border-box;
   }
-  .busPassStudentPasses1 {
-    padding: var(--padding-3xl) var(--padding-31xl) var(--padding-8xl);
-    box-sizing: border-box;
-  }
+
   .logo {
     flex-wrap: wrap;
   }
@@ -695,10 +697,27 @@
     top: 58.6vw;
     left: 6.3vw;
   }
+  .knowMoreAbout {
+    font-size: var(--font-size-xl);
+  }
+  .busPassGeneralCommuterPass2 {
+    padding: 0 var(--padding-5xl) var( --padding-60 ) var(--padding-5xl);
+  }
 }
 @media screen and (max-width: 599px) {
   .contentWrapper {
     max-width: 237px;
+  }
+  .busPassStudentPasses1 {
+    padding: var(--padding-5xl) var(--padding-5xl) var(--padding-41xl)
+      var(--padding-5xl);
+    box-sizing: border-box;
+  }
+  .knowMoreAboutStudentPassesWrapper {
+    padding-bottom: 12px;
+  }
+  .knowMoreAbout {
+    font-size: var(--font-size-xl);
   }
   .studentPasses {
     font-size: var(--font-size-42xl);
@@ -708,33 +727,7 @@
     font-size: var(--font-size-16);
     line-height: 26px;
   }
-}
-@media screen and (max-width: 450px) {
-  .knowMoreAbout {
-    font-size: var(--font-size-lgi);
-  }
-  .before6Am,
-  .before6Am1,
-  .before6AmContainer,
-  .before6AmContainer1 {
-    font-size: var(--font-size-base);
-  }
-  .busPassStudentPasses1 {
-    padding-left: var(--padding-xl);
-    padding-right: var(--padding-xl);
-    box-sizing: border-box;
-  }
-  .linksContainer,
-  .recognitionContainer {
-    flex-wrap: wrap;
-    gap: var(--gap-6xl);
-  }
-  .socialMediaContainer {
-    flex-wrap: wrap;
-  }
-  .footer {
-    padding-top: var(--padding-7xl);
-    padding-bottom: var(--padding-xl);
-    box-sizing: border-box;
+  .busPassGeneralCommuterPass2 {
+    padding: 0 var(--padding-5xl) var( --padding-60 ) var(--padding-5xl);
   }
 }

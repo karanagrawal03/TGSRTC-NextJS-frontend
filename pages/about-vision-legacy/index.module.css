@@ -1,0 +1,878 @@
+.aboutVisionLegacy {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  line-height: normal;
+  letter-spacing: normal;
+  font-size: var(--font-size-53xl);
+  font-family: var(--font-playfair-display);
+}
+
+.aboutHero {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.aboutHeroWebsite {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.aboutHeroMobile {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.visionLegacyContainer {
+  margin: 0;
+  position: absolute;
+  top: 246px;
+  left: 100px;
+  font-size: var(--font-size-53xl);
+  line-height: 92px;
+  font-weight: 600;
+  font-family: var(--font-playfair-display);
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap:var(--gap-sm);
+}
+
+.legacy,
+.vision {
+  margin: 0;
+}
+
+.mobileDescription {
+  font-family: var(--font-montserrat);
+font-size: var(--font-size-5xl);
+font-weight: 500;
+line-height: 32px;
+}
+
+.aboutVision,
+.lineSeparatorIcon {
+  align-self: stretch;
+  max-width: 100%;
+}
+
+.aboutVision {
+  background-color: var(--support-grey-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--padding-81xl);
+  box-sizing: border-box;
+  gap: var(--gap-41xl);
+  z-index: 1;
+  position: relative;
+}
+
+.texts,
+.visionConatiner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+
+.texts {
+  width: 100%;
+  gap: var(--gap-13xl);
+}
+
+.visionConatiner {
+  height: 363px;
+  width: 100%;
+  border-radius: var(--br-base);
+  background-color: var(--support-white);
+  padding: var(--padding-41xl);
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.titleAndLine {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0;
+  box-sizing: border-box;
+  gap: var(--gap-7xs);
+}
+
+.busDustWebsite {
+  width: 128px;
+  height: 632px;
+  position: absolute;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: contain;
+  display: blobk;
+  z-index: 4;
+  align-self: flex-start;
+  top: 0;
+  left: 0;
+}
+
+.busDustMobile {
+  display: none;
+  height: 128px;
+  width: 100%;
+}
+
+.vision1 {
+  margin: 0;
+  position: relative;
+  font-size: var(--font-size-27xl);
+  font-weight: 600;
+  font-family: var(--font-playfair-display);
+  padding-right: var(--padiing-48xl);
+  line-height: 61.32px;
+  color: var(--primary-red);
+}
+
+.headingUnderline {
+  height: 1px;
+  background-color: var(--primary-red);
+  width: 100%;
+}
+
+.tgsrtcIsCommittedContainer {
+  margin: 0;
+  align-self: stretch;
+  position: relative;
+  font-size: var(--font-size-5xl);
+  line-height: 36px;
+  font-weight: 500;
+  font-family: var(--font-montserrat);
+  color: var(--text-grey-body-text);
+}
+
+.preEminenceInThe,
+.tgsrtcIsCommitted {
+  display: block;
+}
+
+.redLineIcon {
+  align-self: stretch;
+  height: 1px;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.philosophyAndGuidelines {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-41xl);
+  padding-left: var(--padding-60);
+  padding-right: var(--padding-60);
+
+}
+
+.philosophy,
+.guidelines {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-base);
+}
+
+.horzontalDivider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, var(--color-black), transparent)
+}
+
+.philosophyHeading,
+.guidelinesHeading {
+  font-size: var(--font-size-5xl);
+  font-family: var(--font-montserrat);
+  font-weight: 600;
+  color: var(--text-black);
+  line-height: 29.26px;
+}
+
+.phylosophyList,
+.guidelinesList {
+  font-size: var(--font-size-base);
+  font-weight: 400;
+  font-family: var(--font-montserrat);
+  color: var(--text-grey-body-text);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-base);
+  line-height: 26px;
+}
+
+.listItem {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: var(--gap-5xs);
+}
+
+.dots {
+  width: 6px;
+  height: 6px;
+  margin-top: 9px;
+  border-radius: 50%;
+  background-color: var(--primary-red);
+}
+
+.listItemContent {
+  display: flex;
+  width: 100%;
+}
+
+.legacyLetter {
+  width: 100%;
+}
+
+.legacyLetterMobile {
+
+  width: 100%;
+  display: none;
+}
+.legacyLetterContainer{
+  max-height: 1344px;
+  height: 100%;
+}
+@media screen and (max-width:1365px) {
+  .aboutHeroWebsite {
+    object-fit: cover;
+  }
+
+  .visionConatiner {
+    padding: 4%;
+  }
+
+  .philosophyAndGuidelines {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+  .visionLegacyContainer {
+    top: 200px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+
+  .aboutHeroWebsite {
+    object-fit: cover;
+  }
+
+  .visionConatiner {
+    max-height: 363px;
+    height: 100%;
+    padding: 4%;
+  }
+
+  .philosophyAndGuidelines {
+    padding-left: 4%;
+    padding-right: 4%;
+
+  }
+
+  .visionLegacyContainer {
+    top: 140px;
+    font-size: var(--font-size-39xl);
+  }
+
+  .vision1 {
+    font-size: var(--font-size-36xs);
+    line-height: 40.5px;
+  }
+
+  .tgsrtcIsCommittedContainer {
+    font-size: var(--font-size-xl);
+  }
+}
+
+@media screen and (max-width: 835px) {
+  .aboutHeroWebsite {
+    object-fit: cover;
+  }
+
+  .visionLegacyContainer {
+    top: 130px;
+    font-size: var(--font-size-36xs);
+    line-height: 40px;
+  }
+  .mobileDescription{
+    font-size:var(--font-size-base) ;
+  }
+  .aboutVision {
+    padding: var(--padding-84xs);
+  }
+
+  .vision1 {
+    font-size: var(--font-size-9xl);
+    line-height: 40.5px;
+    padding-right: var(--padding-11xl);
+
+  }
+
+  .tgsrtcIsCommittedContainer {
+    font-size: var(--gap-base);
+  }
+
+  .philosophyAndGuidelines {
+    gap: var(--gap-21xl);
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  .visionConatiner {
+    max-height: 363px;
+    width: 96%;
+    height: 100%;
+    padding: 4%;
+  }
+
+  .philosophyHeading,
+  .guidelinesHeading {
+    font-size: var(--gap-xl);
+  }
+
+  .phylosophyList,
+  .guidelinesList {
+    font-size: var(--font-size-xs);
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .aboutHeroWebsite {
+    object-fit: cover;
+  }
+
+  .visionLegacyContainer {
+    font-size: var(--font-size-13xl);
+    line-height: 40px;
+    top: 130px;
+  }
+.mobileDescription{
+  font-size:var(--font-size-sm) ;
+}
+
+  .aboutVision {
+    padding: var(--padding-84xs);
+  }
+
+  .visionConatiner {
+    max-height: 363px;
+    width: 98%;
+    height: 100%;
+    padding: 4%;
+  }
+
+  .vision1 {
+    font-size: var(--font-size-9xl);
+    line-height: 40.5px;
+    padding-right: var(--padding-xl);
+
+  }
+
+  .tgsrtcIsCommittedContainer {
+    font-size: var(--font-size-sm);
+  }
+
+  .philosophyAndGuidelines {
+    gap: var(--gap-11xl);
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  .philosophyHeading,
+  .guidelinesHeading {
+    font-size: var(--font-size-lg);
+  }
+
+  .phylosophyList,
+  .guidelinesList {
+    font-size: var(--font-size-sm);
+  }
+}
+
+@media screen and (max-width: 599px) {
+  
+  .aboutVisionLegacy {
+    font-size: var(--font-size-5xl);
+    line-height: 32px;
+  }
+
+  .aboutHeroWebsite {
+    display: none;
+  }
+
+  .aboutHeroMobile {
+    display: block;
+  }
+
+  .visionLegacyContainer {
+    top: 211px;
+    left: 23px;
+    font-size: var(--font-size-42xs);
+    line-height: 55.99px;
+  }
+
+  .busDustWebsite {
+    display: none;
+  }
+
+  .busDustMobile {
+    display: block;
+    height: 128px;
+    width: 100%;
+  }
+
+  .mobileDescription {
+    display: block;
+    font-size: var(--font-size-sm);
+    width: 232px;
+  }
+
+  .aboutVision {
+    padding-left: var(--padding-5xl);
+    padding-right: var(--padding-5xl);
+    box-sizing: border-box;
+
+  }
+
+  .visionConatiner {
+    padding: var(--padding-xl);
+    width: 100%;
+    height: auto;
+
+  }
+
+  .texts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap-5xl);
+    max-width: 480px;
+    width: 100%;
+  }
+
+  .headingUnderline {
+    display: none;
+  }
+
+  .vision1 {
+    display: flex;
+    align-items: center;
+    font-size: var(--font-size-13xl);
+    line-height: 26px;
+    font-weight: 600;
+    font-family: var(--font-playfair-display);
+    padding-right: 0px;
+  }
+
+  .aboutVision {
+    gap: 0px
+  }
+
+  .tgsrtcIsCommittedContainer {
+    font-size: var(--font-size-base);
+    line-height: 26px;
+    text-align: center;
+
+  }
+
+  .tgsrtcIsCommitted {
+    display: flex;
+  }
+
+  .philosophyAndGuidelines {
+    margin-top: 40px;
+    padding-left: 0;
+    padding-right: 0%;
+    gap: var( --gap-21xl);
+  }
+
+  .philosophy,
+  .guidelines {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap-5xs);
+  }
+
+  .philosophyHeading {
+    font-size: var(--font-size-sm);
+    line-height: 26px;
+
+
+  }
+
+  .guidelinesHeading {
+    font-size: var(--font-size-base);
+    line-height: 26px;
+  }
+
+  .phylosophyList,
+  .guidelinesList {
+    font-size: var(--font-size-sm);
+    line-height: 26px;
+    gap: var(--gap-xs);
+
+  }
+
+  .legacyLetter {
+    display: none;
+  }
+
+  .legacyLetterMobile {
+    max-width: 599px;
+    display: block;
+  }
+
+  .legacyLetterContainer {
+    margin-top: 40px;
+    margin-bottom: 60px;
+    box-sizing: border-box;
+    max-height: fit-content;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 540px) {
+
+  .aboutVisionLegacy {
+    padding-left: var(--padding-5xl);
+    padding-right: var(--padding-5xl);
+    font-size: var(--font-size-5xl);
+    line-height: 32px;
+  }
+
+  .aboutHeroWebsite {
+    display: none;
+  }
+
+  .aboutHeroMobile {
+    max-width: 540px;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+  }
+
+  .visionLegacyContainer {
+    top: 210px;
+    left: 23px;
+    font-size: var(--font-size-42xs);
+    line-height: 55.99px;
+  }
+
+  .busDustWebsite {
+    display: none;
+  }
+
+  .busDustMobile {
+    display: block;
+    height: 128px;
+    width: 100%;
+  }
+
+  .mobileDescription {
+    display: block;
+    font-size: var(--font-size-sm);
+  }
+
+  .aboutVision {
+    /* padding: 0px; */
+
+  }
+
+  .visionConatiner {
+    padding: var(--padding-xl);
+    width: 100%;
+    height: auto;
+
+  }
+
+  .texts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap-5xl);
+    max-width: 480px;
+    width: 100%;
+  }
+
+  .headingUnderline {
+    display: none;
+  }
+
+  .vision1 {
+    display: flex;
+    align-items: center;
+    font-size: var(--font-size-13xl);
+    line-height: 26px;
+    font-weight: 600;
+    font-family: var(--font-playfair-display);
+    padding-right: 0px;
+  }
+
+  .aboutVision {
+    gap: 0px
+  }
+
+  .tgsrtcIsCommittedContainer {
+    font-size: var(--font-size-base);
+    line-height: 26px;
+    text-align: center;
+
+  }
+
+  .tgsrtcIsCommitted {
+    display: flex;
+  }
+
+  .philosophyAndGuidelines {
+    margin-top: 40px;
+    gap: var(--gap-21xl);
+  }
+
+  .philosophy,
+  .guidelines {
+    display: flex;
+    flex-wrap: wrap;
+    gap:  var(--gap-5xs);
+  }
+
+  .philosophyHeading {
+    font-size: var(--font-size-sm);
+    line-height: 26px;
+
+
+  }
+
+  .guidelinesHeading {
+    font-size: var(--font-size-base);
+    line-height: 26px;
+  }
+
+  .phylosophyList,
+  .guidelinesList {
+    font-size: var(--font-size-sm);
+    line-height: 26px;
+    gap: var(--gap-xs);
+
+  }
+
+  .legacyLetter {
+    display: none;
+  }
+
+  .legacyLetterMobile {
+    display: block;
+  }
+
+  .legacyLetterContainer {
+    margin-top: 40px;
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+
+  .aboutHeroWebsite {
+    display: none;
+  }
+
+  .aboutHeroMobile {
+    display: block;
+  }
+
+  .visionLegacyContainer {
+    top: 210.7px;
+    left: 23px;
+    font-size: var(--font-size-42xs);
+    line-height: 55.99px;
+    gap:var(--gap-base);
+  }
+
+  .busDustWebsite {
+    display: none;
+  }
+
+  .busDustMobile {
+    display: block;
+    height: 128px;
+    width: 100%;
+  }
+
+  .mobileDescription {
+    display: block;
+  }
+
+  .aboutVision {
+    padding: 0px;
+
+  }
+
+  .visionConatiner {
+    padding: var(--padding-xl);
+    max-width: 350px;
+    height: auto;
+  }
+
+  .texts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap-5xl);
+    max-width: 312px;
+    width: 100%;
+  }
+
+  .headingUnderline {
+    display: none;
+  }
+
+  .vision1 {
+    display: flex;
+    align-items: center;
+    font-size: var(--font-size-13xl);
+    line-height: 26px;
+    font-weight: 600;
+    font-family: var(--font-playfair-display);
+    padding-right: 0px;
+  }
+
+  .aboutVision {
+    gap: 0px
+  }
+
+  .tgsrtcIsCommittedContainer {
+    font-size: var(--font-size-base);
+    line-height: 26px;
+    text-align: center;
+
+  }
+
+  .tgsrtcIsCommitted {
+    display: flex;
+  }
+
+  .philosophyAndGuidelines {
+    margin-top: 40px;
+    padding-left: 0px;
+    margin-left: 24px;
+    margin-right: 24px;
+    gap: var(--gap-21xl);
+  }
+
+  .philosophy,
+  .guidelines {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap-5xs);
+  }
+
+  .philosophyHeading {
+    font-size: var(--font-size-sm);
+    line-height: 26px;
+
+
+  }
+
+  .guidelinesHeading {
+    font-size: var(--font-size-base);
+    line-height: 26px;
+  }
+
+  .phylosophyList,
+  .guidelinesList {
+    font-size: var(--font-size-sm);
+    line-height: 26px;
+    gap: var(--gap-xs);
+
+  }
+
+  .legacyLetter {
+    display: none;
+  }
+
+  .legacyLetterMobile {
+    max-width: 320px;
+    display: block;
+  }
+
+  .legacyLetterContainer {
+    margin-left: 24px;
+    margin-right: 16px;
+    margin-top: 40px;
+    margin-bottom: 60px;
+  }
+  .mobileDescription {
+    display: block;
+    font-size: var(--font-size-base);
+    line-height: 26px;
+  }
+}
+
+.lineSeparatorIcon {
+  position: relative;
+  overflow: clip;
+  max-height: unset;
+}
+
+.lineSeparater {
+  align-self: stretch;
+  height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.copyright2021Tgsrtc {
+  position: relative;
+  line-height: 21px;
+}
+
+.copyright2021TgsrtcAllRWrapper {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.aboutVisionLegacy,
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  color: var(--support-white);
+}
+
+.footer {
+  align-self: stretch;
+  padding: var(--padding-21xl) var(--padding-21xl) var(--padding-5xs);
+  box-sizing: border-box;
+  gap: var(--gap-13xl);
+  background-image: url(/footer@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  max-width: 100%;
+  font-size: var(--font-size-xs);
+  font-family: var(--font-montserrat);
+}

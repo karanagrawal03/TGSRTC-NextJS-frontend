@@ -14,4 +14,11 @@
     var(--padding-base);
   margin: 0;
   background: #f1f8f4;
+  word-break: break-all;
+  cursor: pointer;
+}
+@media screen and (max-width: 360px) {
+  .linkText {
+    font-size: var(--font-size-sm);
+  }
 }

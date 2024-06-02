@@ -130,7 +130,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
 }
 .bodyContainer {
   align-self: stretch;
@@ -138,22 +138,31 @@
 }
 .cards {
   flex: 1;
-  box-shadow: var(--table-shadow);
+  box-shadow: var(--card-shadow);
   border-radius: var(--br-base);
   background-color: var(--support-white);
   padding: var(--padding-21xl) var(--padding-6xs);
   box-sizing: border-box;
   gap: var(--gap-7xs);
   min-width: 271px;
-  max-width: 100%;
+  max-width: 362px;
   text-align: left;
   font-size: var(--font-size-5xl);
   color: var(--text-grey-body-text);
   font-family: var(--font-red-hat-display);
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 599px) {
+  .cards{
+    max-width: 100%;
+    padding: var(--padding-xl);
+  }
+}
+@media screen and (max-width: 599px) {
   .busPasses {
     font-size: var(--font-size-lgi);
     line-height: 26px;
+  }
+  .cards{
+    padding: var(--padding-xl);
   }
 }

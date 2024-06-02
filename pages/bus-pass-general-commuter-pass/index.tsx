@@ -1,51 +1,63 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import AccordionItem from "../../components/accordians";
-import Header from "../../components/header";
-import {
-  APPLY_AND_RENEW,
-  GENERAL_COMMUTER_PASS,
-  KNOW_MORE,
-} from "../../constants";
-import { generalCommuterPassData } from "../../constants/bus-pass-general-commuter-pass";
 import styles from "./index.module.css";
-const BusPassGeneralCommuterPass: NextPageBusPassGeneralCommuterPassType =
-  () => {
-    const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+import useFetch, { UPLOADS_BASE_URL } from "../../services/service";
 
-    const handleChange = (index: number) => {
-      setExpandedIndex((prevIndex) => (prevIndex === index ? null : index));
-    };
-    return (
-      <div className={styles.busPassGeneralCommuterPass}>
-        <Header />
-        <section className={styles.busPassesHeroGeneralCommut}>
-          <img className={styles.bgIcon} alt="" src="/bg@2x.png" />
-          <div className={styles.generalCommuterPassContainer}>
-            <p className={styles.general}>{GENERAL_COMMUTER_PASS}</p>
-            <p className={styles.applyRenew}>{APPLY_AND_RENEW}</p>
-          </div>
-        </section>
-        <section className={styles.busPassGeneralCommuterPass2}>
-          <h2 className={styles.knowMoreAboutContainer}>
-            <span className={styles.knowMoreAbout}>{KNOW_MORE}</span>
-            <b>{GENERAL_COMMUTER_PASS}</b>
-          </h2>
-          <div className={styles.eachAccordian}>
-            <ol className={styles.orderedList}>
-              {generalCommuterPassData.map((e, index) => (
-                <AccordionItem
-                  key={index}
-                  name={e.name}
-                  info={e.info}
-                  expanded={expandedIndex === index}
-                  onChange={() => handleChange(index)}
-                />
-              ))}
-            </ol>
-          </div>
-        </section>
-      </div>
-    );
+const BusPassGeneralCommuterPass = () => {
+
+  const { data, doFetch } = useFetch();
+
+  useEffect(() => {
+    doFetch(`/bus-pass-general-commuter-passes?populate=*`);
+  }, []);
+
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+
+  const handleChange = (index: number) => {
+    setExpandedIndex((prevIndex) => (prevIndex === index ? null : index));
   };
+  return (
+    <div className={styles.busPassGeneralCommuterPass}>
+      <section className={styles.busPassesHeroGeneralCommut}>
+        <img
+          className={styles.bgIcon}
+          alt="hero-web-image"
+          src={UPLOADS_BASE_URL + data?.heroWebImage?.data?.attributes?.url}
+          loading="lazy"
+        />
+        <img
+          className={styles.bgIconMobile}
+          alt="hero-mobile-image"
+          src={UPLOADS_BASE_URL + data?.heroMobileImage?.data?.attributes?.url}
+          loading="lazy"
+        />
+        <div className={styles.generalCommuterPassContainer}>
+          <p className={styles.general}>{data?.heroTitle}</p>
+          <p className={styles.applyRenew}>{data?.heroSubTitle}</p>
+        </div>
+      </section>
+      <section className={styles.busPassGeneralCommuterPass2}>
+        <div className={styles.knowMoreAboutStudentPassesWrapper}>
+          <h2 className={styles.knowMoreAbout}>
+            {data?.knowMoreTitle}
+          </h2>
+        </div>
+        <div className={styles.eachAccordian}>
+          <ol className={styles.orderedList}>
+            {data?.generalComputerPassAccordiansData?.map((e: any, index: number) => (
+              <AccordionItem
+                key={index}
+                name={e.name}
+                info={e.info}
+                expanded={expandedIndex === index}
+                onChange={() => handleChange(index)}
+              />
+            ))}
+          </ol>
+        </div>
+      </section>
+    </div>
+  );
+};
 
 export default BusPassGeneralCommuterPass;

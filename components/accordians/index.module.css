@@ -1,8 +1,6 @@
-.eachAccordian {
-  width: 100%;
-}
 .accordian {
   padding-bottom: var(--padding-5xs);
+  width: calc(100% - 25px);
 }
 .studentConcessionalRoutePas {
   margin: 0;
@@ -34,8 +32,7 @@
   margin-top: -15px;
   width: auto;
   background-color: #ffffff;
-  border: 2px solid;
-  padding: 0px var(--padding-41xl) 0px var(--padding-41xl);
+  padding: 0px var(--padding-41xl) var(--padding-5xl) var(--padding-41xl);
 }
 
 .dropdown {
@@ -43,4 +40,60 @@
   box-shadow: 0px 4px 10px 0px #e8e8e8;
   padding: 0px 0px 0px var(--padding-5xl);
   margin-bottom: 0px;
+}
+.accordianHeading {
+  font-weight: 500;
+  font-size: var(--font-size-xl);
+  line-height: 26px;
+  font-family: var(--font-montserrat);
+}
+@media screen and (max-width: 750px) {
+  .accordianTab {
+    margin-top: -15px;
+    width: auto;
+    background-color: #ffffff;
+    padding: 0px var(--padding-base) var(--padding-5xl) var(--padding-19xl);
+  }
+  .accordianHeading {
+    font-weight: 500;
+    font-size: var(--font-size-16);
+    line-height: 26px;
+    font-family: var(--font-montserrat);
+  }
+}
+@media screen and (max-width: 500px) {
+  .accordianTab {
+    padding-left: var(--padding-11xl);
+    padding-right: var(--padding-11xl);
+  }
+  .accordianHeading {
+    font-weight: 500;
+    font-size: var(--font-size-16);
+    line-height: 26px;
+    font-family: var(--font-montserrat);
+  }
+}
+@media screen and (max-width: 360px) {
+  .accordianTab {
+    padding-left: var(--padding-base);
+    padding-right: var(--padding-base);
+  }
+  .accordianHeading {
+    font-weight: 500;
+    font-size: var(--font-size-16);
+    line-height: 26px;
+    font-family: var(--font-montserrat);
+  }
+}
+@media screen and (max-width: 900px) {
+  .accordianTab {
+    padding-left: var(--padding-45xl);
+    padding-right: var(--padding-45xl);
+  }
+  .accordianHeading {
+    font-weight: 500;
+    font-size: var(--font-size-16);
+    line-height: 26px;
+    font-family: var(--font-montserrat);
+  }
 }
