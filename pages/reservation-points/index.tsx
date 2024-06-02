@@ -8,7 +8,7 @@ const ReservationPoints = () => {
   const {data, doFetch}=useFetch();
   useEffect(()=>{
     doFetch("/reservation-points?populate=*");
-  })
+  },[])
   return (
     <div className={styles.reservationPoints}>
       <ReservationHeroConcessionSc data={data}/>

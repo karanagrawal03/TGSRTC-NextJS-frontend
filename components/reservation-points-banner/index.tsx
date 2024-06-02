@@ -1,7 +1,29 @@
 import styles from "./index.module.css";
 import { UPLOADS_BASE_URL } from "../../services/service";
+interface ImageAttributes {
+  url: string;
+}
 
-const ReservationHeroConcessionSc= ({data}:any) => {
+interface ImageData {
+  attributes: ImageAttributes;
+}
+
+interface HeroBackgroundImage {
+  data: ImageData;
+}
+
+interface ReservationHeroConcessionScData {
+  heroBackgroundImageWeb?: HeroBackgroundImage;
+  heroBackgroundImageMobile?: HeroBackgroundImage;
+  heroTitle?: string;
+  heroSubtitle?: string;
+}
+
+interface ReservationHeroConcessionScProps {
+  data: ReservationHeroConcessionScData | null;
+}
+
+const ReservationHeroConcessionSc= ({data}:ReservationHeroConcessionScProps) => {
   return (
     <section className={styles.reservationHeroConcessionSc}>
       <img className={styles.maskGroupIcon} alt="background image" src={UPLOADS_BASE_URL+data?.heroBackgroundImageWeb?.data?.attributes?.url} loading="lazy"/>
