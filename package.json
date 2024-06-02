@@ -28,8 +28,6 @@
     "typescript": "4.7.3"
   },
   "scripts": {
-    "prestart": "nvm use",
-    "preinstall": "nvm use",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
