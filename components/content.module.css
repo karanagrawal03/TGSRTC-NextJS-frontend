@@ -1623,7 +1623,6 @@
   position: relative;
   display: inline-block;
   flex-shrink: 0;
-  debug_commit: bf4bc93;
   max-width: 115%;
 }
 .cells42 {
@@ -1659,7 +1658,6 @@
   position: relative;
   display: inline-block;
   flex-shrink: 0;
-  debug_commit: bf4bc93;
   max-width: 110%;
   z-index: 1;
 }

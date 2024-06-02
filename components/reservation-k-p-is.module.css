@@ -8,11 +8,6 @@
   display: inline-block;
   mix-blend-mode: normal;
   flex-shrink: 0;
-  debug_commit: bf4bc93;
-}
-.k {
-  /* align-self: stretch;
-  height: 100px; */
 }
 .busesRunning {
   min-width: 109px;
@@ -31,7 +26,6 @@
   color: var(--text-grey-body-text);
 }
 .kParent {
-  /* width: 120px; */
   flex-direction: column;
 }
 .lineSeparatorIcon {
@@ -42,13 +36,6 @@
   object-fit: contain;
 }
 .lineSeparatorWrapper {
-  /* height: 107.5px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: var(--padding-5xs-5) 0 0;
-  box-sizing: border-box; */
   width: 100px;
   height: 1px;
   transform: rotate(90deg);
@@ -73,7 +60,6 @@
   display: inline-block;
   mix-blend-mode: normal;
   flex-shrink: 0;
-  debug_commit: bf4bc93;
 }
 .mWrapper {
   align-self: stretch;
@@ -128,7 +114,6 @@
   display: inline-block;
   mix-blend-mode: normal;
   flex-shrink: 0;
-  debug_commit: bf4bc93;
 }
 .lWrapper {
   align-self: stretch;
@@ -147,7 +132,6 @@
   color: var(--text-grey-body-text);
   mix-blend-mode: normal;
   flex-shrink: 0;
-  debug_commit: bf4bc93;
 }
 .frameGroup,
 .reservationKpis {
@@ -164,7 +148,6 @@
   background-color: var(--support-white);
   flex-direction: column;
   padding: 79px var(--padding-257xl);
-  /* gap: 30px; */
   z-index: 1;
   text-align: left;
   font-size: var(--font-size-63xl);
@@ -186,15 +169,11 @@
 }
 @media screen and (max-width: 1275px) {
   .container {
-    /* padding-left: 90px;
-    padding-right: 90px; */
     justify-content: space-between;
   }
 }
 @media screen and (max-width: 900px) {
   .container {
-    /* padding-left: 90px;
-    padding-right: 50px; */
     justify-content: space-between;
   }
   .k {
@@ -214,8 +193,6 @@
     font-size: 24px;
   }
   .container {
-    /* padding-left: var(--padding-119xl);
-    padding-right: var(--padding-119xl); */
     box-sizing: border-box;
     flex-direction: column;
   }
