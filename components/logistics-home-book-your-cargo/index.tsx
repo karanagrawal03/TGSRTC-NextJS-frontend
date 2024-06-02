@@ -1,17 +1,22 @@
 import type { NextPage } from "next";
 import styles from "./index.module.css";
-import { BOOK_YOUR_CARGO, LOOKING_TO_SEND_PACKAGE, SEND_A_PARCEL } from "../../constants";
+import { UPLOADS_BASE_URL } from "../../services/service";
 
 export type MainContentType = {
   className?: string;
+  bookYourCargoTitle?:string;
+  bookYourCargoImage?:any;
+  bookYourCargoSubtitle?:string;
+  bookYourCargoContent?:string;
+  bookYourCargoButtonText?:string;
 };
 
-const MainContent: NextPage<MainContentType> = ({ className = "" }) => {
+const MainContent: NextPage<MainContentType> = ({ bookYourCargoTitle,bookYourCargoImage,bookYourCargoSubtitle,bookYourCargoContent,bookYourCargoButtonText,className = "" }) => {
   return (
     <section className={[styles.mainContent, className].join(" ")}>
       <div className={styles.contentLeft}>
         <div className={styles.bookYourCargoWrapper}>
-          <h1 className={styles.bookYourCargo}>{BOOK_YOUR_CARGO}</h1>
+          <h1 className={styles.bookYourCargo}>{bookYourCargoTitle}</h1>
         </div>
         <div className={styles.cargoCard}>
           <div className={styles.cargoInfo}>
@@ -22,33 +27,25 @@ const MainContent: NextPage<MainContentType> = ({ className = "" }) => {
                     className={styles.frameChild}
                     loading="lazy"
                     alt="goods"
-                    src="/logistics-goods.svg"
-                  />
-                  <img
-                    className={styles.frameItem}
-                    loading="lazy"
-                    alt="truck"
-                    src="/logistics-truck.svg"
+                    src={`${UPLOADS_BASE_URL}${bookYourCargoImage?.data.attributes.url}`}
                   />
                 </div>
               </div>
-              <div className={styles.illustrationShape} />
             </div>
             <div className={styles.cargoDescription}>
               <div className={styles.lookingForSendYourPackageParent}>
                 <h2 className={styles.lookingForSend}>
-                  {LOOKING_TO_SEND_PACKAGE}
+                  {bookYourCargoSubtitle}
                 </h2>
                 <p className={styles.loremIpsumDolor}>
-                  Lorem ipsum dolor sit amet, adipiscing elit. sed do eiusmod
-                  tempor incididunt ut. adipiscing elit.
+                 {bookYourCargoContent}
                 </p>
               </div>
             </div>
           </div>
           <div className={styles.cargoButton}>
             <button className={styles.button}>
-              <div className={styles.applyNow}>{SEND_A_PARCEL}</div>
+              <div className={styles.applyNow}>{bookYourCargoButtonText}</div>
             </button>
           </div>
         </div>

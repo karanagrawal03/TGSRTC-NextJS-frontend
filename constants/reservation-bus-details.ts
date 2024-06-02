@@ -83,30 +83,43 @@ export const busDetails = [
       imageSrc: "/city-ordinary.png"
     }
   ];
-export const MLA_MP_BULLET_POINTS = [
-    "4 seats in all types of buses, 2 berths in sleeper coaches.",
-  ];
-  
-  export const LADIES_BULLET_POINTS = [
-    "40% seating accommodation i.e. reserved for exclusive use by ladies in all city, Pallevelugu & Express services.",
-    "City: 40 % seats in the front rows behind the driver's cabin.",
-    "Pallevelugu: 1st to 7th row seats behind the driver's cabin (21 seats).",
-    "Express: 1st to 7th row seats behind the driver's cabin (21 seats).",
-    "Deluxe: 1st to 2nd row seats behind the driver's cabin (4 seats).",
-    "Super Luxury: 1 st to 2nd row seats behind the driver's cabin (4 seats)."
-  ];
-  
-  export const PHYSICALLY_CHALLENGED_BULLET_POINTS = [
-    "One seat at the left side row of the front entrance door in case of city services.",
-    "One seat on the left side first row is reserved for the physically challenged persons."
-  ];
-  
-  export const SENIOR_CITIZENS_BULLET_POINTS = [
-    "Left side two seater row behind the seat allotted to physically challenged persons in all types of buses.",
-    "One seat on the left side first row is reserved for the physically challenged persons."
-  ];
-  
-  export const PRESIDENTS_BULLET_POINTS = [
-    "If the four ear-marked for exclusive use by MLAs/MPs fall vacant, these seats will be allotted to presidents of Mandals / ZPTC members on second preference basis. The Layouts various Types of Vehicles are given below. Please click the links below to view the Layouts."
+  export const SEAT_LAYOUT_DATA = [
+    {
+      title: "MLA/MP",
+      bulletPoints: [
+        "4 seats in all types of buses, 2 berths in sleeper coaches."
+      ]
+    },
+    {
+      title: "Ladies",
+      bulletPoints: [
+        "40% seating accommodation i.e. reserved for exclusive use by ladies in all city, Pallevelugu & Express services.",
+        "City: 40 % seats in the front rows behind the driver's cabin.",
+        "Pallevelugu: 1st to 7th row seats behind the driver's cabin (21 seats).",
+        "Express: 1st to 7th row seats behind the driver's cabin (21 seats).",
+        "Deluxe: 1st to 2nd row seats behind the driver's cabin (4 seats).",
+        "Super Luxury: 1 st to 2nd row seats behind the driver's cabin (4 seats)."
+      ]
+    },
+    {
+      title: "Physically Challenged",
+      bulletPoints: [
+        "One seat at the left side row of the front entrance door in case of city services.",
+        "One seat on the left side first row is reserved for the physically challenged persons."
+      ]
+    },
+    {
+      title: "Senior Citizens",
+      bulletPoints: [
+        "Left side two seater row behind the seat allotted to physically challenged persons in all types of buses.",
+        "One seat on the left side first row is reserved for the physically challenged persons."
+      ]
+    },
+    {
+      title: "Presidents of Mandals / ZPTC Members",
+      bulletPoints: [
+        "If the four ear-marked for exclusive use by MLAs/MPs fall vacant, these seats will be allotted to presidents of Mandals / ZPTC members on second preference basis. The Layouts various Types of Vehicles are given below. Please click the links below to view the Layouts."
+      ]
+    }
   ];
   

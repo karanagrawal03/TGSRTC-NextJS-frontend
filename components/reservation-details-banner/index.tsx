@@ -1,29 +1,48 @@
 import type { NextPage } from "next";
 import styles from "./index.module.css";
-import { BUS_DETAILS, TRAVEL_EFFORTLESSLY } from "../../constants";
+import { UPLOADS_BASE_URL } from "../../services/service";
 
 export type MainHeaderType = {
   className?: string;
+  data?: {
+    heroImageWeb?: {
+      data: {
+        attributes: {
+          url: string;
+        };
+      };
+    };
+    heroImageMobile?: {
+      data: {
+        attributes: {
+          url: string;
+        };
+      };
+    };
+    heroTitle?: string;
+    heroSubTitle?: string;
+  };
 };
 
-const MainHeader: NextPage<MainHeaderType> = ({ className = "" }) => {
+
+const MainHeader: NextPage<MainHeaderType> = ({ data, className = "" }) => {
   return (   
     <div className={[styles.mainContainer, className].join(" ")}>
       <img
         className={styles.reservationBusDetailsHero}
         loading="lazy"
         alt="Bus Details"
-        src="/reservation-bus-details-banner-web.png"
+        src={`${UPLOADS_BASE_URL}${data?.heroImageWeb?.data.attributes.url}`}
       />
        <img
         className={styles.reservationBusDetailsHeroMobile}
         loading="lazy"
         alt="Bus Details"
-        src="/reservation-details-banner-mobile.png"
+        src={`${UPLOADS_BASE_URL}${data?.heroImageMobile?.data.attributes.url}`}
       />
       <div className={styles.reservationBusDetailsHeroContent}>
-      <h1 className={styles.reservationBusDetailsHeroHeading}>{BUS_DETAILS}</h1>
-      <p className={styles.reservationBusDetailsHeroPara}>{TRAVEL_EFFORTLESSLY}</p>
+        <h1 className={styles.reservationBusDetailsHeroHeading}>{data?.heroTitle}</h1>
+        <p className={styles.reservationBusDetailsHeroPara}>{data?.heroSubTitle}</p>
       </div>
     </div>
   );

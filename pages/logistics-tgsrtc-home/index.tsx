@@ -4,16 +4,51 @@ import MainContent from "../../components/logistics-home-book-your-cargo";
 import ContentRight from "../../components/logistics-home-about-logistics";
 import FrameComponent6 from "../../components/logistics-home-business";
 import styles from "./index.module.css";
-import Header from "../../components/header";
-import Footer from "../../components/footer";
+import { useEffect } from "react";
+import useFetch from "../../services/service";
 
-const LogisticsTSRTCHome: NextPageLogisticsTSRTCHomeType = () => {
+const LogisticsTSRTCHome: NextPage = () => {
+  const { data, doFetch } = useFetch();
+
+  useEffect(() => {
+    doFetch(`/logistics-landings?populate=*`);
+  }, []);
+
   return (
     <div className={styles.logisticsTsrtcHome}>
-      <FrameComponent7 />
-      <MainContent />
-      <ContentRight />
-      <FrameComponent6 />
+      <FrameComponent7 
+        heroTitle={data?.heroTitle} 
+        heroSubTitle={data?.heroSubTitle} 
+        heroSectionLogo={data?.heroSectionLogo} 
+        heroImageMobile={data?.heroImageMobile} 
+        heroImageWeb={data?.heroImageWeb}
+      />
+      <MainContent  
+        bookYourCargoTitle={data?.bookYourCargoTitle} 
+        bookYourCargoImage={data?.bookYourCargoImage} 
+        bookYourCargoSubtitle={data?.bookYourCargoSubtitle} 
+        bookYourCargoContent={data?.bookYourCargoContent} 
+        bookYourCargoButtonText={data?.bookYourCargoButtonText}
+      />
+      <ContentRight 
+        data={{
+          aboutLogisticsTitle: data?.aboutLogisticsTitle,
+          aboutLogisticsPara1: data?.aboutLogisticsPara1,
+          aboutLogisticsPara2Start: data?.aboutLogisticsPara2Start,
+          aboutLogisticsPara2Link: data?.aboutLogisticsPara2Link,
+          aboutLogisticsPara2End: data?.aboutLogisticsPara2End,
+          aboutLogisticsCards: data?.aboutLogisticsCards || [],
+        }} 
+      />
+      <FrameComponent6 
+        data={{
+          logisticsBusiness: data?.logisticsBusiness,
+          logisticsBusinesspara1: data?.logisticsBusinesspara1,
+          logisticsBusinessImage: data?.logisticsBusinessImage,
+          logisticsBusinessImageMobile: data?.logisticsBusinessImageMobile,
+          logisticsBusinesspara2: data?.logisticsBusinesspara2,
+        }} 
+      />
     </div>
   );
 };
