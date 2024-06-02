@@ -47,7 +47,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
         </AccordionSummary>
       </Accordion>
       {expanded && (
-        <AccordionDetails className={styles.accordianDetails}>
+        <AccordionDetails sx={{padding:"0px"}} className={styles.accordianDetails}>
           <div className={`${styles.accordianTab} ${containerClassName}`}>
             <AccordianTab array={info} />
           </div>
