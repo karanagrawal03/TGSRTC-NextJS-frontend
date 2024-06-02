@@ -77,7 +77,7 @@
 .pickup {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: start;
   justify-content: flex-start;
   gap: var(--gap-5xs);
 }
@@ -106,7 +106,7 @@
   position: relative;
   line-height: 26px;
   mix-blend-mode: normal;
-  white-space: nowrap;
+  /* white-space: nowrap; */
 }
 .placesCovered {
   position: relative;
@@ -131,6 +131,7 @@
   line-height: 26px;
   color: var(--text-grey-body-text);
   mix-blend-mode: normal;
+  word-wrap: break-word;
 }
 .button {
   cursor: pointer;
