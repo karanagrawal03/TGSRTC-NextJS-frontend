@@ -25,7 +25,7 @@ const Carousel = (props: CarouselInterface) => {
     const { className, style, onClick } = props;
     return (
       <div className={className} style={{ ...style }} onClick={onClick}>
-        <img className={styles.icons3} alt="" src="/icons-10.svg" />
+        <img className={styles.icons3} alt="preview icons" src="/icons-10.svg" loading="lazy"/>
       </div>
     );
   }
@@ -34,7 +34,7 @@ const Carousel = (props: CarouselInterface) => {
     const { className, style, onClick } = props;
     return (
       <div className={className} style={{ ...style }} onClick={onClick}>
-        <img className={styles.icons4} alt="" src="/icons-11.svg" />
+        <img className={styles.icons4} alt="next icons" src="/icons-11.svg" loading="lazy"/>
       </div>
     );
   }

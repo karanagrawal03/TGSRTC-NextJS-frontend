@@ -24,6 +24,7 @@ export const BOOK_APPOINTMENT="Book Appointment";
 export const BOOK_NOW="Book Now";
 export const BOOK_YOUR_CARGO="Book Your Cargo";
 export const BOOK_YOUR_TICKET="Book Your Ticket";
+export const BOOK_YOUR_TRAVEL_TICKET="Apply, Renew & Travel effortlessly with TGSRTC";
 export const BOOK_YOUR_SERVICE = "Book Your Services";
 export const BOOK_YOUR_SERVICE_PARAGRAPH = "Telangana State Road Transport Corporation (TGSRTC) boasts a fleet of over 10,000 buses, serving major routes within Telangana andacross states like Andhra Pradesh, Karnataka, Tamil Nadu, and Maharashtra. With operations spanning 36,593 routes in India, TSRTC is dedicated to offering top-notch facilities, punctual services, and affordable ticket prices for a safe and comfortable journey. Secure your TSRTC online booking today!";
 export const BOOK_YOUR_TICKET_PARAGRAPH="lorem ipsum dolor sit amet, consectetur adipiscing elit. Lore ipsum dolor sit amet, adipiscing elit. sed do eiusmod tempo incididunt ut.";

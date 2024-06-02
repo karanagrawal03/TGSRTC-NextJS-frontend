@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import { useMemo, type CSSProperties } from "react";
 import styles from "./reservation-hero-landing.module.css";
+import { BOOK_YOUR_TRAVEL_TICKET } from "../constants";
 
 export type ReservationHeroLandingType = {
   className?: string;
@@ -51,7 +52,7 @@ const ReservationHeroLanding: NextPage<ReservationHeroLandingType> = ({
       className={[styles.reservationHeroLanding, className].join(" ")}
       style={reservationHeroLandingStyle}
     >
-      <img className={styles.maskGroupIcon} alt="" src={maskGroup} />
+      <img className={styles.maskGroupIcon} alt="reservation hero image" src={maskGroup} loading="lazy"/>
       <h1
         className={styles.tgsrtcOnlineBusContainer}
         style={tGSRTCOnlineBusContainerStyle}
@@ -63,7 +64,7 @@ const ReservationHeroLanding: NextPage<ReservationHeroLandingType> = ({
         {bookYourTicketsHassleFree}
       </h2>
       <div className={styles.applyRenew} style={bookYourTicketsStyle}>
-      Apply, Renew & Travel effortlessly with TGSRTC
+          {BOOK_YOUR_TRAVEL_TICKET}
       </div>
     </section>
   );
