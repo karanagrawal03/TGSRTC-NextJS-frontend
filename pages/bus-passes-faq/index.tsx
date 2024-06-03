@@ -23,7 +23,6 @@ const BusPassesFaq = () => {
   const handleChange = (index: number) => {
     setExpandedIndex((prevIndex) => (prevIndex === index ? null : index));
   };
-  console.log(data);
   return (
     <div className={styles.busPassGeneralCommuterPass}>
       <section className={styles.busPassesHeroGeneralCommut}>
