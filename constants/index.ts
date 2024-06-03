@@ -120,6 +120,7 @@ export const LOGISTICS_FAQ = "FAQ";
 export const LOGISTICS_LINK="/logistics-tgsrtc-home";
 export const LOGISTICS_RATES_LINK="/";
 export const LOOKING_TO_SEND_PACKAGE=" Looking for send your package ?";
+export const MENU="Menu";
 export const METRO_DELUX_COACH_PARA="Metro Deluxe Coaches with better features like attractive colour scheme, seat comfort, wider windows etc., are introduced in place of Metro liners for the benefit of long distance city commuters.";
 export const METRO_DELUX_COACH="Metro Deluxe coach for twin cities of Hyderabad and Secunderabad";
 export const METRO_DELUX= "Metro Deluxe";
