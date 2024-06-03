@@ -110,6 +110,9 @@ text-align: left;
   .busPassGeneralCommuterPass2 {
     padding: 0 var(--padding-5xl) var( --padding-60 ) var(--padding-5xl);
   }
+  .knowMoreAboutContainer{
+    margin-top: 50px;
+  }
 }
 @media screen and (max-width: 750px) {
   .generalCommuterPassContainer {
