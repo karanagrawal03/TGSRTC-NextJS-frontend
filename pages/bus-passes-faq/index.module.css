@@ -30,6 +30,14 @@
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
   mix-blend-mode: normal;
 }
+.typesOfPassesText{
+  font-family: var(--font-montserrat);
+font-size: var(--font-size-16);
+font-weight: 600;
+line-height: 19.5px;
+text-align: left;
+
+}
 .generalCommuterPassContainer {
   position: absolute;
   top: 16.4vw;
@@ -55,6 +63,7 @@
   gap: var(--gap-5xs);
   color: var(--primary-red);
   font-family: var(--font-playfair-display);
+  margin: 0px;
 }
 .orderedList {
   padding: 0px;

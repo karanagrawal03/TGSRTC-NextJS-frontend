@@ -23,6 +23,7 @@ const BusPassesFaq = () => {
   const handleChange = (index: number) => {
     setExpandedIndex((prevIndex) => (prevIndex === index ? null : index));
   };
+  console.log(data);
   return (
     <div className={styles.busPassGeneralCommuterPass}>
       <section className={styles.busPassesHeroGeneralCommut}>
@@ -48,12 +49,25 @@ const BusPassesFaq = () => {
         </div>
       </section>
       <section className={styles.busPassGeneralCommuterPass2}>
-        <h2 className={styles.knowMoreAboutContainer}>
-          {data?.faqsAccordiansHeading}
-        </h2>
+        <h2 className={styles.knowMoreAboutContainer}>{data?.faqsHeading}</h2>
         <div className={styles.eachAccordian}>
+          <p  className={styles.typesOfPassesText}>{data?.typesOfPasses}</p>
           <ol className={styles.orderedList}>
             {data?.busPassesFaqData.map((e: any, index: number) => (
+              <AccordionItem
+                key={index}
+                name={e.name}
+                info={e.info}
+                expanded={expandedIndex === index}
+                onChange={() => handleChange(index)}
+              />
+            ))}
+          </ol>
+        </div>
+        <div>
+          <p className={styles.typesOfPassesText}>{data?.onConsessionalPassesHeading}</p>
+          <ol className={styles.orderedList}>
+            {data?.onConcessionalPasses.map((e: any, index: number) => (
               <AccordionItem
                 key={index}
                 name={e.name}
