@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import styles from "./BookYourTicket.module.css";
+import styles from "./index.module.css";
 import ReservationForm from "../ReservationForm/ReservationForm";
 import { BOOK_YOUR_TICKET, BOOK_YOUR_TICKET_PARAGRAPH, ROUTES_TEXT, VIEW_ALL_ROUTES } from "../../constants";
 
@@ -7,8 +7,6 @@ export type BookYourTicketType = {
   className?: string;
   routes: { from: string; to: string }[];
 };
-
-
 
 const BookYourTicket: NextPage<BookYourTicketType> = ({ className = "", routes }) => {
   return (
@@ -34,7 +32,7 @@ const BookYourTicket: NextPage<BookYourTicketType> = ({ className = "", routes }
               <img className={styles.lineIcon} alt="line icon" src="/line.svg" loading="lazy"/>
             </div>
             <div className={styles.routeChipsContainer}>
-              {routes.map((route, index) => (
+              {routes?.map((route, index) => (
                 <div key={index} className={styles.routeChips}>
                   <div className={styles.city}>{route.from}</div>
                   <img

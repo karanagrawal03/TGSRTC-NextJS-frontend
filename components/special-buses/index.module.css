@@ -1,0 +1,64 @@
+.busDustParent,
+.reservationSpecialBusesOf {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.busDustParent {
+  align-self: stretch;
+  flex-direction: row;
+  position: relative;
+  text-align: left;
+  font-size: var(--font-size-27xl);
+  color: var(--text-black);
+  font-family: var(--font-playfair-display);
+}
+.busDust {
+  height: 780px;
+  width: 128px;
+  position: absolute;
+  margin: 0 !important;
+  top: -275px;
+  left: 0;
+  object-fit: contain;
+  z-index: 2;
+}
+.reservationSpecialBusesOf {
+  flex: 1;
+  background-color: var(--support-grey-bg);
+  flex-direction: column;
+  padding: var(--padding-81xl) 64px;
+  box-sizing: border-box;
+  gap: var(--gap-13xl);
+  z-index: 1;
+}
+.specialBuses {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  font-weight: 600;
+  font-family: inherit;
+  mix-blend-mode: normal;
+}
+.specialBusesOfferWrapper {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+@media screen and (max-width: 599px) {
+  .busDust {
+    display: none;
+  }
+  .reservationSpecialBusesOf {
+    padding: var(--gap-41xl) var(--padding-5xl);
+  }
+  .specialBuses {
+    font-size: 32px;
+    line-height: 42.66px;
+    text-align: center;
+  }
+}

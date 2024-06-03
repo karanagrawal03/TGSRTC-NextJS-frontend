@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import styles from "./index.module.css";
 import Carousal from "../components/Carosal";
-import BookYourTicket from "../components/BookYourTicket/BookYourTicket";
+import BookYourTicket from "../components/BookYourTicket";
 import About from "../components/About/About";
 import HomeHero from "../components/HomeHero/HomeHero";
 import HomeBookYourServices from "../components/HomeBookYourServices/HomeBookYourServices";

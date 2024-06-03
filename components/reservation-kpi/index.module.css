@@ -1,0 +1,117 @@
+.reservationKpis {
+  display: flex;
+  align-self: stretch;
+  background-color: var(--support-white);
+  flex-direction: column;
+  padding: 79px var(--padding-257xl);
+  z-index: 1;
+  text-align: left;
+  font-size: var(--font-size-63xl);
+  color: var(--primary-green);
+  font-family: var(--font-montserrat);
+  display: flex;
+  align-items: center;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.busDustMobile {
+  display: none;
+}
+.container {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  gap: 30px;
+}
+.kParent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.k {
+  position: relative;
+  font-weight: 500;
+  display: inline-block;
+  mix-blend-mode: normal;
+  flex-shrink: 0;
+}
+.k1 {
+  font-size: var(--font-size-29xl);
+}
+.onAvgDaily {
+  position: relative;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--text-grey-body-text);
+  mix-blend-mode: normal;
+  flex-shrink: 0;
+  text-align: center;
+}
+.lineSeparator:last-child {
+  display: none;
+}
+.lineSeparatorWrapper {
+  width: 100px;
+  height: 1px;
+  transform: rotate(90deg);
+  background: linear-gradient(45deg, transparent, black, transparent);
+}
+@media screen and (max-width: 1275px) {
+  .container {
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 900px) {
+  .container {
+    justify-content: space-between;
+  }
+  .k {
+    font-size: 46px;
+  }
+  .k1 {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .k,
+  .l,
+  .m1 {
+    font-size: 46px;
+  }
+  .k1 {
+    font-size: 24px;
+  }
+  .container {
+    box-sizing: border-box;
+    flex-direction: column;
+  }
+  .lineSeparatorWrapper {
+    transform: rotate(0deg);
+  }
+}
+@media screen and (max-width: 599px) {
+  .busDustMobile {
+    display: block;
+  }
+  .reservationKpis {
+    box-sizing: border-box;
+    padding-top: var(--padding-xl);
+    padding-bottom: var(--padding-41xl);
+  }
+}
+@media screen and (max-width: 450px) {
+  .k {
+    font-size: var(--font-size-10xl);
+  }
+  .m {
+    font-size: var(--font-size-lgi);
+  }
+  .l,
+  .m1 {
+    font-size: var(--font-size-10xl);
+  }
+  .customerSuppoprt {
+    font-size: 32px;
+  }
+}

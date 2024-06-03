@@ -1,0 +1,151 @@
+.csImgContainer {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-bottom: 96px;
+}
+.cSImgMobile {
+  display: none;
+}
+.cSImg {
+  position: relative;
+  /* top: -219px;
+  left: 0px; */
+  width: 100%;
+  /* height: 100%; */
+  /* max-width: 100%; */
+  height: auto;
+  object-fit: cover;
+}
+.customerSupportTexts,
+.emailPhone {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.customerSupportTexts {
+  position: absolute;
+  top: 0px;
+  font-size: var(--font-size-27xl);
+  color: var(--color-black);
+  font-family: var(--font-playfair-display);
+  flex-direction: column;
+  gap: var(--gap-13xl);
+  z-index: 2;
+  padding-left: 92px;
+  padding-top: 100px;
+}
+.texts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-xs);
+  max-width: 100%;
+}
+.customerSupport,
+.needHelpWith {
+  margin: 0;
+  position: relative;
+  font-weight: 600;
+  mix-blend-mode: normal;
+}
+.customerSupport {
+  font-size: inherit;
+  line-height: 52px;
+  font-family: inherit;
+  display: inline-block;
+  max-width: 100%;
+}
+.needHelpWith {
+  font-size: var(--font-size-5xl);
+  letter-spacing: 0.02em;
+  line-height: 32px;
+  font-family: var(--font-montserrat);
+  color: var(--color-darkslategray-200);
+  white-space: pre-wrap;
+}
+.emailPhone {
+  flex-direction: column;
+  gap: var(--gap-xs);
+  font-size: var(--font-size-5xl);
+  color: var(--text-black);
+  font-family: var(--font-montserrat);
+}
+.email {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 7px;
+}
+.icons2 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+}
+.onlinesupporttgsrtcbusin {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  letter-spacing: 0.02em;
+  line-height: 32px;
+  font-weight: 500;
+  font-family: inherit;
+  white-space: nowrap;
+}
+.phone {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+}
+.contactNumbers,
+.icons3 {
+  position: relative;
+}
+.icons3 {
+  height: 24px;
+  width: 24px;
+}
+.contactNumbers {
+  letter-spacing: 0.02em;
+  line-height: 32px;
+  font-weight: 500;
+  margin: 0;
+}
+@media screen and (max-width: 599px) {
+  .csImgContainer {
+    margin-bottom: 60px;
+  }
+  .cSImg {
+    display: none;
+  }
+  .cSImgMobile {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .needHelpWith {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .emailPhone {
+    font-size: 14px;
+    line-height: 32px;
+  }
+  .customerSupportTexts {
+    gap: 16px;
+    padding: 24px;
+  }
+  .icons2,
+  .icon3 {
+    width: 20px;
+    height: 20px;
+  }
+  .customerSupport {
+    font-size: 32px;
+  }
+}
