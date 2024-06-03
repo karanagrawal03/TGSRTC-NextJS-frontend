@@ -1,0 +1,36 @@
+.container {
+  margin: 100px;
+}
+.profileHeading {
+  color: black;
+  margin: 0px;
+  font-family: var(--font-playfair-display);
+  font-size: 46px;
+  font-weight: 600;
+  line-height: 61.32px;
+  text-align: left;
+}
+.bulletPointsHeading {
+  font-family: var(--font-playfair-display);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 40px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: #cd342b;
+  margin: 0px;
+}
+.tsrtcAtAGlanceText {
+  color: black;
+  font-family: var(--font-montserrat);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19.5px;
+  text-align: left;
+}
+.bulletPointsContainer {
+  margin-top: 32px 0px 0px 0px;
+}
+.bulletpoints {
+  margin: 0px;
+}

@@ -5,6 +5,7 @@
   line-height: 26px;
   text-align: left;
   list-style-type: disc;
+  color: black;
 }
 .listItems::marker {
   color: #cd342b;
