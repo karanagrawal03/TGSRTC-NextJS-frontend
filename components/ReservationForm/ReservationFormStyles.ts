@@ -24,7 +24,7 @@ const ReservationFormStyle = {
         display: "flex",
         alignItems: "center",
         position: "relative",
-        padding: "17px 16px 17px 24px",
+        padding: "var(--padding-mid) 16px var(--padding-mid) 24px",
         maxWidth: "100%",
         "@media (max-width: 1268px)": {
             borderBottom: "none",
@@ -48,7 +48,7 @@ const ReservationFormStyle = {
         borderLeft: "1px solid var(--color-gainsboro-200)",
         borderTop: "1px solid var(--color-gainsboro-200)",
         borderBottom: "1px solid var(--color-gainsboro-200)",
-        padding: "17px 16px 15px 24px",
+        padding: "var(--padding-mid) 16px var(--padding-mini) 24px",
         display: "flex",
         alignItems: "center",
         justifyContent: "flex-start",
