@@ -9,11 +9,7 @@
 }
 .cSImg {
   position: relative;
-  /* top: -219px;
-  left: 0px; */
   width: 100%;
-  /* height: 100%; */
-  /* max-width: 100%; */
   height: auto;
   object-fit: cover;
 }
@@ -33,8 +29,8 @@
   flex-direction: column;
   gap: var(--gap-13xl);
   z-index: 2;
-  padding-left: 92px;
-  padding-top: 100px;
+  padding-left: var(--padding-73xl);
+  padding-top: var(--padding-81xl);
 }
 .texts {
   display: flex;
@@ -78,14 +74,14 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  gap: 7px;
+  gap: var(--gap-7xs);
 }
-.icons2 {
+.emailIcon {
   height: 24px;
   width: 24px;
   position: relative;
 }
-.onlinesupporttgsrtcbusin {
+.emailAddress {
   margin: 0;
   position: relative;
   font-size: inherit;
@@ -103,10 +99,10 @@
   gap: var(--gap-5xs);
 }
 .contactNumbers,
-.icons3 {
+.phoneIcon {
   position: relative;
 }
-.icons3 {
+.phoneIcon {
   height: 24px;
   width: 24px;
 }
@@ -129,23 +125,23 @@
     height: 100%;
   }
   .needHelpWith {
-    font-size: 16px;
+    font-size: var(--font-size-base);
     line-height: 26px;
   }
   .emailPhone {
-    font-size: 14px;
+    font-size: var(--font-size-sm);
     line-height: 32px;
   }
   .customerSupportTexts {
-    gap: 16px;
-    padding: 24px;
+    gap: var(--gap-base);
+    padding: var(--padding-5xl);
   }
-  .icons2,
+  .emailIcon,
   .icon3 {
     width: 20px;
     height: 20px;
   }
   .customerSupport {
-    font-size: 32px;
+    font-size: var(--font-size-13xl);
   }
 }

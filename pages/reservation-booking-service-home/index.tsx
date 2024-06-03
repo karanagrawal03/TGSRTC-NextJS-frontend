@@ -1,4 +1,4 @@
-import BookYourTicket from "../../components/BookYourTicket";
+import BookYourTicket from "../../components/BookYourTicket/BookYourTicket";
 import ReservationKPIs from "../../components/reservation-kpi";
 import styles from "./index.module.css";
 import useFetch, { UPLOADS_BASE_URL } from "../../services/service";

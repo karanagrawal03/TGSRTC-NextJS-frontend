@@ -3,7 +3,7 @@
   align-self: stretch;
   background-color: var(--support-white);
   flex-direction: column;
-  padding: 79px var(--padding-257xl);
+  padding: var(--padding-60xl) 0 var(--padding-257xl);
   z-index: 1;
   text-align: left;
   font-size: var(--font-size-63xl);
@@ -11,8 +11,6 @@
   font-family: var(--font-montserrat);
   display: flex;
   align-items: center;
-  padding-left: 0px;
-  padding-right: 0px;
 }
 .busDustMobile {
   display: none;
@@ -21,7 +19,7 @@
   display: flex;
   align-items: center;
   margin: auto;
-  gap: 30px;
+  gap: var(--gap-11xl);
 }
 .kParent {
   display: flex;
@@ -29,17 +27,17 @@
   justify-content: center;
   flex-direction: column;
 }
-.k {
+.kpiHeading {
   position: relative;
   font-weight: 500;
   display: inline-block;
   mix-blend-mode: normal;
   flex-shrink: 0;
 }
-.k1 {
+.kpiMetric {
   font-size: var(--font-size-29xl);
 }
-.onAvgDaily {
+.kpiLabel {
   position: relative;
   font-size: var(--font-size-sm);
   font-weight: 500;
@@ -66,21 +64,18 @@
   .container {
     justify-content: space-between;
   }
-  .k {
-    font-size: 46px;
+  .kpiHeading {
+    font-size: var(--font-size-27xl);
   }
-  .k1 {
-    font-size: 24px;
+  .kpiMetric {
+    font-size:var(--font-size-5xl);
   }
 }
 @media screen and (max-width: 750px) {
-  .k,
+  .kpiHeading,
   .l,
   .m1 {
-    font-size: 46px;
-  }
-  .k1 {
-    font-size: 24px;
+    font-size: var(--font-size-27xl);
   }
   .container {
     box-sizing: border-box;
@@ -101,7 +96,7 @@
   }
 }
 @media screen and (max-width: 450px) {
-  .k {
+  .kpiHeading {
     font-size: var(--font-size-10xl);
   }
   .m {
@@ -112,6 +107,6 @@
     font-size: var(--font-size-10xl);
   }
   .customerSuppoprt {
-    font-size: 32px;
+    font-size: var(--font-size-13xl);
   }
 }

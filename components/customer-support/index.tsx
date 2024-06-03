@@ -29,11 +29,11 @@ const CustomerSupport:NextPage<CustomerSupportType>=({customerSupportWebImage,cu
               </div>
               <div className={styles.emailPhone}>
                 <div className={styles.email}>
-                  <img className={styles.icons2} alt="icons image" src="/icons-12.svg" loading="lazy"/>
-                  <p className={styles.onlinesupporttgsrtcbusin}>{customerSupportEmail}</p>
+                  <img className={styles.emailIcon} alt="icons image" src="/icons-12.svg" loading="lazy"/>
+                  <p className={styles.emailAddress}>{customerSupportEmail}</p>
                 </div>
                 <div className={styles.phone}>
-                  <img className={styles.icons3} alt="icons" src="/icons-13.svg" loading="lazy"/>
+                  <img className={styles.phoneIcon} alt="icons" src="/icons-13.svg" loading="lazy"/>
                   <p className={styles.contactNumbers}>{customerSupportContactNumber1} / {customerSupportContactNumber2}</p>
                 </div>
               </div>

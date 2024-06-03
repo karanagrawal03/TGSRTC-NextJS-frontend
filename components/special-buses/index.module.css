@@ -28,7 +28,7 @@
   flex: 1;
   background-color: var(--support-grey-bg);
   flex-direction: column;
-  padding: var(--padding-81xl) 64px;
+  padding: var(--padding-81xl) var(--padding-47xl);
   box-sizing: border-box;
   gap: var(--gap-13xl);
   z-index: 1;
@@ -57,7 +57,7 @@
     padding: var(--gap-41xl) var(--padding-5xl);
   }
   .specialBuses {
-    font-size: 32px;
+    font-size: var(--font-size-13xl);
     line-height: 42.66px;
     text-align: center;
   }

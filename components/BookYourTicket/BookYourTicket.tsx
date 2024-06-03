@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import styles from "./index.module.css";
+import styles from "./BookYourTicket.module.css";
 import ReservationForm from "../ReservationForm/ReservationForm";
 import { BOOK_YOUR_TICKET, BOOK_YOUR_TICKET_PARAGRAPH, ROUTES_TEXT, VIEW_ALL_ROUTES } from "../../constants";
 

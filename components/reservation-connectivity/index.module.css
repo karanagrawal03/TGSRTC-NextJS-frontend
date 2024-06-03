@@ -27,11 +27,11 @@
 .list {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: var(--gap-base);
 }
 .row {
   display: flex;
-  gap: 8px;
+  gap: var(--gap-5xs);
 }
 
 .dot {
@@ -50,11 +50,11 @@
 }
 @media screen and (max-width: 599px) {
   .guidingPrinciplesOf1 {
-    font-size: 16px;
+    font-size: var(--font-size-base);
     line-height: 26px;
   }
   .listItem {
-    font-size: 14px;
+    font-size: var(--font-size-sm);
     line-height: 26px;
   }
 }

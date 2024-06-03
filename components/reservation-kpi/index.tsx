@@ -19,11 +19,11 @@ const ReservationKPIs: NextPage<ReservationKPIsType> = ({ kpiData,className = ""
       {kpiData?.map((kpi : any) => (
         <>
           <div className={styles.kParent}>
-            <div className={styles.k}>
+            <div className={styles.kpiHeading}>
               <span>{kpi.number}</span>
-              <span className={styles.k1}>{kpi.metrics}</span>
+              <span className={styles.kpiMetric}>{kpi.metrics}</span>
             </div>
-            <div className={styles.onAvgDaily}>{kpi.label}</div>
+            <div className={styles.kpiLabel}>{kpi.label}</div>
           </div>
           <div className={styles.lineSeparator}>
             <div className={styles.lineSeparatorWrapper}></div>

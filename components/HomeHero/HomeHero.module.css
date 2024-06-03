@@ -27,7 +27,7 @@
   font-size: var(--font-size-63xl);
   color: var(--primary-green);
   font-family: var(--font-playfair-display);
-  background-image: url("/hero-image.png");
+  background-image: url(/home-banner-image.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

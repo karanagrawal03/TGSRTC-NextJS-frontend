@@ -102,16 +102,16 @@
     justify-content: flex-start;
   }
   .tgsrtc {
-    font-size: 32px;
+    font-size: var(--font-size-13xl);
     line-height: 42.66px;
   }
   .settingStandardsDelivering {
-    font-size: 24px;
+    font-size: var(--font-size-5xl);
     line-height: 31.99px;
     text-align: left;
   }
   .tgsrtcIsCommittedTo {
-    font-size: 14px;
+    font-size: var(--font-size-sm);
     line-height: 24px;
     text-align: left;
   }
