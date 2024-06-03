@@ -1,76 +1,29 @@
-import { useRouter } from 'next/router';
-import Link from 'next/link';
-import type { NextPage } from 'next';
-import styles from './header.module.css';
-import Image from 'next/image';
-import { useEffect, useState } from 'react';
-import {
-  HOME,
-  RESERVATION_LABEL,
-  TOURISM,
-  BUS_CONTRACT_RATES,
-  CONCESSION_SCHEMES,
-  RESERVATION_POINTS,
-  SPECIAL_BUS_TIMINGS,
-  RESERVATION_FAQ,
-  BUS_DETAILS,
-  GENERAL_PASS,
-  LOGISTICS,
-  LOGISTICS_CONTACTS,
-  LOGISTICS_FAQ,
-  OTHER_PASSES,
-  RT_CONTACTS,
-  STUDENT_PASSES,
-  ABOUT,
-  CONTACT_US,
-  CORPORATION,
-  EVENTS_AWARDS,
-  IT_INITIATIVES,
-  LEADERSHIP,
-  TENDERS,
-  TGSRTC_HOSPITAL,
-  BUS_PASSES,
-  RESERVATIONS_LINK,
-  RESERVATIONS_TOURISM_LINK,
-  RESERVATIONS_CONTRACT_LINK,
-  LOGISTICS_LINK,
-  RESERVATIONS_BUS_LINK,
-  RESERVATIONS_FAQ_LINK,
-  RESERVATIONS_SPL_BUS_LINK,
-  RESERVATIONS_POINTS_LINK,
-  RESERVATIONS_CONCESSION_LINK,
-  LOGISTICS_CONTACTS_LINK,
-  LOGISTICS_RATES_LINK,
-  BUS_PASS_LINK,
-  BUS_PASS_GENERAL_LINK,
-  BUS_PASS_STUDENT_LINK,
-  BUS_PASS_OTHER_LINK,
-  BUS_PASS_FAQ_LINK,
-  ABOUT_LINK,
-  ABOUT_IT_LINK,
-  ABOUT_LEADERSHIP_LINK,
-  ABOUT_CORPORATION_LINK,
-  ABOUT_EVENTS_LINK,
-  TENDERS_LINK,
-  HOSPITAL_LINK,
-  CONTACT_US_LINK
-} from '../constants';
+import { useRouter } from "next/router";
+import Link from "next/link";
+import type { NextPage } from "next";
+import styles from "./header.module.css";
+import Image from "next/image";
+import { useEffect, useState } from "react";
+import {MENU} from "../constants";
+import { HeaderConfig, Sublinks, headerData } from "../constants/Header";
 
 export type HeaderType = {
   className?: string;
 };
 
-const Header: NextPage<HeaderType> = ({ className = '' }) => {
+const Header: NextPage<HeaderType> = ({ className = "" }) => {
   const router = useRouter();
 
   const isActive = (path: string) => router.pathname === path;
   const [showHeader, setShowHeader] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
-
-  // scroll floating header 
+  const [headerConfig, setHeaderConfig] = useState<HeaderConfig[]>(headerData);
+  const [isRotated, setIsRotated] = useState(false);
+  
+  // scroll floating header
 
   const flotingHeader = () => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       if (window.scrollY > 100) {
         if (window.scrollY > lastScrollY) {
           // Scroll Down
@@ -87,34 +40,55 @@ const Header: NextPage<HeaderType> = ({ className = '' }) => {
   };
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      window.addEventListener('scroll', flotingHeader);
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", flotingHeader);
 
       return () => {
-        window.removeEventListener('scroll', flotingHeader);
+        window.removeEventListener("scroll", flotingHeader);
       };
     }
   }, [lastScrollY]);
 
-  // Mobile tab toggle menu bar 
+  // Mobile tab toggle menu bar
 
-  const [isMenuOpen, setMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setMenuOpen(!isMenuOpen);
-    if (!isMenuOpen) {
-      document.body.style.overflow = 'hidden';
+  const [isHamburgerMenu, SetHamburgerMenu] = useState(false);
+  const toggleHamburgerMenu = () => {
+    if (!isHamburgerMenu) {
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     }
+    SetHamburgerMenu(true);
   };
 
-  const closeMenu = () => {
-    setMenuOpen(false);
+  const closeHamburgerMenu = () => {
+    SetHamburgerMenu(false);
+    document.body.style.overflow = "unset";
+  };
+
+  const [value, setValue] = useState<number>(0);
+  const toggleDropDownMenu = (headerOption: HeaderConfig) => {
+    const newData = headerConfig.map((each: HeaderConfig) => {
+      if (
+        each.displayName === headerOption.displayName &&
+        each.isOpen != value
+      ) {
+        each.dropDown = true;
+        setValue(each.isOpen);
+      } else if (each.isOpen == value) {
+        each.dropDown = false;
+        setValue(0);
+      }
+      return each;
+    });
+    setHeaderConfig(newData);
+    setIsRotated(!isRotated);
   };
 
   return (
-    <header className={`${styles.header} ${className} ${showHeader ? '' : styles.headerHidden}`}>
+    <header
+      className={`${styles.header} ${className} ${showHeader ? "" : styles.headerHidden}`}
+    >
       <>
         <Link href="/" className={styles.headerTabLink}>
           <div className={styles.tsrtcLogo}>
@@ -152,143 +126,42 @@ const Header: NextPage<HeaderType> = ({ className = '' }) => {
       </>
 
       <div className={styles.tabContainer}>
-        <div className={styles.headerTabLink}>
-          <Link href="/" className={isActive('/') ? styles.activeTab : styles.navTabs}>
-            <span className={styles.reservations}>{HOME}</span>
-          </Link>
-        </div>
-        <div className={styles.headerTabLink}>
-          <Link href={RESERVATIONS_LINK} className={isActive(RESERVATIONS_LINK) ? styles.activeTab : styles.navTabs}>
-            <span className={styles.reservations}>{RESERVATION_LABEL}</span>
-          </Link>
-          <ul className={styles.dropdownMenu}>
-            <li className={styles.headerListItemLink}>
-              <Link href={RESERVATIONS_TOURISM_LINK} className={isActive(RESERVATIONS_TOURISM_LINK) ? '' : ''}>
-                <span className={styles.dropdownItem}>{TOURISM}</span>
+        {headerData.map(({ displayName, isNavLink, link, subLinks }) => (
+          <div className={styles.headerTabLink} key={displayName}>
+            {isNavLink ? (
+              <Link
+                href={link}
+                className={isActive(link) ? styles.activeTab : styles.navTabs}
+              >
+                <span className={styles.reservations}>{displayName}</span>
               </Link>
-            </li>
-            <li className={styles.headerListItemLink}>
-              <Link href={RESERVATIONS_CONTRACT_LINK} className={isActive(RESERVATIONS_CONTRACT_LINK) ? styles.listItem : styles.listItem}>
-                <span className={styles.dropdownItem}>{BUS_CONTRACT_RATES}</span>
-              </Link>
-            </li>
-            <li className={styles.headerListItemLink}>
-              <Link href={RESERVATIONS_CONCESSION_LINK} className={isActive(RESERVATIONS_CONCESSION_LINK) ? styles.listItem : styles.listItem}>
-                <span className={styles.dropdownItem}>{CONCESSION_SCHEMES}</span>
-              </Link>
-            </li>
-            <li className={styles.headerListItemLink}>
-              <Link href={RESERVATIONS_POINTS_LINK} className={isActive(RESERVATIONS_POINTS_LINK) ? styles.listItem : styles.listItem}>
-                <span className={styles.dropdownItem}>{RESERVATION_POINTS}</span>
-              </Link>
-            </li>
-            <li className={styles.headerListItemLink}>
-              <Link href={RESERVATIONS_SPL_BUS_LINK} className={isActive(RESERVATIONS_SPL_BUS_LINK) ? styles.listItem : styles.listItem}>
-                <span className={styles.dropdownItem}>{SPECIAL_BUS_TIMINGS}</span>
-              </Link>
-            </li>
-            <li className={styles.headerListItemLink}>
-              <Link href={RESERVATIONS_FAQ_LINK} className={isActive(RESERVATIONS_FAQ_LINK) ? styles.listItem : styles.listItem}>
-                <span className={styles.dropdownItem}>{RESERVATION_FAQ}</span>
-              </Link>
-            </li>
-            <li className={styles.headerListItemLink}>
-              <Link href={RESERVATIONS_BUS_LINK} className={isActive(RESERVATIONS_BUS_LINK) ? styles.listItem : styles.listItem}>
-                <span className={styles.dropdownItem}>{BUS_DETAILS}</span>
-              </Link>
-            </li>
-          </ul>
-        </div>
-        <div className={styles.headerTabLink}>
-          <Link href={LOGISTICS_LINK} className={isActive(LOGISTICS_LINK) ? styles.activeTab : styles.navTabs}>
-            <span className={styles.reservations}>{LOGISTICS}</span>
-          </Link>
-          <ul className={styles.dropdownMenu}>
-            <li className={styles.headerListItemLink}>
-              <Link href={LOGISTICS_CONTACTS_LINK} className={isActive(LOGISTICS_CONTACTS_LINK) ? styles.listItem : styles.listItem}>
-                <span className={styles.dropdownItem}>{LOGISTICS_CONTACTS}</span>
-              </Link>
-            </li>
-            <li className={styles.headerListItemLink}>
-              <Link href={LOGISTICS_RATES_LINK} className={isActive(LOGISTICS_RATES_LINK) ? styles.listItem : styles.listItem}>
-                <span className={styles.dropdownItem}>{RT_CONTACTS}</span>
-              </Link>
-            </li>
-          </ul>
-        </div>
-        <div className={styles.headerTabLink}>
-          <Link href={BUS_PASS_LINK} className={isActive(BUS_PASS_LINK) ? styles.activeTab : styles.navTabs}>
-            <span className={styles.reservations}>{BUS_PASSES}</span>
-          </Link>
-          <ul className={styles.dropdownMenu}>
-            <li className={styles.headerListItemLink}>
-              <Link href={BUS_PASS_STUDENT_LINK} className={isActive(BUS_PASS_STUDENT_LINK) ? styles.listItem : styles.listItem}>
-                <span className={styles.dropdownItem}>{STUDENT_PASSES}</span>
-              </Link>
-            </li>
-            <li className={styles.headerListItemLink}>
-              <Link href={BUS_PASS_GENERAL_LINK} className={isActive(BUS_PASS_GENERAL_LINK) ? styles.listItem : styles.listItem}>
-                <span className={styles.dropdownItem}>{GENERAL_PASS}</span>
-              </Link>
-            </li>
-            <li className={styles.headerListItemLink}>
-              <Link href={BUS_PASS_OTHER_LINK} className={isActive(BUS_PASS_OTHER_LINK) ? styles.listItem : styles.listItem}>
-                <span className={styles.dropdownItem}>{OTHER_PASSES}</span>
-              </Link>
-            </li>
-            <li className={styles.headerListItemLink}>
-              <Link href={BUS_PASS_FAQ_LINK} className={isActive(BUS_PASS_FAQ_LINK) ? styles.listItem : styles.listItem}>
-                <span className={styles.dropdownItem}>{LOGISTICS_FAQ}</span>
-              </Link>
-            </li>
-          </ul>
-        </div>
-        <div className={styles.headerTabLink}>
-          <Link href={ABOUT_LINK} className={isActive(ABOUT_LINK) ? styles.activeTab : styles.navTabs}>
-            <span className={styles.reservations}>{ABOUT}</span>
-          </Link>
-          <ul className={styles.dropdownMenu}>
-            <li className={styles.headerListItemLink}>
-              <Link href={ABOUT_IT_LINK} className={isActive(ABOUT_IT_LINK) ? styles.listItem : styles.listItem}>
-                <span className={styles.dropdownItem}>{IT_INITIATIVES}</span>
-              </Link>
-            </li>
-            <li className={styles.headerListItemLink}>
-              <Link href={ABOUT_LEADERSHIP_LINK} className={isActive(ABOUT_LEADERSHIP_LINK) ? styles.listItem : styles.listItem}>
-                <span className={styles.dropdownItem}>{LEADERSHIP}</span>
-              </Link>
-            </li>
-            <li className={styles.headerListItemLink}>
-              <Link href={ABOUT_CORPORATION_LINK} className={isActive(ABOUT_CORPORATION_LINK) ? styles.listItem : styles.listItem}>
-                <span className={styles.dropdownItem}>{CORPORATION}</span>
-              </Link>
-            </li>
-            <li className={styles.headerListItemLink}>
-              <Link href={ABOUT_EVENTS_LINK} className={isActive(ABOUT_EVENTS_LINK) ? styles.listItem : styles.listItem}>
-                <span className={styles.dropdownItem}>{EVENTS_AWARDS}</span>
-              </Link>
-            </li>
-          </ul>
-        </div>
-        <div className={styles.headerTabLink}>
-          <Link href={TENDERS_LINK} className={isActive(TENDERS_LINK) ? styles.activeTab : styles.navTabs}>
-            <span className={styles.reservations}>{TENDERS}</span>
-          </Link>
-        </div>
-        <div className={styles.headerTabLink}>
-          <Link href={HOSPITAL_LINK} className={isActive(HOSPITAL_LINK) ? styles.activeTab : styles.navTabs}>
-            <span className={styles.reservations}>{TGSRTC_HOSPITAL}</span>
-          </Link>
-        </div>
-        <div className={styles.headerTabLink}>
-          <Link href={CONTACT_US_LINK} className={isActive(CONTACT_US_LINK) ? styles.activeTab : styles.navTabs}>
-            <span className={styles.reservations}>{CONTACT_US}</span>
-          </Link>
-        </div>
+            ) : (
+              <>
+                <span className={styles.reservations}>{displayName}</span>
+                {subLinks && (
+                  <ul className={styles.dropdownMenu}>
+                    {subLinks.map(({ sublinkDisplayName, sublink }, index) => (
+                      <li className={styles.headerListItemLink} key={index}>
+                        <Link
+                          href={sublink}
+                          className={isActive(sublink)? styles.listItem: styles.listItem
+                          }
+                        >
+                          <span className={styles.dropdownItem}>
+                            {sublinkDisplayName}
+                          </span>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </>
+            )}
+          </div>
+        ))}
       </div>
-
-
-      <div className={styles.headerMobileIconSection} onClick={toggleMenu}>
+      {/* -------------- */}
+      <div className={styles.headerMobileIconSection}>
         <Image
           className={styles.headerMobileIcon}
           loading="lazy"
@@ -296,85 +169,110 @@ const Header: NextPage<HeaderType> = ({ className = '' }) => {
           src="/header-mobile-icon.svg"
           width={24}
           height={24}
+          onClick={toggleHamburgerMenu}
         />
 
-        {isMenuOpen &&
+        {isHamburgerMenu && (
           <>
-            <div className={styles.closeIconSection} onClick={closeMenu}>
-              <Image
-                className={styles.closeIcon}
-                loading="lazy"
-                alt="close-menu-icon"
-                src="/close-button.svg"
-                width={24}
-                height={24}
-              />
-            </div>
-
-            <div className={`${isMenuOpen ? `${styles.slideMenu} ${styles.open}` : `${styles.slideMenu}`}`}>
-              <div className={styles.headerTabLink}>
-                <Link href="/" className={isActive('/') ? styles.activeTab : styles.navTabs}>
-                  <span className={styles.reservations}>{HOME}</span>
-                </Link>
+            <div
+              className={`${
+                isHamburgerMenu? `${styles.slideMenu} ${styles.open}`: `${styles.slideMenu}`  }`}
+            >
+              <div className={styles.menuLabel}>
+                <div className={styles.menu}>{MENU}</div>
+                <div
+                  className={styles.closeIconSection}
+                  onClick={closeHamburgerMenu}
+                >
+                  <Image
+                    className={styles.closeIcon}
+                    loading="lazy"
+                    alt="close-menu-icon"
+                    src="/close-button.png"
+                    width={24}
+                    height={24}
+                  />
+                </div>
               </div>
-              <div className={styles.headerTabLink}>
-                <Link href={RESERVATIONS_LINK} className={isActive(RESERVATIONS_LINK) ? styles.activeTab : styles.navTabs}>
-                  <span className={styles.reservations1}>{RESERVATION_LABEL}</span>
-                </Link>
-              </div>
-              <div className={styles.headerTabLink}>
-                <Link href={RESERVATIONS_TOURISM_LINK} className={isActive(RESERVATIONS_TOURISM_LINK) ? styles.activeTab : styles.navTabs}>
-                  <span className={styles.reservations1}>{TOURISM}</span>
-                </Link>
-              </div>
-              <div className={styles.headerTabLink}>
-                <Link href={RESERVATIONS_CONTRACT_LINK} className={isActive(RESERVATIONS_CONTRACT_LINK) ? styles.activeTab : styles.navTabs}>
-                  <span className={styles.reservations1}>{BUS_CONTRACT_RATES}</span>
-                </Link>
-              </div>
-              <div className={styles.headerTabLink}>
-                <Link href={RESERVATIONS_BUS_LINK} className={isActive(RESERVATIONS_BUS_LINK) ? styles.activeTab : styles.navTabs}>
-                  <span className={styles.reservations1}>{BUS_DETAILS}</span>
-                </Link>
-              </div>
-              <div className={styles.headerTabLink}>
-                <Link href={LOGISTICS_LINK} className={isActive(LOGISTICS_LINK) ? styles.activeTab : styles.navTabs}>
-                  <span className={styles.reservations1}>{LOGISTICS}</span>
-                </Link>
-              </div>
-              <div className={styles.headerTabLink}>
-                <Link href={BUS_PASS_LINK} className={isActive(BUS_PASS_LINK) ? styles.activeTab : styles.navTabs}>
-                  <span className={styles.reservations1}>{BUS_PASSES}</span>
-                </Link>
-              </div>
-              <div className={styles.headerTabLink}>
-                <Link href={BUS_PASS_OTHER_LINK} className={isActive(BUS_PASS_OTHER_LINK) ? styles.activeTab : styles.navTabs}>
-                  <span className={styles.reservations1}>{OTHER_PASSES}</span>
-                </Link>
-              </div>
-              <div className={styles.headerTabLink}>
-                <Link href={ABOUT_LINK} className={isActive(ABOUT_LINK) ? styles.activeTab : styles.navTabs}>
-                  <span className={styles.reservations1}>{ABOUT}</span>
-                </Link>
-              </div>
-              <div className={styles.headerTabLink}>
-                <Link href={TENDERS_LINK} className={isActive(TENDERS_LINK) ? styles.activeTab : styles.navTabs}>
-                  <span className={styles.reservations1}>{TENDERS}</span>
-                </Link>
-              </div>
-              <div className={styles.headerTabLink}>
-                <Link href={HOSPITAL_LINK} className={isActive(HOSPITAL_LINK) ? styles.activeTab : styles.navTabs}>
-                  <span className={styles.reservations1}>{TGSRTC_HOSPITAL}</span>
-                </Link>
-              </div>
-              <div className={styles.headerTabLink}>
-                <Link href={CONTACT_US_LINK} className={isActive(CONTACT_US_LINK) ? styles.activeTab : styles.navTabs}>
-                  <span className={styles.reservations1}>{CONTACT_US}</span>
-                </Link>
+              <div className={styles.menuList}>
+                {headerConfig.map((headerOption: HeaderConfig) => {
+                  if (headerOption.isNavLink === true && headerOption.link) {
+                    return (
+                      <>
+                        <div className={styles.headerTabLink}>
+                          <Link
+                            href={headerOption.link}
+                            className={styles.navTabs}
+                            onClick={() => closeHamburgerMenu()}
+                          >
+                            <span
+                              className={
+                                isActive(headerOption.link)
+                                  ? styles.currentPage
+                                  : styles.reservations
+                              }
+                            >
+                              {headerOption.displayName}
+                            </span>
+                          </Link>
+                        </div>
+                        <div className={styles.whiteLine}></div>
+                      </>
+                    );
+                  } else {
+                    return (
+                      <>
+                        <div className={styles.headerTabLink}>
+                          <div
+                            className={styles.navTabs}
+                            onClick={() => toggleDropDownMenu(headerOption)}
+                          >
+                            <span className={styles.reservations}>
+                              {headerOption.displayName}
+                            </span>
+                            <span>
+                              <Image
+                                className={`${styles.toggleIcon} ${
+                                  headerOption.dropDown ? styles.rotated : ""
+                                }`}
+                                loading="lazy"
+                                alt="toggle-icon"
+                                src="/toggle.png"
+                                width={24}
+                                height={24}
+                              />
+                            </span>
+                          </div>
+                          {headerOption.dropDown && (
+                            <ul className={styles.dropdownMenu}>
+                              {headerOption.subLinks?.map((sLink: Sublinks) => (
+                                <li className={styles.headerListItemLink}>
+                                  <Link
+                                    href={sLink.sublink}
+                                    className={isActive(sLink.sublink) ? styles.listItem: styles.listItem
+                                    }
+                                    onClick={() => closeHamburgerMenu()}
+                                  >
+                                    <span
+                                      className={isActive(sLink.sublink)? styles.currentTab: styles.dropdownItem}
+                                    >
+                                      {sLink.sublinkDisplayName}
+                                    </span>
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          )}
+                        </div>
+                        <div className={styles.whiteLine}></div>
+                      </>
+                    );
+                  }
+                })}
               </div>
             </div>
           </>
-        }
+        )}
       </div>
     </header>
   );

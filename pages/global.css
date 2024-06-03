@@ -96,7 +96,9 @@ a {
   --color-whitesmoke-300: #efefef;
   --color-darkslategray-100: #2f3130;
   --color-darkslategray-200: #303030;
-
+  --color-light-green : #67a249;
+  --color-whitesmoke : #EBF2EC;
+  
   /* Spacing */
   --spacing-lg: 12px;
 

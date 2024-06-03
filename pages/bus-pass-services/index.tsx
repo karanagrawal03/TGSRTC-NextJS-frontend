@@ -11,7 +11,7 @@ const BusPassServices = () => {
   useEffect(() => {
     doFetch(`/buss-pass-landing-pages?populate=*`);
   }, []);
-  
+
   const [width, setWidth] = useState<boolean>(false);
 
   useEffect(() => {

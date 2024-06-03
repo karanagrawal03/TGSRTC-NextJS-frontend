@@ -13368,7 +13368,6 @@
   box-sizing: border-box;
   gap: var(--gap-5xl);
   flex-shrink: 0;
-  debug_commit: bf4bc93;
 }
 .eventsAwards9 {
   width: 100%;
@@ -13705,7 +13704,6 @@
   padding: var(--padding-5xl);
   gap: var(--gap-5xl);
   flex-shrink: 0;
-  debug_commit: bf4bc93;
 }
 .imageCardsWrapper {
   flex: 1;
@@ -14053,7 +14051,6 @@
   box-sizing: border-box;
   gap: var(--gap-5xl);
   flex-shrink: 0;
-  debug_commit: bf4bc93;
   margin-left: -261.5px;
 }
 .aboutEventsTsrtc,

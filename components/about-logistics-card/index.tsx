@@ -1,28 +1,29 @@
 import type { NextPage } from "next";
 import { useMemo, type CSSProperties } from "react";
 import styles from "./index.module.css";
+import { UPLOADS_BASE_URL } from "../../services/service";
 
 export type Cards4Type = {
   className?: string;
   image?: string;
   busPasses?: string;
-
+  content?:string;
   /** Style props */
   applyNowPadding?: CSSProperties["padding"];
 };
-
 const Cards4: NextPage<Cards4Type> = ({
   className = "",
   image,
   busPasses,
   applyNowPadding,
+  content
 }) => {
   const infographics1Style: CSSProperties = useMemo(() => {
     return {
       padding: applyNowPadding,
     };
   }, [applyNowPadding]);
-
+  console.log(content)
   return (
     <div className={[styles.cards, className].join(" ")}>
       <div className={styles.infographicContainer}>
@@ -31,8 +32,8 @@ const Cards4: NextPage<Cards4Type> = ({
             <img
               className={styles.wrapperGroup1000013498Child}
               loading="lazy"
-              alt=""
-              src={image}
+              alt="image"
+              src={UPLOADS_BASE_URL+image}
             />
           </div>
         </div>
@@ -41,11 +42,11 @@ const Cards4: NextPage<Cards4Type> = ({
         <div className={styles.texts}>
           <h2 className={styles.busPasses}>{busPasses}</h2>
           <p className={styles.loremIpsumDolor}>
-            We deliver your goods with extra care .
+           {content}
           </p>
         </div>
         <div className={styles.lineSeparater}>
-          <img className={styles.lineSeparatorIcon} alt="" />
+          <img className={styles.lineSeparatorIcon} alt="image" />
         </div>
         <div className={styles.buttonsContainer}>
           <div className={styles.button1}>

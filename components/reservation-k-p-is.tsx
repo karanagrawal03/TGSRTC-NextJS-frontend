@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import styles from "./reservation-k-p-is.module.css";
+import { KPI_NUMBER1, KPI_NUMBER1_METRICS, KPI_NUMBER1_LABEL, KPI_NUMBER2, KPI_NUMBER2_LABEL, KPI_NUMBER2_METRICS, KPI_NUMBER3, KPI_NUMBER3_LABEL, KPI_NUMBER3_METRICS } from "../constants";
 
 export type ReservationKPIsType = {
   className?: string;
@@ -8,50 +9,36 @@ export type ReservationKPIsType = {
 const ReservationKPIs: NextPage<ReservationKPIsType> = ({ className = "" }) => {
   return (
     <section className={[styles.reservationKpis, className].join(" ")}>
+      <img className={styles.busDustMobile} alt="bus mobile image" src="/busDust1Mobile.svg" loading="lazy"/>
+     <div className={styles.container}>
+     <div className={styles.kParent}>
+        <div className={styles.k}>
+          <span>{KPI_NUMBER1}</span>
+          <span className={styles.k1}>{KPI_NUMBER1_METRICS}</span>
+        </div>
+        <div className={styles.onAvgDaily}>{KPI_NUMBER1_LABEL}</div>
+      </div>
+      <div>
+        <div className={styles.lineSeparatorWrapper}></div>
+      </div>
       <div className={styles.kParent}>
         <div className={styles.k}>
-          <span>10</span>
-          <span className={styles.k1}>K</span>
+          <span>{KPI_NUMBER2}</span>
+          <span className={styles.k1}>{KPI_NUMBER2_METRICS}</span>
         </div>
-        <div className={styles.busesRunningWrapper}>
-          <div className={styles.busesRunning}>Buses Running</div>
+        <div className={styles.onAvgDaily}>{KPI_NUMBER2_LABEL}</div>
+      </div>
+      <div>
+        <div className={styles.lineSeparatorWrapper}></div>
+      </div>
+      <div className={styles.kParent}>
+        <div className={styles.k}>
+          <span>{KPI_NUMBER3}</span>
+          <span className={styles.k1}>{KPI_NUMBER3_METRICS}</span>
         </div>
+        <div className={styles.onAvgDaily}>{KPI_NUMBER3_LABEL}</div>
       </div>
-      <div className={styles.lineSeparatorWrapper}>
-        <img
-          className={styles.lineSeparatorIcon}
-          alt=""
-          src="/line-separator.svg"
-        />
-      </div>
-      <div className={styles.m}>M</div>
-      <div className={styles.frameParent}>
-        <div className={styles.mWrapper}>
-          <div className={styles.m1}>
-            <span>3.8</span>
-            <span className={styles.m2}>M</span>
-          </div>
-        </div>
-        <div className={styles.onAvgDaily}>On Avg. Daily Bus Bookings</div>
-      </div>
-      <div className={styles.lineSeparatorContainer}>
-        <img
-          className={styles.lineSeparatorIcon1}
-          alt=""
-          src="/line-separator.svg"
-        />
-      </div>
-      <div className={styles.frameGroup}>
-        <div className={styles.lWrapper}>
-          <div className={styles.l}>
-            <span>40</span>
-            <span className={styles.l1}>L</span>
-          </div>
-        </div>
-        <div className={styles.transportingPassengers}>
-          Transporting Passengers
-        </div>
-      </div>
+     </div>
     </section>
   );
 };

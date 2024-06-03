@@ -4,43 +4,64 @@ import styles from "./index.module.css";
 import { CITY_SERVICES, Electric_BUSES, Electric_BUSES_PARA, METRO_DELUX, METRO_DELUX_COACH, METRO_DELUX_COACH_PARA, METRO_EXPRESS, METRO_LUXURY_AC, SALIENT_FEATURES } from "../../constants";
 import { electricBusesBulletPoints, metroDeluxBulletPoints } from "../../constants/reservation-bus-details";
 import BulletPoints from "../bullet-points";
+import { UPLOADS_BASE_URL } from "../../services/service";
 
 export type FrameComponent4Type = {
+  data?: {
+    cityServicesTitle: string;
+    electricBusData: {
+      title: string;
+      content: string;
+      salientHeading: string;
+      electricBusesBulletPoints: string[];
+    };
+    metroDeluxData: {
+      title: string;
+      content: string;
+      salientHeading: string;
+      metroDeluxBulletPoints: string[];
+    };
+    metroLuxuryTitle: string;
+    metroLuxuryImage: { data: { attributes: { url: string } } };
+    metroDeluxTitle: string;
+    metroDeluxImage: { data: { attributes: { url: string } } };
+    metroExpressTitle: string;
+    metroExpressImage: { data: { attributes: { url: string } } };
+  };
   className?: string;
 };
 
-const FrameComponent4: NextPage<FrameComponent4Type> = ({ className = "" }) => {
+
+const FrameComponent4: NextPage<FrameComponent4Type> = ({ data, className = "" }) => {
   return (
     <div className={[styles.cityServicesParent, className].join(" ")}>
-      <h3 className={styles.cityServices}>{CITY_SERVICES}</h3>
+      <h3 className={styles.cityServices}>{data?.cityServicesTitle}</h3>
       <div className={styles.cityServicesSection}>
         <div className={styles.cityServicesTypes}>
-          <b className={styles.electricBuses}>{Electric_BUSES}</b>
+          <b className={styles.electricBuses}>{data?.electricBusData?.title}</b>
           <p className={styles.theFollowingFacilities}>
-           {Electric_BUSES_PARA}
+            {data?.electricBusData?.content}
           </p>
         </div>
         <div>
-        <div className={styles.guidingPrinciplesOf}>{SALIENT_FEATURES}</div>
-        <BulletPoints items={electricBusesBulletPoints} containerClassName={styles.bulletPointChange}/>
+          <div className={styles.guidingPrinciplesOf}>{data?.electricBusData?.salientHeading}</div>
+          <BulletPoints items={electricBusesBulletPoints} containerClassName={styles.bulletPointChange} />
         </div>
         <div className={styles.cityServicesTypes1}>
-          <h3 className={styles.metroDeluxeCoach}>{METRO_DELUX_COACH}</h3>
-          <p className={styles.metroDeluxeCoaches}>{METRO_DELUX_COACH_PARA}</p>
+          <h3 className={styles.metroDeluxeCoach}>{data?.metroDeluxData?.title}</h3>
+          <p className={styles.metroDeluxeCoaches}>{data?.metroDeluxData?.content}</p>
         </div>
         <div>
-        <div className={styles.guidingPrinciplesOf}>
-        {SALIENT_FEATURES}
-            </div>
-            <BulletPoints items={metroDeluxBulletPoints} containerClassName={styles.bulletPointChange}/>
-            </div>
+          <div className={styles.guidingPrinciplesOf}>{data?.metroDeluxData?.salientHeading}</div>
+          <BulletPoints items={metroDeluxBulletPoints} containerClassName={styles.bulletPointChange} />
+        </div>
         <div className={styles.metroLuxuryAcParent}>
-          <h3 className={styles.metroLuxuryAc}>{METRO_LUXURY_AC}</h3>
+          <h3 className={styles.metroLuxuryAc}>{data?.metroLuxuryTitle}</h3>
           <div className={styles.imageCardsParent}>
-            <ImageCards pictures="/metro-luxury-ac.png" />
+            <ImageCards pictures={`${UPLOADS_BASE_URL}${data?.metroLuxuryImage?.data?.attributes?.url}`} />
             <div className={styles.metroTypes}>
               <div className={styles.metroDeluxeParent}>
-                <b className={styles.metroDeluxe}>{METRO_DELUX}</b>
+                <b className={styles.metroDeluxe}>{data?.metroDeluxTitle}</b>
                 <div className={styles.imageCards}>
                   <div className={styles.imageText}>
                     <div className={styles.imagePlaceholder}>
@@ -48,7 +69,7 @@ const FrameComponent4: NextPage<FrameComponent4Type> = ({ className = "" }) => {
                         className={styles.picturesIcon}
                         loading="lazy"
                         alt="metro-delux"
-                        src="/metro-delux.png"
+                        src={`${UPLOADS_BASE_URL}${data?.metroDeluxImage?.data?.attributes?.url}`} 
                       />
                       <div className={styles.imagePlaceholderChild} />
                     </div>
@@ -56,7 +77,7 @@ const FrameComponent4: NextPage<FrameComponent4Type> = ({ className = "" }) => {
                 </div>
               </div>
               <div className={styles.metroExpressParent}>
-                <h3 className={styles.metroExpress}>{METRO_EXPRESS}</h3>
+                <h3 className={styles.metroExpress}>{data?.metroExpressTitle}</h3>
                 <div className={styles.imageCards}>
                   <div className={styles.imageText}>
                     <div className={styles.imagePlaceholder}>
@@ -64,7 +85,7 @@ const FrameComponent4: NextPage<FrameComponent4Type> = ({ className = "" }) => {
                         className={styles.picturesIcon}
                         loading="lazy"
                         alt="metro-express"
-                        src="/metro-express.png"
+                        src={`${UPLOADS_BASE_URL}${data?.metroExpressImage?.data?.attributes?.url}`} 
                       />
                       <div className={styles.imagePlaceholderItem} />
                     </div>

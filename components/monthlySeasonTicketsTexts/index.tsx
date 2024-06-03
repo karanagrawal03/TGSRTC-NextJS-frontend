@@ -1,19 +1,23 @@
 import styles from "./index.module.css";
-import { monthlySeasonTicketsList, valueAdditionList } from "../../constants/reservation-concession-schemes";
-import { MONTHLY_SEASON_TCIKETS_HEADING, VALUE_ADDITION } from "../../constants";
 
+interface MonthlySeasonTicketsProps {
+  monthlySeasonTicketsTitle: string;
+  monthlySeasonTicketsList: string[];
+  valueAdditionTitle: string;
+  valueAdditionList: string[];
+}
 
-const MonthlySeasonTicketsTexts = () => {
+const MonthlySeasonTicketsTexts = ({monthlySeasonTicketsTitle,monthlySeasonTicketsList,valueAdditionTitle,valueAdditionList}:MonthlySeasonTicketsProps) => {
   return (
     <div className={styles.monthlySeasonTicketsTexts}>
       <div className={styles.monthlySeasonTickets}>
-        {MONTHLY_SEASON_TCIKETS_HEADING}
+        {monthlySeasonTicketsTitle}
       </div>
       <div className={styles.monthlySeasonTicketsSubCon}>
         <div className={styles.bulletPointContainer}>
          
            <div className={styles.phylosophyList}>
-              {monthlySeasonTicketsList.map((item: any, index: any) => (
+              {monthlySeasonTicketsList?.map((item: any, index: any) => (
                 <div className={styles.listItem}>
                   <div className={styles.dots}></div>
                   <div key={index} className={styles.listItemContent}>{item}</div>
@@ -23,11 +27,11 @@ const MonthlySeasonTicketsTexts = () => {
         </div>
         <div className={styles.valueAdditionGivenToMstHo}>
           <div className={styles.valueAdditionGiven}>
-           {VALUE_ADDITION}
+           {valueAdditionTitle}
           </div>
           <div className={styles.bulletPointContainer1}>
             <div className={styles.phylosophyList}>
-              {valueAdditionList.map((item: any, index: any) => (
+              {valueAdditionList?.map((item: any, index: any) => (
                 <div className={styles.listItem}>
                   <div className={styles.dots}></div>
                   <div key={index} className={styles.listItemContent}>{item}</div>

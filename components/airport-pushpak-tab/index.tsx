@@ -24,6 +24,8 @@ interface PuspakData {
   airPortPushpakBustimingsTowardsRGIAData:any;
   airPushpakBusPointControllersTableHeading:string;
   airPushpakBusPointControllers:any;
+  pushpakBusTimingsFromRGIAHeading:string;
+  pushpakBusTimingsFromRGIAData:any
 }
 const AirPortPushpak: React.FC<PuspakData> = ({
   airportPushpakParagraph1,
@@ -34,7 +36,9 @@ const AirPortPushpak: React.FC<PuspakData> = ({
   tgsrtcAirPortPushpakBusTimingsHeading,
   airPortPushpakBustimingsTowardsRGIAData,
   airPushpakBusPointControllersTableHeading,
-  airPushpakBusPointControllers
+  airPushpakBusPointControllers,
+  pushpakBusTimingsFromRGIAHeading,
+  pushpakBusTimingsFromRGIAData
 }) => {
   return (
     <div className={styles.container}>
@@ -59,6 +63,10 @@ const AirPortPushpak: React.FC<PuspakData> = ({
           {tgsrtcAirPortPushpakBusTimingsHeading}
         </p>
         <TimingsTab timingsRGIAData={airPortPushpakBustimingsTowardsRGIAData} />
+      </div>
+      <div  className={styles.lowerContainer}>
+        <p className={styles.pushpakTimings} >{pushpakBusTimingsFromRGIAHeading}</p>
+        <TimingsTab timingsRGIAData={pushpakBusTimingsFromRGIAData} />
       </div>
     </div>
   );

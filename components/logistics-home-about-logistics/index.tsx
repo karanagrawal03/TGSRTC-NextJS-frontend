@@ -6,40 +6,54 @@ import { cardData } from "../../constants/logistics-home-about-logistics";
 
 export type ContentRightType = {
   className?: string;
+  data?: {
+    aboutLogisticsTitle?: string;
+    aboutLogisticsPara1?: string;
+    aboutLogisticsPara2Start?: string;
+    aboutLogisticsPara2Link?: string;
+    aboutLogisticsPara2End?: string;
+    aboutLogisticsCards?: Array<{
+      image?: string;
+      busPasses?: string;
+      content?:string;
+    }>;
+  };
 };
 
-const ContentRight: NextPage<ContentRightType> = ({ className = "" }) => {
+const ContentRight: NextPage<ContentRightType> = ({ data, className = "" }) => {
   return (
     <section className={[styles.contentRight, className].join(" ")}>
       <div className={styles.logisticAboutSection}>
         <div className={styles.logisticAboutTexts}>
-          <h1 className={styles.aboutLogistics}>{ABOUT_LOGISTICS}</h1>
-          <p
-            className={styles.telanganaStateRoad}
-          >{ABOUT_LOGISTICS_PARA_1}</p>
+          <h1 className={styles.aboutLogistics}>{data?.aboutLogisticsTitle}</h1>
+          <p className={styles.telanganaStateRoad}>
+            {data?.aboutLogisticsPara1}
+          </p>
           <p className={styles.theConsignorsCanContainer}>
-           {ABOUT_LOGISTICS_PARA_2} 
+            {data?.aboutLogisticsPara2Start} 
             <a
               className={styles.wwwtgsrtctelanganagovin}
-              href={TGSRTC_LINK}
+              href={data?.aboutLogisticsPara2Link}
               target="_blank"
+              rel="noopener noreferrer"
             >
               <span className={styles.wwwtgsrtctelanganagovin1}>
-               {TGSRTC_LINK_NAME}
+                {data?.aboutLogisticsPara2Link}
               </span>
             </a>
-             {ABOUT_LOGISTICS_PARA_2_CONTENT}
+            {data?.aboutLogisticsPara2End}
           </p>
         </div>
         <div className={styles.logisticsInfographicCardCon}>
-        {cardData.map((card, index) => (
-        <Cards4
-          key={index}
-          image={card.image}
-          busPasses={card.busPasses}
-          applyNowPadding={card.applyNowPadding}
-        />
-      ))}
+          {data?.aboutLogisticsCards?.map((card, index) => (
+            <Cards4
+              key={index}
+              image={card.image}
+              busPasses={card.busPasses}
+              applyNowPadding=""
+              content={card.content}
+            />
+          ))}
         </div>
       </div>
     </section>
