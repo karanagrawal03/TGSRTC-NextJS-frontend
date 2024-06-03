@@ -24,7 +24,7 @@ const ReservationFormStyle = {
         display: "flex",
         alignItems: "center",
         position: "relative",
-        padding: "12px 16px 13px 24px",
+        padding: "17px 16px 17px 24px",
         maxWidth: "100%",
         "@media (max-width: 1268px)": {
             borderBottom: "none",
@@ -48,7 +48,7 @@ const ReservationFormStyle = {
         borderLeft: "1px solid var(--color-gainsboro-200)",
         borderTop: "1px solid var(--color-gainsboro-200)",
         borderBottom: "1px solid var(--color-gainsboro-200)",
-        padding: "12px 16px 13px 24px",
+        padding: "17px 16px 15px 24px",
         display: "flex",
         alignItems: "center",
         justifyContent: "flex-start",
@@ -71,10 +71,10 @@ const ReservationFormStyle = {
         fontFamily: "var(--font-montserrat)",
         color: " var(--color-gray)",
         left: "-14px",
-        marginTop: "8px",
+        marginTop: "0px",
     },
     select1: {
-        marginTop: "20.1px",
+        marginTop: "12.1px",
         ".MuiOutlinedInput-notchedOutline": {
             border: "none",
         },
@@ -98,7 +98,7 @@ const ReservationFormStyle = {
         },
     },
     select2: {
-        marginTop: "20.1px",
+        marginTop: "12.1px",
         fontSize: "var(--font-size-base)",
         lineHeight: "19.6px",
         fontWeight: 500,
