@@ -8,8 +8,6 @@ export type BookYourTicketType = {
   routes: { from: string; to: string }[];
 };
 
-
-
 const BookYourTicket: NextPage<BookYourTicketType> = ({ className = "", routes }) => {
   return (
     <section className={[styles.bookYourTicket, className].join(" ")}>
@@ -34,7 +32,7 @@ const BookYourTicket: NextPage<BookYourTicketType> = ({ className = "", routes }
               <img className={styles.lineIcon} alt="line icon" src="/line.svg" loading="lazy"/>
             </div>
             <div className={styles.routeChipsContainer}>
-              {routes.map((route, index) => (
+              {routes?.map((route, index) => (
                 <div key={index} className={styles.routeChips}>
                   <div className={styles.city}>{route.from}</div>
                   <img
