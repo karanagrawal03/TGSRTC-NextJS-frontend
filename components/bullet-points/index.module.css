@@ -7,9 +7,14 @@
   list-style-type: disc;
 }
 .listItems::marker {
-  color: #cd342b;
+  color: var(--primary-red);
 }
-
+.link {
+  color: var(--text-black);
+}
+.link:hover {
+  color: var(--primary-red);
+}
 .list {
   display: flex;
   flex-direction: column;

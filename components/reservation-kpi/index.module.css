@@ -1,0 +1,112 @@
+.reservationKpis {
+  display: flex;
+  align-self: stretch;
+  background-color: var(--support-white);
+  flex-direction: column;
+  padding: var(--padding-60xl) 0 var(--padding-257xl);
+  z-index: 1;
+  text-align: left;
+  font-size: var(--font-size-63xl);
+  color: var(--primary-green);
+  font-family: var(--font-montserrat);
+  display: flex;
+  align-items: center;
+}
+.busDustMobile {
+  display: none;
+}
+.container {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  gap: var(--gap-11xl);
+}
+.kParent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.kpiHeading {
+  position: relative;
+  font-weight: 500;
+  display: inline-block;
+  mix-blend-mode: normal;
+  flex-shrink: 0;
+}
+.kpiMetric {
+  font-size: var(--font-size-29xl);
+}
+.kpiLabel {
+  position: relative;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--text-grey-body-text);
+  mix-blend-mode: normal;
+  flex-shrink: 0;
+  text-align: center;
+}
+.lineSeparator:last-child {
+  display: none;
+}
+.lineSeparatorWrapper {
+  width: 100px;
+  height: 1px;
+  transform: rotate(90deg);
+  background: linear-gradient(45deg, transparent, black, transparent);
+}
+@media screen and (max-width: 1275px) {
+  .container {
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 900px) {
+  .container {
+    justify-content: space-between;
+  }
+  .kpiHeading {
+    font-size: var(--font-size-27xl);
+  }
+  .kpiMetric {
+    font-size:var(--font-size-5xl);
+  }
+}
+@media screen and (max-width: 750px) {
+  .kpiHeading,
+  .l,
+  .m1 {
+    font-size: var(--font-size-27xl);
+  }
+  .container {
+    box-sizing: border-box;
+    flex-direction: column;
+  }
+  .lineSeparatorWrapper {
+    transform: rotate(0deg);
+  }
+}
+@media screen and (max-width: 599px) {
+  .busDustMobile {
+    display: block;
+  }
+  .reservationKpis {
+    box-sizing: border-box;
+    padding-top: var(--padding-xl);
+    padding-bottom: var(--padding-41xl);
+  }
+}
+@media screen and (max-width: 450px) {
+  .kpiHeading {
+    font-size: var(--font-size-10xl);
+  }
+  .m {
+    font-size: var(--font-size-lgi);
+  }
+  .l,
+  .m1 {
+    font-size: var(--font-size-10xl);
+  }
+  .customerSuppoprt {
+    font-size: var(--font-size-13xl);
+  }
+}

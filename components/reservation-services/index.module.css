@@ -1,0 +1,41 @@
+.frameParent2 {
+  align-self: stretch;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-base);
+  max-width: 100%;
+}
+.frameParent2 {
+  flex-direction: column;
+  font-size: var(--font-size-3xl);
+}
+.typesOfServicesParent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+}
+.typesOfServices {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  font-weight: 600;
+  font-family: inherit;
+  mix-blend-mode: normal;
+}
+.advanceReservationFacility {
+  margin: 0;
+  align-self: stretch;
+  position: relative;
+  font-size: var(--font-size-sm);
+  line-height: 26px;
+  color: var(--text-grey-body-text);
+}
+@media screen and (max-width:599px){
+.typesOfServices {
+    font-size: var(--font-size-lg);
+  }
+}
