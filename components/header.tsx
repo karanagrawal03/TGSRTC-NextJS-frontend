@@ -5,7 +5,7 @@ import styles from "./header.module.css";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import {MENU} from "../constants";
-import { HeaderConfig, Sublinks, headerData, links } from "../constants/Header";
+import { HeaderConfig, Sublinks, headerData } from "../constants/Header";
 
 export type HeaderType = {
   className?: string;
@@ -233,7 +233,7 @@ const Header: NextPage<HeaderType> = ({ className = "" }) => {
                             <span>
                               <Image
                                 className={`${styles.toggleIcon} ${
-                                  isRotated ? styles.rotated : ""
+                                  headerOption.dropDown ? styles.rotated : ""
                                 }`}
                                 loading="lazy"
                                 alt="toggle-icon"

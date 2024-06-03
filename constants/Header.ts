@@ -153,36 +153,3 @@ export const headerData: HeaderConfig[] = [
   },
 ];
 
-export const links = [
-    { href: "/", label: HOME, key: "home" },
-    { href: RESERVATIONS_LINK, label: RESERVATION_LABEL, key: "reservations", sublinks: [
-      { href: RESERVATIONS_TOURISM_LINK, label: TOURISM },
-      { href: RESERVATIONS_CONTRACT_LINK, label: BUS_CONTRACT_RATES },
-      { href: RESERVATIONS_CONCESSION_LINK, label: CONCESSION_SCHEMES },
-      { href: RESERVATIONS_POINTS_LINK, label: RESERVATION_POINTS },
-      { href: RESERVATIONS_SPL_BUS_LINK, label: SPECIAL_BUS_TIMINGS },
-      { href: RESERVATIONS_FAQ_LINK, label: RESERVATION_FAQ },
-      { href: RESERVATIONS_BUS_LINK, label: BUS_DETAILS }
-    ] },
-    { href: LOGISTICS_LINK, label: LOGISTICS, key: "logistics", sublinks: [
-      { href: LOGISTICS_CONTACTS_LINK, label: LOGISTICS_CONTACTS },
-      { href: LOGISTICS_RATES_LINK, label: RT_CONTACTS }
-    ] },
-    { href: BUS_PASS_LINK, label: BUS_PASSES, key: "bus_passes", sublinks: [
-      { href: BUS_PASS_STUDENT_LINK, label: STUDENT_PASSES },
-      { href: BUS_PASS_GENERAL_LINK, label: GENERAL_PASS },
-      { href: BUS_PASS_OTHER_LINK, label: OTHER_PASSES },
-      { href: BUS_PASS_FAQ_LINK, label: LOGISTICS_FAQ }
-    ] },
-    { href: ABOUT_LINK, label: ABOUT, key: "about", sublinks: [
-      { href: ABOUT_IT_LINK, label: IT_INITIATIVES },
-      { href: ABOUT_LEADERSHIP_LINK, label: LEADERSHIP },
-      { href: ABOUT_CORPORATION_LINK, label: CORPORATION },
-      { href: ABOUT_EVENTS_LINK, label: EVENTS_AWARDS }
-    ] },
-    { href: TENDERS_LINK, label: TENDERS, key: "tenders" },
-    { href: HOSPITAL_LINK, label: TGSRTC_HOSPITAL, key: "hospital" },
-    { href: CONTACT_US_LINK, label: CONTACT_US, key: "contact_us" }
-  ];
-  
-  
