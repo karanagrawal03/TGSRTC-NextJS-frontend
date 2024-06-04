@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
 import AccordionItem from "../../components/accordians";
 import styles from "./index.module.css";
@@ -7,27 +7,33 @@ import useFetch, { UPLOADS_BASE_URL } from "../../services/service";
 const OtherPasses = () => {
   const { data, doFetch } = useFetch();
   const router = useRouter();
-  const { index } = router.query;
+  let { index } = router.query as any;
+  index = parseInt(index as string, 10);
 
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+  const [isImageLoaded, setImageLoad] = useState(false);
+  const divRefs = useRef<Array<HTMLDivElement>>([]);
 
   useEffect(() => {
     doFetch(`/other-passess?populate=*`);
   }, []);
 
   useEffect(() => {
-    if (index) {
-      const indexInt = parseInt(index as string, 10);
-      if (!isNaN(indexInt)) {
-        setExpandedIndex(indexInt);
-      }
+    // if (index) {
+    // const indexInt = parseInt(index as string, 10);
+    if (index !== null && divRefs.current[index]) {
+      divRefs.current[index].scrollIntoView({
+        behavior: "smooth",
+      });
     }
-  }, [index]);
+  }, [index, isImageLoaded]);
 
   const handleChange = (index: number) => {
     setExpandedIndex((prevIndex) => (prevIndex === index ? null : index));
   };
-
+  const handleImageLoad = () => {
+    setImageLoad(true);
+  };
   return (
     <div className={styles.busPassGeneralCommuterPass}>
       <section className={styles.busPassesHeroGeneralCommut}>
@@ -36,12 +42,14 @@ const OtherPasses = () => {
           alt="hero-web-image"
           src={UPLOADS_BASE_URL + data?.heroWebImage?.data?.attributes?.url}
           loading="lazy"
+          onLoad={handleImageLoad}
         />
         <img
           className={styles.bgIconMobile}
           alt="hero-web-image"
           src={UPLOADS_BASE_URL + data?.heroMobileImage?.data?.attributes?.url}
           loading="lazy"
+          onLoad={handleImageLoad}
         />
         <div className={styles.generalCommuterPassContainer}>
           <p className={styles.general}>{data?.heroTitle}</p>
@@ -53,12 +61,16 @@ const OtherPasses = () => {
         <div className={styles.eachAccordian}>
           <ol className={styles.orderedList}>
             {data?.otherBussPassAccordiansData?.map((e: any, idx: number) => (
-              <div>
+              <div
+                ref={(element) => {
+                  divRefs.current[idx] = element as HTMLDivElement;
+                }}
+              >
                 <AccordionItem
                   key={idx}
                   name={e.name}
                   info={e.info}
-                  expanded={expandedIndex === idx}
+                  expanded={expandedIndex === idx || index === idx}
                   onChange={() => handleChange(idx)}
                 />
               </div>
