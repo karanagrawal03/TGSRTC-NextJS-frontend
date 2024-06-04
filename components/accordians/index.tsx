@@ -28,7 +28,6 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
   containerClassName,
   headingStyles,
 }) => {
-  
   return (
     <div className={styles.accordian}>
       <Accordion
