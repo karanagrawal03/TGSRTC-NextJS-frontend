@@ -1,13 +1,14 @@
+import { useRouter } from "next/router";
 import type { NextPage } from "next";
 import styles from "./index.module.css";
-import { APPLY_NOW, VIEW_DETAILS } from "../../constants";
 
 export type Cards2Type = {
   className?: string;
   heading: string;
   description: string;
-  viewAll:string;
-  applyNow:string;
+  viewAll: string;
+  applyNow: string;
+  index: number; // Add index here
 };
 
 const BusPassOptionsCard: NextPage<Cards2Type> = ({
@@ -15,8 +16,15 @@ const BusPassOptionsCard: NextPage<Cards2Type> = ({
   heading,
   description,
   viewAll,
-  applyNow
+  applyNow,
+  index,
 }) => {
+  const router = useRouter();
+
+  const handleViewAllClick = (index: number) => {
+    router.push(`/other-passes?index=${index}`);
+  };
+
   return (
     <div className={[styles.cards, className].join(" ")}>
       <div className={styles.cardTextHolder}>
@@ -33,7 +41,12 @@ const BusPassOptionsCard: NextPage<Cards2Type> = ({
           />
         </div>
         <div className={styles.buttonHolder}>
-          <div className={styles.viewDetails}>{viewAll}</div>
+          <div
+            className={styles.viewDetails}
+            onClick={() => handleViewAllClick(index)}
+          >
+            {viewAll}
+          </div>
           <div className={styles.button2}>
             <div className={styles.applyNow}>{applyNow}</div>
           </div>

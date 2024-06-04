@@ -52,6 +52,7 @@ const BusPassOtherBusPasses: NextPage<BusPassOptionsProps> = ({
               description={card.content}
               viewAll={card.details}
               applyNow={card.button}
+              index={index}
             />
           );
         })}

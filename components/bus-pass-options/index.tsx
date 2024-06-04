@@ -13,6 +13,7 @@ interface BusPassOption {
   image: string;
   details: string;
   button: string;
+
 }
 
 interface BusPassOptionsProps {
@@ -36,6 +37,7 @@ const BusPassOptions: NextPage<BusPassOptionsProps> = ({ className = "", options
               viewAll={card.details}
               image={card.image}
               applyNow={card.button}
+              index={index}
             />
           );
         })}

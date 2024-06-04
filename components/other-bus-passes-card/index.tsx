@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import styles from "./index.module.css";
 import { APPLY_NOW, VIEW_DETAILS } from "../../constants";
 import { UPLOADS_BASE_URL } from "../../services/service";
+import { useRouter } from "next/router";
 
 export type Cards3Type = {
   className?: string;
@@ -10,6 +11,7 @@ export type Cards3Type = {
   image: string;
   viewAll: string;
   applyNow: string;
+  index: number;
 };
 
 const OtherBusPassesCard: NextPage<Cards3Type> = ({
@@ -19,7 +21,20 @@ const OtherBusPassesCard: NextPage<Cards3Type> = ({
   image,
   viewAll,
   applyNow,
+  index,
 }) => {
+  const router = useRouter();
+  const handleClick = (index: number) => {
+    if (index === 0) {
+      router.push("/bus-pass-student-passes");
+    } else if (index === 1) {
+      router.push("/bus-pass-general-commuter-pass");
+    } else if (index === 2) {
+      router.push("/other-passes");
+    } else {
+      router.push("/bus-pass-services");
+    }
+  };
   return (
     <div className={[styles.cards, className].join(" ")}>
       <div className={styles.infographicContainer}>
@@ -29,7 +44,7 @@ const OtherBusPassesCard: NextPage<Cards3Type> = ({
               className={styles.wrapperGroup1000013321Child}
               loading="lazy"
               alt="cards-image"
-              src={UPLOADS_BASE_URL+image}
+              src={UPLOADS_BASE_URL + image}
             />
           </div>
           <div className={styles.infographicsChild} />
@@ -50,7 +65,12 @@ const OtherBusPassesCard: NextPage<Cards3Type> = ({
         </div>
         <div className={styles.buttonsContainer}>
           <div className={styles.button1}>
-            <div className={styles.viewDetails}>{viewAll}</div>
+            <div
+              className={styles.viewDetails}
+              onClick={() => handleClick(index)}
+            >
+              {viewAll}
+            </div>
           </div>
           <button className={styles.button2}>
             <div className={styles.applyNow}>{applyNow}</div>
