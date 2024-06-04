@@ -1,9 +1,9 @@
 //Need to follow alphabetical order with below mentioned notation
 export const ABOUT = "About";
-export const ABOUT_CORPORATION_LINK="/";
-export const ABOUT_EVENTS_LINK="/";
+export const ABOUT_CORPORATION_LINK="/about-the-cooperation";
+export const ABOUT_EVENTS_LINK="/about-events";
 export const ABOUT_HOSPITAL="About Hospital";
-export const ABOUT_IT_LINK="/";
+export const ABOUT_IT_LINK="/about-it-initiative";
 export const ABOUT_LEADERSHIP_LINK="/about-tgsrtc-leadership";
 export const ABOUT_LINK="/about-vision-legacy";
 export const ABOUT_LOGISTICS = "About Logistics";
@@ -122,10 +122,10 @@ export const LADIES="Ladies";
 export const LEADERSHIP = "TGSRTC Leadership";
 export const LOGISTICS = "Logistics";
 export const LOGISTICS_CONTACTS = "Contacts";
-export const LOGISTICS_CONTACTS_LINK="/";
+export const LOGISTICS_CONTACTS_LINK="/logistic-contacts";
 export const LOGISTICS_FAQ = "FAQ";
 export const LOGISTICS_LINK="/logistics-tgsrtc-home";
-export const LOGISTICS_RATES_LINK="/";
+export const LOGISTICS_RATES_LINK="/logistic-rates-and-tariffs-contacts";
 export const LOOKING_TO_SEND_PACKAGE=" Looking for send your package ?";
 export const MENU="Menu";
 export const METRO_DELUX_COACH_PARA="Metro Deluxe Coaches with better features like attractive colour scheme, seat comfort, wider windows etc., are introduced in place of Metro liners for the benefit of long distance city commuters.";

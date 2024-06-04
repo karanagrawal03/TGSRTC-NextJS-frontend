@@ -75,7 +75,7 @@ const FooterSection: NextPage<FooterSectionType> = ({
         <div className={styles.quicklinksSection}>
           <b className={styles.quicklinks}>{QUICKLINKS}</b>
           <a className={styles.careers} href="/careers">{CAREERS}</a>
-          <a className={styles.siteMap} style={siteMapStyle} href="/">
+          <a className={styles.siteMap} style={siteMapStyle} href="/site-map">
             {SITE_MAP}
           </a>
           <a className={styles.aboutUs} href={ABOUT_LINK}>{ABOUT_US}</a>
@@ -86,7 +86,7 @@ const FooterSection: NextPage<FooterSectionType> = ({
           <a className={styles.rtiAct2005} href="/rti-act">{RTI_ACT}</a>
           <a className={styles.roadSafety} href="/road-safety">{ROAD_SAFETY}</a>
           <a className={styles.privacyPolicies} href="/privacy-policy">{PRIVACY_POLICIES}</a>
-          <a className={styles.feedback} href="/">{FEEDBACK}</a>
+          <a className={styles.feedback} href="/feedback">{FEEDBACK}</a>
         </div>
         <div className={styles.faqsSection}>
           <b className={styles.faqs}>{FAQS}</b>
