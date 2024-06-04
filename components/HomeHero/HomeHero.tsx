@@ -10,7 +10,9 @@ export type HomeHeroType = {
 const HomeHero: NextPage<HomeHeroType> = ({ className = "", title }) => {
   return (
     <section className={[styles.homeHero, className].join(" ")}>
-      <h1 className={styles.tgsrtcServing}>{title}</h1>
+      <div className={styles.titleSection}>
+        <h1 className={styles.tgsrtcServing}>{title}</h1>
+      </div>
     </section>
   );
 };

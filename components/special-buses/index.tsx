@@ -10,7 +10,7 @@ export type SpecialBusesType = {
 };
 
 const SpecialBuses:NextPage<SpecialBusesType>=({specialBusOffersTitle,specialBusOffersData})=>{
-  const splBusOffersCards: ReactNode[] = specialBusOffersData?.map((item : any,  index :number) => (
+  const splBusOffersCards = specialBusOffersData?.map((item : any,  index :number) => (
     <SpecialBusesOffersCard
       key={index}
       item={item}

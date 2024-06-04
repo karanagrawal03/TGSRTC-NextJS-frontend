@@ -9,6 +9,7 @@ import ReservationStandards from "../../components/reservation-standards";
 import ReservationServices from "../../components/reservation-services";
 import ReservationHero from "../../components/reservation-landing-hero";
 import SpecialBuses from "../../components/special-buses";
+import { routes } from "../../constants/book-your-tickets-routes";
 
 
 const ReservationBookingServiceHome: NextPageReservationBookingServiceHomeType =() => {
@@ -26,7 +27,7 @@ const ReservationBookingServiceHome: NextPageReservationBookingServiceHomeType =
           heroWebImage={data?.heroWebImage}
           heroMobileImage={data?.heroMobileImage} 
         />
-        <BookYourTicket routes={data?.viewAllRoutes} />
+        <BookYourTicket routes={routes} />
         <ReservationKPIs 
           kpiData={data?.kpi}
         />

@@ -7,31 +7,8 @@ import HomeHero from "../components/HomeHero/HomeHero";
 import HomeBookYourServices from "../components/HomeBookYourServices/HomeBookYourServices";
 import HomeNewsUpdates from "../components/HomeNewsUpdates/HomeNewsUpdates";
 import HomeGamyamApp from "../components/HomeGamyamApp/HomeGamyamApp";
-import {
-  HYDERABAD,
-  BANGALORE,
-  CHENNAI,
-  VIJAYAWADA,
-  SRISAILAM,
-  TIRUPATI,
-  HERO_TITLE,
-  BHADRACHALAM,
-  KARIMNAGAR,
-  SHIRIDI,
-} from "../constants";
-
-const routes = [
-  { from: HYDERABAD, to: BANGALORE },
-  { from: BANGALORE, to: VIJAYAWADA },
-  { from: VIJAYAWADA, to: CHENNAI },
-  { from: CHENNAI, to: SRISAILAM },
-  { from: SRISAILAM, to: BHADRACHALAM },
-  { from: BHADRACHALAM, to: SHIRIDI },
-  { from: SHIRIDI, to: TIRUPATI },
-  { from: TIRUPATI, to: KARIMNAGAR },
-  { from: KARIMNAGAR, to: HYDERABAD }
-];
-
+import { HERO_TITLE } from "../constants";
+import { routes } from "../constants/book-your-tickets-routes";
 
 const homeHeroTitle = [
   { title: HERO_TITLE },
