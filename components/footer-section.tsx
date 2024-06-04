@@ -7,17 +7,24 @@ import {
   BUS_PASSES,
   BUS_PASS_LINK,
   CAREERS,
+  CAREERS_LINK,
   CONTACT_US,
+  CONTACT_US_LINK,
   FAQS,
   FEEDBACK,
+  FEEDBACK_LINK,
   INFORMATION,
   PRIVACY_POLICIES,
+  PRIVACY_POLICIES_LINK,
   QUICKLINKS,
   RESERVATIONS,
   RESERVATIONS_LINK,
   ROAD_SAFETY,
+  ROAD_SAFETY_LINK,
   RTI_ACT,
-  SITE_MAP
+  RTI_ACT_LINK,
+  SITE_MAP,
+  SITE_MAP_LINK
 } from "../constants";
 
 export type FooterSectionType = {
@@ -74,19 +81,19 @@ const FooterSection: NextPage<FooterSectionType> = ({
       <div className={styles.linksContainer}>
         <div className={styles.quicklinksSection}>
           <b className={styles.quicklinks}>{QUICKLINKS}</b>
-          <a className={styles.careers} href="/careers">{CAREERS}</a>
-          <a className={styles.siteMap} style={siteMapStyle} href="/site-map">
+          <a className={styles.careers} href={CAREERS_LINK}>{CAREERS}</a>
+          <a className={styles.siteMap} style={siteMapStyle} href={SITE_MAP_LINK}>
             {SITE_MAP}
           </a>
           <a className={styles.aboutUs} href={ABOUT_LINK}>{ABOUT_US}</a>
-          <a className={styles.contactUs} href="/contact-us">{CONTACT_US}</a>
+          <a className={styles.contactUs} href={CONTACT_US_LINK}>{CONTACT_US}</a>
         </div>
         <div className={styles.informationSection}>
           <b className={styles.information}>{INFORMATION}</b>
-          <a className={styles.rtiAct2005} href="/rti-act">{RTI_ACT}</a>
-          <a className={styles.roadSafety} href="/road-safety">{ROAD_SAFETY}</a>
-          <a className={styles.privacyPolicies} href="/privacy-policy">{PRIVACY_POLICIES}</a>
-          <a className={styles.feedback} href="/feedback">{FEEDBACK}</a>
+          <a className={styles.rtiAct2005} href={RTI_ACT_LINK}>{RTI_ACT}</a>
+          <a className={styles.roadSafety} href={ROAD_SAFETY_LINK}>{ROAD_SAFETY}</a>
+          <a className={styles.privacyPolicies} href={PRIVACY_POLICIES_LINK}>{PRIVACY_POLICIES}</a>
+          <a className={styles.feedback} href={FEEDBACK_LINK}>{FEEDBACK}</a>
         </div>
         <div className={styles.faqsSection}>
           <b className={styles.faqs}>{FAQS}</b>
