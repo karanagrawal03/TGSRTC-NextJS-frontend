@@ -1,85 +1,75 @@
-import { useEffect, useRef, useState } from "react";
-import { useRouter } from "next/router";
-import AccordionItem from "../../components/accordians";
+import React, { useEffect, useRef } from "react";
 import styles from "./index.module.css";
-import useFetch, { UPLOADS_BASE_URL } from "../../services/service";
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import AddIcon from "@mui/icons-material/Add";
+import HorizontalRuleIcon from "@mui/icons-material/HorizontalRule";
+import AccordianTab from "../accordian-tab";
 
-const OtherPasses = () => {
-  const { data, doFetch } = useFetch();
-  const router = useRouter();
-  let { index } = router.query as any;
-  index = parseInt(index as string, 10);
-
-  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
-  const [isImageLoaded, setImageLoad] = useState(false);
-  const divRefs = useRef<Array<HTMLDivElement>>([]);
+export interface DataItem {
+  type: string;
+  text?: string;
+  data?: string[] | { [key: string]: string | number }[];
+}
+interface AccordionItemProps {
+  name: string;
+  info: DataItem[];
+  expanded: boolean;
+  onChange: () => void;
+  containerClassName?: string;
+  headingStyles?: string;
+}
+const AccordionItem: React.FC<AccordionItemProps> = ({
+  name,
+  info,
+  expanded,
+  onChange,
+  containerClassName,
+  headingStyles,
+}) => {
+  const accordionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    doFetch(`/other-passess?populate=*`);
-  }, []);
-
-  useEffect(() => {
-    // if (index) {
-    // const indexInt = parseInt(index as string, 10);
-    if (index !== null && divRefs.current[index]) {
-      divRefs.current[index].scrollIntoView({
+    if (expanded && accordionRef.current) {
+      accordionRef.current.scrollIntoView({
         behavior: "smooth",
+        block: "start",
       });
     }
-  }, [index, isImageLoaded]);
+  }, [expanded]);
 
-  const handleChange = (index: number) => {
-    setExpandedIndex((prevIndex) => (prevIndex === index ? null : index));
-  };
-  const handleImageLoad = () => {
-    setImageLoad(true);
-  };
   return (
-    <div className={styles.busPassGeneralCommuterPass}>
-      <section className={styles.busPassesHeroGeneralCommut}>
-        <img
-          className={styles.bgIcon}
-          alt="hero-web-image"
-          src={UPLOADS_BASE_URL + data?.heroWebImage?.data?.attributes?.url}
-          loading="lazy"
-          onLoad={handleImageLoad}
-        />
-        <img
-          className={styles.bgIconMobile}
-          alt="hero-web-image"
-          src={UPLOADS_BASE_URL + data?.heroMobileImage?.data?.attributes?.url}
-          loading="lazy"
-          onLoad={handleImageLoad}
-        />
-        <div className={styles.generalCommuterPassContainer}>
-          <p className={styles.general}>{data?.heroTitle}</p>
-          <p className={styles.applyRenew}>{data?.heroSubTitle}</p>
-        </div>
-      </section>
-      <section className={styles.busPassGeneralCommuterPass2}>
-        <h2 className={styles.knowMoreAboutContainer}>{data?.knowMoreTitle}</h2>
-        <div className={styles.eachAccordian}>
-          <ol className={styles.orderedList}>
-            {data?.otherBussPassAccordiansData?.map((e: any, idx: number) => (
-              <div
-                ref={(element) => {
-                  divRefs.current[idx] = element as HTMLDivElement;
-                }}
-              >
-                <AccordionItem
-                  key={idx}
-                  name={e.name}
-                  info={e.info}
-                  expanded={expandedIndex === idx || index === idx}
-                  onChange={() => handleChange(idx)}
-                />
-              </div>
-            ))}
-          </ol>
-        </div>
-      </section>
+    <div className={styles.accordian}>
+      <Accordion
+        className={styles.dropdown}
+        expanded={expanded}
+        onChange={onChange}
+      >
+        <AccordionSummary
+          expandIcon={expanded ? <HorizontalRuleIcon /> : <AddIcon />}
+          aria-controls="panel1-content"
+          id="panel1-header"
+          className={styles.before6AmContainer1}
+        >
+          <li className={`${styles.accordianHeading} ${headingStyles}`}>
+            {name}
+          </li>
+        </AccordionSummary>
+      </Accordion>
+      {expanded && (
+        <AccordionDetails
+          ref={accordionRef}
+          sx={{ padding: "0px" }}
+          className={styles.accordianDetails}
+        >
+          <div className={`${styles.accordianTab} ${containerClassName}`}>
+            <AccordianTab array={info} />
+          </div>
+        </AccordionDetails>
+      )}
     </div>
   );
 };
 
-export default OtherPasses;
+export default AccordionItem;

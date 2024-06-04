@@ -1,6 +1,13 @@
 import type { NextPage } from "next";
 import styles from "./index.module.css";
-import { APPLY_NOW, VIEW_DETAILS } from "../../constants";
+import {
+  APPLY_NOW,
+  BUS_PASS_GENERAL_LINK,
+  BUS_PASS_LINK,
+  BUS_PASS_OTHER_LINK,
+  BUS_PASS_STUDENT_LINK,
+  VIEW_DETAILS,
+} from "../../constants";
 import { UPLOADS_BASE_URL } from "../../services/service";
 import { useRouter } from "next/router";
 
@@ -26,13 +33,13 @@ const OtherBusPassesCard: NextPage<Cards3Type> = ({
   const router = useRouter();
   const handleClick = (index: number) => {
     if (index === 0) {
-      router.push("/bus-pass-student-passes");
+      router.push(BUS_PASS_STUDENT_LINK);
     } else if (index === 1) {
-      router.push("/bus-pass-general-commuter-pass");
+      router.push(BUS_PASS_GENERAL_LINK);
     } else if (index === 2) {
-      router.push("/other-passes");
+      router.push(BUS_PASS_OTHER_LINK);
     } else {
-      router.push("/bus-pass-services");
+      router.push(BUS_PASS_LINK);
     }
   };
   return (
