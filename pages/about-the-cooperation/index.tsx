@@ -33,12 +33,14 @@ const AboutTheCoperation = () => {
           {data?.heroSection.heroSectionSubHeading}
         </p>
       </div>
-      <AboutCoperationProfile profileData={data} />
-      <Infrastructure
-        infrastructureText={data?.infrastructureText}
-        infrastructureOfTGSRTC={data?.infrastructureOfTGSRTC}
-        infrastructureCards={data?.infrastructureCards}
-      />
+      <div className={styles.innerContainer}>
+        <AboutCoperationProfile profileData={data} />
+        <Infrastructure
+          infrastructureText={data?.infrastructureText}
+          infrastructureOfTGSRTC={data?.infrastructureOfTGSRTC}
+          infrastructureCards={data?.infrastructureCards}
+        />
+      </div>
     </section>
   );
 };

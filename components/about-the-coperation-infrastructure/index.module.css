@@ -1,6 +1,6 @@
 .infrastructureText {
   font-family: var(--font-playfair-display);
-  font-size: 46px;
+  font-size: var(  --font-size-27xl);
   font-weight: 600;
   line-height: 61.32px;
   text-align: center;
@@ -9,7 +9,7 @@
 
 .infrastructureOfTGSRTC {
   font-family: var(--font-montserrat);
-  font-size: 24px;
+  font-size: var(--font-size-5xl);
   font-weight: 600;
   line-height: 40px;
   letter-spacing: 0.02em;
@@ -18,26 +18,24 @@
 }
 .cardHeading {
   font-family: var(--font-playfair-display);
-  font-size: 24px;
+  font-size: var(--font-size-5xl);
   font-weight: 600;
   line-height: 31.99px;
   text-align: left;
   margin: 0px;
-  color: #cd342b;
-  padding: 24px 0px 0px 0px;
+  color: var(--primary-red);
+  padding: var(--padding-5xl) 0px 0px 0px;
 }
 .card {
   height: 457px;
-  /* max-width: 50.5%; */
   width: 512px;
   background-color: #ffffff;
   box-shadow: 0px 4px 20px 0px #0000001a;
-  padding: 24px;
+  padding: var(--padding-5xl);
   border-radius: 16px;
 }
 .cardImage {
   height: 401px;
-  /* width: 100%; */
   width: 512px;
 }
 .cards {
@@ -46,7 +44,7 @@
   flex-wrap: wrap;
 }
 .infrastructureContainer {
-  padding: 0px 100px 100px 100px;
+  padding: 0px var(--padding-81xl) var(--padding-81xl) var(--padding-81xl);
 }
 @media screen and (max-width: 1023px) {
   .cards {
@@ -55,7 +53,7 @@
   .card {
     width: 368px;
     height: 351px;
-    padding: 12px;
+    padding: var(--padding-xs);
   }
   .cardImage {
     width: 368px;
@@ -63,12 +61,12 @@
   }
   .cardHeading {
     font-size: var(--font-size-16);
-    padding: 12px 0px 0px 0px;
+    padding: var(--padding-xs) 0px 0px 0px;
   }
 }
 @media screen and (max-width: 599px) {
   .infrastructureContainer {
-    padding: 0px 24px 24px 24px;
+    padding: 0px var(--padding-5xl) var(--padding-5xl) var(--padding-5xl);
   }
   .cards {
     justify-content: center;
@@ -76,7 +74,7 @@
   .card {
     width: 288px;
     height: 236px;
-    padding: 12px;
+    padding: var(--padding-xs);
   }
   .cardImage {
     width: 288px;
@@ -85,7 +83,7 @@
   .cardHeading {
     font-size: var(--font-size-16);
     margin: 0px;
-    padding-top: 12px;
+    padding-top: var(--padding-xs);
     line-height: 21px;
   }
 }

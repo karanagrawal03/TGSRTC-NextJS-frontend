@@ -1,16 +1,4 @@
-/* .reservationHeroTourism {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    box-sizing: border-box;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    font-size: var(--font-size-53xl);
-    color: var(--support-white);
-    font-family: var(--font-playfair-display);
-  } */
+
 .bgIcon,
 .bgIconMobile {
   width: 100%;
@@ -19,6 +7,10 @@
   overflow: hidden;
   flex-shrink: 0;
   object-fit: cover;
+}
+.innerContainer{
+  max-width: 1920px;
+  margin: auto;
 }
 .bgIconMobile {
   display: none;
@@ -37,7 +29,7 @@
   mix-blend-mode: normal;
 }
 .tourism {
-  font-size: 72px;
+  font-size: var( --font-size-53xl);
   line-height: 82px;
   font-weight: 600;
   font-family: var(--font-playfair-display);
