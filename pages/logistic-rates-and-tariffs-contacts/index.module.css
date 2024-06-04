@@ -3,6 +3,36 @@
   position: relative;
   object-fit: contain;
 }
+.tourismContentWrapper {
+  gap: 10px;
+  position: absolute;
+  top: 7.3vw;
+  left: 7.3vw;
+  display: flex;
+  flex-direction: column;
+  width: 599px;
+}
+.tourism {
+  margin: 0;
+  mix-blend-mode: normal;
+  font-size: inherit;
+  line-height: 82px;
+  font-weight: 600;
+  font-family: inherit;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+}
+.tgsrtcIsHappy {
+  margin: 0;
+  mix-blend-mode: normal;
+  margin-top: 10px;
+  font-size: var(--font-size-5xl);
+  line-height: 32px;
+  font-weight: 500;
+  font-family: var(--font-montserrat);
+  display: inline-block;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.8);
+  max-width: 100%;
+}
 .busDust {
   width: 128px;
   height: 671px;
@@ -199,23 +229,7 @@
   justify-content: flex-start;
   gap: var(--gap-5xl);
 }
-.header {
-  align-self: stretch;
-  box-shadow: var(--table-shadow);
-  background-color: var(--support-white);
-  justify-content: space-between;
-  padding: var(--padding-xs) var(--padding-11xl);
-  box-sizing: border-box;
-  top: 0;
-  z-index: 99;
-  position: sticky;
-  gap: var(--gap-xl);
-  text-align: left;
-  font-size: var(--font-size-sm);
-  color: var(--text-black);
-  font-family: var(--font-montserrat);
-}
-.bgIcon {
+/* .bgIcon {
   height: 730px;
   width: 100%;
   position: absolute;
@@ -226,6 +240,19 @@
   max-width: 100%;
   overflow: hidden;
   object-fit: cover;
+} */
+.bgIcon,
+.bgIconMobile {
+  width: 100%;
+  height: auto;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.bgIconMobile {
+  display: none;
 }
 .logisticRatesAnd,
 .tariffsContacts {
@@ -268,12 +295,9 @@
   font-family: var(--font-montserrat);
 }
 .logisticHeroRatesTariffC {
-  align-self: stretch;
   overflow: hidden;
   flex-direction: row;
-  padding: var(--padding-81xl) var(--padding-81xl) 305px;
   position: relative;
-  text-align: left;
   font-size: var(--font-size-53xl);
   color: var(--support-white);
   font-family: var(--font-playfair-display);
@@ -589,34 +613,14 @@
   justify-content: center;
   font-size: var(--font-size-xs);
 }
-.footer,
 .logisticRatesAndTariffsCon {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-.footer {
-  align-self: stretch;
-  padding: var(--padding-21xl) var(--padding-21xl) var(--padding-5xs);
-  box-sizing: border-box;
-  gap: var(--gap-13xl);
-  background-image: url(/footer@3x.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top;
-  max-width: 100%;
-  text-align: left;
-  font-size: var(--font-size-sm);
-  color: var(--support-white);
-  font-family: var(--font-montserrat);
 }
 .logisticRatesAndTariffsCon {
   width: 100%;
   position: relative;
   overflow: hidden;
-  line-height: normal;
-  letter-spacing: normal;
 }
 @media screen and (max-width: 1275px) {
   .tabContainer {
@@ -625,8 +629,8 @@
 }
 @media screen and (max-width: 1100px) {
   .logisticHeroRatesTariffC {
-    padding-left: var(--padding-31xl);
-    padding-right: var(--padding-31xl);
+    /* padding-left: var(--padding-31xl);
+    padding-right: var(--padding-31xl); */
     box-sizing: border-box;
   }
   .linksContainer,
@@ -638,14 +642,37 @@
     flex-wrap: wrap;
   }
 }
+
+@media screen and (max-width: 1023px) {
+  .tourismContentWrapper {
+    /* width: 400px; */
+    top: 12vw;
+    left: 7vw;
+  }
+  .tourism {
+    font-size: var(--font-size-39xl);
+    line-height: 68px;
+  }
+  .tgsrtcIsHappy {
+    font-size: var(--font-size-lgi);
+    line-height: 28px;
+  }
+}
 @media screen and (max-width: 750px) {
+  .bgIcon {
+    display: none;
+  }
+  .bgIconMobile {
+    display: flex;
+  }
   .logisticRatesAndContainer {
     font-size: var(--font-size-39xl);
     line-height: 66px;
   }
   .logisticHeroRatesTariffC {
-    padding-top: var(--padding-46xl);
-    padding-bottom: 198px;
+    /* padding-top: var(--padding-46xl); */
+    /* padding-bottom: 198px; */
+    padding: 0px;
     box-sizing: border-box;
   }
   .logo {
@@ -659,8 +686,21 @@
     flex-wrap: wrap;
     gap: var(--gap-6xl);
   }
-  .footer {
-    gap: var(--gap-base);
+}
+@media screen and (max-width: 599px) {
+  .tourismContentWrapper {
+    width: 237px;
+    top: 26.6vw;
+    left: 6.4vw;
+  }
+  .tourism {
+    font-size: var(--font-size-42xl);
+    line-height: 56px;
+  }
+  .tgsrtcIsHappy {
+    margin-top: 8px;
+    font-size: var(--font-size-xl);
+    line-height: 26px;
   }
 }
 @media screen and (max-width: 450px) {
@@ -673,18 +713,13 @@
     line-height: 26px;
   }
   .logisticHeroRatesTariffC {
-    padding-left: var(--padding-xl);
-    padding-right: var(--padding-xl);
+    /* padding-left: var(--padding-xl); */
+    /* padding-right: var(--padding-xl); */
     box-sizing: border-box;
   }
   .linksContainer,
   .recognitionContainer {
     flex-wrap: wrap;
     gap: var(--gap-6xl);
-  }
-  .footer {
-    padding-top: var(--padding-7xl);
-    padding-bottom: var(--padding-xl);
-    box-sizing: border-box;
   }
 }

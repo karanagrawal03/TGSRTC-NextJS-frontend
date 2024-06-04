@@ -26,39 +26,30 @@ const LogisticRatesAndTariffsContacts = () => {
 
   return (
     <div className={styles.logisticRatesAndTariffsCon}>
-      <img className={styles.busDust} alt="" src="/bus--dust@2x.png" />
+      {/* <img className={styles.busDust} alt="" src="/bus--dust@2x.png" /> */}
       <section className={styles.logisticHeroRatesTariffC}>
         {width ? (
           <img
             className={styles.bgIcon}
             alt="bus-pass-main-section"
-            src={
-              UPLOADS_BASE_URL +
-              data?.heroSectionImageWeb?.data?.attributes?.url
-            }
+            src={UPLOADS_BASE_URL + data?.heroWebImage?.data?.attributes?.url}
             loading="lazy"
           />
         ) : (
           <img
-            className={styles.bgIconmobile}
+            className={styles.bgIconMobile}
             alt="mobile-image"
             src={
-              UPLOADS_BASE_URL +
-              data?.heroSectionImageMobile?.data?.attributes?.url
+              UPLOADS_BASE_URL + data?.heroMobileImage?.data?.attributes?.url
             }
             loading="lazy"
           />
         )}
-        <h1 className={styles.logisticRatesAndContainer}>
-          <p className={styles.logisticRatesAnd}>{data?.heroTitle}</p>
-        </h1>
-        <div className={styles.tgsrtcIsHappyToAnnounceThWrapper}>
+        <div className={styles.tourismContentWrapper}>
+          <h1 className={styles.tourism}>{data?.heroTitle}</h1>
           <p className={styles.tgsrtcIsHappy}>{data?.heroSubTitle}</p>
         </div>
       </section>
-      <div className={styles.bookingTitleContainer}>
-        <h1 className={styles.bookYourCargo}>{data?.bookYourCargoTitle}</h1>
-      </div>
       <LogisticBookYourCargoSectionCard
         cards={data?.bookYourCargoCards || []}
       />
