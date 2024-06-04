@@ -24,7 +24,7 @@ const Careers = () => {
             <section className={styles.requirement}>
                 <div className={styles.requirementTitle}>{data?.requirementTitle}</div>
                 <div className={styles.requiremenetTable}>
-                    {data?.requirementTableData != null && data?.requirementTableData != undefined ?
+                    {data?.requirementTableData ?
                         <Tables rows={data?.requirementTableData} containerClassName={styles.tableContainer} columnWidths={columnWidths} tableHeadCellStyles={styles.tableHeadCell} tableCellStyles={styles.tableCell} />
                         : <></>}
                 </div>

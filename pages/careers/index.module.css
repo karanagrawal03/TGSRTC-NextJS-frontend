@@ -28,7 +28,7 @@
 }
 
 .heroTitle {
-    font-family: Playfair Display;
+    font-family: var(--font-playfair-display);
     font-size: var(--font-size-53xl);
     font-weight: 600;
     line-height: 82px;
@@ -49,7 +49,7 @@
 
 .heroSubtitleMobile {
     display: none;
-    font-family: Montserrat;
+    font-family: var(--font-montserrat);
     font-size: var(--font-size-5xl);
     font-weight: 500;
     line-height: 32px;
@@ -64,7 +64,7 @@
 }
 
 .requirementTitle {
-    font-family: Playfair Display;
+    font-family: var(--font-playfair-display);
     font-size: var(--font-size-5xl);
     font-weight: 600;
     line-height: 26px;
