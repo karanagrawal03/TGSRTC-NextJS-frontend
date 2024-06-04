@@ -194,6 +194,7 @@ export const TELEGRAM_URL = "https://t.me/tsrtcmdoffice";
 export const TENDERS = "Tenders";
 export const TENDERS_LINK="/tenders";
 export const TERMS_AND_CONDITIONS="Terms & Condition";
+export const TGSRTC = "TGSRTC";
 export const TGSRTC_AIRPORT="TGSRTC Airport Pushpak bus timings - Towards RGIA"
 export const TGSRTC_COPYRIGHT =" Copyright © 2021 TGSRTC, All Rights Reserved.";
 export const TGSRTC_EMPLOYEE = "+91-9154298785 - For TGSRTC Employee";
