@@ -17,7 +17,8 @@
 }
 .contentSection {
   z-index: 2;
-  left: 80px;
+  left: 50%;
+  transform: translateX(-50%);
   top: 102px;
   display: flex;
   position: absolute;
@@ -109,4 +110,3 @@
     font-size: var(--font-size-18xl);
   }
 }
-
