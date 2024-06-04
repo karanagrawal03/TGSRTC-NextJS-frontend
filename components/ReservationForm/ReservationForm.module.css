@@ -1,21 +1,14 @@
 .exchangeIcon {
-  position: absolute;
+  min-width: 28px;
   height: 28px;
-  width: 28px;
-  right: -32px;
+  position: absolute;
+  right: -14px;
+  padding: 0;
+
 }
+
 .exchangeIcon:hover {
   background: none;
-}
-.exchangeIcon:active {
-  display: none;
-  background: none;
-  border-radius: 100%;
-}
-.exchangeIcon::after {
-  display: none;
-  background: none;
-  border-radius: 100%;
 }
 @media (max-width: 750px) {
   .exchangeIcon {

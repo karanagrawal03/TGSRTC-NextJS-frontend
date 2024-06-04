@@ -1,3 +1,4 @@
+import { useState } from "react";
 import type { NextPage } from "next";
 import styles from "./BookYourTicket.module.css";
 import ReservationForm from "../ReservationForm/ReservationForm";
@@ -9,6 +10,22 @@ export type BookYourTicketType = {
 };
 
 const BookYourTicket: NextPage<BookYourTicketType> = ({ className = "", routes }) => {
+  const [showAllRoutes, setShowAllRoutes] = useState(false);
+  const [selectedFrom, setSelectedFrom] = useState("");
+  const [selectedTo, setSelectedTo] = useState("");
+
+  const displayedRoutes = showAllRoutes ? routes : routes.slice(0, 5);
+
+  const handleViewAllRoutes = () => {
+    setShowAllRoutes(true);
+  };
+
+  const handleRouteSelect = (from: string, to: string) => {
+    setSelectedFrom(from);
+    setSelectedTo(to);
+    
+  };
+
   return (
     <section className={[styles.bookYourTicket, className].join(" ")}>
       <div className={styles.textsWrapper}>
@@ -23,17 +40,17 @@ const BookYourTicket: NextPage<BookYourTicketType> = ({ className = "", routes }
       </div>
       <div className={styles.bookYourTicketFormContaineWrapper}>
         <form className={styles.bookYourTicketFormContaine}>
-          <ReservationForm />
+          <ReservationForm routes={routes}  onRouteSelect={handleRouteSelect} selectedFrom={selectedFrom} selectedTo={selectedTo}/>
           <div className={styles.interestedRouteContainer}>
             <div className={styles.interestedRouteTitle}>
               <div className={styles.routesYouMay}>
                 {ROUTES_TEXT}
               </div>
-              <img className={styles.lineIcon} alt="line icon" src="/line.svg" loading="lazy"/>
+              <img className={styles.lineIcon} alt="line icon" src="/line.svg" loading="lazy" />
             </div>
             <div className={styles.routeChipsContainer}>
-              {routes?.map((route, index) => (
-                <div key={index} className={styles.routeChips}>
+              {displayedRoutes.map((route, index) => (
+                <div key={index} className={styles.routeChips} onClick={() => handleRouteSelect(route.from, route.to)}>
                   <div className={styles.city}>{route.from}</div>
                   <img
                     className={styles.icons3}
@@ -44,9 +61,11 @@ const BookYourTicket: NextPage<BookYourTicketType> = ({ className = "", routes }
                   <div className={styles.city}>{route.to}</div>
                 </div>
               ))}
-              <button className={styles.button1}>
-                <div className={styles.applyNow1}>{VIEW_ALL_ROUTES}</div>
-              </button>
+              {!showAllRoutes && (
+                <button type="button" className={styles.button1} onClick={handleViewAllRoutes}>
+                  <div className={styles.applyNow1}>{VIEW_ALL_ROUTES}</div>
+                </button>
+              )}
             </div>
           </div>
         </form>
