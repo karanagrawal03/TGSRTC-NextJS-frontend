@@ -29,7 +29,6 @@
   box-sizing: border-box;
   gap: var(--gap-13xl);
   z-index: 1;
-  /* text-align: center; */
   font-size: var(--font-size-27xl);
 }
 .rightToInformation {
@@ -43,15 +42,15 @@
   font-family: inherit;
   text-align: center;
 }
-.rtiActContent{
-    width: 1116px;
-    align-items: flex-start;
-    margin: 0;
-    max-width: 100%;
+.rtiActContent {
+  width: 1116px;
+  align-items: flex-start;
+  margin: 0;
+  max-width: 100%;
 }
-.rtiList{
-    margin: 0;
-    padding: 0;
+.rtiList {
+  margin: 0;
+  padding: 0;
 }
 @media screen and (max-width: 1275px) {
   .rtiActContainer {
@@ -64,7 +63,6 @@
   .rightToInformation {
     font-size: var(--font-size-19xl);
   }
-  
 }
 @media screen and (max-width: 750px) {
   .rtiActContainer {
@@ -74,10 +72,8 @@
   }
 }
 @media screen and (max-width: 599px) {
- 
   .rightToInformation {
     font-size: var(--font-size-13xl);
     line-height: 40px;
   }
- 
 }

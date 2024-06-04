@@ -22,11 +22,11 @@ const RTIACT: NextPageRTIACTType = () => {
         <h1 className={styles.rightToInformation}>{data?.rtiActTitle}</h1>
         <div className={styles.rtiActContent}>
           <ol className={styles.rtiList}>
-            {data?.rtiActData?.map((e: any, index: number) => (
+            {data?.rtiActData?.map((item: any, index: number) => (
               <AccordionItem
                 key={index}
-                name={e.name}
-                info={e.info}
+                name={item.name}
+                info={item.info}
                 expanded={expandedIndex === index}
                 onChange={() => handleChange(index)}
               />
