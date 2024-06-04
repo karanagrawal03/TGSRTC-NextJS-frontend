@@ -45,15 +45,15 @@ pipeline {
                 script {
                     if (env.Env == 'dev') {
                         sh 'tar -czvf build.tar.gz dist'
-                        sh 'ssh jenkins@demo.divami.com "sudo mkdir -p /var/www/html/tsrtcdev; sudo chown -R jenkins:jenkins /var/www/html/tsrtcdev/ "'
-                        sh 'scp build.tar.gz jenkins@demo.divami.com:/var/www/html/tsrtcdev'
-                        sh 'ssh jenkins@demo.divami.com "cd /var/www/html/tsrtcdev; tar -xvzf build.tar.gz --strip 1" '
+                        sh 'ssh tsrtc@tsdev.divami.com "sudo mkdir -p /var/www/html/tsrtcdev; sudo chown -R tsrtc:tsrtc /var/www/html/tsrtcdev/ "'
+                        sh 'scp build.tar.gz tsrtc@tsdev.divami.com:/var/www/html/tsrtcdev'
+                        sh 'ssh tsrtc@tsdev.divami.com "cd /var/www/html/tsrtcdev; tar -xvzf build.tar.gz --strip 1" '
                     }
                     else {
                         sh 'tar -czvf build.tar.gz dist'
-                        sh 'ssh jenkins@demo.divami.com "sudo mkdir -p /var/www/html/tsrtcqa; sudo chown -R jenkins:jenkins /var/www/html/tsrtcqa/ "'
-                        sh 'scp build.tar.gz jenkins@demo.divami.com:/var/www/html/tsrtcqa'
-                        sh 'ssh jenkins@demo.divami.com "cd /var/www/html/tsrtcqa; tar -xvzf build.tar.gz --strip 1" '
+                        sh 'ssh tsrtc@tsqa.divami.com "sudo mkdir -p /var/www/html/tsrtcqa; sudo chown -R tsrtc:tsrtc /var/www/html/tsrtcqa/ "'
+                        sh 'scp build.tar.gz tsrtc@tsqa.divami.com:/var/www/html/tsrtcqa'
+                        sh 'ssh tsrtc@tsqa.divami.com "cd /var/www/html/tsrtcqa; tar -xvzf build.tar.gz --strip 1" '
                     }
                 }  
 

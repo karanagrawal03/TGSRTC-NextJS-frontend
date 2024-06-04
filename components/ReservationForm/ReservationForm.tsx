@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   InputLabel,
   MenuItem,
@@ -12,9 +12,78 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider, DatePicker } from "@mui/x-date-pickers";
 import dayjs from "dayjs";
 import ReservationFormStyle from "./ReservationFormStyles";
-import { FROM_LABEL, TO_LABEL, HYDERABAD_LABEL, INTERCITY, INTRACITY, ROUND_TRIP, SEARCH_BUSSES, TODAY_LABEL, TOMMAROW_LABEL, VISAKHAPATNAM_LABEL, WARANGAL_LABEL } from "../../constants";
+import {
+  FROM_LABEL,
+  TO_LABEL,
+  INTERCITY,
+  INTRACITY,
+  ROUND_TRIP,
+  SEARCH_BUSSES,
+  TODAY_LABEL,
+  TOMMAROW_LABEL,
+} from "../../constants";
+import { NextPage } from "next";
 
-const ReservationForm = () => {
+export type BookYourTicketType = {
+  className?: string;
+  routes: { from: string; to: string }[];
+  onRouteSelect: (from: string, to: string) => void;
+  selectedTo: string;
+  selectedFrom: string;
+};
+
+const buttons = [
+  { label: TODAY_LABEL, style: ReservationFormStyle.button1 },
+  { label: TOMMAROW_LABEL, style: ReservationFormStyle.button2 },
+];
+
+const ReservationForm: NextPage<BookYourTicketType> = ({
+  routes,
+  onRouteSelect,
+  selectedFrom,
+  selectedTo,
+}) => {
+
+  const [selectedDate, setSelectedDate] = useState(dayjs());
+  const [isClicked, setIsClicked] = useState(false);
+
+  // from input logic
+         
+  const handleFromChange = (event: any) => {
+    onRouteSelect(event.target.value, selectedTo);
+  };
+
+   // to input logic
+
+  const handleToChange = (event: any) => {
+    onRouteSelect(selectedFrom,event.target.value);
+  };
+
+ // swapping icon logic
+
+  const handleExchange = () => {
+    setIsClicked(!isClicked);
+      onRouteSelect(selectedTo, selectedFrom);
+  };
+
+ // default date logic
+
+  const handleDateChange = (newValue: any) => {
+    setSelectedDate(newValue);
+  };
+
+ // today button date logic
+
+  const handleTodayClick = () => {
+    setSelectedDate(dayjs());
+  };
+
+ // tommarow button date logic
+
+  const handleTomorrowClick = () => {
+    setSelectedDate(dayjs().add(1, "day"));
+  };
+
   return (
     <div className={styles.bookYourTicketFormTabs}>
       <div className={styles.searchTabsContainer}>
@@ -46,16 +115,16 @@ const ReservationForm = () => {
               <FormControl sx={ReservationFormStyle.formControl}>
                 <InputLabel
                   sx={ReservationFormStyle.inputLabel}
-                  id="demo-simple-select-label"
+                  id="from-label"
                 >
                   {FROM_LABEL}
                 </InputLabel>
                 <Select
-                  labelId="demo-simple-select-label"
-                  id="demo-simple-select"
-                  value={HYDERABAD_LABEL}
+                  labelId="from-label"
+                  id="from-select"
+                  value={selectedFrom}
                   label="from"
-                  // onChange={handleChange}
+                  onChange={handleFromChange}
                   IconComponent={(props) => (
                     <img
                       src="/icons-2.svg"
@@ -66,33 +135,31 @@ const ReservationForm = () => {
                   )}
                   sx={ReservationFormStyle.select1}
                 >
-                  <MenuItem value={HYDERABAD_LABEL}>
-                    {HYDERABAD_LABEL}
-                  </MenuItem>
-                  <MenuItem value={WARANGAL_LABEL}>{WARANGAL_LABEL}</MenuItem>
-                  <MenuItem value={VISAKHAPATNAM_LABEL}>
-                    {VISAKHAPATNAM_LABEL}
-                  </MenuItem>
+                  {routes.map((location) => (
+                    <MenuItem key={location.from} value={location.from}>
+                      {location.from}
+                    </MenuItem>
+                  ))}
                 </Select>
               </FormControl>
-              <Button className={styles.exchangeIcon}>
+              <Button
+               className={styles.exchangeIcon}
+                onClick={handleExchange}
+              >
                 <img loading="lazy" alt="exchange icon" src="/exchange.svg" />
               </Button>
             </Box>
             <Box sx={ReservationFormStyle.inputBox2}>
               <FormControl sx={ReservationFormStyle.formControl}>
-                <InputLabel
-                  id="demo-simple-select-label"
-                  sx={ReservationFormStyle.inputLabel}
-                >
+                <InputLabel id="to-label" sx={ReservationFormStyle.inputLabel}>
                   {TO_LABEL}
                 </InputLabel>
                 <Select
-                  labelId="demo-simple-select-label"
-                  id="demo-simple-select"
-                  value={"Warangal (WL)"}
+                  labelId="to-label"
+                  id="to-select"
+                  value={selectedTo}
                   label="to"
-                  // onChange={handleChange}
+                  onChange={handleToChange}
                   IconComponent={(props) => (
                     <img
                       src="/icons-2.svg"
@@ -103,13 +170,11 @@ const ReservationForm = () => {
                   )}
                   sx={ReservationFormStyle.select2}
                 >
-                  <MenuItem value={HYDERABAD_LABEL}>
-                    {HYDERABAD_LABEL}
-                  </MenuItem>
-                  <MenuItem value={WARANGAL_LABEL}>{WARANGAL_LABEL}</MenuItem>
-                  <MenuItem value={VISAKHAPATNAM_LABEL}>
-                    {WARANGAL_LABEL}
-                  </MenuItem>
+                  {routes.map((location) => (
+                    <MenuItem key={location.to} value={location.to}>
+                      {location.to}
+                    </MenuItem>
+                  ))}
                 </Select>
               </FormControl>
             </Box>
@@ -119,10 +184,9 @@ const ReservationForm = () => {
               <Box sx={ReservationFormStyle.inputBox5}>
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
                   <DatePicker
-                    defaultValue={dayjs("14-05-2024")}
-                    onChange={(newValue: any) => {
-                      console.log(newValue);
-                    }}
+                    value={selectedDate}
+                    onChange={handleDateChange}
+                    format="DD-MM-YYYY"
                     sx={ReservationFormStyle.datePicker}
                     slotProps={{
                       textField: {
@@ -158,12 +222,18 @@ const ReservationForm = () => {
                 </LocalizationProvider>
               </Box>
               <Box sx={ReservationFormStyle.box}>
-                <Button variant="contained" sx={ReservationFormStyle.button1}>
-                  {TODAY_LABEL}
-                </Button>
-                <Button variant="contained" sx={ReservationFormStyle.button2}>
-                  {TOMMAROW_LABEL}
-                </Button>
+                {buttons.map((button, index) => (
+                  <Button
+                    key={button.label}
+                    variant="contained"
+                    sx={button.style}
+                    onClick={
+                      index === 0 ? handleTodayClick : handleTomorrowClick
+                    }
+                  >
+                    {button.label}
+                  </Button>
+                ))}
               </Box>
             </Box>
             <Box sx={ReservationFormStyle.box2}>
