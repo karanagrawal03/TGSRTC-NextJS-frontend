@@ -73,7 +73,7 @@ const HomeBookYourServices: NextPage<HomeBookYourServicesType> = ({
         </div>
         <div className={styles.bookYourServiceCards}>
           {serviceCardsData.map((cardData, index) => (
-            <BookYourServiceCards key={index} {...cardData} />
+            <BookYourServiceCards key={index} {...cardData}  index={index}/>
           ))}
         </div>
       </section>

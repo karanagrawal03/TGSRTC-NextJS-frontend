@@ -2,8 +2,10 @@ import type { NextPage } from "next";
 import { useMemo, type CSSProperties } from "react";
 import styles from "./footer-section.module.css";
 import {
+  ABOUT_LINK,
   ABOUT_US,
   BUS_PASSES,
+  BUS_PASS_LINK,
   CAREERS,
   CONTACT_US,
   FAQS,
@@ -12,6 +14,7 @@ import {
   PRIVACY_POLICIES,
   QUICKLINKS,
   RESERVATIONS,
+  RESERVATIONS_LINK,
   ROAD_SAFETY,
   RTI_ACT,
   SITE_MAP
@@ -75,7 +78,7 @@ const FooterSection: NextPage<FooterSectionType> = ({
           <a className={styles.siteMap} style={siteMapStyle} href="/">
             {SITE_MAP}
           </a>
-          <a className={styles.aboutUs} href="/about-vision-legacy">{ABOUT_US}</a>
+          <a className={styles.aboutUs} href={ABOUT_LINK}>{ABOUT_US}</a>
           <a className={styles.contactUs} href="/contact-us">{CONTACT_US}</a>
         </div>
         <div className={styles.informationSection}>
@@ -87,8 +90,8 @@ const FooterSection: NextPage<FooterSectionType> = ({
         </div>
         <div className={styles.faqsSection}>
           <b className={styles.faqs}>{FAQS}</b>
-          <a className={styles.reservations} href="/reservation-booking-service-ho">{RESERVATIONS}</a>
-          <a className={styles.busPasses} href="/bus-pass-services">{BUS_PASSES}</a>
+          <a className={styles.reservations} href={RESERVATIONS_LINK}>{RESERVATIONS}</a>
+          <a className={styles.busPasses} href={BUS_PASS_LINK}>{BUS_PASSES}</a>
         </div>
       </div>
     </div>
