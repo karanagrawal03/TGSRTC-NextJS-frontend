@@ -1,7 +1,8 @@
 import type { NextPage } from "next";
 import { useMemo, type CSSProperties } from "react";
 import styles from "./HomePageCard.module.css";
-import { APPLY_NOW, KNOW_MORE_LABEL } from "../../constants";
+import { APPLY_NOW, BUS_PASS_LINK, HOSPITAL_LINK, KNOW_MORE_LABEL, LOGISTICS_LINK } from "../../constants";
+import { useRouter } from "next/router";
 
 export type BookYourServiceCardType = {
   className?: string;
@@ -20,6 +21,7 @@ export type BookYourServiceCardType = {
   buttonsContainerDisplay?: CSSProperties["display"];
   buttonsContainerMinWidth?: CSSProperties["minWidth"];
   buttonsContainerMargin?: CSSProperties["margin"];
+  index: number;
 };
 
 const BookYourServiceCards: NextPage<BookYourServiceCardType> = ({
@@ -37,6 +39,7 @@ const BookYourServiceCards: NextPage<BookYourServiceCardType> = ({
   buttonsContainerDisplay,
   buttonsContainerMinWidth,
   buttonsContainerMargin,
+  index,
 }) => {
   const cardsStyle: CSSProperties = useMemo(() => {
     return {
@@ -77,6 +80,19 @@ const BookYourServiceCards: NextPage<BookYourServiceCardType> = ({
     buttonsContainerMargin,
   ]);
 
+  const router = useRouter();
+  const handleClick = (index: number) => {
+    if (index === 0) {
+      router.push(BUS_PASS_LINK);
+    } else if (index === 1) {
+      router.push(LOGISTICS_LINK);
+    } else if (index === 2) {
+      router.push("/");
+    } else {
+      router.push(HOSPITAL_LINK);
+    }
+  };
+
   return (
     <div className={[styles.cards, className].join(" ")} style={cardsStyle}>
       <div className={styles.infographicContainerWrapper}>
@@ -113,7 +129,7 @@ const BookYourServiceCards: NextPage<BookYourServiceCardType> = ({
           <div className={styles.button1}>
             <div className={styles.applyNow}>{APPLY_NOW}</div>
           </div>
-          <div className={styles.button2}>
+          <div className={styles.button2} onClick={() => handleClick(index)}>
             <b className={styles.applyNow1}>{KNOW_MORE_LABEL}</b>
           </div>
         </button>
