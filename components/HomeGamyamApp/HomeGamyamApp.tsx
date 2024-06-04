@@ -1,12 +1,19 @@
 import type { NextPage } from "next";
 import styles from "./HomeGamyamApp.module.css";
-import { GAMAYAM_APP, GAMAYAM_APP_PARAGRAPH } from "../../constants";
+import { UPLOADS_BASE_URL } from "../../services/service";
 
 export type HomeGamyamAppType = {
+  data?: {
+    gamayamTitle?: string;
+    gamayamParagraph?: string;
+    gamayamLogoUrl?: string;
+    webIconUrl?: string;
+    shadowImageUrl?: string;
+  };
   className?: string;
 };
 
-const HomeGamyamApp: NextPage<HomeGamyamAppType> = ({ className = "" }) => {
+const HomeGamyamApp: NextPage<HomeGamyamAppType> = ({ data, className = "" }) => {
   return (
     <section className={[styles.homeGamyamApp, className].join(" ")}>
       <div className={styles.gamayamContent}>
@@ -15,12 +22,12 @@ const HomeGamyamApp: NextPage<HomeGamyamAppType> = ({ className = "" }) => {
             className={styles.gamayamLogoIcon}
             loading="lazy"
             alt="gamayam logo"
-            src="/gamayam-logo@2x.png"
+            src={`${UPLOADS_BASE_URL}${data?.gamayamLogoUrl}`}
           />
           <div className={styles.texts}>
-            <h1 className={styles.gamyamApp}>{GAMAYAM_APP}</h1>
+            <h1 className={styles.gamyamApp}>{data?.gamayamTitle }</h1>
             <p className={styles.experienceSeamlessTravel}>
-            {GAMAYAM_APP_PARAGRAPH}
+              {data?.gamayamParagraph }
             </p>
           </div>
         </div>
@@ -28,13 +35,13 @@ const HomeGamyamApp: NextPage<HomeGamyamAppType> = ({ className = "" }) => {
           className={styles.icon}
           loading="lazy"
           alt="mobile images"
-          src="/mobiles-icon.svg"
+          src={`${UPLOADS_BASE_URL}${data?.webIconUrl}` }
         />
         <img
           className={styles.shadowlayer}
           loading="lazy"
           alt="shadow image"
-          src="/shadow-avatar.svg"
+          src={`${UPLOADS_BASE_URL}${data?.shadowImageUrl}` }
         />
       </div>
     </section>
