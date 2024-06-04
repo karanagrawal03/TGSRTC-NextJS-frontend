@@ -46,7 +46,7 @@
 }
 .disclaimerContent,
 .privacyPolicyContent {
-  gap: var(--gap-7xl) 26px;
+  gap: var(--gap-7xl);
   font-family: var(--font-montserrat);
   font-size: var(--font-size-16);
   font-weight: 500;

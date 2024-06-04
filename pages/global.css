@@ -35,6 +35,7 @@ a {
   --font-inter: Inter;
 
   /* font sizes */
+  --font-size-10-xs:10px;
   --font-size-xs: 12px;
   --font-size-sm: 14px;
   --font-size-base: 16px;
@@ -64,6 +65,7 @@ a {
   --font-size-32xl: 51px;
   --font-size-36xs: 36px;
   --font-size-42xs: 42px;
+  --font-size-52xs:52px;
 
   /* Colors */
   --color-whitesmoke-100: #f7f7f7;
@@ -98,6 +100,9 @@ a {
   --color-darkslategray-200: #303030;
   --color-light-green : #67a249;
   --color-whitesmoke : #EBF2EC;
+  --color-background: #3E3E3E4D;
+  --color-border:#CBCBCB;
+  --color-placeholder:#A2A2A2;
   
   /* Spacing */
   --spacing-lg: 12px;
@@ -146,6 +151,7 @@ a {
   --gap-lgi: 19px;
   --gap-18xl: 40px;
   --gap-7xl: 26px;
+  --gap-75xs:75px;
 
   /* Paddings */
   --padding-21xl: 40px;
@@ -275,7 +281,10 @@ a {
   --padding-2xll: 91.5px;
   --padiing-48xl:48.47px;
   --padding-84xs:84px;
+  --padding-27xs:27.5px;
+  --padding-82xs:82px;
   --padding-47xl:64px;
+  --padding-70xl:70px;
 
   /* Border radiuses */
   --br-7xs: 6px;
@@ -288,9 +297,13 @@ a {
   --br-3xs: 10px;
   --br-7xs: 6px;
   --br-xs: 12px;
+  --br-xxl:400px;
 
   /* Effects */
   --card: 0px 4px 20px rgba(0, 0, 0, 0.1);
   --card-shadow: 0px 4px 10px 0px #E8E8E8;
+  --card-shadow1:0px 4px 4px 0px #00000040;
+  --box-shadow:0px 10px 30px 0px #09422233;
+  --button-color:linear-gradient(90deg, #19AC58 0%, #077F3B 100%);
 }
 

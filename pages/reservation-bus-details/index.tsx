@@ -14,7 +14,7 @@ const ReservationBusDetails: NextPage = () => {
 
   useEffect(() => {
     doFetch(`/reservation-bus-details?populate=*`);
-  }, [doFetch]);
+  }, []);
 
   return (
     <>

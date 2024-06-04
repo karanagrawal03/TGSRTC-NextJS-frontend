@@ -9,7 +9,7 @@ const AboutThisSite: NextPageAboutThisSiteType = () => {
   useEffect(() => {
     doFetch(`/about-this-sites?populate=*`);
   }, []);
-  console.log(UPLOADS_BASE_URL ,data,"data")
+  
   return (
     <div className={styles.aboutThisSite}>
         <div className={styles.aboutContainer}>

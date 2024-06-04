@@ -8,7 +8,7 @@ export type Cards2Type = {
   description: string;
   viewAll: string;
   applyNow: string;
-  index: number; // Add index here
+  index: number; 
 };
 
 const BusPassOptionsCard: NextPage<Cards2Type> = ({
@@ -20,6 +20,7 @@ const BusPassOptionsCard: NextPage<Cards2Type> = ({
   index,
 }) => {
   const router = useRouter();
+  
 
   const handleViewAllClick = (index: number) => {
     router.push(`/other-passes?index=${index}`);

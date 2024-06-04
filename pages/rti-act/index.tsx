@@ -1,7 +1,8 @@
 import type { NextPage } from "next";
 import styles from "./index.module.css";
 import useFetch, { UPLOADS_BASE_URL } from "../../services/service";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import AccordionItem from "../../components/accordians";
 
 const RTIACT: NextPageRTIACTType = () => {
   const { data, doFetch } = useFetch();
@@ -10,35 +11,28 @@ const RTIACT: NextPageRTIACTType = () => {
     doFetch(`/rti-acts?populate=*`);
   }, []);
 
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+
+  const handleChange = (index: number) => {
+    setExpandedIndex((prevIndex) => (prevIndex === index ? null : index));
+  };
   return (
     <div className={styles.rtiAct}>
       <main className={styles.rtiActContainer}>
         <h1 className={styles.rightToInformation}>{data?.rtiActTitle}</h1>
-        <section className={styles.rtiLists}>
-          {data?.rtiActData?.map((item: any) => (
-            <>
-              <div className={styles.textLinks}>
-                <div className={styles.indexNumber}>{item.index}.</div>
-                <h2 className={styles.introduction}>{item.title}</h2>
-                <div className={styles.iconHolder}>
-                  <img
-                    className={styles.iconBlack}
-                    loading="lazy"
-                    alt="gotoIcon"
-                    src="/goToIcon.svg"
-                  />
-                  <img
-                    className={styles.iconGreen}
-                    loading="lazy"
-                    alt="gotoIcon"
-                    src="/goToIconGreen.svg"
-                  />
-                </div>
-              </div>
-              <div className={styles.lineSeparater}></div>
-            </>
-          ))}
-        </section>
+        <div className={styles.rtiActContent}>
+          <ol className={styles.rtiList}>
+            {data?.rtiActData?.map((e: any, index: number) => (
+              <AccordionItem
+                key={index}
+                name={e.name}
+                info={e.info}
+                expanded={expandedIndex === index}
+                onChange={() => handleChange(index)}
+              />
+            ))}
+          </ol>
+        </div>
       </main>
     </div>
   );
