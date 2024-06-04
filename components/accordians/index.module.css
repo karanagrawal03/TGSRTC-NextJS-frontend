@@ -30,7 +30,7 @@
 }
 .accordianDetails {
   padding: 0px;
-  width: calc(100% + 24px);
+  width: calc(100% + 23px);
 }
 .accordianTab {
   margin-top: -15px;
@@ -52,9 +52,11 @@
   font-family: var(--font-montserrat);
 }
 @media screen and (max-width: 750px) {
+  .accordianDetails {
+    width: calc(100% + 7px);
+  }
   .accordianTab {
     margin-top: -15px;
-    width: auto;
     background-color: #ffffff;
     padding: 0px var(--padding-base) var(--padding-5xl) var(--padding-19xl);
   }
@@ -93,6 +95,9 @@
   }
 }
 @media screen and (max-width: 900px) {
+  .accordianDetails {
+    width: calc(100% + 23px);
+  }
   .accordianTab {
     padding-left: var(--padding-45xl);
     padding-right: var(--padding-45xl);
