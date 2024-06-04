@@ -18,7 +18,7 @@ const AboutCoperationProfile: React.FC<AboutProfile> = ({ profileData }) => {
           items={profileData?.formationData}
         />
       </div>
-      <div>
+      <div className={styles.lowerContainer}>
         <p className={styles.tsrtcAtAGlanceText}>{profileData?.tsrtcAtAGlanceText}</p>
         <Tables rows={profileData?.overViewData} />
         <Tables rows={profileData?.numberOfTotalBusesData} />
