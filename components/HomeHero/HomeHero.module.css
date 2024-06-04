@@ -1,18 +1,11 @@
 .tgsrtcServing {
-  width: 700px;
+  width: 85.5%;
   font-size: var(--font-size-63xl);
-  line-height: normal;
+  line-height: 100px;
   font-weight: 600;
   font-family: var(--font-playfair-display);
   color: var(--primary-green);
   text-align: center;
-}
-
-@media screen and (max-width: 750px) {
-  .tgsrtcServing {
-    font-size: 48px;
-    width: 319px;
-  }
 }
 
 .homeHero {
@@ -27,8 +20,47 @@
   font-size: var(--font-size-63xl);
   color: var(--primary-green);
   font-family: var(--font-playfair-display);
-  background-image: url(/home-banner-image.png);
+  background-image: url("/home-banner-image.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.titleSection{
+  background-image: url("/white-clouds.png");
+  background-size: cover;
+  width: 67.5%;
+  height: 28vw;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 1023px) {
+  .tgsrtcServing {
+    font-size: 58px;
+    width: 400px;
+    line-height: 60px;
+  }
+  .titleSection{
+    width: 500px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .tgsrtcServing {
+    font-size: 48px;
+    width: 400px;
+    line-height: normal;
+    max-width: 246px;
+    margin: 0;
+    padding: 100px 0;
+  }
+  .titleSection{
+    background-image: url("/white-clouds-mobile.png");
+    width: 100%;
+    height: unset;
+  }
+  .homeHero{
+    background-image: url("/home-banner-image-mobile.png");
+  }
 }

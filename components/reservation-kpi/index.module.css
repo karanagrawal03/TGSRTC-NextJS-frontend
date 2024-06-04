@@ -3,7 +3,7 @@
   align-self: stretch;
   background-color: var(--support-white);
   flex-direction: column;
-  padding: var(--padding-60xl) 0 var(--padding-257xl);
+  padding: var(--padding-60xl) 0;
   z-index: 1;
   text-align: left;
   font-size: var(--font-size-63xl);

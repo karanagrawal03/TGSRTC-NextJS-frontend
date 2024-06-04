@@ -1,4 +1,5 @@
 import { ISpecialBusesOffers } from "../../constants/reservation-booking-service-ho";
+import { UPLOADS_BASE_URL } from "../../services/service";
 import styles from "./index.module.css";
 interface SpecialBusesOffersCardProps {
   item: ISpecialBusesOffers;
@@ -8,7 +9,7 @@ const SpecialBusesOffersCard : React.FC<SpecialBusesOffersCardProps> = ({ item }
     <>
       <div className={styles.specialBusContainer}>
         <div className={styles.image}>
-          <img className={styles.img} loading="lazy" alt="special bus offer image" src={item?.image} />
+          <img className={styles.img} loading="lazy" alt="special bus offer image" src={UPLOADS_BASE_URL + item?.image} />
         </div>
         <div className={styles.specialBusDesc}>
           <div className={styles.route}>
