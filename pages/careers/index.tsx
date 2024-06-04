@@ -29,9 +29,6 @@ const Careers = () => {
                         : <></>}
                 </div>
             </section>
-            <section>
-
-            </section>
         </div>
     )
 }
