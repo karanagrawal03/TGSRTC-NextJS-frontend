@@ -42,7 +42,7 @@ const ContactUs = () => {
          </section>
          <section className={styles.otherServices}>
             <div className={styles.otherServiceTitle}>
-               Contact Details of Other Services
+               {data?.otherServicesTitle}
             </div>
             <div className={styles.accordion}>
                <ol className={styles.accordianList}>
