@@ -11,15 +11,14 @@ const ContactUs = () => {
    const handleChange = (index: number) => {
       setExpandedIndex((prevIndex) => (prevIndex === index ? null : index));
    };
-useEffect(()=>{
-doFetch("/contact-uses?populate=*")
-},[])
-console.log(UPLOADS_BASE_URL+data?.heroBackgroundImageWeb?.data?.attributes?.url)
+   useEffect(() => {
+      doFetch("/contact-uses?populate=*")
+   }, [])
    return (
       <div className={styles.contactUs}>
          <section className={styles.heroSection}>
-            <img className={styles.heroBackgroundImageWeb} src={UPLOADS_BASE_URL+data?.heroBackgroundImageWeb?.data?.attributes?.url}></img>
-            <img className={styles.heroBackgroundImageMobile} src={UPLOADS_BASE_URL+data?.heroBackgroundImageMobile?.data?.attributes?.url}></img>
+            <img className={styles.heroBackgroundImageWeb} src={UPLOADS_BASE_URL + data?.heroBackgroundImageWeb?.data?.attributes?.url}></img>
+            <img className={styles.heroBackgroundImageMobile} src={UPLOADS_BASE_URL + data?.heroBackgroundImageMobile?.data?.attributes?.url}></img>
             <div className={styles.contactUsContent}>
                <div className={styles.contactContentLeft}>
                   <div className={styles.contactUsTitle}>{data?.heroTitle}</div>
@@ -27,11 +26,11 @@ console.log(UPLOADS_BASE_URL+data?.heroBackgroundImageWeb?.data?.attributes?.url
 
                   <div className={styles.contactUsDetails}>
                      {
-                        data?.contactDetails?.map((ele:any,index:number) => {
+                        data?.contactDetails?.map((ele: any, index: number) => {
                            return (<>
                               <div className={styles.contactInfo} key={index}>
                                  <img src={ele?.image} className={styles.contactImg}></img>
-                                 <div>{ele?.description} {ele.type !=="" ?  "-" : ""}{ele.type}</div>
+                                 <div>{ele?.description} {ele.type !== "" ? "-" : ""}{ele.type}</div>
                               </div>
                            </>)
                         })

@@ -22,50 +22,51 @@
 .contactUsContent {
     display: flex;
     flex-direction: row;
-    gap: 75px;
+    gap: var(--gap-75xs);
     position: absolute;
     top: 67px;
     left: 100px;
     right: 101px;
+    bottom: 80px;
 }
 
 .contactContentLeft {
-    padding-top: 33px;
- padding-bottom: 33px;
+    padding-top: var(--padding-14xl);
+    padding-bottom: var(--padding-14xl);
     width: 50%;
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
 .contactUsTitle {
-    font-family: Playfair Display;
-    font-size: 72px;
+    font-family: var(--font-playfair-display);
+    font-size: var(--font-size-53x);
     font-weight: 600;
     line-height: 82px;
     text-align: left;
-    color: #fff;
-    margin-bottom: 40px;
+    color: var(--support-white);
+    margin-bottom: var(--gap-21xl);
 }
 
 .contactUsDetails {
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    font-family: Montserrat;
-    font-size: 20px;
+    gap: var(--padding-xs);
+    font-family: var(--font-montserrat);
+    font-size: var(--font-size-xl);
     line-height: 32px;
     font-weight: 500;
     text-align: left;
-    color: #fff;
+    color: var(--support-white);
     margin-top: 24px;
 }
 
 .contactInfo {
     display: flex;
     flex-direction: row;
-    gap: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
+    gap: var(--gap-5xs);
+    padding-left: var(--padding-base);
+    padding-right: var(--padding-base);
 }
 
 .contactImg {
@@ -74,290 +75,341 @@
 }
 
 .otherServiceTitle {
-    font-family: Playfair Display;
-    font-size: 24px;
+    font-family: var(--font-playfair-display);
+    font-size: var(--font-size-5xl);
     font-weight: 600;
     line-height: 31.99px;
     text-align: left;
-    color: #CD342B;
+    color: var(--primary-red);
 }
 
 .otherServices {
-    padding: 82px 100px 100px 100px;
+    padding: var(--padding-xs) var(--gap-81xl) var(--gap-81xl) var(--gap-81xl);
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: var(--gap-13xl);
 }
 
 .accordianList {
     margin: 0px;
     padding: 0px;
 }
+
 .contactInfo:last-child {
-    padding-left: 16px;
-    padding-right: 16px;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    border-radius: 6px;
-    background: #3E3E3E4D;
-  }
-  .containerClassName {
+    padding-left: var(--padding-base);
+    padding-right: var(--padding-base);
+    padding-top: var(--padding-xs);
+    padding-bottom: var(--padding-xs);
+    border-radius: var(--br-7xs);
+    background: var(--color-background);
+}
+
+.containerClassName {
     border: none !important;
-    box-shadow: 0px 4px 10px 0px #E8E8E8;
-    padding-left: 54px !important;
-    padding-right: 54px !important;
-    padding-bottom: 24px !important;
-  }
-  .headingStyles {
+    box-shadow: var(--card-shadow);
+    padding-left: var(--padding-35xl) !important;
+    padding-right: var(--padding-35xl) !important;
+    padding-bottom: var(--padding-5xl) !important;
+}
+
+.headingStyles {
     font-family: var(--font-montserrat);
     font-weight: 500;
     font-size: var(--font-size-xl);
     line-height: 26px;
     color: var(--text-black);
-  }
+}
+
 @media screen and (max-width:1366px) {
-.heroSection {
-    max-height: 675px;
-    height: 100%;
+    .heroSection {
+        max-height: 675px;
+        height: 100%;
+    }
 }
-}
+
 @media screen and (max-width:1365px) {
     .contactUsContent {
         top: 40px;
         left: 80px;
         right: 80px;
-        bottom: 24px;
-        gap: 24px;
+        gap: var(--gap-5xl);
     }
 
 }
+
 @media screen and (max-width:1200px) {
-  .contactUsTitle{
-    font-size: 52px;
-    line-height: 62px;
-    margin-bottom: 35px;
-  }
-  .contactUsDetails{
-    font-size: 18px;
-    line-height: 22px;
-  }
-  .contactUsContent{
-    right: 0px;
-  }
-    .otherServiceTitle{
-        font-size: 22px;
+    .contactUsTitle {
+        font-size: var(--font-size-52xs);
+        line-height: 62px;
+        margin-bottom: 35px;
     }
+
+    .contactUsDetails {
+        font-size: var(--font-size-lg);
+        line-height: 22px;
+    }
+
+    .otherServiceTitle {
+        font-size: var(--font-size-3xl);
+    }
+
     .contactUsContent {
-        top:35px
+        top: 30px;
+        right: -35px;
+        bottom: 30px;
     }
 }
-@media screen and (max-width:1024px) {
-    .contactUsTitle{
-      font-size: 48px;
-      line-height: 52px;
-      margin-bottom: 25px;
-    }
-    .contactUsDetails{
-      font-size: 16px;
-      line-height: 22px;
-    }
-    .contactUsContent{
-      right: 0px;
-      top:35px
 
+@media screen and (max-width:1024px) {
+    .contactUsTitle {
+        font-size: var(--font-size-29xl);
+        line-height: 52px;
+        margin-bottom: 25px;
     }
-      .contactContentLeft{
-        padding-top: 20px;
-        padding-bottom: 20px;
-      }
-      .headingStyles{
-        font-size: 18px;
-      }
-  }
-  @media screen and (max-width:1000px) {
-    .contactUsTitle{
-      font-size: 36px;
-      line-height: 42px;
-      margin-bottom: 20px;
+
+    .contactUsDetails {
+        font-size: var(--font-size-16);
+        line-height: 22px;
     }
-    .contactUsDetails{
-      font-size: 16px;
-      line-height: 22px;
+
+    .contactUsContent {
+        right: 0px;
+        top: 35px
     }
-    .contactUsContent{
-      right: 0px;
-      top: 10px;
+
+    .contactContentLeft {
+        padding-top: var(--padding-xl);
+        padding-bottom: var(--padding-xl);
     }
-      .contactContentLeft{
-        padding-top: 18px;
-        padding-bottom: 18px;
-      }
-      .headingStyles{
-        font-size: 18px;
-      }
-  }
-  @media screen and (max-width:880px) {
-    .contactUsContent{
-        top:5px;
+
+    .headingStyles {
+        font-size: var(--font-size-lg);
     }
-    .contactContentLeft{
-        padding-top: 14px;
-        padding-bottom: 14px;
+}
+
+@media screen and (max-width:1000px) {
+    .contactUsTitle {
+        font-size: var(--font-size-36xs);
+        line-height: 42px;
+        margin-bottom: 20px;
     }
-    .contactUsTitle{
-        font-size: 28px;
+
+    .contactUsDetails {
+        font-size: var(--font-size-base);
+        line-height: 22px;
+    }
+
+    .contactUsContent {
+        right: 0px;
+        top: 10px;
+        bottom: 20px;
+    }
+
+    .contactContentLeft {
+        padding-top: var(--padding-lg);
+        padding-bottom: var(--padding-lg);
+    }
+
+    .headingStyles {
+        font-size: var(--font-size-lg);
+    }
+}
+
+@media screen and (max-width:880px) {
+    .contactUsContent {
+        top: 5px;
+        bottom: 20px;
+    }
+
+    .contactContentLeft {
+        padding-top: var(--padding-sm);
+        padding-bottom: var(--padding-sm);
+    }
+
+    .contactUsTitle {
+        font-size: var(--font-size-9xl);
         margin-bottom: 18px;
     }
-    .contactUsDetails{
-        font-size: 14px;
+
+    .contactUsDetails {
+        font-size: var(--font-size-sm);
     }
-    .contactImg{
+
+    .contactImg {
         height: 20px;
         width: 20px;
     }
-    .contactInfo:last-child{
-        padding-left: 12px;
-        padding-right: 12px;
-        padding-top: 8px;
-        padding-bottom: 8px;
+
+    .contactInfo:last-child {
+        padding-left: var(--padding-xs);
+        padding-right: var(--padding-xs);
+        padding-top: var(--padding-5xs);
+        padding-bottom: var(--padding-5xs);
     }
-  }
-  @media screen and (max-width:800px) {
-    .contactUsContent{
-        left: 45px;
+}
+
+@media screen and (max-width:800px) {
+    .contactUsContent {
+        left: 55px;
     }
-    .heroBackgroundImageWeb{
+
+    .heroBackgroundImageWeb {
         height: 450px;
     }
-  }
-  @media screen and (max-width:650px) {
-    .contactUsContent{
+}
+
+@media screen and (max-width:650px) {
+    .contactUsContent {
         right: 20px;
-        top:15px;
+        top: 15px;
         left: 20px;
     }
-    .heroBackgroundImageWeb{
+
+    .heroBackgroundImageWeb {
         height: 450px;
     }
-  }
+}
+
 @media screen and (max-width: 599px) {
-    .heroSection{
-        max-height: 670px;
+    .heroSection {
+        max-height: none;
     }
+
     .heroBackgroundImageWeb {
         display: none;
     }
 
     .heroBackgroundImageMobile {
         display: block;
+        height: 940px;
     }
 
     .contactUsContent {
         display: flex;
         flex-direction: column;
-        top: 60px;
+        top: 40px;
         left: 24px;
         right: 24px;
-        gap: 24px;
+        gap: var(--gap-3xs);
     }
+
     .contactContentLeft {
         width: 100%;
     }
 
     .contactUsTitle {
-        font-Size: 46px;
+        font-Size: var(--font-size-27xl);
         line-height: 61.32px;
     }
 
     .contactUsDetails {
         width: 100%;
-        font-Size: 16px;
+        font-Size: var(--font-size-base);
         line-height: 26px;
     }
-    .contactInfo{
+
+    .contactInfo {
         display: flex;
         flex-direction: row;
-        font-size: 14px;
+        font-size: var(--font-size-sm);
         line-height: 26px;
-        padding-left: 16px;
-        padding-right: 16px;
+        padding-left: var(--padding-base);
+        padding-right: var(--padding-base);
     }
-    .contactImg{
+
+    .contactImg {
         height: 20px;
         width: 20px;
     }
-    .otherServices{
-        padding: 60px 24px 60px 24px;
+
+    .otherServices {
+        padding: var(--padding-41xl) var(--padding-5xl) var(--padding-41xl) var(--padding-5xl);
     }
+
     .contactInfo:last-child {
-        padding-left: 16px;
-        padding-right: 16px;
-        padding-top: 12px;
-        padding-bottom: 12px;
-        border-radius: 6px;
-        background: #3E3E3E4D;
-      }
+        padding-left: var(--padding-base);
+        padding-right: var(--padding-base);
+        padding-top: var(--padding-xs);
+        padding-bottom: var(--padding-xs);
+        border-radius: var(--br-7xs);
+        background: var(--color-background);
+    }
 }
 
 @media screen and (max-width:430px) {
+    .heroBackgroundImageMobile {
+        height: 980px;
+    }
 
+    .contactUsContent {
+        top: 20px
+    }
 }
 
 @media screen and (max-width:360px) {
-    .heroSection{
+    .heroSection {
         max-height: none;
     }
+
     .heroBackgroundImageWeb {
         display: none;
     }
 
     .heroBackgroundImageMobile {
         display: block;
+        height: 100%;
     }
 
     .contactUsContent {
         display: flex;
         flex-direction: column;
-        top: 60px;
+        top: 45px;
         left: 24px;
         right: 24px;
-        gap: 24px;
+        gap: var(--gap-5xl);
     }
+
     .contactContentLeft {
         width: 100%;
+        padding: 0px;
     }
 
     .contactUsTitle {
-        font-Size: 46px;
+        font-Size: var(--font-size-27xl);
         line-height: 61.32px;
     }
 
     .contactUsDetails {
         width: 100%;
-        font-Size: 16px;
+        font-Size: var(--font-size-base);
         line-height: 26px;
     }
-    .contactInfo{
+
+    .contactInfo {
         display: flex;
         flex-direction: row;
-        font-size: 14px;
+        font-size: var(--font-size-sm);
         line-height: 26px;
-        padding-left: 16px;
-        padding-right: 16px;
+        padding-left: var(--padding-base);
+        padding-right: var(--padding-base);
     }
-    .contactImg{
+
+    .contactImg {
         height: 20px;
         width: 20px;
     }
-    .otherServices{
-        padding: 60px 24px 60px 24px;
+
+    .otherServices {
+        padding: var(--padding-41xl) var(--padding-5xl) var(--padding-41xl) var(--padding-5xl);
     }
+
     .contactInfo:last-child {
-        padding-left: 16px;
-        padding-right: 16px;
-        padding-top: 12px;
-        padding-bottom: 12px;
-        border-radius: 6px;
-        background: #3E3E3E4D;
-      }
+        padding-left: var(--padding-base);
+        padding-right: var(--padding-base);
+        padding-top: var(--padding-xs);
+        padding-bottom: var(--padding-xs);
+        border-radius: var(--br-7xs);
+        background: var(--color-background);
+    }
+
 }
