@@ -61,6 +61,11 @@
   line-height: 21px;
   color: var(--text-grey-body-text);
   white-space: pre-wrap;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .texts {
   align-self: stretch;
