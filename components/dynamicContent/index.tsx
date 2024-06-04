@@ -14,20 +14,3 @@ const DynamicContent=({ number, ContentComponent, backgroundColor }:DynamicConte
   )
 }
 export default DynamicContent;
-// usage example
-// const [items, setItems] = useState<Item[]>([
-//   { ContentComponent: ChildComponent, backgroundColor: '#FFCCCC' },
-//   { ContentComponent: ChildComponent, backgroundColor: '#CCFFCC' },
-//   { ContentComponent: ChildComponent, backgroundColor: '#CCCCFF' },
-
-// ]);
-//  <div className={styles.app}>
-//       {items.map((item, index) => (
-//         <DynamicContent
-//           key={index}
-//           number={index + 1}
-//           ContentComponent={item.ContentComponent}
-//           backgroundColor={item.backgroundColor}
-//         />
-//       ))}
-// </div> 
