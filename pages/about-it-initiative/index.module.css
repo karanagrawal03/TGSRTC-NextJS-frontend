@@ -16,7 +16,7 @@
 }
 
 .heroSectionContent {
-    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: var(--text-shadow);
     z-index: 1;
     position: absolute;
     top: 102px;
@@ -203,7 +203,7 @@
     }
 
     .introduction {
-        padding: var(--padding-41xl) 40.09px var(--padding-41xl) 40.09px;
+        padding: var(--padding-41xl) var(--padding-409xs) var(--padding-41xl) var(--padding-409xs);
     }
 
     .introHeading {
@@ -245,7 +245,7 @@
     }
 
     .introduction {
-        padding: var(--padding-41xl) 40.09px var(--padding-41xl) 40.09px;
+        padding: var(--padding-41xl) var(--padding-409xs) var(--padding-41xl) var(--padding-409xs);
     }
 
     .introHeading {

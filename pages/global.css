@@ -286,6 +286,7 @@ a {
   --padding-82xs:82px;
   --padding-47xl:64px;
   --padding-70xl:70px;
+  --padding-409xs:40.09px;
 
   /* Border radiuses */
   --br-7xs: 6px;
@@ -301,6 +302,7 @@ a {
   --br-xxl:400px;
 
   /* Effects */
+  --text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
   --card: 0px 4px 20px rgba(0, 0, 0, 0.1);
   --card-shadow: 0px 4px 10px 0px #E8E8E8;
   --card-shadow1:0px 4px 4px 0px #00000040;
