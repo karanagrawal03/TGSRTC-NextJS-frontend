@@ -5,28 +5,37 @@ import {
   BUS_CONTRACT_RATES_TAGLINE,
 } from "../../constants";
 import TendersComponent from "../../components/tenders-component";
+import { useEffect } from "react";
+import useFetch, { UPLOADS_BASE_URL } from "../../services/service";
 
 const Tenders = () => {
+  const { data, doFetch } = useFetch();
+  useEffect(() => {
+    doFetch(`/tenders?populate=*`);
+  }, []);
+  const heroSection = data?.heroSection[0];
   return (
     <section className={styles.reservationHeroTourism}>
       <img
         className={styles.bgIcon}
         loading="lazy"
         alt="contract-rates-banner"
-        src="/contract-rates-banner-web.png"
+        src={UPLOADS_BASE_URL + heroSection?.heroSectionWebImage}
       />
       <img
         className={styles.bgIconMobile}
         loading="lazy"
         alt="contract-rates-banner"
-        src="/contract-rates-banner-mobile.png"
+        src={UPLOADS_BASE_URL + heroSection?.heroSectionMobileImage}
       />
       <div className={styles.contentWrapper}>
-        <h1 className={styles.tourism}>{BUS_CONTRACT_RATES}</h1>
-        <p className={styles.tgsrtcIsHappy}>{BUS_CONTRACT_RATES_TAGLINE}</p>
+        <h1 className={styles.tourism}>{heroSection?.heroSectionHeading}</h1>
+        <p className={styles.tgsrtcIsHappy}>
+          {heroSection?.heroSectionSubHeading}
+        </p>
       </div>
 
-      <TendersComponent />
+      <TendersComponent TotalData={data} />
     </section>
   );
 };

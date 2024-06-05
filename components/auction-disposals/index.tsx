@@ -1,24 +1,21 @@
 import Tables from "../tables";
-import styles from './index.module.css'
-const AuctionDisposals = () => {
-  const autionsdiopsals = [
-    {
-      "S.No": "1.",
-      Notification:
-        "Notification for Scrap Vehicles/Power vehicles/Bus Bodies/materials /Tyres/Tyre material/tubes/Flaps/Rubber buffing power/Machinery/Obsolete surplus spare parts/ Serviceable Major Units etc., available at Karimnagar",
-      "Last Date": "27.03.2024",
-    },
-    {
-      "S.No": "2.",
-      Notification:
-        "Notification for Scrap Vehicles/Power vehicles/Bus Bodies/materials /Tyres/Tyre material/tubes/Flaps/Rubber buffing power/Machinery/Obsolete surplus spare parts/ Serviceable Major Units etc., available at HZ/Uppal",
-      "Last Date": "20.03.2024",
-    },
-  ];
+import styles from "./index.module.css";
+interface AuctionDisposalData {
+  auctionsData: any;
+  auctionsText: String;
+}
+const AuctionDisposals: React.FC<AuctionDisposalData> = ({
+  auctionsData,
+  auctionsText,
+}) => {
   return (
     <div className={styles.container}>
-    <p className={styles.headingText}>OutSourcing Contracts</p>
-      <Tables rows={autionsdiopsals} />
+      <p className={styles.headingText}>{auctionsText}</p>
+      <Tables
+        rows={auctionsData}
+        rowClassName={styles.rowClass}
+        containerClassName={styles.tableContainer}
+      />
     </div>
   );
 };

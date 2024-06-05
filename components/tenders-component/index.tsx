@@ -13,96 +13,183 @@ import ElectricBuses from "../electric-buses";
 import CivilWorks from "../civil-works";
 import HireBus from "../hire-bus";
 import ITPrjects from "../it-projects";
-
-const TendersComponent = () => {
+import { SelectChangeEvent } from "@mui/material";
+interface TendersData {
+  TotalData: any;
+}
+const TendersComponent: React.FC<TendersData> = ({ TotalData }) => {
+  console.log(TotalData);
   const [selectedTender, setSelectedTender] = useState(0);
-  const [filteredComponent, setFilteredComponent] = useState(null);
-
   const handleClick = (index: number) => {
     setSelectedTender(index);
-    setFilteredComponent(null);
   };
 
-  const handleSelectChange = (event: React.ChangeEvent<{ value: unknown }>) => {
+  const handleSelectChange = (event: SelectChangeEvent<number>) => {
     const index = event.target.value as number;
     setSelectedTender(index);
-    setFilteredComponent(null);
   };
 
   const components = [
-    { name: "OutSoursingControls", component: <OutSoursingControls /> },
-    { name: "OpenLandParcelCease", component: <OpenLandParcelCease /> },
-    { name: "ProcrumentAndSupplies", component: <ProcrumentAndSupplies /> },
-    { name: "OtherContracts", component: <OtherContracts /> },
-    { name: "StallsAndShops", component: <StallsAndShops /> },
-    { name: "AutionsAndDisposals", component: <AuctionDisposals /> },
-    { name: "Advertisemnets", component: <Adversiments /> },
-    { name: "Chassis&Bodies", component: <ChassisAndBodies /> },
-    { name: "SoftwareAndItProjects", component: <ITPrjects /> },
-    { name: "ElectricBuses", component: <ElectricBuses /> },
-    { name: "CivilEngineeringWorks", component: <CivilWorks /> },
-    { name: "HireBuses", component: <HireBus /> },
-  ];
+    {
+      name: "OutSoursingControls",
+      component: (
+        <OutSoursingControls
+          outSourcingData={TotalData?.outSourcingContractsData}
+          outSourcingContractText={TotalData?.outSourcingContractsText}
+        />
+      ),
+    },
 
-  const data = [
-    "Out Sourcing Controls",
-    "Open Land Parcel on Lease",
-    "Procurement & Supplies",
-    "Stalls & Shops for Rent",
-    "Software and IT Products",
-    "Advertisements and Fuel Outlets",
-    "Auctions & Disposals",
-    "Build Operate & Transfer (BOT)",
-    "Chassis & Bodies",
-    "Electric Buses",
-    "Civil Engineering Works",
-    "Hire Buses",
-    "Other Contracts",
+    {
+      name: "OpenLandParcelCease",
+      component: (
+        <OpenLandParcelCease
+          openLandParcelOnLeaseText={TotalData?.openLandParcelOnLeaseText}
+          openLandParcelOnLeaseData={TotalData?.openLandParcelOnLeaseData}
+        />
+      ),
+    },
+    {
+      name: "ProcrumentAndSupplies",
+      component: (
+        <ProcrumentAndSupplies
+          procruementAndSuppliesText={TotalData?.procruementAndSuppliesText}
+          procruementAndSuppliesData={TotalData?.procruementAndSuppliesData}
+        />
+      ),
+    },
+    {
+      name: "StallsAndShops",
+      component: (
+        <StallsAndShops
+          stallsAndShopsText={TotalData?.stallsAndShopsText}
+          stallsAndShopsData={TotalData?.stallsAndShopsData}
+        />
+      ),
+    },
+    {
+      name: "SoftwareAndItProjects",
+      component: (
+        <ITPrjects
+          ITProductsData={TotalData?.ITProductsData}
+          ITProductsText={TotalData?.ITProductsText}
+        />
+      ),
+    },
+    {
+      name: "Advertisemnets",
+      component: (
+        <Adversiments
+          advertisementsAndFuelsText={TotalData?.advertisementsAndFuelsText}
+          advertisementsAndFuelsData={TotalData?.advertisementsAndFuelsData}
+        />
+      ),
+    },
+    {
+      name: "AutionsAndDisposals",
+      component: (
+        <AuctionDisposals
+          auctionsText={TotalData?.auctionsText}
+          auctionsData={TotalData?.auctionsData}
+        />
+      ),
+    },
+    {
+      name: "Chassis&Bodies",
+      component: (
+        <ChassisAndBodies
+          chassisBodiesText={TotalData?.chassisBodiesText}
+          chassisBodiesData={TotalData?.chassisBodiesData}
+        />
+      ),
+    },
+    {
+      name: "ElectricBuses",
+      component: (
+        <ElectricBuses
+          electricBusesText={TotalData?.electricBusesText}
+          electricBusesData={TotalData?.electricBusesData}
+        />
+      ),
+    },
+
+    {
+      name: "CivilEngineeringWorks",
+      component: (
+        <CivilWorks
+          civilWorksText={TotalData?.civilWorksText}
+          civilWorksData={TotalData?.civilWorksData}
+        />
+      ),
+    },
+
+    {
+      name: "HireBuses",
+      component: (
+        <HireBus
+          hireBusData={TotalData?.hireBusData}
+          hireBusText={TotalData?.hireBusText}
+        />
+      ),
+    },
+    {
+      name: "OtherContracts",
+      component: (
+        <OtherContracts
+          otherContractsData={TotalData?.otherContractsData}
+          otherContractsText={TotalData?.otherContractsText}
+        />
+      ),
+    },
   ];
 
   return (
     <div className={styles.container}>
-      <div className={styles.tendersTab}>
-        {data.map((e, index) => (
-          <p
-            key={index}
-            className={`${styles.tenderText} ${
-              selectedTender === index ? styles.selected : ""
-            }`}
-            onClick={() => handleClick(index)}
-          >
-            {e}
-          </p>
-        ))}
+      <div className={styles.innerContainer}>
+        <div className={styles.tendersTab}>
+          {TotalData?.tendersTotalArray.map((e: any, index: number) => (
+            <p
+              key={index}
+              className={`${styles.tenderText} ${
+                selectedTender === index ? styles.selected : ""
+              }`}
+              onClick={() => handleClick(index)}
+            >
+              {e}
+            </p>
+          ))}
+        </div>
+        <div className={styles.muiForm}>
+          <FormControl fullWidth>
+            <InputLabel id=""></InputLabel>
+            <Select
+              labelId=""
+              id=""
+              value={selectedTender}
+              onChange={handleSelectChange}
+              label=""
+              sx={{
+                borderRadius: "6px",
+                fontFamily: "var(--font-playfair-display)",
+                fontSize: 16,
+                fontWeight: 500,
+                backgroundColor: "#FFFFFF",
+                textAlign: "left",
+                boxShadow: "0px 4px 10px 0px #E8E8E8",
+              }}
+            >
+              {TotalData?.tendersTotalArray.map(
+                (option: string, index: number) => (
+                  <MenuItem key={index} value={index}>
+                    {option}
+                  </MenuItem>
+                )
+              )}
+            </Select>
+          </FormControl>
+        </div>
+        {components[selectedTender]?.component}
       </div>
-      <div className={styles.muiForm}>
-        <FormControl fullWidth>
-          <InputLabel id="filter-label">Filter</InputLabel>
-          <Select
-            labelId="filter-label"
-            id="filter"
-            value={selectedTender}
-            onChange={handleSelectChange}
-            label="Filter"
-            sx={{
-              borderRadius: "6px",
-              fontFamily: "var(--font-playfair-display)",
-              fontSize: 16,
-              fontWeight: 500,
-              backgroundColor: "#FFFFFF",
-              textAlign: "left",
-              boxShadow: "0px 4px 10px 0px #E8E8E8",
-            }}
-          >
-            {data.map((option, index) => (
-              <MenuItem key={index} value={index}>
-                {option}
-              </MenuItem>
-            ))}
-          </Select>
-        </FormControl>
-      </div>
-      {components[selectedTender]?.component}
     </div>
   );
 };
