@@ -62,7 +62,9 @@ const CustomTable: React.FC<TableProps> = ({
           {bodyRows.map((row, index) => (
             <TableRow
               key={index}
-              className={index % 2 === 0 ? styles.evenRow : styles.oddRow}
+              className={`${index % 2 === 0 ? styles.evenRow : styles.oddRow} ${
+                styles.additionalClassName
+              }`}
             >
               {Object.keys(row).map((key) => (
                 <TableCell

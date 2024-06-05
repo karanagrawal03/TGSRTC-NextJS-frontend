@@ -27,7 +27,7 @@
 }
 
 .actionButton {
-  display: none;
+  visibility: hidden;
   border: none;
   background: none;
   color: var(--primary-green);
@@ -37,6 +37,7 @@
   font-size: var(--font-size-sm);
 }
 
-.tableCell:hover .actionButton {
-  display: inline;
+.additionalClassName:hover .actionButton {
+  visibility: visible;
+  padding: 0px;
 }
