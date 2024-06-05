@@ -20,7 +20,7 @@
     z-index: 1;
     position: absolute;
     top: 102px;
-    left: 99px;
+    left: 96px;
     display: flex;
     flex-direction: column;
     gap: var(--gap-sm);
