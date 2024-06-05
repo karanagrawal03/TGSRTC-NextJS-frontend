@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from "./index.module.css";
 import DynamicContent from '../dynamicContent';
-import ItInitiativeSection from '../itInitiativesection';
+import AboutInitiative from '../aboutInitiative';
 
 interface ContentSection {
     title: string;
@@ -22,7 +22,7 @@ const AboutItIntiativeContent = ({ data }: { data: Data }) => {
                 <DynamicContent
                     key={index}
                     number={index + 1}
-                    ContentComponent={() => <ItInitiativeSection section={section} />} 
+                    ContentComponent={() => <AboutInitiative section={section} />} 
                     backgroundColor={section.backgroundColor}
                     itemContentStyles={styles.itemContent}
                     sequenceStyles={styles.sequenceStyles}

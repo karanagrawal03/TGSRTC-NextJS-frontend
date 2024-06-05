@@ -18,7 +18,7 @@ const AboutInitiative: React.FC<{ section: ContentSection }> = ({ section }) => 
     return (
         <div className={styles.container}>
             <div className={styles.heading}>{section.title}</div>
-            {section.content.map((item, index) => (
+            {section?.content.map((item, index) => (
                 <div className={styles.content} key={index}>{item}</div>
             ))}
             {section.lists?.map((item, index) => (
@@ -27,7 +27,7 @@ const AboutInitiative: React.FC<{ section: ContentSection }> = ({ section }) => 
                     <BulletPoints items={item.listContent} containerClassName={styles.listStyles} dynamicStyles={styles.list} />
                 </div>
             ))}
-            {section.bottomContent?.map((item, index) => (
+            {section?.bottomContent?.map((item, index) => (
                 <div className={styles.content} key={index}>{item}</div>
             ))}
         </div>
