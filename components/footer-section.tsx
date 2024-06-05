@@ -93,7 +93,7 @@ const FooterSection: NextPage<FooterSectionType> = ({
           <a className={styles.rtiAct2005} href={RTI_ACT_LINK}>{RTI_ACT}</a>
           <a className={styles.roadSafety} href={ROAD_SAFETY_LINK}>{ROAD_SAFETY}</a>
           <a className={styles.privacyPolicies} href={PRIVACY_POLICIES_LINK}>{PRIVACY_POLICIES}</a>
-          <a className={styles.feedback} href={FEEDBACK_LINK}>{FEEDBACK}</a>
+          <a className={styles.feedback} href={CONTACT_US_LINK}>{FEEDBACK}</a>
         </div>
         <div className={styles.faqsSection}>
           <b className={styles.faqs}>{FAQS}</b>

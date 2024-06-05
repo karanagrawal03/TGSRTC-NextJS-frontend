@@ -90,6 +90,7 @@
   font-weight: 500;
   font-family: inherit;
   white-space: nowrap;
+  color: var(--text-black);
 }
 .phone {
   display: flex;

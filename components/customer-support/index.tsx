@@ -30,7 +30,7 @@ const CustomerSupport:NextPage<CustomerSupportType>=({customerSupportWebImage,cu
               <div className={styles.emailPhone}>
                 <div className={styles.email}>
                   <img className={styles.emailIcon} alt="icons image" src="/icons-12.svg" loading="lazy"/>
-                  <p className={styles.emailAddress}>{customerSupportEmail}</p>
+                  <a className={styles.emailAddress} href={`${"mailto:"}${customerSupportEmail}`}>{customerSupportEmail}</a>
                 </div>
                 <div className={styles.phone}>
                   <img className={styles.phoneIcon} alt="icons" src="/icons-13.svg" loading="lazy"/>

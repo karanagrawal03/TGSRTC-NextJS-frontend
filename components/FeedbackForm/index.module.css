@@ -68,7 +68,7 @@
   text-align: left;
   color: var(--color-placeholde);
   border-radius: var(--br-7xs);
-  border: 1px solid var(--color-borde);
+  border: 1px solid var(--color-border);
   padding: var(--padding-xs);
   box-sizing: border-box;
 }

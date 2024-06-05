@@ -93,7 +93,7 @@ const BookYourServiceCards: NextPage<BookYourServiceCardType> = ({
       router.push(HOSPITAL_LINK);
     }
   };
-
+  console.log(index,"index")
   return (
     <div className={[styles.cards, className].join(" ")} style={cardsStyle}>
       <div className={styles.infographicContainerWrapper}>
