@@ -50,7 +50,7 @@ const BusPassesFaq = () => {
       <section className={styles.busPassGeneralCommuterPass2}>
         <h2 className={styles.knowMoreAboutContainer}>{data?.faqsHeading}</h2>
         <div className={styles.eachAccordian}>
-          <p  className={styles.typesOfPassesText}>{data?.typesOfPasses}</p>
+          <p className={styles.typesOfPassesText}>{data?.typesOfPasses}</p>
           <ol className={styles.orderedList}>
             {data?.busPassesFaqData.map((e: any, index: number) => (
               <AccordionItem
@@ -63,8 +63,10 @@ const BusPassesFaq = () => {
             ))}
           </ol>
         </div>
-        <div>
-          <p className={styles.typesOfPassesText}>{data?.onConsessionalPassesHeading}</p>
+        <div className={styles.eachAccordian}>
+          <p className={styles.typesOfPassesText}>
+            {data?.onConsessionalPassesHeading}
+          </p>
           <ol className={styles.orderedList}>
             {data?.onConcessionalPasses.map((e: any, index: number) => (
               <AccordionItem

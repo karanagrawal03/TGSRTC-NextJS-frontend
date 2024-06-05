@@ -215,3 +215,9 @@
     padding: 0px 0px 102px;
   }
 }
+@media screen and (min-width: 1920px){
+  .cardsContainer{
+    max-width: 1920px;
+    margin: auto;
+  }
+}

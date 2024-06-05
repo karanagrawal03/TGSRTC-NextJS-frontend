@@ -33,11 +33,20 @@
   color: var(--primary-green);
   cursor: pointer;
   padding: 0;
+  width: 120px;
   font-family: var(--font-montserrat);
   font-size: var(--font-size-sm);
+  font-weight: 600;
 }
-
+.additionalClassName {
+  cursor: pointer;
+}
 .additionalClassName:hover .actionButton {
   visibility: visible;
   padding: 0px;
+}
+@media screen and (max-width: 1280px) {
+  .actionButton {
+    visibility: visible;
+  }
 }

@@ -6,6 +6,7 @@
   font-family: inherit;
   mix-blend-mode: normal;
 }
+
 .busPassOptionsWrapper {
   width: 1158px;
   display: flex;
@@ -75,5 +76,11 @@
 @media screen and (max-width: 599px) {
   .busPassOptions1 {
     font-size: var(--font-size-13xl);
+  }
+}
+@media screen and (min-width: 1920px){
+  .cardsContainer{
+    max-width: 1920px;;
+    margin: 0px auto;
   }
 }

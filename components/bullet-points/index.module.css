@@ -12,6 +12,7 @@
 }
 .link {
   color: var(--text-black);
+  word-break: break-all;
 }
 .link:hover {
   color: var(--primary-red);

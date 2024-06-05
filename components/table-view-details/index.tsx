@@ -16,6 +16,7 @@ interface TableProps {
   columnWidths?: any;
   tableHeadCellStyles?: any;
   tableCellStyles?: any;
+  rowsClassName?: any;
 }
 
 const CustomTable: React.FC<TableProps> = ({
@@ -24,13 +25,14 @@ const CustomTable: React.FC<TableProps> = ({
   columnWidths,
   tableHeadCellStyles,
   tableCellStyles,
+  rowsClassName,
 }) => {
   if (rows?.length === 0) {
     return <div>No data available</div>;
   }
   const headers = rows[0];
   const bodyRows = rows.slice(1);
-
+  console.log(Object.keys(headers));
   return (
     <TableContainer
       className={`${styles.tableContainer} ${containerClassName}`}
@@ -39,7 +41,7 @@ const CustomTable: React.FC<TableProps> = ({
       <Table aria-label="customized table">
         <TableHead>
           <TableRow className={styles.tableHead}>
-            {Object.keys(headers).map((key) => (
+            {Object.keys(headers).map((key, idx) => (
               <TableCell
                 className={`${styles.tableHeadCell} ${
                   tableHeadCellStyles ? tableHeadCellStyles : ""
@@ -49,7 +51,7 @@ const CustomTable: React.FC<TableProps> = ({
                   paddingTop: "10px",
                   paddingBottom: "10px",
                   paddingLeft: "20px",
-                  width: columnWidths ? columnWidths[key] : "auto",
+                  width: columnWidths ? columnWidths[idx] : "auto",
                   color: "#FFFFFF",
                 }}
               >
@@ -64,7 +66,7 @@ const CustomTable: React.FC<TableProps> = ({
               key={index}
               className={`${index % 2 === 0 ? styles.evenRow : styles.oddRow} ${
                 styles.additionalClassName
-              }`}
+              }  ${rowsClassName}`}
             >
               {Object.keys(row).map((key) => (
                 <TableCell
