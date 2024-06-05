@@ -1,20 +1,14 @@
 .multipleContainer {
   text-align: center;
   padding: 24px;
-  /* width: 46%; */
   background-color: white;
   border-radius: 8px;
-  /* max-width: 456px; */
   display: flex;
   gap: var(--gap-base);
   flex-direction: column;
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.10);
 }
 
-.multipleImageSection{
-    /* width: 409px;
-    height: auto; */
-}
 .multipleImage {
   max-width: 100%;
   height: auto;
@@ -33,10 +27,6 @@
     box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.10);
   }
   
-  .singleImageSection{
-      /* width: 905px;
-      height: 316px; */
-  }
   .singleImage {
     max-width: 100%;
     height: auto;

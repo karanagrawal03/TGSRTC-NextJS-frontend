@@ -1,9 +1,9 @@
 import type { NextPage } from "next";
-import styles from "./about-events-awards.module.css";
+import styles from "./index.module.css";
 import { useEffect } from "react";
-import useFetch, { UPLOADS_BASE_URL } from "../services/service";
-import AboutEventsContent from "../components/awards-events-cards";
-import ImageWithCaption from "../components/about-card-image";
+import useFetch, { UPLOADS_BASE_URL } from "../../services/service";
+import AboutEventsContent from "../../components/awards-events-cards";
+import ImageWithCaption from "../../components/about-card-image";
 
 
 
