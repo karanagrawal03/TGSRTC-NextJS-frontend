@@ -32,7 +32,6 @@ const CustomTable: React.FC<TableProps> = ({
   }
   const headers = rows[0];
   const bodyRows = rows.slice(1);
-  console.log(Object.keys(headers));
   return (
     <TableContainer
       className={`${styles.tableContainer} ${containerClassName}`}
