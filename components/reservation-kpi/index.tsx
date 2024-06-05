@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import styles from "./index.module.css";
+import KpiCounter from "../kpi-counter";
 
 export type ReservationKPIsType = {
   kpiData?:any;
@@ -20,7 +21,9 @@ const ReservationKPIs: NextPage<ReservationKPIsType> = ({ kpiData,className = ""
         <>
           <div className={styles.kParent}>
             <div className={styles.kpiHeading}>
-              <span>{kpi.number}</span>
+              <span>
+                <KpiCounter target={kpi.number} decimals={1}/>
+              </span>
               <span className={styles.kpiMetric}>{kpi.metrics}</span>
             </div>
             <div className={styles.kpiLabel}>{kpi.label}</div>

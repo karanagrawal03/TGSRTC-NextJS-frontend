@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import styles from "./index.module.css"
-import Tables from '../../components/tables';
+import CustomTable from '../../components/table-view-details';
 import { columnWidths } from '../../constants/reservation-concession-schemes';
 import useFetch from '../../services/service';
 import { UPLOADS_BASE_URL } from '../../services/service';
@@ -25,7 +25,7 @@ const Careers = () => {
                 <div className={styles.requirementTitle}>{data?.requirementTitle}</div>
                 <div className={styles.requiremenetTable}>
                     {data?.requirementTableData ?
-                        <Tables rows={data?.requirementTableData} containerClassName={styles.tableContainer} columnWidths={columnWidths} tableHeadCellStyles={styles.tableHeadCell} tableCellStyles={styles.tableCell} />
+                        <CustomTable rows={data?.requirementTableData} containerClassName={styles.tableContainer} columnWidths={columnWidths} tableHeadCellStyles={styles.tableHeadCell} tableCellStyles={styles.tableCell} rowsClassName={styles.rowClass} />
                         : <></>}
                 </div>
             </section>

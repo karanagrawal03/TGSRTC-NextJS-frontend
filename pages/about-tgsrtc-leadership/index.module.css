@@ -142,7 +142,7 @@
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 599px) {
   .aboutTsrtcLeadership {
     padding: var(--padding-5xl);
     padding-top: var(--padding-41xl);
