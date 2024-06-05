@@ -1,4 +1,4 @@
-import CustomTable from "../custom-table";
+import CustomTable from "../table-view-details";
 import Tables from "../tables";
 import styles from "./index.module.css";
 interface electricData {
@@ -12,8 +12,11 @@ const ElectricBuses: React.FC<electricData> = ({
   return (
     <div className={styles.container}>
       <p className={styles.headingText}>{electricBusesText}</p>
-      <CustomTable containerClassName={styles.tableContainer}
-        rowsClassName={styles.rowClass} rows={electricBusesData} />
+      <CustomTable
+        containerClassName={styles.tableContainer}
+        rowsClassName={styles.rowClass}
+        rows={electricBusesData}
+      />
     </div>
   );
 };

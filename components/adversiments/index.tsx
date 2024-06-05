@@ -1,4 +1,4 @@
-import CustomTable from "../custom-table";
+import CustomTable from "../table-view-details";
 import Tables from "../tables";
 import styles from "./index.module.css";
 interface AdvertisementsData {
@@ -17,7 +17,6 @@ const Adversiments: React.FC<AdvertisementsData> = ({
         rowsClassName={styles.rowClass}
         rows={advertisementsAndFuelsData}
       />
-    
     </div>
   );
 };

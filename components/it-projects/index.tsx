@@ -1,4 +1,4 @@
-import CustomTable from "../custom-table";
+import CustomTable from "../table-view-details";
 import Tables from "../tables";
 import styles from "./index.module.css";
 interface ITProductsData {
@@ -9,12 +9,14 @@ const ITPrjects: React.FC<ITProductsData> = ({
   ITProductsText,
   ITProductsData,
 }) => {
-
   return (
     <div className={styles.container}>
       <p className={styles.headingText}>{ITProductsText}</p>
-      <CustomTable containerClassName={styles.tableContainer}
-        rowsClassName={styles.rowClass} rows={ITProductsData} />
+      <CustomTable
+        containerClassName={styles.tableContainer}
+        rowsClassName={styles.rowClass}
+        rows={ITProductsData}
+      />
     </div>
   );
 };

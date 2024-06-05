@@ -1,7 +1,7 @@
 import styles from "./index.module.css";
 import { useEffect, useState } from "react";
 import useFetch, { UPLOADS_BASE_URL } from "../../services/service";
-import CustomTable from "../../components/custom-table";
+import CustomTable from "../../components/table-view-details";
 import { NextPage } from "next";
 
 type LogisticContactsType = {
@@ -58,7 +58,6 @@ const LogisticContacts: NextPage<LogisticContactsType> = ({
       <section className={[styles.tableSection, className].join(" ")}>
         <h2 className={styles.title}>{data?.logisticsContactsTitle}</h2>
         <CustomTable rows={data?.logisticsContactsTableData} />
-        
       </section>
     </>
   );

@@ -1,4 +1,4 @@
-import CustomTable from "../custom-table";
+import CustomTable from "../table-view-details";
 import Tables from "../tables";
 import styles from "./index.module.css";
 interface civilData {
@@ -12,8 +12,11 @@ const CivilWorks: React.FC<civilData> = ({
   return (
     <div className={styles.container}>
       <p className={styles.headingText}>{civilWorksText}</p>
-      <CustomTable containerClassName={styles.tableContainer}
-        rowsClassName={styles.rowClass} rows={civilWorksData} />
+      <CustomTable
+        containerClassName={styles.tableContainer}
+        rowsClassName={styles.rowClass}
+        rows={civilWorksData}
+      />
     </div>
   );
 };
