@@ -26,7 +26,6 @@ const LogisticRatesAndTariffsContacts = () => {
 
   return (
     <div className={styles.logisticRatesAndTariffsCon}>
-      {/* <img className={styles.busDust} alt="" src="/bus--dust@2x.png" /> */}
       <section className={styles.logisticHeroRatesTariffC}>
         {width ? (
           <img
@@ -45,9 +44,9 @@ const LogisticRatesAndTariffsContacts = () => {
             loading="lazy"
           />
         )}
-        <div className={styles.tourismContentWrapper}>
-          <h1 className={styles.tourism}>{data?.heroTitle}</h1>
-          <p className={styles.tgsrtcIsHappy}>{data?.heroSubTitle}</p>
+        <div className={styles.logisticsContentWrapper}>
+          <h1 className={styles.heroTitleStyles}>{data?.heroTitle}</h1>
+          <p className={styles.heroSubTitleStyles}>{data?.heroSubTitle}</p>
         </div>
       </section>
       <LogisticBookYourCargoSectionCard
