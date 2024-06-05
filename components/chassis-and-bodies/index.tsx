@@ -9,7 +9,6 @@ const ChassisAndBodies: React.FC<chassisData> = ({
   chassisBodiesData,
   chassisBodiesText,
 }) => {
-  console.log(chassisBodiesText);
   return (
     <div className={styles.container}>
       <p className={styles.headingText}>{chassisBodiesText}</p>

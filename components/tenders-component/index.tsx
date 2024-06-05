@@ -18,7 +18,6 @@ interface TendersData {
   TotalData: any;
 }
 const TendersComponent: React.FC<TendersData> = ({ TotalData }) => {
-  console.log(TotalData);
   const [selectedTender, setSelectedTender] = useState(0);
   const handleClick = (index: number) => {
     setSelectedTender(index);
