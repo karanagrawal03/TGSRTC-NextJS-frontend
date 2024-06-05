@@ -13,7 +13,7 @@ const SiteMap: NextPageSiteMapType = () => {
     window.addEventListener('resize', ()=>{setViewPortWidth(window.innerWidth)});
     doFetch(`/site-maps?populate=*`);
   }, []);
-  console.log(UPLOADS_BASE_URL, data, "site map");
+
   const MainStyles = styled('main')(()=>{
     const maxWidth = 1300432;
     const finalHeight = maxWidth/viewPortWidth
