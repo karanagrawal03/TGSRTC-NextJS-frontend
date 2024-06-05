@@ -39,6 +39,7 @@
 }
 .bulletpoints {
   margin: 0px;
+  padding-left: 16px;
 }
 @media screen and (max-width: 1023px) {
   .container{

@@ -62,6 +62,9 @@
   flex-wrap: wrap;
   gap: var(--gap-11xl);
 }
+.links{
+  color: var(--text-black);
+}
 .phone {
   display: flex;
   flex-direction: row;

@@ -2,12 +2,11 @@ import styles from "./index.module.css";
 import Tables from "../tables";
 
 interface ReservationPointsTableRow {
-  number: string;
-  kms: string;
-  city_ordinary_rs: string;
-  rate_of_pvg_mst_monthly_rs: string;
-  rate_of_exp_mst_monthly_rs: string;
-  title: string;
+  slNum: string;
+  busStation: string;
+  name: string;
+  place: string;
+  cellNum: string;
 }
 
 interface ReservationDetailsOfReservaData {

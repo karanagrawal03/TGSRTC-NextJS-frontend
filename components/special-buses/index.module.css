@@ -15,6 +15,7 @@
   font-family: var(--font-playfair-display);
 }
 .busDust {
+  display: none;
   height: 780px;
   width: 128px;
   position: absolute;

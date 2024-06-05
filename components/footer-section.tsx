@@ -3,7 +3,7 @@ import { useMemo, type CSSProperties } from "react";
 import styles from "./footer-section.module.css";
 import {
   ABOUT_LINK,
-  ABOUT_US,
+  ABOUT,
   BUS_PASSES,
   BUS_PASS_LINK,
   CAREERS,
@@ -85,7 +85,7 @@ const FooterSection: NextPage<FooterSectionType> = ({
           <a className={styles.siteMap} style={siteMapStyle} href={SITE_MAP_LINK}>
             {SITE_MAP}
           </a>
-          <a className={styles.aboutUs} href={ABOUT_LINK}>{ABOUT_US}</a>
+          <a className={styles.aboutUs} href={ABOUT_LINK}>{ABOUT}</a>
           <a className={styles.contactUs} href={CONTACT_US_LINK}>{CONTACT_US}</a>
         </div>
         <div className={styles.informationSection}>

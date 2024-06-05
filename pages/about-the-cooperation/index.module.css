@@ -1,4 +1,16 @@
-
+.reservationHeroTourism {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  max-width: 100%;
+  font-size: var(--font-size-53xl);
+  color: var(--support-white);
+  font-family: var(--font-playfair-display);
+}
 .bgIcon,
 .bgIconMobile {
   width: 100%;
@@ -17,8 +29,8 @@
 }
 .contentWrapper {
   position: absolute;
-  top: 202px;
-  left: 96px;
+  top: 7.5vw;
+  left: 7vw;
   display: flex;
   flex-direction: column;
   width: 599px;
@@ -73,9 +85,9 @@
 }
 @media screen and (max-width: 599px) {
   .contentWrapper {
-    width: 237px;
-    left: 6.4vw;
-    top: 303px;
+    width: 238px;
+    left: 6.6vw;
+    top: 70.5vw;
   }
   .tourism {
     font-size: var(--font-size-42xl);

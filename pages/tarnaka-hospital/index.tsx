@@ -31,7 +31,9 @@ const HospitalTSRTCTarnakaHospita: NextPageHospitalTSRTCTarnakaHospitaType = () 
       <HospitalContact 
         weAreAvailableTitle={data?.weAreAvailableTitle}
         phoneNumber1={data?.phoneNumber1}
+        tgsrtcEmp={data?.tgsrtcEmp}
         phoneNumber2={data?.phoneNumber2}
+        nonTgsrtcEmp={data?.nonTgsrtcEmp}
         hospitalEmail={data?.hospitalEmail}
         bookButton={data?.bookButton}
         doctorsWebImage={data?.doctorsWebImage}

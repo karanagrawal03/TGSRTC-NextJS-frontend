@@ -6,7 +6,9 @@ import { UPLOADS_BASE_URL } from "../../services/service";
 export type HospitalContactType = {
   weAreAvailableTitle: string;
   phoneNumber1:string;
+  tgsrtcEmp:string;
   phoneNumber2:string;
+  nonTgsrtcEmp:string;
   hospitalEmail:string;
   bookButton:string;
   doctorsWebImage:any;
@@ -14,7 +16,7 @@ export type HospitalContactType = {
   className?: string;
 };
 
-const HospitalContact: NextPage<HospitalContactType> = ({weAreAvailableTitle,phoneNumber1,phoneNumber2,hospitalEmail,bookButton,doctorsWebImage,doctorsMobileImage,className = "",}) => {
+const HospitalContact: NextPage<HospitalContactType> = ({weAreAvailableTitle,phoneNumber1,tgsrtcEmp,phoneNumber2,nonTgsrtcEmp,hospitalEmail,bookButton,doctorsWebImage,doctorsMobileImage,className = "",}) => {
   return (
     <section className={[styles.hospitalContact, className].join(" ")}>
       <div className={styles.availability}>
@@ -33,7 +35,8 @@ const HospitalContact: NextPage<HospitalContactType> = ({weAreAvailableTitle,pho
                     src="/icons1.svg"
                   />
                   <div className={styles.forTgsrtcEmployee}>
-                    {phoneNumber1}
+                    <a href={`${"tel:"}${phoneNumber1}`} className={styles.links}>{phoneNumber1}</a>
+                    <span>{tgsrtcEmp}</span>
                   </div>
                 </div>
                 <img
@@ -50,7 +53,8 @@ const HospitalContact: NextPage<HospitalContactType> = ({weAreAvailableTitle,pho
                     src="/icons1.svg"
                   />
                   <div className={styles.nonTgsrtcEmployee}>
-                    {phoneNumber2}
+                    <a href={`${"tel:"}${phoneNumber2}`} className={styles.links}>{phoneNumber2}</a>
+                    <span>{nonTgsrtcEmp}</span>
                   </div>
                 </div>
               </div>
@@ -61,7 +65,7 @@ const HospitalContact: NextPage<HospitalContactType> = ({weAreAvailableTitle,pho
                   src="/icons-21.svg"
                 />
                 <h2 className={styles.supporttgsrtchospitalcom}>
-                  {hospitalEmail}
+                  <a href={`${"mailto:"}${hospitalEmail}`} className={styles.links}>{hospitalEmail}</a>
                 </h2>
               </div>
             </div>
