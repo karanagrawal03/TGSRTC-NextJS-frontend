@@ -22,7 +22,7 @@ const AboutItIntiativeContent = ({ data }: { data: Data }) => {
                 <DynamicContent
                     key={index}
                     number={index + 1}
-                    ContentComponent={() => <ItInitiativeSection section={section} />} // Render the ContentRenderer component
+                    ContentComponent={() => <ItInitiativeSection section={section} />} 
                     backgroundColor={section.backgroundColor}
                     itemContentStyles={styles.itemContent}
                     sequenceStyles={styles.sequenceStyles}
