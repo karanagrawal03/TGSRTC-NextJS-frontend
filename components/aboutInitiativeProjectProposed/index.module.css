@@ -49,6 +49,7 @@
     line-height: 19.5px;
     text-align: left;
     color: var(--text-black);
+    margin-bottom: 16px;
 }
 
 .list {
