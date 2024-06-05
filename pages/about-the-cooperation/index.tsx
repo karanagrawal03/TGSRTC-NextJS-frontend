@@ -12,6 +12,7 @@ const AboutTheCoperation = () => {
   }, []);
   console.log(data);
   return (
+    <>
     <section className={styles.reservationHeroTourism}>
       <img
         className={styles.bgIcon}
@@ -33,6 +34,7 @@ const AboutTheCoperation = () => {
           {data?.heroSection.heroSectionSubHeading}
         </p>
       </div>
+    </section>
       <div className={styles.innerContainer}>
         <AboutCoperationProfile profileData={data} />
         <Infrastructure
@@ -41,7 +43,7 @@ const AboutTheCoperation = () => {
           infrastructureCards={data?.infrastructureCards}
         />
       </div>
-    </section>
+   </>
   );
 };
 export default AboutTheCoperation;

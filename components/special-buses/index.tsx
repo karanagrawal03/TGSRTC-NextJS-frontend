@@ -2,7 +2,6 @@ import type { NextPage } from "next";
 import styles from "./index.module.css";
 import Carousel from "../carousel";
 import SpecialBusesOffersCard from "../specialBusesOffersCard";
-import { ReactNode } from "react";
 
 export type SpecialBusesType = {
   specialBusOffersTitle:string;
