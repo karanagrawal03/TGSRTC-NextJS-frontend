@@ -170,11 +170,13 @@ const ReservationForm: NextPage<BookYourTicketType> = ({
                   )}
                   sx={ReservationFormStyle.select2}
                 >
-                  {routes.map((location) => (
-                    <MenuItem key={location.to} value={location.to}>
-                      {location.to}
-                    </MenuItem>
-                  ))}
+                  {routes
+                    .filter((location) => location.to !== selectedFrom)
+                    .map((location) => (
+                      <MenuItem key={location.to} value={location.to}>
+                        {location.to}
+                      </MenuItem>
+                    ))}
                 </Select>
               </FormControl>
             </Box>
