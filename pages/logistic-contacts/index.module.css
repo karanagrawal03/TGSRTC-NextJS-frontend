@@ -23,18 +23,10 @@
   color: var(--support-white);
   font-family: var(--font-playfair-display);
   display: flex;
-  /* align-items: flex-start;
-  justify-content: flex-start; */
   box-sizing: border-box;
   max-width: 100%;
 }
-/* .logisticContactsHero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: var(--gap-base);
-} */
+
 .tableSection {
   display: flex;
   flex-direction: column;
@@ -118,17 +110,7 @@
   display: inline-block;
   min-width: 45px;
 }
-/* .logisticContacts {
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  line-height: normal;
-  letter-spacing: normal;
-} */
+
 .bgIcon {
   height: 100%;
   width: 100%;

@@ -30,7 +30,6 @@ const LogisticContacts: NextPage<LogisticContactsType> = ({
   useEffect(() => {
     doFetch(`/logistic-contacts?populate=*`);
   }, []);
-  console.log(data);
   return (
     <>
       <section className={styles.logisticContactsHero}>
