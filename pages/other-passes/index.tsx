@@ -5,7 +5,7 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import AddIcon from "@mui/icons-material/Add";
 import HorizontalRuleIcon from "@mui/icons-material/HorizontalRule";
-import AccordianTab from "../accordian-tab";
+import AccordianTab from "../../components/accordian-tab";
 
 export interface DataItem {
   type: string;

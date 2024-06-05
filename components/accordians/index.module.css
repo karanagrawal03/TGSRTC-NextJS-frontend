@@ -51,6 +51,22 @@
   line-height: 26px;
   font-family: var(--font-montserrat);
 }
+@media screen and (max-width: 900px) {
+  .accordianDetails {
+    width: calc(100% + 23px);
+  }
+  .accordianTab {
+    padding-left: var(--padding-45xl);
+    padding-right: var(--padding-45xl);
+  }
+  .accordianHeading {
+    font-weight: 500;
+    font-size: var(--font-size-16);
+    line-height: 26px;
+    font-family: var(--font-montserrat);
+  }
+}
+
 @media screen and (max-width: 750px) {
   .accordianDetails {
     width: calc(100% + 7px);
@@ -67,10 +83,14 @@
     font-family: var(--font-montserrat);
   }
   .dropdown {
+    width: calc(100% - 17px);
     padding: 0px 0px 0px var(--padding-5xl);
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (min-width: 599px) and (max-width: 749px) {
+  .accordianDetails {
+    width: calc(100% + 23px);
+  }
   .accordianTab {
     padding-left: var(--padding-11xl);
     padding-right: var(--padding-11xl);
@@ -81,26 +101,20 @@
     line-height: 26px;
     font-family: var(--font-montserrat);
   }
-}
-@media screen and (max-width: 360px) {
-  .accordianTab {
-    padding-left: var(--padding-base);
-    padding-right: var(--padding-base);
-  }
-  .accordianHeading {
-    font-weight: 500;
-    font-size: var(--font-size-16);
-    line-height: 26px;
-    font-family: var(--font-montserrat);
+  .dropdown{
+    width: 100%;
   }
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 599px) {
+  .dropdown{
+    width: 100%;
+  }
   .accordianDetails {
     width: calc(100% + 23px);
   }
   .accordianTab {
-    padding-left: var(--padding-45xl);
-    padding-right: var(--padding-45xl);
+    padding-left: var(--padding-base);
+    padding-right: var(--padding-base);
   }
   .accordianHeading {
     font-weight: 500;
