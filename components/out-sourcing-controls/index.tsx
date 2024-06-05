@@ -1,3 +1,4 @@
+import CustomTable from "../custom-table";
 import Tables from "../tables";
 import styles from "./index.module.css";
 interface data {
@@ -11,7 +12,8 @@ const OutSoursingControls: React.FC<data> = ({
   return (
     <div className={styles.container}>
       <p className={styles.headingText}>{outSourcingContractText}</p>
-      <Tables rowClassName={styles.rowClass} rows={outSourcingData} containerClassName={styles.tableContainer} />
+      <CustomTable containerClassName={styles.tableContainer}
+        rowsClassName={styles.rowClass} rows={outSourcingData} />
     </div>
   );
 };

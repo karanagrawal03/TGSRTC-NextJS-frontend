@@ -1,3 +1,4 @@
+import CustomTable from "../custom-table";
 import Tables from "../tables";
 import styles from "./index.module.css";
 interface chassisData {
@@ -12,7 +13,11 @@ const ChassisAndBodies: React.FC<chassisData> = ({
   return (
     <div className={styles.container}>
       <p className={styles.headingText}>{chassisBodiesText}</p>
-      <Tables rowClassName={styles.rowClass} rows={chassisBodiesData} containerClassName={styles.tableContainer} />
+      <CustomTable
+        containerClassName={styles.tableContainer}
+        rowsClassName={styles.rowClass}
+        rows={chassisBodiesData}
+      />
     </div>
   );
 };

@@ -1,3 +1,4 @@
+import CustomTable from "../custom-table";
 import Tables from "../tables";
 import styles from "./index.module.css";
 interface StallsData {
@@ -11,7 +12,11 @@ const StallsAndShops: React.FC<StallsData> = ({
   return (
     <div className={styles.container}>
       <p className={styles.headingText}>{stallsAndShopsText}</p>
-      <Tables rowClassName={styles.rowClass} rows={stallsAndShopsData} containerClassName={styles.tableContainer} />
+      <CustomTable
+        containerClassName={styles.tableContainer}
+        rowsClassName={styles.rowClass}
+        rows={stallsAndShopsData}
+      />
     </div>
   );
 };

@@ -1,3 +1,4 @@
+import CustomTable from "../custom-table";
 import Tables from "../tables";
 import styles from "./index.module.css";
 interface OpenParcelData {
@@ -11,7 +12,8 @@ const OpenLandParcelCease: React.FC<OpenParcelData> = ({
   return (
     <div className={styles.container}>
       <p className={styles.headingText}>{openLandParcelOnLeaseText}</p>
-      <Tables rowClassName={styles.rowClass} rows={openLandParcelOnLeaseData} containerClassName={styles.tableContainer}/>
+      <CustomTable containerClassName={styles.tableContainer}
+        rowsClassName={styles.rowClass} rows={openLandParcelOnLeaseData} />
     </div>
   );
 };

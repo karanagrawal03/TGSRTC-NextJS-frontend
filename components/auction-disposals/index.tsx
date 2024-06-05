@@ -1,3 +1,4 @@
+import CustomTable from "../custom-table";
 import Tables from "../tables";
 import styles from "./index.module.css";
 interface AuctionDisposalData {
@@ -11,10 +12,10 @@ const AuctionDisposals: React.FC<AuctionDisposalData> = ({
   return (
     <div className={styles.container}>
       <p className={styles.headingText}>{auctionsText}</p>
-      <Tables
-        rows={auctionsData}
-        rowClassName={styles.rowClass}
+      <CustomTable
         containerClassName={styles.tableContainer}
+        rowsClassName={styles.rowClass}
+        rows={auctionsData}
       />
     </div>
   );
