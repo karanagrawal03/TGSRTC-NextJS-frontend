@@ -16,6 +16,7 @@ interface TableProps {
   columnWidths?: any;
   tableHeadCellStyles?: any;
   tableCellStyles?: any;
+  rowClassName?:any
 }
 
 const Tables: React.FC<TableProps> = ({
@@ -24,6 +25,7 @@ const Tables: React.FC<TableProps> = ({
   columnWidths,
   tableHeadCellStyles,
   tableCellStyles,
+  rowClassName
 }) => {
   if (rows?.length === 0) {
     return <div>No data available</div>;
@@ -50,7 +52,7 @@ const Tables: React.FC<TableProps> = ({
                   paddingBottom: "10px",
                   paddingLeft: "20px",
                   width: columnWidths ? columnWidths[key] : "auto",
-                  color:"#FFFFFF"
+                  color: "#FFFFFF",
                 }}
               >
                 {headers[key]}
@@ -62,7 +64,9 @@ const Tables: React.FC<TableProps> = ({
           {bodyRows.map((row, index) => (
             <TableRow
               key={index}
-              className={index % 2 === 0 ? styles.evenRow : styles.oddRow}
+              className={`${
+                index % 2 === 0 ? styles.evenRow : styles.oddRow
+              } ${rowClassName}`}
             >
               {Object.keys(row).map((key) => (
                 <TableCell

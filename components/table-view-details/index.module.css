@@ -35,8 +35,11 @@
   padding: 0;
   font-family: var(--font-montserrat);
   font-size: var(--font-size-sm);
+  font-weight: 600;
 }
-
+.additionalClassName{
+  cursor: pointer;
+}
 .additionalClassName:hover .actionButton {
   visibility: visible;
   padding: 0px;

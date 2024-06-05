@@ -16,6 +16,7 @@ interface TableProps {
   columnWidths?: any;
   tableHeadCellStyles?: any;
   tableCellStyles?: any;
+  rowsClassName?: any;
 }
 
 const CustomTable: React.FC<TableProps> = ({
@@ -24,6 +25,7 @@ const CustomTable: React.FC<TableProps> = ({
   columnWidths,
   tableHeadCellStyles,
   tableCellStyles,
+  rowsClassName,
 }) => {
   if (rows?.length === 0) {
     return <div>No data available</div>;
@@ -64,7 +66,7 @@ const CustomTable: React.FC<TableProps> = ({
               key={index}
               className={`${index % 2 === 0 ? styles.evenRow : styles.oddRow} ${
                 styles.additionalClassName
-              }`}
+              }  ${rowsClassName}`}
             >
               {Object.keys(row).map((key) => (
                 <TableCell
