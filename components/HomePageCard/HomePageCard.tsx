@@ -3,12 +3,13 @@ import { useMemo, type CSSProperties } from "react";
 import styles from "./HomePageCard.module.css";
 import { APPLY_NOW, BUS_PASS_LINK, HOSPITAL_LINK, KNOW_MORE_LABEL, LOGISTICS_LINK } from "../../constants";
 import { useRouter } from "next/router";
+import { UPLOADS_BASE_URL } from "../../services/service";
 
 export type BookYourServiceCardType = {
   className?: string;
-  srcIcon?: string;
-  busPasses?: string;
-  dedicatedToDeliveringTopN?: string;
+  image?: string;
+  title?: string;
+  content?: string;
 
   /** Style props */
   ellipseDivTop?: CSSProperties["top"];
@@ -26,9 +27,9 @@ export type BookYourServiceCardType = {
 
 const BookYourServiceCards: NextPage<BookYourServiceCardType> = ({
   className = "",
-  srcIcon,
-  busPasses,
-  dedicatedToDeliveringTopN,
+  image,
+  title,
+  content,
   ellipseDivTop,
   ellipseDivLeft,
   busPassesPadding,
@@ -98,12 +99,12 @@ const BookYourServiceCards: NextPage<BookYourServiceCardType> = ({
       <div className={styles.infographicContainerWrapper}>
         <div className={styles.infographicContainer}>
           <div className={styles.infographics} style={infographicsStyle}>
-            <div className={styles.wrapperGroup1000013321}>
+            <div className={styles.cardImageContainer}>
               <img
-                className={styles.wrapperGroup1000013321Child}
+                className={styles.cardImage}
                 loading="lazy"
                 alt="service cards image"
-                src={srcIcon}
+                src={`${UPLOADS_BASE_URL}${image}`}
                 style={groupIconStyle}
               />
             </div>
@@ -113,12 +114,12 @@ const BookYourServiceCards: NextPage<BookYourServiceCardType> = ({
       </div>
       <div className={styles.bodyContainer}>
         <div className={styles.texts}>
-          <b className={styles.busPasses} style={busPasses1Style}>
-            {busPasses}
+          <b className={styles.cardTitle} style={busPasses1Style}>
+            {title}
           </b>
-          <p className={styles.loremIpsumDolorContainer}>
+          <p className={styles.cardContent}>
             <span className={styles.dedicatedToDelivering}>
-              {dedicatedToDeliveringTopN}
+              {content}
             </span>
           </p>
         </div>

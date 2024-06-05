@@ -1,4 +1,4 @@
-.wrapperGroup1000013321Child {
+.cardImage {
   align-self: stretch;
   flex: 1;
   overflow: hidden;
@@ -10,7 +10,7 @@
   height: 100%;
   transform: scale(1.246);
 }
-.wrapperGroup1000013321 {
+.cardImageContainer {
   align-self: stretch;
   flex: 1;
   position: relative;
@@ -51,7 +51,7 @@
   height: 100px;
   justify-content: center;
 }
-.busPasses {
+.cardTitle {
   position: relative;
   font-weight: 600;
   mix-blend-mode: normal;
@@ -59,7 +59,7 @@
 .dedicatedToDelivering {
   display: block;
 }
-.loremIpsumDolorContainer {
+.cardContent {
   margin: 0;
   align-self: stretch;
   position: relative;
@@ -176,7 +176,7 @@
   font-family: var(--font-montserrat);
 }
 @media screen and (max-width: 450px) {
-  .busPasses {
+  .cardTitle {
     font-size: var(--font-size-lgi);
   }
   .cards {

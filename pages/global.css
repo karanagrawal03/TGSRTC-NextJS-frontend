@@ -150,6 +150,7 @@ a {
   --gap-20xl: 39px;
   --gap-lgi: 19px;
   --gap-18xl: 40px;
+  --gap-7xl: 26px;
   --gap-75xs:75px;
 
   /* Paddings */
@@ -281,7 +282,7 @@ a {
   --padiing-48xl:48.47px;
   --padding-84xs:84px;
   --padding-27xs:27.5px;
-  --padding-xs:82px;
+  --padding-82xs:82px;
   --padding-47xl:64px;
   --padding-70xl:70px;
 

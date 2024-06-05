@@ -1,8 +1,18 @@
 import React from "react";
 import styles from "./About.module.css";
-import { ABOUT_TGSRTC_PARAGRAPH, ABOUT_TGSRTC_TITLE } from "../../constants";
+import { UPLOADS_BASE_URL } from "../../services/service";
 
-const About = () => {
+export type AboutProps = {
+  data?: {
+    title?: string;
+    paragraph?: string;
+    logoUrl?: string;
+    desktopImageUrl?: string;
+    mobileImageUrl?: string;
+  };
+};
+
+const About: React.FC<AboutProps> = ({ data }) => {
   return (
     <section className={styles.homeAboutTsrtc}>
       <div className={styles.contentSection}>
@@ -10,24 +20,24 @@ const About = () => {
           <img
             className={styles.tsrtcLogoIcon1}
             alt="TSRCT Logo"
-            src="/tsrtc-logo@2x.png"
+            src={`${UPLOADS_BASE_URL}${data?.logoUrl}` }
             loading="lazy"
           />
         </div>
         <div className={styles.texts}>
-          <div className={styles.aboutTgsrtc}>{ABOUT_TGSRTC_TITLE}</div>
+          <div className={styles.aboutTgsrtc}>{data?.title }</div>
           <div className={styles.sinceItsInception}>
-          {ABOUT_TGSRTC_PARAGRAPH}
+            {data?.paragraph }
           </div>
         </div>
       </div>
       <div className={styles.wrapperAboutTsrtcImage}>
         <picture className={styles.aboutPicture}>
-          <source media="(max-width: 450px)" srcSet="/tgrtc-mobile.png" />
+          <source media="(max-width: 450px)" srcSet={data?.mobileImageUrl } />
           <img
             className={styles.aboutTsrtcImage}
             alt="about tgsrtc"
-            src="/about-tgsrtc-image.png"
+            src={`${UPLOADS_BASE_URL}${data?.desktopImageUrl}`}
             loading="lazy"
           />
         </picture>
