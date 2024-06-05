@@ -27,20 +27,18 @@
     top: 67px;
     left: 100px;
     right: 101px;
-    bottom: 80px;
 }
 
 .contactContentLeft {
     padding-top: var(--padding-14xl);
     padding-bottom: var(--padding-14xl);
-    width: 50%;
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
 .contactUsTitle {
     font-family: var(--font-playfair-display);
-    font-size: var(--font-size-53x);
+    font-size: var(--font-size-53xl);
     font-weight: 600;
     line-height: 82px;
     text-align: left;
@@ -125,6 +123,14 @@
         max-height: 675px;
         height: 100%;
     }
+
+    .contactUsContent {
+        bottom: 80px;
+    }
+
+    .contactContentLeft {
+        width: 50%;
+    }
 }
 
 @media screen and (max-width:1365px) {
@@ -133,8 +139,12 @@
         left: 80px;
         right: 80px;
         gap: var(--gap-5xl);
+        bottom: 80px;
     }
 
+    .contactContentLeft {
+        width: 50%;
+    }
 }
 
 @media screen and (max-width:1200px) {

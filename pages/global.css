@@ -66,6 +66,7 @@ a {
   --font-size-36xs: 36px;
   --font-size-42xs: 42px;
   --font-size-52xs:52px;
+  --font-size-112xs:112px;
 
   /* Colors */
   --color-whitesmoke-100: #f7f7f7;
@@ -103,6 +104,7 @@ a {
   --color-background: #3E3E3E4D;
   --color-border:#CBCBCB;
   --color-placeholder:#A2A2A2;
+  --color-light-gray: #F9F9F9;
   
   /* Spacing */
   --spacing-lg: 12px;
@@ -285,6 +287,7 @@ a {
   --padding-82xs:82px;
   --padding-47xl:64px;
   --padding-70xl:70px;
+  --padding-409xs:40.09px;
 
   /* Border radiuses */
   --br-7xs: 6px;
@@ -300,6 +303,7 @@ a {
   --br-xxl:400px;
 
   /* Effects */
+  --text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
   --card: 0px 4px 20px rgba(0, 0, 0, 0.1);
   --card-shadow: 0px 4px 10px 0px #E8E8E8;
   --card-shadow1:0px 4px 4px 0px #00000040;
