@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.headingText {
+  font-family: var(--font-playfair-display);
+  font-size: 46px;
+  font-weight: 600;
+  line-height: 61.32px;
+  text-align: center;
+  margin: 0px;
+}

@@ -1,0 +1,48 @@
+.container {
+  width: calc(100% - 203px);
+  display: flex;
+  gap: 40px;
+  padding: 100px;
+  background-color: #f2f2f2;
+}
+.tendersTab {
+  background-color: #ffffff;
+  padding: 24px;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  width: 76.1%;
+  min-height: 686px;
+  max-height: 900px;
+  border-radius: 4px;
+}
+.tenderText {
+  font-family: var(--font-montserrat);
+  font-size: var(--font-size-16);
+  font-weight: 500;
+  line-height: 26px;
+  text-align: left;
+  cursor: pointer;
+  margin: 0px;
+  padding-bottom: 12px;
+}
+.selected {
+  color: var(--primary-red);
+  font-weight: 700;
+  border-bottom: 4px solid var(--primary-green);
+  cursor: pointer;
+}
+.muiForm {
+  display: none;
+}
+@media screen and (max-width: 1023px) {
+  .muiForm {
+    display: block;
+  }
+  .tendersTab {
+    display: none;
+  }
+  .container {
+    flex-direction: column;
+  }
+}
