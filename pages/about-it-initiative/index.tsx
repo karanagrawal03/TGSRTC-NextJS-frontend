@@ -24,7 +24,7 @@ const AboutItInitiative = () => {
         <div className={styles.introContent}>{data?.introContent}</div>
       </section>
       <section className={styles.tsrtcInfoList}>
-        {data && <AboutItIntiativeContent data={data} />}
+        {data?.sections && <AboutItIntiativeContent data={data} />}
 
       </section>
       <section className={styles.projectProposed}>
