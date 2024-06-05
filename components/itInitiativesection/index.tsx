@@ -14,7 +14,7 @@ interface ContentSection {
     bottomContent?: string[];
 }
 
-const ItInitiativeSection: React.FC<{ section: ContentSection }> = ({ section }) => {
+const AboutInitiative: React.FC<{ section: ContentSection }> = ({ section }) => {
     return (
         <div className={styles.container}>
             <div className={styles.heading}>{section.title}</div>
@@ -34,4 +34,4 @@ const ItInitiativeSection: React.FC<{ section: ContentSection }> = ({ section })
     );
 };
 
-export default ItInitiativeSection;
+export default AboutInitiative;

@@ -1,73 +1,64 @@
-.container {
+.container{
     display: flex;
     flex-direction: column;
-    gap: var(--gap-base);
+    gap:var(--gap-base);
 }
-
-.heading {
+.heading{
     font-family: var(--font-playfair-display);
     font-size: var(--font-size-5xl);
     font-weight: 600;
     line-height: 40px;
     text-align: left;
-    color: var(--primary-red);
+color: var(--primary-red);    
 }
-
-.content {
+.content{
     font-family: var(--font-montserrat);
     font-size: var(--font-size-base);
     font-weight: 500;
     line-height: 26px;
     text-align: left;
-    color: var(--text-grey-body-text);
-    display: flex;
-    flex-direction: column;
-    gap: var(--gap-base);
+color: var(--text-grey-body-text);    
+display: flex;
+flex-direction: column;
+gap:var(--gap-base);
 }
-
-.listHeading {
+.listHeading{
     font-family: var(--font-montserrat);
     font-size: var(--font-size-base);
     font-weight: 600;
     line-height: 19.5px;
     text-align: left;
-    color: var(--text-black);
+color: var(--text-black);    
 }
-
-.list {
+.list{
     font-family: var(--font-montserrat);
-    font-size: var(--font-size-base) !important;
-    font-weight: 400;
-    line-height: 26px;
-    text-align: left;
-    color: var(--text-grey-body-text);
+font-size: var(--font-size-base) !important;
+font-weight: 400;
+line-height: 26px;
+text-align: left;
+color: var(--text-grey-body-text);
 
 }
-
-.listStyles {
+.listStyles{
     margin: 0px;
     padding: 0px;
     padding-left: var(--padding-base);
     padding-top: 0px !important;
 }
-
 @media screen and (max-width:1024px) {
-    .heading {
+    .heading{
         font-size: var(--font-size-3x);
     }
-
-    .itemContent {
+    .itemContent{
         padding: var(--padding-61xl) !important;
     }
-
-    .sequenceStyles {
+    .sequenceStyles{
         font-size: var(--font-size-112xs);
     }
 }
-
 @media screen and (max-width:700px) {
-    .itemContent {
+    .itemContent{
         padding: var(--padding-31xl) !important;
-        gap: var(--gap-xl);
-    }
+        gap:var(--gap-xl);
+    } 
 }
