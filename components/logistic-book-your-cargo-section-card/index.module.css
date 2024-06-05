@@ -6,14 +6,6 @@
   font-family: inherit;
   mix-blend-mode: normal;
 }
-.bookingTitleContainer {
-  width: 894px;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: center;
-  max-width: 100%;
-}
 .h1,
 .vectorIcon {
   position: absolute;
@@ -50,27 +42,11 @@
   left: 0;
 }
 .frameChild {
-  position: absolute;
-  top: 21px;
-  left: 54px;
-  width: 42px;
-  height: 49px;
+  max-height: 100px;
+  max-width: 140px;
   z-index: 2;
 }
-.frameParent {
-  align-self: stretch;
-  height: 70px;
-  position: relative;
-}
-.infographicsChild {
-  margin-left: -25px;
-  width: 146px;
-  height: 7px;
-  position: relative;
-  filter: blur(14px);
-  border-radius: 50%;
-  background-color: var(--color-gray-200);
-}
+
 .infographics {
   width: 140px;
   display: flex;
@@ -80,16 +56,10 @@
   padding: var(--padding-xs-5) var(--padding-3xl);
   box-sizing: border-box;
 }
-.infographicContainer,
 .infographicContainerWrapper {
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-.infographicContainerWrapper {
-  align-self: stretch;
   justify-content: center;
+  align-items: center;
 }
 .bulkCtvCargo,
 .rates {
@@ -102,6 +72,7 @@
   font-weight: 600;
   font-family: inherit;
   mix-blend-mode: normal;
+  max-width: 193px;
 }
 .loremIpsumDolor {
   margin: 0;
@@ -209,7 +180,7 @@
   box-shadow: var(--table-shadow);
   border-radius: var(--br-base);
   background-color: var(--support-white);
-  align-items: flex-start;
+  /* align-items: flex-start; */
   padding: var(--padding-21xl);
   box-sizing: border-box;
   gap: var(--gap-7xs);
@@ -464,9 +435,16 @@
     box-sizing: border-box;
   }
 }
+@media screen and (max-width: 635px) {
+  .logisticBookYourCargoSecti {
+    gap: var(--gap-xl);
+    padding-left: var(--padding-5xl);
+    padding-right: var(--padding-5xl);
+  }
+}
 @media screen and (max-width: 450px) {
   .bookYourCargo {
-    font-size: var(--font-size-9xl);
+    font-size: var(--font-size-13xl);
   }
   .h1 {
     font-size: var(--font-size-5xl);
