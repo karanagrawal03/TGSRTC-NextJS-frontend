@@ -41,6 +41,7 @@
 }
 .tgsrtcOnlineBusContainer{
   position: absolute;
+  max-width: 868px;
   top: 7.35vw;
   left: 7.35vw;
   display: flex;
@@ -89,7 +90,7 @@
   }
   .tgsrtcOnlineBusContainer{
     max-width: 237px;
-    top: 198px;
+    top: 55px;
     left: 23px;
   }
   .tgsrtcOnlineBus {

@@ -46,7 +46,6 @@
 .heroSubtitleContainer {
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   font-size: var(--font-size-5xl);
   position: absolute;
   top: 7.35vw;
@@ -84,6 +83,11 @@
     align-items: start;
 
   }
+  .logoIcon{
+    width: 110px;
+    height: 110px;
+    margin-bottom: 17px;
+  }
 }
 @media screen and (max-width: 599px) {
   .bgIconMobile{
@@ -94,7 +98,7 @@
   .tgsrtcLogistics {
     font-size: var(--font-size-24xl);
     line-height: 49px;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
   }
   .heroSubtitleContainer{
     max-width: 237px;
@@ -110,5 +114,10 @@
   .logisticsHeroWrapper {
     padding-bottom: unset;
     box-sizing: border-box;
+  }
+  .logoIcon{
+    width: 79.4px;
+    height: 79.4px;
+    margin-bottom: 10px;
   }
 }

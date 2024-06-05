@@ -11,7 +11,6 @@ const RoadSafety: NextPageRoadSafetyType = () => {
   useEffect(() => {
     doFetch(`/road-safeties?populate=*`);
   }, []);
-  console.log(UPLOADS_BASE_URL, data ,"data")
 
   const RoadSafetySection = data?.roadSafetyImages?.map((item: any, index: number) => (
     <RoadSafetyCard key={index} webImage={item.webImg} mobileImage={item.mobileImg}/>

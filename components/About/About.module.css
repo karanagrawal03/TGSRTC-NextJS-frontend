@@ -100,8 +100,6 @@
     font-size: var(--font-size-13xl);
   }
   .contentSection {
-    left: 0px;
-    top: 60px;
     position: relative;
   }
 }
