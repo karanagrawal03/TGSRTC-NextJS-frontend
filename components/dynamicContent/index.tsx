@@ -4,11 +4,13 @@ interface DynamicContentProps {
   number: number;
   ContentComponent: React.ComponentType;
   backgroundColor: string;
+  itemContentStyles?:string;
+  sequenceStyles?:string;
 }
-const DynamicContent=({ number, ContentComponent, backgroundColor }:DynamicContentProps)=> {
+const DynamicContent=({ number, ContentComponent, backgroundColor,itemContentStyles,sequenceStyles}:DynamicContentProps)=> {
   return (
-    <div className={styles.contentItem} style={{ backgroundColor }}>
-      <div className={styles.sequence}>{`${number.toString().padStart(2, '0')}`}</div>
+    <div className={`${styles.contentItem} ${itemContentStyles || ''}`} style={{ backgroundColor }}>
+      <div className={`${styles.sequence} ${sequenceStyles}`}>{`${number.toString().padStart(2, '0')}`}</div>
      <ContentComponent/>
     </div>
   )

@@ -4,6 +4,7 @@ import styles from "./index.module.css";
 interface BulletPointsProps {
   items: (string | React.ReactElement)[];
   containerClassName?: string;
+  dynamicStyles?:string;
 }
 
 const extractUrl = (text: string): string | null => {
@@ -15,6 +16,7 @@ const extractUrl = (text: string): string | null => {
 const BulletPoints: React.FC<BulletPointsProps> = ({
   items,
   containerClassName,
+  dynamicStyles,
 }) => {
   return (
     <div>
@@ -26,7 +28,7 @@ const BulletPoints: React.FC<BulletPointsProps> = ({
               const textBeforeUrl = item.split(url)[0];
               const textAfterUrl = item.split(url)[1];
               return (
-                <li className={styles.listItems} key={index}>
+                <li className={`${styles.listItems} ${styles.dynamicStyles} || "" `} key={index}>
                   {textBeforeUrl}
                   <span className={styles.link} key={`link_${index}`}>
                     <a

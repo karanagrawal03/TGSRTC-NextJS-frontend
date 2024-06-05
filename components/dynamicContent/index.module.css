@@ -13,6 +13,7 @@
     text-align: left;
     color: var(--text-black);
     opacity: 5%;
+    margin-top: -20px;
 }
 
 @media screen and (max-width:599px) {
