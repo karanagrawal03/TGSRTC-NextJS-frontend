@@ -731,3 +731,13 @@
     padding: 0 var(--padding-5xl) var( --padding-60 ) var(--padding-5xl);
   }
 }
+@media screen and (min-width: 1920px){
+  .eachAccordian{
+    max-width: 1920px;
+    margin: auto;
+  }
+  .knowMoreAboutStudentPassesWrapper{
+    max-width: 1920px;
+    margin: auto;
+  }
+}

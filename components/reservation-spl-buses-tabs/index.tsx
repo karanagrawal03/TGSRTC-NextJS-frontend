@@ -158,7 +158,11 @@ const ReservationBusesTabs: React.FC<TabsData> = ({ data }) => {
               "&.MuiTabs-root": {
                 width: "100%",
               },
-              marginTop: "24px",
+              marginTop: "24px",  
+              ".MuiTabs-flexContainer": {
+                display: "flex",
+                justifyContent: "space-between",
+              },
             }}
           >
             {tabsData.map((tab, index) => (

@@ -30,13 +30,12 @@
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
   mix-blend-mode: normal;
 }
-.typesOfPassesText{
+.typesOfPassesText {
   font-family: var(--font-montserrat);
-font-size: var(--font-size-16);
-font-weight: 600;
-line-height: 19.5px;
-text-align: left;
-
+  font-size: var(--font-size-16);
+  font-weight: 600;
+  line-height: 19.5px;
+  text-align: left;
 }
 .generalCommuterPassContainer {
   position: absolute;
@@ -108,9 +107,9 @@ text-align: left;
     box-sizing: border-box;
   }
   .busPassGeneralCommuterPass2 {
-    padding: 0 var(--padding-5xl) var( --padding-60 ) var(--padding-5xl);
+    padding: 0 var(--padding-5xl) var(--padding-60) var(--padding-5xl);
   }
-  .knowMoreAboutContainer{
+  .knowMoreAboutContainer {
     margin-top: 50px;
   }
 }
@@ -143,6 +142,16 @@ text-align: left;
     box-sizing: border-box;
   }
   .busPassGeneralCommuterPass2 {
-    padding: 0 var(--padding-5xl) var( --padding-60 ) var(--padding-5xl);
+    padding: 0 var(--padding-5xl) var(--padding-60) var(--padding-5xl);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .eachAccordian {
+    max-width: 1920px;
+    margin: auto;
+  }
+  .knowMoreAboutContainer {
+    max-width: 1920px;
+    margin: auto;
   }
 }

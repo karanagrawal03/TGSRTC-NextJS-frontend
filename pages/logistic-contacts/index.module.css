@@ -156,24 +156,7 @@
   z-index: 1;
 }
 
-@media screen and (max-width: 750px) {
-  .bgIcon {
-    display: none;
-  }
 
-  .bgIconMobile {
-    display: flex;
-  }
-
-  .logisticRatesAndContainer {
-    font-size: var(--font-size-39xl);
-    line-height: 66px;
-  }
-  .logisticContactsHero {
-    padding: 0;
-    box-sizing: border-box;
-  }
-}
 
 @media screen and (max-width: 1023px) {
   .tourismContentWrapper {
@@ -190,7 +173,14 @@
     font-size: var(--font-size-lgi);
     line-height: 28px;
   }
+
+  .tableSection{
+    padding: var(--padding-5xl) var(--padding-5xl) var(--padding-41xl)
+    var(--padding-5xl);
+  }
 }
+
+
 @media screen and (max-width: 750px) {
   .heroTitleStyles {
     font-size: var(--font-size-42xl);
@@ -203,6 +193,10 @@
   }
   .title {
     font-size: var(--font-size-base);
+  }
+  .tableSection{
+    padding: var(--padding-5xl) var(--padding-5xl) var(--padding-41xl)
+    var(--padding-5xl);
   }
 }
 

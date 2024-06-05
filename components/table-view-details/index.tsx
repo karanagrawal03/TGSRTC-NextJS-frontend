@@ -32,7 +32,6 @@ const CustomTable: React.FC<TableProps> = ({
   }
   const headers = rows[0];
   const bodyRows = rows.slice(1);
-
   return (
     <TableContainer
       className={`${styles.tableContainer} ${containerClassName}`}
@@ -41,7 +40,7 @@ const CustomTable: React.FC<TableProps> = ({
       <Table aria-label="customized table">
         <TableHead>
           <TableRow className={styles.tableHead}>
-            {Object.keys(headers).map((key) => (
+            {Object.keys(headers).map((key, idx) => (
               <TableCell
                 className={`${styles.tableHeadCell} ${
                   tableHeadCellStyles ? tableHeadCellStyles : ""
@@ -51,7 +50,7 @@ const CustomTable: React.FC<TableProps> = ({
                   paddingTop: "10px",
                   paddingBottom: "10px",
                   paddingLeft: "20px",
-                  width: columnWidths ? columnWidths[key] : "auto",
+                  width: columnWidths ? columnWidths[idx] : "auto",
                   color: "#FFFFFF",
                 }}
               >

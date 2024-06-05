@@ -17,11 +17,11 @@
 .tableContainer{
   width: 786px;
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1280px) {
   .headingText {
     display: none;
   }
   .tableContainer{
-    width: auto;
+    width: 100%;
   }
 }

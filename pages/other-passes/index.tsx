@@ -57,7 +57,11 @@ const OtherPasses = () => {
         </div>
       </section>
       <section className={styles.busPassGeneralCommuterPass2}>
-        <h2 className={styles.knowMoreAboutContainer}>{data?.knowMoreTitle}</h2>
+        <div className={styles.knowMoreAboutStudentPassesWrapper}>
+          <h2 className={styles.knowMoreAboutContainer}>
+            {data?.knowMoreTitle}
+          </h2>
+        </div>
         <div className={styles.eachAccordian}>
           <ol className={styles.orderedList}>
             {data?.otherBussPassAccordiansData?.map((e: any, idx: number) => (
