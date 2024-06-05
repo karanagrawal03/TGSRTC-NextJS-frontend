@@ -42,22 +42,11 @@
   left: 0;
 }
 .frameChild {
-  /* position: absolute; */
-  /* top: 21px; */
-  /* left: 54px; */
   max-height: 100px;
   max-width: 140px;
   z-index: 2;
 }
-/* .infographicsChild {
-  margin-left: -25px;
-  width: 146px;
-  height: 7px;
-  position: relative;
-  filter: blur(14px);
-  border-radius: 50%;
-  background-color: var(--color-gray-200);
-} */
+
 .infographics {
   width: 140px;
   display: flex;
@@ -69,7 +58,6 @@
 }
 .infographicContainerWrapper {
   display: flex;
-  /* flex-direction: row; */
   justify-content: center;
   align-items: center;
 }
