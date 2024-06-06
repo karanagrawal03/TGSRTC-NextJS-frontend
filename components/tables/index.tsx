@@ -16,7 +16,7 @@ interface TableProps {
   columnWidths?: any;
   tableHeadCellStyles?: any;
   tableCellStyles?: any;
-  rowClassName?:any
+  rowClassName?: any
 }
 
 const Tables: React.FC<TableProps> = ({
@@ -43,9 +43,8 @@ const Tables: React.FC<TableProps> = ({
           <TableRow className={styles.tableHead}>
             {Object.keys(headers).map((key) => (
               <TableCell
-                className={`${styles.tableHeadCell} ${
-                  tableHeadCellStyles ? tableHeadCellStyles : ""
-                }`}
+                className={`${styles.tableHeadCell} ${tableHeadCellStyles ? tableHeadCellStyles : ""
+                  }`}
                 key={key}
                 sx={{
                   paddingTop: "10px",
@@ -53,6 +52,7 @@ const Tables: React.FC<TableProps> = ({
                   paddingLeft: "20px",
                   width: columnWidths ? columnWidths[key] : "auto",
                   color: "#FFFFFF",
+                  borderBottom: "0px"
                 }}
               >
                 {headers[key]}
@@ -64,15 +64,13 @@ const Tables: React.FC<TableProps> = ({
           {bodyRows.map((row, index) => (
             <TableRow
               key={index}
-              className={`${
-                index % 2 === 0 ? styles.evenRow : styles.oddRow
-              } ${rowClassName}`}
+              className={`${index % 2 === 0 ? styles.evenRow : styles.oddRow
+                } ${rowClassName}`}
             >
               {Object.keys(row).map((key) => (
                 <TableCell
-                  className={`${styles.tableCell} ${
-                    tableCellStyles ? tableCellStyles : ""
-                  }`}
+                  className={`${styles.tableCell} ${tableCellStyles ? tableCellStyles : ""
+                    }`}
                   key={key}
                   align="left"
                   sx={{
@@ -80,6 +78,7 @@ const Tables: React.FC<TableProps> = ({
                     paddingBottom: "15.5px",
                     paddingLeft: "20px",
                     width: columnWidths ? columnWidths[key] : "auto",
+                    borderBottom: "0px"
                   }}
                 >
                   {row[key]}

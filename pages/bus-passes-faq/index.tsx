@@ -9,8 +9,6 @@ import {
   KNOW_MORE_ABOUT_FAQ,
   KNOW_MORE_ABOUT_STUDENT_PASSES,
 } from "../../constants";
-
-// import { generalCommuterPassData } from "../../constants/bus-pass-general-commuter-pass";
 import styles from "./index.module.css";
 import { busPassStudentPasses } from "../../constants/bus-pass-student-passes";
 import useFetch, { BASE_URL, UPLOADS_BASE_URL } from "../../services/service";

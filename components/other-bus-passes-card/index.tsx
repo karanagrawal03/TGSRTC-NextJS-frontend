@@ -54,7 +54,6 @@ const OtherBusPassesCard: NextPage<Cards3Type> = ({
               src={UPLOADS_BASE_URL + image}
             />
           </div>
-          <div className={styles.infographicsChild} />
         </div>
       </div>
       <div className={styles.bodyContainer}>

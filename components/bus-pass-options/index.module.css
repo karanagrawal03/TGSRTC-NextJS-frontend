@@ -17,6 +17,7 @@
   box-sizing: border-box;
   max-width: 100%;
 }
+
 .loremIpsumDolor {
   width: 577px;
   height: 42px;
@@ -31,12 +32,14 @@
   display: none;
   max-width: 100%;
 }
+
 .busPassOptions,
 .cardsContainer {
   display: flex;
   gap: var(--gap-13xl);
   max-width: 100%;
 }
+
 .cardsContainer {
   flex-direction: row;
   flex-wrap: wrap;
@@ -45,6 +48,7 @@
   font-size: var(--font-size-5xl);
   font-family: var(--font-montserrat);
 }
+
 .busPassOptions {
   align-self: stretch;
   background-color: var(--support-grey-bg);
@@ -59,28 +63,35 @@
   color: var(--text-black);
   font-family: var(--font-playfair-display);
 }
+
 @media screen and (max-width: 1023px) {
   .busPassOptions1 {
     font-size: var(--font-size-13xl);
   }
+
   .busPassOptions,
   .cardsContainer {
     gap: var(--gap-base);
   }
+
   .busPassOptions {
     padding-top: var(--padding-46xl);
     padding-bottom: var(--padding-46xl);
     box-sizing: border-box;
   }
 }
+
 @media screen and (max-width: 599px) {
   .busPassOptions1 {
     font-size: var(--font-size-13xl);
+    padding-bottom: var(  --padding-base);
   }
 }
-@media screen and (min-width: 1920px){
-  .cardsContainer{
-    max-width: 1920px;;
+
+@media screen and (min-width: 1920px) {
+  .cardsContainer {
+    max-width: 1920px;
+    ;
     margin: 0px auto;
   }
 }

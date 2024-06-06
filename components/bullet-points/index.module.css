@@ -7,24 +7,33 @@
   list-style-type: disc;
   color: black;
 }
+
 .listItems::marker {
   color: var(--primary-red);
 }
+
 .link {
   color: var(--text-black);
   word-break: break-all;
 }
+
 .link:hover {
   color: var(--primary-red);
 }
+
 .list {
   display: flex;
   flex-direction: column;
   gap: var(--gap-base);
   padding-top: var(--padding-base);
 }
+
 @media screen and (max-width: 1023px) {
   .listItems {
     font-size: var(--font-size-sm);
+  }
+
+  .list {
+    padding: var(--padding-base);
   }
 }
