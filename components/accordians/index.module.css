@@ -44,6 +44,7 @@
   box-shadow: 0px 4px 10px 0px #e8e8e8;
   padding: 0px 0px 0px var(--padding-21xl);
   margin-bottom: 0px;
+  box-shadow: none;
 }
 .accordianHeading {
   font-weight: 500;
@@ -101,12 +102,12 @@
     line-height: 26px;
     font-family: var(--font-montserrat);
   }
-  .dropdown{
+  .dropdown {
     width: 100%;
   }
 }
 @media screen and (max-width: 599px) {
-  .dropdown{
+  .dropdown {
     width: 100%;
   }
   .accordianDetails {
