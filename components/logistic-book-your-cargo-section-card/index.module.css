@@ -453,9 +453,16 @@
     font-size: var(--font-size-lgi);
   }
   .cards {
+    padding: var(--padding-xl);
     padding-top: var(--padding-7xl);
     padding-bottom: var(--padding-7xl);
     box-sizing: border-box;
+  }
+  .buttonsContainer{
+    width: 100%;
+  }
+  .button1{
+    width: 100%;
   }
   .busPasses1,
   .h11 {
