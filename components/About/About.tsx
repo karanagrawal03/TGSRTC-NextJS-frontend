@@ -32,15 +32,18 @@ const About: React.FC<AboutProps> = ({ data }) => {
         </div>
       </div>
       <div className={styles.wrapperAboutTsrtcImage}>
-        <picture className={styles.aboutPicture}>
-          <source media="(max-width: 450px)" srcSet={data?.mobileImageUrl } />
           <img
             className={styles.aboutTsrtcImage}
             alt="about tgsrtc"
             src={`${UPLOADS_BASE_URL}${data?.desktopImageUrl}`}
             loading="lazy"
           />
-        </picture>
+          <img
+            className={styles.aboutTsrtcImageMobile}
+            alt="about tgsrtc"
+            src={`${UPLOADS_BASE_URL}${data?.mobileImageUrl}`}
+            loading="lazy"
+          />
       </div>
     </section>
   );

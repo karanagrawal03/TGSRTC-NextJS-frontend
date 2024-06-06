@@ -162,7 +162,7 @@
   margin: 0 !important;
   top: 0;
   left: 4px;
-  box-shadow: var(--table-shadow);
+  box-shadow: var(--card-shadow);
   border-radius: var(--br-base);
   background-color: var(--support-white);
   align-items: flex-start;
