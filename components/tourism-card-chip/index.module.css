@@ -5,7 +5,6 @@
     border-radius: var(--br-80xl);
     background-color: var(--color-mintcream-200);
     padding: var(--padding-11xs) var(--padding-xs);
-    white-space: nowrap;
 }
 .chipContent {
     display: inline-block;
