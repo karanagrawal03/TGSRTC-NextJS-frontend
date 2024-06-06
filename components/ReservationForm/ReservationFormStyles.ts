@@ -145,7 +145,7 @@ const ReservationFormStyle = {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        gap: "var(--gap-6xl)",
+        gap: "20px",
         "@media (max-width: 750px)": {
             flexDirection: "row",
             paddingBottom: "12px",
@@ -204,7 +204,7 @@ const ReservationFormStyle = {
     box: {
         width: "100%",
         display: "flex",
-        gap: "8px",
+        gap: "11px",
         alignItems: "center",
         justifyContent: "center",
         "@media (max-width: 450px)": {

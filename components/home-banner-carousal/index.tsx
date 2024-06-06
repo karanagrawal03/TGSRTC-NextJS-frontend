@@ -13,6 +13,7 @@ interface CarouselInterface {
   customStyles?: any;
   sliderClassName?: string;
   includeAnimation?: boolean;
+  title?: string;
 }
 
 const HomeBannerAnimation = (props: CarouselInterface) => {
@@ -24,6 +25,7 @@ const HomeBannerAnimation = (props: CarouselInterface) => {
     customStyles,
     sliderClassName,
     includeAnimation = false,
+    title,
   } = props;
 
   function PrevArrow(props: any) {
@@ -45,6 +47,9 @@ const HomeBannerAnimation = (props: CarouselInterface) => {
   }
 
   const data = children;
+
+  console.log(data,'datadatadata');
+
 
   const settings = {
     dots: true,
@@ -80,6 +85,7 @@ const HomeBannerAnimation = (props: CarouselInterface) => {
 
   return (
     data.length > 0 && (
+      
       <div
         className={`${styles.slider} ${customStyles} ${
           secondary ? styles.secondarySlider : ""
@@ -87,9 +93,15 @@ const HomeBannerAnimation = (props: CarouselInterface) => {
       >
         <Slider {...settings} className={sliderClassName}>
           {includeAnimation && (
-            <div>
+         
+         <>
+         <div className={styles.scrollTitle}>
               <ScrollAnimation />
+            <div className={styles.titleSection}>
+            <h1 className={styles.tgsrtcServing}>{title}</h1>
             </div>
+         </div>
+         </>
           )}
           {data.map((child: ReactNode, index: number) => (
             <div key={index}>{child}</div>

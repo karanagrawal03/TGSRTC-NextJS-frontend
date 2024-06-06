@@ -27,7 +27,7 @@ const Homepage: NextPage = () => {
 
   return (
     <div className={styles.homepage}>
-       <HomeBannerAnimation children={heroSection} secondary={true} includeAnimation autoplay={true} />
+       <HomeBannerAnimation title={data?.heroBannerTitle} children={heroSection} secondary={true} includeAnimation autoplay={true} />
       <BookYourTicket routes={routes} 
       />
       <HomeBookYourServices 
