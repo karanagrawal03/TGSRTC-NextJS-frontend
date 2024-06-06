@@ -44,7 +44,7 @@
   letter-spacing: 0.02em;
   line-height: 26px;
   font-weight: 500;
-  font-family: var(--font-red-hat-display);
+  font-family: var(--font-montserrat);
   white-space: pre-wrap;
   text-align: center;
 }
@@ -253,6 +253,10 @@
     padding-top: var(--padding-33xl);
     padding-bottom: var(--padding-20xl);
   }
+  /* .routeChips{
+    width: 48%;
+    justify-content: center;
+  } */
 }
 
 @media screen and (max-width: 450px) {

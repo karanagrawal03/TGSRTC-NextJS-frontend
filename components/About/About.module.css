@@ -95,6 +95,9 @@
   object-fit: contain;
   width: 100%;
 }
+.aboutTsrtcImageMobile{
+  display: none;
+}
 @media screen and (max-width: 1023px) {
   .aboutTgsrtc {
     font-size: var(--font-size-13xl);
@@ -106,5 +109,12 @@
 @media screen and (max-width: 599px) {
   .aboutTgsrtc {
     font-size: var(--font-size-18xl);
+  }
+  .aboutTsrtcImage{
+    display: none;
+  }
+  .aboutTsrtcImageMobile{
+    display: block;
+    width: 100%;
   }
 }

@@ -68,7 +68,7 @@
   }
   .titleSection{
     background-image: url("/white-clouds-mobile.png");
-    width: 69%;
+    width: 100%;
     height: unset;
   }
   .bgImageSection{
@@ -76,6 +76,10 @@
   }
   .bgImageSectionMobile{
     display: block;
+    max-width: 100%;
+  }
+  .bgImageMobile{
+    width: 100%;
   }
  
 }
