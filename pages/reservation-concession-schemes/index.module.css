@@ -9,16 +9,6 @@
   line-height: normal;
   letter-spacing: normal;
 }
-
-/* .reservationConcessionSchemesHeroContainer {
-  width: 100%;
-  align-self: stretch;
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-  flex-shrink: 0;
-} */
-
 .reservationConcessionHeroImage,
 .reservationConcessionHeroImageMobile {
   width: 100%;
