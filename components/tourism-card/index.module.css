@@ -22,7 +22,6 @@
 }
 .tourisamPlace {
   margin: 0;
-  position: relative;
   font-size: inherit;
   font-weight: 600;
   font-family: inherit;
@@ -31,7 +30,6 @@
 .imagePlaceholder,
 .imageText {
   align-self: stretch;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -44,11 +42,10 @@
   height: 200px;
   border-radius: var(--br-5xs);
   flex-shrink: 0;
-  position: relative;
 }
 .picturesIcon {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
 }
 .tourismCardContent {
@@ -58,6 +55,8 @@
   font-size: var(--font-size-sm);
   color: var(--text-black);
   font-family: var(--font-montserrat);
+  height: 100%;
+  justify-content: space-between;
 }
 .chipsAndText,
 .description,
@@ -89,7 +88,7 @@
 .calendar {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
   gap: var(--gap-5xs);
 }
@@ -97,19 +96,16 @@
 .pickupBusIcon {
   height: 20px;
   width: 20px;
-  position: relative;
+  margin-top: 3px;
   overflow: hidden;
   flex-shrink: 0;
 }
 .tourismTime ,
 .tourismPickup{
-  position: relative;
   line-height: 26px;
   mix-blend-mode: normal;
-  /* white-space: nowrap; */
 }
 .placesCovered {
-  position: relative;
   line-height: 26px;
   mix-blend-mode: normal;
   font-weight: 600;
@@ -127,11 +123,15 @@
 .packageTourWill {
   margin: 0;
   align-self: stretch;
-  position: relative;
   line-height: 26px;
   color: var(--text-grey-body-text);
   mix-blend-mode: normal;
   word-wrap: break-word;
+}
+.buttonSection{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
 .button {
   cursor: pointer;
@@ -147,7 +147,6 @@
   white-space: nowrap;
 }
 .bookNow {
-  position: relative;
   font-size: var(--font-size-sm);
   font-weight: 500;
   font-family: var(--font-montserrat);
@@ -179,6 +178,9 @@
   }
   .button{
     width: 100%;
+  }
+  .imagePlaceholder {
+    height: auto;
   }
 }
 @media screen and (max-width: 599px) {

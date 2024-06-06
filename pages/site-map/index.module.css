@@ -2,7 +2,7 @@
   max-width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 40px 30px 100px;
+  padding: var(--padding-21xl) var(--padding-11xl) var(--padding-81xl);
 }
 .siteMapContainer {
   background-image: url(/siteMapBg.png);
@@ -13,15 +13,15 @@
   max-width: 100%;
   justify-content: center;
   align-items: center;
-  padding: 40px 72px 58px;
+  padding: var(--padding-21xl) var(--padding-52xl-7) var(--padding-39xl);
 }
 .siteMapTitle {
   text-align: center;
   font-family: var(--font-playfair-display);
-  font-size: 46px;
+  font-size: var(--font-size-27xl);
   font-weight: 600;
   line-height: 61.32px;
-  padding-bottom: 40px;
+  padding-bottom: var(--padding-21xl);
   margin: 0;
 }
 .siteMapContent {
@@ -29,7 +29,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   width: 100%;
-  gap: 30px 4vw;
+  gap: var(--gap-11xl) 4vw;
   margin-bottom: 58px;
 }
 .siteMapItem {
@@ -37,14 +37,14 @@
 }
 .siteMapList {
   margin: 0;
-  padding-left: 20px;
+  padding-left: var(--padding-xl);
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: var(--gap-3xs);
 }
 .listItem {
   font-family: var(--font-montserrat);
-  font-size: 20px;
+  font-size: var(--font-size-xl);
   font-weight: 600;
   line-height: 24.38px;
   text-align: left;
@@ -57,19 +57,24 @@
   margin: 0;
   margin-left: -18px;
   font-family: var(--font-montserrat);
-  font-size: 16px;
+  font-size: var(--font-size-base);
   font-weight: 500;
   line-height: 26px;
   text-align: left;
 }
+@media screen and (min-width:1440px) {
+  .siteMap{
+    max-width: 1440px;
+  }
+}
 @media screen and (max-width: 1260px) {
   .siteMapContent {
-    gap: 30px;
+    gap: var(--gap-11xl);
   }
 }
 @media screen and (max-width: 1160px) {
   .siteMapContent {
-    gap: 30px 0;
+    gap: var(--gap-11xl) 0;
   }
 }
 @media screen and (max-width: 1100px) and (min-width: 900px) {
@@ -77,7 +82,7 @@
     width: 28vw;
   }
   .siteMapTitle {
-    font-size: 38px;
+    font-size: var(--font-size-19xl);
     line-height: 52px;
   }
 }
@@ -86,24 +91,27 @@
     width: 42vw;
   }
   .siteMapTitle {
-    font-size: 38px;
+    font-size: var(--font-size-19xl);
     line-height: 52px;
   }
 }
 @media screen and (max-width: 727px) {
   .siteMap {
-    padding: 0px;
+    padding: 0px 0px var(--padding-17xl);
   }
   .siteMapItem {
     width: 100%;
   }
+  .siteMapContent{
+    margin-bottom: 0;
+  }
   .siteMapTitle {
-    font-size: 32px;
+    font-size: var(--font-size-13xl);
     line-height: 42px;
-    padding-bottom: 24px;
+    padding-bottom: var(--padding-5xl);
   }
   .siteMapContainer {
-    padding: 40px 24px 40px;
+    padding:var(--padding-51xl) var(--padding-21xl) var(--padding-60) ;
     background-image: url(/siteMapMobileBg.png);
   }
 }
