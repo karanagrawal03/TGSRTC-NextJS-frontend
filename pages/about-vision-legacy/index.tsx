@@ -39,7 +39,7 @@ const AboutVisionLegacy: any = () => {
             <div className={styles.tgsrtcIsCommittedContainer}>
               <div
                 className={styles.tgsrtcIsCommitted}
-              >{data?.visionContnet}</div>
+              >{data?.visionContent}</div>
             </div>
           </div>
         </section>
