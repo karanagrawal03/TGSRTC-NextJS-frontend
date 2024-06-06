@@ -4,6 +4,7 @@
   font-weight: 600;
   mix-blend-mode: normal;
 }
+
 .loremIpsumDolor {
   align-self: stretch;
   position: relative;
@@ -17,15 +18,17 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
 .texts {
   align-self: stretch;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: 8px;
-  height: 139px;
+  gap: var(  --gap-5xs);
+  height: 115px;
 }
+
 .lineSeparatorIcon {
   align-self: stretch;
   position: relative;
@@ -33,6 +36,7 @@
   overflow: clip;
   max-height: unset;
 }
+
 .lineSeparater {
   align-self: stretch;
   height: 0;
@@ -43,6 +47,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 .applyNow,
 .viewDetails {
   position: relative;
@@ -51,15 +56,18 @@
   min-width: 90px;
   cursor: pointer;
 }
+
 .applyNow {
   min-width: 79px;
 }
+
 .button2,
 .buttonHolder {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
+
 .button2 {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: var(--br-381xl);
@@ -71,6 +79,7 @@
   color: var(--support-white);
   cursor: pointer;
 }
+
 .buttonHolder {
   align-self: stretch;
   justify-content: space-between;
@@ -78,23 +87,26 @@
   font-size: var(--font-size-sm);
   color: var(--primary-green);
 }
+
 .cardTextHolder,
 .cards {
   display: flex;
   flex-direction: column;
   gap: var(--gap-5xl);
 }
+
 .cardTextHolder {
   align-self: stretch;
   align-items: center;
   justify-content: center;
 }
+
 .cards {
   width: 364px;
+  height: 247px;
   box-shadow: var(--card);
   border-radius: var(--br-base);
   background: linear-gradient(200.37deg, #e3f7ff, #fff);
-  align-items: flex-start;
   justify-content: flex-start;
   padding: var(--padding-5xl);
   box-sizing: border-box;
@@ -104,13 +116,17 @@
   color: var(--color-darkslategray);
   font-family: var(--font-montserrat);
 }
+
 @media screen and (max-width: 599px) {
   .internationalWomensDay {
     font-size: var(--font-size-lgi);
   }
+
   .cards {
-    width: 320px;
+    width: 312px;
+    height: 242px;
   }
+
   .buttonHolder {
     flex-wrap: wrap;
   }

@@ -31,14 +31,32 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
   return (
     <div className={styles.accordian}>
       <Accordion
-        className={styles.dropdown}
+        className={`${styles.dropdown} ${expanded ? styles.expandedAccordion : ''}`}
         expanded={expanded}
         onChange={onChange}
+        sx={{
+          "&.Mui-expanded": {
+            margin: "0px",
+            boxShadow: "0px 4px 10px 0px #E8E8E880"
+          },
+          ".MuiPaper-root-MuiAccordion-root": {
+            boxShadow: "unset !important"
+          }
+        }}
       >
         <AccordionSummary
           expandIcon={expanded ? <HorizontalRuleIcon /> : <AddIcon />}
           aria-controls="panel1-content"
           id="panel1-header"
+
+          sx={{
+            margin: "0px", ".MuiAccordionSummary-content": {
+              margin: "16px 0px"
+            },
+            ".MuiAccordionSummary-content.Mui-expanded": {
+              margin: "0px",
+            }
+          }}
           className={styles.before6AmContainer1}
         >
           <li className={`${styles.accordianHeading} ${headingStyles}`}>
@@ -47,7 +65,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
         </AccordionSummary>
       </Accordion>
       {expanded && (
-        <AccordionDetails sx={{padding:"0px"}} className={styles.accordianDetails}>
+        <AccordionDetails sx={{ padding: "0px" }} className={styles.accordianDetails}>
           <div className={`${styles.accordianTab} ${containerClassName}`}>
             <AccordianTab array={info} />
           </div>
