@@ -5,6 +5,7 @@ import BusPassOtherBusPasses from "../../components/bus-pass-other-bus-passes";
 import { APPLY_AND_RENEW, BUS_PASS_SERVICES } from "../../constants";
 import styles from "./index.module.css";
 import useFetch, { BASE_URL, UPLOADS_BASE_URL } from "../../services/service";
+
 const BusPassServices = () => {
   const { data, doFetch } = useFetch();
 
@@ -13,6 +14,7 @@ const BusPassServices = () => {
   }, []);
 
   const [width, setWidth] = useState<boolean>(false);
+  const [visible, setVisible] = useState<boolean>(true);
 
   useEffect(() => {
     const handleResize = () => {
@@ -26,6 +28,25 @@ const BusPassServices = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      if (scrollY > 100) {
+        setVisible(true);
+      } else {
+        setVisible(false);
+      }
+      console.log(scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div className={styles.busPassServices}>
       <section className={styles.busPassHeroBusPassService}>
@@ -49,6 +70,8 @@ const BusPassServices = () => {
           <h2 className={styles.applyRenew}>{data?.heroSection[0]?.subTitle}</h2>
         </div>
       </section>
+      <p style={{ display: visible ? 'block' : 'none', border: "10px solid" }}>hello</p>
+      <img className={styles.animation} src='/busAnimation.svg' />
       <BusPassOptions options={data?.bussPassOptions} title={data?.busPassOptionsTitle} />
       <BusPassOtherBusPasses options={data?.otherBusPasses} title={data?.otherBusPassOptionsTitle} />
     </div>

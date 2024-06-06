@@ -3,7 +3,7 @@ import { BUS_PASS_OPTIONS } from "../../constants";
 import { card2Data } from "../../constants/bus-pass-options";
 import OtherBusPassesCard from "../other-bus-passes-card";
 import styles from "./index.module.css";
-
+import bus from '../../public/busAnimation.svg'
 export type BusPassOptionsType = {
   className?: string;
 };
@@ -21,9 +21,10 @@ interface BusPassOptionsProps {
   title: string;
   className?: string;
 }
-const BusPassOptions: NextPage<BusPassOptionsProps> = ({ className = "", options, title  }) => {
+const BusPassOptions: NextPage<BusPassOptionsProps> = ({ className = "", options, title }) => {
   return (
     <section className={[styles.busPassOptions, className].join(" ")}>
+      
       <div className={styles.busPassOptionsWrapper}>
         <h1 className={styles.busPassOptions1}>{title}</h1>
       </div>
