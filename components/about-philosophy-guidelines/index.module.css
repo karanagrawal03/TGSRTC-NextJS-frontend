@@ -1,6 +1,6 @@
 .bulletPoints {
   margin: 0;
-  padding: 0;
+  padding: 0 0 0 16px;
 }
 .philosophyAndGuidelines {
   display: flex;
@@ -12,7 +12,6 @@
 .guidelines {
   display: flex;
   flex-direction: column;
-  gap: var(--gap-base);
   max-width: 100%;
 }
 .philosophyHeading,
@@ -42,11 +41,7 @@
     padding-left: 0;
     gap: var(--gap-31xl);
   }
-  .philosophy,
-.guidelines {
-  gap: var(--gap-xs);
-
-}
+ 
   .philosophyHeading,
 .guidelinesHeading {
   font-size:var(--font-size-xl);
@@ -59,10 +54,6 @@
   .philosophyAndGuidelines{
     gap: var(--gap-21xl);
   }
-  .philosophy,
-.guidelines {
-  gap: var(--gap-5xs);
-}
   .philosophyHeading,
 .guidelinesHeading {
   font-size: var(--font-size-base);
