@@ -40,19 +40,6 @@
   max-height: 100%;
   object-fit: cover;
 }
-.imagePlaceholderChild {
-  width: 364px;
-  height: 232px;
-  position: absolute;
-  margin: 0 !important;
-  top: -179px;
-  left: -70px;
-  filter: blur(110px);
-  border-radius: 50%;
-  background-color: var(--color-aliceblue);
-  mix-blend-mode: normal;
-  z-index: 1;
-}
 .busBhavan,
 .imagePlaceholder {
   position: relative;
@@ -367,19 +354,6 @@
   max-height: 100%;
   object-fit: cover;
 }
-.imagePlaceholderItem {
-  width: 364px;
-  height: 232px;
-  position: absolute;
-  margin: 0 !important;
-  top: -179px;
-  left: -70px;
-  filter: blur(110px);
-  border-radius: 50%;
-  background-color: var(--color-aliceblue);
-  mix-blend-mode: normal;
-  z-index: 1;
-}
 .picturesIcon2 {
   width: 100%;
   height: 100%;
@@ -391,19 +365,6 @@
   overflow: hidden;
   max-height: 100%;
   object-fit: cover;
-}
-.imagePlaceholderInner {
-  width: 364px;
-  height: 232px;
-  position: absolute;
-  margin: 0 !important;
-  top: -179px;
-  left: -70px;
-  filter: blur(110px);
-  border-radius: 50%;
-  background-color: var(--color-aliceblue);
-  mix-blend-mode: normal;
-  z-index: 1;
 }
 .frameIcon4 {
   height: 20px;
@@ -679,17 +640,6 @@
   max-height: 100%;
   object-fit: cover;
 }
-.ellipseDiv {
-  width: 364px;
-  height: 232px;
-  top: -179px;
-  left: -70px;
-  filter: blur(110px);
-  border-radius: 50%;
-  background-color: var(--color-aliceblue);
-  mix-blend-mode: normal;
-  z-index: 1;
-}
 .busBhavan3,
 .imagePlaceholder3 {
   position: relative;
@@ -711,7 +661,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   position: relative;
-  gap: 24px 22px;
+  gap: 24px 40px;
   font-size: var(--font-size-base);
   color: var(--text-black);
   font-family: var(--font-montserrat);

@@ -20,6 +20,7 @@
   font-size: var(--font-size-sm);
   line-height: 26px;
   font-family: var(--font-montserrat);
+  max-width: 1000px;
 }
 .businessDescription,
 .businessImage {
@@ -56,13 +57,13 @@
   box-sizing: border-box;
   font-size: var(--font-size-sm);
   font-family: var(--font-montserrat);
+  max-width: 1010px;
 }
 .businessContent,
 .businessContentWrapper,
 .imageCaptionContainer {
   display: flex;
   align-items: flex-start;
-  max-width: 100%;
 }
 .businessContent {
   width: 1045px;
