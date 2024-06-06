@@ -289,7 +289,9 @@ a {
   --padding-47xl:64px;
   --padding-70xl:70px;
   --padding-409xs:40.09px;
-  --padding-128px:128px
+  --padding-128px:128px;
+  --padding-120:120px;
+
   /* Border radiuses */
   --br-7xs: 6px;
   --br-base: 16px;
