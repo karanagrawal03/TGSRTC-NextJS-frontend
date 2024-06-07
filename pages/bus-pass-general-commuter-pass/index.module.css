@@ -177,14 +177,14 @@
   }
 }
 
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1366px) {
   .eachAccordian {
-    max-width: 1920px;
+    max-width: 1366px;
     margin: auto;
   }
 
   .knowMoreAboutStudentPassesWrapper {
-    max-width: 1920px;
+    max-width: 1366px;
     margin: auto;
   }
 }

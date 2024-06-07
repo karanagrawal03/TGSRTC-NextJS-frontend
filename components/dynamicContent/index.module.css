@@ -45,32 +45,5 @@
     }
 }
 
-@media screen and (max-width:414px) {
-    /* .contentItem {
-        display: flex;
-        flex-direction: column;
-        padding: var(--padding-41xl) var(--padding-5xl) var(--padding-41xl) var(--padding-5xl);
-        gap: var(--gap-5xl);
-    } */
 
-    /* .sequence {
-        font-size: var(--font-size-52xs);
-        margin-top: 0px;
-        text-align: left;
-    } */
-}
 
-@media screen and (max-width:360px) {
-    /* .contentItem {
-        display: flex;
-        flex-direction: column;
-        padding: var(--padding-41xl) var(--padding-5xl) var(--padding-41xl) var(--padding-5xl);
-        gap: var(--gap-5xl);
-    } */
-
-    /* .sequence {
-        font-size: var(--font-size-29xl);
-        text-align: left;
-        margin-top: 0px;
-    } */
-}
