@@ -145,7 +145,7 @@ const ReservationFormStyle = {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        gap: "20px",
+        gap: "25px",
         "@media (max-width: 750px)": {
             flexDirection: "row",
             paddingBottom: "12px",
@@ -204,7 +204,7 @@ const ReservationFormStyle = {
     box: {
         width: "100%",
         display: "flex",
-        gap: "11px",
+        gap: "6px",
         alignItems: "center",
         justifyContent: "center",
         "@media (max-width: 450px)": {
@@ -219,6 +219,7 @@ const ReservationFormStyle = {
         fontSize: "var(--font-size-base)",
         color: "#020202",
         borderRadius: "var(--br-7xs)",
+        border: "1px solid transparent !important",
         backgroundColor: "var(--color-whitesmoke-300)",
         // display: "flex",
         // flexDirection: "row",
@@ -243,6 +244,7 @@ const ReservationFormStyle = {
         fontSize: "var(--font-size-base)",
         color: "black",
         borderRadius: "var(--br-7xs)",
+        border: "1px solid transparent !important",
         backgroundColor: "var(--color-whitesmoke-300)",
         // display: "flex",
         // flexDirection: "row",

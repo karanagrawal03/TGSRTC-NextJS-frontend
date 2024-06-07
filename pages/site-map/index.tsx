@@ -15,11 +15,11 @@ const SiteMap: NextPageSiteMapType = () => {
   }, []);
 
   const MainStyles = styled('main')(()=>{
-    const maxWidth = 1300432;
+    const maxWidth = 1301798;
     const finalHeight = maxWidth/viewPortWidth
     if(viewPortWidth>=1366){
         return{
-            height:`952px`
+            height:`953px`
         }
     }
     if(viewPortWidth >900 && viewPortWidth < 1100){

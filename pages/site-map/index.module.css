@@ -6,7 +6,7 @@
 }
 .siteMapContainer {
   background-image: url(/siteMapBg.png);
-  background-size: cover;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
@@ -65,6 +65,7 @@
 @media screen and (min-width:1440px) {
   .siteMap{
     max-width: 1440px;
+    margin: 0 auto;
   }
 }
 @media screen and (max-width: 1260px) {
@@ -111,7 +112,7 @@
     padding-bottom: var(--padding-5xl);
   }
   .siteMapContainer {
-    padding:var(--padding-51xl) var(--padding-21xl) var(--padding-60) ;
+    padding:var(--padding-66xl) var(--padding-21xl) var(--padding-60) ;
     background-image: url(/siteMapMobileBg.png);
   }
 }

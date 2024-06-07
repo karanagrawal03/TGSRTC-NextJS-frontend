@@ -24,7 +24,7 @@ const SpecialBuses:NextPage<SpecialBusesType>=({specialBusOffersTitle,specialBus
             </div>
             <Carousel
               perView={1}
-              autoplay={true}
+              autoplay={false}
               children={[splBusOffersCards]}
             > 
             </Carousel>

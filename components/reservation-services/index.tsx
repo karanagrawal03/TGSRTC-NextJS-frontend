@@ -10,16 +10,16 @@ export type ReservationServicesType={
 
 const ReservationServices:NextPage<ReservationServicesType> = ({typesOfServiceTitle,typesOfServiceContent,TGSRTCDeliveringExcellenceTableData}) => {
   return (
-    <div className={styles.frameParent2}>
+    <section className={styles.frameParent}>
       <div className={styles.typesOfServicesParent}>
-        <h3 className={styles.typesOfServices}>{typesOfServiceTitle}</h3>
-        <p className={styles.advanceReservationFacility}>{typesOfServiceContent}</p>
-
+        <h3 className={styles.title}>{typesOfServiceTitle}</h3>
+        <p className={styles.content}>{typesOfServiceContent}</p>
         <Tables
           rows={TGSRTCDeliveringExcellenceTableData}
+          containerClassName={styles.table}
         />
       </div>
-    </div>
+    </section>
   );
 };
 
