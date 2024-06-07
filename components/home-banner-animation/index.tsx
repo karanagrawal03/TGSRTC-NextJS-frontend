@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Lottie from 'react-lottie';
+// import Lottie from 'react-lottie';
 import animationData from '../../public/web-bus-animation.json';
 import mobileAnimationData from '../../public/mobile-banner-animation.json';
 import styles from './index.module.css';
@@ -27,7 +27,7 @@ const ScrollAnimation: React.FC = () => {
 
   return (
     <div className={styles.animationContainer}>
-      <Lottie options={defaultOptions} />
+      {/* <Lottie options={defaultOptions} /> */}
     </div>
   );
 };

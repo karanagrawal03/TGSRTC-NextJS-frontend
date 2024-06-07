@@ -6,7 +6,7 @@ import ImageWithCaption from "../about-card-image";
 interface Image {
   src: string;
   caption: string;
-  mobileSrc:string;
+  mobileSrc: string;
 }
 
 interface ContentSection {
@@ -18,20 +18,22 @@ interface ContentSection {
 }
 
 const AboutCardData = ({ data }: { data: ContentSection }) => {
-    const isSingleImage = data?.images?.length === 1;
+  const isSingleImage = data?.images?.length === 1;
   return (
     <div className={styles.contentSection}>
       <h1 className={styles.title}>{data?.title}</h1>
-      <p className={styles.para}>{data?.para}</p>
-      <BulletPoints
-        items={data?.bullets}
-        containerClassName={styles.bulletFix}
-      />
-  {data?.images && (
-        <div className={styles.imagesContainer} >
+      {data?.para && <p className={styles.para}>{data?.para}</p>}
+      {data?.bullets && (
+        <BulletPoints
+          items={data?.bullets}
+          containerClassName={styles.bulletFix}
+        />
+      )}
+      {data?.images && (
+        <div className={styles.imagesContainer}>
           {data?.images.map((image, index) => (
             <ImageWithCaption
-              key={index}   
+              key={index}
               src={image.src}
               mobileSrc={image.mobileSrc}
               caption={image.caption}
