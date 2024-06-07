@@ -1,5 +1,7 @@
 .tableContainer {
   width: auto;
+  border: 0px;
+  box-shadow: 0px 4px 10px 0px #E8E8E8 !important;
 }
 
 .tableHead {
@@ -33,20 +35,28 @@
   color: var(--primary-green);
   cursor: pointer;
   padding: 0;
-  width: 120px;
   font-family: var(--font-montserrat);
   font-size: var(--font-size-sm);
   font-weight: 600;
 }
+
 .additionalClassName {
   cursor: pointer;
 }
+
 .additionalClassName:hover .actionButton {
   visibility: visible;
   padding: 0px;
 }
+
 @media screen and (max-width: 1280px) {
   .actionButton {
     visibility: visible;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .centerAlign {
+    text-align: center !important;
   }
 }

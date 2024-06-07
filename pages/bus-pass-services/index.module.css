@@ -72,6 +72,7 @@
   width: 100%;
   line-height: normal;
   letter-spacing: normal;
+  background-color: var(--support-grey-bg);
 }
 
 @media screen and (max-width: 750px) {

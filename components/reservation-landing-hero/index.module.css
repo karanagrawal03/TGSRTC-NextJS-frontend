@@ -3,57 +3,38 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-  line-height: normal;
-  letter-spacing: normal;
   box-sizing: border-box;
-}
-
-.reservationHeroLanding{
-  align-self: stretch;
-  max-width: 100%;
-  gap: var(--gap-3xs);
-  text-align: left;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
   font-size: var(--font-size-53xl);
   color: var(--support-white);
   font-family: var(--font-playfair-display);
 }
-.maskGroupIcon {
+.maskGroupIcon ,
+.maskGroupIconMobile{
   width: 100%;
   height: auto;
   position: relative;
-  max-width: 100%;
   overflow: hidden;
   flex-shrink: 0;
   object-fit: cover;
 }
 .maskGroupIconMobile{
   display: none;
-  width: 100%;
-  height: auto;
-  position: relative;
-  max-width: 100%;
-  overflow: hidden;
-  flex-shrink: 0;
-  object-fit: cover;
 }
 .tgsrtcOnlineBusContainer{
   position: absolute;
-  max-width: 868px;
-  top: 7.35vw;
-  left: 7.35vw;
+  top: 7.3vw;
+  left: 7.3vw;
   display: flex;
   flex-direction: column;
+  max-width: 868px;
 }
-.tgsrtcOnlineBus,
-.bookYourTickets {
+.bookYourTickets,
+.tgsrtcOnlineBus {
   margin: 0;
-  display: inline-block;
   mix-blend-mode: normal;
-  max-width: 100%;
-  z-index: 1;
 }
 .tgsrtcOnlineBus {
   font-size: inherit;
@@ -68,38 +49,48 @@
   line-height: 32px;
   font-weight: 500;
   font-family: var(--font-montserrat);
+  display: inline-block;
   text-shadow: 0 2px 3px rgba(0, 0, 0, 0.8);
+  max-width: 100%;
+  width: 599px;
 }
-@media screen and (max-width: 1100px) {
-  .maskGroupIcon{
-    height: calc(100vh - 100px);
+@media screen and (max-width: 1023px) {
+  .tgsrtcOnlineBusContainer{
+    top: 11vw;
+    left: 7vw;
   }
-}
-@media screen and (max-width: 750px) {
   .tgsrtcOnlineBus {
     font-size: var(--font-size-39xl);
-    line-height: 66px;
+    line-height: 68px;
+  }
+  .bookYourTickets {
+    width: 400px;
+    font-size: var(--font-size-lgi);
+    line-height: 28px;
   }
 }
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 720px) {
   .maskGroupIcon{
     display: none;
   }
   .maskGroupIconMobile{
     display: block;
   }
+}
+@media screen and (max-width: 599px) {
   .tgsrtcOnlineBusContainer{
-    max-width: 237px;
-    top: 55px;
-    left: 23px;
+    width: 237px;
+    top:15.3vw;
+    left: 6.4vw;
   }
   .tgsrtcOnlineBus {
-    font-size: var(--font-size-24xl);
-    line-height: 49px;
+    font-size: var(--font-size-42xl);
+    line-height: 56px;
   }
   .bookYourTickets {
-    font-size: var(--font-size-lgi);
+    width: 237px;
+    margin-top: 8px;
+    font-size: var(--font-size-xl);
     line-height: 26px;
-    margin: 16px 0 0;
   }
 }

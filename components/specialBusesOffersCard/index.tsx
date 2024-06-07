@@ -1,5 +1,6 @@
 import { ISpecialBusesOffers } from "../../constants/reservation-booking-service-ho";
 import { UPLOADS_BASE_URL } from "../../services/service";
+import BulletPoints from "../bullet-points";
 import styles from "./index.module.css";
 interface SpecialBusesOffersCardProps {
   item: ISpecialBusesOffers;
@@ -21,14 +22,15 @@ const SpecialBusesOffersCard : React.FC<SpecialBusesOffersCardProps> = ({ item }
           </div>
           <div className={styles.title}>{item?.title}</div>
           <div className={styles.list}>
-            {item?.list?.map((each: any, index: number) => (
+            {/* {item?.list?.map((each: any, index: number) => (
               <div className={styles.row}>
                 <div className={styles.dot}></div>
                 <div className={styles.listItem} key={index}>
                   {each?.title}
                 </div>
               </div>
-            ))}
+            ))} */}
+            <BulletPoints items={item?.list} containerClassName={styles.bulletPoints}/>
           </div>
         </div>
       </div>

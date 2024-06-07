@@ -48,7 +48,7 @@
   padding: 0px 0px 0px var(--padding-21xl);
   margin-bottom: 0px;
   min-height: 58px;
-  box-shadow: var(--card-shadow)
+  box-shadow: var(--card-shadow) !important
 }
 
 .accordianHeading {
@@ -69,6 +69,7 @@
   }
 
   .accordianTab {
+    padding-top: var(--padding-xl);
     padding-left: var(--padding-45xl);
     padding-right: var(--padding-45xl);
   }
@@ -87,9 +88,8 @@
   }
 
   .accordianTab {
-    margin-top: -15px;
     background-color: var(--support-white);
-    padding: 0px var(--padding-base) var(--padding-5xl) var(--padding-19xl);
+    padding: var(--padding-xl) var(--padding-base) var(--padding-5xl) var(--padding-19xl);
   }
 
   .accordianHeading {
@@ -111,6 +111,7 @@
   }
 
   .accordianTab {
+    padding-top: var(--padding-xl);
     padding-left: var(--padding-11xl);
     padding-right: var(--padding-11xl);
   }

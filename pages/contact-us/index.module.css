@@ -27,9 +27,11 @@
     top: 67px;
     left: 100px;
     right: 101px;
+    max-width: 1166px;
 }
 
 .contactContentLeft {
+    width: 50%;
     padding-top: var(--padding-14xl);
     padding-bottom: var(--padding-14xl);
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
@@ -82,7 +84,7 @@
 }
 
 .otherServices {
-    padding: var(--padding-xs) var(--gap-81xl) var(--gap-81xl) var(--gap-81xl);
+    padding: var(--padding-61xl) var(--gap-81xl) var(--gap-81xl) var(--gap-81xl);
     display: flex;
     flex-direction: column;
     gap: var(--gap-13xl);
@@ -128,9 +130,7 @@
         bottom: 80px;
     }
 
-    .contactContentLeft {
-        width: 50%;
-    }
+  
 }
 
 @media screen and (max-width:1365px) {
@@ -142,9 +142,6 @@
         bottom: 80px;
     }
 
-    .contactContentLeft {
-        width: 50%;
-    }
 }
 
 @media screen and (max-width:1200px) {
