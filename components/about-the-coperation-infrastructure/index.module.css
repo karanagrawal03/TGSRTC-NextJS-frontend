@@ -68,6 +68,9 @@
   .infrastructureContainer {
     padding: 0px var(--padding-5xl) var(--padding-5xl) var(--padding-5xl);
   }
+  .infrastructureText{
+    font-size: 32px;
+  }
   .cards {
     justify-content: center;
   }

@@ -39,9 +39,10 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
             margin: "0px",
             boxShadow: "0px 4px 10px 0px #E8E8E880"
           },
-          ".MuiPaper-root-MuiAccordion-root": {
-            boxShadow: "unset !important"
-          }
+          "&.MuiPaper-root-MuiAccordion-root": {
+            boxShadow: "0px 4px 10px 0px #E8E8E880"
+          },
+
         }}
       >
         <AccordionSummary
@@ -50,12 +51,14 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
           id="panel1-header"
 
           sx={{
+          
             margin: "0px", ".MuiAccordionSummary-content": {
               margin: "16px 0px"
             },
             ".MuiAccordionSummary-content.Mui-expanded": {
               margin: "0px",
-            }
+            },
+     
           }}
           className={styles.before6AmContainer1}
         >

@@ -802,7 +802,7 @@
   }
 
   .busPassGeneralCommuterPass2 {
-    padding: 0 var(--padding-5xl) var(--padding-60) var(--padding-5xl);
+    padding: 0 var(--padding-xl) var(--padding-60) var(--padding-xl);
   }
 }
 
@@ -836,7 +836,7 @@
   }
 
   .busPassGeneralCommuterPass2 {
-    padding: 0 var(--padding-5xl) var(--padding-60) var(--padding-5xl);
+    padding: var(--padding-60) var(--padding-xl) var(--padding-60) var(--padding-xl);
   }
 }
 

@@ -1,18 +1,21 @@
 .container {
   margin: 100px;
 }
+
 .profileHeading {
   color: black;
   margin: 0px;
+  margin-bottom: 32px;
   font-family: var(--font-playfair-display);
-  font-size: var(  --font-size-27xl);
+  font-size: var(--font-size-27xl);
   font-weight: 600;
   line-height: 61.32px;
   text-align: center;
 }
+
 .bulletPointsHeading {
   font-family: var(--font-playfair-display);
-  font-size: var(  --font-size-5xl);
+  font-size: var(--font-size-5xl);
   font-weight: 600;
   line-height: 40px;
   letter-spacing: 0.02em;
@@ -20,11 +23,13 @@
   color: var(--primary-red);
   margin: 0px;
 }
-.lowerContainer{
+
+.lowerContainer {
   display: flex;
   flex-direction: column;
-  gap: var( --gap-5xs);
+  gap: var(--gap-5xs);
 }
+
 .tsrtcAtAGlanceText {
   color: black;
   font-family: var(--font-montserrat);
@@ -34,18 +39,22 @@
   text-align: left;
   margin: 60px 0px 0px 0px;
 }
+
 .bulletPointsContainer {
   margin-top: 32px 0px 0px 0px;
 }
+
 .bulletpoints {
   margin: 0px;
   padding-left: 16px;
 }
+
 @media screen and (max-width: 1023px) {
-  .container{
+  .container {
     margin: 24px;
   }
-  .profileHeading{
+
+  .profileHeading {
     font-size: var(--font-size-13xl);
     font-weight: 600;
   }

@@ -33,11 +33,11 @@ const OtherBusPassesCard: NextPage<Cards3Type> = ({
   const router = useRouter();
   const handleClick = (index: number) => {
     if (index === 0) {
-      router.push(BUS_PASS_STUDENT_LINK);
-    } else if (index === 1) {
       router.push(BUS_PASS_GENERAL_LINK);
+    } else if (index === 1) {
+      router.push(BUS_PASS_STUDENT_LINK);
     } else if (index === 2) {
-      router.push(BUS_PASS_OTHER_LINK);
+      router.push(BUS_PASS_GENERAL_LINK);
     } else {
       router.push(BUS_PASS_LINK);
     }

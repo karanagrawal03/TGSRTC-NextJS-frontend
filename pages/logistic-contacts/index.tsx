@@ -57,7 +57,7 @@ const LogisticContacts: NextPage<LogisticContactsType> = ({
       </section>
       <section className={[styles.tableSection, className].join(" ")}>
         <h2 className={styles.title}>{data?.logisticsContactsTitle}</h2>
-        <CustomTable rows={data?.logisticsContactsTableData} />
+        <CustomTable rowsClassName={styles.rowClass} rows={data?.logisticsContactsTableData} />
       </section>
     </>
   );

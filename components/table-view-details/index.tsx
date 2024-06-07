@@ -42,16 +42,17 @@ const CustomTable: React.FC<TableProps> = ({
           <TableRow className={styles.tableHead}>
             {Object.keys(headers).map((key, idx) => (
               <TableCell
-                className={`${styles.tableHeadCell} ${
-                  tableHeadCellStyles ? tableHeadCellStyles : ""
-                }`}
+                className={`${styles.tableHeadCell} ${tableHeadCellStyles ? tableHeadCellStyles : ""
+                  } ${key === "Action" ? styles.centerAlign : ""}`}
                 key={key}
                 sx={{
                   paddingTop: "10px",
                   paddingBottom: "10px",
-                  paddingLeft: "20px",
+                  paddingLeft: "20px !important",
                   width: columnWidths ? columnWidths[idx] : "auto",
                   color: "#FFFFFF",
+                  border: "0px solid",
+
                 }}
               >
                 {headers[key]}
@@ -63,26 +64,26 @@ const CustomTable: React.FC<TableProps> = ({
           {bodyRows.map((row, index) => (
             <TableRow
               key={index}
-              className={`${index % 2 === 0 ? styles.evenRow : styles.oddRow} ${
-                styles.additionalClassName
-              }  ${rowsClassName}`}
+              className={`${index % 2 === 0 ? styles.evenRow : styles.oddRow} ${styles.additionalClassName
+                }  ${rowsClassName}`}
             >
               {Object.keys(row).map((key) => (
                 <TableCell
-                  className={`${styles.tableCell} ${
-                    tableCellStyles ? tableCellStyles : ""
-                  }`}
+                  className={`${styles.tableCell} ${tableCellStyles ? tableCellStyles : ""
+                    }`}
                   key={key}
                   align="left"
                   sx={{
-                    paddingTop: "15.5px",
-                    paddingBottom: "15.5px",
-                    paddingLeft: "20px",
+                    paddingTop: "10px",
+                    paddingBottom: "10px",
+                    paddingLeft: "20px !important",
                     width: columnWidths ? columnWidths[key] : "auto",
+                    border: "0px solid"
                   }}
                 >
                   {key === "Action" ? (
                     <button
+
                       className={styles.actionButton}
                       onClick={() => console.log("View Details")}
                     >

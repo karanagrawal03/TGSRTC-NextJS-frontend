@@ -3,12 +3,12 @@
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  padding: var(--padding-81xl) var(--padding-21xl);
+  padding: var(--padding-81xl) var(--padding-81xl);
   gap: var(--gap-13xl);
 }
 
 .aboutTsrtcLeadershipContent {
-  width: 1172px;
+  /* width: 1172px; */
   max-width: 100%;
   display: flex;
   justify-content: center;
@@ -16,6 +16,7 @@
   background-color: var(--support-white);
   text-align: center;
 }
+
 .title {
   text-align: center;
   font-family: var(--font-playfair-display);
@@ -38,8 +39,10 @@
   position: relative;
   border-radius: var(--br-base);
   overflow: hidden;
+  width: 314px;
+  height: 497px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: var(--padding-5xl) var(--padding-5xl) var(--padding-12xl);
+  padding: var(--padding-5xl) var(--padding-5xl);
   background: linear-gradient(to top, #e3f7ff -1%, #ffffff 78.33%);
   gap: var(--gap-3xs);
 }
@@ -100,6 +103,7 @@
   font-family: var(--font-montserrat);
   font-size: var(--font-size-sm);
 }
+
 .leaderNameText {
   text-align: center;
   margin: 0px;
@@ -112,30 +116,41 @@
   .tsrtcLeadershipCards {
     justify-content: center;
   }
+
 }
 
-@media screen and (max-width: 947px) {
+@media screen and (max-width: 1080px) {
+  .leadershipCard {
+    height: 397px;
+    width: 269px;
+  }
+
   .tsrtcLeadershipImages {
     max-width: 264px;
     max-height: 319px;
   }
+
   .texts {
     max-width: 264px;
     max-height: 319px;
   }
+
   .leaderNameText {
     font-size: var(--font-size-base);
   }
+
   .position {
     font-weight: 400;
     text-align: center;
     font-family: var(--font-montserrat);
     font-size: var(--font-size-sm);
   }
+
   .tsrtcLeadershipCards {
     align-items: center;
     justify-content: center;
   }
+
   .aboutTsrtcLeadership {
     padding: var(--padding-31xl);
     gap: var(--gap-5xl);
@@ -144,16 +159,19 @@
 
 @media screen and (max-width: 599px) {
   .aboutTsrtcLeadership {
-    padding: var(--padding-5xl);
+    padding: var(--padding-xl);
     padding-top: var(--padding-41xl);
     padding-bottom: var(--padding-41xl);
   }
+
   .title {
     font-size: var(--font-size-13xl);
   }
+
   .tsrtcLeadershipCards {
-    gap: var(--padding-5xl);
+    gap: 40px;
   }
+
   .leadershipCard {
     border-radius: var(--br-xs);
     gap: var(--padding-base);
