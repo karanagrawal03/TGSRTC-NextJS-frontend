@@ -194,12 +194,10 @@
 }
 
 @media screen and (max-width: 1100px) {
-
   .linksContainer,
   .logo {
     flex: 1;
   }
-
 }
 
 @media screen and (max-width: 1049px) {
@@ -223,21 +221,26 @@
     gap: var(--gap-18xl);
   }
 }
-@media screen and (max-width:900px) {
-  
+@media screen and (max-width: 900px) {
+  .footerLogoSection {
+    padding-bottom: var(--padding-13xl);
+  }
   .footerSection {
     flex-wrap: wrap;
   }
-  .linksContainer{
+  .linksContainer {
     margin: auto;
   }
 }
 @media screen and (max-width: 599px) {
   .linksContainer {
     flex-wrap: wrap;
-    gap:0px;
+    gap: 0px;
     justify-content: space-between;
     min-width: 314px;
     max-width: 314px;
+  }
+  .footerLogoSection {
+    padding-bottom: var(--padding-21xl);
   }
 }

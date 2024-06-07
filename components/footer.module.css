@@ -1,4 +1,5 @@
 .lineSeparatorIcon {
+  display: none;
   align-self: stretch;
   position: relative;
   max-width: 100%;
@@ -12,6 +13,14 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    white,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
 }
 
 .recognitionLogoIcon,
@@ -167,7 +176,8 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: var(--padding-21xl) var(--padding-21xl) var(--padding-5xs) var(--padding-xl);
+  padding: var(--padding-21xl) var(--padding-21xl) var(--padding-5xs)
+    var(--padding-21xl);
   box-sizing: border-box;
   gap: var(--gap-13xl);
   background-image: url(/footer@3x.png);
@@ -195,9 +205,14 @@
     padding: 0;
     margin: 0 auto;
   }
-
+  .recognitionAndSocialMediaC {
+    gap: var(--gap-13xl);
+  }
   .socialMediaContainer {
     margin: auto;
+  }
+  .footer {
+    padding: var(--padding-11xl);
   }
 }
 
@@ -209,7 +224,7 @@
 
   .footer {
     gap: var(--gap-21xl);
-    padding: var(--padding-21xl) var(--padding-5xl) var(--padding-xl);
+    padding: var(--padding-21xl) var(--padding-xl) var(--padding-xl);
   }
 
   .recognitionContainerWrapper {
@@ -222,7 +237,7 @@
     margin: 0 auto;
   }
 
-  .downloadOurApp ,
+  .downloadOurApp,
   .downloadPlartformContainer {
     margin: 0 auto;
   }
@@ -240,5 +255,8 @@
     width: 100%;
     height: 100%;
     display: none;
+  }
+  .recognitionAndSocialMediaC {
+    gap: var(--gap-21xl);
   }
 }
