@@ -1,10 +1,18 @@
 .busPassOptions1 {
   margin: 0;
-  position: relative;
   font-size: var(--font-size-27xl);
   font-weight: 600;
   font-family: inherit;
   mix-blend-mode: normal;
+}
+
+.busPassOptions {
+  position: relative;
+}
+
+.animation {
+  position: sticky;
+  top: 0px;
 }
 
 .busPassOptionsWrapper {
@@ -91,7 +99,6 @@
 @media screen and (min-width: 1366px) {
   .cardsContainer {
     max-width: 1366px;
-    
     margin: 0px auto;
   }
 }

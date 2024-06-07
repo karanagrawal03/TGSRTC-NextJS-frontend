@@ -189,6 +189,8 @@
   font-size: var(--font-size-xs);
   color: var(--support-white);
   font-family: var(--font-montserrat);
+  z-index: 110;
+  position: relative;
 }
 .recognitionTextIconSection {
   display: none;

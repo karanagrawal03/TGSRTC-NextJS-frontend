@@ -154,7 +154,6 @@
 .cards,
 .cardsContainer {
   display: flex;
-
   box-sizing: border-box;
   max-width: 100%;
 }

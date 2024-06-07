@@ -3,8 +3,9 @@ import { useEffect, useState } from "react";
 import BusPassOptions from "../../components/bus-pass-options";
 import BusPassOtherBusPasses from "../../components/bus-pass-other-bus-passes";
 import { APPLY_AND_RENEW, BUS_PASS_SERVICES } from "../../constants";
-import styles from "./index.module.css";
 import useFetch, { BASE_URL, UPLOADS_BASE_URL } from "../../services/service";
+import styles from './index.module.css'
+import AnimationBus from "../../components/animation-bus";
 const BusPassServices = () => {
   const { data, doFetch } = useFetch();
 
@@ -26,6 +27,9 @@ const BusPassServices = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+
+
   return (
     <div className={styles.busPassServices}>
       <section className={styles.busPassHeroBusPassService}>
@@ -49,6 +53,7 @@ const BusPassServices = () => {
           <h2 className={styles.applyRenew}>{data?.heroSection[0]?.subTitle}</h2>
         </div>
       </section>
+      <AnimationBus />
       <BusPassOptions options={data?.bussPassOptions} title={data?.busPassOptionsTitle} />
       <BusPassOtherBusPasses options={data?.otherBusPasses} title={data?.otherBusPassOptionsTitle} />
     </div>
