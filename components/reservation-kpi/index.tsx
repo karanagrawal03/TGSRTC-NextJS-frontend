@@ -21,16 +21,12 @@ const ReservationKPIs: NextPage<ReservationKPIsType> = ({ kpiData,className = ""
         <>
           <div className={styles.kParent}>
             <div className={styles.kpiHeading}>
-              <span>
-                <KpiCounter target={kpi.number} decimals={1}/>
-              </span>
+              <KpiCounter target={kpi.number} decimals={1}/>
               <span className={styles.kpiMetric}>{kpi.metrics}</span>
             </div>
             <div className={styles.kpiLabel}>{kpi.label}</div>
           </div>
-          <div className={styles.lineSeparator}>
-            <div className={styles.lineSeparatorWrapper}></div>
-          </div>
+          <div className={styles.lineSeparator}></div>
         </>
       ))}
       </div>
