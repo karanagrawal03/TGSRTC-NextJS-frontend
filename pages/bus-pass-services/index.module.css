@@ -26,12 +26,7 @@
   flex-direction: column;
 }
 
-.animation {
-  position: fixed;
-  top: 60vh;
-  left: 0px;
-  z-index: 99;
-}
+
 
 .busPassServices1 {
   font-size: var(--font-size-53xl);
