@@ -117,7 +117,7 @@
   }
 
   .busPassGeneralCommuterPass2 {
-    padding: 0 var(--padding-5xl) var(--padding-60) var(--padding-5xl);
+    padding: var(--padding-60) var(--padding-xl) var(--padding-60) var(--padding-xl);
   }
 }
 
@@ -165,14 +165,14 @@
   }
 }
 
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1366px) {
   .eachAccordian {
-    max-width: 1920px;
+    max-width: 1366px;
     margin: auto;
   }
 
   .knowMoreAboutStudentPassesWrapper {
-    max-width: 1920px;
+    max-width: 1366px;
     margin: auto;
   }
 }

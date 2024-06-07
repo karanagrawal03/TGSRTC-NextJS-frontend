@@ -15,25 +15,30 @@
   font-weight: 500;
   line-height: 26px;
   margin: 0;
+  padding-top: 16px;
 }
 .bulletFix{
     margin:0;
     padding: 0;
+    margin-left: 16px;
 }
 .contentSection{
-    gap: var(--gap-base);
     display: flex;
     flex-direction: column;
     width: 81.75%;
     max-width: 953px;
 }
 .imagesContainer{
+    padding-top: 40px;
     display: flex;
     gap: 40px;
 }
 @media screen and (max-width: 1023px) {
     .imagesContainer{
         flex-direction: column;
+    }
+    .contentSection{
+        width: 100%;
     }
 }
 @media screen and (max-width: 599px) {
@@ -46,5 +51,9 @@
     }
     .para{
         font-size: var(--font-size-sm);
+    }
+    .bulletFix{
+        margin: 0;
+        padding-right: 0 !important;
     }
 }

@@ -6,10 +6,12 @@
   font-family: inherit;
   mix-blend-mode: normal;
 }
+
 .h1,
 .vectorIcon {
   position: absolute;
 }
+
 .vectorIcon {
   height: 100%;
   width: 100%;
@@ -21,6 +23,7 @@
   overflow: hidden;
   max-height: 100%;
 }
+
 .h1 {
   margin: 0;
   top: 22px;
@@ -32,6 +35,7 @@
   min-width: 21px;
   z-index: 1;
 }
+
 .vectorParent {
   position: absolute;
   height: 100%;
@@ -41,9 +45,10 @@
   bottom: 0;
   left: 0;
 }
+
 .frameChild {
-  max-height: 100px;
-  max-width: 140px;
+  height: 100px;
+  width: 140px;
   z-index: 2;
 }
 
@@ -56,15 +61,18 @@
   padding: var(--padding-xs-5) var(--padding-3xl);
   box-sizing: border-box;
 }
+
 .infographicContainerWrapper {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .bulkCtvCargo,
 .rates {
   margin: 0;
 }
+
 .busPasses {
   margin: 0;
   position: relative;
@@ -74,6 +82,7 @@
   mix-blend-mode: normal;
   max-width: 193px;
 }
+
 .loremIpsumDolor {
   margin: 0;
   align-self: stretch;
@@ -87,6 +96,7 @@
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
+
 .texts {
   align-self: stretch;
   display: flex;
@@ -95,6 +105,7 @@
   justify-content: flex-start;
   gap: var(--gap-5xs);
 }
+
 .lineSeparatorIcon {
   align-self: stretch;
   position: relative;
@@ -102,6 +113,7 @@
   overflow: clip;
   max-height: unset;
 }
+
 .lineSeparater {
   align-self: stretch;
   height: 0;
@@ -110,6 +122,7 @@
   align-items: flex-start;
   justify-content: flex-start;
 }
+
 .applyNow {
   position: relative;
   font-size: var(--font-size-sm);
@@ -120,6 +133,7 @@
   display: inline-block;
   min-width: 79px;
 }
+
 .button1 {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: var(--br-381xl);
@@ -131,6 +145,7 @@
   padding: var(--padding-4xs) var(--padding-5xl) var(--padding-3xs);
   white-space: nowrap;
 }
+
 .applyNow1 {
   position: relative;
   font-size: var(--font-size-sm);
@@ -139,12 +154,14 @@
   color: var(--support-white);
   text-align: center;
 }
+
 .button2,
 .buttonsContainer {
   flex-direction: row;
   align-items: center;
   justify-content: center;
 }
+
 .button2 {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: var(--br-381xl);
@@ -153,6 +170,7 @@
   padding: var(--padding-4xs) var(--padding-5xl) var(--padding-3xs);
   white-space: nowrap;
 }
+
 .buttonsContainer {
   cursor: pointer;
   border: 0;
@@ -161,12 +179,14 @@
   display: flex;
   gap: var(--gap-base);
 }
+
 .bodyContainer,
 .cards {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
+
 .bodyContainer {
   align-self: stretch;
   align-items: center;
@@ -175,8 +195,8 @@
   color: var(--text-grey-body-text);
   font-family: var(--font-montserrat);
 }
+
 .cards {
-  flex: 1;
   box-shadow: var(--table-shadow);
   border-radius: var(--br-base);
   background-color: var(--support-white);
@@ -184,9 +204,10 @@
   padding: var(--padding-21xl);
   box-sizing: border-box;
   gap: var(--gap-7xs);
-  min-width: 278px;
-  max-width: 100%;
+  width: 427px;
+  height: 390px;
 }
+
 .vectorIcon1 {
   position: absolute;
   height: 100%;
@@ -199,6 +220,7 @@
   overflow: hidden;
   max-height: 100%;
 }
+
 .h11 {
   margin: 0;
   position: absolute;
@@ -211,6 +233,7 @@
   min-width: 26px;
   z-index: 1;
 }
+
 .vectorGroup {
   position: absolute;
   height: 100%;
@@ -220,6 +243,7 @@
   bottom: 0;
   left: 0;
 }
+
 .frameItem {
   position: absolute;
   top: 35px;
@@ -228,11 +252,13 @@
   height: 33.3px;
   z-index: 2;
 }
+
 .frameGroup {
   align-self: stretch;
   height: 70px;
   position: relative;
 }
+
 .infographicsItem {
   margin-left: -25.099999999998545px;
   width: 146px;
@@ -242,6 +268,7 @@
   border-radius: 50%;
   background-color: var(--color-gray-200);
 }
+
 .infographics1 {
   width: 140px;
   display: flex;
@@ -251,6 +278,7 @@
   padding: var(--padding-xs-5) var(--padding-3xl);
   box-sizing: border-box;
 }
+
 .infographicContainer1,
 .infographicContainerContainer {
   display: flex;
@@ -258,14 +286,17 @@
   align-items: flex-start;
   justify-content: flex-start;
 }
+
 .infographicContainerContainer {
   align-self: stretch;
   justify-content: center;
 }
+
 .parcelCovers,
 .tariffParcels {
   margin: 0;
 }
+
 .busPasses1 {
   margin: 0;
   position: relative;
@@ -274,6 +305,7 @@
   font-family: inherit;
   mix-blend-mode: normal;
 }
+
 .loremIpsumDolor1 {
   margin: 0;
   align-self: stretch;
@@ -287,6 +319,7 @@
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
+
 .texts1 {
   align-self: stretch;
   display: flex;
@@ -295,6 +328,7 @@
   justify-content: flex-start;
   gap: var(--gap-5xs);
 }
+
 .lineSeparatorIcon1 {
   align-self: stretch;
   position: relative;
@@ -302,6 +336,7 @@
   overflow: clip;
   max-height: unset;
 }
+
 .lineSeparater1 {
   align-self: stretch;
   height: 0;
@@ -310,6 +345,7 @@
   align-items: flex-start;
   justify-content: flex-start;
 }
+
 .applyNow2 {
   position: relative;
   font-size: var(--font-size-sm);
@@ -320,6 +356,7 @@
   display: inline-block;
   min-width: 79px;
 }
+
 .button11 {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: var(--br-381xl);
@@ -331,6 +368,7 @@
   padding: var(--padding-4xs) var(--padding-5xl) var(--padding-3xs);
   white-space: nowrap;
 }
+
 .applyNow3 {
   position: relative;
   font-size: var(--font-size-sm);
@@ -339,12 +377,14 @@
   color: var(--support-white);
   text-align: center;
 }
+
 .button21,
 .buttonsContainer1 {
   flex-direction: row;
   align-items: center;
   justify-content: center;
 }
+
 .button21 {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: var(--br-381xl);
@@ -353,6 +393,7 @@
   padding: var(--padding-4xs) var(--padding-5xl) var(--padding-3xs);
   white-space: nowrap;
 }
+
 .buttonsContainer1 {
   cursor: pointer;
   border: 0;
@@ -361,12 +402,14 @@
   display: flex;
   gap: var(--gap-base);
 }
+
 .bodyContainer1,
 .cards1 {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
+
 .bodyContainer1 {
   align-self: stretch;
   align-items: center;
@@ -375,6 +418,7 @@
   color: var(--text-grey-body-text);
   font-family: var(--font-montserrat);
 }
+
 .cards1 {
   flex: 1;
   box-shadow: var(--table-shadow);
@@ -388,12 +432,14 @@
   max-width: 100%;
   font-size: var(--font-size-13xl);
 }
+
 .cardContainer,
 .logisticBookYourCargoSecti {
   display: flex;
   gap: var(--gap-21xl);
   max-width: 100%;
 }
+
 .cardContainer {
   width: 894px;
   flex-direction: row;
@@ -404,6 +450,7 @@
   font-size: var(--font-size-21xl);
   font-family: var(--font-inter);
 }
+
 .logisticBookYourCargoSecti {
   align-self: stretch;
   background-color: var(--support-grey-bg);
@@ -418,23 +465,34 @@
   color: var(--color-black);
   font-family: var(--font-playfair-display);
 }
+
 @media screen and (max-width: 750px) {
+
   .bookYourCargo {
     font-size: var(--font-size-18xl);
   }
+
   .h1 {
     font-size: var(--font-size-13xl);
   }
+
   .h11 {
     font-size: var(--font-size-7xl);
   }
+
   .logisticBookYourCargoSecti {
     gap: var(--gap-xl);
-    padding-top: var(--padding-33xl);
+    padding-top: 128px;
     padding-bottom: var(--padding-46xl);
     box-sizing: border-box;
   }
+
+  .cards {
+    width: 312px;
+    height: 338px;
+  }
 }
+
 @media screen and (max-width: 635px) {
   .logisticBookYourCargoSecti {
     gap: var(--gap-xl);
@@ -442,37 +500,46 @@
     padding-right: var(--padding-5xl);
   }
 }
+
 @media screen and (max-width: 450px) {
   .bookYourCargo {
     font-size: var(--font-size-13xl);
   }
+
   .h1 {
     font-size: var(--font-size-5xl);
   }
+
   .busPasses {
     font-size: var(--font-size-lgi);
   }
+
   .cards {
     padding: var(--padding-xl);
     padding-top: var(--padding-7xl);
     padding-bottom: var(--padding-7xl);
     box-sizing: border-box;
   }
-  .buttonsContainer{
+
+  .buttonsContainer {
     width: 100%;
   }
-  .button1{
+
+  .button1 {
     width: 100%;
   }
+
   .busPasses1,
   .h11 {
     font-size: var(--font-size-lgi);
   }
+
   .cards1 {
     padding-top: var(--padding-7xl);
     padding-bottom: var(--padding-7xl);
     box-sizing: border-box;
   }
+
   .cardContainer {
     gap: var(--gap-xl);
   }

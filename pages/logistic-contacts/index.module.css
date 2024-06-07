@@ -1,6 +1,7 @@
 .tableContainer {
   width: 100%;
 }
+
 .bgIcon,
 .bgIconMobile {
   width: 100%;
@@ -15,6 +16,7 @@
 .bgIconMobile {
   display: none;
 }
+
 .logisticContactsHero {
   overflow: hidden;
   flex-direction: row;
@@ -32,8 +34,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: var(--padding-61xl) var(--padding-81xl) var(--padding-81xl)
-    var(--padding-81xl);
+  padding: var(--padding-61xl) var(--padding-81xl) var(--padding-81xl) var(--padding-81xl);
   gap: var(--gap-base);
   max-width: 100%;
   text-align: left;
@@ -41,6 +42,7 @@
   color: var(--primary-red);
   font-family: var(--font-playfair-display);
 }
+
 .title {
   margin: 0;
   position: relative;
@@ -53,25 +55,34 @@
   max-width: 100%;
   text-align: left;
 }
+
 .tsrtcLogoIcon {
   position: relative;
   object-fit: contain;
 }
+
 .busDust {
   width: 128px;
   height: 780px;
   display: none;
   z-index: 4;
 }
+
+.rowClass:hover {
+  background-color: var(--color-whitesmoke);
+}
+
 .tsrtcLogoIcon {
   height: 70.4px;
   width: 70.4px;
 }
+
 .icon {
   width: 289.1px;
   height: 24.4px;
   position: relative;
 }
+
 .telanganaStateRoadTransport {
   align-self: stretch;
   height: 11.3px;
@@ -80,6 +91,7 @@
   overflow: hidden;
   flex-shrink: 0;
 }
+
 .tsrtcLogo,
 .tsrtcLogo1 {
   display: flex;
@@ -88,18 +100,21 @@
   gap: var(--gap-3xs-4);
   max-width: 100%;
 }
+
 .tsrtcLogo1 {
   flex: 1;
   flex-direction: column;
   align-items: flex-start;
   padding: 0 0 var(--padding-12xs-9);
 }
+
 .tsrtcLogo {
   width: 504px;
   flex-direction: row;
   align-items: center;
   padding: 0;
 }
+
 .reservations {
   text-decoration: none;
   position: relative;
@@ -122,6 +137,7 @@
   width: 100%;
   object-fit: cover;
 }
+
 .logisticsContentWrapper {
   display: flex;
   flex-direction: column;
@@ -174,9 +190,8 @@
     line-height: 28px;
   }
 
-  .tableSection{
-    padding: var(--padding-5xl) var(--padding-5xl) var(--padding-41xl)
-    var(--padding-5xl);
+  .tableSection {
+    padding: var(--padding-5xl) var(--padding-5xl) var(--padding-41xl) var(--padding-5xl);
   }
 }
 
@@ -189,11 +204,13 @@
     max-width: 400px;
     position: absolute;
   }
+
   .heroTitleStyles {
     font-size: var(--font-size-42xl);
     line-height: 56px;
   }
-  .bgIconMobile{
+
+  .bgIconMobile {
     display: block;
   }
 
@@ -201,20 +218,22 @@
     font-size: var(--font-size-xl);
     line-height: 26px;
   }
+
   .title {
     font-size: var(--font-size-base);
   }
-  .tableSection{
-    padding: var(--padding-5xl) var(--padding-5xl) var(--padding-41xl)
-    var(--padding-5xl);
+
+  .tableSection {
+    padding: var(--padding-5xl) var(--padding-5xl) var(--padding-41xl) var(--padding-5xl);
   }
 }
 
 @media screen and (max-width: 450px) {
-  .title{
+  .title {
     font-size: var(--font-size-xl);
     line-height: normal;
   }
+
   .logisticsContentWrapper {
     top: 210.57px;
     left: 23px;
@@ -222,10 +241,12 @@
     max-width: 237px;
     position: absolute;
   }
+
   .heroTitleStyles {
     font-size: var(--font-size-42xl);
     line-height: 56px;
   }
+
   .heroSubTitleStyles {
     font-size: var(--font-size-base);
     line-height: 26px;
@@ -237,9 +258,9 @@
   .logisticContactsHero {
     box-sizing: border-box;
   }
+
   .tableSection {
-    padding: var(--padding-5xl) var(--padding-5xl) var(--padding-41xl)
-      var(--padding-5xl);
+    padding: var(--padding-5xl) var(--padding-5xl) var(--padding-41xl) var(--padding-5xl);
     gap: var(--gap-base);
     text-align: left;
   }

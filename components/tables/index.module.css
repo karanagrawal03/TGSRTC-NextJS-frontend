@@ -10,9 +10,10 @@
 }
 
 .tableHeadCell {
-  color: #ffffff;
-  font-family: var(--font-montserrat);
-  font-size: var(--font-size-sm);
+  color: #ffffff !important;
+  font-family: var(--font-montserrat) !important;
+  font-size: var(--font-size-sm) !important;
+  font-weight: 600 !important;
 }
 
 .oddRow {
