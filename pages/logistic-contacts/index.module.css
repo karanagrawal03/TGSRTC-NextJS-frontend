@@ -182,9 +182,19 @@
 
 
 @media screen and (max-width: 750px) {
+  .logisticsContentWrapper {
+    top: 270.57px;
+    left: 23px;
+    gap: var(--gap-base);
+    max-width: 400px;
+    position: absolute;
+  }
   .heroTitleStyles {
     font-size: var(--font-size-42xl);
     line-height: 56px;
+  }
+  .bgIconMobile{
+    display: block;
   }
 
   .heroSubTitleStyles {
@@ -201,6 +211,10 @@
 }
 
 @media screen and (max-width: 450px) {
+  .title{
+    font-size: var(--font-size-xl);
+    line-height: normal;
+  }
   .logisticsContentWrapper {
     top: 210.57px;
     left: 23px;

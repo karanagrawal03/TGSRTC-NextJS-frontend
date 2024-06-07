@@ -88,19 +88,6 @@
   max-height: 100%;
   object-fit: cover;
 }
-.imagePlaceholderChild {
-  width: 364px;
-  height: 232px;
-  position: absolute;
-  margin: 0 !important;
-  top: -179px;
-  left: -70px;
-  filter: blur(110px);
-  border-radius: 50%;
-  background-color: var(--color-aliceblue);
-  mix-blend-mode: normal;
-  z-index: 1;
-}
 .busBhavan,
 .imagePlaceholder {
   position: relative;
@@ -419,19 +406,6 @@
   font-weight: 600;
   font-family: inherit;
   mix-blend-mode: normal;
-}
-.imagePlaceholderItem {
-  width: 364px;
-  height: 232px;
-  position: absolute;
-  margin: 0 !important;
-  top: -179px;
-  left: -70px;
-  filter: blur(110px);
-  border-radius: 50%;
-  background-color: var(--color-aliceblue);
-  mix-blend-mode: normal;
-  z-index: 1;
 }
 .busBhavan1,
 .imagePlaceholder1 {

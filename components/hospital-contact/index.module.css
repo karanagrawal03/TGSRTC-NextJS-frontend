@@ -81,7 +81,7 @@
 .phone1 {
   flex: 1;
   gap: var(--gap-5xs);
-  min-width:336px; /* 348px; */
+  min-width:336px;
   font-family: var(--font-montserrat);
 }
 .email {
@@ -171,18 +171,18 @@
     padding-top: var(--padding-46xl);
     box-sizing: border-box;
   }
-}
-@media screen and (max-width: 924px) {
+  .lineIcon{
+    display: none;
+  }
   .phoneContainer {
     flex-direction: column;
     gap: var(--gap-mini);
   }
+}
+@media screen and (max-width: 924px) {
   .phone , 
   .phone1 {
     justify-content: center;
-  }
-  .lineIcon{
-    display: none;
   }
   .contactImageWeb{
     display: none;

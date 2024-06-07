@@ -1,7 +1,7 @@
 .animation {
     position: fixed;
-    top: 30vh;
-    left: 50px;
+    top: 0vh;
+    left: 22px;
     z-index: 99;
 }
 
@@ -36,3 +36,15 @@
     width: 50.96px;
     height: 50.27px;
 }
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    position: relative;
+  }
+  
+
+  

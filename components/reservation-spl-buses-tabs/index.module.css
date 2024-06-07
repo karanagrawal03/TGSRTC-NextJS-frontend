@@ -1,18 +1,22 @@
-
 .muiForm {
   display: none;
 }
-@media screen and (max-width: 1366px) {
+
+@media screen and (max-width: 1365px) {
   .muiForm {
     display: block;
 
   }
+
   .muiTabs {
     display: none;
   }
 }
-@media screen and (min-width: 1920px){
-  .muiTabs,.muiForm{
+
+@media screen and (min-width: 1920px) {
+
+  .muiTabs,
+  .muiForm {
     max-width: 1920px;
     margin: auto;
   }

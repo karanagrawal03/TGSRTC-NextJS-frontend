@@ -31,10 +31,10 @@
   mix-blend-mode: normal;
 }
 .tourismCards {
-  width: 1166px;
+  width: 1152px;
   flex-wrap: wrap;
   align-items: flex-start;
-  gap: var(--gap-21xl);
+  gap: var(--gap-13xl);
   font-size: var(--font-size-5xl);
   color: var(--primary-red);
 }

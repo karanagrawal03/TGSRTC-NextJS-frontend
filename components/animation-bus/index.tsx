@@ -1,122 +1,72 @@
-import { useState, useEffect } from "react";
-import styles from "./index.module.css";
-import plant1 from '../../public/Plant 1.png';
-import plant2 from '../../public/Plant 2 (1).svg';
-import house from '../../public/house.svg';
-import boyImage from '../../public/boyImage.svg';
-import girlImage from '../../public/girlImage.svg';
+import React, { useEffect, useRef, useState } from 'react';
+import lottie from 'lottie-web';
+import { motion, useViewportScroll, useTransform } from 'framer-motion';
 import BusAnimation from '../../public/Dust.json';
-import Lottie from 'react-lottie';
+import styles from './index.module.css';
 
 const AnimationBus = () => {
-    const [visibleImage, setVisibleImage] = useState<string>("");
-    const [pageHeight, setPageHeight] = useState<number>(0);
-    const [scrollPosition, setScrollPosition] = useState<number>(0); // State to track scroll position
-    const [isAnimationPlaying, setIsAnimationPlaying] = useState<boolean>(true); // State to track animation playback
+  const animationContainer = useRef(null);
+  const animationInstanceRef = useRef(null);
+  const { scrollYProgress } = useViewportScroll();
+  const maxFrames = 200; 
+  const [containerLeft, setContainerLeft] = useState(0);
 
-    const defaultOptions = {
-        loop: true,
-        autoplay: true,
-        animationData: BusAnimation,
-        rendererSettings: {
-            preserveAspectRatio: 'xMidYMid slice'
-        }
+  useEffect(() => {
+    const animation = lottie.loadAnimation({
+      container: animationContainer.current,
+      renderer: 'svg',
+      loop: false,
+      autoplay: false,
+      animationData: BusAnimation,
+    });
+
+    animationInstanceRef.current = animation;
+
+    return () => {
+      animation.destroy();
+    };
+  }, []);
+
+  const frame = useTransform(scrollYProgress, [0, 1], [0, maxFrames - 1]);
+  useEffect(() => {
+    const handleResize = () => {
+      const vw = window.innerWidth;
+      const maxWidth = 1366;
+      const margin = (vw - maxWidth) / 2;
+      setContainerLeft(vw > maxWidth ? margin : 0);
     };
 
-    useEffect(() => {
-        const updatePageHeight = () => {
-            setPageHeight(document.documentElement.scrollHeight - window.innerHeight);
-        };
-        const handleScroll = () => {
-            const scrollY = window.scrollY;
-            setIsAnimationPlaying(true);
-            const scrollPercentage = (scrollY / pageHeight) * 100;
-            setScrollPosition(scrollPercentage)
-            console.log(scrollPosition)
+    handleResize(); 
+    window.addEventListener('resize', handleResize);
 
-            if (scrollPercentage >= 80) {
-                setVisibleImage("girlImage");
-            } else if (scrollPercentage >= 60) {
-                setVisibleImage("boyImage");
-            } else if (scrollPercentage >= 40) {
-                setVisibleImage("house");
-            } else if (scrollPercentage >= 20) {
-                setVisibleImage("plant2");
-            } else if (scrollPercentage >= 10) {
-                setVisibleImage("plant1");
-            } else {
-                setVisibleImage("");
-            }
-        };
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+  const topPosition = useTransform(scrollYProgress, [0,  1], ["0vw",  "50vh"]);
 
-        const handleStopScroll = () => {
-            setIsAnimationPlaying(false);
-        };
+  useEffect(() => {
+    frame.onChange((value) => {
+      if (animationInstanceRef.current) {
+        if (scrollYProgress.get() >= 1) {
+          const fastValue = Math.min(maxFrames - 1, Math.round((value - maxFrames * 0.8) * (maxFrames - 1) / (1 - 0.8)));
+          animationInstanceRef.current.goToAndStop(fastValue, true);
+        } else {
+          animationInstanceRef.current.goToAndStop(Math.round(value), true);
+        }
+      }
+    });
+  }, [frame, scrollYProgress]);
 
-        window.addEventListener("resize", updatePageHeight);
-        window.addEventListener("scroll", handleScroll);
-        updatePageHeight();
-
-        return () => {
-            window.removeEventListener("resize", updatePageHeight);
-            window.removeEventListener("scroll", handleScroll);
-            window.removeEventListener("mouseup", handleStopScroll);
-        };
-    }, [pageHeight]);
-
-    // useEffect(() => {
-    //     console.log("scroll", window.scrollX, window.screenTop)
-    // })
-    useEffect(() => {
-        window.addEventListener('scroll', (e) => {
-
-        });
-        return () => {
-            window.removeEventListener('scroll', console.log);
-        };
-    }, []);
-
-    return (
-        <div className={styles.container}>
-            <div className={styles.imageContainer}>
-                <img
-                    style={{ display: visibleImage === "plant1" ? 'block' : 'none' }}
-                    className={styles.plant1}
-                    src='/Plant 1.png'
-                    alt="Plant 1"
-                />
-                <img
-                    style={{ display: visibleImage === "plant2" ? 'block' : 'none' }}
-                    className={styles.plant2}
-                    src='/Plant 2 (1).svg'
-                    alt="Plant 2"
-                />
-                <img
-                    style={{ display: visibleImage === "house" ? 'block' : 'none' }}
-                    src='/house.svg'
-                    alt="House"
-                    className={styles.house}
-                />
-                <img
-                    style={{ display: visibleImage === "boyImage" ? 'block' : 'none' }}
-                    src='/boyImage.svg'
-                    alt="Boy"
-                    className={styles.boyImage}
-                />
-                <img
-                    style={{ display: visibleImage === "girlImage" ? 'block' : 'none' }}
-                    src='/girlImage.svg'
-                    alt="Girl"
-                    className={styles.girlImage}
-                />
-            </div>
-            <div className={styles.animation}>
-                <Lottie
-                    options={defaultOptions}
-                />
-            </div>
-        </div>
-    );
-}
+  return (
+    <div className={styles.container}>
+      <motion.div 
+        ref={animationContainer} 
+        className={styles.animation} 
+        style={{ top: topPosition, left: `calc(${containerLeft}px ` }} 
+      />
+    </div>
+  );
+};
 
 export default AnimationBus;

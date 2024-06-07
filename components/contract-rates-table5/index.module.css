@@ -43,8 +43,7 @@
 }
 .bulletPoints{
   margin: 0;
-  padding: 0 !important;
-  padding-left: 20px !important; 
+  padding: 0 0 0 16px!important; 
 }
 .ratesTable5{
   margin: 0 !important;

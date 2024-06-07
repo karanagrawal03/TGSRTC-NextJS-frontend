@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
 import styles from "./index.module.css";
-import Carousal from "../components/Carosal";
 import BookYourTicket from "../components/BookYourTicket/BookYourTicket";
 import About from "../components/About/About";
 import HomeHero from "../components/HomeHero/HomeHero";
@@ -11,14 +10,8 @@ import { HERO_TITLE } from "../constants";
 import { routes } from "../constants/book-your-tickets-routes";
 import useFetch from "../services/service";
 import { useEffect } from "react";
-
-const homeHeroTitle = [
-  { title: HERO_TITLE },
-  { title: HERO_TITLE },
-  { title: HERO_TITLE },
-  { title: HERO_TITLE },
-  { title: HERO_TITLE },
-];
+import Carousal from "../components/Carosal";
+import HomeBannerAnimation from "../components/home-banner-carousal";
 
 const Homepage: NextPage = () => {
   
@@ -34,7 +27,7 @@ const Homepage: NextPage = () => {
 
   return (
     <div className={styles.homepage}>
-       <Carousal children={heroSection} secondary={true} />
+       <HomeBannerAnimation title={data?.heroBannerTitle} children={heroSection} secondary={true} includeAnimation autoplay={true} />
       <BookYourTicket routes={routes} 
       />
       <HomeBookYourServices 
@@ -58,7 +51,7 @@ const Homepage: NextPage = () => {
           paragraph: data?.aboutContent,
           logoUrl: data?.aboutLogo?.data?.attributes?.url,
           desktopImageUrl: data?.aboutBgImage?.data?.attributes?.url,
-          mobileImageUrl: data?.aboutMobileImage?.data?.attributes?.url,
+          mobileImageUrl: data?.aboutMobileBg?.data?.attributes?.url,
         }}
       />
       <HomeNewsUpdates data={data?.newsAndUpdatesCardsData} maintitle={data?.newsAndUpdateTitle}/>

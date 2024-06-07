@@ -29,8 +29,7 @@ const ReservationConcessionSchemes: any =
           <img className={styles.reservationConcessionHeroImageMobile} alt="reservation concession schemes hero image" src={UPLOADS_BASE_URL + data?.heroBackgroundImageMobile?.data?.attributes?.url} loading="lazy" />
           <div className={styles.concessionSchemesTitle}>
             <div className={styles.title}>{data?.heroTitle}</div>
-            <div className={styles.applyRenew}
-            >{data?.heroSubTitle}</div>
+            <div className={styles.applyRenew}>{data?.heroSubTitle}</div>
           </div>
         </section>
         <section className={styles.reservationConcessionSchemes1}>

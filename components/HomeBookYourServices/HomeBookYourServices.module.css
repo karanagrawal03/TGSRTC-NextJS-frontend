@@ -296,6 +296,6 @@
     font-size: var(--font-size-lgi);
   }
   .homeBookYourServices {
-    padding: 0 var(--padding-5xl) var(--padding-41xl) var(--padding-5xl);
+  padding: 0 var(--padding-xl) var(--padding-41xl) var(--padding-xl);
   }
 }

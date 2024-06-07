@@ -40,12 +40,6 @@ const SeatLayoutOfTGSRTCContaine: NextPage<SeatLayoutOfTGSRTCContaineType> = ({ 
           </div>
         ))}
       </div>
-      <img
-        className={styles.busDust}
-        loading="lazy"
-        alt="Bus"
-        src="/reservation-details-bus-dust-web.png"
-      />
     </div>
   );
 };

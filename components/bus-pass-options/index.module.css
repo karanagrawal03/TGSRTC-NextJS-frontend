@@ -93,13 +93,13 @@
 @media screen and (max-width: 599px) {
   .busPassOptions1 {
     font-size: var(--font-size-13xl);
+    padding-bottom: var(  --padding-base);
   }
 }
 
 @media screen and (min-width: 1920px) {
   .cardsContainer {
     max-width: 1920px;
-    ;
     margin: 0px auto;
   }
 }

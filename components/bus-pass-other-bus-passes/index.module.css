@@ -3,6 +3,7 @@
   position: relative;
   max-width: 100%;
 }
+
 .otherBusPasses {
   margin: 0;
   font-size: var(--font-size-27xl);
@@ -11,6 +12,7 @@
   display: inline-block;
   mix-blend-mode: normal;
 }
+
 .picturesIcon {
   align-self: stretch;
   height: 169px;
@@ -18,6 +20,7 @@
   flex-shrink: 0;
   object-fit: cover;
 }
+
 .imageWeb {
   border-radius: var(--br-7xs);
   display: none;
@@ -25,12 +28,14 @@
   align-items: flex-start;
   justify-content: flex-start;
 }
+
 .imageMobile,
 .imageWeb,
 .picturesIcon1 {
   align-self: stretch;
   overflow: hidden;
 }
+
 .picturesIcon1 {
   flex: 1;
   position: relative;
@@ -38,6 +43,7 @@
   max-height: 100%;
   object-fit: cover;
 }
+
 .imageMobile {
   height: 140px;
   border-radius: var(--br-7xs);
@@ -47,16 +53,19 @@
   align-items: flex-start;
   justify-content: flex-start;
 }
+
 .andSpouses,
 .mlasMpsMlcs {
   margin: 0;
 }
+
 .internationalWomensDayContainer {
   align-self: stretch;
   position: relative;
   font-weight: 600;
   mix-blend-mode: normal;
 }
+
 .loremIpsumDolor {
   align-self: stretch;
   position: relative;
@@ -65,6 +74,7 @@
   color: var(--text-black);
   white-space: pre-wrap;
 }
+
 .texts {
   align-self: stretch;
   display: flex;
@@ -73,6 +83,7 @@
   justify-content: flex-start;
   gap: var(--gap-7xs);
 }
+
 .lineSeparatorIcon {
   align-self: stretch;
   position: relative;
@@ -80,6 +91,7 @@
   overflow: clip;
   max-height: unset;
 }
+
 .lineSeparater {
   align-self: stretch;
   height: 0;
@@ -90,6 +102,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 .applyNow,
 .viewDetails {
   position: relative;
@@ -97,9 +110,11 @@
   display: inline-block;
   min-width: 90px;
 }
+
 .applyNow {
   min-width: 79px;
 }
+
 .button2 {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: var(--br-381xl);
@@ -113,12 +128,14 @@
   text-align: center;
   color: var(--support-white);
 }
+
 .buttonHolder,
 .cardTextHolder {
   align-self: stretch;
   display: flex;
   align-items: center;
 }
+
 .buttonHolder {
   flex-direction: row;
   justify-content: space-between;
@@ -126,19 +143,21 @@
   font-size: var(--font-size-sm);
   color: var(--primary-green);
 }
+
 .cardTextHolder {
   flex-direction: column;
   justify-content: center;
   gap: var(--gap-5xl);
 }
+
 .busPassOtherBusPasses,
 .cards,
 .cardsContainer {
   display: flex;
-
   box-sizing: border-box;
   max-width: 100%;
 }
+
 .cards {
   width: 364px;
   box-shadow: var(--card);
@@ -150,33 +169,36 @@
   padding: var(--padding-5xl);
   gap: var(--gap-5xl);
 }
+
 .busPassOtherBusPasses,
 .cardsContainer {
-  align-self: stretch;
   gap: var(--gap-13xl);
 }
+
 .cardsContainer {
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: flex-start;
   justify-content: center;
   padding: 0 var(--padding-6xl);
-  min-height: 880px;
   font-size: var(--font-size-5xl);
   color: var(--color-darkslategray);
   font-family: var(--font-montserrat);
 }
+
 .busPassOtherBusPasses {
   background-color: var(--support-grey-bg);
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding: 0 80px 100px;
+  padding: 0 var(--padding-61xl) var(--padding-81xl);
   text-align: left;
   font-size: var(--font-size-27xl);
   color: var(--text-black);
   font-family: var(--font-playfair-display);
+  max-width: 1366px;
+  margin: 0 auto;
 }
+
 .viewMoreButton {
   font-family: var(--font-montserrat);
   font-size: var(--font-size-sm);
@@ -186,14 +208,17 @@
   color: var(--primary-green);
   cursor: pointer;
 }
+
 @media screen and (max-width: 1023px) {
   .otherBusPasses {
     font-size: var(--font-size-13xl);
   }
+
   .cardsContainer {
-    gap: var(--gap-base);
-    padding: 0px 20px;
+    gap: var(--gap-xl);
+    padding: var(--padding-xs) var(--padding-xl);
   }
+
   .busPassOtherBusPasses {
     gap: var(--gap-base);
     padding: 0px 0px;
@@ -201,23 +226,22 @@
     box-sizing: border-box;
   }
 }
+
 @media screen and (max-width: 599px) {
+
   .otherBusPasses {
     font-size: var(--font-size-13xl);
   }
+
   .internationalWomensDayContainer {
     font-size: var(--font-size-lgi);
   }
+
   .buttonHolder {
     flex-wrap: wrap;
   }
+
   .busPassOtherBusPasses {
-    padding: 0px 0px 102px;
-  }
-}
-@media screen and (min-width: 1920px){
-  .cardsContainer{
-    max-width: 1920px;
-    margin: auto;
+    padding: var(--padding-70xl) 0px var(--padding-81xl) 0px;
   }
 }

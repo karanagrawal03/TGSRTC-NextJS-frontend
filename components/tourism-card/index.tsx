@@ -3,6 +3,7 @@ import styles from "./index.module.css";
 import TourismCardChip from "../tourism-card-chip";
 import Button from '../button';
 import { UPLOADS_BASE_URL } from "../../services/service";
+import { useEffect, useRef } from 'react';
 
 export type TourismCardType = {
   placeName: string;
@@ -16,8 +17,29 @@ export type TourismCardType = {
 };
 
 const TourismCard: NextPage<TourismCardType> = ({placeName,image,pickupPoint,pickupTime,placesCovered, places,packageDescription,button}) => {
+  
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (window.innerWidth <= 900 || !cardRef.current) return;
+
+    const cardElements = Array.from(document.querySelectorAll(`.${styles.tourismCard}`));
+    let maxHeight = 0;
+
+    cardElements.forEach(card => {
+      const cardHeight = card.getBoundingClientRect().height;
+      if (cardHeight > maxHeight) {
+        maxHeight = cardHeight;
+      }
+    });
+
+    cardElements.forEach(card => {
+      (card as HTMLElement).style.height = `${maxHeight}px`;
+    });
+  }, []);
+
   return (
-    <div className={styles.tourismCard}>
+    <div ref={cardRef} className={styles.tourismCard}>
       <div className={styles.imageText}>
         <h2 className={styles.tourisamPlace}>{placeName}</h2>
         <div className={styles.imagePlaceholder}>
@@ -63,7 +85,9 @@ const TourismCard: NextPage<TourismCardType> = ({placeName,image,pickupPoint,pic
             </div>
           </div>
         </div>
-        <Button text={button} className={styles.button} textClassName={styles.bookNow} />
+        <div className={styles.buttonSection}>
+          <Button text={button} className={styles.button} textClassName={styles.bookNow} />
+        </div>
       </div>
     </div>
   );

@@ -33,14 +33,11 @@
 .frameParent {
   display: flex;
   align-items: center;
-  width: 120px;
-  height: 100px;
+  max-width: 100%;
   justify-content: center;
 }
 .infographicsInner {
   margin-left: -1px;
-  width: 120px;
-  height: 100px;
   position: relative;
 }
 .illustrationShape {
@@ -106,6 +103,7 @@
   justify-content: center;
   min-width: 394px;
   gap: var(--gap-5xl);
+  align-items: center;
 }
 .applyNow {
   position: relative;

@@ -8,6 +8,7 @@ import styles from "./index.module.css";
 import { TYPES_OF_COACHES } from "../../constants";
 import useFetch, { UPLOADS_BASE_URL } from "../../services/service";
 import { useEffect } from "react";
+import AnimationBus from "../../components/animation-bus";
 
 const ReservationBusDetails: NextPage = () => {
   const { data, doFetch } = useFetch();
@@ -26,6 +27,7 @@ const ReservationBusDetails: NextPage = () => {
           heroSubTitle: data?.heroSubTitle,
         }} 
       />
+      <AnimationBus/>
       <div className={styles.reservationBusDetails}>
         <main className={styles.contentContainer}>
           <section className={styles.seatLayoutOfTgsrtcContaineParent}>

@@ -1,7 +1,7 @@
 //Need to follow alphabetical order with below mentioned notation
 export const ABOUT = "About";
 export const ABOUT_CORPORATION_LINK="/about-the-cooperation";
-export const ABOUT_EVENTS_LINK="/about-events";
+export const ABOUT_EVENTS_LINK="/about-events-and-awards";
 export const ABOUT_HOSPITAL="About Hospital";
 export const ABOUT_IT_LINK="/about-it-initiative";
 export const ABOUT_LEADERSHIP_LINK="/about-tgsrtc-leadership";
