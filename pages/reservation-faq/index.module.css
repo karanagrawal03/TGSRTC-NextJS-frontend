@@ -5,6 +5,7 @@
   width: 100%;
   height: auto;
   position: relative;
+  z-index: 100;
 }
 .img {
   width: 100%;
@@ -40,6 +41,8 @@
   padding-top: var(--gap-61xl);
   padding-bottom: var(--padding-81xl);
   position: relative;
+  max-width: 1366px;
+  margin: 0 auto;
 }
 .faqTitle {
   font-family: var(--font-playfair-display);

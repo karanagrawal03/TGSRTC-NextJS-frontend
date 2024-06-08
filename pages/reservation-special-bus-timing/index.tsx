@@ -7,6 +7,8 @@ import {
 } from "../../constants";
 import useFetch, { BASE_URL, UPLOADS_BASE_URL } from "../../services/service";
 import styles from "./index.module.css";
+import AnimationBus from "../../components/animation-bus";
+import AnimationBusMobile from "../../components/animation-bus-mobile";
 
 const ReservationSpecialBusTiming = () => {
   const { data, doFetch } = useFetch();
@@ -33,9 +35,13 @@ const ReservationSpecialBusTiming = () => {
           <p className={styles.tgsrtcIsHappy}>{data?.heroSectionBanner[0].heroSectionSubHeading}</p>
         </div>
       </section>
+      <AnimationBus />
+      <AnimationBusMobile />
       <div className={styles.container}>
+        <div className={styles.timingsContainer}>
         <p className={styles.headingText}>{data?.tabsHeading}</p>
         <ReservationBusesTabs data={data} />
+      </div>
       </div>
     </div>
   );

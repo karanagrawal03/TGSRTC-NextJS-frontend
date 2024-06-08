@@ -83,7 +83,7 @@
   }
 
   .busPassOptions {
-    padding-top: var(--padding-46xl);
+    padding-top: 0;
     padding-bottom: var(--padding-46xl);
     box-sizing: border-box;
   }

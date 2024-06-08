@@ -208,7 +208,11 @@
   display: inline-block;
   max-width: 100%;
 }
-
+.tableContainer{
+  margin: 0 auto;
+  max-width: 1166px;
+  width: 100%;
+}
 .itemCell,
 .itemCellWrapper {
   display: flex;
@@ -329,11 +333,12 @@
   padding: var(--padding-61xl) var(--padding-81xl) var(--padding-81xl);
   box-sizing: border-box;
   gap: var(--gap-xs);
-  max-width: 100%;
+  width: 100%;
   text-align: left;
   font-size: var(--font-size-xl);
   color: var(--text-black);
   font-family: var(--font-montserrat);
+  margin: 0 auto;
 }
 
 .logo51Icon {
@@ -737,7 +742,7 @@
 
 @media screen and (max-width: 1023px) {
   .busPassStudentPasses1 {
-    padding-top: var(--padding-15xl);
+    padding-top: 0;
     padding-bottom: var(--padding-23xl);
     box-sizing: border-box;
   }
@@ -818,7 +823,6 @@
 
   .knowMoreAboutStudentPassesWrapper {
     padding-bottom: 12px;
-    padding-top: 105px;
   }
 
   .knowMoreAbout {

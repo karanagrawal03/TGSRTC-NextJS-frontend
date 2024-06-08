@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import AccordionItem from "../../components/accordians";
 import styles from "./index.module.css";
 import useFetch, { UPLOADS_BASE_URL } from "../../services/service";
+import AnimationBus from "../../components/animation-bus";
+import AnimationBusMobile from "../../components/animation-bus-mobile";
 
 const BusPassStudentPasses = () => {
     
@@ -52,7 +54,10 @@ const BusPassStudentPasses = () => {
           <h2 className={styles.applyRenew}>{data?.heroSubTitle}</h2>
         </div>
       </section>
+      <AnimationBus />
+      <AnimationBusMobile />
       <section className={styles.busPassStudentPasses1}>
+        <div className={styles.tableContainer}>
         <div className={styles.knowMoreAboutStudentPassesWrapper}>
           <h2 className={styles.knowMoreAbout}>
             {data?.knowMoreTitle}
@@ -70,6 +75,7 @@ const BusPassStudentPasses = () => {
               />
             ))}
           </ol>
+        </div>
         </div>
       </section>
     </div>

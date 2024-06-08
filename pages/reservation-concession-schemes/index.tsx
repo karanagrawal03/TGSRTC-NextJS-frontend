@@ -5,6 +5,8 @@ import MonthlySeasonTicketsTexts from "../../components/monthlySeasonTicketsText
 import useFetch from "../../services/service";
 import { useEffect } from "react";
 import { UPLOADS_BASE_URL } from "../../services/service";
+import AnimationBus from "../../components/animation-bus";
+import AnimationBusMobile from "../../components/animation-bus-mobile";
 const ReservationConcessionSchemes: any =
   () => {
     const { data, doFetch, loading, error } = useFetch();
@@ -32,9 +34,10 @@ const ReservationConcessionSchemes: any =
             <div className={styles.applyRenew}>{data?.heroSubTitle}</div>
           </div>
         </section>
+        <AnimationBus />
+        <AnimationBusMobile />
         <section className={styles.reservationConcessionSchemes1}>
-          <img className={styles.busDustMobile} alt="reservation concession bus image" src={UPLOADS_BASE_URL + data?.busDustImageMobile?.data?.attributes?.url} loading="lazy" />
-          <img className={styles.busDustWebsite} alt="reservation concession bus image" src={UPLOADS_BASE_URL + data?.busDustImageWeb?.data?.attributes?.url} loading="lazy" />
+          <div className={styles.container}>
           <MonthlySeasonTicketsTexts monthlySeasonTicketsTitle={data?.monthlySeasonTicketTitle} monthlySeasonTicketsList={data?.monthlySeasonTicketList} valueAdditionTitle={data?.valueAdditionTitle} valueAdditionList={data?.valueAdditionList} />
           <div className={styles.teriffsOfMonthlySeasonTickets}>
             <div className={styles.monthlySeasonTicketstableTitle}>{data?.tariffsMonthlySeasonTitle}</div>
@@ -63,6 +66,7 @@ const ReservationConcessionSchemes: any =
                 {data?.facilityContent}
               </p>
             </div>
+          </div>
           </div>
         </section>
       </div>

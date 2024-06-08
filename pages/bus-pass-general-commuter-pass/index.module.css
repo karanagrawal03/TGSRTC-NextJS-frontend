@@ -110,6 +110,7 @@
   font-size: var(--font-size-53xl);
   color: var(--support-white);
   font-family: var(--font-playfair-display);
+  z-index: 100;
 }
 
 .busPassGeneralCommuterPass {
@@ -117,6 +118,11 @@
   flex-direction: column;
   line-height: normal;
   letter-spacing: normal;
+}
+
+.tableContainer{
+  margin: 0 auto;
+  max-width: 1166px;
 }
 
 @media screen and (max-width: 1023px) {
@@ -174,6 +180,7 @@
 
   .busPassGeneralCommuterPass2 {
     padding: var(--padding-111xl) var(--padding-xl);
+    padding-top: 0;
   }
 }
 

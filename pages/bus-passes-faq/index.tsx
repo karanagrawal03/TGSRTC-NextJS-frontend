@@ -12,6 +12,8 @@ import {
 import styles from "./index.module.css";
 import { busPassStudentPasses } from "../../constants/bus-pass-student-passes";
 import useFetch, { BASE_URL, UPLOADS_BASE_URL } from "../../services/service";
+import AnimationBus from "../../components/animation-bus";
+import AnimationBusMobile from "../../components/animation-bus-mobile";
 const BusPassesFaq = () => {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
   const { data, doFetch } = useFetch();
@@ -45,7 +47,10 @@ const BusPassesFaq = () => {
           </p>
         </div>
       </section>
+      <AnimationBus />
+      <AnimationBusMobile />
       <section className={styles.busPassGeneralCommuterPass2}>
+        <div className={styles.tableContainer}>
         <h2 className={styles.knowMoreAboutContainer}>{data?.faqsHeading}</h2>
         <div className={styles.eachAccordian}>
           <p className={styles.typesOfPassesText}>{data?.typesOfPasses}</p>
@@ -76,6 +81,7 @@ const BusPassesFaq = () => {
               />
             ))}
           </ol>
+        </div>
         </div>
       </section>
     </div>
