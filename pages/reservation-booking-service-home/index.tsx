@@ -31,10 +31,10 @@ const ReservationBookingServiceHome: NextPageReservationBookingServiceHomeType =
         <ReservationKPIs 
           kpiData={data?.kpi}
         />
-        {/* <SpecialBuses 
+        <SpecialBuses 
           specialBusOffersTitle={data?.specialBusOffersTitle}
           specialBusOffersData={data?.specialBusOffersData}
-        /> */}
+        />
         <CustomerSupport
           customerSupportWebImage={data?.customerSupportWebImage}
           customerSupportMobileImage={data?.customerSupportMobileImage}

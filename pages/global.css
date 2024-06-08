@@ -107,6 +107,7 @@ a {
   --color-placeholder:#A2A2A2;
   --color-light-gray: #F9F9F9;
   --color-whitesmoke-400:#f5f5f5;
+  --color-background2: #3e3e3e66;
   
   /* Spacing */
   --spacing-lg: 12px;
@@ -308,6 +309,7 @@ a {
 
   /* Effects */
   --text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+  --text-shadow2:0px 2px 3px rgba(0, 0, 0, 0.8);
   --card: 0px 4px 20px rgba(0, 0, 0, 0.1);
   --card-shadow: 0px 4px 10px 0px #E8E8E8;
   --card-shadow1:0px 4px 4px 0px #00000040;

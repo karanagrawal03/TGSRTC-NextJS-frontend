@@ -1,425 +1,193 @@
 .contactUs {
-    width: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
 }
-
 .heroSection {
-    width: 100%;
-    height: auto;
-    position: relative;
-    z-index: 100;
+  width: 100%;
+  position: relative;
+  background-image: url(/ContactUsWeb.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-
 .heroBackgroundImageWeb {
-    height: 100%;
-    width: 100%;
+  width: 100%;
+  height: auto;
+  position: relative;
 }
-
-.heroBackgroundImageMobile {
-    display: none;
-    height: 100%;
-    width: 100%;
-}
-
 .contactUsContent {
-    display: flex;
-    flex-direction: row;
-    gap: var(--gap-75xs);
-    position: absolute;
-    top: 67px;
-    left: 100px;
-    right: 101px;
-    max-width: 1166px;
+  position: relative;
+  display: flex;
+  gap: var(--gap-75xs);
+  max-width: 1166px;
+  padding: 4.9vw var(--padding-81xl) var(--padding-61xl);
+  margin: 0 auto;
+  align-items: center;
 }
-
 .contactContentLeft {
-    width: 50%;
-    padding-top: var(--padding-14xl);
-    padding-bottom: var(--padding-14xl);
-    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
-    z-index: 1;
+  display: flex;
+  flex-direction: column;
+  width: 581px;
+  max-width: 581px;
 }
-
 .contactUsTitle {
-    font-family: var(--font-playfair-display);
-    font-size: var(--font-size-53xl);
-    font-weight: 600;
-    line-height: 82px;
-    text-align: left;
-    color: var(--support-white);
-    margin-bottom: var(--gap-21xl);
+  width: 375px;
+  color: var(--support-white);
+  text-shadow: var(--text-shadow);
+  font-family: "Playfair Display";
+  font-size: var(--font-size-53xl);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 82px; 
+  margin-bottom: 40px;
 }
-
-.contactUsDetails {
-    display: flex;
-    flex-direction: column;
-    gap: var(--padding-xs);
-    font-family: var(--font-montserrat);
-    font-size: var(--font-size-xl);
-    line-height: 32px;
-    font-weight: 500;
-    text-align: left;
-    color: var(--support-white);
-    margin-top: 24px;
+.contactUsAddress {
+  color: var(--support-white);
+  text-shadow: var(--text-shadow2);
+  font-family: var(--font-montserrat);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px; 
+  margin-bottom: 24px;
 }
-
-.contactInfo {
-    display: flex;
-    flex-direction: row;
-    gap: var(--gap-5xs);
-    padding-left: var(--padding-base);
-    padding-right: var(--padding-base);
+.contactUsEmail,
+.contactUsPhone,
+.contactUsHelpline {
+  color: var(--support-white);
+  text-shadow: var(--text-shadow2);
+  font-family: var(--font-montserrat);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px; 
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
 }
-
-.contactImg {
-    height: 24px;
-    width: 24px;
+.contactUsHelpline {
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0;
+  border-radius: var(--br-7xs);
+  background: var(--color-background2);
+  padding: var(--padding-xs) var(--padding-base) var(--padding-xs) var(--padding-11xs);
 }
-
-.otherServiceTitle {
-    font-family: var(--font-playfair-display);
-    font-size: var(--font-size-5xl);
-    font-weight: 600;
-    line-height: 31.99px;
-    text-align: left;
-    color: var(--primary-red);
+.link {
+  color: var(--support-white);
 }
-
+.italic {
+  font-style: italic;
+}
+.mailIcon,
+.phoneIcon {
+  margin-left: 14px;
+  margin-right: 8px;
+  width: 24px;
+  height: 24px;
+  padding: var(--padding-9xs) 0;
+  align-self: flex-start;
+}
+.contactContentRight {
+  max-width: 509px;
+}
 .otherServices {
-    padding: var(--padding-61xl) var(--gap-81xl) var(--gap-81xl) var(--gap-81xl);
-    display: flex;
-    flex-direction: column;
-    gap: var(--gap-13xl);
-    max-width: 1166px;
-    margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  padding: var(--padding-61xl) var(--padding-81xl) var(--padding-81xl);
+  gap: var(--gap-13xl);
 }
-
-.accordianList {
-    margin: 0px;
-    padding: 0px;
+.otherServiceTitle {
+  color: var(--primary-red);
+  font-family: var(--font-playfair-display);
+  font-size: var(--font-size-5xl);
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
-
-.contactInfo:last-child {
-    padding-left: var(--padding-base);
-    padding-right: var(--padding-base);
-    padding-top: var(--padding-xs);
-    padding-bottom: var(--padding-xs);
-    border-radius: var(--br-7xs);
-    background: var(--color-background);
-}
-
-.containerClassName {
-    border: none !important;
-    box-shadow: var(--card-shadow);
-    padding-left: var(--padding-35xl) !important;
-    padding-right: var(--padding-35xl) !important;
-    padding-bottom: var(--padding-5xl) !important;
-}
-
 .headingStyles {
-    font-family: var(--font-montserrat);
-    font-weight: 500;
-    font-size: var(--font-size-xl);
-    line-height: 26px;
-    color: var(--text-black);
+  list-style: none;
 }
-
-@media screen and (max-width:1366px) {
-    .heroSection {
-        max-height: 675px;
-        height: 100%;
-    }
-
-    .contactUsContent {
-        bottom: 80px;
-    }
-
-  
+@media screen and (max-width: 1220px) {
+  .contactUsContent {
+    width: unset;
+  }
+  .contactContentLeft,
+  .contactContentRight {
+    width: 50%;
+    max-width: 50%;
+  }
 }
-
-@media screen and (max-width:1365px) {
-    .contactUsContent {
-        top: 40px;
-        left: 80px;
-        right: 80px;
-        gap: var(--gap-5xl);
-        bottom: 80px;
-    }
-
+@media screen and (max-width: 1023px) {
+  .contactUsContent {
+    gap: var(--gap-18xl);
+  }
+  .contactUsTitle {
+    width: unset;
+    margin-bottom: 32px;
+    font-size: var(--font-size-39xl);
+    line-height: normal;
+  }
+  .contactUsEmail {
+    font-size: var(--font-size-lg);
+    line-height: 28px;
+  }
+  .contactUsPhone {
+    font-size: var(--font-size-base);
+  }
+  .contactUsHelpline {
+    font-size: var(--font-size-base);
+    line-height: normal;
+  }
+  .contactUsContent,
+  .otherServices {
+    padding: var(--padding-61xl) var(--padding-17xl);
+  }
 }
-
-@media screen and (max-width:1200px) {
-    .contactUsTitle {
-        font-size: var(--font-size-52xs);
-        line-height: 62px;
-        margin-bottom: 35px;
-    }
-
-    .contactUsDetails {
-        font-size: var(--font-size-lg);
-        line-height: 22px;
-    }
-
-    .otherServiceTitle {
-        font-size: var(--font-size-3xl);
-    }
-
-    .contactUsContent {
-        top: 30px;
-        right: -35px;
-        bottom: 30px;
-    }
+@media screen and (max-width: 900px) {
+  .contactUsContent {
+    flex-direction: column;
+    gap: var(--gap-11xl);
+    background-image: url(/ContactUsMobile.png);
+    background-size: cover;
+  }
+  .contactContentLeft,
+  .contactContentRight {
+    width: 100%;
+    max-width: 100%;
+  }
 }
-
-@media screen and (max-width:1024px) {
-    .contactUsTitle {
-        font-size: var(--font-size-29xl);
-        line-height: 52px;
-        margin-bottom: 25px;
-    }
-
-    .contactUsDetails {
-        font-size: var(--font-size-16);
-        line-height: 22px;
-    }
-
-    .contactUsContent {
-        right: 0px;
-        top: 35px
-    }
-
-    .contactContentLeft {
-        padding-top: var(--padding-xl);
-        padding-bottom: var(--padding-xl);
-    }
-
-    .headingStyles {
-        font-size: var(--font-size-lg);
-    }
-}
-
-@media screen and (max-width:1000px) {
-    .contactUsTitle {
-        font-size: var(--font-size-36xs);
-        line-height: 42px;
-        margin-bottom: 20px;
-    }
-
-    .contactUsDetails {
-        font-size: var(--font-size-base);
-        line-height: 22px;
-    }
-
-    .contactUsContent {
-        right: 0px;
-        top: 10px;
-        bottom: 20px;
-    }
-
-    .contactContentLeft {
-        padding-top: var(--padding-lg);
-        padding-bottom: var(--padding-lg);
-    }
-
-    .headingStyles {
-        font-size: var(--font-size-lg);
-    }
-}
-
-@media screen and (max-width:880px) {
-    .contactUsContent {
-        top: 5px;
-        bottom: 20px;
-    }
-
-    .contactContentLeft {
-        padding-top: var(--padding-sm);
-        padding-bottom: var(--padding-sm);
-    }
-
-    .contactUsTitle {
-        font-size: var(--font-size-9xl);
-        margin-bottom: 18px;
-    }
-
-    .contactUsDetails {
-        font-size: var(--font-size-sm);
-    }
-
-    .contactImg {
-        height: 20px;
-        width: 20px;
-    }
-
-    .contactInfo:last-child {
-        padding-left: var(--padding-xs);
-        padding-right: var(--padding-xs);
-        padding-top: var(--padding-5xs);
-        padding-bottom: var(--padding-5xs);
-    }
-}
-
-@media screen and (max-width:800px) {
-    .contactUsContent {
-        left: 55px;
-    }
-
-    .heroBackgroundImageWeb {
-        height: 450px;
-    }
-}
-
-@media screen and (max-width:650px) {
-    .contactUsContent {
-        right: 20px;
-        top: 15px;
-        left: 20px;
-    }
-
-    .heroBackgroundImageWeb {
-        height: 450px;
-    }
-}
-
 @media screen and (max-width: 599px) {
-    .heroSection {
-        max-height: none;
-    }
-
-    .heroBackgroundImageWeb {
-        display: none;
-    }
-
-    .heroBackgroundImageMobile {
-        display: block;
-        height: 940px;
-    }
-
-    .contactUsContent {
-        display: flex;
-        flex-direction: column;
-        top: 40px;
-        left: 24px;
-        right: 24px;
-        gap: var(--gap-3xs);
-    }
-
-    .contactContentLeft {
-        width: 100%;
-    }
-
-    .contactUsTitle {
-        font-Size: var(--font-size-27xl);
-        line-height: 61.32px;
-    }
-
-    .contactUsDetails {
-        width: 100%;
-        font-Size: var(--font-size-base);
-        line-height: 26px;
-    }
-
-    .contactInfo {
-        display: flex;
-        flex-direction: row;
-        font-size: var(--font-size-sm);
-        line-height: 26px;
-        padding-left: var(--padding-base);
-        padding-right: var(--padding-base);
-    }
-
-    .contactImg {
-        height: 20px;
-        width: 20px;
-    }
-
-    .otherServices {
-        padding: var(--padding-41xl) var(--padding-5xl) var(--padding-41xl) var(--padding-5xl);
-    }
-
-    .contactInfo:last-child {
-        padding-left: var(--padding-base);
-        padding-right: var(--padding-base);
-        padding-top: var(--padding-xs);
-        padding-bottom: var(--padding-xs);
-        border-radius: var(--br-7xs);
-        background: var(--color-background);
-    }
-}
-
-@media screen and (max-width:430px) {
-    .heroBackgroundImageMobile {
-        height: 980px;
-    }
-
-    .contactUsContent {
-        top: 20px
-    }
-}
-
-@media screen and (max-width:360px) {
-    .heroSection {
-        max-height: none;
-    }
-
-    .heroBackgroundImageWeb {
-        display: none;
-    }
-
-    .heroBackgroundImageMobile {
-        display: block;
-        height: 100%;
-    }
-
-    .contactUsContent {
-        display: flex;
-        flex-direction: column;
-        top: 45px;
-        left: 24px;
-        right: 24px;
-        gap: var(--gap-5xl);
-    }
-
-    .contactContentLeft {
-        width: 100%;
-        padding: 0px;
-    }
-
-    .contactUsTitle {
-        font-Size: var(--font-size-27xl);
-        line-height: 61.32px;
-    }
-
-    .contactUsDetails {
-        width: 100%;
-        font-Size: var(--font-size-base);
-        line-height: 26px;
-    }
-
-    .contactInfo {
-        display: flex;
-        flex-direction: row;
-        font-size: var(--font-size-sm);
-        line-height: 26px;
-        padding-left: var(--padding-base);
-        padding-right: var(--padding-base);
-    }
-
-    .contactImg {
-        height: 20px;
-        width: 20px;
-    }
-
-    .otherServices {
-        padding: var(--padding-41xl) var(--padding-5xl) var(--padding-41xl) var(--padding-5xl);
-    }
-
-    .contactInfo:last-child {
-        padding-left: var(--padding-base);
-        padding-right: var(--padding-base);
-        padding-top: var(--padding-xs);
-        padding-bottom: var(--padding-xs);
-        border-radius: var(--br-7xs);
-        background: var(--color-background);
-    }
-
+  .contactUsContent {
+    gap: var(--gap-5xl);
+  }
+  .contactUsTitle {
+    margin-bottom: 24px;
+    font-size: var(--font-size-27xl);
+  }
+  .contactUsEmail {
+    font-size: var(--font-size-sm);
+    line-height: 26px;
+  }
+  .contactUsPhone {
+    font-size: var(--font-size-xs);
+  }
+  .contactUsHelpline {
+    font-size: var(--font-size-xs);
+    line-height: 20px;
+  }
+  .mailIcon,
+  .phoneIcon {
+    width: 20px;
+    height: 20px;
+    padding: var(--padding-10xs) 0;
+  }
+  .contactUsContent,
+  .otherServices {
+    padding: var(--padding-41xl) var(--padding-xl);
+  }
 }
