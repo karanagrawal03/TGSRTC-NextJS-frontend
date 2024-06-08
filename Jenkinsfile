@@ -50,7 +50,7 @@ pipeline {
                         sh 'scp build.tar.gz tsrtc@tsdev.divami.com:/var/www/html/tsrtcdev'
                         sh 'ssh tsrtc@tsdev.divami.com "cd /var/www/html/tsrtcdev; tar -xvzf build.tar.gz --strip 1" '
                     }
-                    if (env.Env == 'uat') {
+                    else if (env.Env == 'uat') {
                         sh 'tar -czvf build.tar.gz dist'
                         sh 'ssh tsrtc@tsuat.divami.com "sudo mkdir -p /var/www/html/tgsrtc-staging-fe; sudo chown -R tsrtc:tsrtc /var/www/html/tgsrtc-staging-fe/ "'
                         sh 'scp build.tar.gz tsrtc@tsuat.divami.com:/var/www/html/tgsrtc-staging-fe'
@@ -73,7 +73,7 @@ pipeline {
                 if (env.Env == 'dev') {
                     googlechatnotification   message: "Project Name: ${JOB_NAME} Build ${BUILD_NUMBER} with commit : ${GIT_COMMIT_MSG} , Git committer email: ${GIT_COMMIT_EMAIL} from Branch ${GIT_BRANCH} on Environment ${env.Env} was successfull. Check output in ${DEV_LINK} "  , url: "${env.GOOGLE_CHAT_WEBHOOK_LINK}"                                    
                 }
-                if (env.Env == 'uat') {
+                else if (env.Env == 'uat') {
                     googlechatnotification   message: "Project Name: ${JOB_NAME} Build ${BUILD_NUMBER} with commit : ${GIT_COMMIT_MSG} , Git committer email: ${GIT_COMMIT_EMAIL} from Branch ${GIT_BRANCH} on Environment ${env.Env} was successfull. Check output in ${UAT_LINK} "  , url: "${env.GOOGLE_CHAT_WEBHOOK_LINK}"                                    
                 }
                 else {
