@@ -15,11 +15,13 @@ const Header: NextPage<HeaderType> = ({ className = "" }) => {
   const router = useRouter();
 
   const isActive = (path: string) => router.pathname === path;
+  const isSublinkActive = (sublink:string) => router.pathname === sublink;
+
   const [showHeader, setShowHeader] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [headerConfig, setHeaderConfig] = useState<HeaderConfig[]>(headerData);
   const [isRotated, setIsRotated] = useState(false);
-  
+    
   // scroll floating header
 
   const flotingHeader = () => {
@@ -136,15 +138,16 @@ const Header: NextPage<HeaderType> = ({ className = "" }) => {
                 <span className={styles.reservations}>{displayName}</span>
               </Link>
             ) : (
-              <>
-                <span className={styles.reservations}>{displayName}</span>
+              <><span className={subLinks?.some(({ sublink }) => isSublinkActive(sublink)) ? styles.activeTab : styles.navTabs}>
+                  <span className={styles.reservations}>{displayName}</span>
+                </span >
                 {subLinks && (
                   <ul className={styles.dropdownMenu}>
                     {subLinks.map(({ sublinkDisplayName, sublink }, index) => (
                       <li className={styles.headerListItemLink} key={index}>
                         <Link
                           href={sublink}
-                          className={isActive(sublink)? styles.listItem: styles.listItem
+                          className={isSublinkActive(sublink)? styles.listItem: styles.listItem
                           }
                         >
                           <span className={styles.dropdownItem}>
@@ -162,13 +165,11 @@ const Header: NextPage<HeaderType> = ({ className = "" }) => {
       </div>
       {/* -------------- */}
       <div className={styles.headerMobileIconSection}>
-        <Image
+        <img
           className={styles.headerMobileIcon}
           loading="lazy"
           alt="tsrtc-mobile-header-icon"
           src="/header-mobile-icon.svg"
-          width={24}
-          height={24}
           onClick={toggleHamburgerMenu}
         />
 
