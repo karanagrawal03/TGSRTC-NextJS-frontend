@@ -5,6 +5,8 @@
   flex-direction: column;
   padding: var(--padding-81xl) var(--padding-81xl);
   gap: var(--gap-13xl);
+  width: 1166px;
+  margin: 0 auto;
 }
 
 .aboutTsrtcLeadershipContent {

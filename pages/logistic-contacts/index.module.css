@@ -263,8 +263,9 @@
   }
 
   .tableSection {
-    padding: var(--padding-5xl) var(--padding-5xl) var(--padding-41xl) var(--padding-5xl);
+    padding: var( --padding-xl) var( --padding-xl) var(--padding-41xl) var( --padding-xl);
     gap: var(--gap-base);
     text-align: left;
+    width: 88.9%;
   }
 }
