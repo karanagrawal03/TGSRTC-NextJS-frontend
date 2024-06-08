@@ -2,6 +2,8 @@ import styles from "./index.module.css";
 import { useEffect, useState } from "react";
 import AccordionItem from "../../components/accordians";
 import useFetch, { UPLOADS_BASE_URL } from "../../services/service";
+import AnimationBus from "../../components/animation-bus";
+import AnimationBusMobile from "../../components/animation-bus-mobile";
 
 const ReservationFAQ = () => {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
@@ -24,8 +26,9 @@ const ReservationFAQ = () => {
           </div>
         </div>
       </div>
+      <AnimationBus />
+      <AnimationBusMobile />
       <div className={styles.faQuestions}>
-      <img src={UPLOADS_BASE_URL+data?.busDustImageMobile?.data?.attributes?.url} className={styles.busImgMobile}/>
         <div className={styles.faqTitle}>{data?.frequentlyAskedQuestionTitle}</div>
         <div className={styles.accordion}>
             <ol className={styles.accordianList}>
@@ -41,9 +44,6 @@ const ReservationFAQ = () => {
             />
           )): <></>}
           </ol>
-        </div>
-        <div className={styles.busImgWrapper}>
-        <img src={UPLOADS_BASE_URL+data?.busDustImageWeb?.data?.attributes?.url} alt="bus" className={styles.busImg}/>
         </div>
       </div>
     </div>

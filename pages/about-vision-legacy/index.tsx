@@ -5,6 +5,8 @@ import AboutLandingHero from "../../components/about-landing-hero";
 import AboutVision from "../../components/about-vision";
 import AboutPhilosophyGuidlines from "../../components/about-philosophy-guidelines";
 import AboutLegacyLetter from "../../components/about-legacy-letter";
+import AnimationBus from "../../components/animation-bus";
+import AnimationBusMobile from "../../components/animation-bus-mobile";
 
 const AboutVisionLegacy: any = () => {
 
@@ -21,6 +23,8 @@ const AboutVisionLegacy: any = () => {
         heroWebImage={data?.heroBackgroundImageWeb}
         heroMobileImage={data?.heroBackgroundImageMobile}
       />
+       <AnimationBus />
+       <AnimationBusMobile />
       <div className={styles.aboutContent}>
         <img
           className={styles.busDustMobile}

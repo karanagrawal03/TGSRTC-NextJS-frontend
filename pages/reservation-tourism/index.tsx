@@ -4,6 +4,8 @@ import ReservationHeroTourism from "../../components/reservation-tourism";
 import ReservationDestinations from "../../components/reservation-destinations";
 import useFetch, { UPLOADS_BASE_URL } from "../../services/service";
 import { useEffect } from "react";
+import AnimationBus from "../../components/animation-bus";
+import AnimationBusMobile from "../../components/animation-bus-mobile";
 
 const ReservationTourism: NextPageReservationTourismType = () => {
   const { data, doFetch } = useFetch();
@@ -20,13 +22,9 @@ const ReservationTourism: NextPageReservationTourismType = () => {
         heroWebImage={data?.bannerWebImage} 
         heroMobileImage={data?.bannerMobileImage}
       />
+       <AnimationBus />
+       <AnimationBusMobile />
       <section className={styles.content}>
-        <img
-          className={styles.busDust}
-          loading="lazy"
-          alt="bus"
-          src="/bus--dust1@2x.png"
-        />
         <div className={styles.reservationQuote}>
           <h1 className={styles.lifeIsShort}>{data?.travelQuote1}</h1>
           <h1 className={styles.travelIsThe}>{data?.travelQuote2}</h1>

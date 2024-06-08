@@ -47,5 +47,6 @@
   .aboutContent {
     padding: var(--padding-120) var(--padding-xl) var(--padding-41xl);
     gap: var(--gap-21xl);
+    padding-top: 0;
   }
 }

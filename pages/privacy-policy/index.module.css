@@ -11,8 +11,12 @@
   align-items: center;
   margin: 0;
 }
-.aboutThisSite {
+.container{
   background-color: var(--support-grey-bg);
+}
+.aboutThisSite {
+  max-width: 1366px;
+  margin: 0 auto;
 }
 .aboutContainer {
   padding: var(--padding-61xl) var(--padding-81xl) var(--padding-81xl);

@@ -10,6 +10,7 @@
     font-size: var(--font-size-53xl);
     color: var(--support-white);
     font-family: var(--font-playfair-display);
+    z-index: 100;
   }
   .AboutLandingHeroWebImage ,
   .AboutLandingHeroMobileImage{

@@ -10,8 +10,12 @@
   font-size: var(--font-size-53xl);
   color: var(--support-white);
   font-family: var(--font-playfair-display);
+  z-index: 100;
 }
-
+.timingsContainer{
+  max-width: 1166px;
+  margin: 0 auto;
+}
 .bgIcon,
 .bgIconMobile {
   width: 100%;
@@ -169,6 +173,7 @@
   .container {
     padding: var(--padding-81xl) var(--padding-xl) var(--padding-60) var(--padding-xl);
     width: calc(100% - 48px);
+    padding-top: 0;
   }
 
   .headingText {
@@ -209,6 +214,7 @@
   .container {
     padding: var(--padding-81xl) var(--padding-xl) var(--padding-60) var(--padding-xl);
     width: calc(100% - 48px);
+    padding-top: 0;
   }
 
   .bgIconMobile {
@@ -221,6 +227,7 @@
   .container {
     padding: var(--padding-81xl) var(--padding-xl) var(--padding-60) var(--padding-xl);
     width: calc(100% - 48px);
+    padding-top: 0;
   }
 
   .headingText {

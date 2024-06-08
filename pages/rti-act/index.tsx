@@ -3,6 +3,8 @@ import styles from "./index.module.css";
 import useFetch, { UPLOADS_BASE_URL } from "../../services/service";
 import { useEffect, useState } from "react";
 import AccordionItem from "../../components/accordians";
+import AnimationBus from "../../components/animation-bus";
+import AnimationBusMobile from "../../components/animation-bus-mobile";
 
 const RTIACT: NextPageRTIACTType = () => {
   const { data, doFetch } = useFetch();
@@ -17,24 +19,28 @@ const RTIACT: NextPageRTIACTType = () => {
     setExpandedIndex((prevIndex) => (prevIndex === index ? null : index));
   };
   return (
-    <div className={styles.rtiAct}>
-      <main className={styles.rtiActContainer}>
-        <h1 className={styles.rightToInformation}>{data?.rtiActTitle}</h1>
-        <div className={styles.rtiActContent}>
-          <ol className={styles.rtiList}>
-            {data?.rtiActData?.map((item: any, index: number) => (
-              <AccordionItem
-                key={index}
-                name={item.name}
-                info={item.info}
-                expanded={expandedIndex === index}
-                onChange={() => handleChange(index)}
-              />
-            ))}
-          </ol>
-        </div>
-      </main>
-    </div>
+    <>
+      <AnimationBus />
+      <AnimationBusMobile />
+      <div className={styles.rtiAct}>
+        <main className={styles.rtiActContainer}>
+          <h1 className={styles.rightToInformation}>{data?.rtiActTitle}</h1>
+          <div className={styles.rtiActContent}>
+            <ol className={styles.rtiList}>
+              {data?.rtiActData?.map((item: any, index: number) => (
+                <AccordionItem
+                  key={index}
+                  name={item.name}
+                  info={item.info}
+                  expanded={expandedIndex === index}
+                  onChange={() => handleChange(index)}
+                />
+              ))}
+            </ol>
+          </div>
+        </main>
+      </div>
+    </>
   );
 };
 

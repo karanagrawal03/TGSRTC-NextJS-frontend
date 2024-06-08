@@ -10,6 +10,8 @@ import ReservationServices from "../../components/reservation-services";
 import ReservationHero from "../../components/reservation-landing-hero";
 import SpecialBuses from "../../components/special-buses";
 import { routes } from "../../constants/book-your-tickets-routes";
+import AnimationBus from "../../components/animation-bus";
+import AnimationBusMobile from "../../components/animation-bus-mobile";
 
 
 const ReservationBookingServiceHome: NextPageReservationBookingServiceHomeType =() => {
@@ -28,6 +30,8 @@ const ReservationBookingServiceHome: NextPageReservationBookingServiceHomeType =
           heroMobileImage={data?.heroMobileImage} 
         />
         <BookYourTicket routes={routes} />
+        <AnimationBus />
+        <AnimationBusMobile />
         <ReservationKPIs 
           kpiData={data?.kpi}
         />
