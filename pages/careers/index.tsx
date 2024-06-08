@@ -4,6 +4,8 @@ import CustomTable from '../../components/table-view-details';
 import { columnWidths } from '../../constants/reservation-concession-schemes';
 import useFetch from '../../services/service';
 import { UPLOADS_BASE_URL } from '../../services/service';
+import AnimationBus from '../../components/animation-bus';
+import AnimationBusMobile from '../../components/animation-bus-mobile';
 const Careers = () => {
     const { data, doFetch, loading, error } = useFetch();
     useEffect(() => {
@@ -21,6 +23,8 @@ const Careers = () => {
                     <div className={styles.heroSubtitleMobile}>{data?.heroSubtitleMobile}</div>
                 </div>
             </section>
+            <AnimationBus/>
+      <AnimationBusMobile/>
             <section className={styles.requirement}>
                 <div className={styles.requirementTitle}>{data?.requirementTitle}</div>
                 <div className={styles.requiremenetTable}>

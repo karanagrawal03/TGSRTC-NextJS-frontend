@@ -7,6 +7,8 @@ import {
 import TendersComponent from "../../components/tenders-component";
 import { useEffect } from "react";
 import useFetch, { UPLOADS_BASE_URL } from "../../services/service";
+import AnimationBus from "../../components/animation-bus";
+import AnimationBusMobile from "../../components/animation-bus-mobile";
 
 const Tenders = () => {
   const { data, doFetch } = useFetch();
@@ -34,7 +36,8 @@ const Tenders = () => {
           {heroSection?.heroSectionSubHeading}
         </p>
       </div>
-
+      <AnimationBus/>
+      <AnimationBusMobile/>
       <TendersComponent TotalData={data} />
     </section>
   );

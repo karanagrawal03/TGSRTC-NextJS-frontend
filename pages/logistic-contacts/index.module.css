@@ -27,6 +27,7 @@
   display: flex;
   box-sizing: border-box;
   max-width: 100%;
+  z-index: 100;
 }
 
 .tableSection {
@@ -36,11 +37,13 @@
   justify-content: flex-start;
   padding: var(--padding-61xl) var(--padding-81xl) var(--padding-81xl) var(--padding-81xl);
   gap: var(--gap-base);
-  max-width: 100%;
+  width: 100%;
   text-align: left;
   font-size: var(--font-size-5xl);
   color: var(--primary-red);
   font-family: var(--font-playfair-display);
+  max-width: 1166px;
+  margin: 0 auto;
 }
 
 .title {

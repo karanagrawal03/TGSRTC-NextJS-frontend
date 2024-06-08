@@ -50,18 +50,6 @@ const MainContent: NextPage<MainContentType> = ({ bookYourCargoTitle,bookYourCar
           </div>
         </div>
       </div>
-      <img
-        className={styles.busDust}
-        loading="lazy"
-        alt="bus"
-        src="/bus--dust-1@2x.png"
-      />
-      <img
-        className={styles.busDustMobile}
-        loading="lazy"
-        alt="bus"
-        src="/bus-dust-mobile.png"
-      />
     </section>
   );
 };

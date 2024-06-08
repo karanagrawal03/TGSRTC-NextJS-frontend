@@ -5,6 +5,8 @@ import { faqs } from '../../constants/reservation-faq';
 import AccordionItem from '../../components/accordians';
 import useFetch from '../../services/service';
 import { UPLOADS_BASE_URL } from '../../services/service';
+import AnimationBus from '../../components/animation-bus';
+import AnimationBusMobile from '../../components/animation-bus-mobile';
 const ContactUs = () => {
    const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
    const { data, doFetch, loading, error } = useFetch();
@@ -40,6 +42,8 @@ const ContactUs = () => {
                <FeedbackForm />
             </div>
          </section>
+         <AnimationBus/>
+      <AnimationBusMobile/>
          <section className={styles.otherServices}>
             <div className={styles.otherServiceTitle}>
                {data?.otherServicesTitle}

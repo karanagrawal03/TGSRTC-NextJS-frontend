@@ -4,6 +4,8 @@ import { useEffect } from "react";
 import useFetch, { UPLOADS_BASE_URL } from "../../services/service";
 import AboutEventsContent from "../../components/awards-events-cards";
 import ImageWithCaption from "../../components/about-card-image";
+import AnimationBus from "../../components/animation-bus";
+import AnimationBusMobile from "../../components/animation-bus-mobile";
 
 
 
@@ -46,6 +48,8 @@ const AboutEventsAwards: NextPageAboutEventsAwardsType = () => {
            {data?.quotation2}
           </blockquote></div>
       </div>
+      <AnimationBus/>
+      <AnimationBusMobile/>
       <AboutEventsContent data={data}/>
       <div className={styles.events}>
           <h1 className={styles.eventsTitle}>{data?.eventsTitle}</h1>

@@ -3,6 +3,8 @@ import ReservationHeroConcessionSc from "../../components/reservation-points-ban
 import ReservationDetailsOfReserva from "../../components/reservation-points-table";
 import styles from "./index.module.css";
 import useFetch from "../../services/service";
+import AnimationBus from "../../components/animation-bus";
+import AnimationBusMobile from "../../components/animation-bus-mobile";
 
 const ReservationPoints = () => {
   const {data, doFetch}=useFetch();
@@ -12,6 +14,8 @@ const ReservationPoints = () => {
   return (
     <div className={styles.reservationPoints}>
       <ReservationHeroConcessionSc data={data}/>
+      <AnimationBus/>
+      <AnimationBusMobile/>
       <section className={styles.reservationDetailsOfReservaParent}>
         <ReservationDetailsOfReserva data={data}/>
       </section>

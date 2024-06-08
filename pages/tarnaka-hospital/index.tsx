@@ -5,6 +5,8 @@ import HospitalServices from "../../components/hospital-services";
 import HospitalContact from "../../components/hospital-contact";
 import { useEffect } from "react";
 import useFetch, { UPLOADS_BASE_URL } from "../../services/service";
+import AnimationBus from "../../components/animation-bus";
+import AnimationBusMobile from "../../components/animation-bus-mobile";
 
 const HospitalTSRTCTarnakaHospita: NextPageHospitalTSRTCTarnakaHospitaType = () => {
   const { data, doFetch } = useFetch();
@@ -21,6 +23,8 @@ const HospitalTSRTCTarnakaHospita: NextPageHospitalTSRTCTarnakaHospitaType = () 
         heroWebImage={data?.bannerWebImage} 
         heroMobileImage={data?.bannerMobileImage}
       />
+      <AnimationBus/>
+      <AnimationBusMobile/>
       <HospitalServices 
         aboutHospitalTitle={data?.aboutHospitalTitle}
         aboutHospitalImage={data?.aboutHospitalImage}

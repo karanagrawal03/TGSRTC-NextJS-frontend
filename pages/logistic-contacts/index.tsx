@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import useFetch, { UPLOADS_BASE_URL } from "../../services/service";
 import CustomTable from "../../components/table-view-details";
 import { NextPage } from "next";
+import AnimationBus from "../../components/animation-bus";
+import AnimationBusMobile from "../../components/animation-bus-mobile";
 
 type LogisticContactsType = {
   className?: string;
@@ -55,6 +57,8 @@ const LogisticContacts: NextPage<LogisticContactsType> = ({
           <p className={styles.heroSubTitleStyles}>{data?.heroSubTitle}</p>
         </div>
       </section>
+      <AnimationBus/>
+      <AnimationBusMobile/>
       <section className={[styles.tableSection, className].join(" ")}>
         <h2 className={styles.title}>{data?.logisticsContactsTitle}</h2>
         <CustomTable rowsClassName={styles.rowClass} rows={data?.logisticsContactsTableData} />

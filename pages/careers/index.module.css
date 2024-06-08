@@ -2,6 +2,7 @@
   height: auto;
   width: 100%;
   position: relative;
+  z-index: 100;
 }
 
 .heroBackgroundImageWeb {
@@ -60,6 +61,8 @@
 
 .requirement {
   padding: var(--padding-57xl) var(--gap-81xl) var(--gap-81xl) var(--gap-81xl);
+  max-width: 1166px;
+    margin: 0 auto;
 }
 
 .requirementTitle {

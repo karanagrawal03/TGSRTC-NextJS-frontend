@@ -20,12 +20,6 @@ export type SeatLayoutOfTGSRTCContaineType = {
 const SeatLayoutOfTGSRTCContaine: NextPage<SeatLayoutOfTGSRTCContaineType> = ({ className = "", data }) => {
   return (
     <div className={[styles.seatLayoutOfTgsrtcContaine, className].join(" ")}>
-      <img
-        className={styles.busDustMobile}
-        loading="lazy"
-        alt="Bus"
-        src="/reservation-details-bus-dust-mobile.png"
-      />
       <div className={styles.seatLayoutOfTgsrtcTexts}>
         <h3 className={styles.seatLayoutOfTgsrtc}>{data?.seatLayout}</h3>
         <p className={styles.theCorporationHas}>{data?.seatLayoutContent}</p>
