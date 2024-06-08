@@ -16,6 +16,7 @@
   text-align: left;
   color: var(--support-white);
   font-family: var(--font-playfair-display);
+  z-index: 100;
 }
 .applyRenew {
   margin: 0;

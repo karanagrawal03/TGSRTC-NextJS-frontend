@@ -5,7 +5,7 @@
 }
 
 .innerContainer {
-  max-width: 1366px;
+  max-width: 1166px;
   margin: 0px auto;
   display: flex;
   gap: var(--gap-21xl);
@@ -57,6 +57,7 @@
   .container {
     width: calc(100% - 48px);
     padding: var(--padding-81xl) var(--padding-5xl);
+    padding-top:0;
   }
 
   .innerContainer {

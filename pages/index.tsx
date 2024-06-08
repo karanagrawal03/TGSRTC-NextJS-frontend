@@ -12,6 +12,8 @@ import useFetch from "../services/service";
 import { useEffect } from "react";
 import Carousal from "../components/Carosal";
 import HomeBannerAnimation from "../components/home-banner-carousal";
+import AnimationBus from "../components/animation-bus";
+import AnimationBusMobile from "../components/animation-bus-mobile";
 
 const Homepage: NextPage = () => {
   
@@ -30,12 +32,15 @@ const Homepage: NextPage = () => {
        <HomeBannerAnimation title={data?.heroBannerTitle} children={heroSection} secondary={true} includeAnimation autoplay={true} />
       <BookYourTicket routes={routes} 
       />
+      <AnimationBus/>
+      <AnimationBusMobile/>
       <HomeBookYourServices 
        data={{
         bookYourServiceTitle: data?.bookYourServiceTitle,
         bookYourServiceContent: data?.bookYourServiceContent,
         serviceCards: data?.bookYourServiceCardsData || [],
       }}/>
+        
       <HomeGamyamApp
         data={{
           gamayamTitle: data?.gamyamAppTitle,

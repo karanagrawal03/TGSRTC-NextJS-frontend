@@ -2,6 +2,8 @@ import LogisticBookYourCargoSectionCard from "../../components/logistic-book-you
 import styles from "./index.module.css";
 import useFetch, { UPLOADS_BASE_URL } from "../../services/service";
 import { useEffect, useState } from "react";
+import AnimationBus from "../../components/animation-bus";
+import AnimationBusMobile from "../../components/animation-bus-mobile";
 
 const LogisticRatesAndTariffsContacts = () => {
   const { data, doFetch } = useFetch();
@@ -49,6 +51,8 @@ const LogisticRatesAndTariffsContacts = () => {
           <p className={styles.heroSubTitleStyles}>{data?.heroSubTitle}</p>
         </div>
       </section>
+      <AnimationBus/>
+      <AnimationBusMobile/>
       <LogisticBookYourCargoSectionCard
         cards={data?.bookYourCargoCards || []}
       />

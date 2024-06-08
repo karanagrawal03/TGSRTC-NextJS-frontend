@@ -18,14 +18,6 @@ export type HomeBookYourServicesType = {
 const HomeBookYourServices: NextPage<HomeBookYourServicesType> = ({ data, className = "" }) => {
   return (
     <>
-      <div className={styles.busframeContainer}>
-        <img
-          className={styles.busframe}
-          loading="lazy"
-          alt="horizontal bus"
-          src="/horizontal-bus.png"
-        />
-      </div>
       <section className={[styles.homeBookYourServices, className].join(" ")}>
         <div className={styles.frameParent}>
           <div className={styles.bookYourServicesWrapper}>

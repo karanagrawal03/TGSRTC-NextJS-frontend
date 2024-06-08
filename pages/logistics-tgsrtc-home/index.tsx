@@ -6,6 +6,8 @@ import FrameComponent6 from "../../components/logistics-home-business";
 import styles from "./index.module.css";
 import { useEffect } from "react";
 import useFetch from "../../services/service";
+import AnimationBus from "../../components/animation-bus";
+import AnimationBusMobile from "../../components/animation-bus-mobile";
 
 const LogisticsTSRTCHome: NextPage = () => {
   const { data, doFetch } = useFetch();
@@ -23,6 +25,8 @@ const LogisticsTSRTCHome: NextPage = () => {
         heroImageMobile={data?.heroImageMobile} 
         heroImageWeb={data?.heroImageWeb}
       />
+      <AnimationBus/>
+      <AnimationBusMobile/>
       <MainContent  
         bookYourCargoTitle={data?.bookYourCargoTitle} 
         bookYourCargoImage={data?.bookYourCargoImage} 

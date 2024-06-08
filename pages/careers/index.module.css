@@ -1,3 +1,29 @@
+.heroSection {
+  height: auto;
+  width: 100%;
+  position: relative;
+  z-index: 100;
+}
+
+.heroBackgroundImageWeb {
+  height: 100%;
+  width: 100%;
+}
+
+.heroBackgroundImageMobile {
+  display: none;
+  height: 100%;
+  width: 100%;
+}
+
+.heroSectionContent {
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  position: absolute;
+  top: 144px;
+  left: 99px;
+  right: 668px;
+}
 .careers {
   display: flex;
   flex-direction: column;
@@ -61,7 +87,7 @@
   text-shadow: 0 2px 3px rgba(0, 0, 0, 0.8);
 }
 .requirement {
-  max-width: 1440px;
+  max-width: 1166px;
   margin: 0 auto;
   padding: var(--padding-61xl) var(--padding-81xl) var(--padding-81xl);
   gap: var(--gap-base);
