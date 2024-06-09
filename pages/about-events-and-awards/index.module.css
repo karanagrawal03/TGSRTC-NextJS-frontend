@@ -71,6 +71,7 @@ padding-top: var(--padding-xs);
   font-weight: 600;
   line-height: 82px;
   margin: 0;
+  z-index: 999999;
 }
 .heroSubTitle {
   color: var(--support-white);
@@ -127,6 +128,7 @@ padding-top: var(--padding-xs);
   .heroTitle {
     font-size: var(--font-size-52xs);
     line-height: 60px;
+    z-index: unset;
   }
   .heroSubTitle {
     font-size: var(--font-size-5xl);
@@ -139,7 +141,7 @@ padding-top: var(--padding-xs);
 }
 @media screen and (max-width: 599px) {
   .events{
-    padding: 20px;
+    padding: 20px 20px 60px 20px;
   }
   .heroBannerImageSectionWeb {
     display: none;
@@ -150,6 +152,7 @@ padding-top: var(--padding-xs);
   .heroTitle {
     font-size: var(--font-size-42xl);
     line-height: normal;
+    z-index: unset;
   }
   .heroSubTitle {
     font-size: var(--font-size-base);
