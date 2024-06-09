@@ -5,6 +5,8 @@
     flex-direction: column;
     align-items: center;
     gap: var(--gap-13xl);
+    margin: 0 auto;
+    max-width: 1166px;
 }
 
 .introHeading {

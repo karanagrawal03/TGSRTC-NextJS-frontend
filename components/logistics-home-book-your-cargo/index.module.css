@@ -236,7 +236,7 @@
   }
   .lookingForSend {
     font-size: var(--font-size-lgi);
-    line-height: 32px;
+    line-height: normal;
   }
   .cargoButton{
     margin-top: 24px;
@@ -265,5 +265,8 @@
   }
   .applyNow{
     min-width: 224px;
+  }
+  .infographics{
+    padding: var(--padding-3xs) 0;
   }
 }

@@ -11,6 +11,7 @@
   background-image: url(/ContactUsWeb.png);
   background-size: cover;
   background-repeat: no-repeat;
+  z-index: 100;
 }
 .heroBackgroundImageWeb {
   width: 100%;
@@ -97,9 +98,11 @@
 .otherServices {
   display: flex;
   flex-direction: column;
-  max-width: 100%;
+  width: 100%;
   padding: var(--padding-61xl) var(--padding-81xl) var(--padding-81xl);
   gap: var(--gap-13xl);
+  margin: 0 auto;
+  max-width: 1166px;
 }
 .otherServiceTitle {
   color: var(--primary-red);

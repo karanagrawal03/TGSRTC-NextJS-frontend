@@ -1,5 +1,7 @@
 .projectProposed {
     padding: var(--gap-81xl);
+    margin: 0 auto;
+    max-width: 1166px;
 }
 
 .lineSeperator {
