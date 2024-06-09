@@ -87,6 +87,7 @@
   gap: var(--gap-base);
   padding: 0px var(--padding-61xl) 0px var(--padding-61xl);
   box-sizing: border-box;
+  margin-top: 24px;
 }
 
 .monthlySeasonTicketstableTitle {
