@@ -49,6 +49,10 @@
   line-height: 24.38px;
   text-align: left;
   margin-bottom: 5px;
+  color: var(--text-grey-body-text);
+}
+.listItemlink{
+  color: var(--text-grey-body-text);
 }
 .listItem::marker {
   color: var(--primary-red);
@@ -61,6 +65,7 @@
   font-weight: 500;
   line-height: 26px;
   text-align: left;
+  color: var(--text-grey-body-text);
 }
 @media screen and (min-width:1440px) {
   .siteMap{
