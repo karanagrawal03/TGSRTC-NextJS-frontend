@@ -3,6 +3,7 @@
   flex-direction: column;
   gap: var(--gap-base);
 }
+
 .headingText {
   font-family: var(--font-playfair-display);
   font-size: var(--font-size-27xl);
@@ -11,20 +12,25 @@
   text-align: left;
   margin: 0px;
 }
+
 .rowClass:hover {
   background-color: var(--color-whitesmoke);
 }
-.width{
+
+.width {
   width: 400px;
 }
-.tableContainer{
-  width: 786px;
+
+.tableContainer {
+  min-width: 786px;
 }
+
 @media screen and (max-width: 1280px) {
   .headingText {
     display: none;
   }
-  .tableContainer{
+
+  .tableContainer {
     width: 100%;
   }
 }

@@ -4,10 +4,12 @@ import styles from "./index.module.css";
 interface AdvertisementsData {
   advertisementsAndFuelsText: string;
   advertisementsAndFuelsData: any;
+  advertisementsAndFuelsLinks: any
 }
 const Adversiments: React.FC<AdvertisementsData> = ({
   advertisementsAndFuelsData,
   advertisementsAndFuelsText,
+  advertisementsAndFuelsLinks
 }) => {
   return (
     <div className={styles.container}>
@@ -15,8 +17,7 @@ const Adversiments: React.FC<AdvertisementsData> = ({
       <CustomTable
         containerClassName={styles.tableContainer}
         rowsClassName={styles.rowClass}
-        rows={advertisementsAndFuelsData}
-      />
+        rows={advertisementsAndFuelsData} Links={advertisementsAndFuelsLinks} />
     </div>
   );
 };

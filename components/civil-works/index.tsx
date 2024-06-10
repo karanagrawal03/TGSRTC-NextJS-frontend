@@ -4,10 +4,14 @@ import styles from "./index.module.css";
 interface civilData {
   civilWorksData: any;
   civilWorksText: string;
+  civilWorksLinks
+  : any
 }
 const CivilWorks: React.FC<civilData> = ({
   civilWorksData,
   civilWorksText,
+  civilWorksLinks
+
 }) => {
   return (
     <div className={styles.container}>
@@ -15,8 +19,8 @@ const CivilWorks: React.FC<civilData> = ({
       <CustomTable
         containerClassName={styles.tableContainer}
         rowsClassName={styles.rowClass}
-        rows={civilWorksData}
-      />
+        rows={civilWorksData} Links={civilWorksLinks
+        } />
     </div>
   );
 };

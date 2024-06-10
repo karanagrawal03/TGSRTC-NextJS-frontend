@@ -4,10 +4,12 @@ import styles from "./index.module.css";
 interface electricData {
   electricBusesData: any;
   electricBusesText: string;
+  electricBusesLinks: any
 }
 const ElectricBuses: React.FC<electricData> = ({
   electricBusesData,
   electricBusesText,
+  electricBusesLinks
 }) => {
   return (
     <div className={styles.container}>
@@ -15,8 +17,7 @@ const ElectricBuses: React.FC<electricData> = ({
       <CustomTable
         containerClassName={styles.tableContainer}
         rowsClassName={styles.rowClass}
-        rows={electricBusesData}
-      />
+        rows={electricBusesData} Links={electricBusesLinks} />
     </div>
   );
 };

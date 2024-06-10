@@ -9,6 +9,7 @@ export type LogisticBookYourCargoSectionCardType = {
     cardHeading: string;
     content: string;
     button: string;
+    link: string
   }>;
 };
 
@@ -38,14 +39,12 @@ const LogisticBookYourCargoSectionCard: NextPage<
                 </h2>
                 <p className={styles.loremIpsumDolor}>{card?.content}</p>
               </div>
-              <button className={styles.buttonsContainer}>
+              <a className={styles.buttonsContainer} target="_blank"
+                rel="noopener noreferrer" href={card?.link}>
                 <div className={styles.button1}>
                   <b className={styles.applyNow}>{card?.button}</b>
                 </div>
-                <div className={styles.button2}>
-                  <div className={styles.applyNow1}>{card?.button}</div>
-                </div>
-              </button>
+              </a>
             </div>
           </div>
         ))}

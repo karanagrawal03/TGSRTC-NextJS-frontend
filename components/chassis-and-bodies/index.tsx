@@ -4,10 +4,12 @@ import styles from "./index.module.css";
 interface chassisData {
   chassisBodiesText: string;
   chassisBodiesData: any;
+  chassisBodiesLinks: any
 }
 const ChassisAndBodies: React.FC<chassisData> = ({
   chassisBodiesData,
   chassisBodiesText,
+  chassisBodiesLinks
 }) => {
   return (
     <div className={styles.container}>
@@ -15,8 +17,7 @@ const ChassisAndBodies: React.FC<chassisData> = ({
       <CustomTable
         containerClassName={styles.tableContainer}
         rowsClassName={styles.rowClass}
-        rows={chassisBodiesData}
-      />
+        rows={chassisBodiesData} Links={chassisBodiesLinks} />
     </div>
   );
 };

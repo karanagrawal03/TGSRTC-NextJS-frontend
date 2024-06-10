@@ -17,8 +17,9 @@
   word-break: break-all;
 }
 
-.link:hover {
-  color: var(--primary-red);
+.link {
+  color: var(--primary-green);
+  cursor: pointer;
 }
 
 .list {
