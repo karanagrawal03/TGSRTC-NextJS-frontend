@@ -88,7 +88,6 @@ const CustomTable: React.FC<TableProps> = ({
                     paddingTop: "10px",
                     paddingBottom: "10px",
                     paddingLeft: "20px !important",
-                    border: "0px solid",
                     width: columnWidths ? columnWidths[key] : "0px",
                   }}
                 >

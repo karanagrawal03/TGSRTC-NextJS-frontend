@@ -143,7 +143,7 @@
 @media screen and (max-width: 750px) {
 
   .knowMoreAboutContainer {
-    padding-bottom: 24px;
+    padding-bottom: var(--padding-5xl);
   }
 
   .generalCommuterPassContainer {

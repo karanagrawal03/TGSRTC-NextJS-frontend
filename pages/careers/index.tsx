@@ -16,8 +16,8 @@ const Careers = () => {
     return (
         <div className={styles.careers}>
             <section className={styles.heroSection}>
-                <img className={styles.heroBackgroundImageWeb} src={UPLOADS_BASE_URL + data?.heroBackgroundImageWeb?.data?.attributes?.url} loading='lazy' />
-                <img className={styles.heroBackgroundImageMobile} src={UPLOADS_BASE_URL + data?.heroBackgroundImageMobile?.data?.attributes?.url} loading='lazy' />
+                <img className={styles.heroBackgroundImageWeb} alt="hero-section-web" src={UPLOADS_BASE_URL + data?.heroBackgroundImageWeb?.data?.attributes?.url} loading='lazy' />
+                <img className={styles.heroBackgroundImageMobile} alt="hero-section-mobile" src={UPLOADS_BASE_URL + data?.heroBackgroundImageMobile?.data?.attributes?.url} loading='lazy' />
                 <div className={styles.heroSectionContent}>
                     <div className={styles.heroTitle}>{data?.heroTitle}</div>
                     <div className={styles.heroSubtitle}>{data?.heroSubtitleWeb}<br />{data?.heroSubtitleMobile}</div>
