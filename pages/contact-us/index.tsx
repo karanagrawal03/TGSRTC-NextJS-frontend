@@ -23,9 +23,9 @@ const ContactUs = () => {
             <div className={styles.contactUsContent}>
                <div className={styles.contactContentLeft}>
                   <div className={styles.contactUsTitle}>{data?.heroTitle}</div>
-                  <div className={styles.contactUsAddress}>{data?.heroSubtitle}<br />{data?.contactAddress}<br/>{data?.contactAddressPincode}</div>
+                  <div className={styles.contactUsAddress}>{data?.heroSubtitle}<br />{data?.contactAddress}<br />{data?.contactAddressPincode}</div>
                   <div className={styles.contactUsEmail}>
-                     <img src="/mailIcon.png" alt="mailicon" loading='lazy' className={styles.mailIcon}/>
+                     <img src="/mailIcon.png" alt="mailicon" loading='lazy' className={styles.mailIcon} />
                      <span><a href={`${"mailto:"}${data?.contactEmail1}`} className={styles.link}>{data?.contactEmail1}</a><span>{data?.forGeneral}</span></span>
                   </div>
                   <div className={styles.contactUsEmail}>
@@ -33,13 +33,13 @@ const ContactUs = () => {
                      <span><a href={`${"mailto:"}${data?.contactEmail2}`} className={styles.link}>{data?.contactEmail2}</a><span>{data?.forLogistics}</span></span>
                   </div>
                   <div className={styles.contactUsPhone}>
-                     <img src="/phoneIcon.png" alt="phoneIcon" loading='lazy' className={styles.phoneIcon}/>
+                     <img src="/phoneIcon.png" alt="phoneIcon" loading='lazy' className={styles.phoneIcon} />
                      <span><a href={`${"tel:"}${data?.contactPhone1}`} className={styles.link}>{data?.contactPhone1}</a>/ <a href={`${"tel:"}${data?.contactPhone2}`} className={styles.link}>{data?.contactPhone2}</a></span>
                   </div>
                   <div className={styles.contactUsHelpline}>
-                     <img src="/phoneIcon.png" alt="phoneIcon" loading='lazy' className={styles.phoneIcon}/>
+                     <img src="/phoneIcon.png" alt="phoneIcon" loading='lazy' className={styles.phoneIcon} />
                      <span>
-                        <span>{data?.helplineNumber}</span><br /> 
+                        <span>{data?.helplineNumber}</span><br />
                         <span className={styles.italic}>{data?.helplineTimings}</span>
                      </span>
                   </div>
@@ -49,8 +49,8 @@ const ContactUs = () => {
                </div>
             </div>
          </section>
-         <AnimationBus/>
-      <AnimationBusMobile/>
+         <AnimationBus />
+         <AnimationBusMobile />
          <section className={styles.otherServices}>
             <div className={styles.otherServiceTitle}>
                {data?.otherServicesTitle}
