@@ -13,7 +13,6 @@ const OutSoursingControls: React.FC<data> = ({
     <div className={styles.container}>
       <p className={styles.headingText}>{outSourcingContractText}</p>
       <CustomTable
-        columnWidths={[500, 800, 100, 100]}
         containerClassName={styles.tableContainer}
         rowsClassName={styles.rowClass}
         rows={outSourcingData}
