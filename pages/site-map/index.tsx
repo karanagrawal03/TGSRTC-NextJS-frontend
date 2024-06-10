@@ -57,12 +57,12 @@ const SiteMap: NextPage = () => {
             {data?.siteMapData?.map((item: any, index: number) => (
               <div key={index} className={styles.siteMapItem}>
                 <ul className={styles.siteMapList}>
-                  <li className={styles.listItem}>{item?.name}</li>
+                  <li className={styles.listItem}><a href={item?.link}>{item?.name}</a></li>
                   {item?.data?.length !== 0 &&
-                    item?.data?.map((listItem: { name: string, link: string }, subIndex: number) => (
-                      <li key={subIndex} className={styles.listItemSubLink}>
-                        <a href={listItem.link}>{listItem}</a>
-                      </li>
+                    item?.data?.map((listItem: { name: string, link: string }) => (
+                      <>
+                        <a className={styles.listItemSubLink} href={listItem.link}>{listItem.name}</a>
+                      </>
                     ))}
                 </ul>
               </div>
