@@ -4,10 +4,12 @@ import styles from "./index.module.css";
 interface otherContracts {
   otherContractsText: string;
   otherContractsData: any;
+  otherContractsLinks: any
 }
 const OtherContracts: React.FC<otherContracts> = ({
   otherContractsText,
   otherContractsData,
+  otherContractsLinks
 }) => {
   return (
     <div className={styles.container}>
@@ -15,8 +17,7 @@ const OtherContracts: React.FC<otherContracts> = ({
       <CustomTable
         containerClassName={styles.tableContainer}
         rowsClassName={styles.rowClass}
-        rows={otherContractsData}
-      />
+        rows={otherContractsData} Links={otherContractsLinks} />
     </div>
   );
 };

@@ -4,10 +4,12 @@ import styles from "./index.module.css";
 interface data {
   outSourcingContractText: string;
   outSourcingData: any;
+  outSourcingLinks: any
 }
 const OutSoursingControls: React.FC<data> = ({
   outSourcingContractText,
   outSourcingData,
+  outSourcingLinks
 }) => {
   return (
     <div className={styles.container}>
@@ -16,6 +18,7 @@ const OutSoursingControls: React.FC<data> = ({
         containerClassName={styles.tableContainer}
         rowsClassName={styles.rowClass}
         rows={outSourcingData}
+        Links={outSourcingLinks}
       />
     </div>
   );

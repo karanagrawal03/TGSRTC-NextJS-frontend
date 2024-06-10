@@ -11,7 +11,7 @@ type LogisticContactsType = {
 };
 
 const LogisticContacts: NextPage<LogisticContactsType> = ({
-  className = "",
+  className = ""
 }) => {
   const { data, doFetch } = useFetch();
   const [width, setWidth] = useState<boolean>(false);
@@ -57,11 +57,11 @@ const LogisticContacts: NextPage<LogisticContactsType> = ({
           <p className={styles.heroSubTitleStyles}>{data?.heroSubTitle}</p>
         </div>
       </section>
-      <AnimationBus/>
-      <AnimationBusMobile/>
+      <AnimationBus />
+      <AnimationBusMobile />
       <section className={[styles.tableSection, className].join(" ")}>
         <h2 className={styles.title}>{data?.logisticsContactsTitle}</h2>
-        <CustomTable rowsClassName={styles.rowClass} rows={data?.logisticsContactsTableData} />
+        <CustomTable rowsClassName={styles.rowClass} rows={data?.logisticsContactsTableData} Links={data?.logisticsContractsLinks} />
       </section>
     </>
   );

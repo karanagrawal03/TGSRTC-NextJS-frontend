@@ -17,6 +17,7 @@ interface TableProps {
   tableHeadCellStyles?: any;
   tableCellStyles?: any;
   rowsClassName?: any;
+  Links: string[];
 }
 
 const CustomTable: React.FC<TableProps> = ({
@@ -26,12 +27,22 @@ const CustomTable: React.FC<TableProps> = ({
   tableHeadCellStyles,
   tableCellStyles,
   rowsClassName,
+  Links,
 }) => {
   if (rows?.length === 0) {
     return <div>No data available</div>;
   }
-  const headers = rows[0];
-  const bodyRows = rows.slice(1);
+
+  const updatedRows = rows.map((row, index) => {
+    if (index === 0) {
+      return { ...row, Action: row.Action || "Action" };
+    }
+    return { ...row, Action: "View Details" };
+  });
+
+  const headers: { [key: string]: any } = updatedRows[0];
+  const bodyRows = updatedRows.slice(1);
+
   return (
     <TableContainer
       className={`${styles.tableContainer} ${containerClassName}`}
@@ -65,9 +76,9 @@ const CustomTable: React.FC<TableProps> = ({
             <TableRow
               key={index}
               className={`${index % 2 === 0 ? styles.evenRow : styles.oddRow} ${styles.additionalClassName
-                }  ${rowsClassName}`}
+                } ${rowsClassName}`}
             >
-              {Object.keys(row).map((key) => (
+              {Object.keys(row).map((key: string) => (
                 <TableCell
                   className={`${styles.tableCell} ${tableCellStyles ? tableCellStyles : ""
                     }`}
@@ -77,16 +88,17 @@ const CustomTable: React.FC<TableProps> = ({
                     paddingTop: "10px",
                     paddingBottom: "10px",
                     paddingLeft: "20px !important",
-                    width: columnWidths ? columnWidths[key] : "auto",
-                    border: "0px solid"
+                    border: "0px solid",
+                    width: columnWidths ? columnWidths[key] : "0px",
                   }}
                 >
                   {key === "Action" ? (
                     <a
                       className={styles.actionButton}
-                      href="https://tgsrtc.telangana.gov.in/pdf/Logistics%20Web%20page.pdf"
+                      href={Links[index]}
                       target="_blank"
                       rel="noopener noreferrer"
+                      style={{ width: "100px !important" }}
                     >
                       {row[key]}
                     </a>

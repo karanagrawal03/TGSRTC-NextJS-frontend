@@ -4,10 +4,12 @@ import styles from "./index.module.css";
 interface ITProductsData {
   ITProductsData: any;
   ITProductsText: string;
+  itProductsLinks:any
 }
 const ITPrjects: React.FC<ITProductsData> = ({
   ITProductsText,
   ITProductsData,
+  itProductsLinks
 }) => {
   return (
     <div className={styles.container}>
@@ -16,6 +18,7 @@ const ITPrjects: React.FC<ITProductsData> = ({
         containerClassName={styles.tableContainer}
         rowsClassName={styles.rowClass}
         rows={ITProductsData}
+        Links={itProductsLinks}
       />
     </div>
   );

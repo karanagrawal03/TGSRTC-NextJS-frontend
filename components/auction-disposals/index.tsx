@@ -4,10 +4,12 @@ import styles from "./index.module.css";
 interface AuctionDisposalData {
   auctionsData: any;
   auctionsText: String;
+  auctionsLinks: any
 }
 const AuctionDisposals: React.FC<AuctionDisposalData> = ({
   auctionsData,
   auctionsText,
+  auctionsLinks
 }) => {
   return (
     <div className={styles.container}>
@@ -15,8 +17,7 @@ const AuctionDisposals: React.FC<AuctionDisposalData> = ({
       <CustomTable
         containerClassName={styles.tableContainer}
         rowsClassName={styles.rowClass}
-        rows={auctionsData}
-      />
+        rows={auctionsData} Links={auctionsLinks} />
     </div>
   );
 };

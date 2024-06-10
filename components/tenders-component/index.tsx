@@ -35,6 +35,7 @@ const TendersComponent: React.FC<TendersData> = ({ TotalData }) => {
         <OutSoursingControls
           outSourcingData={TotalData?.outSourcingContractsData}
           outSourcingContractText={TotalData?.outSourcingContractsText}
+          outSourcingLinks={TotalData?.outSourcingLinks}
         />
       ),
     },
@@ -45,6 +46,7 @@ const TendersComponent: React.FC<TendersData> = ({ TotalData }) => {
         <OpenLandParcelCease
           openLandParcelOnLeaseText={TotalData?.openLandParcelOnLeaseText}
           openLandParcelOnLeaseData={TotalData?.openLandParcelOnLeaseData}
+          openLandParcelOnLeaseLinks={TotalData?.openLandParcelOnLeaseLinks}
         />
       ),
     },
@@ -54,6 +56,7 @@ const TendersComponent: React.FC<TendersData> = ({ TotalData }) => {
         <ProcrumentAndSupplies
           procruementAndSuppliesText={TotalData?.procruementAndSuppliesText}
           procruementAndSuppliesData={TotalData?.procruementAndSuppliesData}
+          procruementAndSuppliesLinks={TotalData?.procruementAndSuppliesLinks}
         />
       ),
     },
@@ -63,6 +66,7 @@ const TendersComponent: React.FC<TendersData> = ({ TotalData }) => {
         <StallsAndShops
           stallsAndShopsText={TotalData?.stallsAndShopsText}
           stallsAndShopsData={TotalData?.stallsAndShopsData}
+          stallsAndShopsLinks={TotalData?.stallsAndShopsLinks}
         />
       ),
     },
@@ -72,6 +76,7 @@ const TendersComponent: React.FC<TendersData> = ({ TotalData }) => {
         <ITPrjects
           ITProductsData={TotalData?.ITProductsData}
           ITProductsText={TotalData?.ITProductsText}
+          itProductsLinks={TotalData?.itProductsLinks}
         />
       ),
     },
@@ -81,6 +86,7 @@ const TendersComponent: React.FC<TendersData> = ({ TotalData }) => {
         <Adversiments
           advertisementsAndFuelsText={TotalData?.advertisementsAndFuelsText}
           advertisementsAndFuelsData={TotalData?.advertisementsAndFuelsData}
+          advertisementsAndFuelsLinks={TotalData?.advertisementsAndFuelsLinks}
         />
       ),
     },
@@ -90,6 +96,7 @@ const TendersComponent: React.FC<TendersData> = ({ TotalData }) => {
         <AuctionDisposals
           auctionsText={TotalData?.auctionsText}
           auctionsData={TotalData?.auctionsData}
+          auctionsLinks={TotalData?.auctionsLinks}
         />
       ),
     },
@@ -99,6 +106,7 @@ const TendersComponent: React.FC<TendersData> = ({ TotalData }) => {
         <ChassisAndBodies
           chassisBodiesText={TotalData?.chassisBodiesText}
           chassisBodiesData={TotalData?.chassisBodiesData}
+          chassisBodiesLinks={TotalData?.chassisBodiesLinks}
         />
       ),
     },
@@ -108,6 +116,7 @@ const TendersComponent: React.FC<TendersData> = ({ TotalData }) => {
         <ElectricBuses
           electricBusesText={TotalData?.electricBusesText}
           electricBusesData={TotalData?.electricBusesData}
+          electricBusesLinks={TotalData?.electricBusesLinks}
         />
       ),
     },
@@ -118,6 +127,7 @@ const TendersComponent: React.FC<TendersData> = ({ TotalData }) => {
         <CivilWorks
           civilWorksText={TotalData?.civilWorksText}
           civilWorksData={TotalData?.civilWorksData}
+          civilWorksLinks={TotalData?.civilWorksLinks}
         />
       ),
     },
@@ -128,6 +138,7 @@ const TendersComponent: React.FC<TendersData> = ({ TotalData }) => {
         <HireBus
           hireBusData={TotalData?.hireBusData}
           hireBusText={TotalData?.hireBusText}
+          hireBusLinks={TotalData?.hireBusLinks}
         />
       ),
     },
@@ -137,6 +148,7 @@ const TendersComponent: React.FC<TendersData> = ({ TotalData }) => {
         <OtherContracts
           otherContractsData={TotalData?.otherContractsData}
           otherContractsText={TotalData?.otherContractsText}
+          otherContractsLinks={TotalData?.otherContractsLinks}
         />
       ),
     },
@@ -149,9 +161,8 @@ const TendersComponent: React.FC<TendersData> = ({ TotalData }) => {
           {TotalData?.tendersTotalArray.map((e: any, index: number) => (
             <p
               key={index}
-              className={`${styles.tenderText} ${
-                selectedTender === index ? styles.selected : ""
-              }`}
+              className={`${styles.tenderText} ${selectedTender === index ? styles.selected : ""
+                }`}
               onClick={() => handleClick(index)}
             >
               {e}
