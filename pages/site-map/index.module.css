@@ -75,6 +75,10 @@
   text-align: left;
 }
 
+.listItemSubLink:hover {
+  color: var(--primary-red);
+}
+
 @media screen and (min-width:1440px) {
   .siteMap {
     max-width: 1306px;
