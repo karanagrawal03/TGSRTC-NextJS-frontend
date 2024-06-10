@@ -27,7 +27,7 @@ const BookYourTicket: NextPage<BookYourTicketType> = ({ className = "", routes, 
   };
 
   return (
-    <section className={[styles.bookYourTicket, className].join(" ")} style={{ marginTop }}> {/* Add marginTop style here */}
+    <section className={[styles.bookYourTicket, className].join(" ")} style={{ marginTop }}>
       <div className={styles.textsWrapper}>
         <div className={styles.texts}>
           <div className={styles.bookYourTicketWrapper}>

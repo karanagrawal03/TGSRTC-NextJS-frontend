@@ -13,6 +13,7 @@
   font-size: var(--font-size-27xl);
   color: var(--text-black);
   font-family: var(--font-playfair-display);
+  z-index: 99;
 }
 .busDust {
   display: none;
