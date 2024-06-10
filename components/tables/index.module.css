@@ -1,7 +1,7 @@
 .tableContainer {
   width: 100%;
   margin-top: 24px;
-  box-shadow: none !important;
+  box-shadow: var(--card-shadow) !important;
 }
 
 .tableHead {

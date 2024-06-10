@@ -1,14 +1,14 @@
-import React, { ReactElement } from "react";
+import React from "react";
 import styles from "./index.module.css";
 
 interface BulletPointsProps {
   items: (string | React.ReactElement)[];
   containerClassName?: string;
-  dynamicStyles?:string;
+  dynamicStyles?: string;
 }
 
 const extractUrl = (text: string): string | null => {
-  const urlRegex = /(https?:\/\/[^\s]+)/g;
+  const urlRegex = /(https?:\/\/[^\s]+|www\.[^\s]+)/g;
   const match = text.match(urlRegex);
   return match ? match[0] : null;
 };
@@ -28,11 +28,11 @@ const BulletPoints: React.FC<BulletPointsProps> = ({
               const textBeforeUrl = item.split(url)[0];
               const textAfterUrl = item.split(url)[1];
               return (
-                <li className={`${styles.listItems} ${styles.dynamicStyles} || "" `} key={index}>
+                <li className={`${styles.listItems} ${dynamicStyles || ""}`} key={index}>
                   {textBeforeUrl}
                   <span className={styles.link} key={`link_${index}`}>
                     <a
-                      href={url}
+                      href={url.startsWith('http') ? url : `http://${url}`}
                       className={styles.link}
                       target="_blank"
                       rel="noopener noreferrer"

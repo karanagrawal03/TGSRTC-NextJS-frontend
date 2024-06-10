@@ -82,13 +82,14 @@ const CustomTable: React.FC<TableProps> = ({
                   }}
                 >
                   {key === "Action" ? (
-                    <button
-
+                    <a
                       className={styles.actionButton}
-                      onClick={() => console.log("View Details")}
+                      href="https://tgsrtc.telangana.gov.in/pdf/Logistics%20Web%20page.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       {row[key]}
-                    </button>
+                    </a>
                   ) : (
                     row[key]
                   )}
