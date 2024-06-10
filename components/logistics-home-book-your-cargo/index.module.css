@@ -6,6 +6,7 @@
   font-family: inherit;
   mix-blend-mode: normal;
 }
+
 .bookYourCargoWrapper {
   align-self: stretch;
   display: flex;
@@ -14,32 +15,38 @@
   justify-content: center;
   padding: 0 var(--padding-xl);
 }
+
 .frameChild {
   width: 100%;
   height: auto;
 }
-.frameItem
-{
+
+.frameItem {
   position: absolute;
   top: 0;
   height: 100%;
 }
+
 .frameItem {
   bottom: 0;
   left: 49px;
   max-height: 100%;
   width: 93px;
 }
+
 .frameParent {
   display: flex;
   align-items: center;
   max-width: 100%;
   justify-content: center;
+  width: 180px;
 }
+
 .infographicsInner {
   margin-left: -1px;
   position: relative;
 }
+
 .illustrationShape {
   margin-left: -3px;
   width: 146px;
@@ -49,12 +56,14 @@
   border-radius: 50%;
   background-color: var(--color-gray-200);
 }
+
 .infographics {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
 }
+
 .lookingForSend {
   margin: 0;
   position: relative;
@@ -67,6 +76,7 @@
   mix-blend-mode: normal;
   max-width: 100%;
 }
+
 .loremIpsumDolor {
   margin: 0;
   align-self: stretch;
@@ -75,6 +85,7 @@
   line-height: 26px;
   white-space: pre-wrap;
 }
+
 .lookingForSendYourPackageParent {
   align-self: stretch;
   display: flex;
@@ -84,6 +95,7 @@
   gap: var(--gap-9xs);
   max-width: 100%;
 }
+
 .cargoDescription,
 .cargoInfo {
   flex: 1;
@@ -91,6 +103,7 @@
   align-items: flex-start;
   max-width: 100%;
 }
+
 .cargoDescription {
   flex-direction: column;
   justify-content: flex-start;
@@ -98,6 +111,7 @@
   box-sizing: border-box;
   min-width: 287px;
 }
+
 .cargoInfo {
   flex-direction: row;
   justify-content: center;
@@ -105,6 +119,7 @@
   gap: var(--gap-5xl);
   align-items: center;
 }
+
 .applyNow {
   position: relative;
   font-size: var(--font-size-sm);
@@ -115,12 +130,14 @@
   display: inline-block;
   min-width: 100px;
 }
+
 .button,
 .cargoButton {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
 }
+
 .button {
   cursor: pointer;
   border: 0;
@@ -132,16 +149,19 @@
   flex-direction: row;
   white-space: nowrap;
 }
+
 .cargoButton {
   flex-direction: column;
   padding: var(--padding-6xl) 0 0;
 }
+
 .cargoCard,
 .contentLeft {
   display: flex;
   align-items: flex-start;
   max-width: 100%;
 }
+
 .cargoCard {
   align-self: stretch;
   box-shadow: var(--card);
@@ -157,12 +177,14 @@
   color: var(--text-grey-body-text);
   font-family: var(--font-montserrat);
 }
+
 .contentLeft {
   width: 846px;
   flex-direction: column;
   justify-content: flex-start;
   gap: var(--gap-13xl);
 }
+
 .busDust {
   height: 780px;
   width: 128px;
@@ -173,16 +195,18 @@
   object-fit: cover;
   z-index: 1;
 }
-.busDustMobile{
+
+.busDustMobile {
   display: none;
 }
+
 .mainContent {
   align-self: stretch;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding:  var(--padding-81xl) var(--padding-xl);
+  padding: var(--padding-81xl) var(--padding-xl);
   box-sizing: border-box;
   position: relative;
   text-align: left;
@@ -190,83 +214,103 @@
   color: var(--color-black);
   font-family: var(--font-playfair-display);
 }
+
 @media screen and (max-width: 1023px) {
-  .busDust{
+  .busDust {
     display: none;
   }
-  .busDustMobile{
+
+  .busDustMobile {
     display: block;
     margin: 0 auto;
   }
+
   .bookYourCargo {
     font-size: var(--font-size-18xl);
   }
+
   .cargoInfo {
     flex-wrap: wrap;
     min-width: 100%;
     align-items: center;
   }
-  .cargoButton{
+
+  .cargoButton {
     padding: unset;
   }
-  .mainContent{
+
+  .mainContent {
     flex-direction: column-reverse;
     padding: unset;
   }
-  .cargoCard{
+
+  .cargoCard {
     margin: 0 auto;
     width: 86.7%;
   }
 }
+
 @media screen and (max-width: 599px) {
-  .mainContent{
+  .mainContent {
     flex-direction: column-reverse;
     padding: unset;
     padding-bottom: var(--padding-41xl);
   }
-  .busDust{
+
+  .busDust {
     display: none;
   }
-  .busDustMobile{
+
+  .busDustMobile {
     display: block;
     margin: 0 auto;
   }
+
   .bookYourCargo {
     font-size: var(--font-size-9xl);
   }
+
   .lookingForSend {
     font-size: var(--font-size-lgi);
     line-height: normal;
   }
-  .cargoButton{
+
+  .cargoButton {
     margin-top: 24px;
   }
+
   .cargoCard {
     gap: unset;
     padding: var(--padding-xl);
     width: 86.7%;
     margin: 0 auto;
   }
+
   .contentLeft {
     gap: var(--gap-base);
   }
-  .bookYourCargoWrapper{
+
+  .bookYourCargoWrapper {
     padding-bottom: var(--padding-base);
   }
-  .cargoInfo{
+
+  .cargoInfo {
     width: 86.7%;
     margin: 0 auto;
     gap: unset;
   }
-  .lookingForSendYourPackageParent{
+
+  .lookingForSendYourPackageParent {
     width: 272px;
     text-align: center;
     margin: 0 auto;
   }
-  .applyNow{
+
+  .applyNow {
     min-width: 224px;
   }
-  .infographics{
+
+  .infographics {
     padding: var(--padding-3xs) 0;
   }
 }
