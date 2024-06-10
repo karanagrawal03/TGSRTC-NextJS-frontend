@@ -84,7 +84,7 @@
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: 0 0 var(--padding-xl);
+  padding: 0 0 var(--padding-13xl);
   box-sizing: border-box;
   max-width: 100%;
   font-size: var(--font-size-5xl);
@@ -331,7 +331,7 @@
 
 .busPassStudentPasses1 {
   background-color: var(--support-grey-bg);
-  padding: var(--padding-61xl) var(--padding-81xl) var(--padding-81xl);
+  padding: var(--padding-61xl) var(--padding-73xl) var(--padding-73xl);
   box-sizing: border-box;
   gap: var(--gap-xs);
   width: 100%;
@@ -818,12 +818,12 @@
   }
 
   .busPassStudentPasses1 {
-    padding: var(--padding-5xl) var(--padding-5xl) var(--padding-41xl) var(--padding-5xl);
+    padding: var(--padding-5xl) var(--padding-5xl) var(--padding-33xl) var(--padding-5xl);
     box-sizing: border-box;
   }
 
   .knowMoreAboutStudentPassesWrapper {
-    padding-bottom: 12px;
+    padding-bottom: var(--padding-5xl);
   }
 
   .knowMoreAbout {
