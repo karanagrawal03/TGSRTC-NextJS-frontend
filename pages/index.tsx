@@ -30,7 +30,7 @@ const Homepage: NextPage = () => {
   return (
     <div className={styles.homepage}>
        <HomeBannerAnimation title={data?.heroBannerTitle} children={heroSection} secondary={true} includeAnimation autoplay={true} />
-      <BookYourTicket routes={routes} 
+      <BookYourTicket routes={routes} marginTop="-0.3%"
       />
       <AnimationBus/>
       <AnimationBusMobile/>
@@ -44,7 +44,7 @@ const Homepage: NextPage = () => {
       <HomeGamyamApp
         data={{
           gamayamTitle: data?.gamyamAppTitle,
-          gamayamParagraph: data?.gamayamAppParagraph,
+          gamayamParagraph: data?.gamyamAppContent,
           gamayamLogoUrl: data?.gamyamAppLogo?.data?.attributes?.url,
           webIconUrl: data?.gamyamAppWebImage?.data?.attributes?.url,
           shadowImageUrl: data?.shadowImage?.data?.attributes?.url,

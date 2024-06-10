@@ -7,9 +7,10 @@ import { BOOK_YOUR_TICKET, BOOK_YOUR_TICKET_PARAGRAPH, ROUTES_TEXT, VIEW_ALL_ROU
 export type BookYourTicketType = {
   className?: string;
   routes: { from: string; to: string }[];
+  marginTop?: string; 
 };
 
-const BookYourTicket: NextPage<BookYourTicketType> = ({ className = "", routes }) => {
+const BookYourTicket: NextPage<BookYourTicketType> = ({ className = "", routes, marginTop }) => {
   const [showAllRoutes, setShowAllRoutes] = useState(false);
   const [selectedFrom, setSelectedFrom] = useState("");
   const [selectedTo, setSelectedTo] = useState("");
@@ -23,24 +24,23 @@ const BookYourTicket: NextPage<BookYourTicketType> = ({ className = "", routes }
   const handleRouteSelect = (from: string, to: string) => {
     setSelectedFrom(from);
     setSelectedTo(to);
-    
   };
 
   return (
-    <section className={[styles.bookYourTicket, className].join(" ")}>
+    <section className={[styles.bookYourTicket, className].join(" ")} style={{ marginTop }}> {/* Add marginTop style here */}
       <div className={styles.textsWrapper}>
         <div className={styles.texts}>
           <div className={styles.bookYourTicketWrapper}>
             <h1 className={styles.bookYourTicket1}>{BOOK_YOUR_TICKET}</h1>
           </div>
           <p className={styles.loremIpsumDolor}>
-           {BOOK_YOUR_TICKET_PARAGRAPH}
+            {BOOK_YOUR_TICKET_PARAGRAPH}
           </p>
         </div>
       </div>
       <div className={styles.bookYourTicketFormContaineWrapper}>
         <form className={styles.bookYourTicketFormContaine}>
-          <ReservationForm routes={routes}  onRouteSelect={handleRouteSelect} selectedFrom={selectedFrom} selectedTo={selectedTo}/>
+          <ReservationForm routes={routes} onRouteSelect={handleRouteSelect} selectedFrom={selectedFrom} selectedTo={selectedTo} />
           <div className={styles.interestedRouteContainer}>
             <div className={styles.interestedRouteTitle}>
               <div className={styles.routesYouMay}>
