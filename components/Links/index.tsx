@@ -7,7 +7,10 @@ interface LinksProps {
 const Links: React.FC<LinksProps> = ({ text }) => {
   return (
     <div className={styles.container}>
-      <p className={styles.linkText}>{text}</p>
+      <p className={styles.linkText}>
+        <a className={styles.link} href={text} target="_blank"
+          rel="noopener noreferrer"> {text}</a>
+      </p>
     </div>
   );
 };
