@@ -33,6 +33,7 @@ const LogisticsTSRTCHome: NextPage = () => {
         bookYourCargoSubtitle={data?.bookYourCargoSubtitle} 
         bookYourCargoContent={data?.bookYourCargoContent} 
         bookYourCargoButtonText={data?.bookYourCargoButtonText}
+        logisticsLink={data?.logisticsLink}
       />
       <ContentRight 
         data={{

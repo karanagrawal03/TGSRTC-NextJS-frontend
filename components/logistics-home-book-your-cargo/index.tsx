@@ -4,14 +4,15 @@ import { UPLOADS_BASE_URL } from "../../services/service";
 
 export type MainContentType = {
   className?: string;
-  bookYourCargoTitle?:string;
-  bookYourCargoImage?:any;
-  bookYourCargoSubtitle?:string;
-  bookYourCargoContent?:string;
-  bookYourCargoButtonText?:string;
+  bookYourCargoTitle?: string;
+  bookYourCargoImage?: any;
+  bookYourCargoSubtitle?: string;
+  bookYourCargoContent?: string;
+  bookYourCargoButtonText?: string;
+  logisticsLink?: string
 };
 
-const MainContent: NextPage<MainContentType> = ({ bookYourCargoTitle,bookYourCargoImage,bookYourCargoSubtitle,bookYourCargoContent,bookYourCargoButtonText,className = "" }) => {
+const MainContent: NextPage<MainContentType> = ({ bookYourCargoTitle, bookYourCargoImage, bookYourCargoSubtitle, bookYourCargoContent, bookYourCargoButtonText, logisticsLink, className = "" }) => {
   return (
     <section className={[styles.mainContent, className].join(" ")}>
       <div className={styles.contentLeft}>
@@ -38,15 +39,16 @@ const MainContent: NextPage<MainContentType> = ({ bookYourCargoTitle,bookYourCar
                   {bookYourCargoSubtitle}
                 </h2>
                 <p className={styles.loremIpsumDolor}>
-                 {bookYourCargoContent}
+                  {bookYourCargoContent}
                 </p>
               </div>
             </div>
           </div>
           <div className={styles.cargoButton}>
-            <button className={styles.button}>
+            <a href={logisticsLink} target="_blank"
+              rel="noopener noreferrer" className={styles.button}>
               <div className={styles.applyNow}>{bookYourCargoButtonText}</div>
-            </button>
+            </a>
           </div>
         </div>
       </div>
