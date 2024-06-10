@@ -1,5 +1,5 @@
 .tableContainer {
-  width: 100%;
+  width: auto;
   border: 0px;
   box-shadow: var(--card-shadow) !important;
 }
@@ -53,10 +53,22 @@
   .actionButton {
     visibility: visible;
   }
+
+  .tableContainer {
+    width: auto !important;
+    border: 0px;
+    box-shadow: var(--card-shadow) !important;
+  }
 }
 
 @media screen and (max-width: 470px) {
   .centerAlign {
     text-align: center !important;
+  }
+
+  .tableContainer {
+    width: auto;
+    border: 0px;
+    box-shadow: var(--card-shadow) !important;
   }
 }

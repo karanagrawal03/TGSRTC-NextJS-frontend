@@ -241,7 +241,7 @@
   }
 
   .busPassOtherBusPasses {
-    padding: var(--padding-70xl) 0px var(--padding-81xl) 0px;
+    padding: 0px 0px var(--padding-81xl) 0px;
   }
 }
 
