@@ -15,7 +15,7 @@
     background-color: var(--color-whitesmoke);
   }
   .tableContainer{
-    width: 786px;
+    min-width: 786px !important;
   }
   @media screen and (max-width: 1280px) {
     .headingText {
