@@ -19,6 +19,7 @@
 
 .link {
   color: var(--primary-green);
+  cursor: pointer;
 }
 
 .list {
