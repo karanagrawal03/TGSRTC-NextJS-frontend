@@ -6,7 +6,7 @@ import { styled } from "@mui/material";
 import AnimationBus from "../../components/animation-bus";
 import AnimationBusMobile from "../../components/animation-bus-mobile";
 
-const SiteMap: NextPageSiteMapType = () => {
+const SiteMap: NextPage = () => {
   const { data, doFetch } = useFetch();
   const [viewPortWidth, setViewPortWidth] = useState(1366);
 
@@ -45,6 +45,7 @@ const SiteMap: NextPageSiteMapType = () => {
       };
     }
   });
+
   return (
     <>
       <AnimationBus />
@@ -53,15 +54,15 @@ const SiteMap: NextPageSiteMapType = () => {
         <section className={styles.siteMapContainer}>
           <h1 className={styles.siteMapTitle}>{data?.siteMapTitle}</h1>
           <MainStyles className={styles.siteMapContent}>
-            {data?.siteMapData?.map((item: any) => (
-              <div className={styles.siteMapItem}>
+            {data?.siteMapData?.map((item: any, index: number) => (
+              <div key={index} className={styles.siteMapItem}>
                 <ul className={styles.siteMapList}>
                   <li className={styles.listItem}>{item?.name}</li>
                   {item?.data?.length !== 0 &&
-                    item?.data?.map((listItem: string) => (
-                      <>
-                        <p className={styles.listItemSubLink}>{listItem}</p>
-                      </>
+                    item?.data?.map((listItem: { name: string, link: string }, subIndex: number) => (
+                      <li key={subIndex} className={styles.listItemSubLink}>
+                        <a href={listItem.link}>{listItem}</a>
+                      </li>
                     ))}
                 </ul>
               </div>
