@@ -55,8 +55,8 @@ const BusPassServices = () => {
         </div>
       </section>
       <AnimationBus />
-      <AnimationBusMobile />
       <BusPassOptions options={data?.bussPassOptions} title={data?.busPassOptionsTitle} />
+      <AnimationBusMobile />
       <BusPassOtherBusPasses options={data?.otherBusPasses} title={data?.otherBusPassOptionsTitle} />
     </div>
   );

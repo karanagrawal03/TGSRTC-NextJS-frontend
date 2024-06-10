@@ -77,6 +77,11 @@
     font-size: var(--font-size-13xl);
   }
 
+  .busPassOptions {
+    padding-top: var(--padding-41xl);
+    padding-bottom: 0px;
+  }
+
   .busPassOptions,
   .cardsContainer {
     gap: var(--gap-base);
@@ -84,7 +89,6 @@
 
   .busPassOptions {
     padding-top: 0;
-    padding-bottom: var(--padding-46xl);
     box-sizing: border-box;
   }
 }
@@ -92,7 +96,10 @@
 @media screen and (max-width: 599px) {
   .busPassOptions1 {
     font-size: var(--font-size-13xl);
-    padding-bottom: var(  --padding-base);
+  }
+  .busPassOptions {
+    padding-top: var(--padding-41xl);
+    padding-bottom: 0px;
   }
 }
 

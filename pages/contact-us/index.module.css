@@ -5,6 +5,7 @@
   overflow: hidden;
   position: relative;
 }
+
 .heroSection {
   width: 100%;
   position: relative;
@@ -13,11 +14,13 @@
   background-repeat: no-repeat;
   z-index: 100;
 }
+
 .heroBackgroundImageWeb {
   width: 100%;
   height: auto;
   position: relative;
 }
+
 .contactUsContent {
   position: relative;
   display: flex;
@@ -27,12 +30,14 @@
   margin: 0 auto;
   align-items: center;
 }
+
 .contactContentLeft {
   display: flex;
   flex-direction: column;
   width: 581px;
   max-width: 581px;
 }
+
 .contactUsTitle {
   width: 375px;
   color: var(--support-white);
@@ -41,9 +46,10 @@
   font-size: var(--font-size-53xl);
   font-style: normal;
   font-weight: 600;
-  line-height: 82px; 
+  line-height: 82px;
   margin-bottom: 40px;
 }
+
 .contactUsAddress {
   color: var(--support-white);
   text-shadow: var(--text-shadow2);
@@ -51,9 +57,10 @@
   font-size: var(--font-size-xl);
   font-style: normal;
   font-weight: 500;
-  line-height: 32px; 
+  line-height: 32px;
   margin-bottom: 24px;
 }
+
 .contactUsEmail,
 .contactUsPhone,
 .contactUsHelpline {
@@ -63,11 +70,12 @@
   font-size: var(--font-size-xl);
   font-style: normal;
   font-weight: 500;
-  line-height: 32px; 
+  line-height: 32px;
   display: flex;
   align-items: center;
   margin-bottom: 12px;
 }
+
 .contactUsHelpline {
   width: fit-content;
   display: flex;
@@ -77,12 +85,15 @@
   background: var(--color-background2);
   padding: var(--padding-xs) var(--padding-base) var(--padding-xs) var(--padding-11xs);
 }
+
 .link {
   color: var(--support-white);
 }
+
 .italic {
   font-style: italic;
 }
+
 .mailIcon,
 .phoneIcon {
   margin-left: 14px;
@@ -92,9 +103,11 @@
   padding: var(--padding-9xs) 0;
   align-self: flex-start;
 }
+
 .contactContentRight {
   max-width: 509px;
 }
+
 .otherServices {
   display: flex;
   flex-direction: column;
@@ -104,6 +117,7 @@
   margin: 0 auto;
   max-width: 1166px;
 }
+
 .otherServiceTitle {
   color: var(--primary-red);
   font-family: var(--font-playfair-display);
@@ -112,45 +126,63 @@
   font-weight: 600;
   line-height: normal;
 }
+
 .headingStyles {
   list-style: none;
 }
+
 @media screen and (max-width: 1220px) {
   .contactUsContent {
     width: unset;
   }
+
   .contactContentLeft,
   .contactContentRight {
     width: 50%;
     max-width: 50%;
   }
+
+  .extraDropdown {
+    width: calc(100% - 200px) !important;
+  }
 }
+
 @media screen and (max-width: 1023px) {
   .contactUsContent {
     gap: var(--gap-18xl);
   }
+
   .contactUsTitle {
     width: unset;
     margin-bottom: 32px;
     font-size: var(--font-size-39xl);
     line-height: normal;
   }
+
   .contactUsEmail {
     font-size: var(--font-size-lg);
     line-height: 28px;
   }
+
   .contactUsPhone {
     font-size: var(--font-size-base);
   }
+
   .contactUsHelpline {
     font-size: var(--font-size-base);
     line-height: normal;
   }
+
   .contactUsContent,
   .otherServices {
     padding: var(--padding-61xl) var(--padding-17xl);
   }
+
+  .extraDropdown {
+    width: calc(100% - 80px) !important;
+  }
 }
+
 @media screen and (max-width: 900px) {
   .contactUsContent {
     flex-direction: column;
@@ -158,39 +190,51 @@
     background-image: url(/ContactUsMobile.png);
     background-size: cover;
   }
+
   .contactContentLeft,
   .contactContentRight {
     width: 100%;
     max-width: 100%;
   }
 }
+
 @media screen and (max-width: 599px) {
   .contactUsContent {
     gap: var(--gap-5xl);
   }
+
   .contactUsTitle {
     margin-bottom: 24px;
     font-size: var(--font-size-27xl);
   }
+
   .contactUsEmail {
     font-size: var(--font-size-sm);
     line-height: 26px;
   }
+
   .contactUsPhone {
     font-size: var(--font-size-xs);
   }
+
   .contactUsHelpline {
     font-size: var(--font-size-xs);
     line-height: 20px;
   }
+
   .mailIcon,
   .phoneIcon {
     width: 20px;
     height: 20px;
     padding: var(--padding-10xs) 0;
   }
+
   .contactUsContent,
   .otherServices {
     padding: var(--padding-41xl) var(--padding-xl);
+  }
+
+  .extraDropdown {
+    width: calc(100% - 40px) !important;
   }
 }

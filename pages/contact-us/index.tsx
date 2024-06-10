@@ -59,6 +59,7 @@ const ContactUs = () => {
                {data?.otherServicesContactDetails.map((e: any, index: any) => (
                   <AccordionItem
                      key={index}
+                     extraDropdownClassName={styles.extraDropdown}
                      name={e.name}
                      info={e.info}
                      expanded={expandedIndex === index}
