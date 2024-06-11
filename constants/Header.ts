@@ -108,6 +108,17 @@ export const headerData: HeaderConfig[] = [
       },
     ],
   },
+ 
+  {
+    displayName: "Tenders",
+    isNavLink: true,
+    link: TENDERS_LINK,
+  },
+  {
+    displayName: "TGSRTC Hospital",
+    isNavLink: true,
+    link: HOSPITAL_LINK,
+  },
   {
     displayName: "About",
     isNavLink: false,
@@ -135,16 +146,6 @@ export const headerData: HeaderConfig[] = [
         sublink: ABOUT_EVENTS_LINK,
       },
     ],
-  },
-  {
-    displayName: "Tenders",
-    isNavLink: true,
-    link: TENDERS_LINK,
-  },
-  {
-    displayName: "TGSRTC Hospital",
-    isNavLink: true,
-    link: HOSPITAL_LINK,
   },
   {
     displayName: "Contact us",
