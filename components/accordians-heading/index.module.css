@@ -5,8 +5,9 @@
   line-height: 17.07px;
   text-align: left;
   color: #020202;
-  margin-bottom: 0px
+  margin-bottom: 0px;
+  margin-top: 0;
 }
 .container {
-padding: 12px 0px 0px 0px;
+padding: 16px 0px 0px 0px;
 }

@@ -78,6 +78,26 @@
   position: relative;
 }
 
+.twitterLinks{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var( --gap-xl);
+}
+.twitterLinkSection1,.twitterLinkSection2{
+  gap: var( --gap-5xs);
+  display: flex;
+  align-items: center;
+}
+.linkName{
+color: var(--text-black);
+font-family: var(--font-montserrat);
+font-size: var( --font-size-xs);
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
 .nameBackground {
   position: absolute;
   bottom: 0;
