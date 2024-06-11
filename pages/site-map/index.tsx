@@ -1,20 +1,28 @@
 import type { NextPage } from "next";
 import styles from "./index.module.css";
-import useFetch, { UPLOADS_BASE_URL } from "../../services/service";
+import useFetch, { UPLOADS_BASE_URL, doFetch } from "../../services/service";
 import { useEffect, useState } from "react";
 import { styled } from "@mui/material";
 import AnimationBus from "../../components/animation-bus";
 import AnimationBusMobile from "../../components/animation-bus-mobile";
 
-const SiteMap: NextPage = () => {
-  const { data, doFetch } = useFetch();
+export async function getStaticProps() {
+  const data = await doFetch("/site-maps?populate=*");
+
+  return {
+    props: {
+      data,
+    },
+  };
+};
+
+const SiteMap: NextPage = ({data}) => {
   const [viewPortWidth, setViewPortWidth] = useState(1366);
 
   useEffect(() => {
     window.addEventListener("resize", () => {
       setViewPortWidth(window.innerWidth);
     });
-    doFetch(`/site-maps?populate=*`);
   }, []);
 
   const MainStyles = styled("main")(() => {

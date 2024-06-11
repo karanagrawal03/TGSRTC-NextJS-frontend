@@ -1,6 +1,6 @@
 import styles from "./index.module.css";
 import { useEffect } from "react";
-import useFetch, { UPLOADS_BASE_URL } from "../../services/service";
+import { UPLOADS_BASE_URL, doFetch } from "../../services/service";
 import AboutLandingHero from "../../components/about-landing-hero";
 import AboutVision from "../../components/about-vision";
 import AboutPhilosophyGuidlines from "../../components/about-philosophy-guidelines";
@@ -8,12 +8,20 @@ import AboutLegacyLetter from "../../components/about-legacy-letter";
 import AnimationBus from "../../components/animation-bus";
 import AnimationBusMobile from "../../components/animation-bus-mobile";
 
-const AboutVisionLegacy: any = () => {
+export async function getStaticProps() {
 
-  const { data, doFetch } = useFetch();
-  useEffect(() => {
-    doFetch("/about-vision-and-legacys?populate=*");
-  }, []);
+  const data = await doFetch("/about-vision-and-legacys?populate=*");
+
+  console.log(data)
+
+  return {
+    props: {
+      data,
+    },
+  };
+}
+
+const AboutVisionLegacy: any = ({data}) => {
 
   return (
     <div className={styles.aboutVisionLegacy}>

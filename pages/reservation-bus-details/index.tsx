@@ -6,17 +6,21 @@ import FrameComponent4 from "../../components/reservation-details-city-services"
 import OtherCityServicesSection from "../../components/reservation-details-other-bus-pass";
 import styles from "./index.module.css";
 import { TYPES_OF_COACHES } from "../../constants";
-import useFetch, { UPLOADS_BASE_URL } from "../../services/service";
-import { useEffect } from "react";
+import { UPLOADS_BASE_URL, doFetch } from "../../services/service";
 import AnimationBus from "../../components/animation-bus";
 import AnimationBusMobile from "../../components/animation-bus-mobile";
 
-const ReservationBusDetails: NextPage = () => {
-  const { data, doFetch } = useFetch();
+export async function getStaticProps() {
+  const data = await doFetch("/reservation-bus-details?populate=*");
 
-  useEffect(() => {
-    doFetch(`/reservation-bus-details?populate=*`);
-  }, []);
+  return {
+    props: {
+      data,
+    },
+  };
+};
+
+const ReservationBusDetails: NextPage = ({data}) => {
 
   return (
     <>

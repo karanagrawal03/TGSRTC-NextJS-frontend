@@ -1,18 +1,28 @@
 import React, { useEffect } from 'react'
 import styles from "./index.module.css"
 import AboutItIntiativeContent from '../../components/aboutItInitiativeContent';
-import BulletPoints from '../../components/bullet-points';
-import useFetch, { UPLOADS_BASE_URL } from '../../services/service';
+import { doFetch } from '../../services/service';
 import AboutInitiativeHero from '../../components/aboutIntiativeHero';
 import AboutInitiativeIntroduction from '../../components/aboutInitiativeIntroduction';
 import AboutInitiativeProjectProposed from '../../components/aboutInitiativeProjectProposed';
 import AnimationBus from '../../components/animation-bus';
 import AnimationBusMobile from '../../components/animation-bus-mobile';
-const AboutItInitiative = () => {
-  const { data, doFetch } = useFetch();
-  useEffect(() => {
-    doFetch("/about-it-initiatives?populate=*")
-  }, [])
+
+export async function getStaticProps() {
+
+  const data = await doFetch("/about-it-initiatives?populate=*");
+
+  console.log(data)
+
+  return {
+    props: {
+      data,
+    },
+  };
+}
+
+const AboutItInitiative = ({data}) => {
+
 
   return (<>
     <div className={styles.aboutInitiative}>

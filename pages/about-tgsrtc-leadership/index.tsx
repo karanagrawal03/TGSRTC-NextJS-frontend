@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import useFetch, { UPLOADS_BASE_URL } from "../../services/service";
+import { UPLOADS_BASE_URL, doFetch } from "../../services/service";
 import styles from "./index.module.css";
 import AnimationBus from "../../components/animation-bus";
 import AnimationBusMobile from "../../components/animation-bus-mobile";
@@ -20,12 +20,20 @@ type Data = {
   leadershipCards: LeadershipCard[];
 };
 
-const AboutTSRTCLeadership = () => {
-  const { data, doFetch } = useFetch<Data>();
+export async function getStaticProps() {
 
-  useEffect(() => {
-    doFetch(`/about-tsrtc-leaderships?populate=*`);
-  }, []);
+  const data = await doFetch("/about-tsrtc-leaderships?populate=*");
+
+  console.log(data)
+
+  return {
+    props: {
+      data,
+    },
+  };
+}
+
+const AboutTSRTCLeadership = ({data}) => {
 
   const { title, leadershipCards } = data || {};
 

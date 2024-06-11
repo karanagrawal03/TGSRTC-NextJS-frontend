@@ -1,18 +1,23 @@
 import type { NextPage } from "next";
 import styles from "./index.module.css";
-import useFetch, { UPLOADS_BASE_URL } from "../../services/service";
-import { useEffect } from "react";
+import { doFetch } from "../../services/service";
 import Carousal from "../../components/Carosal";
 import RoadSafetyCard from "../../components/road-safety-card";
 import AnimationBus from "../../components/animation-bus";
 import AnimationBusMobile from "../../components/animation-bus-mobile";
 
-const RoadSafety: NextPageRoadSafetyType = () => {
-  const { data, doFetch } = useFetch();
 
-  useEffect(() => {
-    doFetch(`/road-safeties?populate=*`);
-  }, []);
+export async function getStaticProps() {
+  const data = await doFetch("/road-safeties?populate=*");
+
+  return {
+    props: {
+      data,
+    },
+  };
+};
+
+const RoadSafety: NextPageRoadSafetyType = ({data}) => {
 
   const RoadSafetySection =
     data?.roadSafetyImages?.map((item: any, index: number) => (

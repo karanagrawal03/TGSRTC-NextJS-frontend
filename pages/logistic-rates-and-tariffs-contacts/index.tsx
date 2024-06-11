@@ -1,12 +1,21 @@
 import LogisticBookYourCargoSectionCard from "../../components/logistic-book-your-cargo-section-card";
 import styles from "./index.module.css";
-import useFetch, { UPLOADS_BASE_URL } from "../../services/service";
+import { UPLOADS_BASE_URL, doFetch } from "../../services/service";
 import { useEffect, useState } from "react";
 import AnimationBus from "../../components/animation-bus";
 import AnimationBusMobile from "../../components/animation-bus-mobile";
 
-const LogisticRatesAndTariffsContacts = () => {
-  const { data, doFetch } = useFetch();
+export async function getStaticProps() {
+  const data = await doFetch("/logistic-rates-and-tariffs-contacts?populate=*");
+
+  return {
+    props: {
+      data,
+    },
+  };
+};
+
+const LogisticRatesAndTariffsContacts = ({data}) => {
   const [width, setWidth] = useState<boolean>(false);
 
   useEffect(() => {
@@ -20,10 +29,6 @@ const LogisticRatesAndTariffsContacts = () => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
-
-  useEffect(() => {
-    doFetch(`/logistic-rates-and-tariffs-contacts?populate=*`);
   }, []);
 
   return (

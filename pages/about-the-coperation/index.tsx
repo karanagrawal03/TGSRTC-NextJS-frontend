@@ -1,18 +1,26 @@
 import { useEffect } from "react";
 import AboutCoperationProfile from "../../components/about-coperation-profile";
-import useFetch, { UPLOADS_BASE_URL } from "../../services/service";
+import { UPLOADS_BASE_URL, doFetch } from "../../services/service";
 import styles from "./index.module.css";
 import Infrastructure from "../../components/about-the-coperation-infrastructure";
 import AnimationBus from "../../components/animation-bus";
 import AnimationBusMobile from "../../components/animation-bus-mobile";
 
-const AboutTheCoperation = () => {
-  const { data, doFetch } = useFetch();
+export async function getStaticProps() {
 
-  useEffect(() => {
-    doFetch(`/about-the-coperations?populate=*`);
-  }, []);
-  console.log(data);
+  const data = await doFetch("/about-the-coperations?populate=*");
+
+  console.log(data)
+
+  return {
+    props: {
+      data,
+    },
+  };
+}
+
+const AboutTheCoperation = ({data}) => {
+  
   return (
     <>
     <section className={styles.reservationHeroTourism}>

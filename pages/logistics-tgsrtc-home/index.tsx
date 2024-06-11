@@ -4,17 +4,21 @@ import MainContent from "../../components/logistics-home-book-your-cargo";
 import ContentRight from "../../components/logistics-home-about-logistics";
 import FrameComponent6 from "../../components/logistics-home-business";
 import styles from "./index.module.css";
-import { useEffect } from "react";
-import useFetch from "../../services/service";
+import { doFetch } from "../../services/service";
 import AnimationBus from "../../components/animation-bus";
 import AnimationBusMobile from "../../components/animation-bus-mobile";
 
-const LogisticsTSRTCHome: NextPage = () => {
-  const { data, doFetch } = useFetch();
+export async function getStaticProps() {
+  const data = await doFetch("/logistics-landings?populate=*");
 
-  useEffect(() => {
-    doFetch(`/logistics-landings?populate=*`);
-  }, []);
+  return {
+    props: {
+      data,
+    },
+  };
+};
+
+const LogisticsTSRTCHome: NextPage = ({data}) => {
 
   return (
     <div className={styles.logisticsTsrtcHome}>

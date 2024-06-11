@@ -1,7 +1,7 @@
 import BookYourTicket from "../../components/BookYourTicket/BookYourTicket";
 import ReservationKPIs from "../../components/reservation-kpi";
 import styles from "./index.module.css";
-import useFetch, { UPLOADS_BASE_URL } from "../../services/service";
+import useFetch, { UPLOADS_BASE_URL, doFetch } from "../../services/service";
 import { useEffect } from "react";
 import CustomerSupport from "../../components/customer-support";
 import ReservationConnectivity from "../../components/reservation-connectivity";
@@ -13,13 +13,17 @@ import { routes } from "../../constants/book-your-tickets-routes";
 import AnimationBus from "../../components/animation-bus";
 import AnimationBusMobile from "../../components/animation-bus-mobile";
 
+export async function getStaticProps() {
+  const data = await doFetch("/reservation-landing-pages?populate=*");
 
-const ReservationBookingServiceHome: NextPageReservationBookingServiceHomeType =() => {
-    
-    const { data, doFetch } = useFetch();
-    useEffect(() => {
-      doFetch(`/reservation-landing-pages?populate=*`);
-    }, []);
+  return {
+    props: {
+      data,
+    },
+  };
+};
+
+const ReservationBookingServiceHome: NextPageReservationBookingServiceHomeType = ({data}) => {
 
     return (
       <section className={styles.ReservationBookingServiceHome}>

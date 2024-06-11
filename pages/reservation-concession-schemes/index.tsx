@@ -2,28 +2,23 @@ import styles from "./index.module.css";
 import Tables from "../../components/tables/index";
 import { columnWidths } from "../../constants/reservation-concession-schemes";
 import MonthlySeasonTicketsTexts from "../../components/monthlySeasonTicketsTexts";
-import useFetch from "../../services/service";
-import { useEffect } from "react";
+import { doFetch } from "../../services/service";
 import { UPLOADS_BASE_URL } from "../../services/service";
 import AnimationBus from "../../components/animation-bus";
 import AnimationBusMobile from "../../components/animation-bus-mobile";
+
+export async function getStaticProps() {
+  const data = await doFetch("/reservation-concession-schemes/?populate=*");
+
+  return {
+    props: {
+      data,
+    },
+  };
+};
+
 const ReservationConcessionSchemes: any =
-  () => {
-    const { data, doFetch, loading, error } = useFetch();
-    useEffect(() => {
-      doFetch("/reservation-concession-schemes/?populate=*")
-    }, [])
-    if (loading) {
-      return <div>Loading...</div>;
-    }
-
-    if (error) {
-      return <div>Error: {error}</div>;
-    }
-
-    if (!data) {
-      return <div>No data available.</div>;
-    }
+  ({data}) => {
     return (
       <div className={styles.reservationConcessionSchemes}>
         <section className={styles.reservationConcessionSchemesHeroContainer}>

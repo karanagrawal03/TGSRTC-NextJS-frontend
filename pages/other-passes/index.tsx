@@ -2,12 +2,22 @@ import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
 import AccordionItem from "../../components/accordians";
 import styles from "./index.module.css";
-import useFetch, { UPLOADS_BASE_URL } from "../../services/service";
+import { UPLOADS_BASE_URL, doFetch } from "../../services/service";
 import AnimationBus from "../../components/animation-bus";
 import AnimationBusMobile from "../../components/animation-bus-mobile";
 
-const OtherPasses = () => {
-  const { data, doFetch } = useFetch();
+
+export async function getStaticProps() {
+  const data = await doFetch("/other-passess?populate=*");
+
+  return {
+    props: {
+      data,
+    },
+  };
+};
+
+const OtherPasses = ({data}) => {
   const router = useRouter();
   let { index } = router.query as any;
   index = parseInt(index as string, 10);
@@ -15,10 +25,6 @@ const OtherPasses = () => {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
   const [isImageLoaded, setImageLoad] = useState(false);
   const divRefs = useRef<Array<HTMLDivElement>>([]);
-
-  useEffect(() => {
-    doFetch(`/other-passess?populate=*`);
-  }, []);
 
   useEffect(() => {
     if (index !== null && divRefs.current[index]) {

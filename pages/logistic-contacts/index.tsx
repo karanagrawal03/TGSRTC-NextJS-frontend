@@ -1,19 +1,29 @@
 import styles from "./index.module.css";
 import { useEffect, useState } from "react";
-import useFetch, { UPLOADS_BASE_URL } from "../../services/service";
+import { UPLOADS_BASE_URL, doFetch } from "../../services/service";
 import CustomTable from "../../components/table-view-details";
 import { NextPage } from "next";
 import AnimationBus from "../../components/animation-bus";
 import AnimationBusMobile from "../../components/animation-bus-mobile";
+
+export async function getStaticProps() {
+  const data = await doFetch("/logistic-contacts?populate=*");
+
+  return {
+    props: {
+      data,
+    },
+  };
+};
 
 type LogisticContactsType = {
   className?: string;
 };
 
 const LogisticContacts: NextPage<LogisticContactsType> = ({
-  className = ""
+  className = "",
+  data
 }) => {
-  const { data, doFetch } = useFetch();
   const [width, setWidth] = useState<boolean>(false);
 
   useEffect(() => {
@@ -29,9 +39,6 @@ const LogisticContacts: NextPage<LogisticContactsType> = ({
     };
   }, []);
 
-  useEffect(() => {
-    doFetch(`/logistic-contacts?populate=*`);
-  }, []);
   return (
     <>
       <section className={styles.logisticContactsHero}>

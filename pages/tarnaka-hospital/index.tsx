@@ -3,17 +3,21 @@ import styles from "./index.module.css";
 import HospitalHero from "../../components/hospital-hero";
 import HospitalServices from "../../components/hospital-services";
 import HospitalContact from "../../components/hospital-contact";
-import { useEffect } from "react";
-import useFetch, { UPLOADS_BASE_URL } from "../../services/service";
+import { doFetch } from "../../services/service";
 import AnimationBus from "../../components/animation-bus";
 import AnimationBusMobile from "../../components/animation-bus-mobile";
 
-const HospitalTSRTCTarnakaHospita: NextPageHospitalTSRTCTarnakaHospitaType = () => {
-  const { data, doFetch } = useFetch();
+export async function getStaticProps() {
+  const data = await doFetch("/hospital-landings?populate=*");
 
-  useEffect(() => {
-    doFetch(`/hospital-landings?populate=*`);
-  }, []);
+  return {
+    props: {
+      data,
+    },
+  };
+};
+
+const HospitalTSRTCTarnakaHospita: NextPageHospitalTSRTCTarnakaHospitaType = ({data}) => {
 
   return (
     <div className={styles.hospitalTsrtcTarnakaHospita}>

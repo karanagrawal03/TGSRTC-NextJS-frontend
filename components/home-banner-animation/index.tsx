@@ -5,15 +5,18 @@ import mobileAnimationData from '../../public/mobile-banner-animation.json';
 import styles from './index.module.css';
 
 const ScrollAnimation: React.FC = () => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 599);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 599);
     };
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    if (typeof window !== 'undefined') {
+      setIsMobile(window.innerWidth <= 599);
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }
   }, []);
 
   const defaultOptions = {

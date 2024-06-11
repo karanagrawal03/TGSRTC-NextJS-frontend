@@ -1,16 +1,20 @@
 import type { NextPage } from "next";
 import styles from "./index.module.css";
-import useFetch, { UPLOADS_BASE_URL } from "../../services/service";
-import { useEffect } from "react";
+import { doFetch } from "../../services/service";
 import AnimationBus from "../../components/animation-bus";
 import AnimationBusMobile from "../../components/animation-bus-mobile";
 
-const AboutThisSite: NextPageAboutThisSiteType = () => {
-  const { data, doFetch } = useFetch();
+export async function getStaticProps() {
+  const data = await doFetch("/about-this-sites?populate=*");
 
-  useEffect(() => {
-    doFetch(`/about-this-sites?populate=*`);
-  }, []);
+  return {
+    props: {
+      data,
+    },
+  };
+};
+
+const AboutThisSite: NextPageAboutThisSiteType = ({data}) => {
 
   return (
     <>
