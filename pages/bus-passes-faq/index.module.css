@@ -133,7 +133,7 @@
   }
 
   .busPassGeneralCommuterPass2 {
-    padding: var(--padding-60) var(--padding-xl) var(--padding-60) var(--padding-xl);
+    padding: 0 var(--padding-xl) var(--padding-60) var(--padding-xl);
   }
 
 
@@ -181,6 +181,7 @@
   .applyRenew {
     font-size: var(--font-size-16);
     line-height: 26px;
+    max-width:  151px;
   }
 
   .busPassesHeroGeneralCommut {

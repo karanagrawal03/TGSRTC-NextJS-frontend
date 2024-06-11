@@ -26,6 +26,7 @@
 .innerContainer {
   max-width: 1366px;
   margin: auto;
+  background-color: var(--support-grey-bg);
 }
 
 .bgIconMobile {

@@ -96,11 +96,12 @@
 
 @media screen and (max-width:599px) {
     .projectProposed{
-        padding: var(--padding-41xl) var(--padding-5xl) var(--padding-41xl) var(--padding-5xl);
+        padding: var(--padding-41xl) var(--padding-xl) var(--padding-41xl) var(--padding-xl);
     }
-}
-@media screen and (max-width:360px) {
-    .projectProposed{
-        padding: var(--padding-41xl) var(--padding-5xl) var(--padding-41xl) var(--padding-5xl);
+    .heading{
+        margin-bottom: 8px;
+    }
+    .lineSeperator{
+        margin: 40px 0;
     }
 }

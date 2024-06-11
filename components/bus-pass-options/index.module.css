@@ -78,18 +78,14 @@
   }
 
   .busPassOptions {
-    padding-top: var(--padding-41xl);
+    padding-top:0;
     padding-bottom: 0px;
+    box-sizing: border-box;
   }
 
   .busPassOptions,
   .cardsContainer {
     gap: var(--gap-base);
-  }
-
-  .busPassOptions {
-    padding-top: var(--padding-41xl);
-    box-sizing: border-box;
   }
 }
 
@@ -99,7 +95,7 @@
   }
 
   .busPassOptions {
-    padding-top: var(--padding-41xl);
+    padding-top: 0;
     padding-bottom: 0px;
   }
 }

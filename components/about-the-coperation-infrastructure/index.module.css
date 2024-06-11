@@ -42,6 +42,7 @@
   display: flex;
   gap: 40px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .infrastructureContainer {
   padding: 0px var(--padding-81xl) var(--padding-81xl) var(--padding-81xl);
@@ -63,13 +64,16 @@
     font-size: var(--font-size-16);
     padding: var(--padding-xs) 0px 0px 0px;
   }
+  .infrastructureContainer {
+    padding: var(--padding-41xl) var(--padding-5xl);
+  }
 }
 @media screen and (max-width: 599px) {
   .infrastructureContainer {
-    padding: 0px var(--padding-5xl) var(--padding-5xl) var(--padding-5xl);
+    padding: var(--padding-41xl) var(--padding-5xl);
   }
   .infrastructureText{
-    font-size: 32px;
+    font-size: var(--font-size-27x);
   }
   .cards {
     justify-content: center;
