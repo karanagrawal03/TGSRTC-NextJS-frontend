@@ -42,7 +42,7 @@
 @media screen and (max-width: 1023px) {
   .reservationDetailsOfReserva {
     gap: var(--gap-31xl);
-    padding: var(--padding-41xl);
+    padding: 0 var(--padding-17xl) var(--padding-41xl);
   }
 }
 
@@ -55,7 +55,7 @@
 
   .reservationDetailsOfReserva {
     gap: var(--gap-6xl);
-    padding: 0 var(--padding-5xl) var(--padding-41xl);
+    padding: 0 var(--padding-xl) var(--padding-41xl);
   }
 
   .tableTitle {

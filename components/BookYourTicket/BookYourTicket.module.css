@@ -106,7 +106,7 @@
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   mix-blend-mode: normal;
 }
-
+.lineIconMobile,
 .lineIcon {
   flex: 1;
   position: relative;
@@ -115,8 +115,12 @@
   overflow: hidden;
   max-height: 100%;
   min-width: 582px;
+  height: 1px;
+  background-color: var(--support-white);
 }
-
+.lineIconMobile{
+  display: none;
+}
 .routeChipsContainer {
   display: flex;
   flex-direction: row;
@@ -242,6 +246,7 @@
     box-sizing: border-box;
     min-width: 100%;
   }
+  .lineIconMobile,
   .lineIcon {
     min-width: 100%;
   }
@@ -258,18 +263,6 @@
     justify-content: center;
   } */
 }
-
-@media screen and (max-width: 450px) {
-  .bookYourTicketForm {
-    padding: var(--padding-base);
-  }
-  .bookYourTicket1 {
-    font-size: var(--font-size-9xl);
-  }
-  .bookYourTicketFormContaineWrapper {
-    padding: 0 var(--padding-xl) 0 var(--padding-xl);
-  }
-}
 @media screen and (max-width: 480px) {
   .routeChipsContainer {
     flex-direction: column;
@@ -285,4 +278,34 @@
     align-items: center;
     font-size: var(--font-size-xs);
   }
+  .lineIconMobile{
+    display: block;
+  }
+  .interestedRouteTitle{
+    flex-wrap: nowrap;
+    align-items: baseline;
+    justify-content: unset;
+  }
+  .lineIcon,.lineIconMobile{
+    width: 100%;
+    flex: unset;
+    min-width: unset;
+    max-width: unset;
+  }
+  .routesYouMay{
+    min-width: 197px;
+    font-size: var(--font-size-xs);
+  }
 }
+@media screen and (max-width: 450px) {
+  .bookYourTicketForm {
+    padding: var(--padding-base);
+  }
+  .bookYourTicket1 {
+    font-size: var(--font-size-9xl);
+  }
+  .bookYourTicketFormContaineWrapper {
+    padding: 0 var(--padding-xl) 0 var(--padding-xl);
+  }
+}
+

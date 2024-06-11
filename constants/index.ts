@@ -1,6 +1,6 @@
 //Need to follow alphabetical order with below mentioned notation
 export const ABOUT = "About";
-export const ABOUT_CORPORATION_LINK = "/about-the-coperation";
+export const ABOUT_CORPORATION_LINK = "/about-the-corporation";
 export const ABOUT_EVENTS_LINK = "/about-events-and-awards";
 export const ABOUT_HOSPITAL = "About Hospital";
 export const ABOUT_IT_LINK = "/about-it-initiative";

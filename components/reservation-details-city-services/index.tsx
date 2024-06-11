@@ -1,7 +1,6 @@
 import type { NextPage } from "next";
 import ImageCards from "../logistics-business-image-card";
 import styles from "./index.module.css";
-import { electricBusesBulletPoints, metroDeluxBulletPoints } from "../../constants/reservation-bus-details";
 import BulletPoints from "../bullet-points";
 import { UPLOADS_BASE_URL } from "../../services/service";
 
@@ -44,7 +43,7 @@ const FrameComponent4: NextPage<FrameComponent4Type> = ({ data, className = "" }
         </div>
         <div>
           <div className={styles.guidingPrinciplesOf}>{data?.electricBusData?.salientHeading}</div>
-          <BulletPoints items={electricBusesBulletPoints} containerClassName={styles.bulletPointChange} />
+          <BulletPoints items={data?.electricBusData?.electricBusesBulletPoints} containerClassName={styles.bulletPointChange} />
         </div>
         <div className={styles.cityServicesTypes1}>
           <h3 className={styles.metroDeluxeCoach}>{data?.metroDeluxData?.title}</h3>
@@ -52,7 +51,7 @@ const FrameComponent4: NextPage<FrameComponent4Type> = ({ data, className = "" }
         </div>
         <div>
           <div className={styles.guidingPrinciplesOf}>{data?.metroDeluxData?.salientHeading}</div>
-          <BulletPoints items={metroDeluxBulletPoints} containerClassName={styles.bulletPointChange} />
+          <BulletPoints items={data?.metroDeluxData?.metroDeluxBulletPoints} containerClassName={styles.bulletPointChange} />
         </div>
         <div className={styles.metroLuxuryAcParent}>
           <h3 className={styles.metroLuxuryAc}>{data?.metroLuxuryTitle}</h3>

@@ -37,6 +37,7 @@ const RTIACT: NextPageRTIACTType = ({data}) => {
                   key={index}
                   name={item.name}
                   info={item.info}
+                  headingStyles={styles.ritQuestion}
                   expanded={expandedIndex === index}
                   onChange={() => handleChange(index)}
                 />

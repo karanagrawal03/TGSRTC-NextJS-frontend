@@ -171,8 +171,8 @@
   }
 
   .container {
-    padding: var(--padding-81xl) var(--padding-xl) var(--padding-60) var(--padding-xl);
-    width: calc(100% - 48px);
+    padding: var(--padding-81xl) var(--padding-17xl) var(--padding-60);
+    width: calc(100% - 72px);
     padding-top: 0;
   }
 
@@ -211,12 +211,6 @@
     display: none;
   }
 
-  .container {
-    padding: var(--padding-81xl) var(--padding-xl) var(--padding-60) var(--padding-xl);
-    width: calc(100% - 48px);
-    padding-top: 0;
-  }
-
   .bgIconMobile {
     display: block;
   }
@@ -226,7 +220,7 @@
 @media screen and (max-width: 599px) {
   .container {
     padding: var(--padding-81xl) var(--padding-xl) var(--padding-60) var(--padding-xl);
-    width: calc(100% - 48px);
+    width: calc(100% - 40px);
     padding-top: 0;
   }
 

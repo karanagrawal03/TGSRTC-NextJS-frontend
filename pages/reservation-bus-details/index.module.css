@@ -2238,6 +2238,13 @@
     flex-wrap: wrap;
   }
 }
+@media screen and (max-width:1023px) {
+  .contentContainer{
+    width: 100%;
+    margin: 0;
+    padding:0 var(--padding-17xl) ;
+  }
+}
 @media screen and (max-width: 750px) {
   .imageCards {
     padding-top: var(--padding-xl);
@@ -2297,5 +2304,8 @@
   .coachTypesHeading{
     margin-top: 40px;
     margin-bottom: unset;
+  }
+  .contentContainer{
+    padding:0 var(--padding-xl) ;
   }
 }

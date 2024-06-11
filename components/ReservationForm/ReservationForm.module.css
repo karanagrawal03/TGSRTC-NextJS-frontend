@@ -466,11 +466,3 @@
     width: 100%;
   }
 }
-.iconButton {
-  padding-right: 18px;
-}
-@media (max-width: 353px) {
-  .iconButton {
-    padding-right: 18px;
-  }
-}

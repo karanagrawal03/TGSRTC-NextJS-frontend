@@ -43,10 +43,11 @@ const BookYourTicket: NextPage<BookYourTicketType> = ({ className = "", routes, 
           <ReservationForm routes={routes} onRouteSelect={handleRouteSelect} selectedFrom={selectedFrom} selectedTo={selectedTo} />
           <div className={styles.interestedRouteContainer}>
             <div className={styles.interestedRouteTitle}>
+              <div className={styles.lineIconMobile} ></div>
               <div className={styles.routesYouMay}>
                 {ROUTES_TEXT}
               </div>
-              <img className={styles.lineIcon} alt="line icon" src="/line.svg" loading="lazy" />
+              <div className={styles.lineIcon} ></div>
             </div>
             <div className={styles.routeChipsContainer}>
               {displayedRoutes.map((route, index) => (

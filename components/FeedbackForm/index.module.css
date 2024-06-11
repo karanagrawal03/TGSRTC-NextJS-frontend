@@ -52,9 +52,11 @@
   border: 1px solid var(--color-border);
   padding: var(--padding-xs);
   box-sizing: border-box;
-
+  font-family: var(--font-montserrat);
+  font-style: normal;
+  font-weight: 500;
 }
-
+.suggestion::placeholder,
 .inputField::placeholder {
   font-family: var(--font-montserrat);
   font-size: var(--font-size-xs);
@@ -73,7 +75,6 @@
   font-weight: 500;
   line-height: 14.63px;
   text-align: left;
-  color: var(--color-placeholder);
   border-radius: var(--br-7xs);
   border: 1px solid var(--color-border);
   padding: var(--padding-xs);
