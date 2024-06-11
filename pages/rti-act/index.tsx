@@ -1,17 +1,22 @@
 import type { NextPage } from "next";
 import styles from "./index.module.css";
-import useFetch from "../../services/service";
-import { useEffect, useState } from "react";
+import { UPLOADS_BASE_URL, doFetch } from "../../services/service";
+import { useState } from "react";
 import AccordionItem from "../../components/accordians";
 import AnimationBus from "../../components/animation-bus";
 import AnimationBusMobile from "../../components/animation-bus-mobile";
 
-const RTIACT: NextPageRTIACTType = () => {
-  const { data, doFetch } = useFetch();
+export async function getStaticProps() {
+  const data = await doFetch("/rti-acts?populate=*");
 
-  useEffect(() => {
-    doFetch(`/rti-acts?populate=*`);
-  }, []);
+  return {
+    props: {
+      data,
+    },
+  };
+};
+
+const RTIACT: NextPageRTIACTType = ({data}) => {
 
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 

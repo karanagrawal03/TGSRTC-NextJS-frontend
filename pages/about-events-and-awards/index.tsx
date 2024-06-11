@@ -1,19 +1,29 @@
 import type { NextPage } from "next";
 import styles from "./index.module.css";
 import { useEffect } from "react";
-import useFetch, { UPLOADS_BASE_URL } from "../../services/service";
+import { UPLOADS_BASE_URL, doFetch } from "../../services/service";
 import AboutEventsContent from "../../components/awards-events-cards";
 import ImageWithCaption from "../../components/about-card-image";
 import AnimationBus from "../../components/animation-bus";
 import AnimationBusMobile from "../../components/animation-bus-mobile";
 
 
+export async function getStaticProps() {
 
-const AboutEventsAwards: NextPageAboutEventsAwardsType = () => {
-  const {data, doFetch}=useFetch();
-  useEffect(()=>{
-    doFetch("/about-events-and-awards?populate=*");
-  },[])
+  const data = await doFetch("/about-events-and-awards?populate=*");
+
+  console.log(data)
+  
+  return {
+    props: {
+      data,
+    },
+  };
+}
+
+
+const AboutEventsAwards: NextPageAboutEventsAwardsType = ({data}) => {
+
   const isSingleImage = data?.eventsImages?.length === 1;
   return (
     <div className={styles.aboutEventsAwards}>

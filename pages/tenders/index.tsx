@@ -2,15 +2,22 @@ import type { NextPage } from "next";
 import styles from "./index.module.css";
 import TendersComponent from "../../components/tenders-component";
 import { useEffect } from "react";
-import useFetch, { UPLOADS_BASE_URL } from "../../services/service";
+import { UPLOADS_BASE_URL, doFetch } from "../../services/service";
 import AnimationBus from "../../components/animation-bus";
 import AnimationBusMobile from "../../components/animation-bus-mobile";
 
-const Tenders = () => {
-  const { data, doFetch } = useFetch();
-  useEffect(() => {
-    doFetch(`/tenders?populate=*`);
-  }, []);
+export async function getStaticProps() {
+  const data = await doFetch("/tenders?populate=*");
+
+  return {
+    props: {
+      data,
+    },
+  };
+};
+
+const Tenders = ({data}) => {
+  
   const heroSection = data?.heroSection[0];
   return (
     <section className={styles.reservationHeroTourism}>

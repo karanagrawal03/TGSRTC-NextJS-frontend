@@ -2,17 +2,21 @@ import type { NextPage } from "next";
 import styles from "./index.module.css";
 import ReservationHeroTourism from "../../components/reservation-tourism";
 import ReservationDestinations from "../../components/reservation-destinations";
-import useFetch from "../../services/service";
-import { useEffect } from "react";
+import { doFetch } from "../../services/service";
 import AnimationBus from "../../components/animation-bus";
 import AnimationBusMobile from "../../components/animation-bus-mobile";
 
-const ReservationTourism: NextPageReservationTourismType = () => {
-  const { data, doFetch } = useFetch();
+export async function getStaticProps() {
+  const data = await doFetch("/reservation-tourisms?populate=*");
 
-  useEffect(() => {
-    doFetch(`/reservation-tourisms?populate=*`);
-  }, []);
+  return {
+    props: {
+      data,
+    },
+  };
+};
+
+const ReservationTourism: NextPageReservationTourismType = ({data}) => {
 
   return (
     <div className={styles.reservationTourism}>

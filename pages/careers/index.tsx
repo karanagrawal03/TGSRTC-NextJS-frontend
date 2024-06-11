@@ -2,16 +2,23 @@ import React, { useEffect } from 'react'
 import styles from "./index.module.css"
 import CustomTable from '../../components/table-view-details';
 import { columnWidths } from '../../constants/reservation-concession-schemes';
-import useFetch from '../../services/service';
+import { doFetch } from '../../services/service';
 import { UPLOADS_BASE_URL } from '../../services/service';
 import AnimationBus from '../../components/animation-bus';
 import AnimationBusMobile from '../../components/animation-bus-mobile';
 
-const Careers = () => {
-    const { data, doFetch } = useFetch();
-    useEffect(() => {
-        doFetch("/careers?populate=*")
-    }, [])
+export async function getStaticProps() {
+
+    const data = await doFetch("/careers?populate=*");
+
+    return {
+      props: {
+        data,
+      },
+    };
+  }
+
+const Careers = ({data}) => {
 
     return (
         <div className={styles.careers}>

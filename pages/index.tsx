@@ -7,19 +7,23 @@ import HomeBookYourServices from "../components/HomeBookYourServices/HomeBookYou
 import HomeNewsUpdates from "../components/HomeNewsUpdates/HomeNewsUpdates";
 import HomeGamyamApp from "../components/HomeGamyamApp/HomeGamyamApp";
 import { routes } from "../constants/book-your-tickets-routes";
-import useFetch from "../services/service";
-import { useEffect } from "react";
 import HomeBannerAnimation from "../components/home-banner-carousal";
 import AnimationBus from "../components/animation-bus";
 import AnimationBusMobile from "../components/animation-bus-mobile";
+import { doFetch } from "../services/service";
 
-const Homepage: NextPage = () => {
+export async function getStaticProps() {
+  const data = await doFetch("/home-pages?populate=*");
+
+  return {
+    props: {
+      data,
+    },
+  };
+};
+
+const Homepage: NextPage = ({data}) => {
   
-  const { data, doFetch } = useFetch();
-
-  useEffect(() => {
-    doFetch(`/home-pages?populate=*`);
-  }, []);
 
   const heroSection = data?.heroSection?.map((section: any, index: number) => (
     <HomeHero key={index} title={section.title} image={section.image} mobileImage={section.mobileImage}/>
@@ -64,3 +68,7 @@ const Homepage: NextPage = () => {
 };
 
 export default Homepage;
+function useFetch(): { data: any; doFetch: any; } {
+  throw new Error("Function not implemented.");
+}
+

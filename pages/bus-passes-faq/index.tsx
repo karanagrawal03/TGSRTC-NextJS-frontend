@@ -1,15 +1,24 @@
 import { useEffect, useState } from "react";
 import AccordionItem from "../../components/accordians";
 import styles from "./index.module.css";
-import useFetch, { UPLOADS_BASE_URL } from "../../services/service";
+import { UPLOADS_BASE_URL, doFetch } from "../../services/service";
 import AnimationBus from "../../components/animation-bus";
 import AnimationBusMobile from "../../components/animation-bus-mobile";
-const BusPassesFaq = () => {
+
+export async function getStaticProps() {
+
+  const data = await doFetch("/bus-passes-faqs?populate=*");
+
+  return {
+    props: {
+      data,
+    },
+  };
+}
+
+const BusPassesFaq = ({data}) => {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
-  const { data, doFetch } = useFetch();
-  useEffect(() => {
-    doFetch(`/bus-passes-faqs?populate=*`);
-  }, []);
+
   const handleChange = (index: number) => {
     setExpandedIndex((prevIndex) => (prevIndex === index ? null : index));
   };

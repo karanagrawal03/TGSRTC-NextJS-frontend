@@ -2,15 +2,22 @@ import { useEffect } from "react";
 import ReservationHeroConcessionSc from "../../components/reservation-points-banner";
 import ReservationDetailsOfReserva from "../../components/reservation-points-table";
 import styles from "./index.module.css";
-import useFetch from "../../services/service";
+import { doFetch } from "../../services/service";
 import AnimationBus from "../../components/animation-bus";
 import AnimationBusMobile from "../../components/animation-bus-mobile";
 
-const ReservationPoints = () => {
-  const {data, doFetch}=useFetch();
-  useEffect(()=>{
-    doFetch("/reservation-points?populate=*");
-  },[])
+export async function getStaticProps() {
+  const data = await doFetch("/reservation-points?populate=*");
+
+  return {
+    props: {
+      data,
+    },
+  };
+};
+
+const ReservationPoints = ({data}) => {
+
   return (
     <div className={styles.reservationPoints}>
       <ReservationHeroConcessionSc data={data}/>

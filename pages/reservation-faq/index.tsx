@@ -1,19 +1,26 @@
 import styles from "./index.module.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import AccordionItem from "../../components/accordians";
-import useFetch, { UPLOADS_BASE_URL } from "../../services/service";
+import { UPLOADS_BASE_URL, doFetch } from "../../services/service";
 import AnimationBus from "../../components/animation-bus";
 import AnimationBusMobile from "../../components/animation-bus-mobile";
 
-const ReservationFAQ = () => {
+export async function getStaticProps() {
+  const data = await doFetch("/reservation-faqs?populate=*");
+
+  return {
+    props: {
+      data,
+    },
+  };
+};
+
+const ReservationFAQ = ({data}) => {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
-  const {data,doFetch}=useFetch();
   const handleChange = (index: number) => {
     setExpandedIndex((prevIndex) => (prevIndex === index ? null : index));
   };
-  useEffect(()=>{
-    doFetch("/reservation-faqs?populate=*")
-  },[])
+ 
   return (
     <div className={styles.reservationFaq}>
       <div className={styles.bgImg}>

@@ -1,15 +1,21 @@
-import { useEffect } from "react";
 import ReservationBusesTabs from "../../components/reservation-spl-buses-tabs";
-import useFetch, { UPLOADS_BASE_URL } from "../../services/service";
+import { UPLOADS_BASE_URL, doFetch } from "../../services/service";
 import styles from "./index.module.css";
 import AnimationBus from "../../components/animation-bus";
 import AnimationBusMobile from "../../components/animation-bus-mobile";
 
-const ReservationSpecialBusTiming = () => {
-  const { data, doFetch } = useFetch();
-  useEffect(() => {
-    doFetch(`/reservation-special-bus-timings?populate=*`);
-  }, []);
+export async function getStaticProps() {
+  const data = await doFetch("/reservation-special-bus-timings?populate=*");
+
+  return {
+    props: {
+      data,
+    },
+  };
+};
+
+const ReservationSpecialBusTiming = ({data}) => {
+
   return (
     <div className={styles.reservationSpecialBusTiming}>
       <section className={styles.reservationHeroTourism}>

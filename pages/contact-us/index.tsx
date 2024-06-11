@@ -2,20 +2,26 @@ import React, { useEffect, useState } from 'react'
 import styles from "./index.module.css";
 import FeedbackForm from '../../components/FeedbackForm';
 import AccordionItem from '../../components/accordians';
-import useFetch from '../../services/service';
+import { doFetch } from '../../services/service';
 import AnimationBus from '../../components/animation-bus';
 import AnimationBusMobile from '../../components/animation-bus-mobile';
-const ContactUs = () => {
+
+export async function getStaticProps() {
+   const data = await doFetch("/contact-uses?populate=*");
+ 
+   return {
+     props: {
+       data,
+     },
+   };
+}
+
+const ContactUs = ({data}) => {
    const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
-   const { data, doFetch } = useFetch();
 
    const handleChange = (index: number) => {
       setExpandedIndex((prevIndex) => (prevIndex === index ? null : index));
    };
-
-   useEffect(() => {
-      doFetch("/contact-uses?populate=*")
-   }, [])
 
    return (
       <div className={styles.contactUs}>

@@ -7,16 +7,21 @@ import ContractRatesTable2 from "../../components/contract-rates-table2";
 import ContractRatesTable5 from "../../components/contract-rates-table5";
 import ContractRatesTable4 from "../../components/contract-rates-table4";
 import { useEffect } from "react";
-import useFetch from "../../services/service";
+import { doFetch } from "../../services/service";
 import AnimationBus from "../../components/animation-bus";
 import AnimationBusMobile from "../../components/animation-bus-mobile";
 
-const ReservationBusOnContractRa: NextPageReservationBusOnContractRaType =() => {
-  const { data, doFetch } = useFetch();
+export async function getStaticProps() {
+  const data = await doFetch("/reservation-bus-on-contract-rates?populate=*");
 
-  useEffect(() => {
-    doFetch(`/reservation-bus-on-contract-rates?populate=*`);
-  }, []);
+  return {
+    props: {
+      data,
+    },
+  };
+};
+
+const ReservationBusOnContractRa: NextPageReservationBusOnContractRaType =({data}) => {
 
   return (
     <div className={styles.reservationBusOnContractRa}>
