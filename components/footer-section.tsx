@@ -69,14 +69,14 @@ const FooterSection: NextPage<FooterSectionType> = ({
           </div>
         </div>
       </a>
-      <div className={styles.footerLogoSection}>
+      <a href="/" className={styles.footerLogoSection}>
         <img
           className={styles.footerLogoImage}
           loading="lazy"
           alt="mobile-footer-logo"
           src="/mobile-footer-logo.png"
         />
-      </div>
+      </a>
       <div className={styles.linksContainer}>
         <div className={styles.quicklinksSection}>
           <b className={styles.quicklinks}>{QUICKLINKS}</b>

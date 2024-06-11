@@ -7,7 +7,7 @@ import ContractRatesTable2 from "../../components/contract-rates-table2";
 import ContractRatesTable5 from "../../components/contract-rates-table5";
 import ContractRatesTable4 from "../../components/contract-rates-table4";
 import { useEffect } from "react";
-import useFetch, { UPLOADS_BASE_URL } from "../../services/service";
+import useFetch from "../../services/service";
 import AnimationBus from "../../components/animation-bus";
 import AnimationBusMobile from "../../components/animation-bus-mobile";
 

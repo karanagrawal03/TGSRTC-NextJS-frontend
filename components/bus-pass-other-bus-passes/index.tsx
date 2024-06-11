@@ -2,8 +2,7 @@ import type { NextPage } from "next";
 import { useState, useEffect } from "react";
 import BusPassOptionsCard from "../bus-pass-options-card.tsx";
 import styles from "./index.module.css";
-import { OTHER_BUS_PASSES, VIEW_MORE } from "../../constants";
-import { cards3Data } from "../../constants/bus-pass-other-options";
+import { VIEW_MORE } from "../../constants";
 
 export type BusPassOtherBusPassesType = {
   className?: string;

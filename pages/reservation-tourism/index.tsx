@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import styles from "./index.module.css";
 import ReservationHeroTourism from "../../components/reservation-tourism";
 import ReservationDestinations from "../../components/reservation-destinations";
-import useFetch, { UPLOADS_BASE_URL } from "../../services/service";
+import useFetch from "../../services/service";
 import { useEffect } from "react";
 import AnimationBus from "../../components/animation-bus";
 import AnimationBusMobile from "../../components/animation-bus-mobile";

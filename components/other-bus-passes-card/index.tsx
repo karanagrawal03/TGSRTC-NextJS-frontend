@@ -1,12 +1,9 @@
 import type { NextPage } from "next";
 import styles from "./index.module.css";
 import {
-  APPLY_NOW,
   BUS_PASS_GENERAL_LINK,
   BUS_PASS_LINK,
-  BUS_PASS_OTHER_LINK,
   BUS_PASS_STUDENT_LINK,
-  VIEW_DETAILS,
 } from "../../constants";
 import { UPLOADS_BASE_URL } from "../../services/service";
 import { useRouter } from "next/router";

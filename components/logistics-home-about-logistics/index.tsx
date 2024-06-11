@@ -1,8 +1,6 @@
 import type { NextPage } from "next";
 import Cards4 from "../about-logistics-card";
 import styles from "./index.module.css";
-import { ABOUT_LOGISTICS, ABOUT_LOGISTICS_PARA_1, ABOUT_LOGISTICS_PARA_2, ABOUT_LOGISTICS_PARA_2_CONTENT, TGSRTC_LINK, TGSRTC_LINK_NAME } from "../../constants";
-import { cardData } from "../../constants/logistics-home-about-logistics";
 
 export type ContentRightType = {
   className?: string;

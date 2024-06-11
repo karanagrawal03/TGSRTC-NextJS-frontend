@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import styles from "./index.module.css";
-import useFetch, { UPLOADS_BASE_URL } from "../../services/service";
+import useFetch from "../../services/service";
 import { useEffect } from "react";
 import AnimationBus from "../../components/animation-bus";
 import AnimationBusMobile from "../../components/animation-bus-mobile";
@@ -26,8 +26,8 @@ const AboutThisSite: NextPageAboutThisSiteType = () => {
                 {data?.disclaimerTitle}
               </h2>
               <div className={styles.disclaimerContent}>
-                {data?.disclaimerData?.map((item: any) => (
-                  <div className={styles.content}>{item}</div>
+                {data?.disclaimerData?.map((item: any,index:number) => (
+                  <div className={styles.content} key={index}>{item}</div>
                 ))}
               </div>
             </div>
@@ -37,8 +37,8 @@ const AboutThisSite: NextPageAboutThisSiteType = () => {
                 {data?.privacyPolicyTitle}
               </h2>
               <div className={styles.privacyPolicyContent}>
-                {data?.privacyPolicyData?.map((item: any) => (
-                  <div className={styles.content}>{item}</div>
+                {data?.privacyPolicyData?.map((item: any,index:number) => (
+                  <div className={styles.content} key={index}>{item}</div>
                 ))}
               </div>
             </div>

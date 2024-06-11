@@ -2,8 +2,7 @@
 import { useEffect, useState } from "react";
 import BusPassOptions from "../../components/bus-pass-options";
 import BusPassOtherBusPasses from "../../components/bus-pass-other-bus-passes";
-import { APPLY_AND_RENEW, BUS_PASS_SERVICES } from "../../constants";
-import useFetch, { BASE_URL, UPLOADS_BASE_URL } from "../../services/service";
+import useFetch, { UPLOADS_BASE_URL } from "../../services/service";
 import styles from './index.module.css'
 import AnimationBus from "../../components/animation-bus";
 import AnimationBusMobile from "../../components/animation-bus-mobile";

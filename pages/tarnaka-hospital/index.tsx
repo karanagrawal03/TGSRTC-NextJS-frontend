@@ -4,7 +4,7 @@ import HospitalHero from "../../components/hospital-hero";
 import HospitalServices from "../../components/hospital-services";
 import HospitalContact from "../../components/hospital-contact";
 import { useEffect } from "react";
-import useFetch, { UPLOADS_BASE_URL } from "../../services/service";
+import useFetch from "../../services/service";
 import AnimationBus from "../../components/animation-bus";
 import AnimationBusMobile from "../../components/animation-bus-mobile";
 

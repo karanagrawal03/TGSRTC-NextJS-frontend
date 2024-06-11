@@ -40,8 +40,9 @@ const HospitalServices: NextPage<HospitalServicesType> = ({aboutHospitalTitle,ab
       <div className={styles.serviceProviderContainer}>
         <h1 className={styles.whatServiceWe}>{whatServicesTitle}</h1>
         <div className={styles.textCardContianer}>
-          {whatServicesCards?.map((e: any) => (
+          {whatServicesCards?.map((e: {heading: string,subheading?: string },index:number) => (
             <HospitalServiceCard
+              key={index}
               heading={e.heading}
               subheading={e.subheading}
             />

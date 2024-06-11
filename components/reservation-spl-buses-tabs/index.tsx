@@ -3,7 +3,6 @@ import {
   Box,
   Tabs,
   Tab,
-  Typography,
   FormControl,
   InputLabel,
   Select,
@@ -35,7 +34,7 @@ function CustomTabPanel(props: TabPanelProps) {
     >
       {value === index && (
         <Box>
-          <Typography>{children}</Typography>
+          <Box>{children}</Box>
         </Box>
       )}
     </div>
