@@ -5,7 +5,6 @@ interface AboutProfile {
   profileData?: any;
 }
 const AboutCoperationProfile: React.FC<AboutProfile> = ({ profileData }) => {
-  console.log(profileData);
   return (
     <div className={styles.container}>
       <p className={styles.profileHeading}>{profileData?.profileHeading}</p>

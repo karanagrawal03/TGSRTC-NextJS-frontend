@@ -15,8 +15,8 @@ const Infrastructure: React.FC<InfrastructureProps> = ({
       <p className={styles.infrastructureText}>{infrastructureText}</p>
       <p className={styles.infrastructureOfTGSRTC}>{infrastructureOfTGSRTC}</p>
       <div className={styles.cards}>
-        {infrastructureCards?.map((card: any) => (
-          <div className={styles.card}>
+        {infrastructureCards?.map((card: any,index:number) => (
+          <div className={styles.card} key={index}>
             <img
               className={styles.cardImage}
               src={UPLOADS_BASE_URL + card.image}

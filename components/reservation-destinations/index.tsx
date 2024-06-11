@@ -26,8 +26,9 @@ const ReservationDestinations:NextPage<ReservationDestinationsType> = ({ destina
         <h1 className={styles.destinations}>{destinationsTitle}</h1>
       </div>
       <div className={styles.tourismCards}>
-         {tourismCards?.map((tour : TourismPlace) => (
+         {tourismCards?.map((tour : TourismPlace,index:number) => (
             <TourismCard  
+              key={index}
               placeName={tour.placeName} 
               image={tour.image} 
               pickupTime={tour.pickupTime} 
