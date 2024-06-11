@@ -24,6 +24,7 @@ import {
   SEARCH_BUSSES,
   TODAY_LABEL,
   TOMMAROW_LABEL,
+  SEARCH_BUSES_LINK,
 } from "../../constants"
 import { NextPage } from "next";
 
@@ -73,6 +74,7 @@ const ReservationForm: NextPage<BookYourTicketType> = ({
   const handleDateChange = (newValue: any) => {
     setSelectedDate(newValue);
   };
+
 
   // today button date logic
 
@@ -239,9 +241,9 @@ const ReservationForm: NextPage<BookYourTicketType> = ({
               </Box>
             </Box>
             <Box className={styles.box2}>
-              <button className={styles.button}>
+              <a className={styles.button} href={SEARCH_BUSES_LINK} target="_blank">
                 <b className={styles.applyNow}>{SEARCH_BUSSES}</b>
-              </button>
+              </a>
             </Box>
           </Box>
         </Box>

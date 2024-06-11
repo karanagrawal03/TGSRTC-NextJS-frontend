@@ -309,11 +309,11 @@
   .teriffsOfMonthlySeasonTickets {
     margin-top: 40px;
     margin-bottom: 40px;
-    padding: 0px var(--padding-5xl) 0px var(--padding-5xl);
+    padding: 0px var(--padding-xl) 0px var(--padding-xl);
   }
 
   .frameParent {
-    padding: 0px var(--padding-5xl) var(--padding-41xl) var(--padding-5xl);
+    padding: 0px var(--padding-xl) var(--padding-41xl) var(--padding-xl);
     gap: var(--gap-21xl);
   }
 }

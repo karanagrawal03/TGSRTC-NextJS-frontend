@@ -84,7 +84,7 @@
 @media screen and (max-width:599px) {
 
   .monthlySeasonTicketsTexts {
-    padding: 0px var(--padding-5xl) 0px var(--padding-5xl);
+    padding: 0px var(--padding-xl) 0px var(--padding-xl);
 
 
     gap: var(--gap-base)

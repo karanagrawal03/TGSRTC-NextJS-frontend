@@ -187,6 +187,7 @@ export const RTI_ACT_LINK = "/rti-act";
 export const SALIENT_FEATURES = "The Salient Features";
 export const SAMPLE_STRING = "Sample string";
 export const SEARCH_BUSSES = "Search Buses";
+export const SEARCH_BUSES_LINK = "https://www.tsrtconline.in/oprs-web/"
 export const SEAT_LAYOUT_OF_TGSRTC = "Seat-Layout of TGSRTC";
 export const SEAT_LAYOUT_OF_TGSRTC_PARA = "The Corporation has ear marked seats in buses for ladies, physically challenged, MLAs/MPs, Senior Citizens, Presidents of Mandal Parishads & ZPTC members etc. The layout diagrams of each type of bus are shown here."
 export const SEND_A_PARCEL = "Send A Parcel";
