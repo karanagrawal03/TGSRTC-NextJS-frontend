@@ -12,7 +12,6 @@ const AboutTheCoperation = () => {
   useEffect(() => {
     doFetch(`/about-the-coperations?populate=*`);
   }, []);
-  console.log(data);
   return (
     <>
     <section className={styles.reservationHeroTourism}>

@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import styles from "./HomeNewsUpdates.module.css";
 import Carousal from "../Carosal/index";
 import { VIEW_DETAILS, APPLY_NOW } from "../../constants";
+import { UPLOADS_BASE_URL } from "../../services/service";
 
 export type HomeNewsUpdatesType = {
   className?: string;
@@ -40,7 +41,7 @@ const HomeNewsUpdates: NextPage<HomeNewsUpdatesType> = ({ data, className = "",m
             className={styles.picturesIcon}
             loading="lazy"
             alt="news cards image"
-            src={imageUrl}
+            src={ UPLOADS_BASE_URL+ imageUrl}
           />
         </div>
         <div className={styles.imageMobile}>

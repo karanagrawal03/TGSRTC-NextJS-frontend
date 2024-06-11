@@ -77,8 +77,8 @@ const TourismCard: NextPage<TourismCardType> = ({placeName,image,pickupPoint,pic
             <div className={styles.placesCovered}>{placesCovered}</div>
             <div className={styles.chipsAndText}>
               <div className={styles.chips}>
-                {places.map((place) => (
-                  <TourismCardChip  place={place} />
+                {places.map((place,index:number) => (
+                  <TourismCardChip  place={place} key={index} />
                 ))}
               </div>
               <p className={styles.packageTourWill}>{packageDescription}</p>

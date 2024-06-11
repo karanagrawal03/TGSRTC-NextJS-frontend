@@ -46,6 +46,7 @@ const Homepage: NextPage = () => {
           gamayamLogoUrl: data?.gamyamAppLogo?.data?.attributes?.url,
           webIconUrl: data?.gamyamAppWebImage?.data?.attributes?.url,
           shadowImageUrl: data?.shadowImage?.data?.attributes?.url,
+          mobileIconUrl: data?.gamyamAppLogoMobile?.data?.attributes?.url,
         }}
       />
       <About
