@@ -1,6 +1,6 @@
 .feedbackFormCard {
-  background-color:var(--support-white);
-  box-shadow:var( --box-shadow);
+  background-color: var(--support-white);
+  box-shadow: var(--box-shadow);
   display: flex;
   flex-direction: column;
   gap: var(--gap-5xl);
@@ -22,6 +22,13 @@
   display: flex;
   flex-direction: column;
   gap: var(--gap-xs);
+}
+
+.errorMessage {
+  color: var(--primary-red);
+  margin: 0px;
+  font-size: var(--font-size-xs);
+  font-family: var(--font-montserrat);
 }
 
 .field {
@@ -78,6 +85,7 @@
   display: flex;
   align-self: flex-end;
   justify-content: center;
+  cursor: pointer;
   text-align: center;
   border-radius: var(--br-xxl);
   width: 120px;
@@ -102,10 +110,11 @@
   }
 
   .feedbackFormCard {
-    padding: var( --padding-xl);
+    padding: var(--padding-xl);
     gap: var(--gap-xs);
   }
-  .suggestion{
+
+  .suggestion {
     height: 64px;
   }
 }
@@ -146,7 +155,7 @@
   }
 
   .suggestion {
-   height: 40px;
+    height: 40px;
   }
 }
 
@@ -186,18 +195,20 @@
   .inputField::placeholder {
     font-size: var(--font-size-10-xs);
   }
-  .submitButton{
+
+  .submitButton {
     height: 32px;
     width: 110px;
   }
 }
 
 @media screen and (max-width:599px) {
-  .submitButton{
+  .submitButton {
     height: 36px;
   }
+
   .feedbackFormCard {
-    padding:var(--padding-27xs) var(--padding-xl) var(--padding-xl) var(--padding-27xs);
+    padding: var(--padding-27xs) var(--padding-xl) var(--padding-xl) var(--padding-27xs);
   }
 
   .formTitle {
@@ -255,7 +266,7 @@
   }
 
   .suggestion {
-  height: 84px;
+    height: 84px;
     height: 84px;
   }
 

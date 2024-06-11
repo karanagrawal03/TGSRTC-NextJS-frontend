@@ -21,6 +21,11 @@
   position: relative;
 }
 
+.containerClassName {
+  background-color: var(--support-white);
+  box-shadow: var(--card-shadow);
+}
+
 .contactUsContent {
   position: relative;
   display: flex;
@@ -131,6 +136,16 @@
   list-style: none;
 }
 
+@media screen and (min-width: 1220px) and (max-width:1365px) {
+  .containerClassName {
+    width: calc(100% - 204px) !important;
+  }
+
+  .extraDropdown {
+    width: calc(100% - 100px) !important;
+  }
+}
+
 @media screen and (max-width: 1220px) {
   .contactUsContent {
     width: unset;
@@ -140,6 +155,10 @@
   .contactContentRight {
     width: 50%;
     max-width: 50%;
+  }
+
+  .containerClassName {
+    width: calc(100% - 302px) !important;
   }
 
   .extraDropdown {
@@ -168,6 +187,10 @@
     font-size: var(--font-size-base);
   }
 
+  .containerClassName {
+    width: calc(100% - 200px) !important;
+  }
+
   .contactUsHelpline {
     font-size: var(--font-size-base);
     line-height: normal;
@@ -183,6 +206,14 @@
   }
 }
 
+
+
+@media screen and (min-width: 900px) and (max-width: 1023px) {
+  .containerClassName {
+    width: calc(100% - 186px) !important;
+  }
+}
+
 @media screen and (max-width: 900px) {
   .contactUsContent {
     flex-direction: column;
@@ -195,6 +226,10 @@
   .contactContentRight {
     width: 100%;
     max-width: 100%;
+  }
+
+  .containerClassName {
+    width: calc(100% - 150px) !important;
   }
 }
 
@@ -220,6 +255,10 @@
   .contactUsHelpline {
     font-size: var(--font-size-xs);
     line-height: 20px;
+  }
+
+  .containerClassName {
+    width: calc(100% - 80px) !important;
   }
 
   .mailIcon,
