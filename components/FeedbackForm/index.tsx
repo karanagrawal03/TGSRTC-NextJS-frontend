@@ -162,7 +162,7 @@ const FeedbackForm = () => {
           />
           {errors.suggestions && <p className={styles.errorMessage}>{errors.suggestions}</p>}
         </div>
-        <input type={SUBMIT_TYPE} value="Submit" className={styles.submitButton} />
+        <input type={SUBMIT_TYPE} value="Send" className={styles.submitButton} />
       </form>
     </div>
   );

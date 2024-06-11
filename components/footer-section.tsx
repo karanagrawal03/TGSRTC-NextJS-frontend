@@ -5,7 +5,7 @@ import {
   ABOUT_LINK,
   ABOUT,
   BUS_PASSES,
-  BUS_PASS_LINK,
+  BUS_PASS_FAQ_LINK,
   CAREERS,
   CAREERS_LINK,
   CONTACT_US,
@@ -17,7 +17,7 @@ import {
   PRIVACY_POLICIES_LINK,
   QUICKLINKS,
   RESERVATIONS,
-  RESERVATIONS_LINK,
+  RESERVATIONS_FAQ_LINK,
   ROAD_SAFETY,
   ROAD_SAFETY_LINK,
   RTI_ACT,
@@ -96,8 +96,8 @@ const FooterSection: NextPage<FooterSectionType> = ({
         </div>
         <div className={styles.faqsSection}>
           <b className={styles.faqs}>{FAQS}</b>
-          <a className={styles.reservations} href={RESERVATIONS_LINK}>{RESERVATIONS}</a>
-          <a className={styles.busPasses} href={BUS_PASS_LINK}>{BUS_PASSES}</a>
+          <a className={styles.reservations} href={RESERVATIONS_FAQ_LINK}>{RESERVATIONS}</a>
+          <a className={styles.busPasses} href={BUS_PASS_FAQ_LINK}>{BUS_PASSES}</a>
         </div>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import styles from "./index.module.css"
 import CustomTable from '../../components/table-view-details';
 import { columnWidths } from '../../constants/reservation-concession-schemes';

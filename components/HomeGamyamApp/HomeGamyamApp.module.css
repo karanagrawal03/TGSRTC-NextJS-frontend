@@ -40,6 +40,34 @@
   flex-direction: column;
   align-items: center;
 }
+.download{
+  color: var(--text-black);
+  font-family: var(--font-montserrat);
+  font-size: var(--font-size-sm);
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.28px;
+  margin: 0;
+}
+.downloadPlatform {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-sm);
+  margin: 16px 0;
+}
+.appStoreIcon,
+.googlePlayIcon {
+  display: flex;
+  align-self: stretch;
+  width: 90px;
+  position: relative;
+  max-height: 100%;
+  object-fit: cover;
+  min-height: 30px;
+}
 .texts {
   align-self: stretch;
   gap: var(--gap-xs);

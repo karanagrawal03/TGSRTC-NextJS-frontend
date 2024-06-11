@@ -25,7 +25,7 @@
   align-self: stretch;
   align-items: center;
   justify-content: flex-start;
-  padding: var(--padding-61xl) var(--padding-5xl) var(--padding-81xl);
+  padding: var(--padding-61xl) var(--padding-81xl) var(--padding-81xl);
   box-sizing: border-box;
   gap: var(--gap-13xl);
   z-index: 1;
@@ -43,7 +43,7 @@
   text-align: center;
 }
 .rtiActContent {
-  width: 1116px;
+  width: 1166px;
   align-items: flex-start;
   margin: 0;
   max-width: 100%;
@@ -52,11 +52,13 @@
   margin: 0;
   padding: 0;
 }
-@media screen and (max-width: 1275px) {
+.ritQuestion{
+  color: var(--text-black);
+  line-height: 30px !important;
+}
+@media screen and (max-width: 1023px) {
   .rtiActContainer {
-    padding-top: var(--padding-15xl);
-    padding-bottom: var(--padding-23xl);
-    box-sizing: border-box;
+    padding:0px var(--padding-17xl) var(--padding-23xl);
   }
 }
 @media screen and (max-width: 1023px) {
@@ -66,9 +68,7 @@
 }
 @media screen and (max-width: 750px) {
   .rtiActContainer {
-    padding-top: var(--padding-41xl);
-    padding-bottom: var(--padding-41xl);
-    box-sizing: border-box;
+    padding: 0px var(--padding-xl) var(--padding-41xl);
   }
 }
 @media screen and (max-width: 599px) {

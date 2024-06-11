@@ -17,11 +17,8 @@
   width: 85.52%;
   line-height: 26px;
 }
-.wwwtgsrtctelanganagovin1 {
-  text-decoration: underline;
-}
 .wwwtgsrtctelanganagovin {
-  color: inherit;
+  color: var(--primary-green);
 }
 .theConsignorsCanContainer {
   margin: 0;

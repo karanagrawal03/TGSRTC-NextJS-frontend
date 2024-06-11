@@ -47,13 +47,13 @@
 }
 
 .frameChild {
-  height: 100px;
-  width: 140px;
+  width: 100%;
   z-index: 2;
 }
 
 .infographics {
-  width: 140px;
+  max-width: 160px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
