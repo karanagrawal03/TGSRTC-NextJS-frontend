@@ -23,7 +23,6 @@ const Cards4: NextPage<Cards4Type> = ({
       padding: applyNowPadding,
     };
   }, [applyNowPadding]);
-  console.log(content)
   return (
     <div className={[styles.cards, className].join(" ")}>
       <div className={styles.infographicContainer}>

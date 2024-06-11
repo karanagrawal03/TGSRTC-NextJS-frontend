@@ -1,5 +1,3 @@
-import { DETAILS_OF_HYDERABAD_BUSES } from "../../constants";
-import { yadagiriguttaTableData } from "../../constants/YadagiriguttaTableData";
 import Tables from "../tables";
 import styles from "./index.module.css";
 

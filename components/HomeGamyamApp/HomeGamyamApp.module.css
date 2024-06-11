@@ -133,7 +133,6 @@
     mix-blend-mode: multiply;
     position: relative;
     object-fit: cover;
-    padding-top: 36.7px;
   }
   .gamyamApp {
     font-size: var(--gap-13xl);

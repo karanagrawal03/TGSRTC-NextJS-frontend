@@ -761,6 +761,9 @@
   .knowMoreAbout {
     font-size: var(--font-size-xl);
   }
+  .contentWrapper{
+    max-width: 270px;
+  }
 }
 
 @media screen and (max-width: 750px) {

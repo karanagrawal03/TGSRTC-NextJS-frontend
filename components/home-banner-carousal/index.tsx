@@ -48,7 +48,6 @@ const HomeBannerAnimation = (props: CarouselInterface) => {
 
   const data = children;
 
-  console.log(data,'datadatadata');
 
 
   const settings = {

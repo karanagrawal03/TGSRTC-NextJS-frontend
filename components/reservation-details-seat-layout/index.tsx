@@ -1,8 +1,6 @@
 import type { NextPage } from "next";
 import styles from "./index.module.css";
-import { LADIES, MLA, PHYSICALLY_CHALLENGED, PRESIDENTS_MANDAL, SEAT_LAYOUT_OF_TGSRTC, SEAT_LAYOUT_OF_TGSRTC_PARA, SENIOR_CITIZENS } from "../../constants";
 import BulletPoints from "../bullet-points";
-// import {  SEAT_LAYOUT_DATA } from "../../constants/reservation-bus-details";
 
 export type SeatLayoutOfTGSRTCContaineType = {
   className?: string;

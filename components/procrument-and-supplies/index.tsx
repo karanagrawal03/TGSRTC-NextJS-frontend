@@ -1,5 +1,4 @@
 import CustomTable from "../table-view-details";
-import Tables from "../tables";
 import styles from "./index.module.css";
 interface ProcrumentAndSuppliesData {
   procruementAndSuppliesData: any;

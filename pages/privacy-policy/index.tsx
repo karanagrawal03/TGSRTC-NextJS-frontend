@@ -30,8 +30,8 @@ const AboutThisSite: NextPageAboutThisSiteType = ({data}) => {
                 {data?.disclaimerTitle}
               </h2>
               <div className={styles.disclaimerContent}>
-                {data?.disclaimerData?.map((item: any) => (
-                  <div className={styles.content}>{item}</div>
+                {data?.disclaimerData?.map((item: any,index:number) => (
+                  <div className={styles.content} key={index}>{item}</div>
                 ))}
               </div>
             </div>
@@ -41,8 +41,8 @@ const AboutThisSite: NextPageAboutThisSiteType = ({data}) => {
                 {data?.privacyPolicyTitle}
               </h2>
               <div className={styles.privacyPolicyContent}>
-                {data?.privacyPolicyData?.map((item: any) => (
-                  <div className={styles.content}>{item}</div>
+                {data?.privacyPolicyData?.map((item: any,index:number) => (
+                  <div className={styles.content} key={index}>{item}</div>
                 ))}
               </div>
             </div>

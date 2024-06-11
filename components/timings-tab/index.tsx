@@ -1,7 +1,6 @@
 import { useState } from "react";
 import AccordionItem from "../accordians";
 import styles from "./index.module.css";
-import { AirportPushpakData } from "../../constants/AirPortPushpakRouteData";
 
 interface timingsData {
   timingsRGIAData: any;

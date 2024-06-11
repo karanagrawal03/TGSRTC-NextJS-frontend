@@ -1,16 +1,3 @@
-import {
-  AIRPORT_PUSHPAK_FIRST_PARAGRAPH,
-  AIRPORT_PUSHPAK_SECOND_PARAGRAPH,
-  DETAILS_OF_AIRPORT_PUSHPAK_BUSES,
-  DETAILS_OF_MUNCHINTALA_BUSES,
-  MUNCHINTALA_FIRST_PARAGRAPH,
-  MUNCHINTALA_SECOND_PARAGRAPH,
-  PUSHPAK_AIRPORT_LINERS,
-  TGSRTC_AIRPORT,
-  TGSRTC_MIYAPUR,
-} from "../../constants";
-import { airportPushpakData } from "../../constants/AirPortPushpakTableData";
-import BulletPoints from "../bullet-points";
 import Tables from "../tables";
 import TimingsTab from "../timings-tab";
 import styles from "./index.module.css";

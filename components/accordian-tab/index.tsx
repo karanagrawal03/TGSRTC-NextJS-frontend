@@ -3,7 +3,6 @@ import Links from "../Links";
 import AccordiansHeading from "../accordians-heading";
 import BulletPoints from "../bullet-points";
 import Tables from "../tables";
-import TimingsTab from "../timings-tab";
 import TimingsOfBuses from "../timings-of-buses";
 import Note from "../note";
 import TableHeading from "../table-headings";

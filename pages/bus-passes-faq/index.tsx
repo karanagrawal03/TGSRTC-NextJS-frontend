@@ -1,14 +1,5 @@
 import { useEffect, useState } from "react";
 import AccordionItem from "../../components/accordians";
-import Header from "../../components/header";
-import {
-  APPLY_AND_RENEW,
-  FAQS,
-  GENERAL_COMMUTER_PASS,
-  KNOW_MORE,
-  KNOW_MORE_ABOUT_FAQ,
-  KNOW_MORE_ABOUT_STUDENT_PASSES,
-} from "../../constants";
 import styles from "./index.module.css";
 import { UPLOADS_BASE_URL, doFetch } from "../../services/service";
 import AnimationBus from "../../components/animation-bus";

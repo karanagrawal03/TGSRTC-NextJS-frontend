@@ -1,7 +1,6 @@
 import type { NextPage } from "next";
 import ImageCards from "../logistics-business-image-card";
 import styles from "./index.module.css";
-import { CITY_SERVICES, Electric_BUSES, Electric_BUSES_PARA, METRO_DELUX, METRO_DELUX_COACH, METRO_DELUX_COACH_PARA, METRO_EXPRESS, METRO_LUXURY_AC, SALIENT_FEATURES } from "../../constants";
 import { electricBusesBulletPoints, metroDeluxBulletPoints } from "../../constants/reservation-bus-details";
 import BulletPoints from "../bullet-points";
 import { UPLOADS_BASE_URL } from "../../services/service";

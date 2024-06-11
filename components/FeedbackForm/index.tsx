@@ -56,7 +56,6 @@ const FeedbackForm = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (validateForm()) {
-      console.log('Form submitted:', formData);
       setFormData({
         name: '',
         email: '',
@@ -99,8 +98,6 @@ const FeedbackForm = () => {
       isValid = false;
     }
     else if (formData.phone.length !== 10) {
-      console.log(formData.phone)
-      console.log(formData.phone.length)
       isValid = false
       newErrors.phone = 'Phone number must have 10 digits';
     }

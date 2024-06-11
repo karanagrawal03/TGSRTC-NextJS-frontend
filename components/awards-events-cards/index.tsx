@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import DynamicContent from '../dynamicContent';
 import AboutCardData from '../awards-events-cards-data'
 

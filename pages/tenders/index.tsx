@@ -1,9 +1,5 @@
 import type { NextPage } from "next";
 import styles from "./index.module.css";
-import {
-  BUS_CONTRACT_RATES,
-  BUS_CONTRACT_RATES_TAGLINE,
-} from "../../constants";
 import TendersComponent from "../../components/tenders-component";
 import { useEffect } from "react";
 import { UPLOADS_BASE_URL, doFetch } from "../../services/service";

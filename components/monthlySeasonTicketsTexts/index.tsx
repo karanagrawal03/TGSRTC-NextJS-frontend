@@ -17,10 +17,10 @@ const MonthlySeasonTicketsTexts = ({monthlySeasonTicketsTitle,monthlySeasonTicke
         <div className={styles.bulletPointContainer}>
          
            <div className={styles.phylosophyList}>
-              {monthlySeasonTicketsList?.map((item: any, index: any) => (
-                <div className={styles.listItem}>
+              {monthlySeasonTicketsList?.map((item: any, index: number) => (
+                <div className={styles.listItem} key={index} >
                   <div className={styles.dots}></div>
-                  <div key={index} className={styles.listItemContent}>{item}</div>
+                  <div className={styles.listItemContent}>{item}</div>
                 </div>
               ))}
             </div>
@@ -31,10 +31,10 @@ const MonthlySeasonTicketsTexts = ({monthlySeasonTicketsTitle,monthlySeasonTicke
           </div>
           <div className={styles.bulletPointContainer1}>
             <div className={styles.phylosophyList}>
-              {valueAdditionList?.map((item: any, index: any) => (
-                <div className={styles.listItem}>
+              {valueAdditionList?.map((item: any, index: number) => (
+                <div className={styles.listItem} key={index} >
                   <div className={styles.dots}></div>
-                  <div key={index} className={styles.listItemContent}>{item}</div>
+                  <div className={styles.listItemContent}>{item}</div>
                 </div>
               ))}
             </div>

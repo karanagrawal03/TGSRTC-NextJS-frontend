@@ -276,6 +276,10 @@
     justify-content: center;
     align-items: center;
   }
+  .routeChips{
+    width: 70%;
+    justify-content: center;
+  }
   .city {
     display: flex;
     align-items: center;
