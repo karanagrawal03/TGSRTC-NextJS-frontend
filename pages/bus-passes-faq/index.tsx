@@ -1,17 +1,7 @@
 import { useEffect, useState } from "react";
 import AccordionItem from "../../components/accordians";
-import Header from "../../components/header";
-import {
-  APPLY_AND_RENEW,
-  FAQS,
-  GENERAL_COMMUTER_PASS,
-  KNOW_MORE,
-  KNOW_MORE_ABOUT_FAQ,
-  KNOW_MORE_ABOUT_STUDENT_PASSES,
-} from "../../constants";
 import styles from "./index.module.css";
-import { busPassStudentPasses } from "../../constants/bus-pass-student-passes";
-import useFetch, { BASE_URL, UPLOADS_BASE_URL } from "../../services/service";
+import useFetch, { UPLOADS_BASE_URL } from "../../services/service";
 import AnimationBus from "../../components/animation-bus";
 import AnimationBusMobile from "../../components/animation-bus-mobile";
 const BusPassesFaq = () => {

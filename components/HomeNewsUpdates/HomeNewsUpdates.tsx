@@ -1,8 +1,8 @@
 import type { NextPage } from "next";
-import { useEffect, useState, ReactNode } from "react";
+import { useEffect, useState } from "react";
 import styles from "./HomeNewsUpdates.module.css";
 import Carousal from "../Carosal/index";
-import { NEWS_UPDATES, VIEW_DETAILS, APPLY_NOW } from "../../constants";
+import { VIEW_DETAILS, APPLY_NOW } from "../../constants";
 
 export type HomeNewsUpdatesType = {
   className?: string;

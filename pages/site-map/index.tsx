@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import styles from "./index.module.css";
-import useFetch, { UPLOADS_BASE_URL } from "../../services/service";
+import useFetch from "../../services/service";
 import { useEffect, useState } from "react";
 import { styled } from "@mui/material";
 import AnimationBus from "../../components/animation-bus";
@@ -55,14 +55,12 @@ const SiteMap: NextPage = () => {
           <h1 className={styles.siteMapTitle}>{data?.siteMapTitle}</h1>
           <MainStyles className={styles.siteMapContent}>
             {data?.siteMapData?.map((item: any, index: number) => (
-              <div key={index} className={styles.siteMapItem}>
-                <ul className={styles.siteMapList}>
-                  <li className={styles.listItem}><a className={styles.listItemlink} href={item?.link}>{item?.name}</a></li>
+              <div className={styles.siteMapItem} key={index}>
+                <ul className={styles.siteMapList}> 
+                  <li className={styles.listItem} key={index}><a className={styles.listItemlink} href={item?.link}>{item?.name}</a></li>
                   {item?.data?.length !== 0 &&
-                    item?.data?.map((listItem: { name: string, link: string }) => (
-                      <>
-                        <a className={styles.listItemSubLink} href={listItem.link}>{listItem.name}</a>
-                      </>
+                    item?.data?.map((listItem: { name: string, link: string },index:number) => (
+                      <a className={styles.listItemSubLink} href={listItem.link} key={index}>{listItem.name}</a>
                     ))}
                 </ul>
               </div>

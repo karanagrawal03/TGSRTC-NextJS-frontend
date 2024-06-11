@@ -1,7 +1,7 @@
 import BookYourTicket from "../../components/BookYourTicket/BookYourTicket";
 import ReservationKPIs from "../../components/reservation-kpi";
 import styles from "./index.module.css";
-import useFetch, { UPLOADS_BASE_URL } from "../../services/service";
+import useFetch from "../../services/service";
 import { useEffect } from "react";
 import CustomerSupport from "../../components/customer-support";
 import ReservationConnectivity from "../../components/reservation-connectivity";

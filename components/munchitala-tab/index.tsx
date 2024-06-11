@@ -1,9 +1,3 @@
-import {
-  DETAILS_OF_MUNCHINTALA_BUSES,
-  MUNCHINTALA_FIRST_PARAGRAPH,
-  MUNCHINTALA_SECOND_PARAGRAPH,
-} from "../../constants";
-import { munchintalaTableData } from "../../constants/munchintalaTableData";
 import Tables from "../tables";
 import styles from "./index.module.css";
 interface MunchintalaData{

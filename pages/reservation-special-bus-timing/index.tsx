@@ -1,11 +1,6 @@
 import { useEffect } from "react";
 import ReservationBusesTabs from "../../components/reservation-spl-buses-tabs";
-import {
-  APPLY_AND_RENEW,
-  SPECIAL_BUSES,
-  WHICH_BUS_TIMINGS,
-} from "../../constants";
-import useFetch, { BASE_URL, UPLOADS_BASE_URL } from "../../services/service";
+import useFetch, { UPLOADS_BASE_URL } from "../../services/service";
 import styles from "./index.module.css";
 import AnimationBus from "../../components/animation-bus";
 import AnimationBusMobile from "../../components/animation-bus-mobile";

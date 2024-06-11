@@ -125,12 +125,18 @@
   max-width: 1166px;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width:1023px) {
   .generalCommuterPassContainer {
     font-size: var(--font-size-39xl);
     line-height: 74px;
+    max-width: 400px;
   }
 
+  .general{
+    font-size: var(--font-size-39xl);
+    line-height: 68px;
+  }
+  
   .busPassesHeroGeneralCommut {
     box-sizing: border-box;
   }
@@ -141,10 +147,6 @@
 }
 
 @media screen and (max-width: 750px) {
-  .generalCommuterPassContainer {
-    max-width: 185px;
-  }
-
   .knowMoreAbout {
     font-size: var(--font-size-xl);
   }
@@ -163,10 +165,11 @@
   }
 
   .generalCommuterPassContainer {
+    max-width: 237px;
     font-size: var(--font-size-24xl);
     line-height: 55px;
-    top: 54.7vw;
-    left: 6.3vw;
+    top: 54.95vw;
+    left: 6.4vw;
   }
 
   .applyRenew {

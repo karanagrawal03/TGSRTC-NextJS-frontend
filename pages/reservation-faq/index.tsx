@@ -7,7 +7,7 @@ import AnimationBusMobile from "../../components/animation-bus-mobile";
 
 const ReservationFAQ = () => {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
-  const {data,doFetch,loading,error}=useFetch();
+  const {data,doFetch}=useFetch();
   const handleChange = (index: number) => {
     setExpandedIndex((prevIndex) => (prevIndex === index ? null : index));
   };

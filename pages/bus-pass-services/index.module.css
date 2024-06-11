@@ -74,13 +74,16 @@
   letter-spacing: normal;
   background-color: var(--support-grey-bg);
 }
-
-@media screen and (max-width: 750px) {
-  .busPassServices1 {
-    font-size: var(--font-size-42xl);
-    line-height: 74px;
+@media screen and (max-width: 1023px) {
+  .busPassServices1{
+    font-size: var(--font-size-39xl);
+      line-height: 68px;
   }
-
+  .busPassContent{
+    max-width: 400px;
+  }
+}
+@media screen and (max-width: 750px) {
   .busPassHeroBusPassService {
     box-sizing: border-box;
   }

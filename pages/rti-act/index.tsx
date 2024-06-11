@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import styles from "./index.module.css";
-import useFetch, { UPLOADS_BASE_URL } from "../../services/service";
+import useFetch from "../../services/service";
 import { useEffect, useState } from "react";
 import AccordionItem from "../../components/accordians";
 import AnimationBus from "../../components/animation-bus";
