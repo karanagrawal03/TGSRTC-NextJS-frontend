@@ -179,7 +179,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 0 var(--padding-6xl);
+  padding: 0 var( --padding-xl);
   font-size: var(--font-size-5xl);
   color: var(--color-darkslategray);
   font-family: var(--font-montserrat);
@@ -220,8 +220,7 @@
 
   .busPassOtherBusPasses {
     gap: var(--gap-base);
-    padding: 0px 0px;
-    padding-bottom: var(--padding-23xl);
+    padding: var( --padding-41xl) 0;
     box-sizing: border-box;
   }
 }
@@ -241,7 +240,7 @@
   }
 
   .busPassOtherBusPasses {
-    padding: 0px 0px var(--padding-81xl) 0px;
+    padding: var( --padding-41xl) 0;
   }
 }
 

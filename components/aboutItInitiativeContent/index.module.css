@@ -50,7 +50,7 @@ color: var(--text-grey-body-text);
         font-size: var(--font-size-3x);
     }
     .itemContent{
-        padding: var(--padding-61xl) !important;
+        padding: var(--padding-61xl) ;
     }
     .sequenceStyles{
         font-size: var(--font-size-112xs);
@@ -58,7 +58,7 @@ color: var(--text-grey-body-text);
 }
 @media screen and (max-width:700px) {
     .itemContent{
-        padding: var(--padding-31xl) !important;
+        padding: var(--padding-31xl) ;
         gap:var(--gap-xl);
     } 
 }

@@ -821,7 +821,7 @@
   }
 
   .busPassStudentPasses1 {
-    padding: var(--padding-5xl) var(--padding-5xl) var(--padding-33xl) var(--padding-5xl);
+    padding:0 var(--padding-xl) var(--padding-33xl) var(--padding-xl);
     box-sizing: border-box;
   }
 
