@@ -46,6 +46,8 @@
 }
 .infrastructureContainer {
   padding: 0px var(--padding-81xl) var(--padding-81xl) var(--padding-81xl);
+  margin: 0 auto;
+  max-width: 1166px;
 }
 @media screen and (max-width: 1023px) {
   .cards {
@@ -66,14 +68,15 @@
   }
   .infrastructureContainer {
     padding: var(--padding-41xl) var(--padding-5xl);
+
   }
 }
 @media screen and (max-width: 599px) {
   .infrastructureContainer {
-    padding: var(--padding-41xl) var(--padding-5xl);
+    padding: var(--padding-41xl) var(--padding-xl);
   }
   .infrastructureText{
-    font-size: var(--font-size-27x);
+    font-size: var(--font-size-27xl);
   }
   .cards {
     justify-content: center;
