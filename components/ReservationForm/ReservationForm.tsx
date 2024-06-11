@@ -9,7 +9,10 @@ import {
 } from "@mui/material";
 import styles from "./ReservationForm.module.css";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import { LocalizationProvider, DatePicker } from "@mui/x-date-pickers";
+import {
+  LocalizationProvider,
+  DesktopDatePicker,
+} from "@mui/x-date-pickers";
 import dayjs from "dayjs";
 import ReservationFormStyle from "./ReservationFormStyles";
 import {
@@ -21,7 +24,7 @@ import {
   SEARCH_BUSSES,
   TODAY_LABEL,
   TOMMAROW_LABEL,
-} from "../../constants";
+} from "../../constants"
 import { NextPage } from "next";
 
 export type BookYourTicketType = {
@@ -33,8 +36,8 @@ export type BookYourTicketType = {
 };
 
 const buttons = [
-  { label: TODAY_LABEL, style: ReservationFormStyle.button1 },
-  { label: TOMMAROW_LABEL, style: ReservationFormStyle.button2 },
+  { label: TODAY_LABEL, style: styles.button1 },
+  { label: TOMMAROW_LABEL, style: styles.button1 },
 ];
 
 const ReservationForm: NextPage<BookYourTicketType> = ({
@@ -43,42 +46,41 @@ const ReservationForm: NextPage<BookYourTicketType> = ({
   selectedFrom,
   selectedTo,
 }) => {
-
   const [selectedDate, setSelectedDate] = useState(dayjs());
   const [isClicked, setIsClicked] = useState(false);
 
   // from input logic
-         
+
   const handleFromChange = (event: any) => {
     onRouteSelect(event.target.value, selectedTo);
   };
 
-   // to input logic
+  // to input logic
 
   const handleToChange = (event: any) => {
-    onRouteSelect(selectedFrom,event.target.value);
+    onRouteSelect(selectedFrom, event.target.value);
   };
 
- // swapping icon logic
+  // swapping icon logic
 
   const handleExchange = () => {
     setIsClicked(!isClicked);
-      onRouteSelect(selectedTo, selectedFrom);
+    onRouteSelect(selectedTo, selectedFrom);
   };
 
- // default date logic
+  // default date logic
 
   const handleDateChange = (newValue: any) => {
     setSelectedDate(newValue);
   };
 
- // today button date logic
+  // today button date logic
 
   const handleTodayClick = () => {
     setSelectedDate(dayjs());
   };
 
- // tommarow button date logic
+  // tommarow button date logic
 
   const handleTomorrowClick = () => {
     setSelectedDate(dayjs().add(1, "day"));
@@ -109,10 +111,10 @@ const ReservationForm: NextPage<BookYourTicketType> = ({
         </div>
       </div>
       <div className={styles.bookYourTicketForm}>
-        <Box sx={ReservationFormStyle.container}>
-          <Box sx={ReservationFormStyle.inputContainer}>
-            <Box sx={ReservationFormStyle.inputBox1}>
-              <FormControl sx={ReservationFormStyle.formControl}>
+        <Box className={styles.container}>
+          <Box className={styles.inputContainer}>
+            <Box className={styles.inputBox1}>
+              <FormControl className={styles.formControl}>
                 <InputLabel
                   sx={ReservationFormStyle.inputLabel}
                   id="from-label"
@@ -142,15 +144,12 @@ const ReservationForm: NextPage<BookYourTicketType> = ({
                   ))}
                 </Select>
               </FormControl>
-              <Button
-               className={styles.exchangeIcon}
-                onClick={handleExchange}
-              >
+              <Button className={styles.exchangeIcon} onClick={handleExchange}>
                 <img loading="lazy" alt="exchange icon" src="/exchange.svg" />
               </Button>
             </Box>
-            <Box sx={ReservationFormStyle.inputBox2}>
-              <FormControl sx={ReservationFormStyle.formControl}>
+            <Box className={styles.inputBox2}>
+              <FormControl className={styles.formControl}>
                 <InputLabel id="to-label" sx={ReservationFormStyle.inputLabel}>
                   {TO_LABEL}
                 </InputLabel>
@@ -181,11 +180,11 @@ const ReservationForm: NextPage<BookYourTicketType> = ({
               </FormControl>
             </Box>
           </Box>
-          <Box sx={ReservationFormStyle.inputBox3}>
-            <Box sx={ReservationFormStyle.inputBox4}>
-              <Box sx={ReservationFormStyle.inputBox5}>
+          <Box className={styles.inputBox3}>
+            <Box className={styles.inputBox4}>
+              <Box className={styles.inputBox5}>
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
-                  <DatePicker
+                  <DesktopDatePicker
                     value={selectedDate}
                     onChange={handleDateChange}
                     format="DD-MM-YYYY"
@@ -200,35 +199,36 @@ const ReservationForm: NextPage<BookYourTicketType> = ({
                         color: "primary",
                         placeholder: "Date",
                         InputProps: {
-                          sx: {
-                            padding: "0 !important",
-                          },
+                          className: styles.datePickerInputProps,
                         },
                         InputLabelProps: {
-                          sx: ReservationFormStyle.inputLabel2,
+                          sx: ReservationFormStyle.inputlabel1,
                         },
                       },
                       openPickerIcon: {
                         component: () => (
                           <img
-                            width="24px"
-                            height="24px"
+                            className={styles.datePickerIcon}
                             src="/date-icon.svg"
+                            alt="Date Picker Icon"
                             loading="lazy"
                           />
                         ),
+                      },
+                      openPickerButton: {
+                        className: styles.iconButton,
                       },
                     }}
                     label="Date"
                   />
                 </LocalizationProvider>
               </Box>
-              <Box sx={ReservationFormStyle.box}>
+              <Box className={styles.box}>
                 {buttons.map((button, index) => (
                   <Button
                     key={button.label}
                     variant="contained"
-                    sx={button.style}
+                    className={button.style}
                     onClick={
                       index === 0 ? handleTodayClick : handleTomorrowClick
                     }
@@ -238,7 +238,7 @@ const ReservationForm: NextPage<BookYourTicketType> = ({
                 ))}
               </Box>
             </Box>
-            <Box sx={ReservationFormStyle.box2}>
+            <Box className={styles.box2}>
               <button className={styles.button}>
                 <b className={styles.applyNow}>{SEARCH_BUSSES}</b>
               </button>
@@ -249,7 +249,7 @@ const ReservationForm: NextPage<BookYourTicketType> = ({
           <input className={styles.frameInput} type="checkbox" />
           <div className={styles.iWantTo}>{ROUND_TRIP}</div>
         </div>
-        <Box sx={ReservationFormStyle.box3}>
+        <Box className={styles.box3}>
           <button className={styles.button}>
             <b className={styles.applyNow}>{SEARCH_BUSSES}</b>
           </button>

@@ -1,22 +1,4 @@
 const ReservationFormStyle = {
-    container: {
-        display: "flex",
-        alignItems: "center",
-        flexWrap: "wrap",
-        width: "100%",
-    },
-    inputContainer: {
-        display: "flex",
-        maxWidth: "100%",
-        "@media (max-width: 1268px)": {
-            width: "100%",
-        },
-        "@media (max-width: 750px)": {
-            display: "flex",
-            flexDirection: "column",
-            maxWidth: "100%",
-        },
-    },
     inputBox1: {
         border: "1px solid var(--color-gainsboro-200)",
         borderRight: "none",
@@ -26,7 +8,7 @@ const ReservationFormStyle = {
         position: "relative",
         padding: "var(--padding-mid) 16px var(--padding-mid) 24px",
         maxWidth: "100%",
-        "@media (max-width: 1268px)": {
+        "@media (max-width: 1271px)": {
             borderBottom: "none",
             borderRadius: "var(--br-5xs) 0 0 0",
             width: "50%",
@@ -38,40 +20,38 @@ const ReservationFormStyle = {
             borderRadius: "var(--br-5xs) var(--br-5xs) 0 0",
         },
     },
-    formControl: {
-        width: "210px",
-        "@media (max-width: 750px)": {
-            width: "256px",
-        },
-    },
-    inputBox2: {
-        borderLeft: "1px solid var(--color-gainsboro-200)",
-        borderTop: "1px solid var(--color-gainsboro-200)",
-        borderBottom: "1px solid var(--color-gainsboro-200)",
-        padding: "var(--padding-mid) 16px var(--padding-mini) 24px",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "flex-start",
-        maxWidth: "100%",
-        "@media (max-width: 1268px)": {
-            borderBottom: "none",
-            borderRight: "1px solid var(--color-gainsboro-200)",
-            borderRadius: " 0  var(--br-5xs) 0  0 ",
-            width: "50%",
-        },
-        "@media (max-width: 750px)": {
-            width: "auto",
-            borderRadius: "0px",
-        },
-    },
     inputLabel: {
         fontSize: "var(--font-size-xl)",
         lineHeight: "17.07px",
         fontWeight: 400,
         fontFamily: "var(--font-montserrat)",
-        color: " var(--color-gray)",
+        color: "var(--color-gray)",
         left: "-14px",
         marginTop: "0px",
+        '&.Mui-focused': {
+            color: 'green',
+        },
+    },
+    inputlabel1: {
+        paddingTop: "3px",
+        paddingLeft: "10px",
+        fontSize: "var(--font-size-xl)",
+        lineHeight: "17.07px",
+        fontWeight: 400,
+        fontFamily: "var(--font-montserrat)",
+        color: "var(--color-gray)",
+        "@media (max-width: 1271px)": {
+            paddingLeft: "13px",
+        },
+        "@media (max-width: 750px)": {
+            paddingLeft: "0px",
+        },
+        "@media (max-width: 450px)": {
+            left: "-15px",
+        },
+        "&.Mui-focused": {
+            color: "green",
+        },
     },
     select1: {
         marginTop: "12.1px",
@@ -133,7 +113,7 @@ const ReservationFormStyle = {
         alignItems: "center",
         justifyContent: "center",
         flexWrap: "wrap",
-        "@media (max-width: 1268px)": {
+        "@media (max-width: 1271px)": {
             borderRight: "1px solid var(--color-gainsboro-200)",
             borderRadius: " 0  0 var(--br-5xs) var(--br-5xs) ",
             width: "100%",
@@ -153,25 +133,18 @@ const ReservationFormStyle = {
             paddingRight: "12px",
             paddingLeft: "12px",
         },
-        "@media (max-width: 595px)": {
+        "@media (max-width: 630px)": {
             flexDirection: "column",
             width: "100%",
             gap: "0px",
         },
     },
-    inputBox5: { marginRight: "auto" },
     datePicker: {
         marginTop: "15px",
         padding: "0",
         paddingLeft: "21px",
         paddingTop: "14px",
         width: "210px",
-        "@media (max-width: 1268px)": {
-            paddingLeft: "24px",
-        },
-        "@media (max-width: 750px)": {
-            paddingLeft: "13px",
-        },
         ".MuiOutlinedInput-notchedOutline": {
             border: "none",
         },
@@ -185,20 +158,23 @@ const ReservationFormStyle = {
         ".MuiInputBase-input": {
             padding: "0 !important",
         },
-    },
-    inputLabel2: {
-        paddingTop: "3px",
-        paddingLeft: "10px",
-        fontSize: "var(--font-size-xl)",
-        lineHeight: "17.07px",
-        fontWeight: 400,
-        fontFamily: "var(--font-montserrat)",
-        color: " var(--color-gray)",
-        "@media (max-width: 1268px)": {
-            paddingLeft: "13px",
+        "@media (max-width: 1271px)": {
+            paddingLeft: "24px",
         },
         "@media (max-width: 750px)": {
+            paddingLeft: "13px",
+            width: "256px",
+        },
+        "@media (max-width: 450px)": {
+            display: "flex",
             paddingLeft: "0px",
+            justifyContent: "space-between",
+        },
+        "@media (max-width: 353px)": {
+            width: "100%",
+        },
+        '&.Mui-focused': {
+            color: 'green',
         },
     },
     box: {
@@ -211,62 +187,13 @@ const ReservationFormStyle = {
             justifyContent: "space-between",
         },
     },
-    button1: {
-        fontWeight: 400,
-        fontFamily: "var(--font-montserrat)",
-        textTransform: "none",
-        lineHeight: "19.6px",
-        fontSize: "var(--font-size-base)",
-        color: "#020202",
-        borderRadius: "var(--br-7xs)",
-        border: "1px solid transparent !important",
-        backgroundColor: "var(--color-whitesmoke-300)",
-        // display: "flex",
-        // flexDirection: "row",
-        // alignItems: "center",
-        // justifyContent: "center",
-        padding: "var(--padding-smi) var(--padding-xs)",
-        boxShadow: "none",
-        "@media (max-width: 595px)": {
-            width: "100%",
-        },
-        "&:hover": {
-            backgroundColor: "unset !important",
-            border: "1px solid #19ac58 !important",
-            boxShadow: "none !important",
-        },
-    },
-    button2: {
-        fontWeight: 400,
-        fontFamily: "var(--font-montserrat)",
-        textTransform: "none",
-        lineHeight: "19.6px",
-        fontSize: "var(--font-size-base)",
-        color: "black",
-        borderRadius: "var(--br-7xs)",
-        border: "1px solid transparent !important",
-        backgroundColor: "var(--color-whitesmoke-300)",
-        // display: "flex",
-        // flexDirection: "row",
-        // alignItems: "center",
-        // justifyContent: "center",
-        padding: "var(--padding-smi) var(--padding-xs)",
-        boxShadow: "none",
-        "@media (max-width: 595px)": {
-            width: "100%",
-        },
-        "&:hover": {
-            backgroundColor: "unset !important",
-            border: "1px solid #19ac58 !important",
-            boxShadow: "none !important",
-        },
-    },
+
     box2: {
         display: "flex",
         gap: "25px",
         alignItems: "center",
         justifyContent: "center",
-        "@media (max-width: 1268px)": {
+        "@media (max-width: 1271px)": {
             paddingRight: "20px",
         },
         "@media (max-width: 791px)": {
@@ -280,6 +207,6 @@ const ReservationFormStyle = {
             display: "flex",
         },
     },
-    
-};  
+
+};
 export default ReservationFormStyle;
