@@ -1,5 +1,4 @@
 .dropdownMenu {
-  display: none;
   position: absolute;
   background-color: var(--support-white);
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -220,6 +219,9 @@
   .dropdownItem:hover {
     background-color: var(--color-whitesmoke);
   }
+  .dropdownMenu {
+    display: none;
+  }
 }
 @media screen and (min-width: 1024px) and (max-width: 1275px) {
   .dropdownMenu {
@@ -232,6 +234,8 @@
     box-shadow: unset;
     background-color: unset;
     margin: 0;
+    display: flex;
+    flex-direction: column;
     gap: 8px;
     position: relative;
     top: 0;
@@ -247,15 +251,19 @@
     font-weight: 700;
     color: var(--primary-red);
     border-bottom: 4px solid var(--primary-green);
-    padding: 0 0 6px 0;
-    margin-left: 24px;
+    padding: 0 0 2px 0;
+    margin:0 24px;
     line-height: 26px;
+    display: flex;
   }
   .currentPage {
     font-weight: 700;
     color: var(--primary-red);
     border-bottom: 4px solid var(--primary-green);
     line-height: 26px;
+    padding-bottom: 2px;
+    display: flex;
+    width: 100%;
   }
   .dropdownItem,
   .reservations {
@@ -280,6 +288,7 @@
     width: 100%;
   }
   .navTabs {
+    gap: var(--gap-5xs);
     justify-content: space-between;
   }
 }
