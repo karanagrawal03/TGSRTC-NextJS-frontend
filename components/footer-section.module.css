@@ -223,7 +223,7 @@
 }
 @media screen and (max-width: 900px) {
   .footerLogoSection {
-    padding-bottom: var(--padding-13xl);
+    padding-bottom: var(--padding-21xl);
   }
   .footerSection {
     flex-wrap: wrap;

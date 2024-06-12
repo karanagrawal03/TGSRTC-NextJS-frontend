@@ -60,7 +60,9 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
             ".MuiAccordionSummary-content.Mui-expanded": {
               margin: "0px",
             },
-
+            ".MuiAccordionSummary-expandIconWrapper":{
+              color:"#000000 !important"
+            }
           }}
           className={styles.before6AmContainer1}
         >
@@ -70,7 +72,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
         </AccordionSummary>
       </Accordion>
       {expanded && (
-        <AccordionDetails sx={{ padding: "0px" }} className={styles.accordianDetails}>
+        <AccordionDetails  sx={{ padding: "0px" }} className={styles.accordianDetails}>
           <div className={`${styles.accordianTab} ${containerClassName}`}>
             <AccordianTab array={info} />
           </div>
