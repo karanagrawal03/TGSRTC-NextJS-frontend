@@ -1,6 +1,6 @@
 .shadowlayer {
   position: absolute;
-  top: 250px;
+  bottom: 0px;
   z-index: 1;
 }
 .mapIcon {
@@ -127,13 +127,9 @@
     height: 80%;
     width: 80%;
     object-fit: contain;
-    z-index: 1;
   }
   .shadowlayer {
-    position: absolute;
-    top: 200px;
-    width: 110%;
-    height: 100%;
+    width: 100%;
   }
 }
 @media screen and (max-width: 450px) {
@@ -150,13 +146,6 @@
     margin-bottom: 46.18px;
     width: 90%;
     object-fit: contain;
-    z-index: 1;
-  }
-  .shadowlayer {
-    position: absolute;
-    top: 200px;
-    width: 125%;
-    height: 100%;
   }
   .gamayamLogoIcon {
     width: 50%;
