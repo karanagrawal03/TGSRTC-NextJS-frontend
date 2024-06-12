@@ -11,11 +11,14 @@
   color: var(--support-white);
   font-family: var(--font-playfair-display);
   z-index: 100;
+  min-height: 300px;
 }
-.timingsContainer{
+
+.timingsContainer {
   max-width: 1166px;
   margin: 0 auto;
 }
+
 .bgIcon,
 .bgIconMobile {
   width: 100%;

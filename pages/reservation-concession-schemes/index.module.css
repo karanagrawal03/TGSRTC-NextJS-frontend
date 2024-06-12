@@ -9,7 +9,9 @@
   justify-content: flex-start;
   line-height: normal;
   letter-spacing: normal;
+  min-height: 300px;
 }
+
 .reservationConcessionHeroImage,
 .reservationConcessionHeroImageMobile {
   width: 100%;
@@ -24,7 +26,8 @@
 .reservationConcessionHeroImageMobile {
   display: none;
 }
-.container{
+
+.container {
   max-width: 1366px;
   width: 100%;
 }

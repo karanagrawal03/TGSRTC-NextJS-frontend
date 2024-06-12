@@ -52,5 +52,4 @@ const AccordianTab: React.FC<AccordianTabProps> = ({ array }) => {
     </div>
   );
 };
-
 export default AccordianTab;

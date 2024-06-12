@@ -10,9 +10,10 @@
   letter-spacing: normal;
   box-sizing: border-box;
   z-index: 100;
+  min-height: 400px;
 }
 
-.hospitalHero{
+.hospitalHero {
   align-self: stretch;
   max-width: 100%;
   gap: var(--gap-3xs);
@@ -21,6 +22,7 @@
   color: var(--support-white);
   font-family: var(--font-playfair-display);
 }
+
 .maskGroupIcon {
   width: 100%;
   height: auto;
@@ -30,7 +32,8 @@
   flex-shrink: 0;
   object-fit: cover;
 }
-.maskGroupIconMobile{
+
+.maskGroupIconMobile {
   display: none;
   width: 100%;
   height: auto;
@@ -40,13 +43,15 @@
   flex-shrink: 0;
   object-fit: cover;
 }
-.content{
+
+.content {
   position: absolute;
   top: 7.35vw;
   left: 7.35vw;
   display: flex;
   flex-direction: column;
 }
+
 .tgsrtcTarnakaHospital,
 .yourGatewayTo {
   margin: 0;
@@ -55,6 +60,7 @@
   max-width: 100%;
   z-index: 1;
 }
+
 .tgsrtcTarnakaHospital {
   font-size: inherit;
   line-height: 82px;
@@ -62,6 +68,7 @@
   font-family: inherit;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
 }
+
 .yourGatewayTo {
   margin-top: 10px;
   font-size: var(--font-size-5xl);
@@ -70,33 +77,40 @@
   font-family: var(--font-montserrat);
   text-shadow: 0 2px 3px rgba(0, 0, 0, 0.8);
 }
+
 @media screen and (max-width: 1100px) {
-  .maskGroupIcon{
+  .maskGroupIcon {
     height: calc(100vh - 100px);
   }
 }
+
 @media screen and (max-width: 750px) {
   .tgsrtcTarnakaHospital {
     font-size: var(--font-size-39xl);
     line-height: 66px;
   }
 }
+
 @media screen and (max-width: 599px) {
-  .maskGroupIcon{
+  .maskGroupIcon {
     display: none;
   }
-  .maskGroupIconMobile{
+
+  .maskGroupIconMobile {
     display: block;
   }
-  .content{
+
+  .content {
     max-width: 237px;
     top: 198px;
     left: 23px;
   }
+
   .tgsrtcTarnakaHospital {
     font-size: var(--font-size-24xl);
     line-height: 49px;
   }
+
   .yourGatewayTo {
     font-size: var(--font-size-lgi);
     line-height: 26px;

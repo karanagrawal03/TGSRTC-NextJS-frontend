@@ -91,15 +91,19 @@ const CustomTable: React.FC<TableProps> = ({
                   }}
                 >
                   {key === "Action" ? (
-                    <a
-                      className={styles.actionButton}
-                      href={Links[index]}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{ width: "100px !important" }}
-                    >
-                      {row[key]}
-                    </a>
+                    Links[index] ? (
+                      <a
+                        className={styles.actionButton}
+                        href={Links[index]}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ width: "100px !important" }}
+                      >
+                        {row[key]}
+                      </a>
+                    ) : (
+                      ""
+                    )
                   ) : (
                     row[key]
                   )}
@@ -114,3 +118,7 @@ const CustomTable: React.FC<TableProps> = ({
 };
 
 export default CustomTable;
+
+
+
+

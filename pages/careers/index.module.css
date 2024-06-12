@@ -3,6 +3,7 @@
   width: 100%;
   position: relative;
   z-index: 100;
+  min-height: 300px;
 }
 
 .heroBackgroundImageWeb {
@@ -28,6 +29,7 @@
   letter-spacing: normal;
   box-sizing: border-box;
 }
+
 .requirement,
 .heroSection {
   display: flex;
@@ -42,6 +44,7 @@
   color: var(--support-white);
   font-family: var(--font-playfair-display);
 }
+
 .heroBackgroundImageWeb,
 .heroBackgroundImageMobile {
   width: 100%;
@@ -51,9 +54,11 @@
   flex-shrink: 0;
   object-fit: cover;
 }
+
 .heroBackgroundImageMobile {
   display: none;
 }
+
 .heroSectionContent {
   position: absolute;
   top: 10.5vw;
@@ -63,6 +68,7 @@
   mix-blend-mode: normal;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
 }
+
 .heroTitle {
   font-size: inherit;
   line-height: 92px;
@@ -70,6 +76,7 @@
   font-family: inherit;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
 }
+
 .heroSubtitle {
   margin-top: 10px;
   font-size: var(--font-size-5xl);
@@ -79,12 +86,14 @@
   display: inline-block;
   text-shadow: 0 2px 3px rgba(0, 0, 0, 0.8);
 }
+
 .requirement {
   max-width: 1366px;
   margin: 0 auto;
   padding: var(--padding-61xl) var(--padding-81xl) var(--padding-81xl);
   gap: var(--gap-base);
 }
+
 .requirementTitle {
   font-family: var(--font-playfair-display);
   font-size: var(--font-size-5xl);
@@ -92,60 +101,74 @@
   line-height: 26px;
   color: var(--primary-red);
 }
-.rowClass{
+
+.rowClass {
   font-family: var(--font-montserrat) !important;
 }
+
 .rowClass:hover {
   background-color: var(--color-whitesmoke);
 }
+
 @media screen and (max-width: 1023px) {
   .heroSectionContent {
     width: 275px;
     top: 22vw;
     left: 7.3vw;
   }
+
   .heroTitle {
     font-size: var(--font-size-39xl);
     line-height: 68px;
   }
+
   .heroSubtitle {
     margin-top: 13px;
     font-size: var(--font-size-lgi);
     line-height: 28px;
   }
+
   .requirement {
     padding: var(--padding-70xl) var(--padding-17xl);
   }
+
   .requirementTitle {
     font-size: var(--font-size-3xl);
   }
 }
+
 @media screen and (max-width: 720px) {
   .heroBackgroundImageWeb {
     display: none;
   }
+
   .heroBackgroundImageMobile {
     display: block;
   }
 }
+
 @media screen and (max-width: 599px) {
   .heroSectionContent {
     width: 237px;
     top: 35.4vw;
     left: 6.4vw;
   }
+
   .heroTitle {
     font-size: var(--font-size-42xl);
     line-height: 56px;
   }
+
   .heroSubtitle {
     margin-top: 16px;
     font-size: var(--font-size-xl);
     line-height: 26px;
   }
+
   .requirement {
     padding: var(--padding-41xl) var(--padding-xl);
   }
+
   .requirementTitle {
     font-size: var(--font-size-xl);
   }
