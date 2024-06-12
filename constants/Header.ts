@@ -1,4 +1,4 @@
-import { ABOUT, ABOUT_CORPORATION_LINK, ABOUT_EVENTS_LINK, ABOUT_IT_LINK, ABOUT_LEADERSHIP_LINK, ABOUT_LINK, BUS_CONTRACT_RATES, BUS_DETAILS, BUS_PASSES, BUS_PASS_FAQ_LINK, BUS_PASS_GENERAL_LINK, BUS_PASS_LINK, BUS_PASS_OTHER_LINK, BUS_PASS_STUDENT_LINK, CONCESSION_SCHEMES, CONTACT_US, CONTACT_US_LINK, CORPORATION, EVENTS_AWARDS, GENERAL_PASS, HOME, HOSPITAL_LINK, IT_INITIATIVES, LEADERSHIP, LOGISTICS, LOGISTICS_CONTACTS, LOGISTICS_CONTACTS_LINK, LOGISTICS_FAQ, LOGISTICS_LINK, LOGISTICS_RATES_LINK, OTHER_PASSES, RESERVATIONS_BUS_LINK, RESERVATIONS_CONCESSION_LINK, RESERVATIONS_CONTRACT_LINK, RESERVATIONS_FAQ_LINK, RESERVATIONS_LINK, RESERVATIONS_POINTS_LINK, RESERVATIONS_SPL_BUS_LINK, RESERVATIONS_TOURISM_LINK, RESERVATION_FAQ, RESERVATION_LABEL, RESERVATION_POINTS, RT_CONTACTS, SPECIAL_BUS_TIMINGS, STUDENT_PASSES, TENDERS, TENDERS_LINK, TGSRTC_HOSPITAL, TOURISM } from ".";
+import { ABOUT_CORPORATION_LINK, ABOUT_EVENTS_LINK, ABOUT_IT_LINK, ABOUT_LEADERSHIP_LINK, ABOUT_LINK, BUS_PASS_FAQ_LINK, BUS_PASS_GENERAL_LINK, BUS_PASS_LINK, BUS_PASS_OTHER_LINK, BUS_PASS_STUDENT_LINK, CONTACT_US_LINK, HOSPITAL_LINK, LOGISTICS_CONTACTS_LINK, LOGISTICS_LINK, LOGISTICS_RATES_LINK, RESERVATIONS_BUS_LINK, RESERVATIONS_CONCESSION_LINK, RESERVATIONS_CONTRACT_LINK, RESERVATIONS_FAQ_LINK, RESERVATIONS_LINK, RESERVATIONS_POINTS_LINK, RESERVATIONS_SPL_BUS_LINK, RESERVATIONS_TOURISM_LINK, TENDERS_LINK } from ".";
 
 export interface Sublinks {
   sublinkDisplayName: string;
@@ -10,8 +10,7 @@ export interface HeaderConfig {
   isNavLink: boolean;
   link?: string;
   subLinks?: Sublinks[];
-  isOpen?: number;
-  dropDown?: boolean;
+  dropDown?: number;
 }
 
 export const headerData: HeaderConfig[] = [
@@ -23,8 +22,7 @@ export const headerData: HeaderConfig[] = [
   {
     displayName: "Reservations",
     isNavLink: false,
-    isOpen: 1,
-    dropDown: false,
+    dropDown: 0,
     subLinks: [
       {
         sublinkDisplayName: "Reservations Home",
@@ -63,8 +61,7 @@ export const headerData: HeaderConfig[] = [
   {
     displayName: "Logistics",
     isNavLink: false,
-    isOpen: 2,
-    dropDown: false,
+    dropDown: 0,
     subLinks: [
       {
         sublinkDisplayName: "Logistics Home",
@@ -83,8 +80,7 @@ export const headerData: HeaderConfig[] = [
   {
     displayName: "Bus Passes",
     isNavLink: false,
-    isOpen: 3,
-    dropDown: false,
+    dropDown: 0,
     subLinks: [
       {
         sublinkDisplayName: "Bus Passes Home",
@@ -122,8 +118,7 @@ export const headerData: HeaderConfig[] = [
   {
     displayName: "About",
     isNavLink: false,
-    isOpen: 4,
-    dropDown: false,
+    dropDown: 0,
     subLinks: [
       {
         sublinkDisplayName: "About Home",

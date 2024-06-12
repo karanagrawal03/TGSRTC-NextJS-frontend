@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import OutSoursingControls from "../out-sourcing-controls";
 import styles from "./index.module.css";
-import OpenLandParcelCease from "../open-land-parcel-cease";
 import { MenuItem, FormControl, Select, InputLabel } from "@mui/material";
 import ProcrumentAndSupplies from "../procrument-and-supplies";
 import OtherContracts from "../otherContracts";
@@ -36,17 +35,6 @@ const TendersComponent: React.FC<TendersData> = ({ TotalData }) => {
           outSourcingData={TotalData?.outSourcingContractsData}
           outSourcingContractText={TotalData?.outSourcingContractsText}
           outSourcingLinks={TotalData?.outSourcingLinks}
-        />
-      ),
-    },
-
-    {
-      name: "OpenLandParcelCease",
-      component: (
-        <OpenLandParcelCease
-          openLandParcelOnLeaseText={TotalData?.openLandParcelOnLeaseText}
-          openLandParcelOnLeaseData={TotalData?.openLandParcelOnLeaseData}
-          openLandParcelOnLeaseLinks={TotalData?.openLandParcelOnLeaseLinks}
         />
       ),
     },

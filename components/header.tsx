@@ -68,24 +68,27 @@ const Header: NextPage<HeaderType> = ({ className = "" }) => {
     document.body.style.overflow = "unset";
   };
 
-  const [value, setValue] = useState<number>(0);
   const toggleDropDownMenu = (headerOption: HeaderConfig) => {
     const newData = headerConfig.map((each: HeaderConfig) => {
-      if (
-        each.displayName === headerOption.displayName &&
-        each.isOpen != value
-      ) {
-        each.dropDown = true;
-        setValue(each.isOpen);
-      } else if (each.isOpen == value) {
-        each.dropDown = false;
-        setValue(0);
+      if (each.displayName === headerOption.displayName ) {
+        each.dropDown = each.dropDown == 1 ? 0 : 1
+      } else {
+        each.dropDown = 0;
       }
       return each;
     });
     setHeaderConfig(newData);
     setIsRotated(!isRotated);
   };
+
+  const resetData = () => {
+   setHeaderConfig(prev => {
+    return prev.map((each) => {
+      if(each.isNavLink === false) each.dropDown = 0
+      return each
+    })
+   })
+  }
 
   return (
     <header
@@ -175,10 +178,7 @@ const Header: NextPage<HeaderType> = ({ className = "" }) => {
 
         {isHamburgerMenu && (
           <>
-            <div
-              className={`${
-                isHamburgerMenu? `${styles.slideMenu} ${styles.open}`: `${styles.slideMenu}`  }`}
-            >
+            <div className={`${isHamburgerMenu? `${styles.slideMenu} ${styles.open}`: `${styles.slideMenu}`  }`}>
               <div className={styles.menuLabel}>
                 <div className={styles.menu}>{MENU}</div>
                 <div
@@ -204,7 +204,7 @@ const Header: NextPage<HeaderType> = ({ className = "" }) => {
                           <Link
                             href={headerOption.link}
                             className={styles.navTabs}
-                            onClick={() => closeHamburgerMenu()}
+                            onClick={() => {closeHamburgerMenu(); resetData();}}
                           >
                             <span
                               className={
@@ -223,12 +223,13 @@ const Header: NextPage<HeaderType> = ({ className = "" }) => {
                   } else {
                     return (
                       <>
-                        <div className={styles.headerTabLink}>
-                          <div
-                            className={styles.navTabs}
-                            onClick={() => toggleDropDownMenu(headerOption)}
-                          >
-                            <span className={styles.reservations}>
+                        <div className={styles.headerTabLink}  onClick={() => toggleDropDownMenu(headerOption)} >
+                          <div className={styles.navTabs}>
+                            <span className={
+                                headerOption?.subLinks?.some(({ sublink }) => isSublinkActive(sublink))
+                                  ? styles.currentPage
+                                  : styles.reservations
+                              } >
                               {headerOption.displayName}
                             </span>
                             <span>
@@ -244,19 +245,16 @@ const Header: NextPage<HeaderType> = ({ className = "" }) => {
                               />
                             </span>
                           </div>
-                          {headerOption.dropDown && (
-                            <ul className={styles.dropdownMenu}>
-                              {headerOption.subLinks?.map((sLink: Sublinks) => (
-                                <li className={styles.headerListItemLink}>
+                          {headerOption.dropDown == 1 && (
+                            <ul className={styles.dropdownMenu} >
+                              {headerOption.subLinks?.map((sLink: Sublinks,index:number) => (
+                                <li className={styles.headerListItemLink} key={index}>
                                   <Link
                                     href={sLink.sublink}
-                                    className={isActive(sLink.sublink) ? styles.listItem: styles.listItem
-                                    }
+                                    className={isActive(sLink.sublink) ? styles.listItem: styles.listItem}
                                     onClick={() => closeHamburgerMenu()}
                                   >
-                                    <span
-                                      className={isActive(sLink.sublink)? styles.currentTab: styles.dropdownItem}
-                                    >
+                                    <span className={isSublinkActive(sLink.sublink)? styles.currentTab: styles.dropdownItem}>
                                       {sLink.sublinkDisplayName}
                                     </span>
                                   </Link>

@@ -110,6 +110,7 @@
 }
 
 .contactContentRight {
+  display: none;
   max-width: 509px;
 }
 
