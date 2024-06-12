@@ -55,6 +55,7 @@
   justify-content: flex-start;
   overflow: hidden;
   z-index: 100;
+  min-height: 380px;
 }
 .logisticsHeroWrapper {
   position: relative;

@@ -68,6 +68,7 @@
   color: var(--support-white);
   font-family: var(--font-playfair-display);
   z-index: 100;
+  min-height: 370px;
 }
 
 .knowMoreAbout {

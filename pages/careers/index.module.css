@@ -92,6 +92,7 @@
   margin: 0 auto;
   padding: var(--padding-61xl) var(--padding-81xl) var(--padding-81xl);
   gap: var(--gap-base);
+  background-color: var(--support-grey-bg);
 }
 
 .requirementTitle {

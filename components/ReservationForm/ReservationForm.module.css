@@ -11,7 +11,9 @@
   padding: var(--padding-smi) var(--padding-xs);
   box-shadow: none;
 }
-
+.menuStyles{
+  font-family: var(--font-montserrat);
+}
 .button1:hover {
   background-color: unset !important;
   border: 1px solid #19ac58 !important;
