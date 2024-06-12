@@ -3,6 +3,7 @@
     width: 100%;
     position: relative;
     z-index: 100;
+    min-height: 300px;
 }
 
 .heroBackgroundImageWeb {

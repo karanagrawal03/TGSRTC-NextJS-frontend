@@ -46,6 +46,7 @@ padding-top: var(--padding-xs);
   height: auto;
   position: relative;
   z-index: 100;
+  min-height: 500px;
 }
 .heroBannerImageSectionMobile {
   display: none;
