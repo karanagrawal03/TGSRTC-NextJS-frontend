@@ -138,6 +138,9 @@ padding-top: var(--padding-xs);
     padding: 0 var(--padding-21xl);
     margin:60px 0;
   }
+  .quotation1{
+    font-weight: 500;
+  }
 }
 @media screen and (max-width: 599px) {
   .events{

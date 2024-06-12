@@ -25,7 +25,7 @@ const Carousal = (props: CarouselInterface) => {
     const { className, style, onClick } = props;
     return (
       <div className={className} style={{ ...style }} onClick={onClick}>
-        <img className={styles.icons3} alt="" src="/icons-10.svg" />
+        <img className={styles.icons3} alt="image" src="/icons-10.svg" />
       </div>
     );
   }
@@ -34,7 +34,7 @@ const Carousal = (props: CarouselInterface) => {
     const { className, style, onClick } = props;
     return (
       <div className={className} style={{ ...style }} onClick={onClick}>
-        <img className={styles.icons4} alt="" src="/icons-11.svg" />
+        <img className={styles.icons4} alt="image" src="/icons-11.svg" />
       </div>
     );
   }
@@ -55,9 +55,12 @@ const Carousal = (props: CarouselInterface) => {
     prevArrow: <PrevArrow />,
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 599,
         settings: {
-          arrows: false,
+          arrows: true,
+          dots:false,
+          infinite: true,
+          autoplay: true
         },
       },
       {
@@ -65,7 +68,10 @@ const Carousal = (props: CarouselInterface) => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          arrows: false,
+          arrows: true,
+          dots:false,
+          infinite: true,
+          autoplay: true
         },
       },
     ],

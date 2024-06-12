@@ -36,6 +36,9 @@
   right: -44px;
   margin-top: -160px;
 }
+.slick-current{
+  width: 280px !important;
+}
 
 .button__bar {
   display: flex !important;
@@ -88,6 +91,14 @@
 @media screen and (max-width: 768px) {
   .slider :global(div.slick-arrow) {
     display: none;
+  }
+}
+@media screen and (max-width: 599px){
+  .slider :global(div.slick-prev) {
+    left: -42px;
+  }
+  .slider :global(div.slick-next) {
+    right: -22px;
   }
 }
 @media screen and (max-width: 360px) {
