@@ -91,6 +91,7 @@
     gap: var(--gap-base);
   }
   .businessContent {
+    width: 100%;
     gap: var(--gap-xl);
   }
   .businessContentWrapper {
@@ -107,6 +108,9 @@
     margin: 0 auto;
     padding-bottom: var(--padding-41xl);
   }
+  .businessImage{
+    margin: 0 40px;
+  }
 }
 @media screen and (max-width: 599px) {
   .businessTitleContainer{
@@ -115,12 +119,12 @@
     margin: 0 auto;
   }
   .tgsrtcAsTransportation{
-    width: 73.34%;
-    margin: 0 auto;
+    width: auto;
+    margin: 0 20px;
   }
   .cargoTransportvehicleTgsrtc{
-    width: 73.34%;
-    margin: 0 auto;
+    width: auto;
+    margin: 0 20px;
     padding-bottom: var(--padding-41xl);
   }
   .tgsrtcLogisticsBusiness {
@@ -131,7 +135,7 @@
   }
   .businessImageMobile{
     display: block;
-    margin: 0 auto;
+    margin: 0 20px;
   }
   .businessDescription{
     gap: var(--gap-13xl);

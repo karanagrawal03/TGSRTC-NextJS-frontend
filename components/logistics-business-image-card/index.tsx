@@ -5,40 +5,19 @@ import styles from "./index.module.css";
 export type ImageCardsType = {
   className?: string;
   pictures?: string;
-
-  /** Style props */
-  propAlignSelf?: CSSProperties["alignSelf"];
-  propWidth?: CSSProperties["width"];
-  propHeight?: CSSProperties["height"];
 };
 
 const ImageCards: NextPage<ImageCardsType> = ({
   className = "",
   pictures,
-  propAlignSelf,
-  propWidth,
-  propHeight,
 }) => {
-  const imageCardsStyle: CSSProperties = useMemo(() => {
-    return {
-      alignSelf: propAlignSelf,
-      width: propWidth,
-    };
-  }, [propAlignSelf, propWidth]);
-
-  const imagePlaceholderStyle: CSSProperties = useMemo(() => {
-    return {
-      height: propHeight,
-    };
-  }, [propHeight]);
 
   return (
     <div
       className={[styles.imageCards, className].join(" ")}
-      style={imageCardsStyle}
     >
       <div className={styles.imageText}>
-        <div className={styles.imagePlaceholder} style={imagePlaceholderStyle}>
+        <div className={styles.imagePlaceholder} >
           <img className={styles.picturesIcon} alt="" src={pictures} />
           <div className={styles.imagePlaceholderChild} />
         </div>
