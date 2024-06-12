@@ -333,3 +333,16 @@
     flex-wrap: wrap;
   }
 }
+@media screen and (max-width: 1023px) {
+  .customSlider :global(.slick-track){
+    gap: 18px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .customSlider :global(.slick-track) {
+    gap: 0;
+  }
+  .cards{
+    margin: 0 13px;
+  }
+}

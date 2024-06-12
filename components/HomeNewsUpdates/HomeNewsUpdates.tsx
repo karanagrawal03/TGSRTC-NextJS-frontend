@@ -16,9 +16,9 @@ const HomeNewsUpdates: NextPage<HomeNewsUpdatesType> = ({ data, className = "",m
 
   const updatePerView = () => {
     const width = window.innerWidth;
-    if (width <= 450) {
+    if (width <= 599) {
       setPerView(1);
-    } else if (width <= 750) {
+    } else if (width <= 1023) {
       setPerView(2);
     } else {
       setPerView(3);
