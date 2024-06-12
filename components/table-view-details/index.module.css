@@ -13,6 +13,7 @@
   color: var(--support-white) !important;
   font-family: var(--font-montserrat) !important;
   font-size: var(--font-size-sm) !important;
+  border-bottom: 0px !important;
 }
 
 .oddRow {
@@ -26,6 +27,7 @@
   line-height: 17.07px;
   text-align: left;
   position: relative;
+  border-bottom: 0px !important;
 }
 
 .actionButton {

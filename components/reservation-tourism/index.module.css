@@ -11,9 +11,11 @@
   color: var(--support-white);
   font-family: var(--font-playfair-display);
   z-index: 100;
+  min-height: 300px;
 }
-.bgIcon ,
-.bgIconMobile{
+
+.bgIcon,
+.bgIconMobile {
   width: 100%;
   height: auto;
   position: relative;
@@ -22,10 +24,12 @@
   flex-shrink: 0;
   object-fit: cover;
 }
-.bgIconMobile{
+
+.bgIconMobile {
   display: none;
 }
-.tourismContentWrapper{
+
+.tourismContentWrapper {
   position: absolute;
   top: 7.3vw;
   left: 7.3vw;
@@ -33,11 +37,13 @@
   flex-direction: column;
   width: 599px;
 }
+
 .tgsrtcIsHappy,
 .tourism {
   margin: 0;
   mix-blend-mode: normal;
 }
+
 .tourism {
   font-size: inherit;
   line-height: 82px;
@@ -45,6 +51,7 @@
   font-family: inherit;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
 }
+
 .tgsrtcIsHappy {
   margin-top: 10px;
   font-size: var(--font-size-5xl);
@@ -57,36 +64,43 @@
 }
 
 @media screen and (max-width: 1023px) {
-  .tourismContentWrapper{
+  .tourismContentWrapper {
     width: 400px;
     top: 12vw;
     left: 7vw;
   }
+
   .tourism {
     font-size: var(--font-size-39xl);
     line-height: 68px;
   }
+
   .tgsrtcIsHappy {
     font-size: var(--font-size-lgi);
     line-height: 28px;
   }
 }
+
 @media screen and (max-width: 599px) {
-  .bgIcon{
+  .bgIcon {
     display: none;
   }
-  .bgIconMobile{
+
+  .bgIconMobile {
     display: block;
   }
-  .tourismContentWrapper{
+
+  .tourismContentWrapper {
     width: 237px;
     top: 26.6vw;
     left: 6.4vw;
   }
+
   .tourism {
     font-size: var(--font-size-39xl);
     line-height: 56px;
   }
+
   .tgsrtcIsHappy {
     margin-top: 8px;
     font-size: var(--font-size-xl);

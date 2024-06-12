@@ -13,6 +13,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   z-index: 100;
+  min-height: 400px;
 }
 
 .heroBackgroundImageWeb {
