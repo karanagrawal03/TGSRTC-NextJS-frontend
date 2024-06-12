@@ -104,4 +104,8 @@
     .lineSeperator{
         margin: 40px 0;
     }
+    .projectProposedHeading{
+        font-size: var(--font-size-13xl);
+        line-height: 40px;
+    }
 }

@@ -322,4 +322,7 @@
     padding: var(--padding-xs);
     box-sizing: border-box;
   }
+  .imagePlaceholder{
+    gap: unset;
+  }
 }

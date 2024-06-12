@@ -45,7 +45,7 @@ const MainContent: NextPage<MainContentType> = ({ bookYourCargoTitle, bookYourCa
             </div>
           </div>
           <div className={styles.cargoButton}>
-            <a href={logisticsLink} target="_blank"
+            <a href="#" 
               rel="noopener noreferrer" className={styles.button}>
               <div className={styles.applyNow}>{bookYourCargoButtonText}</div>
             </a>

@@ -2,6 +2,7 @@
   width: calc(100% - 203px);
   padding: var(--padding-81xl);
   background-color: #f2f2f2;
+  /* overflow: scroll; */
 }
 
 .innerContainer {

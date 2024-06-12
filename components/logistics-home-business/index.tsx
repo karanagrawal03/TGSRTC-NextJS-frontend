@@ -43,17 +43,12 @@ const FrameComponent6: NextPage<FrameComponent6Type> = ({ data, className = "" }
         <div className={styles.businessImage}>
           <ImageCards
             pictures={`${UPLOADS_BASE_URL}${data?.logisticsBusinessImage?.data?.attributes?.url}`}
-            propAlignSelf="unset"
-            propWidth="838px"
-            propHeight="424px"
+           
           />
         </div>
         <div className={styles.businessImageMobile}>
           <ImageCards
             pictures={`${UPLOADS_BASE_URL}${data?.logisticsBusinessImageMobile?.data?.attributes?.url}`}
-            propAlignSelf="unset"
-            propWidth="312px"
-            propHeight="176px"
           />
         </div>
         <div className={styles.imageCaptionContainer}>
