@@ -25,6 +25,12 @@
   color: #020202;
   word-break: break-all;
   cursor: pointer;
+
+}
+
+.link:hover {
+  color: var(--primary-red);
+  cursor: pointer;
 }
 
 @media screen and (max-width: 360px) {
