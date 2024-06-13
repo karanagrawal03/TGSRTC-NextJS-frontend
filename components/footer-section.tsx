@@ -58,12 +58,12 @@ const FooterSection: NextPage<FooterSectionType> = ({
               className={styles.icon}
               loading="lazy"
               alt="tsrtc-telugu-title-logo"
-              src="/tsrtc-telugu-title-logo.svg"
+              src="/tsrtc-telugu-title-logo.png"
             />
             <img
               className={styles.telanganaStateRoadTransport}
               alt="telangana-state-road-transport-corporation-icon"
-              src="/telangana-state-road-transport-corporation-11.svg"
+              src="/telangana-state-road-transport-corporation.png"
               loading="lazy"
             />
           </div>
