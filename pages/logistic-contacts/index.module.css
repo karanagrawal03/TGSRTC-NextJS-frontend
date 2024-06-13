@@ -38,7 +38,6 @@
   justify-content: flex-start;
   padding: var(--padding-61xl) var(--padding-81xl) var(--padding-81xl) var(--padding-81xl);
   gap: var(--gap-base);
-  width: 100%;
   text-align: left;
   font-size: var(--font-size-5xl);
   color: var(--primary-red);
@@ -195,7 +194,7 @@
   }
 
   .tableSection {
-    padding: var(--padding-5xl) var(--padding-5xl) var(--padding-41xl) var(--padding-5xl);
+    padding: var(--padding-5xl) var(--padding-21xl) var(--padding-41xl) var(--padding-21xl);
   }
 }
 
@@ -264,7 +263,7 @@
   }
 
   .tableSection {
-    padding: var( --padding-xl) var( --padding-xl) var(--padding-41xl) var( --padding-xl);
+    padding: var(--padding-xl) var(--padding-xl) var(--padding-41xl) var(--padding-xl);
     gap: var(--gap-base);
     text-align: left;
     width: 88.9%;

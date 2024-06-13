@@ -178,7 +178,16 @@ const TendersComponent: React.FC<TendersData> = ({ TotalData }) => {
             >
               {TotalData?.tendersTotalArray.map(
                 (option: string, index: number) => (
-                  <MenuItem key={index} value={index}>
+                  <MenuItem
+                    key={index}
+                    value={index}
+                    sx={{
+                      ...(selectedTender === index && {
+                        backgroundColor: "var(--primary-green) !important",
+                        color: "white",
+                      })
+                    }}
+                  >
                     {option}
                   </MenuItem>
                 )

@@ -210,11 +210,13 @@
   display: inline-block;
   max-width: 100%;
 }
-.tableContainer{
+
+.tableContainer {
   margin: 0 auto;
   max-width: 1166px;
   width: 100%;
 }
+
 .itemCell,
 .itemCellWrapper {
   display: flex;
@@ -332,7 +334,7 @@
 
 .busPassStudentPasses1 {
   background-color: var(--support-grey-bg);
-  padding: var(--padding-61xl) var(--padding-73xl) var(--padding-73xl);
+  padding: var(--padding-61xl) var(--padding-81xl) var(--padding-81xl);
   box-sizing: border-box;
   gap: var(--gap-xs);
   width: 100%;
@@ -762,7 +764,8 @@
   .knowMoreAbout {
     font-size: var(--font-size-xl);
   }
-  .contentWrapper{
+
+  .contentWrapper {
     max-width: 270px;
   }
 }
@@ -822,7 +825,7 @@
   }
 
   .busPassStudentPasses1 {
-    padding:0 var(--padding-xl) var(--padding-33xl) var(--padding-xl);
+    padding: 0 var(--padding-xl) var(--padding-33xl) var(--padding-xl);
     box-sizing: border-box;
   }
 

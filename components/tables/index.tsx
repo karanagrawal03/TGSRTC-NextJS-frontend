@@ -52,7 +52,8 @@ const Tables: React.FC<TableProps> = ({
                   paddingLeft: "20px",
                   width: columnWidths ? columnWidths[key] : "auto",
                   color: "#FFFFFF",
-                  borderBottom: "0px"
+                  borderBottom: "0px",
+                  fontWeight: "600 !important"
                 }}
               >
                 {headers[key]}
