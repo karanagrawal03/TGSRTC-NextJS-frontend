@@ -151,9 +151,10 @@
   color: var(--text-grey-body-text);
   font-family: var(--font-red-hat-display);
 }
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 1023px) {
   .cards{
     max-width: 100%;
+    min-width: 100%;
     padding: var(--padding-xl);
   }
 }

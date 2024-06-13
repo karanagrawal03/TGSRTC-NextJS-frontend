@@ -84,7 +84,9 @@
   .logisticsInfographicCardCon {
     gap: var(--gap-xl);
   }
- 
+ .logisticsInfographicCardCon{
+  flex-direction: column;
+ }
   .contentRight {
     padding-bottom: var(--padding-46xl);
     box-sizing: border-box;

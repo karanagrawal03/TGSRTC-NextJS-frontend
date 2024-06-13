@@ -134,8 +134,9 @@
   line-height: normal;
 }
 
-.headingStyles {
-  list-style: none;
+.accordion{
+  margin: 0;
+  padding: 0;
 }
 
 @media screen and (min-width: 1220px) and (max-width:1365px) {

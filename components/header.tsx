@@ -196,10 +196,10 @@ const Header: NextPage<HeaderType> = ({ className = "" }) => {
                 </div>
               </div>
               <div className={styles.menuList}>
-                {headerConfig.map((headerOption: HeaderConfig) => {
+                {headerConfig.map((headerOption: HeaderConfig,index:number) => {
                   if (headerOption.isNavLink === true && headerOption.link) {
                     return (
-                      <>
+                      <div className={styles.headerTabMobile} key={index}>
                         <div className={styles.headerTabLink}>
                           <Link
                             href={headerOption.link}
@@ -218,11 +218,11 @@ const Header: NextPage<HeaderType> = ({ className = "" }) => {
                           </Link>
                         </div>
                         <div className={styles.whiteLine}></div>
-                      </>
+                      </div>
                     );
                   } else {
                     return (
-                      <>
+                      <div className={styles.headerTabMobile} key={index}>
                         <div className={styles.headerTabLink}  onClick={() => toggleDropDownMenu(headerOption)} >
                           <div className={styles.navTabs}>
                             <span className={
@@ -264,7 +264,7 @@ const Header: NextPage<HeaderType> = ({ className = "" }) => {
                           )}
                         </div>
                         <div className={styles.whiteLine}></div>
-                      </>
+                      </div>
                     );
                   }
                 })}
