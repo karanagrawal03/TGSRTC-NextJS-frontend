@@ -237,6 +237,9 @@
 }
 
 @media screen and (max-width: 599px) {
+  .contactUsAddress {
+    font-size: var(--font-size-base);
+  }
   .contactUsContent {
     gap: var(--gap-5xl);
   }
