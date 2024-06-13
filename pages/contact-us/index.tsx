@@ -45,8 +45,8 @@ const ContactUs = ({data}) => {
                   <div className={styles.contactUsHelpline}>
                      <img src="/phoneIcon.png" alt="phoneIcon" loading='lazy' className={styles.phoneIcon} />
                      <span>
-                        <span>{data?.helplineNumber}</span><br />
-                        <span className={styles.italic}>{data?.helplineTimings}</span>
+                        <span>{data?.helplineNumber}</span><a href={`${"tel:"}${data?.busPassNumber}`} className={styles.link}>{data?.busPassNumber}</a><br />
+                        <span className={styles.italic}>{data?.helplineTimings} </span>
                      </span>
                   </div>
                </div>
