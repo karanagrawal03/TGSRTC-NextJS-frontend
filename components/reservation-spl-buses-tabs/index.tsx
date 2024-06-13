@@ -157,7 +157,7 @@ const ReservationBusesTabs: React.FC<TabsData> = ({ data }) => {
               "&.MuiTabs-root": {
                 width: "100%",
               },
-              marginTop: "24px",  
+              marginTop: "24px",
               ".MuiTabs-flexContainer": {
                 display: "flex",
                 justifyContent: "space-between",
@@ -220,7 +220,12 @@ const ReservationBusesTabs: React.FC<TabsData> = ({ data }) => {
             onChange={handleSelectChange}
           >
             {tabsData.map((tab, index) => (
-              <MenuItem key={index} value={index}>
+              <MenuItem key={index} value={index} sx={{
+                ...(value === index && {
+                  backgroundColor: "var(--primary-green) !important",
+                  color: "white",
+                })
+              }}>
                 {tab.label}
               </MenuItem>
             ))}

@@ -8,15 +8,15 @@ import AnimationBusMobile from '../../components/animation-bus-mobile';
 
 export async function getStaticProps() {
    const data = await doFetch("/contact-uses?populate=*");
- 
+
    return {
-     props: {
-       data,
-     },
+      props: {
+         data,
+      },
    };
 }
 
-const ContactUs = ({data}) => {
+const ContactUs = ({ data }) => {
    const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
    const handleChange = (index: number) => {
@@ -62,18 +62,19 @@ const ContactUs = ({data}) => {
                {data?.otherServicesTitle}
             </div>
             <div className={styles.accordion}>
-               {data?.otherServicesContactDetails.map((e: any, index: any) => (
-                  <AccordionItem
-                     key={index}
-                     extraDropdownClassName={styles.extraDropdown}
-                     name={e.name}
-                     info={e.info}
-                     expanded={expandedIndex === index}
-                     onChange={() => handleChange(index)}
-                     containerClassName={styles.containerClassName}
-                     headingStyles={styles.headingStyles}
-                  />
-               ))}
+               <ol className={styles.studentConcessionalRoutePas}>
+                  {data?.otherServicesContactDetails.map((e: any, index: any) => (
+                     <AccordionItem
+                        extraDropdownClassName={styles.extraDropdown}
+                        name={e.name}
+                        info={e.info}
+                        expanded={expandedIndex === index}
+                        onChange={() => handleChange(index)}
+                        containerClassName={styles.containerClassName}
+                        headingStyles={styles.headingStyles}
+                     />
+                  ))}
+               </ol>
             </div>
          </section>
       </div>

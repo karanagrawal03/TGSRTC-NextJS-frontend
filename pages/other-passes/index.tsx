@@ -6,7 +6,6 @@ import { UPLOADS_BASE_URL, doFetch } from "../../services/service";
 import AnimationBus from "../../components/animation-bus";
 import AnimationBusMobile from "../../components/animation-bus-mobile";
 
-
 export async function getStaticProps() {
   const data = await doFetch("/other-passess?populate=*");
 
@@ -15,9 +14,9 @@ export async function getStaticProps() {
       data,
     },
   };
-};
+}
 
-const OtherPasses = ({data}) => {
+const OtherPasses = ({ data }) => {
   const router = useRouter();
   let { index } = router.query as any;
   index = parseInt(index as string, 10);
@@ -31,6 +30,7 @@ const OtherPasses = ({data}) => {
       divRefs.current[index].scrollIntoView({
         behavior: "smooth",
       });
+      setExpandedIndex(index);
     }
   }, [index, isImageLoaded]);
 
@@ -68,28 +68,28 @@ const OtherPasses = ({data}) => {
       <AnimationBusMobile />
       <section className={styles.busPassGeneralCommuterPass2}>
         <div className={styles.tableContainer}>
-        <div className={styles.knowMoreAboutStudentPassesWrapper}>
-          <h2 className={styles.knowMoreAboutContainer}>
-            {data?.knowMoreTitle}
-          </h2>
-        </div>
-        <div className={styles.eachAccordian}>
-          <ol className={styles.orderedList}>
-            {data?.otherBussPassAccordiansData?.map((e: any, idx: number) => (
-              <div
-                key={idx}
-                ref={(element) => (divRefs.current[idx] = element as any)}
-              >
-                <AccordionItem
-                  name={e.name}
-                  info={e.info}
-                  expanded={expandedIndex === idx || index === idx}
-                  onChange={() => handleChange(idx)}
-                />
-              </div>
-            ))}
-          </ol>
-        </div>
+          <div className={styles.knowMoreAboutStudentPassesWrapper}>
+            <h2 className={styles.knowMoreAboutContainer}>
+              {data?.knowMoreTitle}
+            </h2>
+          </div>
+          <div className={styles.eachAccordian}>
+            <ol className={styles.orderedList}>
+              {data?.otherBussPassAccordiansData?.map((e: any, idx: number) => (
+                <div
+                  key={idx}
+                  ref={(element) => (divRefs.current[idx] = element as any)}
+                >
+                  <AccordionItem
+                    name={e.name}
+                    info={e.info}
+                    expanded={expandedIndex === idx}
+                    onChange={() => handleChange(idx)}
+                  />
+                </div>
+              ))}
+            </ol>
+          </div>
         </div>
       </section>
     </div>

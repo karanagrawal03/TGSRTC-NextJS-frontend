@@ -62,7 +62,7 @@ const CustomTable: React.FC<TableProps> = ({
                   paddingLeft: "20px !important",
                   width: "0px",
                   color: "#FFFFFF",
-
+                  fontWeight: "600 !important"
                 }}
               >
                 {headers[key]}
@@ -88,6 +88,7 @@ const CustomTable: React.FC<TableProps> = ({
                     paddingBottom: "10px",
                     paddingLeft: "20px !important",
                     width: columnWidths ? columnWidths[key] : "0px",
+
                   }}
                 >
                   {key === "Action" ? (
