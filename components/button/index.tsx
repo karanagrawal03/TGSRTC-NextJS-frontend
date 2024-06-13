@@ -4,13 +4,14 @@ import Button from '@mui/material/Button';
 interface ButtonProps {
     text: string;
     className?: string;
+    href?:string;
     textClassName?: string;
 }
 
-const CommonButton: React.FC<ButtonProps> = ({ text, className,textClassName,...props }) => {
+const CommonButton: React.FC<ButtonProps> = ({ text, className,href,textClassName,...props }) => {
     return (
         <Button className={className} {...props}>
-            <span className={textClassName}>{text}</span>
+            <a href={href} className={textClassName} target='_blank'>{text}</a>
         </Button>
     );
 };

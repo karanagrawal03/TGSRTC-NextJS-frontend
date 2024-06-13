@@ -61,21 +61,19 @@ const ContactUs = ({ data }) => {
             <div className={styles.otherServiceTitle}>
                {data?.otherServicesTitle}
             </div>
-            <div className={styles.accordion}>
-               <ol className={styles.studentConcessionalRoutePas}>
-                  {data?.otherServicesContactDetails.map((e: any, index: any) => (
-                     <AccordionItem
-                        extraDropdownClassName={styles.extraDropdown}
-                        name={e.name}
-                        info={e.info}
-                        expanded={expandedIndex === index}
-                        onChange={() => handleChange(index)}
-                        containerClassName={styles.containerClassName}
-                        headingStyles={styles.headingStyles}
-                     />
-                  ))}
-               </ol>
-            </div>
+            <ol className={styles.accordion}>
+               {data?.otherServicesContactDetails.map((e: any, index: any) => (
+                  <AccordionItem
+                     key={index}
+                     extraDropdownClassName={styles.extraDropdown}
+                     name={e.name}
+                     info={e.info}
+                     expanded={expandedIndex === index}
+                     onChange={() => handleChange(index)}
+                     containerClassName={styles.containerClassName}
+                  />
+               ))}
+            </ol>
          </section>
       </div>
    )

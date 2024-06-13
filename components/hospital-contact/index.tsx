@@ -1,6 +1,6 @@
 import { NextPage } from "next";
 import styles from "./index.module.css";
-import Button from "../button";
+import CommonButton from "../button";
 import { UPLOADS_BASE_URL } from "../../services/service";
 
 export type HospitalContactType = {
@@ -70,9 +70,10 @@ const HospitalContact: NextPage<HospitalContactType> = ({weAreAvailableTitle,pho
               </div>
             </div>
           </div>
-          <Button
+          <CommonButton
             text={bookButton}
             className={styles.button}
+            href="https://tsrtchospital.com/ "
             textClassName={styles.applyNow}
           />
         </div>

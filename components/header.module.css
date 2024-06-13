@@ -339,6 +339,10 @@
     height: 24px;
   }
 }
+.headerTabMobile{
+  display: flex;
+  flex-direction: column;
+}
 .whiteLine {
   margin: 12px auto;
   width: 100%;
@@ -349,6 +353,6 @@
     rgba(255, 255, 255, 0) 157.36%
   );
 }
-.whiteLine:last-child {
+.headerTabMobile:last-child .whiteLine{
   display: none;
 }
