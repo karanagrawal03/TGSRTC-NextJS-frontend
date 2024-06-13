@@ -26,6 +26,9 @@
         flex-direction: column;
         gap: var(--gap-5xl);
     }
+    .sequence {
+        font-size: var(--font-size-45xl);
+    }
 }
 
 @media screen and (max-width:599px) {

@@ -49,6 +49,11 @@
   margin: 0 auto;
   max-width: 1166px;
 }
+@media screen and (min-width: 1024px) and (max-width: 1359px) {
+  .infrastructureOfTGSRTC {
+    text-align: center;
+  }
+}
 @media screen and (max-width: 1023px) {
   .cards {
     justify-content: center;

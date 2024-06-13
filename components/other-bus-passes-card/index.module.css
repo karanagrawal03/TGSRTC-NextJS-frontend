@@ -201,7 +201,7 @@
 
 @media screen and (max-width: 599px) {
   .busPasses {
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-xl);
   }
 
   .cards {
