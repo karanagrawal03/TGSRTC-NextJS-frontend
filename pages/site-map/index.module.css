@@ -6,9 +6,6 @@
 }
 
 .siteMapContainer {
-  background-image: url(/siteMapBg.png);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   max-width: 100%;
@@ -146,6 +143,5 @@
 
   .siteMapContainer {
     padding: var(--padding-66xl) var(--padding-21xl) var(--padding-60);
-    background-image: url(/siteMapMobileBg.png);
   }
 }

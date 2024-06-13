@@ -4,6 +4,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   max-width: 100%;
+  background-color: var(--support-grey-bg);
 }
 .busDustParent {
   align-self: stretch;
@@ -28,12 +29,14 @@
 }
 .reservationSpecialBusesOf {
   flex: 1;
-  background-color: var(--support-grey-bg);
   flex-direction: column;
   padding: var(--padding-81xl) var(--padding-47xl);
   box-sizing: border-box;
   gap: var(--gap-13xl);
   z-index: 1;
+  width: 100%;
+  max-width: 1366px;
+  margin: 0 auto;
 }
 .specialBuses {
   margin: 0;
