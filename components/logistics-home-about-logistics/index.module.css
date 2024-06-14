@@ -44,7 +44,7 @@
   flex-wrap: wrap;
   align-items: flex-start;
   gap: var(--gap-21xl);
-  text-align: left;
+  text-align: center;
   font-size: var(--font-size-5xl);
   color: var(--text-grey-body-text);
   font-family: var(--font-red-hat-display);
@@ -72,6 +72,11 @@
   font-size: var(--font-size-sm);
   color: var(--text-black);
   font-family: var(--font-montserrat);
+}
+@media screen and (min-width: 1090px) and (max-width:1240px) {
+  .logisticsInfographicCardCon{
+    width: 85%;
+  }
 }
 @media screen and (max-width: 1023px) {
   .aboutLogistics {
