@@ -4,12 +4,12 @@ import BusPassOptions from "../../components/bus-pass-options";
 import BusPassOtherBusPasses from "../../components/bus-pass-other-bus-passes";
 import { APPLY_AND_RENEW, BUS_PASS_SERVICES } from "../../constants";
 import { BASE_URL, UPLOADS_BASE_URL, doFetch } from "../../services/service";
-import styles from './index.module.css'
+import styles from "./index.module.css";
 import AnimationBus from "../../components/animation-bus";
 import AnimationBusMobile from "../../components/animation-bus-mobile";
+import BookYourTicket from "../../components/book-your-ticket";
 
 export async function getStaticProps() {
-
   const data = await doFetch("/buss-pass-landing-pages?populate=*");
 
   return {
@@ -19,8 +19,7 @@ export async function getStaticProps() {
   };
 }
 
-const BusPassServices = ({data}) => {
-
+const BusPassServices = ({ data }) => {
   const [width, setWidth] = useState<boolean>(false);
 
   useEffect(() => {
@@ -35,8 +34,6 @@ const BusPassServices = ({data}) => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-
-
 
   return (
     <div className={styles.busPassServices}>
@@ -57,14 +54,25 @@ const BusPassServices = ({data}) => {
           />
         )}
         <div className={styles.busPassContent}>
-          <h1 className={styles.busPassServices1}>{data?.heroSection[0]?.title}</h1>
-          <h2 className={styles.applyRenew}>{data?.heroSection[0]?.subTitle}</h2>
+          <h1 className={styles.busPassServices1}>
+            {data?.heroSection[0]?.title}
+          </h1>
+          <h2 className={styles.applyRenew}>
+            {data?.heroSection[0]?.subTitle}
+          </h2>
         </div>
       </section>
       <AnimationBus />
       <AnimationBusMobile />
-      <BusPassOptions options={data?.bussPassOptions} title={data?.busPassOptionsTitle} />
-      <BusPassOtherBusPasses options={data?.otherBusPasses} title={data?.otherBusPassOptionsTitle} />
+      <BookYourTicket />
+      <BusPassOptions
+        options={data?.bussPassOptions}
+        title={data?.busPassOptionsTitle}
+      />
+      <BusPassOtherBusPasses
+        options={data?.otherBusPasses}
+        title={data?.otherBusPassOptionsTitle}
+      />
     </div>
   );
 };

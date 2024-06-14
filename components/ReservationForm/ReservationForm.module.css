@@ -291,6 +291,7 @@
   align-self: stretch;
   flex-direction: column;
   max-width: 100%;
+  display: none;
 }
 
 .bookYourTicketForm {

@@ -1,5 +1,4 @@
 import type { NextPage } from "next";
-import { useMemo, type CSSProperties } from "react";
 import styles from "./index.module.css";
 import { UPLOADS_BASE_URL } from "../../services/service";
 

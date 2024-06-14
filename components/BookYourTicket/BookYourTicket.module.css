@@ -72,7 +72,7 @@
   box-sizing: border-box;
   flex-shrink: 0;
 }
-
+/* making this display none based on our usage the code is available */
 .interestedRouteContainer {
   display: flex;
   flex-direction: column;
@@ -81,6 +81,7 @@
   max-width: 100%;
   align-self: stretch;
   gap: var(--gap-xs);
+  display: none;
 }
 
 .interestedRouteTitle {
@@ -118,7 +119,7 @@
   height: 1px;
   background-color: var(--support-white);
 }
-.lineIconMobile{
+.lineIconMobile {
   display: none;
 }
 .routeChipsContainer {
@@ -269,7 +270,7 @@
     justify-content: center;
     align-items: center;
   }
-  .routeChips{
+  .routeChips {
     width: 70%;
     justify-content: center;
   }
@@ -278,21 +279,22 @@
     align-items: center;
     font-size: var(--font-size-xs);
   }
-  .lineIconMobile{
+  .lineIconMobile {
     display: block;
   }
-  .interestedRouteTitle{
+  .interestedRouteTitle {
     flex-wrap: nowrap;
     align-items: baseline;
     justify-content: unset;
   }
-  .lineIcon,.lineIconMobile{
+  .lineIcon,
+  .lineIconMobile {
     width: 100%;
     flex: unset;
     min-width: unset;
     max-width: unset;
   }
-  .routesYouMay{
+  .routesYouMay {
     min-width: 197px;
     font-size: var(--font-size-xs);
   }
@@ -308,4 +310,3 @@
     padding: 0 var(--padding-xl) 0 var(--padding-xl);
   }
 }
-
