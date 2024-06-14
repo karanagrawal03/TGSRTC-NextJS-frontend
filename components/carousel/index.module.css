@@ -32,6 +32,7 @@
   width: 70px;
   text-align: center;
   margin-top: 32px;
+  justify-content: center;
 }
 
 .button__bar li {

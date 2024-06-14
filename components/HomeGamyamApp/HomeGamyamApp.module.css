@@ -134,7 +134,6 @@
 }
 @media screen and (max-width: 450px) {
   .experienceSeamlessTravel {
-    font-weight: 400;
     font-size: var(--font-size-sm);
   }
   .gamyamApp {

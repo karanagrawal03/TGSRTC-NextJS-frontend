@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import styles from "./index.module.css";
 import { doFetch } from "../../services/service";
-import Carousal from "../../components/Carosal";
+import Carousel from "../../components/carousel";
 import RoadSafetyCard from "../../components/road-safety-card";
 import AnimationBus from "../../components/animation-bus";
 import AnimationBusMobile from "../../components/animation-bus-mobile";
@@ -35,8 +35,11 @@ const RoadSafety: NextPageRoadSafetyType = ({data}) => {
       <div className={styles.roadSafety}>
         <main className={styles.roadSafetyContainer}>
           <h1 className={styles.roadSafetyTitle}>{data?.roadSafetyTitle}</h1>
-          <div className={styles.roadSafetyCarousel}>
-            <Carousal children={RoadSafetySection} />
+          <div className={styles.roadSafetyCarouselContainer}>
+            <Carousel 
+              children={RoadSafetySection}
+              customStyles={styles.roadSafetyCarousel}
+             />
           </div>
         </main>
       </div>
