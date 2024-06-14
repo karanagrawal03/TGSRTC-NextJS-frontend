@@ -64,7 +64,6 @@ const BusPassServices = ({ data }) => {
       </section>
       <AnimationBus />
       <AnimationBusMobile />
-      <BookYourTicket />
       <BusPassOptions
         options={data?.bussPassOptions}
         title={data?.busPassOptionsTitle}
