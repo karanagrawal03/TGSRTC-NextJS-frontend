@@ -48,7 +48,6 @@ const ContentRight: NextPage<ContentRightType> = ({ data, className = "" }) => {
               key={index}
               image={card.image}
               busPasses={card.busPasses}
-              applyNowPadding=""
               content={card.content}
             />
           ))}
