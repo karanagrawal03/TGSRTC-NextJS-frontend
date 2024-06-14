@@ -32,7 +32,7 @@ const Homepage: NextPage = ({data}) => {
   return (
     <div className={styles.homepage}>
        <HomeBannerAnimation title={data?.heroBannerTitle} children={heroSection} secondary={true} includeAnimation autoplay={true} />
-      <BookYourTicket routes={routes} marginTop="-0.3%"
+      <BookYourTicket routes={routes} marginTop="-0.3%" bookYourTicketData={data?.bookYourTicket}
       />
       <AnimationBus/>
       <AnimationBusMobile/>

@@ -2,21 +2,32 @@ import { useState } from "react";
 import type { NextPage } from "next";
 import styles from "./BookYourTicket.module.css";
 import ReservationForm from "../ReservationForm/ReservationForm";
-import { BOOK_YOUR_TICKET, BOOK_YOUR_TICKET_PARAGRAPH, ROUTES_TEXT, VIEW_ALL_ROUTES } from "../../constants";
+import {
+  BOOK_YOUR_TICKET,
+  BOOK_YOUR_TICKET_PARAGRAPH,
+  ROUTES_TEXT,
+  VIEW_ALL_ROUTES,
+} from "../../constants";
+import BookYourTicketCard from "../book-your-ticket";
 
 export type BookYourTicketType = {
   className?: string;
   routes: { from: string; to: string }[];
-  marginTop?: string; 
+  marginTop?: string;
+  bookYourTicketData?: any;
 };
 
-const BookYourTicket: NextPage<BookYourTicketType> = ({ className = "", routes, marginTop }) => {
+const BookYourTicket: NextPage<BookYourTicketType> = ({
+  className = "",
+  routes,
+  marginTop,
+  bookYourTicketData,
+}) => {
   const [showAllRoutes, setShowAllRoutes] = useState(false);
   const [selectedFrom, setSelectedFrom] = useState("");
   const [selectedTo, setSelectedTo] = useState("");
 
   const displayedRoutes = showAllRoutes ? routes : routes.slice(0, 5);
-
   const handleViewAllRoutes = () => {
     setShowAllRoutes(true);
   };
@@ -27,31 +38,42 @@ const BookYourTicket: NextPage<BookYourTicketType> = ({ className = "", routes, 
   };
 
   return (
-    <section className={[styles.bookYourTicket, className].join(" ")} style={{ marginTop }}>
+    <section
+      className={[styles.bookYourTicket, className].join(" ")}
+      style={{ marginTop }}
+    >
       <div className={styles.textsWrapper}>
         <div className={styles.texts}>
           <div className={styles.bookYourTicketWrapper}>
             <h1 className={styles.bookYourTicket1}>{BOOK_YOUR_TICKET}</h1>
           </div>
-          <p className={styles.loremIpsumDolor}>
-            {BOOK_YOUR_TICKET_PARAGRAPH}
-          </p>
+          <p className={styles.loremIpsumDolor}>{BOOK_YOUR_TICKET_PARAGRAPH}</p>
         </div>
       </div>
       <div className={styles.bookYourTicketFormContaineWrapper}>
         <form className={styles.bookYourTicketFormContaine}>
-          <ReservationForm routes={routes} onRouteSelect={handleRouteSelect} selectedFrom={selectedFrom} selectedTo={selectedTo} />
+          <BookYourTicketCard data={bookYourTicketData} />
+          <ReservationForm
+            routes={routes}
+            onRouteSelect={handleRouteSelect}
+            selectedFrom={selectedFrom}
+            selectedTo={selectedTo}
+          />
+          {/*  making this display none based on our usage the code is available */}
+
           <div className={styles.interestedRouteContainer}>
             <div className={styles.interestedRouteTitle}>
-              <div className={styles.lineIconMobile} ></div>
-              <div className={styles.routesYouMay}>
-                {ROUTES_TEXT}
-              </div>
-              <div className={styles.lineIcon} ></div>
+              <div className={styles.lineIconMobile}></div>
+              <div className={styles.routesYouMay}>{ROUTES_TEXT}</div>
+              <div className={styles.lineIcon}></div>
             </div>
             <div className={styles.routeChipsContainer}>
               {displayedRoutes.map((route, index) => (
-                <div key={index} className={styles.routeChips} onClick={() => handleRouteSelect(route.from, route.to)}>
+                <div
+                  key={index}
+                  className={styles.routeChips}
+                  onClick={() => handleRouteSelect(route.from, route.to)}
+                >
                   <div className={styles.city}>{route.from}</div>
                   <img
                     className={styles.icons3}
@@ -63,7 +85,11 @@ const BookYourTicket: NextPage<BookYourTicketType> = ({ className = "", routes, 
                 </div>
               ))}
               {!showAllRoutes && (
-                <button type="button" className={styles.button1} onClick={handleViewAllRoutes}>
+                <button
+                  type="button"
+                  className={styles.button1}
+                  onClick={handleViewAllRoutes}
+                >
                   <div className={styles.applyNow1}>{VIEW_ALL_ROUTES}</div>
                 </button>
               )}
