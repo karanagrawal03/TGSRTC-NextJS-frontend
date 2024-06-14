@@ -23,7 +23,7 @@
   align-self: stretch;
   align-items: center;
   justify-content: flex-start;
-  padding: var(--padding-61xl) var(--padding-5xl) var(--padding-81xl);
+  padding: var(--padding-61xl) var(--padding-81xl) var(--padding-81xl);
   box-sizing: border-box;
   gap: var(--gap-13xl);
   font-size: var(--font-size-27xl);
@@ -39,22 +39,25 @@
   font-family: inherit;
   text-align: center;
 }
-.roadSafetyCarousel {
+.roadSafetyCarouselContainer {
   width: 1116px;
   align-items: flex-start;
   margin: 0;
   max-width: 100%;
 }
-
+.roadSafetyCarousel{
+  width: 100%;
+  margin: 0;
+}
 @media screen and (max-width: 1275px) {
   .roadSafetyContainer {
-    padding-top: var(--padding-15xl);
-    padding-bottom: var(--padding-23xl);
+    padding: var(--padding-15xl) var(--padding-61xl) var(--padding-23xl);
   }
 }
 @media screen and (max-width: 1023px) {
   .roadSafetyContainer {
     gap: var(--gap-7xl);
+    padding-top: 0;
   }
   .roadSafetyTitle {
     font-size: var(--font-size-19xl);
@@ -62,8 +65,7 @@
 }
 @media screen and (max-width: 750px) {
   .roadSafetyContainer {
-    padding-top: var(--padding-41xl);
-    padding-bottom: var(--padding-41xl);
+    padding:0 var(--padding-xl) var(--padding-41xl);
     gap: var(--gap-5xl);
   }
 }
