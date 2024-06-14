@@ -45,7 +45,7 @@ const HomeNewsUpdates: NextPage<HomeNewsUpdatesType> = ({ data, className = "",m
           />
         </div>
         <div className={styles.imageMobile}>
-          <img className={styles.picturesIcon1} alt="news cards mobile image" src={imageUrl} loading="lazy" />
+          <img className={styles.picturesIcon1} alt="news cards mobile image" src={UPLOADS_BASE_URL + imageUrl} loading="lazy" />
         </div>
         <div className={styles.cardTextHolder}>
           <div className={styles.texts}>

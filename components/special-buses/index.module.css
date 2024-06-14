@@ -16,17 +16,6 @@
   font-family: var(--font-playfair-display);
   z-index: 99;
 }
-.busDust {
-  display: none;
-  height: 780px;
-  width: 128px;
-  position: absolute;
-  margin: 0 !important;
-  top: -275px;
-  left: 0;
-  object-fit: contain;
-  z-index: 2;
-}
 .reservationSpecialBusesOf {
   flex: 1;
   flex-direction: column;
@@ -53,17 +42,25 @@
   align-items: flex-start;
   justify-content: center;
 }
-
-@media screen and (max-width: 599px) {
-  .busDust {
-    display: none;
-  }
+.specialBusSlider{
+  width: 88.4%;
+}
+@media screen and (max-width:1023px){
   .reservationSpecialBusesOf {
-    padding: var(--gap-41xl) var(--padding-5xl);
+    padding: var(--padding-61xl) var(--padding-17xl);
+  }
+}
+@media screen and (max-width: 599px) {
+  .reservationSpecialBusesOf {
+    padding: var(--padding-41xl) var(--padding-xl);
   }
   .specialBuses {
     font-size: var(--font-size-13xl);
     line-height: 42.66px;
     text-align: center;
+  }
+  .specialBusSlider{
+    width: 100%;
+    margin: 0;
   }
 }

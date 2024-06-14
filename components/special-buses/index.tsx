@@ -17,7 +17,6 @@ const SpecialBuses:NextPage<SpecialBusesType>=({specialBusOffersTitle,specialBus
   ));
     return(
         <section className={styles.busDustParent}>
-          <img className={styles.busDust} alt="bus image" src="/bus--dust7.svg" loading="lazy"/>
           <div className={styles.reservationSpecialBusesOf}>
             <div className={styles.specialBusesOfferWrapper}>
               <h1 className={styles.specialBuses}>{specialBusOffersTitle}</h1>
@@ -26,6 +25,7 @@ const SpecialBuses:NextPage<SpecialBusesType>=({specialBusOffersTitle,specialBus
               perView={1}
               autoplay={false}
               children={[splBusOffersCards]}
+              customStyles={styles.specialBusSlider}
             > 
             </Carousel>
           </div>
