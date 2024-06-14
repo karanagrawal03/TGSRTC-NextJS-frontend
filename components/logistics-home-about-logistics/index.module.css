@@ -20,6 +20,9 @@
 .wwwtgsrtctelanganagovin {
   color: var(--primary-green);
 }
+.wwwtgsrtctelanganagovin:hover {
+  color: var(--primary-red);
+}
 .theConsignorsCanContainer {
   margin: 0;
   width: 86.71%;
@@ -73,8 +76,8 @@
   color: var(--text-black);
   font-family: var(--font-montserrat);
 }
-@media screen and (min-width: 1090px) and (max-width:1240px) {
-  .logisticsInfographicCardCon{
+@media screen and (min-width: 1090px) and (max-width: 1240px) {
+  .logisticsInfographicCardCon {
     width: 85%;
   }
 }
@@ -89,19 +92,19 @@
   .logisticsInfographicCardCon {
     gap: var(--gap-xl);
   }
- .logisticsInfographicCardCon{
-  flex-direction: column;
- }
+  .logisticsInfographicCardCon {
+    flex-direction: column;
+  }
   .contentRight {
     padding-bottom: var(--padding-46xl);
     box-sizing: border-box;
   }
-  .logisticAboutTexts{
+  .logisticAboutTexts {
     padding-top: var(--padding-41xl);
   }
 }
 @media screen and (max-width: 599px) {
-  .logisticsInfographicCardCon{
+  .logisticsInfographicCardCon {
     width: 86.7%;
   }
   .aboutLogistics {
@@ -113,18 +116,18 @@
     padding-bottom: var(--padding-21xl);
     box-sizing: border-box;
   }
-  .logisticAboutTexts{
+  .logisticAboutTexts {
     display: block;
     padding-top: var(--padding-41xl);
   }
-  .telanganaStateRoad{
+  .telanganaStateRoad {
     width: 86.8%;
     padding-bottom: var(--padding-13xl);
   }
-  .theConsignorsCanContainer{
+  .theConsignorsCanContainer {
     margin-bottom: var(--spacing-lg);
   }
-  .logisticsInfographicCardCon{
+  .logisticsInfographicCardCon {
     gap: var(--gap-21xl);
   }
 }
