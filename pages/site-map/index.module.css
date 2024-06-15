@@ -1,17 +1,18 @@
 .siteMap {
-  max-width: 100%;
+  width: 100%;
+  max-width: 1366px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  padding: var(--padding-21xl) var(--padding-11xl) var(--padding-81xl);
 }
 
 .siteMapContainer {
   display: flex;
   flex-direction: column;
-  max-width: 100%;
+  max-width: 1163px;
   justify-content: center;
   align-items: center;
-  padding: var(--padding-21xl) var(--padding-52xl-7) var(--padding-39xl);
+  padding: var(--padding-61xl) var(--padding-83xl) var(--padding-158) var(--padding-101);
 }
 
 .siteMapTitle {
@@ -29,8 +30,8 @@
   flex-direction: column;
   flex-wrap: wrap;
   width: 100%;
+  height: 953px;
   gap: var(--gap-11xl) 4vw;
-  margin-bottom: 58px;
 }
 
 .siteMapItem {
@@ -54,7 +55,8 @@
   margin-bottom: 5px;
   color: var(--text-grey-body-text);
 }
-.listItemlink{
+
+.listItemlink {
   color: var(--text-grey-body-text);
 }
 
@@ -81,58 +83,38 @@
   color: var(--primary-red);
 }
 
-@media screen and (min-width:1440px) {
-  .siteMap {
-    max-width: 1306px;
-    margin: 0 auto;
-  }
-}
-
 @media screen and (max-width: 1260px) {
   .siteMapContent {
     gap: var(--gap-11xl);
   }
 }
 
-@media screen and (max-width: 1160px) {
+@media screen and (max-width: 1220px) {
   .siteMapContent {
-    gap: var(--gap-11xl) 0;
+    gap: var(--gap-11xl) var(--gap-xl);
+    height: 1265px;
   }
 }
 
-@media screen and (max-width: 1100px) and (min-width: 900px) {
-  .siteMapItem {
-    width: 28vw;
+@media screen and (max-width: 1023px) {
+  .siteMapContainer {
+    padding: var(--padding-31xl) var(--padding-21xl) var(--padding-81xl);
   }
 
   .siteMapTitle {
     font-size: var(--font-size-19xl);
     line-height: 52px;
-  }
-}
-
-@media screen and (max-width: 900px) and (min-width: 727px) {
-  .siteMapItem {
-    width: 42vw;
-  }
-
-  .siteMapTitle {
-    font-size: var(--font-size-19xl);
-    line-height: 52px;
-  }
-}
-
-@media screen and (max-width: 727px) {
-  .siteMap {
-    padding: 0px 0px var(--padding-17xl);
-  }
-
-  .siteMapItem {
-    width: 100%;
+    padding-bottom: var(--padding-13xl);
   }
 
   .siteMapContent {
-    margin-bottom: 0;
+    height: 1810px;
+  }
+}
+
+@media screen and (max-width: 649px) {
+  .siteMapContainer {
+    padding: var(--padding-11xl) var(--padding-21xl) var(--padding-95);
   }
 
   .siteMapTitle {
@@ -140,8 +122,8 @@
     line-height: 42px;
     padding-bottom: var(--padding-5xl);
   }
-
-  .siteMapContainer {
-    padding: var(--padding-66xl) var(--padding-21xl) var(--padding-60);
+  
+  .siteMapContent {
+    height: 100%;
   }
 }
