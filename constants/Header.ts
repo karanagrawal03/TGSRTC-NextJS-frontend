@@ -53,7 +53,7 @@ export const headerData: HeaderConfig[] = [
         sublink: RESERVATIONS_BUS_LINK,
       },
       {
-        sublinkDisplayName: "FAQ",
+        sublinkDisplayName: "FAQs",
         sublink: RESERVATIONS_FAQ_LINK,
       },
     ],
@@ -99,7 +99,7 @@ export const headerData: HeaderConfig[] = [
         sublink: BUS_PASS_OTHER_LINK,
       },
       {
-        sublinkDisplayName: "FAQ",
+        sublinkDisplayName: "FAQs",
         sublink: BUS_PASS_FAQ_LINK,
       },
     ],

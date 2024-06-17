@@ -10,7 +10,7 @@
 }
 
 .introHeading {
-    font-family: Playfair Display;
+    font-family: var(--font-playfair-display);
     font-size: var(--font-size-27xl);
     font-weight: 600;
     line-height: 61.32px;
