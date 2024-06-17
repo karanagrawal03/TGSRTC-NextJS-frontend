@@ -679,6 +679,11 @@
   font-family: var(--font-playfair-display);
   margin-bottom: 100px;
 }
+@media screen and (min-width:1024px) and (max-width:1300px){
+  .otherBusesImages{
+    column-gap: var(--gap-11x);
+  }
+}
 @media screen and (max-width: 1023px) {
   .otherCityServicesSection {
     padding-top: var(--padding-6xl);

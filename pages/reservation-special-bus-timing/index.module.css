@@ -1,3 +1,10 @@
+.reservationSpecialBusTiming {
+  width: 100%;
+  position: relative;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
 .reservationHeroTourism {
   display: flex;
   flex-direction: column;
@@ -12,11 +19,6 @@
   font-family: var(--font-playfair-display);
   z-index: 100;
   min-height: 300px;
-}
-
-.timingsContainer {
-  max-width: 1166px;
-  margin: 0 auto;
 }
 
 .bgIcon,
@@ -68,84 +70,15 @@
   width: 599px;
 }
 
-.busDust {
-  width: 128px;
-  height: 918px;
-  position: relative;
-  overflow: hidden;
-  flex-shrink: 0;
-  object-fit: contain;
-  display: none;
-  z-index: 4;
-}
-
-.lineSeparatorIcon,
-.reservationHeroSpeacialBus {
-  align-self: stretch;
-  position: relative;
-  max-width: 100%;
-}
-
-.reservationHeroSpeacialBus {
-  overflow: hidden;
-  max-height: 100%;
-  object-fit: cover;
-}
-
-.lineSeparatorIcon {
-  overflow: clip;
-  max-height: unset;
-}
-
-.lineSeparater {
-  align-self: stretch;
-  height: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-
-.copyright2021Tgsrtc {
-  position: relative;
-  line-height: 21px;
-}
-
-.copyright2021TgsrtcAllRWrapper {
-  align-self: stretch;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: center;
-}
-
-.footer {
-  align-self: stretch;
-  padding: var(--padding-21xl) var(--padding-21xl) var(--padding-5xs);
-  box-sizing: border-box;
-  gap: var(--gap-13xl);
-  background-image: url(/footer@3x.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top;
-  max-width: 100%;
-  text-align: left;
-  font-size: var(--font-size-xs);
-  color: var(--support-white);
-  font-family: var(--font-montserrat);
-}
-
-.reservationSpecialBusTiming {
-  width: 100%;
-  position: relative;
-  line-height: normal;
-  letter-spacing: normal;
-}
-
 .container {
   padding: var(--padding-61xl) var(--padding-81xl) var(--padding-81xl) var(--padding-81xl);
   width: calc(100% - 200px);
   background: #f2f2f2;
+}
+
+.timingsContainer {
+  max-width: 1166px;
+  margin: 0 auto;
 }
 
 .headingText {
@@ -157,10 +90,6 @@
   margin: 0px;
 }
 
-.reservationMobile {
-  display: none;
-}
-
 @media screen and (max-width: 1365px) {
   .headingText {
     margin-bottom: 24px;
@@ -169,29 +98,6 @@
 }
 
 @media screen and (max-width: 1023px) {
-  .footer {
-    gap: var(--gap-base);
-  }
-
-  .container {
-    padding: var(--padding-81xl) var(--padding-17xl) var(--padding-60);
-    width: calc(100% - 72px);
-    padding-top: 0;
-  }
-
-  .headingText {
-    margin-bottom: 24px;
-    font-size: var(--font-size-xl);
-  }
-
-  .reservationMobile {
-    display: block;
-  }
-
-  .reservationHeroSpeacialBus {
-    display: none;
-  }
-
   .contentWrapper {
     top: 12vw;
     left: 7vw;
@@ -207,6 +113,17 @@
     font-size: var(--font-size-16);
     line-height: 28px;
   }
+
+  .container {
+    padding: var(--padding-81xl) var(--padding-17xl) var(--padding-60);
+    width: calc(100% - 72px);
+    padding-top: 0;
+  }
+
+  .headingText {
+    margin-bottom: 24px;
+    font-size: var(--font-size-xl);
+  }
 }
 
 @media screen and (max-width: 720px) {
@@ -217,28 +134,9 @@
   .bgIconMobile {
     display: block;
   }
-
 }
 
 @media screen and (max-width: 599px) {
-  .container {
-    padding: var(--padding-81xl) var(--padding-xl) var(--padding-60) var(--padding-xl);
-    width: calc(100% - 40px);
-    padding-top: 0;
-  }
-
-  .headingText {
-    text-align: left;
-    font-size: var(--font-size-xl);
-    margin-bottom: 24px;
-  }
-
-  .footer {
-    padding-top: var(--padding-7xl);
-    padding-bottom: var(--padding-xl);
-    box-sizing: border-box;
-  }
-
   .contentWrapper {
     width: 237px;
     left: 6.4vw;
@@ -254,5 +152,17 @@
     margin-top: 8px;
     font-size: var(--font-size-16);
     line-height: 26px;
+  }
+
+  .container {
+    padding: var(--padding-81xl) var(--padding-xl) var(--padding-60) var(--padding-xl);
+    width: calc(100% - 40px);
+    padding-top: 0;
+  }
+
+  .headingText {
+    text-align: left;
+    font-size: var(--font-size-xl);
+    margin-bottom: 24px;
   }
 }

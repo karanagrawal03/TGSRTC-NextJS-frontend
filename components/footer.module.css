@@ -180,7 +180,7 @@
     var(--padding-21xl);
   box-sizing: border-box;
   gap: var(--gap-13xl);
-  background-image: url(/footer@3x.png);
+  background-image: url(/footer@3x.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
