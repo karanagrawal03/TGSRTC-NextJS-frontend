@@ -16,12 +16,18 @@ export async function getStaticProps() {
   };
 }
 
-const BusPassesFaq = ({data}) => {
-  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+const BusPassesFaq = ({ data }) => {
+  const [expandedIndex1, setExpandedIndex1] = useState<number | null>(null);
+  const [expandedIndex2, setExpandedIndex2] = useState<number | null>(null);
 
-  const handleChange = (index: number) => {
-    setExpandedIndex((prevIndex) => (prevIndex === index ? null : index));
+  const handleChange1 = (index: number) => {
+    setExpandedIndex1((prevIndex) => (prevIndex === index ? null : index));
   };
+
+  const handleChange2 = (index: number) => {
+    setExpandedIndex2((prevIndex) => (prevIndex === index ? null : index));
+  };
+
   return (
     <div className={styles.busPassGeneralCommuterPass}>
       <section className={styles.busPassesHeroGeneralCommut}>
@@ -50,37 +56,37 @@ const BusPassesFaq = ({data}) => {
       <AnimationBusMobile />
       <section className={styles.busPassGeneralCommuterPass2}>
         <div className={styles.tableContainer}>
-        <h2 className={styles.knowMoreAboutContainer}>{data?.faqsHeading}</h2>
-        <div className={styles.eachAccordian}>
-          <p className={styles.typesOfPassesText}>{data?.typesOfPasses}</p>
-          <ol className={styles.orderedList}>
-            {data?.busPassesFaqData.map((e: any, index: number) => (
-              <AccordionItem
-                key={index}
-                name={e.name}
-                info={e.info}
-                expanded={expandedIndex === index}
-                onChange={() => handleChange(index)}
-              />
-            ))}
-          </ol>
-        </div>
-        <div className={styles.eachAccordian}>
-          <p className={styles.typesOfPassesText}>
-            {data?.onConsessionalPassesHeading}
-          </p>
-          <ol className={styles.orderedList}>
-            {data?.onConcessionalPasses.map((e: any, index: number) => (
-              <AccordionItem
-                key={index}
-                name={e.name}
-                info={e.info}
-                expanded={expandedIndex === index}
-                onChange={() => handleChange(index)}
-              />
-            ))}
-          </ol>
-        </div>
+          <h2 className={styles.knowMoreAboutContainer}>{data?.faqsHeading}</h2>
+          <div className={styles.eachAccordian}>
+            <p className={styles.typesOfPassesText}>{data?.typesOfPasses}</p>
+            <ol className={styles.orderedList}>
+              {data?.busPassesFaqData.map((e: any, index: number) => (
+                <AccordionItem
+                  key={index}
+                  name={e.name}
+                  info={e.info}
+                  expanded={expandedIndex1 === index}
+                  onChange={() => handleChange1(index)}
+                />
+              ))}
+            </ol>
+          </div>
+          <div className={styles.eachAccordian}>
+            <p className={styles.typesOfPassesText}>
+              {data?.onConsessionalPassesHeading}
+            </p>
+            <ol className={styles.orderedList}>
+              {data?.onConcessionalPasses.map((e: any, index: number) => (
+                <AccordionItem
+                  key={index}
+                  name={e.name}
+                  info={e.info}
+                  expanded={expandedIndex2 === index}
+                  onChange={() => handleChange2(index)}
+                />
+              ))}
+            </ol>
+          </div>
         </div>
       </section>
     </div>
