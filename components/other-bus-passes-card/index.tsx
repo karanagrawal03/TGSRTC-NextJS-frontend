@@ -62,7 +62,7 @@ const OtherBusPassesCard: NextPage<Cards3Type> = ({
           <img
             className={styles.lineSeparatorIcon}
             alt="line-saperator"
-            src="/line-separator.svg"
+            src="/lineSeparator.svg"
             loading="lazy"
           />
         </div>

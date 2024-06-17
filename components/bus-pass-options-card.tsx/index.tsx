@@ -8,7 +8,7 @@ export type Cards2Type = {
   description: string;
   viewAll: string;
   applyNow: string;
-  index: number; 
+  index: number;
 };
 
 const BusPassOptionsCard: NextPage<Cards2Type> = ({
@@ -20,7 +20,7 @@ const BusPassOptionsCard: NextPage<Cards2Type> = ({
   index,
 }) => {
   const router = useRouter();
-  
+
 
   const handleViewAllClick = (index: number) => {
     router.push(`/other-passes?index=${index}`);
@@ -37,7 +37,7 @@ const BusPassOptionsCard: NextPage<Cards2Type> = ({
           <img
             className={styles.lineSeparatorIcon}
             alt="line-saperator"
-            src="/line-separator.svg"
+            src="/lineSeparator.svg"
             loading="lazy"
           />
         </div>

@@ -107,7 +107,7 @@ const ReservationBusesTabs: React.FC<TabsData> = ({ data }) => {
       label: "Yadagirigutta to Hyderabad",
       component: (
         <YadagiriguttaTab
-          hyderabadTableHeading={data?.yadagiriguttaTableHeading}
+          hyderabadTableHeading={data?.hyderabadTableHeading}
           hyderabadData={data?.yadagiriguttaData}
           yadagiriguttaToJBSTableHeading={data?.yadagiriguttaToJBSTableHeading}
           yadagiriguttaToJBSdata={data?.yadagiriguttaToJBSdata}

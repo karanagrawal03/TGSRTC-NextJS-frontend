@@ -14,6 +14,7 @@
   font-family: var(--font-montserrat) !important;
   font-size: var(--font-size-sm) !important;
   font-weight: 600 !important;
+  min-width: 50px;
 }
 
 .oddRow {

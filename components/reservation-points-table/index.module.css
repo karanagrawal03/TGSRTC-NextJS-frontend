@@ -20,6 +20,11 @@
   font-family: var(--font-playfair-display);
 }
 
+.tablehead {
+  padding-right: 0 !important;
+  padding-left: var(--padding-3xs) !important;
+}
+
 .title {
   margin: 0;
   font-size: var(--font-size-5xl);
