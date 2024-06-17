@@ -15,6 +15,8 @@ export type BookYourTicketType = {
   routes: { from: string; to: string }[];
   marginTop?: string;
   bookYourTicketData?: any;
+  bookYourTicketTitle?: string;
+  bookYourTicketText?: string;
 };
 
 const BookYourTicket: NextPage<BookYourTicketType> = ({
@@ -22,6 +24,8 @@ const BookYourTicket: NextPage<BookYourTicketType> = ({
   routes,
   marginTop,
   bookYourTicketData,
+  bookYourTicketText,
+  bookYourTicketTitle
 }) => {
   const [showAllRoutes, setShowAllRoutes] = useState(false);
   const [selectedFrom, setSelectedFrom] = useState("");
@@ -45,9 +49,9 @@ const BookYourTicket: NextPage<BookYourTicketType> = ({
       <div className={styles.textsWrapper}>
         <div className={styles.texts}>
           <div className={styles.bookYourTicketWrapper}>
-            <h1 className={styles.bookYourTicket1}>{BOOK_YOUR_TICKET}</h1>
+            <h1 className={styles.bookYourTicket1}>{bookYourTicketTitle}</h1>
           </div>
-          <p className={styles.loremIpsumDolor}>{BOOK_YOUR_TICKET_PARAGRAPH}</p>
+          <p className={styles.loremIpsumDolor}>{bookYourTicketText}</p>
         </div>
       </div>
       <div className={styles.bookYourTicketFormContaineWrapper}>

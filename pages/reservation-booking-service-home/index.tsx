@@ -33,7 +33,7 @@ const ReservationBookingServiceHome: NextPageReservationBookingServiceHomeType =
           heroWebImage={data?.heroWebImage}
           heroMobileImage={data?.heroMobileImage} 
         />
-        <BookYourTicket bookYourTicketData={data?.bookYourTicket} routes={routes} />
+        <BookYourTicket bookYourTicketData={data?.bookYourTicket} routes={routes} bookYourTicketTitle={data?.bookYourTicketTitle} bookYourTicketText={data?.bookYourTicketText}/>
         <AnimationBus />
         <AnimationBusMobile />
         <ReservationKPIs 
