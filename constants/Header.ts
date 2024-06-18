@@ -143,7 +143,7 @@ export const headerData: HeaderConfig[] = [
     ],
   },
   {
-    displayName: "Contact us",
+    displayName: "Contact Us",
     isNavLink: true,
     link: CONTACT_US_LINK,
   },
